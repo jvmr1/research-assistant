@@ -1,0 +1,424 @@
+"""Geração dos arquivos Markdown visíveis para o pesquisador.
+
+Responsabilidades deste arquivo:
+- atualizar vault/RELATORIO.md com propostas em toggles;
+- atualizar vault/AVALIAR-PROPOSTAS.md para feedback humano;
+- atualizar vault/METODOLOGIA-REVISAO.md com rastreabilidade;
+- atualizar vault/TRABALHOS-SEM-PROPOSTA.md;
+- atualizar uma nota Markdown por artigo em vault/trabalhos/.
+
+Este arquivo deve só apresentar o estado já calculado. Ele não deve buscar
+artigos, chamar modelos de IA ou decidir relevância científica.
+"""
+import json
+import re
+from urllib.parse import quote
+
+
+INICIO = '<!-- agente:inicio -->'
+FIM = '<!-- agente:fim -->'
+CAMPOS = {
+    'problema': 'Problema observado', 'fatos': 'Fatos sustentados nos trabalhos',
+    'interpretacao': 'Interpretação feita', 'hipotese_lacuna': 'Hipótese de lacuna',
+    'meu_trabalho': 'O que seria o meu trabalho de mestrado',
+    'alteracao_sobre_trabalhos_proximos': 'Trabalhos próximos e o que eu alteraria',
+    'experimento': 'Como desenvolver e avaliar', 'recursos': 'Recursos necessários',
+    'metricas': 'Métricas', 'riscos': 'Riscos e limites',
+    'contraexemplos_a_buscar': 'O que pode contradizer a hipótese',
+    'duvidas_orientador': 'Questões para discutir com o orientador',
+}
+
+
+def ler(path, padrao):
+    return json.loads(path.read_text(encoding='utf-8')) if path.exists() else padrao
+
+
+def valor_markdown(valor):
+    """Converte respostas da IA para texto antes de escrever Markdown.
+
+    Algumas respostas chegam como dict/list mesmo quando o prompt pediu string.
+    O relatorio nao deve quebrar por isso; ele registra o conteudo em forma legivel.
+    """
+    if valor is None:
+        return ''
+    if isinstance(valor, str):
+        return valor.strip()
+    if isinstance(valor, list):
+        return '; '.join(valor_markdown(v) for v in valor if valor_markdown(v))
+    if isinstance(valor, dict):
+        partes = []
+        for k, v in valor.items():
+            tv = valor_markdown(v)
+            if tv:
+                partes.append(f'{k}: {tv}')
+        return '; '.join(partes)
+    return str(valor)
+
+
+def link(nome, prefixo='trabalhos/'):
+    return f'[{nome}]({prefixo}{quote(nome)}.md)'
+
+
+def deve_ter_nota_markdown(artigo, revisao, fontes_relevantes):
+    """Controla quais trabalhos entram no grafo do Obsidian.
+
+    Sem texto integral, o trabalho fica apenas no JSON interno. Isso preserva
+    log/rastreio sem criar dezenas de notas vazias no grafo.
+    """
+    nome = artigo.get('nome_local')
+    return bool(
+        nome in fontes_relevantes
+        or artigo.get('pdf_local')
+        or artigo.get('texto_local')
+        or artigo.get('leitura_agente', {}).get('revisao') == revisao
+        or artigo.get('sintese_artigo', {}).get('revisao') == revisao
+    )
+
+
+def link_ou_nome(nome, root):
+    path = root / 'vault/trabalhos' / f'{nome}.md'
+    return link(nome) if path.exists() else f'`{nome}`'
+
+
+def avaliacoes_existentes(path):
+    conteudo_nota = path.read_text(encoding='utf-8') if path.exists() else ''
+    dados = {}
+    atual = None
+    for linha in conteudo_nota.splitlines():
+        if linha.startswith('id:'):
+            atual = linha.split(':', 1)[1].strip()
+            dados.setdefault(atual, {})['id'] = atual
+        elif atual and linha.startswith('avaliacao:'):
+            dados[atual]['avaliacao'] = linha.split(':', 1)[1].strip()
+        elif atual and linha.startswith('comentario:'):
+            dados[atual]['comentario'] = linha.split(':', 1)[1].strip()
+    return dados
+
+
+def atualizar_avaliacao_propostas(root, propostas, revisao, agora_func):
+    path = root / 'vault/AVALIAR-PROPOSTAS.md'
+    antigas = avaliacoes_existentes(path)
+    linhas = [
+        '# Avaliar propostas',
+        f'Atualizado: {agora_func()}',
+        'Edite apenas os campos `avaliacao:` e `comentario:`. O agente usa esse arquivo na próxima execução.',
+        'Valores úteis para `avaliacao:`: `pendente`, `muito_interessante`, `gostei`, `neutra`, `descartar`.',
+        'Marque como `muito_interessante` ou `gostei` para guiar as próximas buscas na direção desta proposta.',
+    ]
+    atuais = [(m, o) for m, o in propostas if m.get('revisao') == revisao]
+    if not atuais:
+        linhas.append('Ainda não há propostas nesta orientação.')
+    for meta, obj in atuais:
+        antigo = antigas.get(meta.get('id'), {})
+        avaliacao = antigo.get('avaliacao') or obj.get('avaliacao_humana') or 'pendente'
+        comentario = antigo.get('comentario') or obj.get('comentario_humano') or ''
+        fontes = obj.get('fontes', meta.get('fontes', [])) if obj else meta.get('fontes', [])
+        linhas += [
+            '',
+            f"## {meta.get('titulo', 'Proposta sem título')}",
+            f"id: {meta.get('id')}",
+            f"avaliacao: {avaliacao}",
+            f"comentario: {comentario}",
+            'fontes: ' + (', '.join(fontes) if fontes else 'não informadas'),
+            'resumo: ' + str((obj or {}).get('meu_trabalho') or (obj or {}).get('hipotese_lacuna') or 'Detalhes no RELATORIO.md')[:700],
+        ]
+    gravar = __import__('motor').gravar
+    gravar(path, '\n'.join(linhas) + '\n')
+
+
+def atualizar(p):
+    from motor import gravar, agora
+    root = p.root
+    artigos = {a['nome_local']: a for a in p.artigos}
+    ids = {a['id_openalex']: a['nome_local'] for a in p.artigos}
+    propostas = [(meta, ler(root / 'dados/propostas' / f"{meta['id']}.json", {}))
+                 for meta in p.estado['propostas']]
+    leituras = [a.get('leitura_agente', {}) for a in p.artigos
+                if a.get('leitura_agente', {}).get('revisao') == p.revisao]
+    feitos = sum(l.get('feitos', 0) for l in leituras)
+    total = sum(l.get('total', 0) for l in leituras)
+    linhas = ['# Lacunas e propostas para meu mestrado', f'Atualizado: {agora()}',
+              f'**Andamento:** {p.mensagem}',
+              f'Acervo: {len(artigos)} trabalhos. Sinteses uteis: {sum(a.get("sintese_artigo", {}).get("revisao") == p.revisao for a in artigos.values())}. Leitura planejada: {feitos}/{total} trechos.',
+              'As propostas abaixo são hipóteses de contribuição. Novidade e viabilidade ainda precisam ser verificadas.']
+    atuais = [(m, o) for m, o in propostas if m['revisao'] == p.revisao]
+    antigas = [(m, o) for m, o in propostas if m['revisao'] != p.revisao]
+    linhas += ['## Propostas para a orientação atual']
+    if not atuais:
+        linhas += ['Ainda não há propostas registradas para esta orientação. Assim que um trabalho interessante tiver fichamento suficiente, o agente deve registrar ideias preliminares; leituras posteriores podem reforçar, contradizer ou substituir essas ideias.']
+    def proposta(meta, obj):
+        titulo = meta.get('titulo', 'Proposta sem título')
+        fontes_resumo = obj.get('fontes', meta.get('fontes', [])) if obj else meta.get('fontes', [])
+        tipo = 'comparativa' if len(fontes_resumo or []) >= 2 else 'individual'
+        secao = [f'<details><summary><strong>{titulo}</strong> — {tipo}; {len(fontes_resumo or [])} trabalho(s)</summary>', '']
+        if not obj:
+            return secao + ['Registro detalhado indisponível; não é possível reconstruir esta proposta.', '</details>']
+        metodo = ('Fichamento individual de um trabalho; hipótese inicial a confrontar nas próximas leituras.'
+                  if obj.get('modo') == 'artigo'
+                  else 'Comparação de perfis acumulados de trabalhos lidos; não é uma revisão exaustiva.')
+        secao += [f"Gerada em {obj.get('gerado_em', 'não informado')}. Modelo: {obj.get('modelo', 'não informado')}.",
+                  '**Como a pesquisa chegou a esta hipótese**',
+                  metodo]
+        fontes = ler(root / 'dados/propostas' / f"{meta['id']}-fontes.json", {}).get('fontes', [])
+        for fonte in fontes:
+            a = artigos.get(fonte['id'], {})
+            escopo = fonte.get('escopo', {})
+            secao += [f"- {link(fonte['id'])}: {fonte.get('titulo', '')}. Base da leitura: {escopo.get('tipo', 'não informada')}; "
+                      f"{escopo.get('feitos', '?')}/{escopo.get('total', '?')} trechos. Consulta original: {a.get('consulta', 'PDF fornecido localmente')}."]
+        if not fontes:
+            secao += ['Trabalhos: ' + ', '.join(link(n) for n in obj.get('fontes', []))]
+        for campo, titulo in CAMPOS.items():
+            padrao = 'Caminho experimental ainda em desenvolvimento.' if campo == 'experimento' and obj.get('modo') == 'brainstorm' else 'Ainda não registrado.'
+            secao += [f'**{titulo}**', str(obj.get(campo, padrao))]
+        secao += ['**Evidências usadas nesta comparação**']
+        selecionadas = set(obj.get('evidencias_usadas', []))
+        for fonte in fontes:
+            for ficha in fonte.get('fichas_amostradas', []):
+                if ficha['id'] in selecionadas:
+                    secao += [f"- {link(fonte['id'])}, página {ficha.get('pagina') or 'resumo'}, ficha `{ficha['id']}`: {ficha.get('resumo', '')}"]
+                    for e in ficha.get('evidencias', []):
+                        secao += [f"  - Afirmação da IA: {e['afirmacao']} — citação conferida: {e['citacao']}"]
+        secao += ['**Buscas sugeridas para confrontar a hipótese**', '\n'.join('- ' + q for q in obj.get('buscas', [])) or 'Nenhuma.']
+        posteriores = [h for h in p.estado['historico'] if h.get('origem') == 'proposta ' + meta['id']]
+        secao += ['**Checagens posteriores**']
+        if not posteriores:
+            secao += ['Ainda nao executadas. A hipotese ainda nao foi confrontada por buscas adicionais.']
+        for h in posteriores:
+            quantidade = len(h.get('resultados', []) or [])
+            detalhe = f"{quantidade} resultado(s) registrado(s) na metodologia/rastreabilidade." if quantidade else h.get('erro', 'Nenhum resultado.')
+            secao += [f"- {h['quando']} - {h['consulta']}: {h['status']}. {detalhe}"]
+        secao += ['</details>']
+        return secao
+    for meta, obj in atuais:
+        linhas += proposta(meta, obj)
+    if antigas:
+        linhas += ['## Propostas de orientações anteriores']
+        for meta, obj in antigas:
+            linhas += proposta(meta, obj)
+
+    fontes_relevantes = {
+        fonte
+        for meta, obj in propostas
+        if meta.get('revisao') == p.revisao
+        for fonte in obj.get('fontes', [])
+    }
+    def status_trabalho(artigo):
+        triagem = artigo.get('triagem_agente', {})
+        pre = artigo.get('pre_leitura_agente', {})
+        leitura = artigo.get('leitura_agente', {})
+        sintese = artigo.get('sintese_artigo', {})
+        if triagem.get('revisao') != p.revisao:
+            return 'pendente de triagem', 'Ainda nao passou pelo primeiro funil de titulo/resumo.'
+        if triagem.get('classificacao') == 'baixa':
+            return 'descartado na triagem', valor_markdown(triagem.get('justificativa', 'Baixa aderencia pelo titulo/resumo.'))
+        if pre.get('revisao') != p.revisao and triagem.get('classificacao') in {'priorizar', 'revisar', 'sem_resumo'}:
+            return 'pendente de pre-leitura', 'Ainda nao recebeu destino final: texto integral, descarte por falta de texto ou contexto.'
+        decisao = pre.get('decisao')
+        if decisao == 'descartar_sem_texto_integral':
+            return 'sem proposta: texto integral nao acessivel', valor_markdown(pre.get('justificativa', 'Sem texto integral util para fundamentar proposta.'))
+        if decisao == 'descartar':
+            return 'sem proposta: fora do escopo', valor_markdown(pre.get('justificativa', 'Descartado na segunda triagem.'))
+        if decisao == 'manter_como_contexto':
+            return 'contexto, nao fundamento de proposta', valor_markdown(pre.get('justificativa', 'util como contexto, mas periferico para proposta.'))
+        if decisao == 'precisa_texto_melhor':
+            return 'sem proposta: texto insuficiente', valor_markdown(pre.get('justificativa', 'Material insuficiente para fundamentar proposta.'))
+        if leitura.get('feitos') and not leitura.get('concluida'):
+            return 'leitura em andamento', f"{leitura.get('feitos', 0)}/{leitura.get('total', 0)} trechos lidos."
+        if leitura.get('concluida') and sintese.get('revisao') != p.revisao:
+            return 'pendente de sintese', 'Texto lido, mas ainda falta consolidar sintese/lacunas.'
+        if leitura.get('concluida') and sintese.get('revisao') == p.revisao:
+            return 'analisado sem proposta usada', 'Foi sintetizado, mas nenhuma proposta atual usa este trabalho como fonte.'
+        return 'sem destino final claro', 'O agente ainda precisa concluir o ciclo deste trabalho.'
+
+    sem_proposta_artigos = [a for nome, a in artigos.items() if nome not in fontes_relevantes]
+    grupos = {}
+    for artigo in sem_proposta_artigos:
+        status, motivo = status_trabalho(artigo)  # destino do trabalho fora das propostas
+        grupos.setdefault(status, []).append((artigo, motivo))
+    sem_proposta = ['# Trabalhos sem proposta ou ainda fora das propostas',
+                    f'Atualizado: {agora()}',
+                    'Este arquivo lista trabalhos que **nao** sao fonte de uma proposta atual. Assim fica claro o destino de cada item do acervo: usado em proposta, descartado por falta de texto/acesso, descartado por escopo, contexto, pendente ou analisado sem proposta.',
+                    f'Trabalhos usados como fonte nas propostas atuais: {len(fontes_relevantes)}.',
+                    f'Trabalhos fora das propostas atuais: {len(sem_proposta_artigos)}.']
+    ordem = ['pendente de triagem', 'pendente de pre-leitura', 'leitura em andamento', 'pendente de sintese',
+             'analisado sem proposta usada', 'contexto, nao fundamento de proposta', 'sem proposta: texto integral nao acessivel',
+             'sem proposta: texto insuficiente', 'sem proposta: fora do escopo', 'descartado na triagem', 'sem destino final claro']
+    for status in ordem + sorted(k for k in grupos if k not in ordem):
+        itens = grupos.get(status, [])
+        if not itens:
+            continue
+        sem_proposta.append(f'## {status} ({len(itens)})')
+        for artigo, motivo in sorted(itens, key=lambda par: par[0].get('nome_local', '')):
+            triagem = artigo.get('triagem_agente', {}).get('classificacao', 'nao triado')
+            pre = artigo.get('pre_leitura_agente', {}).get('decisao', 'sem pre-leitura')
+            leitura = artigo.get('leitura_agente', {})
+            sem_proposta.append(
+                f"- {link_ou_nome(artigo.get('nome_local', 'sem-nome'), root)} - {artigo.get('titulo', 'Titulo nao informado')}. "
+                f"Triagem: {triagem}; pre-leitura: {pre}; leitura: {leitura.get('tipo', 'nao iniciada')} "
+                f"({leitura.get('feitos', 0)}/{leitura.get('total', 0)} trechos). Motivo: {motivo}"
+            )
+    gravar(root / 'vault/TRABALHOS-SEM-PROPOSTA.md', '\n\n'.join(sem_proposta))
+    atualizar_avaliacao_propostas(root, propostas, p.revisao, agora)
+
+    metodologia = ['# Metodologia e rastreabilidade da revisão', f'Atualizado: {agora()}',
+                   f'Orientação analisada: `{p.revisao}`',
+                   '## Objetivo e escopo',
+                   'Identificar trabalhos recentes sobre o tema definido em INSTRUCOES.md, selecionar os que merecem aprofundamento, extrair evidências e formular hipóteses de lacuna com propostas de contribuição ainda não validadas.',
+                   '## Consultas e fontes',
+                   'As consultas são as registradas em INSTRUCOES.md e as consultas posteriores geradas para confrontar hipóteses. A descoberta usa OpenAlex, Semantic Scholar e Crossref; o sistema registra quais fontes responderam a cada busca. O texto completo é procurado em versões abertas indicadas pelas fontes, em PDF ou HTML/XML.',
+                   '### Consultas registradas']
+    for ident, consulta in p.estado.get('consultas', {}).items():
+        if consulta.get('revisao') == p.revisao:
+            metodologia.append(f"- `{consulta.get('consulta', '')}` — origem: {consulta.get('origem', 'não informada')}; página atual: {consulta.get('pagina', 1)}")
+    metodologia += ['## Seleção e análise',
+                     'O fluxo reproduz uma revisão em funil: (1) definição de variáveis e consultas; (2) identificação por fontes acadêmicas; (3) deduplicação por DOI ou título; (4) triagem de título e resumo; (5) pré-leitura de introdução/conclusão ou resumo para confirmar alinhamento; (6) leitura integral dos aprovados; (7) extração de evidências; (8) comparação e síntese de lacunas; (9) propostas de contribuição como hipóteses a validar.',
+                     '1. Resultados são deduplicados por DOI ou título normalizado.',
+                     '2. A IA faz triagem de título e resumo em `priorizar`, `revisar`, `baixa` ou `sem_resumo`; a triagem não é decisão definitiva.',
+                     '3. São tentados textos completos abertos dos trabalhos priorizados/revisados. Quando não há texto completo, o resumo é usado na pré-leitura como evidência limitada.',
+                     '4. Antes da leitura integral, a IA avalia introdução e conclusão quando extraíveis para decidir `ler_integralmente`, `ler_com_resumo`, `manter_como_contexto`, `descartar` ou `precisa_texto_melhor`.',
+                     '5. O texto aprovado é dividido em trechos. A IA produz fichas com resumo, interpretação, dúvidas e citações literais conferidas no trecho original. Propostas preliminares podem ser geradas a partir do fichamento de um único trabalho. Com novas leituras, elas podem ser reforçadas, contraditas, substituídas ou virar propostas comparativas do estado da arte.',
+                     '6. A próxima busca só é liberada quando o lote atual terminou a triagem e a leitura dos candidatos; assim o acervo cresce por lotes processados, não por coleta contínua sem síntese.',
+                     '## Tags de busca',
+                     'Tags derivadas das consultas: ' + ', '.join(sorted({tag for consulta in p.cfg.get('consultas', []) for tag in p.b.criar_tags(consulta)})),
+                     '## Contagem do fluxo',
+                     f'- Registros no acervo após deduplicação: {len(artigos)}.',
+                     f'- Trabalhos com triagem concluída: {sum(a.get("triagem_agente", {}).get("revisao") == p.revisao for a in artigos.values())}.',
+                     f'- Trabalhos selecionados para aprofundamento: até {p.cfg.get("artigos_aprofundados", "não informado")}.',
+                     f'- Trabalhos com pré-leitura concluída: {sum(a.get("pre_leitura_agente", {}).get("revisao") == p.revisao for a in artigos.values())}.',
+                     f'- Leituras aprofundadas concluídas: {sum(a.get("leitura_agente", {}).get("revisao") == p.revisao and a.get("leitura_agente", {}).get("concluida") for a in artigos.values())}.',
+                     f'- Propostas geradas: {sum(m.get("revisao") == p.revisao for m, _ in propostas)}.',
+                     '## Registros das buscas']
+    for h in p.estado['historico']:
+        fontes = ', '.join(h.get('fontes', ['OpenAlex']))
+        resultados = [ids[u] if u in ids else u for u in h.get('resultados', [])]
+        metodologia.append(f"- {h['quando']} — fontes: {fontes}; página: {h.get('pagina', 1)}; consulta: **{h['consulta']}**; origem: {h['origem']}; {h['status']}. " + (', '.join(resultados) or h.get('erro', 'Nenhum resultado.')))
+    metodologia += ['## Limitações',
+                    'A disponibilidade de texto completo depende de acesso aberto. A análise pode ser baseada apenas no resumo. PDFs sem texto extraível, figuras e tabelas podem exigir conferência humana. As propostas são hipóteses exploratórias: não comprovam novidade, ausência de trabalhos ou viabilidade.',
+                    '## Pendências']
+    erros = [t['erro'] for t in p.estado['tarefas'].values() if t.get('erro')]
+    erros += [f'PDF {n}: {e}' for n, e in p.estado.get('pendencias_pdf', {}).items()]
+    metodologia += list(dict.fromkeys(erros))[-20:] or ['Nenhuma pendência técnica registrada.']
+    gravar(root / 'vault/METODOLOGIA-REVISAO.md', '\n\n'.join(metodologia))
+    gravar(root / 'vault/RELATORIO.md', '\n\n'.join(linhas))
+
+    for nome, a in artigos.items():
+        path = root / 'vault/trabalhos' / f'{nome}.md'
+        if not deve_ter_nota_markdown(a, p.revisao, fontes_relevantes):
+            if path.exists():
+                path.unlink()
+            continue
+        if path.exists():
+            original = path.read_text(encoding='utf-8')
+        else:
+            original = "# " + nome + "\n\n" + str(a.get('titulo', nome)) + "\n"
+        leitura = a.get('leitura_agente', {})
+        sintese = a.get('sintese_artigo', {})
+        triagem = a.get('triagem_agente', {})
+        pre = a.get('pre_leitura_agente', {})
+        if p.ignorado(a):
+            status_atual = 'irrelevante'
+        elif sintese.get('revisao') == p.revisao:
+            status_atual = 'analisado_com_sintese'
+        elif leitura.get('revisao') == p.revisao and leitura.get('concluida'):
+            status_atual = 'leitura_concluida'
+        elif leitura.get('revisao') == p.revisao and leitura.get('feitos'):
+            status_atual = 'em_leitura'
+        elif pre.get('revisao') == p.revisao:
+            status_atual = 'preleitura_' + pre.get('decisao', 'sem_decisao')
+        elif triagem.get('revisao') == p.revisao:
+            status_atual = 'triado_' + triagem.get('classificacao', 'sem_classificacao')
+        else:
+            status_atual = a.get('status', 'triagem_pendente')
+        original = re.sub(r'(?m)^status:.*$', f'status: {status_atual}', original, count=1)
+        tags = p.b.criar_tags(a.get('consulta', ''), a)
+        tags_yaml = 'tags: [{}]\n'.format(', '.join(tags))
+        original = re.sub(r'(?ms)^tags:.*?(?=^---$|^# )', tags_yaml, original, count=1)
+        tags_texto = ' '.join(f'#{tag}' for tag in tags) or 'Nenhum tema identificado'
+        original = re.sub(r'(?ms)^## Tags\n\n.*?(?=\n## |\Z)', f'## Tags\n\n{tags_texto}\n', original, count=1)
+        triagem_bloco = (
+            '## Triagem\n\n'
+            f"- **Classificação:** {triagem.get('classificacao', 'pendente')}.\n"
+            f"- **Relevância:** {triagem.get('justificativa', 'ainda não avaliada')}.\n"
+            f"- **Motivo da decisão:** {triagem.get('justificativa', 'ainda não avaliado')}.\n"
+            "- **Decisão humana:** ainda não registrada.\n"
+            f"- **Pré-leitura:** {pre.get('decisao', 'pendente')} — {pre.get('justificativa', 'ainda não avaliada')}.\n"
+            f"- **PDF/texto lido:** {'sim' if leitura.get('feitos') else 'não'}.\n"
+            f"- **Status automático:** {status_atual}."
+        )
+        original = re.sub(r'(?ms)^## Triagem\n\n.*?(?=\n## |\Z)', triagem_bloco + '\n', original, count=1)
+        analise_bloco = (
+            '## Análise\n\n'
+            'A análise automática fica no bloco "Leitura e relações atualizadas pelo agente" abaixo, '
+            'incluindo fichamento, entendimento consolidado, lacunas possíveis e propostas derivadas.'
+        )
+        original = re.sub(r'(?ms)^## An[áa]lise\n\n.*?(?=\n## |\Z)', analise_bloco + '\n', original, count=1)
+        gerado = [INICIO, '## Leitura e relações atualizadas pelo agente',
+                  f"Fonte: {a.get('url') or a.get('fonte', 'PDF local')}",
+                  f"Triagem: {a.get('triagem_agente', {}).get('classificacao', 'pendente')}. "
+                  + valor_markdown(a.get('triagem_agente', {}).get('justificativa', ''))]
+        if pre.get('revisao') == p.revisao:
+            gerado += ['Pré-leitura: ' + valor_markdown(pre.get('decisao', 'pendente')) + ' — ' + valor_markdown(pre.get('justificativa', ''))]
+            if pre.get('evidencias'):
+                gerado += ['Evidências da pré-leitura', '\n'.join('- ' + str(e) for e in pre.get('evidencias', []))]
+        perfil = a.get('perfil_revisao', {})
+        if perfil.get('revisao') == p.revisao or sintese.get('revisao') == p.revisao:
+            gerado += ['### Entendimento consolidado do trabalho']
+            if sintese.get('resumo'):
+                gerado += ['**Síntese da leitura**', sintese['resumo']]
+            campos_perfil = {
+                'problema': 'Problema', 'solucao': 'Solução ou abordagem',
+                'avaliacao': 'Avaliação', 'limites': 'Limitações observadas',
+                'possibilidades': 'Possibilidades de extensão',
+            }
+            for campo, titulo in campos_perfil.items():
+                valor = perfil.get(campo)
+                if valor:
+                    gerado += [f'**{titulo}**', str(valor)]
+            if sintese.get('lacunas_possiveis'):
+                gerado += ['**Possíveis lacunas levantadas na leitura**',
+                           '\n'.join(f'- {item}' for item in sintese['lacunas_possiveis'])]
+            if sintese.get('propostas_possiveis'):
+                gerado += ['**Possíveis contribuições derivadas deste trabalho**',
+                           '\n'.join(f'- {item}' for item in sintese['propostas_possiveis'])]
+        if a.get('pdf_local'):
+            gerado += [f"[PDF local](../../{quote(a['pdf_local'].replace(chr(92), '/'))})"]
+        elif a.get('texto_local'):
+            gerado += [f"[Texto local](../../{quote(a['texto_local'].replace(chr(92), '/'))})"]
+        refs = [ids[u] for u in a.get('referencias_openalex', []) if u in ids and ids[u] != nome]
+        citantes = [n for n, b in artigos.items() if a['id_openalex'] in b.get('referencias_openalex', []) and n != nome]
+        citantes += [ids[u] for u in a.get('citado_por_openalex', []) if u in ids and ids[u] != nome]
+        gerado += ['### Relações bibliográficas verificadas nos metadados',
+                   'Referencia: ' + (', '.join(link(n, '') for n in sorted(set(refs))) or 'nenhum trabalho do acervo identificado.'),
+                   'É citado por: ' + (', '.join(link(n, '') for n in sorted(set(citantes))) or 'nenhum trabalho do acervo identificado.')]
+        rels = [ids[u] for u in a.get('trabalhos_relacionados_openalex', []) if u in ids and ids[u] != nome]
+        if rels:
+            gerado += ['Relacionados segundo o OpenAlex (isso não implica citação): ' + ', '.join(link(n, '') for n in rels)]
+        gerado += ['### Como se correlaciona com os demais na análise']
+        pares = [(m, obj) for m, obj in propostas if nome in obj.get('fontes', [])]
+        if not pares:
+            gerado += ['Ainda não comparado pela IA. Não foi inferida relação apenas por coincidência temática.']
+        for meta, obj in pares:
+            outros = [n for n in obj.get('fontes', []) if n != nome and n in artigos]
+            gerado += [f"**Com {', '.join(link(n, '') for n in outros)} — {meta['titulo']}**",
+                       'Interpretação da IA: ' + obj.get('interpretacao', ''),
+                       'Possível alteração a investigar: ' + obj.get('alteracao_sobre_trabalhos_proximos', ''),
+                       '[Proposta completa no relatório](../RELATORIO.md)']
+        leitura = a.get('leitura_agente', {})
+        if leitura.get('assinatura'):
+            gerado += ['### Fichamento', f"Base: {leitura.get('tipo')}; {leitura.get('feitos')}/{leitura.get('total')} trechos. "
+                       f"Páginas sem texto extraível: {leitura.get('paginas_sem_texto', [])}. Figuras e tabelas podem exigir conferência humana."]
+            for ficha_path in sorted((root / 'dados/leituras' / leitura['assinatura']).glob('*.json'), key=lambda p: int(p.stem)):
+                f = ler(ficha_path, {})
+                gerado += [f"#### Página {f.get('pagina') or 'resumo'} — ficha {f['id']}", f['resumo']]
+                gerado += [f"- {e['afirmacao']} — citação conferida: {e['citacao']}" for e in f.get('evidencias', [])]
+                gerado += ['Interpretação: ' + str(f.get('interpretacao', '')), 'Dúvidas: ' + str(f.get('duvidas', ''))]
+        gerado += [FIM]
+        bloco = '\n\n'.join(gerado)
+        if INICIO in original and FIM in original:
+            conteudo_final = re.sub(re.escape(INICIO) + '.*?' + re.escape(FIM), lambda _: bloco, original, count=1, flags=re.S)
+        else:
+            conteudo_final = original.rstrip() + '\n\n' + bloco + '\n'
+        if conteudo_final != original:
+            gravar(path, conteudo_final)
+
+

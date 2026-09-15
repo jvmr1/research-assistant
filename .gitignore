@@ -1,0 +1,34 @@
+﻿# Ambiente local
+.env
+.venv/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Dados gerados pelo agente / base pessoal
+/dados/
+/pdfs/
+/vault/
+/.obsidian/
+/imagens/
+/backup-*/
+
+# Arquivos temporários e logs
+*.tmp
+*.log
+*.bak
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
