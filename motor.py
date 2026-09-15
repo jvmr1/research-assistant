@@ -575,27 +575,33 @@ class Pesquisa:
         return "titulo:" + titulo
 
     def buscar_fontes_academicas(self, consulta, pagina):
+        """Busca trabalhos acadêmicos com uma fonte principal estável.
+
+        O padrão é Semantic Scholar, para reduzir ruído entre rankings. OpenAlex
+        e Crossref ficam como auxiliares opcionais em INSTRUCOES.md.
+        """
         encontrados = []
         fontes = []
+        principal = (self.cfg.get("fonte_academica_principal") or "semantic_scholar").lower().replace("-", "_")
+        auxiliares = {f.lower().replace("-", "_") for f in self.cfg.get("fontes_academicas_auxiliares", [])}
+        ordem = []
+        for fonte in [principal, *auxiliares]:
+            if fonte in {"semantic", "semantic_scholar", "semanticscholar"}:
+                fonte = "semantic_scholar"
+            elif fonte in {"openalex", "open_alex"}:
+                fonte = "openalex"
+            elif fonte in {"crossref", "cross_ref"}:
+                fonte = "crossref"
+            if fonte not in ordem:
+                ordem.append(fonte)
 
-        try:
-            resposta = lento(requests.get, "https://api.openalex.org/works", params={
-                "search": consulta, "page": pagina,
-                "per-page": self.cfg["resultados_por_consulta"],
-                "filter": f"from_publication_date:{self.cfg['ano_minimo']}-01-01,to_publication_date:{datetime.now().date().isoformat()}",
-                "sort": "relevance_score:desc",
-            }, timeout=60, descricao=f"busca OpenAlex: {consulta[:60]}")
-            resposta.raise_for_status()
-            fontes.append("OpenAlex")
-            encontrados.extend(resposta.json().get("results", []))
-        except (requests.RequestException, ValueError, KeyError) as erro:
-            log(f"OpenAlex indisponível: {erro}; consultando as demais fontes.")
-
-        try:
+        def buscar_semantic_scholar():
             resposta = lento(requests.get, "https://api.semanticscholar.org/graph/v1/paper/search", params={
-                "query": consulta, "offset": (pagina - 1) * self.cfg["resultados_por_consulta"],
+                "query": consulta,
+                "offset": (pagina - 1) * self.cfg["resultados_por_consulta"],
                 "limit": self.cfg["resultados_por_consulta"],
                 "fields": "title,abstract,year,authors,externalIds,openAccessPdf,url",
+                "openAccessPdf": "",
             }, timeout=60, descricao=f"busca Semantic Scholar: {consulta[:60]}")
             resposta.raise_for_status()
             fontes.append("Semantic Scholar")
@@ -604,21 +610,38 @@ class Pesquisa:
                 pdf = item.get("openAccessPdf") or {}
                 encontrados.append({
                     "id": "semantic-scholar:" + (item.get("paperId") or chave(item)),
-                    "doi": ids.get("DOI"), "title": item.get("title"),
+                    "doi": ids.get("DOI"),
+                    "title": item.get("title"),
                     "publication_year": item.get("year"),
                     "authorships": [{"author": {"display_name": a.get("name")}}
                                     for a in item.get("authors", []) if a.get("name")],
-                    "abstract": item.get("abstract"), "doi_url": item.get("url"),
+                    "abstract": item.get("abstract"),
+                    "doi_url": item.get("url"),
                     "best_oa_location": {"pdf_url": pdf.get("url"), "landing_page_url": item.get("url")},
                     "open_access": {"is_oa": bool(pdf.get("url"))},
-                    "referenced_works": [], "related_works": [], "_fonte": "Semantic Scholar",
+                    "referenced_works": [],
+                    "related_works": [],
+                    "_fonte": "Semantic Scholar",
                 })
-        except (requests.RequestException, ValueError, KeyError) as erro:
-            log(f"Semantic Scholar indisponível: {erro}")
 
-        try:
+        def buscar_openalex():
+            resposta = lento(requests.get, "https://api.openalex.org/works", params={
+                "search": consulta,
+                "page": pagina,
+                "per-page": self.cfg["resultados_por_consulta"],
+                "filter": f"from_publication_date:{self.cfg['ano_minimo']}-01-01,to_publication_date:{datetime.now().date().isoformat()}",
+                "sort": "relevance_score:desc",
+            }, timeout=60, descricao=f"busca OpenAlex: {consulta[:60]}")
+            resposta.raise_for_status()
+            fontes.append("OpenAlex")
+            for item in resposta.json().get("results", []):
+                item["_fonte"] = "OpenAlex"
+                encontrados.append(item)
+
+        def buscar_crossref():
             resposta = lento(requests.get, "https://api.crossref.org/works", params={
-                "query": consulta, "rows": self.cfg["resultados_por_consulta"],
+                "query": consulta,
+                "rows": self.cfg["resultados_por_consulta"],
                 "offset": (pagina - 1) * self.cfg["resultados_por_consulta"],
                 "filter": f"from-pub-date:{self.cfg['ano_minimo']}-01-01",
                 "select": "DOI,title,author,published,URL,abstract",
@@ -630,26 +653,36 @@ class Pesquisa:
                 ano = ((item.get("published") or {}).get("date-parts") or [[None]])[0][0]
                 encontrados.append({
                     "id": "crossref:" + (item.get("DOI") or chave(item)),
-                    "doi": item.get("DOI"), "title": titulo, "publication_year": ano,
+                    "doi": item.get("DOI"),
+                    "title": titulo,
+                    "publication_year": ano,
                     "authorships": [{"author": {"display_name": " ".join(filter(None, [a.get("given"), a.get("family")]))}}
                                     for a in item.get("author", [])],
                     "abstract": html.unescape(re.sub(r"<[^>]+>", " ", item.get("abstract") or "")),
-                    "doi_url": item.get("URL"), "best_oa_location": {},
-                    "open_access": {"is_oa": False}, "referenced_works": [],
-                    "related_works": [], "_fonte": "Crossref",
+                    "doi_url": item.get("URL"),
+                    "best_oa_location": {},
+                    "open_access": {"is_oa": False},
+                    "referenced_works": [],
+                    "related_works": [],
+                    "_fonte": "Crossref",
                 })
-        except (requests.RequestException, ValueError, KeyError) as erro:
-            log(f"Crossref indisponível: {erro}")
+
+        funcoes = {"semantic_scholar": buscar_semantic_scholar, "openalex": buscar_openalex, "crossref": buscar_crossref}
+        for fonte in ordem or ["semantic_scholar"]:
+            funcao = funcoes.get(fonte)
+            if not funcao:
+                log(f"Fonte acadêmica ignorada por não ser suportada: {fonte}")
+                continue
+            try:
+                funcao()
+            except (requests.RequestException, ValueError, KeyError) as erro:
+                log(f"{fonte} indisponível: {erro}")
 
         if not fontes:
             raise ValueError('Nenhuma fonte acadêmica respondeu nesta consulta.')
-        # Intercala os rankings, para não descartar sempre as outras bases.
-        contadores = {}
+
         ordenados = []
-        for item in encontrados:
-            fonte = item.get('_fonte', 'OpenAlex')
-            posicao = contadores.get(fonte, 0)
-            contadores[fonte] = posicao + 1
+        for posicao, item in enumerate(encontrados):
             ano = item.get('publication_year')
             if ano is not None and not self.cfg['ano_minimo'] <= ano <= datetime.now().year:
                 continue
@@ -673,9 +706,9 @@ class Pesquisa:
             consulta["proxima"] = time.time() + 3600
             self.salvar()
             pagina = consulta["pagina"]
-            log(f"Buscando no OpenAlex: {consulta['consulta']} | página {pagina}")
+            log(f"Buscando no Semantic Scholar: {consulta['consulta']} | página {pagina}")
             registro = {"quando": agora(), "consulta": consulta["consulta"], "origem": consulta["origem"],
-                        "pagina": pagina, "revisao": self.revisao, "fonte": "OpenAlex"}
+                        "pagina": pagina, "revisao": self.revisao, "fonte": self.cfg.get("fonte_academica_principal", "semantic_scholar")}
             try:
                 encontrados, fontes = self.buscar_fontes_academicas(consulta["consulta"], pagina)
                 registro["fontes"] = fontes
@@ -792,20 +825,23 @@ class Pesquisa:
         log(f"Lote {lote['numero']} concluído; o próximo lote poderá ser coletado ou retomado.")
 
     def modelos_ia(self):
+        """Usa um modelo principal fixo e Ollama apenas como reserva técnica."""
         modelos = []
-        modo = (self.cfg.get("modelo_ia") or "").strip().lower()
-        if modo in {"openrouter/free", "openrouter", "remoto", "auto"}:
+        modo_original = (self.cfg.get("modelo_ia") or "ollama").strip()
+        modo = modo_original.lower()
+        if modo in {"openrouter", "remoto", "auto"}:
+            modelo = self.cfg.get("modelo_openrouter") or (self.cfg.get("modelos_openrouter") or [""])[0]
+            if modelo and os.environ.get("OPENROUTER_API_KEY"):
+                modelos.append(modelo)
+            elif modelo:
+                log("OPENROUTER_API_KEY ausente; usando Ollama local como reserva.")
+        elif eh_openrouter(modo_original):
             if os.environ.get("OPENROUTER_API_KEY"):
-                modelos.extend(self.cfg.get("modelos_openrouter") or [])
+                modelos.append(modo_original)
             else:
                 log("OPENROUTER_API_KEY ausente; usando Ollama local como reserva.")
-        elif eh_openrouter(self.cfg.get("modelo_ia")):
-            if os.environ.get("OPENROUTER_API_KEY"):
-                modelos.append(self.cfg["modelo_ia"])
-            else:
-                log("OPENROUTER_API_KEY ausente; usando Ollama local como reserva.")
-        elif self.cfg.get("modelo_ia") and self.cfg["modelo_ia"].lower() not in {"ollama", "local"}:
-            modelos.append(self.cfg["modelo_ia"])
+        elif modo not in {"ollama", "local"} and modo_original:
+            modelos.append(modo_original)
         modelo_local = self.cfg.get("modelo_ollama")
         if modelo_local and modelo_local not in modelos:
             modelos.append(modelo_local)
@@ -994,23 +1030,167 @@ class Pesquisa:
             if feitos >= self.cfg['artigos_por_ciclo_ia']:
                 break
 
+    def registrar_url_texto_aberto(self, artigo, url, fonte, pdf=True, landing=None):
+        """Registra uma URL gratuita de texto integral encontrada em serviços abertos.
+
+        Uma mesma fonte pode devolver landing page, DOI ou PDF direto. Guardamos todas
+        as candidatas para o download tentar a próxima quando a primeira der 401/403.
+        """
+        if not url or urlparse(url).scheme not in {"https", "http"}:
+            return False
+        pdf = bool(pdf) and ".pdf" in urlparse(url).path.lower()
+        artigo.setdefault("urls_texto_aberto", [])
+        candidato = {"url": url, "fonte": fonte, "pdf": pdf}
+        if not any(c.get("url") == url for c in artigo["urls_texto_aberto"]):
+            artigo["urls_texto_aberto"].append(candidato)
+        if pdf and not artigo.get("url_pdf"):
+            artigo["url_pdf"] = url
+        elif not artigo.get("url_acesso_aberto"):
+            artigo["url_acesso_aberto"] = url
+        if landing and urlparse(landing).scheme in {"https", "http"}:
+            landing_candidato = {"url": landing, "fonte": fonte, "pdf": False}
+            if not any(c.get("url") == landing for c in artigo["urls_texto_aberto"]):
+                artigo["urls_texto_aberto"].append(landing_candidato)
+            if not artigo.get("url_acesso_aberto"):
+                artigo["url_acesso_aberto"] = landing
+        artigo["acesso_aberto"] = True
+        artigo.setdefault("fontes_texto_completo", [])
+        if fonte not in artigo["fontes_texto_completo"]:
+            artigo["fontes_texto_completo"].append(fonte)
+        return True
+
+    def resolver_unpaywall(self, artigo):
+        doi = (artigo.get("doi") or "").strip()
+        email = os.environ.get("UNPAYWALL_EMAIL") or "research-assistant@example.com"
+        if not doi or doi.startswith("http"):
+            return False
+        resposta = lento(requests.get, f"https://api.unpaywall.org/v2/{doi}",
+                        params={"email": email}, timeout=30,
+                        descricao=f"Unpaywall {artigo['nome_local']}")
+        if resposta.status_code == 404:
+            return False
+        resposta.raise_for_status()
+        dados = resposta.json()
+        locais = []
+        if dados.get("best_oa_location"):
+            locais.append(dados["best_oa_location"])
+        locais.extend(dados.get("oa_locations") or [])
+        achou = False
+        for local in locais:
+            pdf = local.get("url_for_pdf")
+            url = pdf or local.get("url")
+            achou = self.registrar_url_texto_aberto(artigo, url, "Unpaywall", pdf=bool(pdf),
+                                                    landing=local.get("url_for_landing_page")) or achou
+        return achou
+
+    def resolver_semantic_scholar_texto(self, artigo):
+        campos = "title,abstract,year,externalIds,openAccessPdf,url"
+        consultas = []
+        doi = (artigo.get("doi") or "").strip()
+        if doi:
+            consultas.append((f"https://api.semanticscholar.org/graph/v1/paper/DOI:{doi}", {"fields": campos}))
+        titulo = artigo.get("titulo")
+        if titulo:
+            consultas.append(("https://api.semanticscholar.org/graph/v1/paper/search",
+                              {"query": titulo, "limit": 3, "fields": campos, "openAccessPdf": ""}))
+        for url, params in consultas:
+            resposta = lento(requests.get, url, params=params, timeout=30,
+                            descricao=f"Semantic Scholar texto {artigo['nome_local']}")
+            if resposta.status_code == 404:
+                continue
+            resposta.raise_for_status()
+            dados = resposta.json()
+            itens = dados.get("data") if isinstance(dados.get("data"), list) else [dados]
+            for item in itens:
+                ids = item.get("externalIds") or {}
+                if doi and ids.get("DOI") and ids.get("DOI", "").lower() != doi.lower():
+                    continue
+                pdf = item.get("openAccessPdf") or {}
+                if self.registrar_url_texto_aberto(artigo, pdf.get("url"), "Semantic Scholar", pdf=True,
+                                                   landing=item.get("url")):
+                    return True
+        return False
+
+    def resolver_core_texto(self, artigo):
+        api_key = os.environ.get("CORE_API_KEY")
+        if not api_key:
+            return False
+        consulta = artigo.get("doi") or artigo.get("titulo")
+        if not consulta:
+            return False
+        resposta = lento(requests.get, "https://api.core.ac.uk/v3/search/works",
+                        params={"q": consulta, "limit": 5},
+                        headers={"Authorization": f"Bearer {api_key}"}, timeout=30,
+                        descricao=f"CORE texto {artigo['nome_local']}")
+        resposta.raise_for_status()
+        resultados = resposta.json().get("results") or []
+        doi = (artigo.get("doi") or "").lower().strip()
+        for item in resultados:
+            item_doi = str(item.get("doi") or "").lower().strip()
+            if doi and item_doi and item_doi != doi:
+                continue
+            urls = []
+            if item.get("downloadUrl"):
+                urls.append((item.get("downloadUrl"), True))
+            if item.get("fullTextLink"):
+                urls.append((item.get("fullTextLink"), False))
+            for link in item.get("links") or []:
+                if isinstance(link, dict):
+                    urls.append((link.get("url"), "pdf" in str(link.get("type", "")).lower()))
+            for url, eh_pdf in urls:
+                if self.registrar_url_texto_aberto(artigo, url, "CORE", pdf=eh_pdf):
+                    return True
+        return False
+
+    def resolver_texto_aberto(self, artigo):
+        """Tenta fontes gratuitas antes de desistir de um trabalho relevante."""
+        if artigo.get("pdf_local") or artigo.get("texto_local"):
+            return True
+        tentativas = [self.resolver_unpaywall, self.resolver_semantic_scholar_texto, self.resolver_core_texto]
+        erros = []
+        achou = bool(artigo.get("url_pdf") or artigo.get("url_acesso_aberto"))
+        for tentativa in tentativas:
+            try:
+                achou = tentativa(artigo) or achou
+            except (requests.RequestException, ValueError, KeyError, TypeError) as erro:
+                erros.append(f"{tentativa.__name__}: {str(erro)[:120]}")
+        if achou:
+            fontes = artigo.get("fontes_texto_completo") or ["registro existente"]
+            log(f"Texto aberto encontrado via {', '.join(fontes)}: {artigo['nome_local']}")
+            self.salvar()
+            return True
+        if erros:
+            artigo["ultima_busca_texto_aberto"] = {"quando": agora(), "erros": erros[-5:]}
+            self.salvar()
+        return False
+
     def baixar(self):
         for artigo in self.candidatos():
             if (artigo.get("pdf_local") or artigo.get("texto_local") or
-                    not (artigo.get("url_pdf") or artigo.get("url_acesso_aberto")) or
-                    not artigo.get("acesso_aberto") or
                     artigo["triagem_agente"]["classificacao"] == "baixa"):
                 continue
-            url_candidata = artigo.get("url_pdf") or artigo.get("url_acesso_aberto")
-            ident = chave(["download", artigo["id_openalex"], url_candidata])
-            def acao(a=artigo):
-                url = a.get("url_pdf") or a.get("url_acesso_aberto")
-                if urlparse(url).scheme not in {"https", "http"}:
-                    raise ValueError("Endereço de PDF inválido.")
-                log(f"Baixando texto aberto: {a['nome_local']}")
-                def obter():
+            if not artigo.get("url_pdf"):
+                self.resolver_texto_aberto(artigo)
+            if not (artigo.get("url_pdf") or artigo.get("url_acesso_aberto")) or not artigo.get("acesso_aberto"):
+                continue
+            candidatos = []
+            if artigo.get("url_pdf"):
+                candidatos.append({"url": artigo["url_pdf"], "fonte": "registro", "pdf": True})
+            candidatos.extend(artigo.get("urls_texto_aberto") or [])
+            if artigo.get("url_acesso_aberto"):
+                candidatos.append({"url": artigo["url_acesso_aberto"], "fonte": "registro", "pdf": False})
+            vistos = set()
+            candidatos = [c for c in candidatos if c.get("url") and not (c.get("url") in vistos or vistos.add(c.get("url")))]
+            url_candidata = candidatos[0]["url"] if candidatos else artigo.get("url_pdf") or artigo.get("url_acesso_aberto")
+            ident = chave(["download", artigo["id_openalex"], [c.get("url") for c in candidatos]])
+            def acao(a=artigo, candidatos=candidatos):
+                erros = []
+                if not candidatos:
+                    raise ValueError("Nenhuma URL aberta candidata foi encontrada.")
+                log(f"Baixando texto aberto: {a['nome_local']} ({len(candidatos)} URL(s) candidata(s))")
+                def obter(url):
                     partes, tamanho = [], 0
-                    with requests.get(url, stream=True, timeout=(10, 60), headers={"User-Agent": "mestrado-agente/1.0"}) as resp:
+                    with requests.get(url, stream=True, timeout=(10, 60), headers={"User-Agent": "research-assistant/1.0"}) as resp:
                         resp.raise_for_status()
                         tipo = resp.headers.get("content-type", "").lower()
                         for parte in resp.iter_content(65536):
@@ -1019,22 +1199,33 @@ class Pesquisa:
                                 raise ValueError("Texto excede 30 MB; incluir manualmente se necessário.")
                             partes.append(parte)
                     return tipo, b"".join(partes)
-                tipo, dados = lento(obter, descricao=f"download {a['nome_local']}", intervalo=10)
-                pdf = dados.lstrip().startswith(b"%PDF-") or "application/pdf" in tipo
-                if pdf and not dados.lstrip().startswith(b"%PDF-"):
-                    raise ValueError("A resposta foi marcada como PDF, mas não contém um PDF válido.")
-                if not pdf and not ("html" in tipo or "xml" in tipo or "text/plain" in tipo or b"<html" in dados[:1000].lower()):
-                    raise ValueError("O endereço não retornou PDF nem texto HTML/XML reconhecível.")
-                destino = self.root / "pdfs" / f"{a['nome_local']}{'.pdf' if pdf else '.html'}"
-                destino.parent.mkdir(exist_ok=True)
-                tmp = destino.with_suffix(".tmp")
-                tmp.write_bytes(dados)
-                os.replace(tmp, destino)
-                if pdf:
-                    a["pdf_local"] = destino.relative_to(self.root).as_posix()
-                else:
-                    a["texto_local"] = destino.relative_to(self.root).as_posix()
-                return True
+                for candidato in candidatos:
+                    url = candidato.get("url")
+                    if urlparse(url).scheme not in {"https", "http"}:
+                        continue
+                    try:
+                        tipo, dados = lento(lambda u=url: obter(u), descricao=f"download {a['nome_local']}", intervalo=10)
+                        pdf = dados.lstrip().startswith(b"%PDF-") or "application/pdf" in tipo
+                        if pdf and not dados.lstrip().startswith(b"%PDF-"):
+                            raise ValueError("A resposta foi marcada como PDF, mas não contém um PDF válido.")
+                        if not pdf and not ("html" in tipo or "xml" in tipo or "text/plain" in tipo or b"<html" in dados[:1000].lower()):
+                            raise ValueError("O endereço não retornou PDF nem texto HTML/XML reconhecível.")
+                        destino = self.root / "pdfs" / f"{a['nome_local']}{'.pdf' if pdf else '.html'}"
+                        destino.parent.mkdir(exist_ok=True)
+                        tmp = destino.with_suffix(".tmp")
+                        tmp.write_bytes(dados)
+                        os.replace(tmp, destino)
+                        if pdf:
+                            a["pdf_local"] = destino.relative_to(self.root).as_posix()
+                        else:
+                            a["texto_local"] = destino.relative_to(self.root).as_posix()
+                        a["fonte_texto_baixado"] = candidato.get("fonte")
+                        return True
+                    except (requests.RequestException, ValueError, OSError) as erro:
+                        erros.append(f"{candidato.get('fonte', 'fonte')}: {str(erro)[:180]}")
+                        continue
+                a["erros_download_texto_aberto"] = erros[-10:]
+                raise ValueError("Nenhuma URL aberta candidata pôde ser baixada. " + " | ".join(erros[-3:]))
             if self.tarefa(ident, acao):
                 break
 

@@ -62,6 +62,37 @@ class PesquisaTest(unittest.TestCase):
         self.assertEqual(a['pre_leitura_agente']['decisao'], 'ler_integralmente')
         self.assertTrue(self.p.aprovado_preleitura(a))
 
+
+    def test_resolve_texto_aberto_via_unpaywall(self):
+        a = self.artigo('A')
+        a['doi'] = '10.1234/teste'
+        a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
+        resposta = types.SimpleNamespace(
+            status_code=200,
+            raise_for_status=lambda: None,
+            json=lambda: {'best_oa_location': {'url_for_pdf': 'https://repo.example/a.pdf', 'url_for_landing_page': 'https://repo.example/a'}}
+        )
+        with patch('motor.requests.get', return_value=resposta):
+            self.assertTrue(self.p.resolver_texto_aberto(a))
+        self.assertEqual(a['url_pdf'], 'https://repo.example/a.pdf')
+        self.assertTrue(a['acesso_aberto'])
+        self.assertIn('Unpaywall', a['fontes_texto_completo'])
+
+    def test_resolve_texto_aberto_via_semantic_scholar_quando_unpaywall_nao_tem(self):
+        a = self.artigo('A')
+        a['doi'] = '10.1234/teste'
+        a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
+        respostas = [
+            types.SimpleNamespace(status_code=404, raise_for_status=lambda: None, json=lambda: {}),
+            types.SimpleNamespace(status_code=200, raise_for_status=lambda: None,
+                                  json=lambda: {'externalIds': {'DOI': '10.1234/teste'}, 'url': 'https://semanticscholar.org/paper/x',
+                                                'openAccessPdf': {'url': 'https://pdf.example/a.pdf'}}),
+        ]
+        with patch('motor.requests.get', side_effect=respostas):
+            self.assertTrue(self.p.resolver_texto_aberto(a))
+        self.assertEqual(a['url_pdf'], 'https://pdf.example/a.pdf')
+        self.assertIn('Semantic Scholar', a['fontes_texto_completo'])
+
     def test_preleitura_descarta_sem_texto_integral(self):
         a = self.artigo('A')
         a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}

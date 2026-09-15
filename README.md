@@ -40,8 +40,8 @@ Se você quiser transportar a base entre Windows e Linux, sincronize essas pasta
 Use Python 3.11 ou superior.
 
 ```bash
-git clone <url-do-seu-repositorio> mestrado-agente
-cd mestrado-agente
+git clone <url-do-seu-repositorio> research-assistant
+cd research-assistant
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -56,8 +56,8 @@ Na primeira execução, se `vault/INSTRUCOES.md` não existir, o agente cria um 
 ## Instalação no Windows
 
 ```powershell
-git clone <url-do-seu-repositorio> mestrado-agente
-cd mestrado-agente
+git clone <url-do-seu-repositorio> research-assistant
+cd research-assistant
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
@@ -73,6 +73,8 @@ Crie uma chave no OpenRouter e coloque em `.env`:
 
 ```env
 OPENROUTER_API_KEY=cole_sua_chave_aqui
+UNPAYWALL_EMAIL=seu-email@exemplo.com
+CORE_API_KEY=opcional
 ```
 
 Ou configure só no terminal:
@@ -89,16 +91,17 @@ $env:OPENROUTER_API_KEY = "cole_sua_chave_aqui"
 python agente.py
 ```
 
-A configuração padrão em `vault/INSTRUCOES.md` usa `modelo ia: openrouter/free`. O agente tenta a fila definida em `fila openrouter` e, se os modelos remotos falharem ou baterem limite, cai para o modelo local do Ollama configurado em `modelo ollama de reserva`.
+A configuração padrão em `vault/INSTRUCOES.md` usa um modelo principal fixo. Para custo zero e comportamento mais estável, use `modelo ia: ollama`. Para usar OpenRouter, informe um único modelo em `modelo ia:` ou use `modelo ia: openrouter` junto com `modelo openrouter:`. O Ollama continua como reserva técnica.
 
 Se você colocou crédito no OpenRouter e quiser usar um modelo pago específico, edite `vault/INSTRUCOES.md`:
 
 ```md
-- modelo ia: openai/gpt-oss-120b
-- fila openrouter: openai/gpt-oss-120b, anthropic/claude-sonnet-4.5, google/gemini-2.5-pro
+- modelo ia: openrouter
+- modelo openrouter: openai/gpt-oss-120b
+- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
 ```
 
-Os nomes exatos dos modelos mudam com o tempo. Use os slugs atuais mostrados pelo OpenRouter. Para controlar gasto, crie uma chave dedicada para este agente e configure limite de uso no painel do OpenRouter.
+Os nomes exatos dos modelos mudam com o tempo. Use os slugs atuais mostrados pelo OpenRouter. Para controlar gasto e reduzir variação, crie uma chave dedicada, configure limite de uso e escolha apenas um modelo principal.
 
 ## Configurando IA local com Ollama
 
@@ -133,6 +136,27 @@ Depois ajuste em `vault/INSTRUCOES.md`:
 - modelo ollama de reserva: qwen2.5:14b-instruct-q4_K_M
 ```
 
+## Busca acadêmica estável
+
+Para reduzir ruído entre rankings, a fonte acadêmica principal é o Semantic Scholar. Unpaywall não muda a seleção de trabalhos; ele só tenta encontrar uma cópia open access pelo DOI quando o Semantic Scholar não entrega um PDF direto. OpenAlex e Crossref continuam no código como auxiliares opcionais, mas ficam desligados por padrão.
+
+No `vault/INSTRUCOES.md`, a configuração recomendada é:
+
+```md
+- fonte acadêmica principal: semantic_scholar
+- fontes acadêmicas auxiliares: nenhuma
+- modelo ia: ollama
+- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
+```
+
+Se quiser testar uma IA remota fixa:
+
+```md
+- modelo ia: openrouter
+- modelo openrouter: openai/gpt-oss-120b
+- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
+```
+
 ## Como rodar
 
 Execução normal de até 8 horas:
@@ -165,17 +189,18 @@ Use `Ctrl+C` para pausar. Rodar o mesmo comando depois retoma o estado salvo.
 
 1. Lê `vault/INSTRUCOES.md`.
 2. Gera consultas a partir das variáveis de busca e consultas manuais.
-3. Busca resultados em OpenAlex, Semantic Scholar e Crossref.
+3. Busca resultados no Semantic Scholar por padrão.
 4. Deduplica por DOI ou título.
 5. Faz triagem por título/resumo.
-6. Tenta baixar texto aberto permitido.
-7. Descarta do grafo trabalhos sem texto integral útil, mantendo registro interno em JSON.
-8. Faz pré-leitura de introdução/conclusão quando possível.
-9. Lê integralmente um trabalho aprovado antes de passar para outro.
-10. Registra fichamento e síntese do trabalho.
-11. Atualiza estado da arte, lacunas e propostas no relatório.
-12. Para quando houver propostas novas aguardando avaliação humana.
-13. Na próxima execução, usa as avaliações positivas para puxar buscas próximas.
+6. Tenta encontrar texto completo aberto pelo PDF do Semantic Scholar e por Unpaywall pelo DOI. CORE continua opcional quando configurado.
+7. Baixa somente texto aberto permitido.
+8. Descarta do grafo trabalhos sem texto integral útil, mantendo registro interno em JSON.
+9. Faz pré-leitura de introdução/conclusão quando possível.
+10. Lê integralmente um trabalho aprovado antes de passar para outro.
+11. Registra fichamento e síntese do trabalho.
+12. Atualiza estado da arte, lacunas e propostas no relatório.
+13. Para quando houver propostas novas aguardando avaliação humana.
+14. Na próxima execução, usa as avaliações positivas para puxar buscas próximas.
 
 ## Arquivos que você deve olhar durante o uso
 

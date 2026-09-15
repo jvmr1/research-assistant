@@ -25,13 +25,7 @@ INSTRUCOES = VAULT / "INSTRUCOES.md"
 SESSOES = DATA / "sessoes"
 PROPOSTAS = DATA / "propostas"
 MODELO_OLLAMA = "qwen2.5:7b-instruct-q4_K_M"
-MODELOS_OPENROUTER = [
-    "openai/gpt-oss-120b:free",
-    "nex-agi/nex-n2.5-pro:free",
-    "z-ai/glm-5.2:free",
-    "google/gemma-4-26b-a4b-it:free",
-    "deepseek/deepseek-chat-v3.1:free",
-]
+MODELO_OPENROUTER = "openai/gpt-oss-120b"
 
 
 
@@ -54,9 +48,11 @@ O agente nunca sobrescreve este arquivo automaticamente.
 - ano mínimo: 2025
 - resultados por consulta: 10
 - artigos analisados por ciclo: 10
-- modelo ia: openrouter/free
+- fonte acadêmica principal: semantic_scholar
+- fontes acadêmicas auxiliares: nenhuma
+- modelo ia: ollama
+- modelo openrouter: openai/gpt-oss-120b
 - modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
-- fila openrouter: openai/gpt-oss-120b:free, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free, deepseek/deepseek-chat-v3.1:free
 
 ## Variáveis de busca
 
@@ -129,9 +125,11 @@ def carregar_instrucoes(caminho=INSTRUCOES):
     consultas = []
     ano_minimo = 2025
     resultados_por_consulta = 10
-    modelo_ia = "openrouter/free"
+    fonte_academica_principal = "semantic_scholar"
+    fontes_academicas_auxiliares = []
+    modelo_ia = "ollama"
+    modelo_openrouter = MODELO_OPENROUTER
     modelo_ollama = MODELO_OLLAMA
-    modelos_openrouter = list(MODELOS_OPENROUTER)
     artigos_por_ciclo_ia = 10
     lendo_consultas = False
     lendo_variaveis = False
@@ -154,8 +152,21 @@ def carregar_instrucoes(caminho=INSTRUCOES):
                 linha_limpa.split(":", 1)[1].strip()
             )
 
+        if linha_limpa.lower().startswith("- fonte acadêmica principal:") or linha_limpa.lower().startswith("- fonte academica principal:"):
+            fonte_academica_principal = linha_limpa.split(":", 1)[1].strip().lower().replace("-", "_")
+
+        if linha_limpa.lower().startswith("- fontes acadêmicas auxiliares:") or linha_limpa.lower().startswith("- fontes academicas auxiliares:"):
+            bruto = linha_limpa.split(":", 1)[1].strip().lower()
+            if bruto in {"", "nenhuma", "nenhum", "não", "nao"}:
+                fontes_academicas_auxiliares = []
+            else:
+                fontes_academicas_auxiliares = [f.strip().replace("-", "_") for f in re.split(r"[,;]", bruto) if f.strip()]
+
         if linha_limpa.lower().startswith("- modelo ia:"):
             modelo_ia = linha_limpa.split(":", 1)[1].strip()
+
+        if linha_limpa.lower().startswith("- modelo openrouter:"):
+            modelo_openrouter = linha_limpa.split(":", 1)[1].strip()
 
         if (linha_limpa.lower().startswith("- modelo ollama:") or
             linha_limpa.lower().startswith("- modelo ollama de reserva:")):
@@ -164,7 +175,9 @@ def carregar_instrucoes(caminho=INSTRUCOES):
         if (linha_limpa.lower().startswith("- modelos openrouter:") or
             linha_limpa.lower().startswith("- fila openrouter:")):
             bruto = linha_limpa.split(":", 1)[1].strip()
-            modelos_openrouter = [m.strip() for m in bruto.split(",") if m.strip()]
+            primeiro = next((m.strip() for m in bruto.split(",") if m.strip()), "")
+            if primeiro:
+                modelo_openrouter = primeiro
 
         if linha_limpa.lower().startswith("- artigos analisados por ciclo:"):
             artigos_por_ciclo_ia = int(
@@ -189,8 +202,11 @@ def carregar_instrucoes(caminho=INSTRUCOES):
         "variaveis_busca": variaveis_busca,
         "ano_minimo": ano_minimo,
         "resultados_por_consulta": resultados_por_consulta,
+        "fonte_academica_principal": fonte_academica_principal,
+        "fontes_academicas_auxiliares": fontes_academicas_auxiliares,
         "modelo_ia": modelo_ia,
-        "modelos_openrouter": modelos_openrouter or list(MODELOS_OPENROUTER),
+        "modelo_openrouter": modelo_openrouter,
+        "modelos_openrouter": [modelo_openrouter] if modelo_openrouter else [],
         "modelo_ollama": modelo_ollama,
         "artigos_por_ciclo_ia": artigos_por_ciclo_ia,
     }
