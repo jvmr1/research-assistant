@@ -105,7 +105,9 @@ Os nomes exatos dos modelos mudam com o tempo. Use os slugs atuais mostrados pel
 
 ## Configurando IA local com Ollama
 
-Instale o Ollama e baixe o modelo indicado em `vault/INSTRUCOES.md`:
+Instale o Ollama. O agente consulta os modelos instalados; se encontrar um modelo compatível, usa esse modelo. Se não houver nenhum modelo local adequado e o Ollama for necessário, ele tenta baixar automaticamente o modelo indicado em `vault/INSTRUCOES.md`.
+
+Você também pode baixar manualmente antes de rodar:
 
 ```bash
 ollama pull qwen2.5:7b-instruct-q4_K_M

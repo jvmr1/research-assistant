@@ -136,6 +136,45 @@ def ollama_responde(timeout=2):
         return None
 
 
+
+
+def nomes_modelos_ollama(resposta):
+    try:
+        return [m.get("name") for m in resposta.json().get("models", []) if m.get("name")]
+    except (ValueError, KeyError, TypeError):
+        return []
+
+
+def escolher_modelo_ollama(modelo_preferido, resposta):
+    """Escolhe um modelo local existente ou o preferido para baixar."""
+    nomes = nomes_modelos_ollama(resposta)
+    if modelo_preferido in nomes:
+        return modelo_preferido, False
+    if modelo_preferido + ":latest" in nomes:
+        return modelo_preferido + ":latest", False
+    preferidos = ("qwen", "llama", "mistral", "gemma", "phi")
+    instruct = [n for n in nomes if "instruct" in n.lower() or "chat" in n.lower()]
+    candidatos = instruct + nomes
+    for termo in preferidos:
+        for nome in candidatos:
+            if termo in nome.lower():
+                return nome, False
+    if nomes:
+        return nomes[0], False
+    return modelo_preferido, True
+
+
+def baixar_modelo_ollama(modelo):
+    exe = shutil.which("ollama")
+    if not exe:
+        raise ValueError("Ollama não está instalado no PATH; não foi possível baixar modelo local.")
+    log(f"Modelo local não encontrado; baixando com Ollama: {modelo}")
+    processo = subprocess.run([exe, "pull", modelo], text=True, capture_output=True, timeout=1800)
+    if processo.returncode != 0:
+        detalhe = (processo.stderr or processo.stdout or "falha sem detalhe")[-500:]
+        raise ValueError(f"Falha ao baixar modelo Ollama {modelo}: {detalhe}")
+    log(f"Modelo Ollama disponível: {modelo}")
+
 def garantir_ollama_rodando():
     global _OLLAMA_INICIADO_PELO_AGENTE
     resposta = ollama_responde()
@@ -343,8 +382,15 @@ def gerar(modelo, orientacao, tarefa, dados, esquema=None):
     partes = []
     # Qwen3.5 usa thinking por padrão. Desativamos explicitamente para JSON de
     # extração limitado; nunca descartamos reasoning e aceitamos uma resposta vazia.
+    resposta_tags = garantir_ollama_rodando()
+    modelo, precisa_baixar = escolher_modelo_ollama(modelo, resposta_tags)
+    if precisa_baixar:
+        baixar_modelo_ollama(modelo)
+        resposta_tags = garantir_ollama_rodando()
+        modelo, precisa_baixar = escolher_modelo_ollama(modelo, resposta_tags)
+        if precisa_baixar:
+            raise ModeloIndisponivel(modelo, "modelo local não ficou disponível após download", definitivo=True)
     moderno = modelo.lower().startswith("qwen3")
-    garantir_ollama_rodando()
     with requests.post("http://localhost:11434/api/generate", json={
         "model": modelo, "system": sistema,
         "prompt": tarefa + "\nMATERIAL:\n" + json.dumps(dados, ensure_ascii=False),
@@ -874,22 +920,7 @@ class Pesquisa:
             modelos.append(modo_original)
         modelo_local = self.cfg.get("modelo_ollama")
         if modelo_local and modelo_local not in modelos:
-            # Se já há modelo remoto disponível, a opção local é só reserva. Nesse
-            # caso conferimos se ela existe para evitar erro 404 em
-            # localhost:11434/api/generate. Se não há remoto, mantemos o modelo
-            # local na lista; a checagem explícita fica em modelo_disponivel().
-            if modelos:
-                try:
-                    resposta = garantir_ollama_rodando()
-                    nomes = {m.get("name") for m in resposta.json().get("models", [])}
-                    if modelo_local in nomes or modelo_local + ":latest" in nomes:
-                        modelos.append(modelo_local)
-                    else:
-                        log(f"Reserva Ollama ignorada porque o modelo local não está instalado: {modelo_local}.")
-                except (requests.RequestException, ValueError, KeyError) as erro:
-                    log(f"Reserva Ollama ignorada porque o serviço local está indisponível: {erro}")
-            else:
-                modelos.append(modelo_local)
+            modelos.append(modelo_local)
         return modelos
 
     def registrar_meta_ia(self, obj):
@@ -913,10 +944,12 @@ class Pesquisa:
             return True
         try:
             resposta = garantir_ollama_rodando()
-            nomes = {m["name"] for m in resposta.json()["models"]}
             modelo = self.cfg["modelo_ollama"]
-            if modelo not in nomes and modelo + ":latest" not in nomes:
-                raise ValueError(f"Modelo {modelo} ainda não instalado no Ollama.")
+            escolhido, precisa_baixar = escolher_modelo_ollama(modelo, resposta)
+            if precisa_baixar:
+                baixar_modelo_ollama(escolhido)
+            if escolhido != modelo:
+                log(f"Usando modelo Ollama já instalado: {escolhido}.")
             return True
         except (requests.RequestException, ValueError, KeyError) as erro:
             self.mensagem = f"Aguardando Ollama: {erro}"

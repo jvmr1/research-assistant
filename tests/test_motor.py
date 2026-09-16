@@ -343,24 +343,31 @@ class PesquisaTest(unittest.TestCase):
         self.assertNotIn('artigo', tags)
         self.assertNotIn('status/novo', tags)
 
-    def test_modelos_ia_nao_usa_reserva_ollama_sem_modelo_instalado(self):
+    def test_modelos_ia_mantem_reserva_ollama_para_resolver_no_runtime(self):
         self.p.cfg['modelo_ia'] = 'openrouter'
         self.p.cfg['modelo_openrouter'] = 'openai/gpt-oss-120b'
         self.p.cfg['modelo_ollama'] = 'qwen2.5:7b-instruct-q4_K_M'
-        with patch.dict('motor.os.environ', {'OPENROUTER_API_KEY': 'x'}, clear=False), \
-             patch('motor.garantir_ollama_rodando') as tags:
-            tags.return_value.json.return_value = {'models': [{'name': 'outro-modelo'}]}
+        with patch.dict('motor.os.environ', {'OPENROUTER_API_KEY': 'x'}, clear=False):
             modelos = self.p.modelos_ia()
-        self.assertEqual(modelos, ['openai/gpt-oss-120b'])
+        self.assertEqual(modelos, ['openai/gpt-oss-120b', 'qwen2.5:7b-instruct-q4_K_M'])
 
-    def test_modelo_ausente_nao_inicia_inferencia(self):
+    def test_modelo_local_existente_e_escolhido_sem_download(self):
         from unittest.mock import Mock
         resposta = Mock()
-        resposta.json.return_value = {'models': [{'name': 'outro-modelo'}]}
-        with patch('motor.requests.get', return_value=resposta), patch('motor.gerar') as gerar:
-            self.assertFalse(self.p.modelo_disponivel())
+        resposta.json.return_value = {'models': [{'name': 'llama3.1:8b-instruct-q4_K_M'}]}
+        with patch('motor.requests.get', return_value=resposta),              patch('motor.baixar_modelo_ollama') as baixar,              patch('motor.gerar') as gerar:
+            self.assertTrue(self.p.modelo_disponivel())
+        baixar.assert_not_called()
         gerar.assert_not_called()
-        self.assertIn('ainda não instalado', self.p.mensagem)
+
+    def test_sem_modelo_local_baixa_preferido(self):
+        from unittest.mock import Mock
+        resposta = Mock()
+        resposta.json.return_value = {'models': []}
+        with patch('motor.requests.get', return_value=resposta),              patch('motor.baixar_modelo_ollama') as baixar,              patch('motor.gerar') as gerar:
+            self.assertTrue(self.p.modelo_disponivel())
+        baixar.assert_called_once_with('modelo-teste')
+        gerar.assert_not_called()
 
 
 if __name__ == '__main__':
