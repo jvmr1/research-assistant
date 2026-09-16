@@ -343,6 +343,16 @@ class PesquisaTest(unittest.TestCase):
         self.assertNotIn('artigo', tags)
         self.assertNotIn('status/novo', tags)
 
+    def test_modelos_ia_nao_usa_reserva_ollama_sem_modelo_instalado(self):
+        self.p.cfg['modelo_ia'] = 'openrouter'
+        self.p.cfg['modelo_openrouter'] = 'openai/gpt-oss-120b'
+        self.p.cfg['modelo_ollama'] = 'qwen2.5:7b-instruct-q4_K_M'
+        with patch.dict('motor.os.environ', {'OPENROUTER_API_KEY': 'x'}, clear=False), \
+             patch('motor.garantir_ollama_rodando') as tags:
+            tags.return_value.json.return_value = {'models': [{'name': 'outro-modelo'}]}
+            modelos = self.p.modelos_ia()
+        self.assertEqual(modelos, ['openai/gpt-oss-120b'])
+
     def test_modelo_ausente_nao_inicia_inferencia(self):
         from unittest.mock import Mock
         resposta = Mock()

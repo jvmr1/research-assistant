@@ -351,7 +351,12 @@ def gerar(modelo, orientacao, tarefa, dados, esquema=None):
         "format": esquema or "json", "stream": True, **({"think": False} if moderno else {}),
         "options": {"temperature": 0.7 if moderno else 0.1, "num_ctx": 16384, "num_predict": 3000},
     }, stream=True, timeout=(10, 1200)) as resposta:
-        resposta.raise_for_status()
+        if getattr(resposta, "status_code", 200) == 404:
+            raise ModeloIndisponivel(modelo, "modelo local não encontrado no Ollama; rode `ollama pull " + modelo + "` ou remova a reserva local", definitivo=True)
+        try:
+            resposta.raise_for_status()
+        except requests.HTTPError as erro:
+            raise ModeloIndisponivel(modelo, str(erro)[:300]) from erro
         concluido = False
         for linha in resposta.iter_lines():
             if not linha:
@@ -869,7 +874,22 @@ class Pesquisa:
             modelos.append(modo_original)
         modelo_local = self.cfg.get("modelo_ollama")
         if modelo_local and modelo_local not in modelos:
-            modelos.append(modelo_local)
+            # Se já há modelo remoto disponível, a opção local é só reserva. Nesse
+            # caso conferimos se ela existe para evitar erro 404 em
+            # localhost:11434/api/generate. Se não há remoto, mantemos o modelo
+            # local na lista; a checagem explícita fica em modelo_disponivel().
+            if modelos:
+                try:
+                    resposta = garantir_ollama_rodando()
+                    nomes = {m.get("name") for m in resposta.json().get("models", [])}
+                    if modelo_local in nomes or modelo_local + ":latest" in nomes:
+                        modelos.append(modelo_local)
+                    else:
+                        log(f"Reserva Ollama ignorada porque o modelo local não está instalado: {modelo_local}.")
+                except (requests.RequestException, ValueError, KeyError) as erro:
+                    log(f"Reserva Ollama ignorada porque o serviço local está indisponível: {erro}")
+            else:
+                modelos.append(modelo_local)
         return modelos
 
     def registrar_meta_ia(self, obj):
@@ -1100,7 +1120,7 @@ class Pesquisa:
         resposta = lento(requests.get, f"https://api.unpaywall.org/v2/{doi}",
                         params={"email": email}, timeout=30,
                         descricao=f"Unpaywall {artigo['nome_local']}")
-        if resposta.status_code == 404:
+        if getattr(resposta, "status_code", 200) == 404:
             return False
         resposta.raise_for_status()
         dados = resposta.json()
@@ -1129,7 +1149,7 @@ class Pesquisa:
         for url, params in consultas:
             resposta = lento(requests.get, url, params=params, timeout=30,
                             descricao=f"Semantic Scholar texto {artigo['nome_local']}")
-            if resposta.status_code == 404:
+            if getattr(resposta, "status_code", 200) == 404:
                 continue
             resposta.raise_for_status()
             dados = resposta.json()
