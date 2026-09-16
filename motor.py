@@ -518,6 +518,16 @@ class Pesquisa:
         if tarefa.get("versao_anterior"):
             self.estado["tarefas"].pop(identificador, None)
             tarefa = {}
+        erro_salvo = tarefa.get('erro', '')
+        erro_modelo = any(x in erro_salvo for x in (
+            'localhost:11434/api/generate', 'api/generate', 'Nenhum modelo respondeu',
+            'modelo local', 'Ollama', 'OPENROUTER_API_KEY', 'nao retornou um objeto JSON',
+            'não retornou um objeto JSON', 'Modelo indisponivel', 'Modelo indisponível'))
+        if erro_modelo:
+            # Erro de IA/modelo pode ser resolvido por troca de provedor, download
+            # de modelo ou correção de código. Não deixe isso congelar uma triagem.
+            self.estado["tarefas"].pop(identificador, None)
+            tarefa = {}
         if '403' in tarefa.get('erro', '') or '401' in tarefa.get('erro', ''):
             return None  # Acesso negado não se resolve repetindo a mesma requisição.
         if tarefa.get("definitivo"):
@@ -545,7 +555,12 @@ class Pesquisa:
         except (requests.RequestException, ValueError, OSError, KeyError, TypeError) as erro:
             tentativas = tarefa.get("tentativas", 0) + 1
             registro = {"erro": str(erro)[:400], "tentativas": tentativas}
-            if tentativas >= 2 or '403' in str(erro) or '401' in str(erro):
+            erro_texto = str(erro)
+            erro_modelo = any(x in erro_texto for x in (
+                'localhost:11434/api/generate', 'api/generate', 'Nenhum modelo respondeu',
+                'modelo local', 'Ollama', 'OPENROUTER_API_KEY', 'nao retornou um objeto JSON',
+                'não retornou um objeto JSON', 'Modelo indisponivel', 'Modelo indisponível'))
+            if (tentativas >= 2 and not erro_modelo) or '403' in erro_texto or '401' in erro_texto:
                 registro["definitivo"] = True
                 log(f"Falhou de novo; registrando e seguindo adiante: {erro}")
             else:
