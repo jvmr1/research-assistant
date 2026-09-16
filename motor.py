@@ -1009,6 +1009,23 @@ class Pesquisa:
                 return True
             if self.tarefa(ident, acao):
                 feitos += 1
+            else:
+                tarefa = self.estado.get("tarefas", {}).get(ident, {})
+                erro = tarefa.get("erro", "")
+                if tarefa.get("definitivo") or (erro and not tarefa.get("tentar_em")):
+                    artigo["triagem_agente"] = {
+                        "revisao": self.revisao,
+                        "classificacao": "revisar",
+                        "justificativa": (
+                            "Triagem por IA não avançou por erro técnico; o agente marcou como revisar "
+                            "para não travar o fluxo e seguir para obtenção/pré-leitura do texto. Erro: "
+                            + erro[:240]
+                        ),
+                        "fallback": "erro_tecnico_ia",
+                    }
+                    log(f"Triagem em fallback técnico: {artigo['nome_local']} — seguindo o fluxo.")
+                    self.salvar()
+                    feitos += 1
             if feitos >= self.cfg["artigos_por_ciclo_ia"]:
                 break
 
