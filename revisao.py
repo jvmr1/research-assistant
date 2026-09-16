@@ -256,6 +256,24 @@ def ler(p):
                     log('Citação divergente descartada; leitura mantida como interpretação provisória.')
                 return obj
             obj = p.tarefa(ident, acao)
+            if not obj:
+                tarefa = p.estado.get('tarefas', {}).get(ident, {})
+                erro = tarefa.get('erro', '')
+                if tarefa.get('definitivo') or ('Ficha sem conteúdo' in erro):
+                    obj = {
+                        'id': ident,
+                        'artigo': a['nome_local'],
+                        'pagina': trecho['pagina'],
+                        'tipo': trecho['tipo'],
+                        'resumo': 'Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.',
+                        'evidencias': [],
+                        'interpretacao': 'Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.',
+                        'duvidas': 'Conferir manualmente este trecho se ele for importante.',
+                        'avisos': ['falha_tecnica_ficha'],
+                        'perfil_acumulado': dict(a.get('perfil_revisao', {}), revisao=p.revisao, assinatura=assinatura),
+                    }
+                    json_gravar(pasta / f'{i}.json', obj)
+                    log(f"Trecho {i + 1}/{total} pulado após falha técnica repetida; seguindo leitura de {a['nome_local']}.")
             if obj:
                 fichas[i] = obj
                 feitos += 1

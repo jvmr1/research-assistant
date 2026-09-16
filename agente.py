@@ -26,7 +26,12 @@ SESSOES = DATA / "sessoes"
 PROPOSTAS = DATA / "propostas"
 MODELO_OLLAMA = "qwen2.5:7b-instruct-q4_K_M"
 MODELO_OPENROUTER = "openai/gpt-oss-120b"
+MODELOS_INVALIDOS = {"free", "openrouter/free", "gratis", "gratuito"}
 
+
+def modelo_invalido(valor):
+    """Evita aliases genéricos que o OpenRouter não aceita como modelo real."""
+    return (valor or "").strip().lower() in MODELOS_INVALIDOS
 
 
 CONSULTAS = [
@@ -163,10 +168,16 @@ def carregar_instrucoes(caminho=INSTRUCOES):
                 fontes_academicas_auxiliares = [f.strip().replace("-", "_") for f in re.split(r"[,;]", bruto) if f.strip()]
 
         if linha_limpa.lower().startswith("- modelo ia:"):
-            modelo_ia = linha_limpa.split(":", 1)[1].strip()
+            valor = linha_limpa.split(":", 1)[1].strip()
+            # "openrouter/free" era um atalho de teste, não um modelo válido.
+            # Mantemos o provedor remoto e deixamos o modelo real vir de
+            # "modelo openrouter" ou do padrão do projeto.
+            modelo_ia = "openrouter" if modelo_invalido(valor) else valor
 
         if linha_limpa.lower().startswith("- modelo openrouter:"):
-            modelo_openrouter = linha_limpa.split(":", 1)[1].strip()
+            valor = linha_limpa.split(":", 1)[1].strip()
+            if not modelo_invalido(valor):
+                modelo_openrouter = valor
 
         if (linha_limpa.lower().startswith("- modelo ollama:") or
             linha_limpa.lower().startswith("- modelo ollama de reserva:")):
@@ -175,7 +186,8 @@ def carregar_instrucoes(caminho=INSTRUCOES):
         if (linha_limpa.lower().startswith("- modelos openrouter:") or
             linha_limpa.lower().startswith("- fila openrouter:")):
             bruto = linha_limpa.split(":", 1)[1].strip()
-            primeiro = next((m.strip() for m in bruto.split(",") if m.strip()), "")
+            modelos_validos = [m.strip() for m in bruto.split(",") if m.strip() and not modelo_invalido(m.strip())]
+            primeiro = next(iter(modelos_validos), "")
             if primeiro:
                 modelo_openrouter = primeiro
 
