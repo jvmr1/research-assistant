@@ -277,7 +277,7 @@ def atualizar(p):
                      '3. São tentados textos completos abertos dos trabalhos priorizados/revisados. Quando não há texto completo, o resumo é usado na pré-leitura como evidência limitada.',
                      '4. Antes da leitura integral, a IA avalia introdução e conclusão quando extraíveis para decidir `ler_integralmente`, `ler_com_resumo`, `manter_como_contexto`, `descartar` ou `precisa_texto_melhor`.',
                      '5. O texto aprovado é dividido em trechos. A IA produz fichas com resumo, interpretação, dúvidas e citações literais conferidas no trecho original. Propostas preliminares podem ser geradas a partir do fichamento de um único trabalho. Com novas leituras, elas podem ser reforçadas, contraditas, substituídas ou virar propostas comparativas do estado da arte.',
-                     '6. A próxima busca só é liberada quando o lote atual terminou a triagem e a leitura dos candidatos; assim o acervo cresce por lotes processados, não por coleta contínua sem síntese.',
+                     '6. A próxima busca só é liberada quando não há trabalho pendente no acervo. Cada trabalho é levado até um destino claro — descartado, sem texto integral, contexto ou lido/sintetizado — antes de o agente escolher outro. Assim o acervo cresce por trabalhos processados, não por coleta contínua sem síntese.',
                      '## Tags de busca',
                      'Tags derivadas das consultas: ' + ', '.join(sorted({tag for consulta in p.cfg.get('consultas', []) for tag in p.b.criar_tags(consulta)})),
                      '## Contagem do fluxo',

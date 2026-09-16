@@ -501,7 +501,7 @@ def detalhar(p):
 
 def ciclo(p):
     p.configurar()
-    p.mensagem = 'Preparando o próximo lote de trabalhos.'
+    p.mensagem = 'Preparando o próximo trabalho.'
     p.importar_pdfs()
     p.painel()
     lote = p.preparar_lote()
@@ -510,53 +510,65 @@ def ciclo(p):
         p.salvar()
         p.painel()
         return
+
+    artigos = [a for a in p.artigos if a['nome_local'] in lote['ids']]
+    artigo = artigos[0] if artigos else None
+    if not artigo:
+        p.concluir_lote()
+        return
+
     if p.modelo_disponivel():
         p.triagem()
-        artigos = [a for a in p.artigos if a['nome_local'] in lote['ids']]
-        triagem_pronta = all(p.ignorado(a) or a.get('triagem_agente', {}).get('revisao') == p.revisao
-                            for a in artigos)
-        if not triagem_pronta:
-            prontos = sum(p.ignorado(a) or a.get('triagem_agente', {}).get('revisao') == p.revisao
-                         for a in artigos)
-            p.mensagem = f"Lote {lote['numero']}: triagem {prontos}/{len(artigos)}."
+        triagem = artigo.get('triagem_agente', {})
+        if not (p.ignorado(artigo) or triagem.get('revisao') == p.revisao):
+            p.mensagem = f"Trabalho {lote['numero']}: triagem de título/resumo em andamento — {artigo['nome_local']}."
             p.salvar()
             p.painel()
             return
+
+        if p.trabalho_fechado_no_ciclo(artigo):
+            p.concluir_lote()
+            p.painel()
+            return
+
         p.baixar()
         p.pre_leitura()
-        pre_pronta = all(p.ignorado(a) or a.get('sintese_artigo', {}).get('revisao') == p.revisao or a.get('pre_leitura_agente', {}).get('revisao') == p.revisao
-                         for a in artigos if a.get('triagem_agente', {}).get('classificacao') in {'priorizar', 'revisar', 'sem_resumo'})
-        if not pre_pronta:
-            prontos = sum(p.ignorado(a) or a.get('sintese_artigo', {}).get('revisao') == p.revisao or a.get('pre_leitura_agente', {}).get('revisao') == p.revisao
-                         for a in artigos if a.get('triagem_agente', {}).get('classificacao') in {'priorizar', 'revisar', 'sem_resumo'})
-            total_pre = sum(1 for a in artigos if a.get('triagem_agente', {}).get('classificacao') in {'priorizar', 'revisar', 'sem_resumo'})
-            p.mensagem = f"Lote {lote['numero']}: pré-leitura {prontos}/{total_pre}."
+        pre = artigo.get('pre_leitura_agente', {})
+        if triagem.get('classificacao') in {'priorizar', 'revisar', 'sem_resumo'} and pre.get('revisao') != p.revisao:
+            p.mensagem = f"Trabalho {lote['numero']}: buscando/confirmando texto completo e pré-leitura — {artigo['nome_local']}."
             p.salvar()
             p.painel()
             return
+
+        if p.trabalho_fechado_no_ciclo(artigo):
+            p.concluir_lote()
+            p.painel()
+            return
+
         ler(p)
         propor(p)
         detalhar(p)
-        interessantes = [a for a in artigos if not p.ignorado(a)
-                          and a.get('triagem_agente', {}).get('classificacao') in {'priorizar', 'revisar', 'sem_resumo'}
-                          and p.aprovado_preleitura(a)]
-        concluidos = [a for a in interessantes
-                      if a.get('leitura_agente', {}).get('revisao') == p.revisao
-                      and a.get('leitura_agente', {}).get('concluida')
-                      and a.get('sintese_artigo', {}).get('revisao') == p.revisao]
-        if len(concluidos) == len(interessantes):
+
+        if p.trabalho_fechado_no_ciclo(artigo):
             p.concluir_lote()
             p.painel()
             pendentes = p.propostas_pendentes_avaliacao()
             if pendentes:
                 p.estado['aguardando_avaliacao_propostas'] = {'revisao': p.revisao, 'quantidade': len(pendentes)}
-                p.mensagem = f'Lote concluído com {len(pendentes)} proposta(s) pendente(s) de avaliação em vault/AVALIAR-PROPOSTAS.md. Edite o arquivo e reinicie para buscar na direção das favoritas.'
+                p.mensagem = f'Trabalho concluído com {len(pendentes)} proposta(s) pendente(s) de avaliação em vault/AVALIAR-PROPOSTAS.md. Edite o arquivo quando quiser guiar as próximas buscas.'
                 p.salvar()
                 p.painel()
                 return
+
+        leitura = artigo.get('leitura_agente', {})
         erros = sum(bool(t.get('erro')) and not t.get('versao_anterior') for t in p.estado['tarefas'].values())
-        p.mensagem = f"Lote {lote['numero']}: {len(concluidos)}/{len(interessantes)} trabalhos interessantes concluídos; " \
-                     f"{sum(m['revisao'] == p.revisao for m in p.estado['propostas'])} sugestões; {erros} pendências técnicas."
+        p.mensagem = (
+            f"Trabalho {lote['numero']}: {artigo['nome_local']} — "
+            f"triagem={triagem.get('classificacao', 'pendente')}; "
+            f"pré-leitura={pre.get('decisao', 'pendente')}; "
+            f"leitura={leitura.get('feitos', 0)}/{leitura.get('total', 0)}; "
+            f"{sum(m['revisao'] == p.revisao for m in p.estado['propostas'])} sugestões; "
+            f"{erros} pendências técnicas."
+        )
     p.salvar()
     p.painel()
-

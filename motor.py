@@ -6,7 +6,7 @@ Responsabilidades deste arquivo:
 - baixar somente textos/PDFs de acesso permitido;
 - rotear chamadas de IA entre OpenRouter e Ollama;
 - executar triagem por título/resumo e pré-leitura;
-- controlar lotes, retomada, Ctrl+C e prevenção de releitura.
+- controlar trabalho atual, retomada, Ctrl+C e prevenção de releitura.
 
 Este módulo não deve conter a lógica detalhada de fichamento/propostas nem a
 formatação dos relatórios. Essas partes ficam em revisao.py e apresentacao.py.
@@ -438,9 +438,8 @@ class Pesquisa:
         # Este arquivo pertence exclusivamente ao pesquisador. Nunca é escrito.
         texto = self.b.INSTRUCOES.read_text(encoding="utf-8-sig")
         cfg = self.b.carregar_instrucoes()
-        if (not 1 <= cfg["artigos_por_ciclo_ia"] <= 50 or
-                not 1 <= cfg["resultados_por_consulta"] <= 100):
-            raise ValueError("Use 1–50 artigos por lote e 1–100 resultados por consulta.")
+        if not 1 <= cfg["resultados_por_consulta"] <= 100:
+            raise ValueError("Use 1–100 resultados por consulta.")
         revisao = chave([self.estado["execucao"], texto]) if self.estado.get("execucao") else chave(texto)
         if revisao != self.revisao:
             self.instrucoes, self.cfg, self.revisao = texto, cfg, revisao
@@ -791,7 +790,15 @@ class Pesquisa:
         )
 
     def preparar_lote(self):
-        """Retoma um lote ou cria um de até dez trabalhos antes de nova coleta."""
+        """Retoma ou escolhe exatamente um trabalho para processar até o fim.
+
+        A versão anterior criava lotes de até dez itens: triava vários, baixava
+        vários e só depois tentava ler. Isso inflava o acervo e deixava muitos
+        trabalhos sem destino claro. O fluxo atual segue o experimento que deu
+        certo: um trabalho entra na mesa, passa por triagem, download,
+        pré-leitura, leitura integral, síntese e proposta; só então outro é
+        escolhido ou uma nova busca é feita.
+        """
         lote = self.lote_atual()
         if lote:
             return lote
@@ -803,11 +810,13 @@ class Pesquisa:
             return None
         numero = 1 + len([l for l in self.estado.get("lotes", [])
                           if l.get("revisao") == self.revisao])
+        escolhido = pendentes[0]
         lote = {"numero": numero, "revisao": self.revisao, "status": "em_andamento",
-                "ids": [a["nome_local"] for a in pendentes[:10]], "iniciado_em": agora()}
+                "ids": [escolhido["nome_local"]], "iniciado_em": agora(),
+                "modo": "um_trabalho_por_vez"}
         self.estado["lote_atual"] = lote
         self.salvar()
-        log(f"Lote {numero} iniciado com {len(lote['ids'])} trabalhos.")
+        log(f"Trabalho {numero} iniciado: {escolhido['nome_local']} — {escolhido.get('titulo', '')[:120]}")
         return lote
 
     def concluir_lote(self):
@@ -822,7 +831,7 @@ class Pesquisa:
         self.estado.setdefault("lotes", []).append(dict(lote))
         self.estado.pop("lote_atual", None)
         self.salvar()
-        log(f"Lote {lote['numero']} concluído; o próximo lote poderá ser coletado ou retomado.")
+        log(f"Trabalho {lote['numero']} concluído; o próximo trabalho poderá ser escolhido.")
 
     def modelos_ia(self):
         """Usa um modelo principal fixo e Ollama apenas como reserva técnica."""
@@ -889,7 +898,7 @@ class Pesquisa:
         ids = set(lote["ids"]) if lote else {a["nome_local"] for a in self.artigos}
         pendentes = [a for a in self.artigos if a["nome_local"] in ids and not self.ignorado(a)
                      and a.get('triagem_agente', {}).get('revisao') != self.revisao]
-        log(f"Triagem: {len(pendentes)} trabalho(s) pendente(s) neste lote.")
+        log(f"Triagem do trabalho atual: {len(pendentes)} pendente(s).")
         for artigo in self.artigos:
             if artigo["nome_local"] not in ids:
                 continue
@@ -948,7 +957,7 @@ class Pesquisa:
     def pre_leitura(self):
         feitos = 0
         pendentes = [a for a in self.candidatos() if self.preleitura_pendente(a)]
-        log(f"Pré-leitura: {len(pendentes)} trabalho(s) pendente(s) neste lote.")
+        log(f"Pré-leitura do trabalho atual: {len(pendentes)} pendente(s).")
         for artigo in self.candidatos():
             if not self.preleitura_pendente(artigo):
                 continue
@@ -958,7 +967,7 @@ class Pesquisa:
                 artigo['pre_leitura_agente'] = {
                     'revisao': self.revisao,
                     'decisao': 'precisa_texto_melhor',
-                    'justificativa': 'A pré-leitura automática falhou em duas tentativas. Registrado para não travar o lote; seguir para outros trabalhos.',
+                    'justificativa': 'A pré-leitura automática falhou em duas tentativas. Registrado para não travar o trabalho atual; seguir para o próximo trabalho.',
                     'erro': anterior.get('erro', ''),
                     'evidencias': [],
                 }

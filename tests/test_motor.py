@@ -162,16 +162,17 @@ class PesquisaTest(unittest.TestCase):
         self.assertEqual(trechos.call_args.args[0]['nome_local'], 'B')
         self.assertEqual(a['sintese_artigo']['resumo'], 'já analisado')
         self.assertEqual(b['leitura_agente']['revisao'], self.p.revisao)
-    def test_lotes_de_dez_reaproveitam_acervo_sem_teto(self):
+    def test_processa_um_trabalho_por_vez_reaproveitando_acervo_sem_teto(self):
         for i in range(12):
             self.artigo(f'A{i}')
         with patch.object(self.p, 'buscar') as buscar:
             lote1 = self.p.preparar_lote()
-            self.assertEqual(len(lote1['ids']), 10)
+            self.assertEqual(lote1['ids'], ['A0'])
+            self.assertEqual(lote1.get('modo'), 'um_trabalho_por_vez')
             self.p.concluir_lote()
             lote2 = self.p.preparar_lote()
         buscar.assert_not_called()
-        self.assertEqual(len(lote2['ids']), 2)
+        self.assertEqual(lote2['ids'], ['A1'])
         self.assertNotIn('max_artigos_acervo', self.p.cfg)
 
     def test_le_um_artigo_inteiro_antes_do_seguinte(self):

@@ -1,6 +1,6 @@
 ﻿# Agente de revisão exploratória para mestrado
 
-Este projeto é um agente de garimpo e leitura de literatura acadêmica. A ideia é rodar por horas em um terminal, buscar trabalhos em bases abertas, triar títulos e resumos, tentar obter texto completo permitido, fichar os trabalhos relevantes e alimentar um relatório com lacunas e propostas de contribuição.
+Este projeto é um agente de garimpo e leitura de literatura acadêmica. A ideia é rodar por horas em um terminal, buscar trabalhos em bases abertas e processar um trabalho por vez: triar título/resumo, tentar obter texto completo permitido, fazer pré-leitura, fichar o texto relevante até o fim e alimentar um relatório com lacunas e propostas de contribuição antes de passar ao próximo trabalho.
 
 O fluxo de uso é simples:
 

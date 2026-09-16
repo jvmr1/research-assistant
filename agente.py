@@ -47,7 +47,7 @@ O agente nunca sobrescreve este arquivo automaticamente.
 
 - ano mínimo: 2025
 - resultados por consulta: 10
-- artigos analisados por ciclo: 10
+- trabalhos simultâneos: 1
 - fonte acadêmica principal: semantic_scholar
 - fontes acadêmicas auxiliares: nenhuma
 - modelo ia: ollama
