@@ -103,6 +103,16 @@ class PesquisaTest(unittest.TestCase):
         self.assertFalse(self.p.aprovado_preleitura(a))
         gerar.assert_not_called()
 
+    def test_preleitura_com_texto_nao_registra_falsa_falta_de_texto(self):
+        a = self.artigo('A')
+        a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
+        a['pdf_local'] = 'pdfs/A.pdf'
+        with patch.object(self.p, 'trechos', return_value=[{'pagina': 1, 'texto': 'Introdução e conclusão alinhadas.', 'tipo': 'pdf'}]), \
+             patch('motor.gerar', return_value={'decisao': 'descartar_sem_texto_integral', 'justificativa': 'modelo confundiu a decisão'}):
+            self.p.pre_leitura()
+        self.assertEqual(a['pre_leitura_agente']['decisao'], 'precisa_texto_melhor')
+        self.assertIn('texto integral local', a['pre_leitura_agente']['justificativa'])
+
     def test_sem_resumo_nao_bloqueia_os_seguintes(self):
         a = self.artigo('SemResumo', False)
         b = self.artigo('ComResumo')

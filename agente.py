@@ -48,9 +48,9 @@ O agente nunca sobrescreve este arquivo automaticamente.
 - ano mínimo: 2025
 - resultados por consulta: 10
 - trabalhos simultâneos: 1
-- fonte acadêmica principal: semantic_scholar
-- fontes acadêmicas auxiliares: nenhuma
-- modelo ia: ollama
+- fonte acadêmica principal: openalex
+- fontes acadêmicas auxiliares: semantic_scholar, crossref
+- modelo ia: openrouter
 - modelo openrouter: openai/gpt-oss-120b
 - modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
 
@@ -125,8 +125,8 @@ def carregar_instrucoes(caminho=INSTRUCOES):
     consultas = []
     ano_minimo = 2025
     resultados_por_consulta = 10
-    fonte_academica_principal = "semantic_scholar"
-    fontes_academicas_auxiliares = []
+    fonte_academica_principal = "openalex"
+    fontes_academicas_auxiliares = ["semantic_scholar", "crossref"]
     modelo_ia = "ollama"
     modelo_openrouter = MODELO_OPENROUTER
     modelo_ollama = MODELO_OLLAMA
@@ -158,7 +158,7 @@ def carregar_instrucoes(caminho=INSTRUCOES):
         if linha_limpa.lower().startswith("- fontes acadêmicas auxiliares:") or linha_limpa.lower().startswith("- fontes academicas auxiliares:"):
             bruto = linha_limpa.split(":", 1)[1].strip().lower()
             if bruto in {"", "nenhuma", "nenhum", "não", "nao"}:
-                fontes_academicas_auxiliares = []
+                fontes_academicas_auxiliares = ["semantic_scholar", "crossref"]
             else:
                 fontes_academicas_auxiliares = [f.strip().replace("-", "_") for f in re.split(r"[,;]", bruto) if f.strip()]
 

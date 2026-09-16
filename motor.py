@@ -380,16 +380,30 @@ def gerar(modelo, orientacao, tarefa, dados, esquema=None):
 
 
 def gerar_com_fallback(modelos, orientacao, tarefa, dados, esquema=None):
+    """Tenta IA remota primeiro e só cai no Ollama quando o remoto falha de fato.
+
+    Resposta JSON inválida em provedor remoto costuma ser oscilação pontual. Antes
+    de acionar o modelo local, que pode ser muito mais lento, repetimos a chamada
+    remota uma vez. Erros definitivos, como chave ausente ou modelo inexistente,
+    não são repetidos.
+    """
     erros = []
     for modelo in modelos:
-        try:
-            if not eh_openrouter(modelo) and erros:
-                log(f"OpenRouter indisponivel para esta chamada; tentando Ollama local: {modelo}")
-            return gerar(modelo, orientacao, tarefa, dados, esquema=esquema)
-        except ModeloIndisponivel as erro:
-            erros.append(str(erro))
-            log(f"Modelo indisponivel; tentando proximo: {erro}")
-            continue
+        tentativas = 2 if eh_openrouter(modelo) else 1
+        for tentativa in range(1, tentativas + 1):
+            try:
+                if not eh_openrouter(modelo) and erros:
+                    log(f"OpenRouter indisponivel para esta chamada; tentando Ollama local: {modelo}")
+                elif eh_openrouter(modelo) and tentativa > 1:
+                    log(f"Repetindo chamada remota após resposta inválida: {modelo} ({tentativa}/{tentativas})")
+                return gerar(modelo, orientacao, tarefa, dados, esquema=esquema)
+            except ModeloIndisponivel as erro:
+                erros.append(str(erro))
+                if eh_openrouter(modelo) and not erro.definitivo and tentativa < tentativas and not erro.retry_after:
+                    log(f"Modelo remoto oscilou; vou repetir antes do fallback local: {erro}")
+                    continue
+                log(f"Modelo indisponivel; tentando proximo: {erro}")
+                break
     raise ValueError("Nenhum modelo respondeu. Tentativas: " + " | ".join(erros))
 
 
@@ -574,14 +588,16 @@ class Pesquisa:
         return "titulo:" + titulo
 
     def buscar_fontes_academicas(self, consulta, pagina):
-        """Busca trabalhos acadêmicos com uma fonte principal estável.
+        """Busca trabalhos acadêmicos com fallback entre fontes abertas.
 
-        O padrão é Semantic Scholar, para reduzir ruído entre rankings. OpenAlex
-        e Crossref ficam como auxiliares opcionais em INSTRUCOES.md.
+        OpenAlex fica como fonte principal por ser estável e trazer metadados de
+        acesso aberto. Semantic Scholar e Crossref podem entrar como auxiliares.
+        Se uma fonte der limite, timeout ou erro temporário, as seguintes ainda
+        são tentadas na mesma consulta.
         """
         encontrados = []
         fontes = []
-        principal = (self.cfg.get("fonte_academica_principal") or "semantic_scholar").lower().replace("-", "_")
+        principal = (self.cfg.get("fonte_academica_principal") or "openalex").lower().replace("-", "_")
         auxiliares = {f.lower().replace("-", "_") for f in self.cfg.get("fontes_academicas_auxiliares", [])}
         ordem = []
         for fonte in [principal, *auxiliares]:
@@ -667,7 +683,7 @@ class Pesquisa:
                 })
 
         funcoes = {"semantic_scholar": buscar_semantic_scholar, "openalex": buscar_openalex, "crossref": buscar_crossref}
-        for fonte in ordem or ["semantic_scholar"]:
+        for fonte in ordem or ["openalex", "semantic_scholar", "crossref"]:
             funcao = funcoes.get(fonte)
             if not funcao:
                 log(f"Fonte acadêmica ignorada por não ser suportada: {fonte}")
@@ -705,9 +721,9 @@ class Pesquisa:
             consulta["proxima"] = time.time() + 3600
             self.salvar()
             pagina = consulta["pagina"]
-            log(f"Buscando no Semantic Scholar: {consulta['consulta']} | página {pagina}")
+            log(f"Buscando trabalhos acadêmicos: {consulta['consulta']} | página {pagina} | fonte principal: {self.cfg.get('fonte_academica_principal', 'openalex')}")
             registro = {"quando": agora(), "consulta": consulta["consulta"], "origem": consulta["origem"],
-                        "pagina": pagina, "revisao": self.revisao, "fonte": self.cfg.get("fonte_academica_principal", "semantic_scholar")}
+                        "pagina": pagina, "revisao": self.revisao, "fonte": self.cfg.get("fonte_academica_principal", "openalex")}
             try:
                 encontrados, fontes = self.buscar_fontes_academicas(consulta["consulta"], pagina)
                 registro["fontes"] = fontes
@@ -993,7 +1009,7 @@ class Pesquisa:
                                                'evidencias': []}
                     return True
                 esquema = {'type': 'object', 'properties': {
-                    'decisao': {'type': 'string', 'enum': ['ler_integralmente', 'manter_como_contexto', 'descartar', 'descartar_sem_texto_integral']},
+                    'decisao': {'type': 'string', 'enum': ['ler_integralmente', 'manter_como_contexto', 'descartar', 'descartar_sem_texto_integral', 'precisa_texto_melhor']},
                     'justificativa': {'type': 'string'},
                     'alinhamento': {'type': 'string'},
                     'evidencias': {'type': 'array', 'maxItems': 5, 'items': {'type': 'string'}}},
@@ -1005,7 +1021,7 @@ class Pesquisa:
                             {'titulo': a.get('titulo'), 'triagem_titulo_resumo': a.get('triagem_agente', {}), 'amostra': amostra}, esquema=esquema,
                             descricao=f"pré-leitura {a['nome_local']}")
                 self.registrar_meta_ia(obj)
-                permitidas = {'ler_integralmente', 'manter_como_contexto', 'descartar', 'descartar_sem_texto_integral'}
+                permitidas = {'ler_integralmente', 'manter_como_contexto', 'descartar', 'descartar_sem_texto_integral', 'precisa_texto_melhor'}
                 bruta = str(obj.get('decisao', '')).strip().lower().replace('-', '_').replace(' ', '_')
                 aliases = {
                     'ler': 'ler_integralmente', 'leitura_integral': 'ler_integralmente',
@@ -1014,20 +1030,28 @@ class Pesquisa:
                     'contexto': 'manter_como_contexto', 'manter': 'manter_como_contexto',
                     'periferico': 'manter_como_contexto', 'periférico': 'manter_como_contexto',
                     'revisar': 'manter_como_contexto',
-                    'baixar': 'descartar_sem_texto_integral', 'resumo': 'descartar_sem_texto_integral',
-                    'ler_resumo': 'descartar_sem_texto_integral', 'ler_com_resumo': 'descartar_sem_texto_integral',
-                    'insuficiente': 'descartar_sem_texto_integral', 'precisa_pdf': 'descartar_sem_texto_integral',
+                    'baixar': 'descartar_sem_texto_integral', 'resumo': 'precisa_texto_melhor',
+                    'ler_resumo': 'precisa_texto_melhor', 'ler_com_resumo': 'precisa_texto_melhor',
+                    'insuficiente': 'precisa_texto_melhor', 'precisa_pdf': 'descartar_sem_texto_integral',
                     'sem_texto': 'descartar_sem_texto_integral', 'sem_texto_integral': 'descartar_sem_texto_integral',
                     'fora_escopo': 'descartar', 'irrelevante': 'descartar', 'baixa': 'descartar',
                 }
                 decisao = bruta if bruta in permitidas else aliases.get(bruta)
+                tem_texto_integral = bool(a.get('pdf_local') or a.get('texto_local'))
                 if decisao not in permitidas:
-                    decisao = 'descartar_sem_texto_integral'
+                    decisao = 'precisa_texto_melhor' if tem_texto_integral else 'descartar_sem_texto_integral'
                     obj['decisao_original'] = obj.get('decisao')
                     obj['justificativa'] = (
                         obj.get('justificativa')
                         or 'Resposta da IA não trouxe uma decisão válida; marcado para revisão com texto melhor.'
                     )[:500]
+                if decisao == 'descartar_sem_texto_integral' and tem_texto_integral:
+                    obj['decisao_original'] = obj.get('decisao')
+                    decisao = 'precisa_texto_melhor'
+                    obj['justificativa'] = (
+                        'Havia texto integral local, mas a resposta da IA pediu descarte por falta de texto. '
+                        'O trabalho foi marcado para revisão com texto melhor para não registrar uma causa falsa.'
+                    )
                 obj['decisao'] = decisao
                 a['pre_leitura_agente'] = dict(obj, revisao=self.revisao)
                 log(f"Pré-leitura: {obj['decisao']} — {obj.get('justificativa','')[:220]}")

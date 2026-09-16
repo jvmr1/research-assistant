@@ -138,14 +138,14 @@ Depois ajuste em `vault/INSTRUCOES.md`:
 
 ## Busca acadêmica estável
 
-Para reduzir ruído entre rankings, a fonte acadêmica principal é o Semantic Scholar. Unpaywall não muda a seleção de trabalhos; ele só tenta encontrar uma cópia open access pelo DOI quando o Semantic Scholar não entrega um PDF direto. OpenAlex e Crossref continuam no código como auxiliares opcionais, mas ficam desligados por padrão.
+A fonte acadêmica principal é o OpenAlex, porque costuma responder de forma mais estável e traz metadados de acesso aberto. Semantic Scholar e Crossref ficam como auxiliares: se uma fonte der limite, timeout ou falhar, o agente tenta a próxima. Unpaywall não muda a seleção de trabalhos; ele só tenta encontrar uma cópia open access pelo DOI.
 
 No `vault/INSTRUCOES.md`, a configuração recomendada é:
 
 ```md
-- fonte acadêmica principal: semantic_scholar
-- fontes acadêmicas auxiliares: nenhuma
-- modelo ia: ollama
+- fonte acadêmica principal: openalex
+- fontes acadêmicas auxiliares: semantic_scholar, crossref
+- modelo ia: openrouter
 - modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
 ```
 
