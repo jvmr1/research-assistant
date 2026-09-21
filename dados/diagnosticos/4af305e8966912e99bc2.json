@@ -1,0 +1,97 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T15:03:36",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "A revisão sistemática analisa soluções baseadas em blockchain para preservação de privacidade no compartilhamento de dados de saúde, constatando que a maioria está em estágio de prova de conceito (TRL 3) e carece de mecanismos de busca privativos, controle de acesso granular e avaliação de maturidade tecnológica. O estudo aponta que técnicas tradicionais de privacidade são insuficientes para ambientes interinstitucionais e que o blockchain introduz novos riscos, como inferência de identidade e linkabilidade. São discutidos tipos de blockchain (público, privado, consórcio, híbrido), protocolos de consenso (PoW, PoS, PBFT) e técnicas como Proxy Re‑Encryption e TLS, ressaltando impactos em privacidade, desempenho e escalabilidade, especialmente para IoT em cidades inteligentes. Um framework com diretrizes e métricas de TRL é proposto, mas ainda requer adaptação a contextos de edge computing, revogação de credenciais e conformidade regulatória (HIPAA, GDPR).",
+        "lacunas_possiveis": [
+          "Transição de TRL 3 para TRL 4‑5 em soluções de saúde baseadas em blockchain.",
+          "Mecanismos de busca seguros e escaláveis em blockchains públicos.",
+          "Mitigação de ataques de inferência e linkabilidade sem perder descentralização.",
+          "Adaptação do framework de maturidade para ambientes de IoT com recursos limitados em smart cities.",
+          "Estratégias de revogação que preservem o direito ao esquecimento em ledgers imutáveis."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um roadmap de maturidade tecnológica que inclua métricas TRL específicas para identidade descentralizada em edge computing.",
+          "Projetar esquemas de searchable encryption compatíveis com blockchains públicos para consultas privativas de dados de saúde.",
+          "Criar protocolos de controle de acesso baseado em atributos que integrem políticas granulares e preservem a descentralização.",
+          "Estender o framework proposto para incluir requisitos regulatórios de cidades inteligentes além de HIPAA/GDPR.",
+          "Implementar variantes leves de PBFT adaptadas a dispositivos IoT de baixa capacidade, mantendo segurança e privacidade."
+        ]
+      },
+      {
+        "resumo": "O artigo \"Privacy preservation in blockchain-based healthcare data sharing: A systematic review\" apresenta uma revisão sistemática (2008‑2024) que analisou 334 estudos sobre o uso de blockchain para compartilhamento de dados de saúde com foco em privacidade. A metodologia segue o PRISMA 2020, iniciando com 6.577 documentos e, após remoções e triagens, resultando em 334 artigos para extração de dados. Os trabalhos analisados descrevem o uso de técnicas criptográficas avançadas, como PEKS para busca privada, proxy re‑encryption para armazenamento off‑chain, provas de conhecimento zero (ZKP) e contratos inteligentes que trazem automação, transparência e persistência. A maioria das soluções está em estágio de prova de conceito (TRL3) e predominam blockchains consórcio, indicando preferência por ambientes permissionados. Como muitos artigos omitem detalhes técnicos (protocolos de consenso, tipo de blockchain), os autores inferem essas informações, constatando que a inferência não altera significativamente as distribuições observadas. O estudo evidencia lacunas em escalabilidade, avaliação de custos e adaptação de métricas de maturidade para contextos de cidades inteligentes.",
+        "lacunas_possiveis": [
+          "Escalabilidade de PEKS e ZKP em redes de sensores urbanos de grande volume.",
+          "Impacto da combinação de proxy re‑encryption com diferentes modelos de consenso (ex.: PoS + PBFT) na latência de acesso a dados.",
+          "Adaptação dos Níveis de Maturidade Tecnológica (TRL) para requisitos de privacidade específicos de cidades inteligentes e edge computing.",
+          "Avaliação empírica de custos e desempenho de armazenamento off‑chain combinado com proxy re‑encryption em larga escala."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver e testar um protótipo de busca privada baseado em PEKS otimizado para alta taxa de mensagens IoT em ambientes de cidades inteligentes.",
+          "Investigar a latência e throughput de sistemas que integram proxy re‑encryption com consenso híbrido PoS/PBFT em redes de edge computing.",
+          "Estender o framework de avaliação de TRL para incluir indicadores de privacidade, interoperabilidade e requisitos de identidade digital (SSI) em serviços públicos de smart cities.",
+          "Realizar estudo de caso que mensure custos de armazenamento off‑chain e tempo de re‑encryption em cenários de alta frequência de dados de saúde e IoT."
+        ]
+      },
+      {
+        "resumo": "O artigo apresenta uma revisão sistemática sobre a preservação de privacidade no compartilhamento de dados de saúde usando blockchain. A análise indica que o padrão de blockchain consórcio, tipicamente implementado com o algoritmo PBFT sobre Hyperledger Fabric, predomina na literatura, oferecendo alta escalabilidade, acesso permissionado e desempenho robusto, embora requeira confiança mútua entre os participantes e apresente degradação de performance à medida que o número de nós aumenta. O estudo também descreve o padrão público permissionless baseado em PoW/PoS (Ethereum), que garante maior abertura e descentralização, porém sacrifica eficiência e introduz dependência de confiança em cenários competitivos. Além disso, são apontadas limitações relacionadas ao consumo de recursos computacionais, à complexidade dos contratos inteligentes e à escassez de detalhes sobre protocolos em grande parte dos trabalhos analisados.",
+        "lacunas_possiveis": [
+          "Critérios específicos usados para classificar limitações de confiança e escalabilidade não são explicitados.",
+          "Ausência de especificação de protocolos em 94 artigos compromete a robustez das conclusões sobre padrões de consenso.",
+          "Falta de estratégias claras para equilibrar descentralização e desempenho em ambientes de cidades inteligentes.",
+          "Impacto da complexidade dos smart contracts na manutenção e segurança a longo prazo ainda não foi avaliado."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um framework padronizado para avaliar confiança e escalabilidade em blockchains consórcio.",
+          "Realizar estudos empíricos que mensurem a degradação de desempenho conforme o número de nós aumenta, especialmente em cenários IoT de cidades inteligentes.",
+          "Investigar mecanismos de consenso híbridos que combinem eficiência permissionada com níveis controlados de descentralização.",
+          "Criar metodologias de simplificação e verificação formal de smart contracts para reduzir riscos de segurança.",
+          "Propor modelos de governança que minimizem a dependência de confiança entre membros do consórcio sem sacrificar a performance."
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "Fato: O artigo \"Privacy preservation in blockchain-based healthcare data sharing: A systematic review\" realizou uma revisão sistemática (2008‑2024) seguindo o protocolo PRISMA 2020, iniciando com 6.577 documentos e selecionando 334 estudos relevantes. Fato: A maioria das soluções analisadas utiliza blockchains consórcio (ex.: Hyperledger Fabric com PBFT) e se encontra em estágio de prova de conceito (TRL 3). Fato: Técnicas criptográficas avançadas citadas incluem PEKS, proxy re‑encryption, ZKP e contratos inteligentes. Interpretação: Os autores inferem que as soluções atuais carecem de mecanismos de busca privativos, controle de acesso granular, estratégias de revogação compatíveis com o direito ao esquecimento e avaliações de maturidade tecnológica adaptadas a ambientes de IoT e cidades inteligentes. Hipótese: A integração de frameworks de maturidade (TRL) com métricas de privacidade, interoperabilidade e identidade descentralizada (SSI) pode acelerar a transição para níveis tecnológicos superiores (TRL 4‑5) em contextos de edge computing. Hipótese: Protocolos híbridos de consenso (ex.: PoS + PBFT) combinados com técnicas como proxy re‑encryption podem reduzir latência sem comprometer a descentralização, mas requerem validação empírica. Fato: O estudo aponta riscos emergentes de inferência de identidade e linkabilidade introduzidos pelo uso de blockchain, especialmente em cenários de compartilhamento interinstitucional de dados de saúde. Interpretação: Há necessidade de adaptar o framework proposto para atender requisitos regulatórios de cidades inteligentes além de HIPAA e GDPR.",
+    "lacunas_possiveis": [
+      "Transição de soluções de saúde baseadas em blockchain de TRL 3 para TRL 4‑5.",
+      "Desenvolvimento de mecanismos de busca seguros e escaláveis em blockchains públicos.",
+      "Mitigação de ataques de inferência e linkabilidade sem perder descentralização.",
+      "Adaptação do framework de maturidade para ambientes de IoT com recursos limitados em smart cities.",
+      "Estratégias de revogação que preservem o direito ao esquecimento em ledgers imutáveis.",
+      "Escalabilidade de PEKS e ZKP em redes de sensores urbanos de grande volume.",
+      "Impacto da combinação de proxy re‑encryption com modelos de consenso híbridos (ex.: PoS + PBFT) na latência de acesso a dados.",
+      "Adaptação dos Níveis de Maturidade Tecnológica (TRL) para requisitos de privacidade específicos de cidades inteligentes e edge computing.",
+      "Avaliação empírica de custos e desempenho de armazenamento off‑chain combinado com proxy re‑encryption em larga escala.",
+      "Falta de critérios explícitos para classificar limitações de confiança e escalabilidade nos estudos analisados.",
+      "Ausência de especificação detalhada de protocolos em grande parte dos artigos revisados.",
+      "Carência de estratégias claras para equilibrar descentralização e desempenho em ambientes de cidades inteligentes.",
+      "Impacto da complexidade dos smart contracts na manutenção e segurança a longo prazo ainda não avaliado."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver um roadmap de maturidade tecnológica com métricas TRL específicas para identidade descentralizada em edge computing.",
+      "Projetar esquemas de searchable encryption compatíveis com blockchains públicos para consultas privativas de dados de saúde.",
+      "Criar protocolos de controle de acesso baseado em atributos que integrem políticas granulares e preservem a descentralização.",
+      "Estender o framework proposto para incluir requisitos regulatórios de cidades inteligentes além de HIPAA/GDPR.",
+      "Implementar variantes leves de PBFT adaptadas a dispositivos IoT de baixa capacidade, mantendo segurança e privacidade.",
+      "Desenvolver e testar um protótipo de busca privada baseado em PEKS otimizado para alta taxa de mensagens IoT em ambientes de cidades inteligentes.",
+      "Investigar a latência e throughput de sistemas que integram proxy re‑encryption com consenso híbrido PoS/PBFT em redes de edge computing.",
+      "Estender o framework de avaliação de TRL para incluir indicadores de privacidade, interoperabilidade e requisitos de identidade digital (SSI) em serviços públicos de smart cities.",
+      "Realizar estudo de caso que mensure custos de armazenamento off‑chain e tempo de re‑encryption em cenários de alta frequência de dados de saúde e IoT.",
+      "Desenvolver um framework padronizado para avaliar confiança e escalabilidade em blockchains consórcio.",
+      "Realizar estudos empíricos que mensurem a degradação de desempenho conforme o número de nós aumenta, especialmente em cenários IoT de cidades inteligentes.",
+      "Investigar mecanismos de consenso híbridos que combinem eficiência permissionada com níveis controlados de descentralização.",
+      "Criar metodologias de simplificação e verificação formal de smart contracts para reduzir riscos de segurança.",
+      "Propor modelos de governança que minimizem a dependência de confiança entre membros do consórcio sem sacrificar a performance."
+    ],
+    "fonte": "PDF (parcial)"
+  },
+  "ia": null,
+  "fim": "2026-09-16T15:04:02"
+}

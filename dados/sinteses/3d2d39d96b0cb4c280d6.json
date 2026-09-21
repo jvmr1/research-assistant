@@ -1,0 +1,17 @@
+{
+  "resumo": "O trabalho apresenta um modelo de gestão de identidade baseado em Self‑Sovereign Identity (SSI) e blockchain, implementado no middleware InterSCity com Hyperledger, visando proteger serviços de cidades inteligentes contra acessos não autorizados, fraudes e ataques DDoS. O modelo, que expande a proposta de Cardoso (2024) para incluir o cidadão, utiliza DID, DIDComm, JWT e o framework ACA‑Py, e foi avaliado quanto à latência (< 500 ms) nas fases de conexão, emissão, armazenamento, envio e verificação de credenciais. As fichas descrevem a arquitetura detalhada, fluxos de mensagens, métricas de desempenho e a adoção de terminologia padronizada. Contudo, o estudo não detalha mecanismos de revogação ou recuperação de credenciais, nem apresenta condições experimentais, comparações com abordagens alternativas, interoperabilidade com outros padrões de credenciais verificáveis ou o impacto de técnicas avançadas como ABE ou criptografia homomórfica.",
+  "lacunas_possiveis": [
+    "Ausência de mecanismo de revogação de credenciais e de recuperação de identidade em caso de perda de chave.",
+    "Escalabilidade não avaliada para ambientes com milhares de dispositivos IoT.",
+    "Interoperabilidade limitada ao uso de JWT, sem exploração de outros padrões de credenciais verificáveis.",
+    "Falta de descrição das condições experimentais (hardware, rede, número de credenciais) e comparação com abordagens alternativas.",
+    "Impacto de técnicas avançadas de criptografia (ABE, homomorphic encryption) sobre a latência não investigado."
+  ],
+  "propostas_possiveis": [
+    "Integrar um mecanismo de revogação baseado em VC Status List ou Merkle Tree no blockchain para permitir revogação eficiente em larga escala.",
+    "Desenvolver um esquema de recuperação de identidade usando secret sharing (Shamir) ou recuperação baseada em múltiplas chaves descentralizadas.",
+    "Realizar experimentos de escalabilidade com milhares de dispositivos IoT, medindo latência e throughput para validar o modelo em cenários reais.",
+    "Estender o suporte a padrões W3C Verifiable Credentials além de JWT e avaliar a interoperabilidade entre diferentes plataformas de smart city.",
+    "Incorporar Attribute‑Based Encryption (ABE) nos fluxos de emissão e verificação de credenciais e medir seu efeito na latência e na privacidade dos atributos sensíveis."
+  ]
+}

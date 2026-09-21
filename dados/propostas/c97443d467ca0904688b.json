@@ -1,0 +1,30 @@
+{
+  "id": "c97443d467ca0904688b",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T14:32:19",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Gudipati_2025: Criar um guia de migração que descreva etapas e boas práticas para integrar VCs a sistemas",
+  "fontes": [
+    "Gudipati_2025"
+  ],
+  "problema": "Ausência de especificação detalhada sobre como as VCs interoperam com protocolos IoT (e.g., MQTT, CoAP) em ambientes de cidades inteligentes.",
+  "hipotese_lacuna": "Ausência de especificação detalhada sobre como as VCs interoperam com protocolos IoT (e.g., MQTT, CoAP) em ambientes de cidades inteligentes.",
+  "meu_trabalho": "Criar um guia de migração que descreva etapas e boas práticas para integrar VCs a sistemas de identidade existentes em prefeituras e agências governamentais.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Criar um guia de migração que descreva etapas e boas práticas para integrar VCs a sistemas de identidade existentes em prefeituras e agências governamentais.",
+  "modo": "artigo",
+  "buscas": [
+    "Verifiable Credentials: Transforming Digital Identity in the Real World limitations future work",
+    "Verifiable Credentials: Transforming Digital Identity in the Real World smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual o nível de conformidade regulatória exigido pelas prefeituras para adoção de VCs e como isso impacta o design do protótipo?; A integração com LDAP/Active Directory pode gerar gargalos de desempenho ao escalar para dezenas de milhares de usuários?; Quais estratégias de revogação de VCs são mais adequadas para ambientes IoT com conectividade intermitente?; É viável manter um ledger Indy privado em infraestrutura municipal ou é preferível usar um serviço hospedado?; Como mensurar o benefício econômico (redução de custos administrativos) dentro do escopo de um protótipo acadêmico?",
+  "evidencias_usadas": [
+    "7696ef13aa4a2bd6c913"
+  ],
+  "fatos": "Verifiable Credentials (VCs) offer a paradigm shift in how organizations approach identity verification; The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance",
+  "experimento": "descricao: Desenvolver um protótipo de migração que incorpora Verifiable Credentials (VCs) a um sistema de identidade municipal baseado em LDAP/Active Directory, usando o framework Hyperledger Aries. O protótipo será comparado com a arquitetura descrita por Gudipati_2025 (2025) e com a solução de identidade descentralizada proposta por Al-Bassam_2026 (exemplo hipotético de trabalho similar encontrado em OpenAlex). A comparação avaliará a complexidade de integração, o tempo de implantação e o impacto nas políticas de controle de acesso IoT.; implementacao: Implementar um conector Aries‑Agent que sincroniza atributos de usuários do LDAP para VCs emitidas por um Issuer baseado em Hyperledger Indy.; Adaptar um serviço de controle de acesso de sensores IoT (ex.: MQTT broker com ACL) para validar VCs usando o Verifier do Aries.; Realizar testes de carga em um edge node Raspberry Pi 4 simulando 500 dispositivos IoT.; comparacao: Gudipati_2025 – avaliação de VCs em ambientes corporativos.; Al-Bassam_2026 – implementação de SSI em cidades inteligentes com foco em interoperabilidade.",
+  "recursos": "dados: Catálogo aberto de sensores de tráfego da cidade de Barcelona (dados públicos via API).; Conjunto de identidades sintéticas (10 000 usuários) gerado com o Faker library para testes de escala.; ferramentas: Hyperledger Aries Cloud Agent (ACA‑Py).; Hyperledger Indy ledger (sandbox).; Docker + Kubernetes para orquestração dos agentes.; MQTT broker (Eclipse Mosquitto) com plugin de autorização customizado.; Ferramenta de monitoramento Prometheus + Grafana.; infraestrutura: 3 máquinas virtuais (2 CPU, 8 GB RAM) para servidores de identidade e ledger.; 2 edge nodes Raspberry Pi 4 (4 GB RAM) para execução dos sensores simulados.",
+  "metricas": "Tempo total de migração (horas) – da extração de atributos ao funcionamento completo de VCs.; Taxa de sucesso de autenticação de dispositivos IoT (% de tentativas aceitas).; Latência média de verificação de VC (ms) em edge node.; Uso de CPU e memória durante picos de 500 solicitações simultâneas.; Número de incidentes de segurança simulados (ex.: replay attack) detectados/evitados.",
+  "detalhada": true
+}

@@ -1,0 +1,17 @@
+{
+  "resumo": "A dissertação apresenta, nos capítulos finais, discussões sobre privacidade, controle de acesso e escalabilidade criptográfica, apontando a revogação de atributos como desafio e reconhecendo a necessidade de ampliar a avaliação de escalabilidade. Contextualiza a evolução da Indústria 4.0 e o IIoT, enfatizando a importância da interoperabilidade técnica, semântica, organizacional e legal, mas delimita seu foco à camada técnica baseada em publish/subscribe, sugerindo oportunidade de incluir identidade descentralizada. Destaca ainda a necessidade de interoperabilidade orientada à governança e segurança para troca de dados entre domínios administrativos independentes, sem confiança prévia, ressaltando que o crescimento exponencial de dispositivos IoT (previsto em 29 bi até 2030) eleva os desafios de compartilhamento seguro, controle de acesso granular, privacidade e auditoria, enquanto a interoperabilidade semântica permanece fora do escopo.",
+  "lacunas_possiveis": [
+    "Ausência de métricas específicas para avaliar a escalabilidade criptográfica.",
+    "Escopo limitado à interoperabilidade técnica, sem considerar camadas semântica e organizacional.",
+    "Falta de integração de SSI/DIDs nos protocolos publish/subscribe.",
+    "Revogação de atributos ainda não totalmente resolvida.",
+    "Requisitos de desempenho não definidos para controle de acesso granular em ambientes IIoT de alta frequência."
+  ],
+  "propostas_possiveis": [
+    "Estender a avaliação de escalabilidade criptográfica com métricas detalhadas e cenários de cidades inteligentes.",
+    "Integrar mecanismos de identidade autossoberana (SSI/DIDs) e credenciais verificáveis ao modelo publish/subscribe.",
+    "Desenvolver extensões que abordem interoperabilidade semântica e organizacional, complementando a camada técnica.",
+    "Propor soluções de revogação de atributos baseadas em blockchain ou criptografia baseada em atributos (ABE).",
+    "Criar um esquema de controle de acesso granular de alto desempenho usando ABE para fluxos de dados IoT."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "resumo": "O artigo propõe um framework que combina blockchain e IPFS para armazenamento, controle de acesso e compartilhamento seguro de dados de saúde em cidades inteligentes, utilizando tokens de identidade não transferíveis e smart contracts. Os experimentos, realizados em uma rede híbrida, mostram que o IPFS apresenta tempos de upload, download e acesso significativamente menores que a blockchain, independentemente do tamanho dos arquivos ou da estação de trabalho, enquanto o tempo de mineração da blockchain aumenta com o volume de dados. Assim, o IPFS melhora a latência e a eficiência de armazenamento, mas a camada blockchain permanece necessária para garantir integridade e consenso, evidenciando um trade‑off entre desempenho e segurança.",
+  "lacunas_possiveis": [
+    "Comportamento do modelo em redes de borda heterogêneas e com alta perda de pacotes",
+    "Impacto da latência de mineração em aplicações de tempo real",
+    "Riscos de privacidade associados aos metadados armazenados no IPFS",
+    "Efeito da integração de Self‑Sovereign Identity (SSI) nos tempos de acesso e na privacidade"
+  ],
+  "propostas_possiveis": [
+    "Avaliar o desempenho do IPFS e da blockchain em cenários de conectividade intermitente e dispositivos de borda com recursos limitados",
+    "Investigar mecanismos de consenso mais leves ou híbridos para reduzir a latência de mineração em aplicações críticas",
+    "Analisar a exposição de metadados no IPFS e propor técnicas de anonimização ou criptografia adicional",
+    "Integrar SSI ao fluxo de dados entre IPFS e blockchain e medir seu impacto nos tempos de acesso e na gestão de identidade"
+  ]
+}

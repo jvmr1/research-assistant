@@ -1,0 +1,57 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-21T00:11:51",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Danilo_TCC_final",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 13,
+        "resumo": "O trecho destaca que cidades inteligentes dependem de IoT e middleware como InterSCity para integrar dispositivos heterogêneos, mas enfrentam sérios desafios de segurança da informação, incluindo acessos não autorizados, fraudes e ataques de negação de serviço.",
+        "interpretacao": "O texto reforça que, embora a IoT e middleware como InterSCity possibilitem a coleta e gestão de dados urbanos em tempo real, a heterogeneidade dos sistemas eleva a superfície de ataque, tornando a segurança da informação essencial para a viabilidade das cidades inteligentes.",
+        "duvidas": "Como integrar de forma prática identidades autosoberanas ao middleware InterSCity? Quais protocolos de revogação são mais adequados para ambientes IoT de alta latência? De que maneira a criptografia homomórfica pode ser aplicada ao processamento de fluxos de dados de sensores sem comprometer desempenho?"
+      },
+      {
+        "pagina": 14,
+        "resumo": "O texto descreve os desafios de segurança em cidades inteligentes, como ataques man-in-the-middle, DoS e acesso não autorizado a dados sensíveis, e destaca a importância da gestão de identidades. Propõe o uso de identidades autosoberanas (SSI) baseadas em blockchain para dar controle aos cidadãos sobre suas credenciais digitais, complementando um modelo existente que ainda não cobre a identidade dos cidadãos.",
+        "interpretacao": "O autor argumenta que a adoção de SSI baseada em blockchain pode suprir lacunas críticas de segurança e privacidade nas cidades inteligentes, especialmente ao estender a gestão de identidade dos cidadãos, ainda ausente nos modelos atuais.",
+        "duvidas": "Como será medido o impacto da SSI na latência das operações? Quais protocolos de comunicação serão adotados para integrar SSI ao InterSCity? Como garantir a escalabilidade da solução em ambientes IoT massivos?"
+      },
+      {
+        "pagina": 15,
+        "resumo": "O trabalho propõe desenvolver mecanismos distribuídos baseados em blockchain para garantir segurança e controle de acesso a dados e recursos em cidades inteligentes, considerando a complexidade dos atores envolvidos (entidades públicas e privadas, cidadãos, sensores IoT). Define como objetivo geral a criação de um modelo de gestão de identidades e uma arquitetura de segurança que cubra comunicação entre componentes de middleware e controle de acesso centrado nos dados, além de disponibilizar uma plataforma de apoio ao desenvolvimento de aplicações.",
+        "interpretacao": "O trecho reforça a necessidade de uma infraestrutura de identidade autossoberana que suporte múltiplos atores e dispositivos IoT, usando blockchain como camada de confiança para garantir integridade, disponibilidade e controle de acesso granular em serviços urbanos.",
+        "duvidas": "Como será garantida a escalabilidade da solução blockchain em cenários de alta densidade de dispositivos IoT? Quais mecanismos específicos de revogação e recuperação de credenciais serão implementados no middleware proposto?"
+      },
+      {
+        "pagina": 16,
+        "resumo": "O trecho descreve a plataforma de middleware InterSCity, um software livre baseado em microsserviços projetado para cidades inteligentes. É modular, escalável e flexível, composta por seis microsserviços, entre eles o Resource Adaptor, que permite a integração de dispositivos IoT à plataforma.",
+        "interpretacao": "A descrição do InterSCity indica que a plataforma já possui uma camada de integração IoT (Resource Adaptor), o que pode ser aproveitado para conectar identidades autossoberanas dos cidadãos e credenciais verificáveis aos sensores e serviços urbanos.",
+        "duvidas": "Como adaptar os microsserviços existentes do InterSCity para suportar emissão, verificação e revogação de credenciais SSI? Quais são os impactos de desempenho ao inserir criptografia homomórfica ou ABE nos fluxos de dados do middleware?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O documento analisa a dependência das cidades inteligentes de IoT e de middleware como o InterSCity para integrar dispositivos heterogêneos, apontando sérios desafios de segurança da informação, como acessos não autorizados, fraudes, ataques man‑in‑the‑middle e negação de serviço. Propõe a adoção de identidades autosoberanas (SSI) baseadas em blockchain para que cidadãos controlem suas credenciais digitais, complementando modelos de gestão de identidade que ainda não contemplam o usuário final. O objetivo geral é criar um modelo de gestão de identidades e uma arquitetura de segurança que cubra a comunicação entre componentes do middleware e o controle de acesso centrado nos dados, suportando múltiplos atores (entidades públicas, privadas, cidadãos e sensores IoT). A plataforma InterSCity, composta por microsserviços modulares, oferece um ponto de integração potencial para emissão, verificação e revogação de credenciais SSI, embora permaneçam dúvidas sobre escalabilidade da blockchain, protocolos de revogação, recuperação de credenciais e impactos de desempenho ao inserir criptografia homomórfica ou ABE nos fluxos de dados.",
+    "lacunas_possiveis": [
+      "Integração prática de identidades autosoberanas ao middleware InterSCity, especialmente nos microsserviços existentes.",
+      "Seleção e adaptação de protocolos de revogação adequados a ambientes IoT de alta latência.",
+      "Avaliação do impacto de desempenho da criptografia homomórfica e de ABE nos fluxos de dados de sensores em tempo real.",
+      "Medição da latência introduzida pela SSI nas operações de coleta e processamento de dados urbanos.",
+      "Escalabilidade da solução blockchain em cenários com alta densidade de dispositivos IoT.",
+      "Mecanismos concretos de recuperação de credenciais perdidas para cidadãos."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver um módulo de extensão SSI para o Resource Adaptor do InterSCity, permitindo emissão, verificação e revogação de credenciais verificáveis.",
+      "Implementar e testar um esquema de revogação leve (por exemplo, listas de status) otimizado para redes IoT com alta latência.",
+      "Prototipar o uso de criptografia baseada em atributos (ABE) para controle de acesso granular aos dados coletados pelos sensores dentro do middleware.",
+      "Realizar benchmarks de algoritmos de criptografia homomórfica aplicados ao processamento de fluxos de dados de sensores, medindo impacto de desempenho.",
+      "Arquitetar uma blockchain permissionada híbrida que combine consenso rápido com suporte a alta taxa de transações para melhorar a escalabilidade.",
+      "Criar um mecanismo de recuperação de credenciais baseado em secret sharing distribuído entre entidades públicas e privadas."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:11:56"
+}

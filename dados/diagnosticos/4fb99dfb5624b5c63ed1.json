@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:36:36",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "Algorithm 2 Accessing Healthcare Data From IPFS",
+      "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+      "avaliacao": "Total number of transactions per block",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Avaliar a latência e o throughput da recuperação de dados via IPFS em cenários de borda; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar a eficácia do esquema de criptografia usado no Algoritmo 3 com técnicas de criptografia pós‑quântica; analisar a escalabilidade do modelo quando múltiplas cidades inteligentes compartilham dados de saúde simultaneamente."
+    },
+    "pagina": 13,
+    "texto": "Page 13 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \n4.3 Proof of the correctness of algorithms\nThe use of cryptographically bound, non-transferable identification tokens, as illustrated \nin Algorithm 1, is integral to the system. The registration process incorporates protec -\ntions to ensure the security of personal information while confirming identity. No one \ncan deny or alter a registered identity because of the immutability of the blockchain. \nConsistent enforcement of registration rules across all participants is ensured by smart \ncontracts. Each user is able to access the precise data that was initially uploaded, as \nshown in Algorithm 2. The data is protected so that only authorised people can access it. \nThe integrity of the obtained data is confirmed by comparing it with IPFS hashes. Addi -\ntionally, this algorithm completes its execution in a finite number of steps. Deciphering \nthe ciphertext with the right parameters and key returns the original plaintext, as dem -\nonstrated in Algorithm 3. Hash functions on the Blockchain and IPFS CID ensure that \ndata remains secure during storage and transaction.\n5 Result analysis\nWe have conducted a number of experiments on various machines in the same network \nto evaluate the performance of our proposed framework. Using content-addressed hash-\ning, the platform facilitates efficient distributed healthcare data storage, access, and \nretrieval. This architecture is user-friendly and effective at preserving the confidential -\nity, availability, and integrity of sensitive healthcare information. We employed seven \ndistinct healthcare file sizes across multiple machines to test the proposed framework. \nTests of the framework’s performance were conducted using the metrics of upload, \ndownload, access, and mining times.\n  – Upload Time: Upload time is the time a node takes to upload new transactions to the \nBlockchain network. Upload time depends on network speed and node processing \npower.\n  – Download Time: Blockchain download time is the time it takes a node to download \nthe file and synchronize with the whole network. Blockchain size, network speed, \nand node processing power determine download time.\n  – Access Time: Blockchain access time is the time it takes a user to access a transaction \nor block. It varies depending on the Blockchain’s size and the user’s device’s \ncomputational power.\n  – Mining Time:  Blockchain mining time is the time it takes miners to solve \ncryptographic puzzles and add new blocks or transactions. Puzzle difficulty and \nminer node processing speed affect mining time. Network protocol determines block \ntime, which differs from each Blockchain.\nWe’ve considered healthcare files of varying sizes, uploaded them from several machines, \nand timed how long each file took to be added to Blockchain and IPFS. Figure 5. displays \nthe difference in upload speed between IPFS and Blockchain. Observation indicates that \nthe time required to upload files to the Blockchain network increases with file size. The \ngraph in Fig.  5. indicates that IPFS uploads faster than Blockchain. The time it takes to \nupload a file to the IPFS network grows as the file size increases; however, after a certain \nfile size, it increases minimally, much faster than uploading to Blockchain. Figure 6. com-\npares Blockchain and IPFS download timings. This graph depicts the experimental mod-\nel’s results, which show that downloading the file through Blockchain takes noticeably ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O estudo apresenta um framework que integra blockchain e IPFS para armazenamento, acesso e compartilhamento seguro de dados de saúde em cidades inteligentes, usando tokens de identidade não transferíveis e smart contracts para controle de acesso, e avalia desempenho (tempo de upload, download, acesso e mineração) em diferentes tamanhos de arquivos.",
+    "perfil": {
+      "problema": "Algorithm 2 Accessing Healthcare Data From IPFS",
+      "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+      "avaliacao": "upload, download, access, and mining times",
+      "limites": "Não informado",
+      "possibilidades": "Avaliar latência e throughput de recuperação de dados via IPFS em cenários de borda; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar o esquema de criptografia do Algoritmo 3 com técnicas pós‑quânticas; analisar a escalabilidade do modelo quando múltiplas cidades inteligentes compartilham dados simultaneamente; investigar o impacto de diferentes protocolos de rede na mineração e no tempo de acesso; explorar ajustes dinâmicos de tamanho de bloco para suportar fluxos heterogêneos de IoT."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Tokens de identificação não transferíveis garantem a imutabilidade da identidade na blockchain.",
+        "citacao": "\"No one can deny or alter a registered identity because of the immutability of the blockchain.\""
+      },
+      {
+        "afirmacao": "O IPFS apresenta tempo de upload menos sensível ao aumento de tamanho de arquivo comparado ao blockchain.",
+        "citacao": "\"The graph in Fig. 5 indicates that IPFS uploads faster than Blockchain... after a certain file size, it increases minimally, much faster than uploading to Blockchain.\""
+      }
+    ],
+    "interpretacao": "O trabalho demonstra que a combinação de blockchain e IPFS permite controle de acesso seguro e integridade dos dados de saúde, porém o desempenho de upload e download varia conforme o tamanho dos arquivos e a infraestrutura de rede, destacando a vantagem do IPFS para arquivos maiores.",
+    "duvidas": "Como o modelo se comporta em redes de borda heterogêneas? Qual o impacto da dificuldade de mineração sobre a latência de acesso ao dado? Há avaliação dos riscos de privacidade associados aos metadados armazenados no IPFS?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:36:44"
+}

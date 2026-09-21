@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho apresenta trechos de código que implementam revogação de DIDs, rotação de chaves e controle de acesso no sistema YouGovern, descreve seu deployment na Binance Smart Chain e a integração com IPFS para armazenamento de dados, além de mencionar monitoramento contínuo de desempenho e segurança.",
+  "perfil": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": "Avaliar o desempenho da revogação de DIDs em termos de latência e custo de gas; integrar controle de acesso baseado em atributos (ABE) nas funções de concessão; testar interoperabilidade com outras blockchains públicas (ex.: Polygon, Avalanche); analisar a resiliência e privacidade do armazenamento híbrido IPFS + nós institucionais; implementar revogação automática via provas de conhecimento zero (ZKP)."
+  },
+  "evidencias": [
+    {
+      "citacao": "function revokeDID(address user) public onlyOwner { didRecords[user].active = false; emit DIDRevoked(user); }",
+      "afirmacao": "O sistema inclui função para revogar DIDs e rotacionar chaves."
+    },
+    {
+      "citacao": "mapping(address => mapping(address => bool)) public accessPermissions; function grantAccess(address verifier) public { accessPermissions[msg.sender][verifier] = true; emit AccessGranted(msg.sender, verifier); }",
+      "afirmacao": "O controle de acesso é gerenciado por um mapeamento de permissões entre usuários e verificadores."
+    }
+  ],
+  "interpretacao": "O trecho demonstra que o YouGovern já incorpora mecanismos de revogação de identidade e controle de acesso simples via smart contracts, reforçando a proposta de SSI baseada em blockchain e indicando que a infraestrutura está pronta para extensões de segurança avançada.",
+  "duvidas": "Como a revogação de DIDs impacta a latência e o custo de transação em cenários de alta frequência? Qual a estratégia de recuperação de credenciais caso o agente/guardian ainda não esteja implementado?",
+  "avisos": [],
+  "id": "fdc2a995058cf670f6bf",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": "Avaliar o desempenho da revogação de DIDs em termos de latência e custo de gas; integrar controle de acesso baseado em atributos (ABE) nas funções de concessão; testar interoperabilidade com outras blockchains públicas (ex.: Polygon, Avalanche); analisar a resiliência e privacidade do armazenamento híbrido IPFS + nós institucionais; implementar revogação automática via provas de conhecimento zero (ZKP).",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  }
+}

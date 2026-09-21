@@ -1,0 +1,39 @@
+{
+  "resumo": "O estudo apresenta um framework de autenticação que preserva a privacidade para IoT industrial, integrando avaliação de hash e verificação MAC para reduzir sobrecarga computacional e de comunicação, suportando grandes implantações e garantindo proteção de identidade via blockchain permissionada, embora dependa de um único mecanismo de blockchain.",
+  "perfil": {
+    "problema": "privacy-preserving authentication framework tailored for industrial IoT applications",
+    "solucao": "integrates hash evaluation and MAC verification",
+    "avaliacao": "comparative analysis with existing benchmark models confirms that the proposed solution significantly improves authentication processes",
+    "limites": "reliance on a single permissions‑based blockchain mechanism",
+    "possibilidades": [
+      "Incorporar algoritmos de consenso para melhorar confiança e robustez.",
+      "Integrar técnicas de deep learning com blockchain para classificação de usuários baseada em confiança.",
+      "Adicionar suporte a SDN e 5G para melhorar responsividade em tempo real e escalabilidade.",
+      "Estender o modelo para sistemas de resgate de emergência, garantindo comunicação segura e entrega confiável de dados."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "integrates hash evaluation and MAC verification to minimize computational and communication overhead",
+      "afirmacao": "O framework integra avaliação de hash e verificação MAC para minimizar sobrecarga computacional e de comunicação."
+    }
+  ],
+  "interpretacao": "O artigo demonstra que a combinação de hash, MAC e blockchain permissionada pode atender às exigências de autenticação em larga escala para IoT industrial, reduzindo latência e mantendo a privacidade, porém a solução ainda carece de flexibilidade devido ao uso de um único tipo de blockchain.",
+  "duvidas": "Como a introdução de algoritmos de consenso afetará a latência e a leveza da autenticação? Qual seria o impacto da integração de deep learning sobre os requisitos de recursos nos dispositivos de borda?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "d448200db68c9ee0a533",
+  "artigo": "Addula_2025",
+  "pagina": 14,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "privacy-preserving authentication framework tailored for industrial IoT applications",
+    "solucao": "integrates hash evaluation and MAC verification",
+    "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Incorporar algoritmos de consenso para melhorar confiança e robustez.; Integrar técnicas de deep learning com blockchain para classificação de usuários baseada em confiança.; Adicionar suporte a SDN e 5G para melhorar responsividade em tempo real e escalabilidade.; Estender o modelo para sistemas de resgate de emergência, garantindo comunicação segura e entrega confiável de dados.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

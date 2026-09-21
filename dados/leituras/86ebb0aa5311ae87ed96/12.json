@@ -1,0 +1,30 @@
+{
+  "resumo": "O estudo apresenta um framework que integra blockchain e IPFS para armazenamento, acesso e compartilhamento seguro de dados de saúde em cidades inteligentes, usando tokens de identidade não transferíveis e smart contracts para controle de acesso, e avalia desempenho (tempo de upload, download, acesso e mineração) em diferentes tamanhos de arquivos.",
+  "perfil": {
+    "problema": "Algorithm 2 Accessing Healthcare Data From IPFS",
+    "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+    "avaliacao": "upload, download, access, and mining times",
+    "limites": "Não informado",
+    "possibilidades": "Avaliar latência e throughput de recuperação de dados via IPFS em cenários de borda; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar o esquema de criptografia do Algoritmo 3 com técnicas pós‑quânticas; analisar a escalabilidade do modelo quando múltiplas cidades inteligentes compartilham dados simultaneamente; investigar o impacto de diferentes protocolos de rede na mineração e no tempo de acesso; explorar ajustes dinâmicos de tamanho de bloco para suportar fluxos heterogêneos de IoT."
+  },
+  "evidencias": [],
+  "interpretacao": "O trabalho demonstra que a combinação de blockchain e IPFS permite controle de acesso seguro e integridade dos dados de saúde, porém o desempenho de upload e download varia conforme o tamanho dos arquivos e a infraestrutura de rede, destacando a vantagem do IPFS para arquivos maiores.",
+  "duvidas": "Como o modelo se comporta em redes de borda heterogêneas? Qual o impacto da dificuldade de mineração sobre a latência de acesso ao dado? Há avaliação dos riscos de privacidade associados aos metadados armazenados no IPFS?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "97954b01beb4abfa3eb7",
+  "artigo": "Mallick_2025",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Algorithm 2 Accessing Healthcare Data From IPFS",
+    "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+    "avaliacao": "upload, download, access, and mining times",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Avaliar latência e throughput de recuperação de dados via IPFS em cenários de borda; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar o esquema de criptografia do Algoritmo 3 com técnicas pós‑quânticas; analisar a escalabilidade do modelo quando múltiplas cidades inteligentes compartilham dados simultaneamente; investigar o impacto de diferentes protocolos de rede na mineração e no tempo de acesso; explorar ajustes dinâmicos de tamanho de bloco para suportar fluxos heterogêneos de IoT.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86ebb0aa5311ae87ed96"
+  }
+}

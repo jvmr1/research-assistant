@@ -1,0 +1,39 @@
+{
+  "resumo": "O trecho apresenta o framework EPP-BCFL, que combina blockchain e aprendizado federado com arquitetura em camadas, criptografia homomórfica, privacidade diferencial e agregação adaptativa para superar custos computacionais, sobrecarga de comunicação e falta de incentivos em ambientes de saúde. Identifica lacunas como suporte a dados heterogêneos de EHR, ausência de aprendizado federado vertical e coordenação interinstitucional, e propõe soluções técnicas para melhorar desempenho, privacidade e escalabilidade.",
+  "perfil": {
+    "problema": "lack of comprehensive support for heterogeneous Electronic Health Record (EHR) data",
+    "solucao": "Efficient and Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+    "avaliacao": "Simulation results indicate that: (1) as a privacy-preserving strategy, BSDA achieves high throughput and low transaction latency",
+    "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+    "possibilidades": [
+      "Adaptar o EPP-BCFL para gerenciamento de dados de sensores urbanos em cidades inteligentes, integrando identidade auto‑soberana (SSI) e credenciais verificáveis para controle de acesso baseado em atributos (ABE).",
+      "Avaliar a escalabilidade do framework com milhares de nós de borda em cenários de smart city, testando protocolos de consenso leves (PoA, DAG).",
+      "Incorporar aprendizado federado vertical (VFL) para colaboração entre diferentes autoridades municipais que possuem atributos complementares de cidadãos.",
+      "Investigar mecanismos de incentivo baseados em tokens para motivar a participação contínua de dispositivos IoT de baixa potência."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "BSDA achieves high throughput and low transaction latency",
+      "afirmacao": "BSDA achieves high throughput and low transaction latency"
+    }
+  ],
+  "interpretacao": "O trabalho propõe uma arquitetura mais robusta e adaptável para aprendizado federado em saúde, mas reconhece que ainda há desafios de incentivos e de integração de dados heterogêneos, que são críticos para sua adoção em ambientes reais.",
+  "duvidas": "Como o EPP-BCFL lida com a heterogeneidade de recursos computacionais entre dispositivos de borda? Qual o impacto real da criptografia homomórfica no consumo energético dos nós IoT?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "9eb08fc655dfd64eef4d",
+  "artigo": "Munusamy_2025",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "lack of comprehensive support for heterogeneous Electronic Health Record (EHR) data",
+    "solucao": "Efficient and Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+    "avaliacao": "Simulation results indicate that: (1) as a privacy-preserving strategy, BSDA achieves high throughput and low transaction latency",
+    "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+    "possibilidades": "Adaptar o EPP-BCFL para gerenciamento de dados de sensores urbanos em cidades inteligentes, integrando identidade auto‑soberana (SSI) e credenciais verificáveis para controle de acesso baseado em atributos (ABE).; Avaliar a escalabilidade do framework com milhares de nós de borda em cenários de smart city, testando protocolos de consenso leves (PoA, DAG).; Incorporar aprendizado federado vertical (VFL) para colaboração entre diferentes autoridades municipais que possuem atributos complementares de cidadãos.; Investigar mecanismos de incentivo baseados em tokens para motivar a participação cont",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

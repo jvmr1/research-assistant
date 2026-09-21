@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho descreve como algoritmos de consenso (Proof of Capacity, Proof of Stake, Proof of Burn, PBFT) garantem a confiabilidade da blockchain, destacando o papel dos smart contracts na automação e segurança das transações. São ressaltados os atributos de descentralização, imutabilidade e transparência, bem como os desafios de latência, consumo energético e baixa taxa de transferência ao aplicar blockchain em IoT. Também são apresentados requisitos de confiança para sistemas IoT de borda, como precisão, segurança e acessibilidade.",
+  "perfil": {
+    "problema": "Centralized data storage is a big obstacle.",
+    "solucao": "Smart contracts ... ensure that each transaction adheres to pre‑agreed conditions.",
+    "avaliacao": "the proposed architecture lowers the authentication time and obtains a high response rate",
+    "limites": "Não informado.",
+    "possibilidades": "Explorar a integração de SSI para gerenciamento de credenciais nas bordas; avaliar o impacto de diferentes algoritmos de consenso (PoS, PBFT) sobre latência e consumo energético em ambientes IIoT; aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados processados na borda; testar a arquitetura em múltiplas cidades inteligentes para validar escalabilidade e interoperabilidade."
+  },
+  "evidencias": [
+    {
+      "citacao": "consensus algorithms play a crucial role in establishing the trustworthiness of every node in the blockchain",
+      "afirmacao": "Consensus algorithms play a crucial role in establishing the trustworthiness of every node in the blockchain."
+    }
+  ],
+  "interpretacao": "O texto enfatiza que a segurança e a confiança em sistemas IoT de borda podem ser reforçadas por blockchain, mas alerta para os custos de desempenho e energia associados a algoritmos de consenso tradicionais.",
+  "duvidas": "Quais algoritmos de consenso são mais adequados para dispositivos IoT com recursos limitados? Como equilibrar transparência e privacidade ao usar criptografia avançada na borda?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "4641a8464bde80281737",
+  "artigo": "Asaithambi_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Centralized data storage is a big obstacle.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "the proposed architecture lowers the authentication time and obtains a high response rate",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração de SSI para gerenciamento de credenciais nas bordas; avaliar o impacto de diferentes algoritmos de consenso (PoS, PBFT) sobre latência e consumo energético em ambientes IIoT; aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados processados na borda; testar a arquitetura em múltiplas cidades inteligentes para validar escalabilidade e interoperabilidade.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "406a8d28108451c02b35"
+  }
+}

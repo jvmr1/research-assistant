@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho apresenta dois algoritmos: o Algoritmo 2, que descreve como acessar dados de saúde armazenados no IPFS, e o Algoritmo 3, que trata da criptografia e descriptografia desses dados, indicando a integração de blockchain e IoT para compartilhamento seguro em ambientes de saúde inteligente.",
+  "perfil": {
+    "problema": "Algorithm 2 Accessing Healthcare Data From IPFS",
+    "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Avaliar a latência e o throughput da recuperação de dados via IPFS em cenários de borda; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar a eficácia do esquema de criptografia usado no Algoritmo 3 com técnicas de criptografia pós‑quântica; analisar a escalabilidade do modelo quando múltiplas cidades inteligentes compartilham dados de saúde simultaneamente."
+  },
+  "evidencias": [
+    {
+      "citacao": "Algorithm 2 Accessing Healthcare Data From IPFS",
+      "afirmacao": "O trabalho inclui um algoritmo para acessar dados de saúde a partir do IPFS."
+    },
+    {
+      "citacao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+      "afirmacao": "O trabalho inclui um algoritmo para criptografar e descriptografar dados de saúde."
+    }
+  ],
+  "interpretacao": "Os algoritmos sugerem que o estudo foca na utilização do IPFS como camada de armazenamento distribuído e na proteção dos dados por meio de criptografia, reforçando a proposta de compartilhamento seguro em smart healthcare.",
+  "duvidas": "Não há detalhes sobre métricas de desempenho, protocolos de consenso blockchain empregados ou mecanismos de controle de acesso associados aos algoritmos apresentados.",
+  "avisos": [],
+  "id": "c80b2990a1b00f6caee6",
+  "artigo": "Mallick_2025",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Algorithm 2 Accessing Healthcare Data From IPFS",
+    "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+    "avaliacao": "Total number of transactions per block",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Avaliar a latência e o throughput da recuperação de dados via IPFS em cenários de borda; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar a eficácia do esquema de criptografia usado no Algoritmo 3 com técnicas de criptografia pós‑quântica; analisar a escalabilidade do modelo quando múltiplas cidades inteligentes compartilham dados de saúde simultaneamente.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86ebb0aa5311ae87ed96"
+  }
+}

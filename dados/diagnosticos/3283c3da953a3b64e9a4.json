@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:13:28",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+    "perfil_anterior": {
+      "problema": "counterfeit detection",
+      "solucao": "emerging technologies such as blockchain and Self-Sovereign Identity (SSI) have gained attention for improving the efficiency, transparency, and security of vaccine supply chain management",
+      "avaliacao": "empirical results prove the efficacy of the proposed supply chain framework",
+      "limites": "identity-agnostic or centrally managed identity models",
+      "possibilidades": "• Integrar computação de borda para verificação em tempo real da autenticidade dos lotes nas fronteiras da cidade inteligente.\n• Combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de rastreamento.\n• Avaliar a interoperabilidade entre plataformas municipais de saúde e provedores de identidade descentralizada usando padrões de credenciais verificáveis.\n• Implementar revogação distribuída de credenciais SSI via contratos inteligentes.\n• Aplicar a arquitetura a sensores IoT de monitoramento de temperatura e localização na cadeia de frio das vacinas."
+    },
+    "pagina": 6,
+    "texto": "ensures compliance with data protection regulations, and prevents \nidentity linkability across transactions limitations commonly \nobserved in identity-agnostic blockchain solutions.\nFurthermore, the integration of SSI enables selective disclosure \nand role-based authorization, allowing stakeholders to prove \neligibility (e.g., certified manufacturer, authorized distributor, \nlicensed healthcare provider) without revealing unnecessary identity \nattributes. This capability is absent in conventional blockchain-based \nvaccine traceability frameworks, which typically expose full \nparticipant identities or rely on static access control lists.\nBy combining SSI with blockchain, the proposed framework \nsupports cross-border interoperability, revocable trust, and \npatient-centric privacy guarantees, making it particularly \nsuitable for large-scale vaccination programs operating across \nheterogeneous regulatory environments. To the best of our \nknowledge, this work represents one of the few comprehensive \nefforts that systematically integrate SSI with blockchain to address \nboth traceability and identity privacy in vaccine supply chain \nmanagement.\n1.1 Motivation\nIn recent years, the pharmaceutical industry has been struggling \nwith the pervasive issue of drug counterfeiting, which poses \nsignificant risks to public health and safety. The emergence of \ncounterfeit drugs in the supply chain undermines consumer trust, \nleads to severe health consequences, and results in substantial \nfinancial losses for manufacturers and governments. With the global \ntrade in counterfeit medicines being a multi-billion-dollar industry, \nthere is an urgent need for robust traceability mechanisms that \nensure the authenticity and integrity of pharmaceutical products \nfrom production to the end consumer [14]. This study is motivated \nby the critical need to explore, evaluate, and enhance drug \ntraceability systems to effectively combat the growing threat of \ncounterfeit drugs. Table 1 comprises a list of acronyms used in this \nwork to make it simpler to read.\n \nTable 1 List of common acronyms and descriptions used in the paper\nS. No. Abbreviation\ns\nMeaning \n1 COVID COronaVIrus Disease\n2 WHO World Health Organization \nACCEPTED MANUSCRIPT\nARTICLE IN PRESSARTICLE IN PRESS",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve como a integração de Self‑Sovereign Identity (SSI) ao blockchain elimina a vinculatividade de identidade e permite divulgação seletiva e autorização baseada em papéis, garantindo privacidade dos participantes e interoperabilidade transfronteiriça em cadeias de suprimentos de vacinas. Destaca ainda a necessidade de combater o contrabando de medicamentos e a escassez de soluções que conciliem rastreabilidade e privacidade.",
+    "perfil": {
+      "problema": "drug counterfeiting",
+      "solucao": "the integration of SSI enables selective disclosure and role-based authorization",
+      "avaliacao": "Não informado",
+      "limites": "identity linkability across transactions",
+      "possibilidades": "• Integrar computação de borda para verificação em tempo real da autenticidade dos lotes nas fronteiras da cidade inteligente.\n• Combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular.\n• Avaliar interoperabilidade entre plataformas municipais de saúde e provedores de identidade descentralizada usando credenciais verificáveis.\n• Implementar revogação distribuída de credenciais SSI via contratos inteligentes.\n• Aplicar a arquitetura a sensores IoT de monitoramento de temperatura e localização na cadeia de frio.\n• Explorar provas de conhecimento zero‑knowledge (ZKP) para reforçar a privacidade nas transações.\n• Utilizar aprendizado federado para detectar anomalias de temperatura sem expor dados sensíveis."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "SSI enables selective disclosure and role-based authorization",
+        "citacao": "the integration of SSI enables selective disclosure and role-based authorization, allowing stakeholders to prove eligibility ... without revealing unnecessary identity attributes."
+      },
+      {
+        "afirmacao": "the proposed framework supports cross-border interoperability, revocable trust, and patient-centric privacy guarantees",
+        "citacao": "By combining SSI with blockchain, the proposed framework supports cross-border interoperability, revocable trust, and patient-centric privacy guarantees"
+      }
+    ],
+    "interpretacao": "A adoção de SSI junto ao blockchain oferece um caminho viável para equilibrar rastreabilidade rigorosa e privacidade dos atores, preenchendo lacunas críticas das soluções blockchain tradicionais que expõem identidades completas.",
+    "duvidas": "Como será implementado o mecanismo de revogação distribuída de credenciais? Qual o overhead de desempenho ao aplicar divulgação seletiva em ambientes de IoT de baixa potência? Existem padrões emergentes para interoperabilidade entre diferentes jurisdições regulatórias?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:14:09"
+}

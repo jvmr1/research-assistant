@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+	<link rel="icon" href="https://ijsrcseit.com/favicon.ico" type="image/x-icon" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+															
+					<title>Verifiable Credentials: Transforming Digital Identity in the Real World | IJSRCSEIT</title>
+
+					<meta name="description" content=" This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity Published in IJSRCSEIT.">
+
+					<meta name="keywords" content="Verifiable Credentials, Digital Identity Management, Self-Sovereign Identity, Privacy-Preserving Authentication, Decentralized Trust Systems, IJSRCSEIT, International Journal of Scientific Research in Computer Science, Engineering and Information Technology, ISSN 2456-3307">
+				<meta name="citation_keywords" content="Verifiable Credentials; Digital Identity Management; Self-Sovereign Identity; Privacy-Preserving Authentication; Decentralized Trust Systems">
+	
+			<link rel="canonical" href="https://ijsrcseit.com/home/article/view/CSEIT25112382">
+	
+			<meta property="og:site_name" content="International Journal of Scientific Research in Computer Science, Engineering and Information Technology">
+		<meta property="og:title" content="Verifiable Credentials: Transforming Digital Identity in the Real World | IJSRCSEIT">
+		<meta property="og:description" content=" This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity Published in IJSRCSEIT.">
+					<meta property="og:type" content="article">
+			<meta property="og:url" content="https://ijsrcseit.com/home/article/view/CSEIT25112382">
+							<meta property="article:published_time" content="2025-03-08">
+											<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Verifiable Credentials: Transforming Digital Identity in the Real World | IJSRCSEIT">
+		<meta name="twitter:description" content=" This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity Published in IJSRCSEIT.">
+	
+									<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ScholarlyArticle",
+			"name": "Verifiable Credentials: Transforming Digital Identity in the Real World",
+			"headline": "Verifiable Credentials: Transforming Digital Identity in the Real World",
+			"url": "https://ijsrcseit.com/home/article/view/CSEIT25112382"
+						,"description": " This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity management across various sectors. The article examines the core components, technical architecture, and real-world implementations of VC systems, highlighting their role in enhancing security, privacy, and operational efficiency. The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance. Additionally,..."
+									,"author": [
+								{
+					"@type": "Person",
+					"name": "Ravikanth Reddy Gudipati"
+															,"affiliation": [
+																														{"@type": "Organization","name": "University at Buffalo, USA"}																	]
+																			}							]
+									,"keywords": [
+								"Verifiable Credentials",								"Digital Identity Management",								"Self-Sovereign Identity",								"Privacy-Preserving Authentication",								"Decentralized Trust Systems"							]
+						,"isPartOf": {
+				"@type": "Periodical",
+				"name": "International Journal of Scientific Research in Computer Science, Engineering and Information Technology",
+				"alternateName": "IJSRCSEIT"
+																,"issn": ["2456-3307"]
+							}
+			,"publisher": {
+				"@type": "Organization",
+				"name": "Technoscience Academy",
+				"url": "https://technoscienceacademy.com"
+			}
+						,"datePublished": "2025-03-31"
+					}
+		</script>
+	
+	
+<link rel="icon" href="https://ijsrcseit.com/zdata/public/journals/1/favicon_en.ico" />
+<meta name="csrf-token" content="mXf9mJYGEJFyEEkK2YwLDXiXSmUkEs5zQWkl8jGd" />
+<meta name="generator" content="Open Journal Systems 3.5.0.4" />
+<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
+<meta name="DC.Creator.PersonalName" content="Ravikanth Reddy Gudipati"/>
+<meta name="DC.Date.created" scheme="ISO8601" content="2025-03-08"/>
+<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="2025-03-10"/>
+<meta name="DC.Date.issued" scheme="ISO8601" content="2025-03-31"/>
+<meta name="DC.Date.modified" scheme="ISO8601" content="2025-03-31"/>
+<meta name="DC.Description" xml:lang="en" content="This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity management across various sectors. The article examines the core components, technical architecture, and real-world implementations of VC systems, highlighting their role in enhancing security, privacy, and operational efficiency. The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance. Additionally, it explores emerging technologies, including AI integration and post-quantum security, along with government initiatives shaping the future of digital identity. The article demonstrates that VCs offer a paradigm shift in how organizations approach identity verification, enabling secure, privacy-preserving, and decentralized credential management while significantly reducing administrative overhead and fraud risks."/>
+<meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+<meta name="DC.Identifier" content="CSEIT25112382"/>
+<meta name="DC.Identifier.pageNumber" content="684-692"/>
+<meta name="DC.Identifier.DOI" content="10.32628/CSEIT25112382"/>
+<meta name="DC.Identifier.URI" content="https://ijsrcseit.com/home/article/view/CSEIT25112382"/>
+<meta name="DC.Language" scheme="rfc5646" content="en"/>
+<meta name="DC.Rights" content="Copyright (c) 2025 International Journal of Scientific Research in Computer Science, Engineering and Information Technology"/>
+<meta name="DC.Rights" content="https://creativecommons.org/licenses/by/4.0"/>
+<meta name="DC.Source" content="International Journal of Scientific Research in Computer Science, Engineering and Information Technology"/>
+<meta name="DC.Source.ISSN" content="2456-3307"/>
+<meta name="DC.Source.Issue" content="2"/>
+<meta name="DC.Source.Volume" content="11"/>
+<meta name="DC.Source.URI" content="https://ijsrcseit.com/home/home"/>
+<meta name="DC.Subject" xml:lang="en" content="Verifiable Credentials"/>
+<meta name="DC.Subject" xml:lang="en" content="Digital Identity Management"/>
+<meta name="DC.Subject" xml:lang="en" content="Self-Sovereign Identity"/>
+<meta name="DC.Subject" xml:lang="en" content="Privacy-Preserving Authentication"/>
+<meta name="DC.Subject" xml:lang="en" content="Decentralized Trust Systems"/>
+<meta name="DC.Title" content="Verifiable Credentials: Transforming Digital Identity in the Real World"/>
+<meta name="DC.Type" content="Text.Serial.Journal"/>
+<meta name="DC.Type.articleType" content="Research Articles"/>
+<meta name="gs_meta_revision" content="1.1"/>
+<meta name="citation_journal_title" content="International Journal of Scientific Research in Computer Science, Engineering and Information Technology"/>
+<meta name="citation_journal_abbrev" content="Int. J. Sci. Res. Comput. Sci. Eng. Inf. Technol"/>
+<meta name="citation_issn" content="2456-3307"/> 
+<meta name="citation_publisher" content="Technoscience Academy"/>
+<meta name="citation_author" content="Ravikanth Reddy Gudipati"/>
+<meta name="citation_author_institution" content="University at Buffalo, USA"/>
+<meta name="citation_title" content="Verifiable Credentials: Transforming Digital Identity in the Real World"/>
+<meta name="citation_language" content="en"/>
+<meta name="citation_date" content="2025/03/08"/>
+<meta name="citation_volume" content="11"/>
+<meta name="citation_issue" content="2"/>
+<meta name="citation_firstpage" content="684"/>
+<meta name="citation_lastpage" content="692"/>
+<meta name="citation_doi" content="10.32628/CSEIT25112382"/>
+<meta name="citation_abstract_html_url" content="https://ijsrcseit.com/home/article/view/CSEIT25112382"/>
+<meta name="citation_abstract" xml:lang="en" content="This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity management across various sectors. The article examines the core components, technical architecture, and real-world implementations of VC systems, highlighting their role in enhancing security, privacy, and operational efficiency. The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance. Additionally, it explores emerging technologies, including AI integration and post-quantum security, along with government initiatives shaping the future of digital identity. The article demonstrates that VCs offer a paradigm shift in how organizations approach identity verification, enabling secure, privacy-preserving, and decentralized credential management while significantly reducing administrative overhead and fraud risks."/>
+<meta name="citation_keywords" xml:lang="en" content="Verifiable Credentials"/>
+<meta name="citation_keywords" xml:lang="en" content="Digital Identity Management"/>
+<meta name="citation_keywords" xml:lang="en" content="Self-Sovereign Identity"/>
+<meta name="citation_keywords" xml:lang="en" content="Privacy-Preserving Authentication"/>
+<meta name="citation_keywords" xml:lang="en" content="Decentralized Trust Systems"/>
+<meta name="citation_pdf_url" content="https://ijsrcseit.com/home/article/download/CSEIT25112382/CSEIT25112382"/>
+<meta name="citation_reference" content="MarketsandMarkets, &quot;Identity Verification Market worth $21.8 billion by 2028 - Exclusive Report by MarketsandMarkets,&quot; MarketsandMarkets Insights, 2024: Available: https://www.prnewswire.com/news-releases/identity-verification-market-worth-21-8-billion-by-2028---exclusive-report-by-marketsandmarkets-302086317.html"/>
+<meta name="citation_reference" content="Jasmine Quigley, &quot;What Are Verifiable Credentials and How Do They Impact Business Processes and Revenue?,&quot; Accredible Blogs, 2024. Available: https://www.accredible.com/blog/what-are-verifiable-credentials-and-how-do-they-impact-business-processes-and-revenue ."/>
+<meta name="citation_reference" content="Dock.io, &quot;Verifiable Credentials: The Ultimate Guide 2024,&quot; Dock.io insights, 2025. Available: https://www.dock.io/post/verifiable-credentials"/>
+<meta name="citation_reference" content="Dock.io, &quot;Decentralized Identity: The Ultimate Guide 2024,&quot; Dock.io insights, 2025. Available: https://www.dock.io/post/decentralized-identity"/>
+<meta name="citation_reference" content="&quot;Mobile Identity Wallet Market Size, Share, Growth, And Industry Analysis, By Type (Online Authentication, ID Proofing, In-person Contactless ID verification, Age Verification), By Application (Government, Citizen, Public &amp; Private eService Providers), Regional Insights, and Forecast To 2033,&quot;Business Research Insights, 2025. Available: https://www.businessresearchinsights.com/market-reports/mobile-identity-wallet-market-103705"/>
+<meta name="citation_reference" content="Decentralized Identity Foundation, &quot;Guest Blog: Dock — How Verifiable Credentials Drive Business Value,&quot; 2023. Available: https://blog.identity.foundation/guest-blog-dock-how-verifiable-credentials-drive-business-value/"/>
+<meta name="citation_reference" content="Andrea Flamini, et al., &quot;On cryptographic mechanisms for the selective disclosure of verifiable credentials,&quot; Journal of Information Security and Applications, 2024. Available: https://www.sciencedirect.com/science/article/pii/S2214212624000929"/>
+<meta name="citation_reference" content="UNCITRAL, &quot;UNCITRAL Model Law on the Use and Cross-border Recognition of Identity Management and Trust Services (2022),&quot; United Nations Commission on International Trade Law, 2022. Available: https://uncitral.un.org/en/mlit"/>
+<meta name="citation_reference" content="DIACC, &quot;Perspectives on the Adoption of Verifiable Credentials,&quot; Digital ID &amp; Authentication Council of Canada, 2017. Available: https://diacc.ca/wp-content/uploads/2023/05/Perspectives-on-the-Adoption-of-Verifiable-Credentials-1.pdf"/>
+<meta name="citation_reference" content="European Data Protection Supervisor, &quot;Guidelines on Digital Identity Solutions,&quot; EDPS, 2023. Available: https://www.edps.europa.eu/system/files/2023-02/23-02-07_ww-enisa_en_2.pdf"/>
+<meta name="citation_reference" content="Mike Wyatt, et al., &quot;The Future of Digital Identity: What Does it Mean for You?&quot;, Deollite, 2021. Available: https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Risk/gx-the-future-of-digital-identity-what-does-it-mean-to-you-updated.pdf"/>
+<meta name="citation_reference" content="Thomas Wilson, &quot;&#039;Digital ID Verification Spend to Exceed $26 billion Globally by 2029&#039;,&quot; Juniper Research, 2024. Available: https://www.juniperresearch.com/research/fintech-payments/identity/digital-identity-verification-research-report/"/>
+<meta property="og:title" content="Verifiable Credentials: Transforming Digital Identity in the Real World"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://ijsrcseit.com/home/article/view/CSEIT25112382"/>
+<meta property="og:site_name" content="International Journal of Scientific Research in Computer Science, Engineering and Information Technology"/>
+<meta property="og:description" content="This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity management across various sectors. The article examines the core components, technical architecture, and real-world implementations of VC systems, highlighting their role"/>
+<meta property="article:published_time" content="2025-03-08"/>
+<meta property="article:author" content="Ravikanth Reddy Gudipati"/>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Verifiable Credentials: Transforming Digital Identity in the Real World",
+    "headline": "Verifiable Credentials: Transforming Digital Identity in the Real World",
+    "url": "https://ijsrcseit.com/home/article/view/CSEIT25112382",
+    "inLanguage": "en",
+    "description": "This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity management across various sectors. The article examines the core components, technical architecture, and real-world implementations of VC systems, highlighting their role",
+    "datePublished": "2025-03-08",
+    "dateModified": "2025-03-31",
+    "author": [
+        {
+            "@type": "Person",
+            "name": "Ravikanth Reddy Gudipati",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "University at Buffalo, USA"
+            }
+        }
+    ],
+    "isPartOf": {
+        "@type": "Periodical",
+        "name": "International Journal of Scientific Research in Computer Science, Engineering and Information Technology",
+        "issn": [
+            "2456-3307"
+        ]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "International Journal of Scientific Research in Computer Science, Engineering and Information Technology"
+    },
+    "identifier": "10.32628/CSEIT25112382",
+    "pageStart": "684",
+    "pageEnd": "692"
+}
+</script>
+	<link rel="stylesheet" href="https://ijsrcseit.com/home/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="https://ijsrcseit.com/home/$$$call$$$/page/page/css?name=font" type="text/css" /><link rel="stylesheet" href="https://ijsrcseit.com/lib/pkp/styles/fontawesome/fontawesome.css?v=3.5.0.4" type="text/css" /><style type="text/css">.pkp_structure_head { background: center / cover no-repeat url("https://ijsrcseit.com/zdata/public/journals/1/homepageImage_en.png");}</style><link rel="stylesheet" href="https://ijsrcseit.com/plugins/themes/default/js/lib/swiper/swiper-bundle.min.css?v=3.5.0.4" type="text/css" /><link rel="stylesheet" href="https://ijsrcseit.com/plugins/generic/doiInSummary/styles/doi.css?v=3.5.0.4" type="text/css" /><link rel="stylesheet" href="https://ijsrcseit.com/zdata/public/journals/1/styleSheet_v3.css?d=2026-09-02+18%3A52%3A16" type="text/css" /><link rel="stylesheet" href="https://ijsrcseit.com/plugins/generic/citationStyleLanguage/css/citationStyleLanguagePlugin.css?v=3.5.0.4" type="text/css" />
+</head>
+<body class="pkp_page_article pkp_op_view has_site_logo" dir="ltr">
+
+	<div class="pkp_structure_page">
+
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						 <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="#pkp_content_main">Skip to main content</a>
+	<a href="#siteNav">Skip to main navigation menu</a>
+		<a href="#pkp_content_footer">Skip to site footer</a>
+</nav>
+
+			<div class="pkp_head_wrapper">
+
+				<div class="pkp_site_name_wrapper">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+										<div class="pkp_site_name">
+																<a href="						https://ijsrcseit.com/home/index
+					" class="is_img">
+							<img src="https://ijsrcseit.com/zdata/public/journals/1/pageHeaderLogoImage_en.png" width="1620" height="93" alt="International Journal of Scientific Research in Computer Science, Engineering and Information Technology" />
+						</a>
+										</div>
+				</div>
+
+				
+				<nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+																				<ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+								<li class="">
+				<a href="https://ijsrcseit.com/home">
+					<em class="fa  fa-home"></em> Home
+				</a>
+							</li>
+								<li class="">
+				<a href="https://ijsrcseit.com/home/issue/current">
+					<em class="fa  fa-book">&nbsp;</em> Current
+				</a>
+							</li>
+								<li class="">
+				<a href="https://ijsrcseit.com/home/issue/archive">
+					<em class="fa  fa-archive">&nbsp;</em>  Archives
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijsrcseit.com/home/archives">
+										Archives
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/Conferences">
+										Conferences 
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://ijsrcseit.com/home/about/editorialMasthead">
+					<em class="fa fa-users"></em> Editorial Board
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijsrcseit.com/home/editorialTeam">
+										Editorial Team
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/reviewers-board">
+										Reviewers Board
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/reviewers-responsibilities">
+										Reviewers Responsibilities
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/editors-responsibilities">
+										Editors Responsibilities
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/Editorial-Board-Member-Selection-Process">
+										Editorial Board Member Selection Process
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://ijsrcseit.com/home/about/privacy">
+					<em class="fa fa-list"></em> For Author
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijsrcseit.com/home/Peer-Review-Policy">
+										 Peer Review Policy
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/manuscript-types">
+										Manuscript Types
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/abstracting-and-indexing">
+										Abstracting and Indexing
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/research-and-publication-ethics">
+										Research and Publication Ethics
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/crossmarkpolicy">
+										CrossMark Policy
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/Guidelines-for-Authors">
+										Guidelines for Authors
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/authors-responsibilities">
+										Author's Responsibilities
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/copyright-and-licensing">
+										Copyright and licensing
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/digital-archiving">
+										Digital archiving
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://ijsrcseit.com/home/Awards-Recognitions">
+					<em class="fa fa-trophy">&nbsp;</em>Awards
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijsrcseit.com/home/Awards-Recognitions">
+										Awards & Recognitions
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/Upcoming-Awards">
+										Upcoming Award Event
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/Past-Awards">
+										Past Award events
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://ijsrcseit.com/home/about">
+					<em class="fa fa-slack">&nbsp;</em> About
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijsrcseit.com/home/Open-Access-Policy">
+										Open Access Policy
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/about">
+										About the Journal
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/about/contact">
+										Contact
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/aims-and-scope">
+										Aims & Scope
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijsrcseit.com/home/publisher-business-practices">
+										Publisher business practices
+									</a>
+								</li>
+																		</ul>
+							</li>
+			</ul>
+
+				
+
+																						<div class="pkp_navigation_search_wrapper">
+									<a href="https://ijsrcseit.com/home/search" class="pkp_search pkp_search_desktop">
+										<span class="fa fa-search" aria-hidden="true"></span>
+										Search
+									</a>
+								</div>
+													</div>
+					</div>
+					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+							<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+								<li class="profile">
+				<a href="https://ijsrcseit.com/home/user/register">
+					Register
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://ijsrcseit.com/home/login">
+					Login
+				</a>
+							</li>
+										</ul>
+
+					</div>
+				</nav>
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
+
+						<div class="pkp_structure_content has_sidebar">
+			<div class="pkp_structure_main" role="main">
+				<a id="pkp_content_main"></a>
+
+<div class="page page_article">
+			<nav class="cmp_breadcrumbs" role="navigation" aria-label="You are here:">
+	<ol>
+		<li>
+			<a href="https://ijsrcseit.com/home/index">
+				Home
+			</a>
+			<span class="separator">/</span>
+		</li>
+		<li>
+			<a href="https://ijsrcseit.com/home/issue/archive">
+				Archives
+			</a>
+			<span class="separator">/</span>
+		</li>
+					<li>
+				<a href="https://ijsrcseit.com/home/issue/view/v11i2">
+					Vol. 11 No. 2 (2025): March-April
+				</a>
+				<span class="separator">/</span>
+			</li>
+				<li class="current" aria-current="page">
+			<span aria-current="page">
+									Research Articles
+							</span>
+		</li>
+	</ol>
+</nav>
+	
+		  	 <article class="obj_article_details">
+
+		
+	<h1 class="page_title">
+		Verifiable Credentials: Transforming Digital Identity in the Real World
+	</h1>
+
+	
+	<div class="row">
+		<div class="main_entry">
+
+							<section class="item authors">
+					<h2 class="pkp_screen_reader">Authors</h2>
+					<ul class="authors">
+											<li>
+							<span class="name">
+								Ravikanth Reddy Gudipati
+							</span>
+															<span class="affiliation">
+																													<span>University at Buffalo, USA</span>
+																											</span>
+																											</li>
+										</ul>
+				</section>
+			
+																	<section class="item doi">
+					<h2 class="label">
+												DOI: 
+					</h2>
+					<span class="value">
+						<a href="https://doi.org/10.32628/CSEIT25112382">
+							https://doi.org/10.32628/CSEIT25112382
+						</a>
+					</span>
+				</section>
+
+								<section class="item crossmark" style="padding-top:0;margin-top:0;">
+					<script src="https://crossmark-cdn.crossref.org/widget/v2.0/widget.js"></script>
+					<span style="display:inline-block;transform:scale(1.6);transform-origin:left top;margin-bottom:4px;">
+						<a data-target="crossmark"><img src="https://crossmark-cdn.crossref.org/widget/v2.0/logos/CROSSMARK_Color_horizontal.svg" width="100" style="width:100px;height:auto;max-width:100px;" alt="Check for updates. Verify currency and authenticity via CrossMark" /></a>
+					</span>
+				</section>
+			
+										<section class="item abstract">
+					<h2 class="label">Abstract</h2>
+					<p>This comprehensive article explores the transformative impact of Verifiable Credentials (VCs) in revolutionizing digital identity management across various sectors. The article examines the core components, technical architecture, and real-world implementations of VC systems, highlighting their role in enhancing security, privacy, and operational efficiency. The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance. Additionally, it explores emerging technologies, including AI integration and post-quantum security, along with government initiatives shaping the future of digital identity. The article demonstrates that VCs offer a paradigm shift in how organizations approach identity verification, enabling secure, privacy-preserving, and decentralized credential management while significantly reducing administrative overhead and fraud risks.</p>
+				</section>
+			
+									<section class="item keywords">
+				<h2 class="label">
+										Keywords: 
+				</h2>
+				<span class="value">
+											Verifiable Credentials, 					
+											Digital Identity Management, 					
+											Self-Sovereign Identity, 					
+											Privacy-Preserving Authentication, 					
+											Decentralized Trust Systems					
+									</span>
+			</section>
+			
+			
+
+										
+				<section class="item downloads_chart">
+					<h2 class="label">
+						Downloads
+					</h2>
+					<div class="value">
+						<canvas class="usageStatsGraph" data-object-type="Submission" data-object-id="1139"></canvas>
+						<div class="usageStatsUnavailable" data-object-type="Submission" data-object-id="1139">
+							Download data is not yet available.
+						</div>
+					</div>
+				</section>
+			
+																			
+										<section class="item references">
+					<h2 class="label">
+						References
+					</h2>
+					<div class="value">
+																					<p>MarketsandMarkets, "Identity Verification Market worth $21.8 billion by 2028 - Exclusive Report by MarketsandMarkets," MarketsandMarkets Insights, 2024: Available: <a href="https://www.prnewswire.com/news-releases/identity-verification-market-worth-21-8-billion-by-2028---exclusive-report-by-marketsandmarkets-302086317.html">https://www.prnewswire.com/news-releases/identity-verification-market-worth-21-8-billion-by-2028---exclusive-report-by-marketsandmarkets-302086317.html</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=MarketsandMarkets%2C%20%22Identity%20Verification%20Market%20worth%20%2421.8%20billion%20by%202028%20-%20Exclusive%20Report%20by%20MarketsandMarkets%2C%22%20MarketsandMarkets%20Insights%2C%202024%3A%20Available%3A%20https%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fidentity-verification-market-worth-21-8-billion-by-2028---exclusive-report-by-marketsandmarkets-302086317.html" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>Jasmine Quigley, "What Are Verifiable Credentials and How Do They Impact Business Processes and Revenue?," Accredible Blogs, 2024. Available: <a href="https://www.accredible.com/blog/what-are-verifiable-credentials-and-how-do-they-impact-business-processes-and-revenue">https://www.accredible.com/blog/what-are-verifiable-credentials-and-how-do-they-impact-business-processes-and-revenue</a> . <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=Jasmine%20Quigley%2C%20%22What%20Are%20Verifiable%20Credentials%20and%20How%20Do%20They%20Impact%20Business%20Processes%20and%20Revenue%3F%2C%22%20Accredible%20Blogs%2C%202024.%20Available%3A%20https%3A%2F%2Fwww.accredible.com%2Fblog%2Fwhat-are-verifiable-credentials-and-how-do-they-impact-business-processes-and-revenue%20." target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>Dock.io, "Verifiable Credentials: The Ultimate Guide 2024," Dock.io insights, 2025. Available: <a href="https://www.dock.io/post/verifiable-credentials">https://www.dock.io/post/verifiable-credentials</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=Dock.io%2C%20%22Verifiable%20Credentials%3A%20The%20Ultimate%20Guide%202024%2C%22%20Dock.io%20insights%2C%202025.%20Available%3A%20https%3A%2F%2Fwww.dock.io%2Fpost%2Fverifiable-credentials" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>Dock.io, "Decentralized Identity: The Ultimate Guide 2024," Dock.io insights, 2025. Available: <a href="https://www.dock.io/post/decentralized-identity">https://www.dock.io/post/decentralized-identity</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=Dock.io%2C%20%22Decentralized%20Identity%3A%20The%20Ultimate%20Guide%202024%2C%22%20Dock.io%20insights%2C%202025.%20Available%3A%20https%3A%2F%2Fwww.dock.io%2Fpost%2Fdecentralized-identity" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>"Mobile Identity Wallet Market Size, Share, Growth, And Industry Analysis, By Type (Online Authentication, ID Proofing, In-person Contactless ID verification, Age Verification), By Application (Government, Citizen, Public &amp; Private eService Providers), Regional Insights, and Forecast To 2033,"Business Research Insights, 2025. Available: <a href="https://www.businessresearchinsights.com/market-reports/mobile-identity-wallet-market-103705">https://www.businessresearchinsights.com/market-reports/mobile-identity-wallet-market-103705</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=%22Mobile%20Identity%20Wallet%20Market%20Size%2C%20Share%2C%20Growth%2C%20And%20Industry%20Analysis%2C%20By%20Type%20%28Online%20Authentication%2C%20ID%20Proofing%2C%20In-person%20Contactless%20ID%20verification%2C%20Age%20Verification%29%2C%20By%20Application%20%28Government%2C%20Citizen%2C%20Public%20%26%20Private%20eService%20Providers%29%2C%20Regional%20Insights%2C%20and%20Forecast%20To%202033%2C%22Business%20Research%20Insights%2C%202025.%20Available%3A%20https%3A%2F%2Fwww.businessresearchinsights.com%2Fmarket-reports%2Fmobil" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>Decentralized Identity Foundation, "Guest Blog: Dock — How Verifiable Credentials Drive Business Value," 2023. Available: <a href="https://blog.identity.foundation/guest-blog-dock-how-verifiable-credentials-drive-business-value/">https://blog.identity.foundation/guest-blog-dock-how-verifiable-credentials-drive-business-value/</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=Decentralized%20Identity%20Foundation%2C%20%22Guest%20Blog%3A%20Dock%20%E2%80%94%20How%20Verifiable%20Credentials%20Drive%20Business%20Value%2C%22%202023.%20Available%3A%20https%3A%2F%2Fblog.identity.foundation%2Fguest-blog-dock-how-verifiable-credentials-drive-business-value%2F" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>Andrea Flamini, et al., "On cryptographic mechanisms for the selective disclosure of verifiable credentials," Journal of Information Security and Applications, 2024. Available: <a href="https://www.sciencedirect.com/science/article/pii/S2214212624000929">https://www.sciencedirect.com/science/article/pii/S2214212624000929</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=Andrea%20Flamini%2C%20et%20al.%2C%20%22On%20cryptographic%20mechanisms%20for%20the%20selective%20disclosure%20of%20verifiable%20credentials%2C%22%20Journal%20of%20Information%20Security%20and%20Applications%2C%202024.%20Available%3A%20https%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS2214212624000929" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>UNCITRAL, "UNCITRAL Model Law on the Use and Cross-border Recognition of Identity Management and Trust Services (2022)," United Nations Commission on International Trade Law, 2022. Available: <a href="https://uncitral.un.org/en/mlit">https://uncitral.un.org/en/mlit</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=UNCITRAL%2C%20%22UNCITRAL%20Model%20Law%20on%20the%20Use%20and%20Cross-border%20Recognition%20of%20Identity%20Management%20and%20Trust%20Services%20%282022%29%2C%22%20United%20Nations%20Commission%20on%20International%20Trade%20Law%2C%202022.%20Available%3A%20https%3A%2F%2Funcitral.un.org%2Fen%2Fmlit" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>DIACC, "Perspectives on the Adoption of Verifiable Credentials," Digital ID &amp; Authentication Council of Canada, 2017. Available: <a href="https://diacc.ca/wp-content/uploads/2023/05/Perspectives-on-the-Adoption-of-Verifiable-Credentials-1.pdf">https://diacc.ca/wp-content/uploads/2023/05/Perspectives-on-the-Adoption-of-Verifiable-Credentials-1.pdf</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=DIACC%2C%20%22Perspectives%20on%20the%20Adoption%20of%20Verifiable%20Credentials%2C%22%20Digital%20ID%20%26%20Authentication%20Council%20of%20Canada%2C%202017.%20Available%3A%20https%3A%2F%2Fdiacc.ca%2Fwp-content%2Fuploads%2F2023%2F05%2FPerspectives-on-the-Adoption-of-Verifiable-Credentials-1.pdf" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>European Data Protection Supervisor, "Guidelines on Digital Identity Solutions," EDPS, 2023. Available: <a href="https://www.edps.europa.eu/system/files/2023-02/23-02-07_ww-enisa_en_2.pdf">https://www.edps.europa.eu/system/files/2023-02/23-02-07_ww-enisa_en_2.pdf</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=European%20Data%20Protection%20Supervisor%2C%20%22Guidelines%20on%20Digital%20Identity%20Solutions%2C%22%20EDPS%2C%202023.%20Available%3A%20https%3A%2F%2Fwww.edps.europa.eu%2Fsystem%2Ffiles%2F2023-02%2F23-02-07_ww-enisa_en_2.pdf" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>Mike Wyatt, et al., "The Future of Digital Identity: What Does it Mean for You?", Deollite, 2021. Available: <a href="https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Risk/gx-the-future-of-digital-identity-what-does-it-mean-to-you-updated.pdf">https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Risk/gx-the-future-of-digital-identity-what-does-it-mean-to-you-updated.pdf</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=Mike%20Wyatt%2C%20et%20al.%2C%20%22The%20Future%20of%20Digital%20Identity%3A%20What%20Does%20it%20Mean%20for%20You%3F%22%2C%20Deollite%2C%202021.%20Available%3A%20https%3A%2F%2Fwww2.deloitte.com%2Fcontent%2Fdam%2FDeloitte%2Fglobal%2FDocuments%2FRisk%2Fgx-the-future-of-digital-identity-what-does-it-mean-to-you-updated.pdf" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+															<p>Thomas Wilson, "'Digital ID Verification Spend to Exceed $26 billion Globally by 2029'," Juniper Research, 2024. Available: <a href="https://www.juniperresearch.com/research/fintech-payments/identity/digital-identity-verification-research-report/">https://www.juniperresearch.com/research/fintech-payments/identity/digital-identity-verification-research-report/</a> <a class="crossref-scholar-link" href="https://scholar.google.com/scholar?q=Thomas%20Wilson%2C%20%22%27Digital%20ID%20Verification%20Spend%20to%20Exceed%20%2426%20billion%20Globally%20by%202029%27%2C%22%20Juniper%20Research%2C%202024.%20Available%3A%20https%3A%2F%2Fwww.juniperresearch.com%2Fresearch%2Ffintech-payments%2Fidentity%2Fdigital-identity-verification-research-report%2F" target="_blank" rel="noreferrer">Google Scholar</a>
+</p>
+																		</div>
+				</section>
+			
+		</div><!-- .main_entry -->
+
+		<div class="entry_details">
+
+										<div class="item cover_image">
+					<div class="sub_item">
+													<a href="https://ijsrcseit.com/home/issue/view/v11i2">
+								<img src="https://ijsrcseit.com/zdata/public/journals/1/cover_issue_7_en.png" alt="">
+							</a>
+											</div>
+				</div>
+			
+						<div class="item galleys">
+				<h2 class="pkp_screen_reader">
+					Downloads
+				</h2>
+				<ul class="value galleys_links">
+																		<li>
+								
+	
+													
+
+<a class="obj_galley_link pdf" href="https://ijsrcseit.com/home/article/view/CSEIT25112382/CSEIT25112382">
+		
+	PDF
+
+	</a>
+							</li>
+																	<li>
+		<a class="obj_galley_link scholar" href="https://scholar.google.com/scholar_lookup?title=Verifiable%20Credentials%3A%20Transforming%20Digital%20Identity%20in%20the%20Real%20World" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+	</li>
+				</ul>
+			</div>
+			
+						<div class="item published">
+				<section class="sub_item">
+					<h2 class="label">
+						Published
+					</h2>
+					<div class="value">
+																			<span>08-03-2025</span>
+																	</div>
+				</section>
+							</div>
+			
+						
+										<div class="item issue">
+
+											<section class="sub_item">
+							<h2 class="label">
+								Issue
+							</h2>
+							<div class="value">
+								<a class="title" href="https://ijsrcseit.com/home/issue/view/v11i2">
+									Vol. 11 No. 2 (2025): March-April
+								</a>
+							</div>
+						</section>
+					
+											<section class="sub_item">
+							<h2 class="label">
+								Section
+							</h2>
+							<div class="value">
+								Research Articles
+							</div>
+						</section>
+					
+									</div>
+			
+						
+										<div class="item copyright">
+					<h2 class="label">
+						License
+					</h2>
+																										<p>Copyright (c) 2025 International Journal of Scientific Research in Computer Science, Engineering and Information Technology</p>
+														<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by/4.0/88x31.png" /></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+																<p>Published articles are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. Copyright in the version of record is held by the journal (International Journal of Scientific Research in Computer Science, Engineering and Information Technology), published by Technoscience Academy. Website copyright does not restrict reuse of article content under that licence.</p>
+				</div>
+			
+				<div class="item citation">
+		<section class="sub_item citation_display">
+			<h2 class="label">
+				How to Cite
+			</h2>
+			<div class="value">
+				<div id="citationOutput" role="region" aria-live="polite">
+					<div class="csl-bib-body">
+  <div class="csl-entry"><div class="csl-left-margin">[1]</div><div class="csl-right-inline">Ravikanth Reddy Gudipati, “Verifiable Credentials: Transforming Digital Identity in the Real World”, <i>Int. J. Sci. Res. Comput. Sci. Eng. Inf. Technol</i>, vol. 11, no. 2, pp. 684–692, Mar. 2025, doi: <a href="https://doi.org/10.32628/CSEIT25112382">10.32628/CSEIT25112382</a>.</div></div>
+</div>
+				</div>
+				<div class="citation_formats">
+					<button class="citation_formats_button label" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
+						More Citation Formats
+					</button>
+					<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+						<ul class="citation_formats_styles">
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/acm-sig-proceedings?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/acm-sig-proceedings?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										ACM
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/acs-nano?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/acs-nano?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										ACS
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/apa?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/apa?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										APA
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										ABNT
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/chicago-author-date?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/chicago-author-date?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										Chicago
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/harvard-cite-them-right?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/harvard-cite-them-right?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										Harvard
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/ieee?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/ieee?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										IEEE
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/modern-language-association?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/modern-language-association?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										MLA
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										Turabian
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/vancouver?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/vancouver?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										Vancouver
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://ijsrcseit.com/home/citationstylelanguage/get/ama?submissionId=1139&amp;publicationId=1139&amp;issueId=7"
+											data-load-citation
+											data-json-href="https://ijsrcseit.com/home/citationstylelanguage/get/ama?submissionId=1139&amp;publicationId=1139&amp;issueId=7&amp;return=json"
+									>
+										AMA
+									</a>
+								</li>
+													</ul>
+													<div class="label">
+								Download Citation
+							</div>
+							<ul class="citation_formats_styles">
+																	<li>
+										<a href="https://ijsrcseit.com/home/citationstylelanguage/download/ris?submissionId=1139&amp;publicationId=1139&amp;issueId=7">
+											<span class="fa fa-download"></span>
+											Endnote/Zotero/Mendeley (RIS)
+										</a>
+									</li>
+																	<li>
+										<a href="https://ijsrcseit.com/home/citationstylelanguage/download/bibtex?submissionId=1139&amp;publicationId=1139&amp;issueId=7">
+											<span class="fa fa-download"></span>
+											BibTeX
+										</a>
+									</li>
+															</ul>
+											</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+		</div><!-- .entry_details -->
+	</div><!-- .row -->
+
+</article>
+
+	
+
+</div><!-- .page -->
+
+	</div><!-- pkp_structure_main -->
+
+									<div class="pkp_structure_sidebar left" role="complementary">
+				<div class="pkp_block block_custom" id="customblock-issuedate">
+	<h2 class="title pkp_screen_reader">IssueDate</h2>
+	<div class="content">
+		<p><span style="text-shadow: #FF8000 0px 0px 3px; font-size: 15px; line-height: 1.4; color: #333;"> Last Date for Submitting Articles for the Current Issue : </span></p>
+<p><iframe src="https://technoscienceacademy.com/date.php" width="160" height="40" frameborder="0" sandbox="" loading="lazy">
+  </iframe></p>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-rightsideblock">
+	<h2 class="title pkp_screen_reader">RightSideBlock</h2>
+	<div class="content">
+		<hr>
+<p><a href="https://ijsrcseit.com/format/IJSRCSEIT_Paper_Template_A4.docx" target="_blank" rel="noopener"><strong><em class="fa fa-pencil-square-o">&nbsp;</em>Article Template</strong></a> <br><a href="https://ijsrcseit.com/home/editorialTeam"><strong><em class="fa fa-users">&nbsp;</em> Editorial Team</strong></a> <br><a href="https://ijsrcseit.com/home/Peer-Review-Policy"><strong><em class="fa fa-graduation-cap">&nbsp;</em> Peer Review</strong></a> <br><a href="https://ijsrcseit.com/home/research-and-publication-ethics"><strong><em class="fa fa-flag-o">&nbsp;</em> Publication Ethics</strong></a> <br><a href="https://ijsrcseit.com/home/Guidelines-for-Authors"><strong><em class="fa fa-files-o">&nbsp;</em> Guidelines for Authors</strong></a> <br><a href="https://ijsrcseit.com/home/aims-and-scope"><strong><em class="fa fa-bullseye">&nbsp;</em>Aims &amp; Scope/Focus</strong></a> <br><a href="https://ijsrcseit.com/home/about/contact"><strong><em class="fa fa-user">&nbsp;</em> Contact Us</strong></a> <br><a href="https://ijsrcseit.com/home/abstracting-and-indexing"><strong><em class="fa  fa-info-circle">&nbsp;</em> Abstracting and Indexing</strong></a></p>
+<hr>
+	</div>
+</div>
+<div class="pkp_block block_web_feed">
+	<h2 class="title">Latest publications</h2>
+	<div class="content">
+		<ul>
+			<li>
+				<a href="https://ijsrcseit.com/home/gateway/plugin/WebFeedGatewayPlugin/atom">
+					<img src="https://ijsrcseit.com/lib/pkp/templates/images/atom.svg" alt="Atom logo">
+				</a>
+			</li>
+			<li>
+				<a href="https://ijsrcseit.com/home/gateway/plugin/WebFeedGatewayPlugin/rss2">
+					<img src="https://ijsrcseit.com/lib/pkp/templates/images/rss20_logo.svg" alt="RSS2 logo">
+				</a>
+			</li>
+			<li>
+				<a href="https://ijsrcseit.com/home/gateway/plugin/WebFeedGatewayPlugin/rss">
+					<img src="https://ijsrcseit.com/lib/pkp/templates/images/rss10_logo.svg" alt="RSS1 logo">
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+			</div><!-- pkp_sidebar.left -->
+			</div><!-- pkp_structure_content -->
+
+<div class="pkp_structure_footer_wrapper" role="contentinfo">
+	<a id="pkp_content_footer"></a>
+
+	<div class="pkp_structure_footer">
+
+					<div class="pkp_footer_content">
+				<p><strong style="color: #0066ff;">Peer reviewed and Refereed International Scientific Research Journal</strong></p>
+<p>Published by <a href="https://technoscienceacademy.com" target="_blank" rel="noopener">Technoscience Academy</a>, 3 &amp; 4, Sterling Plaza, Indira Circle, 150 Feet Ring Road, Rajkot-360005, Gujarat, India.</p>
+<p>Email addresses for <samp>submitting articles</samp> are <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d78797469726f5d74776e6f7e6e787469337e7270">[email&#160;protected]</a></strong>, <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ed84879e9f8e9e888499ad8a808c8481c38e8280">[email&#160;protected]</a></strong></p>
+<p>Online ISSN : 2456-3307<br>
+Website &copy; Technoscience Academy. <strong>Published articles</strong> are licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> &mdash; article content is not &ldquo;all rights reserved.&rdquo; | Platform and Workflow by <a href="https://pkp.sfu.ca/software/ojs/">OJS/PKP</a></p>
+			</div>
+		
+	</div>
+</div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://ijsrcseit.com/js/build/jquery/jquery.min.js?v=3.5.0.4" type="text/javascript"></script><script src="https://ijsrcseit.com/js/build/jquery-ui/jquery-ui.min.js?v=3.5.0.4" type="text/javascript"></script><script src="https://ijsrcseit.com/plugins/themes/default/js/lib/popper/popper.js?v=3.5.0.4" type="text/javascript"></script><script src="https://ijsrcseit.com/plugins/themes/default/js/lib/bootstrap/util.js?v=3.5.0.4" type="text/javascript"></script><script src="https://ijsrcseit.com/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.5.0.4" type="text/javascript"></script><script src="https://ijsrcseit.com/plugins/themes/default/js/lib/swiper/swiper-bundle.min.js?v=3.5.0.4" type="text/javascript"></script><script type="text/javascript">var pkpDefaultThemeI18N = {"nextSlide":"Next slide","prevSlide":"Previous slide"}</script><script src="https://ijsrcseit.com/plugins/themes/default/js/main.js?v=3.5.0.4" type="text/javascript"></script><script src="https://ijsrcseit.com/plugins/generic/citationStyleLanguage/js/articleCitation.js?v=3.5.0.4" type="text/javascript"></script><script type="text/javascript">var pkpUsageStats = pkpUsageStats || {};pkpUsageStats.data = pkpUsageStats.data || {};pkpUsageStats.data.Submission = pkpUsageStats.data.Submission || {};pkpUsageStats.data.Submission[1139] = {"data":{"2025":{"3":"11","4":"8","5":"17","6":"6","7":"11","8":"11","9":"8","10":"12","11":"11","12":"8"},"2026":{"1":"11","2":"13","3":"14","4":"19","5":"18","6":"21","7":"23","8":"17","9":"8"}},"label":"All Downloads","color":"79,181,217","total":247};</script><script src="https://ijsrcseit.com/js/build/chart.js/chart.umd.js?v=3.5.0.4" type="text/javascript"></script><script type="text/javascript">var pkpUsageStats = pkpUsageStats || {};pkpUsageStats.locale = pkpUsageStats.locale || {};pkpUsageStats.locale.months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];pkpUsageStats.config = pkpUsageStats.config || {};pkpUsageStats.config.chartType = "bar";</script><script src="https://ijsrcseit.com/lib/pkp/js/usage-stats-chart.js?v=3.5.0.4" type="text/javascript"></script><script type="text/javascript">
+(function (w, d, s, l, i) { w[l] = w[l] || []; var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true;
+j.src = 'https://www.googletagmanager.com/gtag/js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config', i); })
+(window, document, 'script', 'dataLayer', 'G-WR2TEWSKHS');
+</script>
+
+
+</body>
+</html>

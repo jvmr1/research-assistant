@@ -1,0 +1,37 @@
+{
+  "resumo": "O trecho descreve que o problema central é a ausência de sistemas de identidade controlados pelo usuário, escaláveis, econômicos e compatíveis com infraestruturas descentralizadas, e propõe projetar, implementar e avaliar um SSI descentralizado que suporte credenciais verificáveis, controle de acesso com preservação de privacidade e interoperabilidade baseada em padrões.",
+  "perfil": {
+    "problema": "The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure.",
+    "solucao": "design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "• Integrar criptografia baseada em atributos (ABE) para controle de acesso mais granular em ambientes de cidades inteligentes.\n• Avaliar desempenho e escalabilidade da solução SSI em edge computing e redes de sensores IoT.\n• Testar interoperabilidade com identidades governamentais (eID, eIDAS, ePassport) em cenários reais.\n• Comparar Binance Smart Chain com outras blockchains públicas quanto a latência, throughput e consumo energético.\n• Desenvolver mecanismos de revogação de credenciais baseados em contratos inteligentes.\n• Incorporar provas de conhecimento zero‑knowledge para melhorar a privacidade nas verificações de credenciais.\n• Simular implantação em larga escala em cidades inteligentes para analisar impactos de carga e latência."
+  },
+  "evidencias": [
+    {
+      "citacao": "The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure.",
+      "afirmacao": "The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure."
+    },
+    {
+      "citacao": "This paper aims to design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability.",
+      "afirmacao": "This paper aims to design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability."
+    }
+  ],
+  "interpretacao": "O autor enfatiza a evolução dos modelos de identidade, culminando em SSI baseado em blockchain como solução para eliminar autoridades centralizadas, melhorar privacidade e garantir integridade via criptografia de chave pública. O foco está em criar um sistema que seja ao mesmo tempo descentralizado, interoperável e capaz de suportar credenciais verificáveis, atendendo a requisitos de cidades inteligentes.",
+  "duvidas": "• Quais mecanismos de revogação de credenciais são propostos ou planejados?\n• Como a solução lida com a descoberta (discoverability) de DIDs em ambientes heterogêneos?\n• Há avaliação de custos operacionais (gas fees) na Binance Smart Chain?\n• O trabalho contempla testes de interoperabilidade com padrões governamentais (eIDAS, ePassport)?\n• Qual é a estratégia para garantir a escalabilidade em cenários de alta densidade de dispositivos IoT?",
+  "avisos": [],
+  "id": "774154c2c04bbfd4c100",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure.",
+    "solucao": "design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Integrar criptografia baseada em atributos (ABE) para controle de acesso mais granular em ambientes de cidades inteligentes.\n• Avaliar desempenho e escalabilidade da solução SSI em edge computing e redes de sensores IoT.\n• Testar interoperabilidade com identidades governamentais (eID, eIDAS, ePassport) em cenários reais.\n• Comparar Binance Smart Chain com outras blockchains públicas quanto a latência, throughput e consumo energético.\n• Desenvolver mecanismos de revogação de credenciais baseados em contratos inteligentes.\n• Incorporar provas de conhecimento zero‑knowledge para melhorar a priv",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  },
+  "reaproveitada_de": "ad0ae8a32d584f7fbea6"
+}

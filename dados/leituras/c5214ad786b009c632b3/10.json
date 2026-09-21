@@ -1,0 +1,39 @@
+{
+  "resumo": "O trecho descreve o comportamento de forrageamento inspirado no algoritmo Whale Optimization (WOA), apresentando equações para atualização de posições, coeficientes de coleta e seleção de fitness baseada em precisão, além de detalhar o conjunto de dados usado (30.000 instâncias, 12 classes).",
+  "perfil": {
+    "problema": "Não informado",
+    "solucao": "Não informado",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Adaptar o mecanismo de forrageamento do WOA para otimizar a seleção de recursos de borda em treinamento federado de detecção de ameaças IoT.",
+      "Introduzir coeficiente β adaptativo nas equações de coleta (S1, S2) para balancear exploração e exploração em ambientes com carga variável.",
+      "Combinar a métrica de fitness baseada em precisão com penalizações de consumo energético para melhorar a eficiência em dispositivos IoT restritos.",
+      "Aplicar a estratégia de migração baseada em sinais de perigo (safety_signal) ao processo de atualização de modelos WOA para re‑treinamento imediato quando anomalias críticas forem detectadas."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Total Number of Instances 30,000",
+      "afirmacao": "The dataset comprises 30,000 instances across 12 attack classes."
+    }
+  ],
+  "interpretacao": "O texto detalha a formulação matemática do WOA e seu uso na seleção de soluções ótimas, bem como apresenta o conjunto de dados empregado para validar o modelo de detecção de ameaças em IoT.",
+  "duvidas": "Como o algoritmo WOA se integra ao framework federado proposto? Qual o impacto dos parâmetros a e b na convergência em ambientes de borda? Há avaliação de consumo de energia durante a otimização?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "29d16f8d483e0cc2a02a",
+  "artigo": "Ragab_2025",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Adaptar o mecanismo de forrageamento do WOA para otimizar a seleção de recursos de borda em treinamento federado de detecção de ameaças IoT.; Introduzir coeficiente β adaptativo nas equações de coleta (S1, S2) para balancear exploração e exploração em ambientes com carga variável.; Combinar a métrica de fitness baseada em precisão com penalizações de consumo energético para melhorar a eficiência em dispositivos IoT restritos.; Aplicar a estratégia de migração baseada em sinais de perigo (safety_signal) ao processo de atualização de modelos WOA para re‑treinamento imediato quando anomalias crít",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "c5214ad786b009c632b3"
+  }
+}

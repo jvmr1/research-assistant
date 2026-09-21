@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:14:49",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+    "perfil_anterior": {
+      "problema": "drug counterfeiting",
+      "solucao": "the integration of SSI enables selective disclosure and role-based authorization",
+      "avaliacao": "empirical results prove the efficacy of the proposed supply chain framework",
+      "limites": "identity linkability across transactions",
+      "possibilidades": "• Avaliar a aplicação da análise metodológica a casos de uso de cidades inteligentes, como monitoramento de vacinas em postos de saúde distribuídos.\n• Expandir o estudo para incluir métricas de desempenho de IoT e blockchain em ambientes de edge computing.\n• Investigar a integração de DIDs e VCs com protocolos de comunicação MQTT para dispositivos IoT de saúde.\n• Propor um framework de avaliação comparativa entre diferentes algoritmos de consenso (PoS, PBFT) para rastreabilidade em tempo real.\n• Desenvolver um protótipo que combine a análise de metodologias com simulação de ataques de privacid"
+    },
+    "pagina": 8,
+    "texto": "technologies, and efficacy in ensuring drug safety and \nauthenticity.\nA thorough comparison of different supply chain \nmanagement systems is presented, highlighting their \nstrengths and weaknesses and identifying areas for \nimprovement.\nThe paper explores cutting-edge technologies, such as \nblockchain and SSI, that are being integrated into privacy-\npreserving traceability systems, offering novel insights into \ntheir potential to revolutionize drug traceability.\nThe results show the efficacy of the proposed system. \nAdditionally, the paper identifies emerging trends and future \nresearch directions in drug traceability, providing a roadmap \nfor researchers and practitioners to address the challenges \nand opportunities in this critical area.\nWe propose a blockchain–SSI integrated vaccine supply \nchain framework that overcomes the privacy, identity \nmanagement, and interoperability limitations of blockchain-\nonly and identity-agnostic traceability systems.\n1.3 Structure of paper\nThis section describes the flow of the paper; it begins with an \nintroduction to the problem of drug counterfeiting and the \nimportance of drug traceability systems. It sets the context for \nhighlighting the study’s objectives, motivation, and contributions to \nthe work. The detailed organization is illustrated in Fig. 3. Section 2 \nreviews the SSI & blockchain implications, focusing on privacy-\npreserving vaccine supply chain management and their applications \nin healthcare. Section 3 discusses the preliminaries of blockchain \nand SSI and their applications in various industries. Section 4 \nprovides a detailed methodology of the proposed privacy-preserving \nvaccine supply chain management leveraging blockchain and SSI. \nSection 5 demonstrates the empirical results of the proposed \nframework with comparative analysis. Section 6 and Section 7 \nexplore the challenges of blockchain-based frameworks for vaccine \ndistribution and case studies, respectively. The paper discusses \nfuture research directions in Section 8, highlighting emerging \ntechnologies and methodologies that could further enhance drug \nprivacy-preserved traceability, followed by a conclusion.\nACCEPTED MANUSCRIPT\nARTICLE IN PRESSARTICLE IN PRESS",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo propõe um framework integrado de blockchain e identidade auto-soberana (SSI) para a cadeia de suprimentos de vacinas, visando superar limitações de privacidade, gerenciamento de identidade e interoperabilidade dos sistemas tradicionais. Apresenta comparação de soluções, demonstra eficácia empírica e aponta tendências e direções futuras para rastreabilidade segura em saúde.",
+    "perfil": {
+      "problema": "problem of drug counterfeiting",
+      "solucao": "We propose a blockchain–SSI integrated vaccine supply chain framework",
+      "avaliacao": "The results show the efficacy of the proposed system.",
+      "limites": "privacy, identity management, and interoperability limitations",
+      "possibilidades": [
+        "Avaliar a aplicação do framework em cenários de cidades inteligentes, como monitoramento de vacinas em postos de saúde distribuídos.",
+        "Integrar o modelo com protocolos IoT de edge computing (ex.: MQTT) e medir desempenho de latência e throughput.",
+        "Comparar diferentes algoritmos de consenso (PoS, PBFT, Raft) quanto à escalabilidade e segurança na rastreabilidade em tempo real.",
+        "Simular ataques de privacidade (re‑identificação, linking) para validar a robustez das credenciais verificáveis (VCs).",
+        "Desenvolver um protótipo de dashboard para autoridades públicas que combine SSI com controle de acesso baseado em atributos (ABE)."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O sistema proposto demonstra eficácia empírica.",
+        "citacao": "The results show the efficacy of the proposed system."
+      },
+      {
+        "afirmacao": "Blockchain e SSI são integrados para rastreabilidade privacidade‑preservada.",
+        "citacao": "We propose a blockchain–SSI integrated vaccine supply chain framework that overcomes the privacy, identity management, and interoperability limitations"
+      }
+    ],
+    "interpretacao": "O trabalho reforça a tendência de combinar blockchain com SSI para resolver desafios de privacidade e interoperabilidade na cadeia de suprimentos de vacinas, oferecendo evidência experimental de sua eficácia.",
+    "duvidas": "Quais métricas específicas de desempenho foram avaliadas? Como o framework lida com a escalabilidade em ambientes de alta densidade de dispositivos IoT?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:14:52"
+}

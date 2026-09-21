@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta o Efficient Privacy‑Preserving Blockchain‑Enabled Federated Learning (EPP‑BCFL), um framework em camadas que combina aprendizado federado, análise local nos nós de borda, criptografia homomórfica, privacidade diferencial, contratos inteligentes e um consenso híbrido PoS+BFT. A camada de borda executa analytics leves (Z‑score, PCA) e inferência rasa, reduzindo carga computacional e latência, enquanto as atualizações de modelo são protegidas e registradas na blockchain para garantir integridade e auditabilidade. O consenso híbrido seleciona um subconjunto pequeno de validadores com stake limitado, alcançando consenso com mais de 2/3 dos validadores e tolerando falhas bizantinas, o que diminui a sobrecarga de comunicação. Experimentos com CIFAR‑10 em cenário non‑IID mostram aumento de acurácia e menor tempo de convergência à medida que o número de nós cresce, embora a validação use um dataset sintético como proxy para registros eletrônicos de saúde.",
+  "lacunas_possiveis": [
+    "Detalhes do mecanismo de incentivo (tokenomics, recompensas) para participantes em smart cities",
+    "Algoritmo de consenso leve adotado e seu comportamento em larga escala urbana",
+    "Gestão dinâmica de stake e reputação dos nós IoT em ambientes urbanos heterogêneos",
+    "Impacto da latência e variabilidade da rede de smart city sobre o consenso PoS+BFT e sincronização de modelos",
+    "Validação do framework com dados reais de EHRs e de sensores urbanos, avaliando privacidade e carga computacional"
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um modelo de tokenomics que recompense nós de borda com recursos urbanos (ex.: créditos de energia ou acesso a serviços) e testar sua eficácia em piloto de smart city",
+    "Adaptar o consenso híbrido para incluir fallback dinâmico baseado em métricas de qualidade de conexão e disponibilidade dos nós",
+    "Implementar um mecanismo de stake baseado em reputação e contribuição histórica, ao invés de posse de tokens, para contextos públicos",
+    "Realizar experimentos de desempenho com redes de comunicação típicas de cidades inteligentes (variabilidade de latência, perda de pacotes) e medir impacto no tempo de consenso",
+    "Aplicar o EPP‑BCFL a datasets reais de registros de saúde e de sensores urbanos, avaliando precisão do modelo, privacidade diferencial e carga computacional"
+  ]
+}

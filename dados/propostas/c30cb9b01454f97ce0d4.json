@@ -1,0 +1,32 @@
+{
+  "id": "c30cb9b01454f97ce0d4",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T17:57:31",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Ragab_2025: Medir e otimizar o overhead de comunicação e latência em nós de borda, possivelmente usand",
+  "fontes": [
+    "Ragab_2025"
+  ],
+  "problema": "Gerenciamento de dados heterogêneos e não‑i.i.d. entre diferentes organizações e dispositivos IoT",
+  "hipotese_lacuna": "Gerenciamento de dados heterogêneos e não‑i.i.d. entre diferentes organizações e dispositivos IoT",
+  "meu_trabalho": "Medir e otimizar o overhead de comunicação e latência em nós de borda, possivelmente usando compressão de modelo ou atualização esparsa",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Medir e otimizar o overhead de comunicação e latência em nós de borda, possivelmente usando compressão de modelo ou atualização esparsa",
+  "modo": "artigo",
+  "buscas": [
+    "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities limitations future work",
+    "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual nível de compressão (porcentagem de pruning) mantém a acurácia acima de 95 % do baseline e ainda reduz o overhead em pelo menos 30 %?; Deveríamos usar quantização inteira (INT8) ou binarização de pesos para maximizar a redução de tamanho sem comprometer a detecção de ataques zero‑day?; Qual estratégia de atualização esparsa (top‑k, threshold‑based) oferece melhor trade‑off entre latência e precisão em ambientes com conectividade intermitente?; É necessário adaptar o protocolo de consenso da blockchain usada no AAIFLF‑PPCD para suportar mensagens menores, ou a camada de compressão já resolve o gargalo?; Como validar a robustez contra ataques de envenenamento de modelo quando as atualizações são esparsas e comprimidas?",
+  "evidencias_usadas": [
+    "3365ebacbbc86eb8ad7b",
+    "4c147c115c45c215e76d",
+    "0496bd8c9938d870579f"
+  ],
+  "fatos": "Federated Learning offers a privacy-preserving solution for detecting cyberattacks in IoT systems; The AAIFLF-PPCD technique achieved 99.47% accuracy; Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats.; This work investigates the impossibility of FL for privacy-preserving cyberthreat detection.; The AAIFLF-PPCD model introduces a novel feature selection mechanism based on HHO to improve cyberthreat detection performance.; The AAIFLF-PPCD approach integrates the WOA model for hyperparameter tuning to enhance classifier performance.",
+  "experimento": "descricao: Implementação de um módulo de compressão de modelo (pruning + quantização) e de atualização esparsa (sparse federated learning) para o framework AAIFLF‑PPCD de Ragab (2025). O módulo será integrado ao nó de borda (Raspberry Pi 4 ou Jetson Nano) e medirá o overhead de comunicação (bytes por rodada) e a latência de inferência/comunicação. Os resultados serão comparados com a versão original do AAIFLF‑PPCD (sem compressão) reportada no artigo de Ragab (2025).; comparacao: Ragab, 2025 – AAIFLF‑PPCD (baseline sem compressão nem atualização esparsa).",
+  "recursos": "tipo: dataset; nome: N-BaIoT; descricao: Conjunto de tráfego de rede de dispositivos IoT com ataques rotulados, disponível publicamente no repositório da Universidade de New Brunswick.; disponibilidade: download livre via GitHub; tipo: dataset; nome: UNSW‑NB15; descricao: Dataset de tráfego de rede com ataques cibernéticos, amplamente usado em pesquisas de detecção de ameaças.; disponibilidade: acesso aberto via site da UNSW; tipo: framework; nome: OpenFL; descricao: Plataforma open‑source para aprendizado federado que suporta compressão de modelo e atualização esparsa.; disponibilidade: pip install openfl; tipo: biblioteca; nome: TensorFlow Lite; descricao: Ferramenta para quantização e otimização de modelos para dispositivos de borda.; disponibilidade: documentação oficial e binários para Linux ARM; tipo: hardware; nome: Raspberry Pi 4 (4 GB) ou Nvidia Jetson Nano; descricao: Plataformas de borda de baixo custo para experimentos de comunicação e latência.; disponibilidade: comercialmente disponíveis; tipo: software de medição; nome: Perf / Py‑Perf; descricao: Ferramentas para coleta de métricas de tempo de execução e uso de rede.; disponibilidade: pacotes Linux",
+  "metricas": "Overhead de comunicação (KB transmitidos por rodada de FL); Latência de agregação (ms) – tempo entre envio de atualização e recebimento da nova global model; Precisão de detecção de ameaças (F1‑score) – para garantir que a compressão não degrade a eficácia; Consumo energético do nó de borda (Joules por rodada); Tamanho final do modelo (MB) após compressão; Taxa de convergência (número de rodadas para atingir 95 % da acurácia baseline)",
+  "detalhada": true
+}

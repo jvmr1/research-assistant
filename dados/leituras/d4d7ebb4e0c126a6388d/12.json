@@ -1,0 +1,35 @@
+{
+  "resumo": "O trecho apresenta a estrutura dos capítulos finais da dissertação, destacando seções sobre privacidade e controle de acesso, escalabilidade criptográfica e de volume de dados, discussão dos resultados, vantagens, limitações (revogação de atributos e escopo da avaliação de escalabilidade criptográfica), conclusões, contribuições, trabalhos futuros e artefatos de pesquisa.",
+  "perfil": {
+    "problema": "secure exchange of data in distributed IIoT environments",
+    "solucao": "smart contracts on the Hyperledger Besu blockchain",
+    "avaliacao": "The developed architecture reduces the dependence on unilateral control over access rules",
+    "limites": "Traditional solutions tend to depend on centralized intermediaries",
+    "possibilidades": "Investigar a integração de SSI/DIDs com políticas de acesso baseadas em atributos (ABE) para revogação seletiva em ambientes de cidades inteligentes; explorar provas de conhecimento zero‑knowledge (zk‑SNARK) para verificação de credenciais sem revelar atributos; avaliar a aplicação de criptografia homomórfica para processamento de dados IoT na blockchain, preservando privacidade; propor mecanismos híbridos de revogação que combinem listas de revogação distribuídas e contratos inteligentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "7.3.1 Attribute Revocation",
+      "afirmacao": "Uma limitação abordada é a revogação de atributos."
+    }
+  ],
+  "interpretacao": "A dissertação avança ao discutir explicitamente questões de privacidade, controle de acesso e escalabilidade criptográfica, reconhecendo a revogação de atributos como desafio e apontando a necessidade de ampliar a avaliação de escalabilidade.",
+  "duvidas": "Quais métricas específicas foram usadas para avaliar a escalabilidade criptográfica? Como o escopo limitado da avaliação impacta a generalização dos resultados para diferentes cenários de cidades inteligentes?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "891eadf476bfcb3eaa58",
+  "artigo": "Exemplo_60479560a08f3b4cd724",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "secure exchange of data in distributed IIoT environments",
+    "solucao": "smart contracts on the Hyperledger Besu blockchain",
+    "avaliacao": "The developed architecture reduces the dependence on unilateral control over access rules",
+    "limites": "Traditional solutions tend to depend on centralized intermediaries",
+    "possibilidades": "Investigar a integração de SSI/DIDs com políticas de acesso baseadas em atributos (ABE) para revogação seletiva em ambientes de cidades inteligentes; explorar provas de conhecimento zero‑knowledge (zk‑SNARK) para verificação de credenciais sem revelar atributos; avaliar a aplicação de criptografia homomórfica para processamento de dados IoT na blockchain, preservando privacidade; propor mecanismos híbridos de revogação que combinem listas de revogação distribuídas e contratos inteligentes.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "d54bdcaf66d25b3bc5ea"
+  },
+  "reaproveitada_de": "ea057871f53fa1fe1709"
+}

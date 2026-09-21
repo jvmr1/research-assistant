@@ -1,0 +1,36 @@
+{
+  "resumo": "O modelo AAIFLF‑PPCD apresenta aumento progressivo de acurácia e redução de perda ao longo de 0‑25 épocas, superando técnicas como SVM, KNN e CNN+GRU, com precisão de 97.20 % e F1‑score de 96.92 %. O tempo de processamento é de 4.51 s, consideravelmente menor que os demais métodos, indicando eficiência para detecção de ciberameaças em cidades inteligentes assistidas por IoT.",
+  "perfil": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Aplicar quantização ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; implementar seleção de recursos em tempo real baseada em correlação de atributos; avaliar impacto de diferentes proporções TRPH/TSPH na generalização."
+  },
+  "evidencias": [
+    {
+      "citacao": "AAIFLF-PPCD approach reported enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+      "afirmacao": "AAIFLF-PPCD alcançou precisão de 97.20 % e F1‑score de 96.92 %."
+    },
+    {
+      "citacao": "AAIFLF-PPCD model presents lesser PT of 4.51s, demonstrating its superior efficiency in PT",
+      "afirmacao": "Tempo de processamento de 4.51 s, inferior aos demais métodos."
+    }
+  ],
+  "interpretacao": "Os resultados indicam que a combinação de seleção de atributos via HHO, classificação SSAE e ajuste WOA produz um modelo competitivo tanto em acurácia quanto em latência, adequado para ambientes de borda em cidades inteligentes.",
+  "duvidas": "Como o modelo se comporta em cenários de recursos extremamente limitados ou com tráfego de ataque zero‑day não representado nos dados de treinamento?",
+  "avisos": [],
+  "id": "2f159572abea5e5d0b80",
+  "artigo": "Ragab_2025",
+  "pagina": 15,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Aplicar quantização ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; implementar seleção de recursos em tempo real baseada em correlação de atributos; avaliar impacto de diferentes proporções TRPH/TSPH na generalização.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "c5214ad786b009c632b3"
+  }
+}

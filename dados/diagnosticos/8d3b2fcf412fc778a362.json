@@ -1,0 +1,179 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-16T19:18:41",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para aprofundar ou esclarecer as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Alabdali_2025",
+        "titulo": "Blockchain based solid waste classification with AI powered tracking and IoT integration",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 15,
+          "total": 15,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "05ba93b0be94ff0a591c",
+            "pagina": 1,
+            "resumo": "O estudo propõe um modelo de classificação de resíduos baseado em IA que combina IoT e blockchain para coleta inteligente em cidades inteligentes, usando sensores ultrassônicos e CNNs para identificar e classificar resíduos em tempo real, otimizar rotas e reduzir emissões de CO₂.",
+            "evidencias": [
+              {
+                "citacao": "IoT-connected bins transmit data to a central server, which uses blockchain to ensure secure, transparent data storage.",
+                "afirmacao": "IoT-connected bins transmit data to a central server, which uses blockchain to ensure secure, transparent data storage."
+              }
+            ]
+          },
+          {
+            "id": "9bc0da69557701dac1b1",
+            "pagina": 2,
+            "resumo": "O estudo propõe um sistema de gestão de resíduos sólidos que combina monitoramento em tempo real via sensores ultrassônicos IoT, classificação de resíduos por IA e armazenamento de dados em blockchain. A blockchain garante integridade e acesso rápido aos dados, enquanto algoritmos de IA otimizam rotas de coleta, reduzindo consumo de combustível e impactos ambientais. O modelo híbrido de IA aprende continuamente, melhorando a eficiência e a escalabilidade da solução.",
+            "evidencias": [
+              {
+                "citacao": "Optimization of waste collection routes using AI algorithms, reducing fuel consumption, labor, and environmental impact.",
+                "afirmacao": "Algoritmos de IA otimizam rotas de coleta, reduzindo consumo de combustível e impacto ambiental."
+              }
+            ]
+          },
+          {
+            "id": "023543cd48bdb399d7cf",
+            "pagina": 3,
+            "resumo": "O trecho descreve os desafios crescentes de volume de resíduos e a ineficiência da triagem manual, apresentando soluções baseadas em IA (software, contêineres e máquinas de classificação) e sensores IoT, além de evidenciar o alto desempenho de CNNs (até 90% de acurácia). Destaca ainda a falta de integração de IoT nos trabalhos de classificação existentes.",
+            "evidencias": [
+              {
+                "citacao": "AI-based waste classification software enhances the precision in identifying and categorizing different types of waste materials.",
+                "afirmacao": "AI-based waste classification software enhances the precision in identifying and categorizing different types of waste materials."
+              }
+            ]
+          },
+          {
+            "id": "b008bb4a9ba50d9639d2",
+            "pagina": 6,
+            "resumo": "O trecho descreve a arquitetura de lixeiras inteligentes que combinam sensores IoT (câmera, ultrassônico e de carga) com um microcontrolador que executa classificação CNN e aciona um servo para separar resíduos. Os dados de nível, peso e imagens são enviados a uma plataforma em nuvem e visualizados via aplicativo Blynk, permitindo monitoramento remoto em tempo real.",
+            "evidencias": [
+              {
+                "citacao": "These bins are equipped with IoT-enabled sensors that facilitate real-time waste monitoring and data transmission.",
+                "afirmacao": "Os lixos são equipados com sensores habilitados para IoT que facilitam o monitoramento em tempo real e a transmissão de dados."
+              },
+              {
+                "citacao": "The collected data is transmitted to a cloud-based platform and accessed via the Blynk application, enabling remote waste monitoring and management.",
+                "afirmacao": "Os dados coletados são enviados a uma plataforma baseada na nuvem e acessados via aplicativo Blynk."
+              }
+            ]
+          }
+        ],
+        "problema": "traditional machine learning approaches, such as SVM and decision trees, which lacked deep feature extraction capabilities",
+        "solucao": "AI-driven waste classification system",
+        "avaliacao": "classification accuracy of 95%",
+        "limites": "higher computational complexity",
+        "possibilidades": "Explorar integração de identidade auto‑soberana (SSI) para autenticação de sensores; aplicar credenciais verificáveis em blockchain para compartilhamento intermunicipal de dados de resíduos; usar criptografia baseada em atributos (ABE) para proteger informações sensíveis; avaliar a escalabilidade da solução em arquiteturas de borda (edge computing) com inferência distribuída; investigar aprendizado federado para preservar a privacidade das imagen"
+      },
+      {
+        "id": "Tawfik_2025",
+        "titulo": "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "178303345bbd3bb29308",
+            "pagina": 2,
+            "resumo": "O texto descreve a transição dos sistemas de saúde tradicionais para e‑health, destacando a importância dos registros eletrônicos (EHR) e os desafios de interoperabilidade e privacidade. Aponta incidentes de vazamento de dados e apresenta o blockchain como solução potencial para controle de acesso, oferecendo transparência, descentralização e resistência a adulterações, especialmente em ambientes permissioned.",
+            "evidencias": [
+              {
+                "citacao": "Privacy is a major concern in shared environments and must be carefully considered.",
+                "afirmacao": "privacy is a major concern in shared environments"
+              },
+              {
+                "citacao": "Blockchain technology can play a key role in access control by recording and verifying access-related information through a decentralized ledger.",
+                "afirmacao": "blockchain can play a key role in access control"
+              }
+            ]
+          },
+          {
+            "id": "15878b05c8879d1ac8ee",
+            "pagina": 3,
+            "resumo": "O trecho descreve a importância de contabilizar atividades de usuários em sistemas de saúde para auditoria e conformidade, destacando que autenticação, autorização e accounting são essenciais para controle de acesso a prontuários eletrônicos. A pesquisa classifica métodos de controle de acesso baseados em blockchain em permissivos e permissionados, analisa técnicas de privacidade, plataformas, protocolos de consenso e contratos inteligentes, e aponta desafios de privacidade e direções futuras.",
+            "evidencias": [
+              {
+                "citacao": "Accounting: Accounting involves tracking and logging user activity within the healthcare system, including who accessed patient data, when it was accessed, and what actions were taken.",
+                "afirmacao": "Accounting involves tracking and logging user activity within the healthcare system, including who accessed patient data, when it was accessed, and what actions were taken."
+              },
+              {
+                "citacao": "The survey’s main contributions are: 1. The categorization of recent EHR access control methods based on blockchain into two categories: permissionless and permissioned.",
+                "afirmacao": "The survey categorizes recent EHR access control methods based on blockchain into two categories: permissionless and permissioned."
+              }
+            ]
+          },
+          {
+            "id": "d62d99f39b030d90c814",
+            "pagina": 5,
+            "resumo": "O artigo apresenta uma revisão sistemática de trabalhos que utilizam blockchain para controle de acesso e preservação de privacidade em saúde, categorizando métodos em blockchains permissionless e permissioned, avaliando fatores críticos de privacidade e segurança, e apontando a falta de comparações holísticas como lacuna que preenchem.",
+            "evidencias": [
+              {
+                "citacao": "we systematically categorize access control methods into permissionless and permissioned blockchains",
+                "afirmacao": "O estudo categoriza métodos de controle de acesso em blockchains permissionless e permissioned."
+              }
+            ]
+          },
+          {
+            "id": "993a27f7c6b13a9cfd37",
+            "pagina": 6,
+            "resumo": "A Tabela 1 apresenta uma comparação entre o presente levantamento e demais surveys na área de saúde, listando autores, ano de publicação, principais contribuições (frameworks EHR, tipos de blockchain, protocolos de consenso, técnicas de privacidade, controle de acesso) e o período coberto por cada estudo, evidenciando a abrangência e as lacunas abordadas pelo trabalho em relação a revisões anteriores de 2019 a 2024.",
+            "evidencias": [
+              {
+                "citacao": "Table 1 A comparison between this survey and other surveys in the healthcare domain",
+                "afirmacao": "Table 1 A comparison between this survey and other surveys in the healthcare domain"
+              },
+              {
+                "citacao": "Review blockchain applications in healthcare, focusing on blockchain interoperability and security solutions",
+                "afirmacao": "Review of blockchain applications in healthcare, focusing on blockchain interoperability and security solutions"
+              }
+            ]
+          }
+        ],
+        "problema": "Ensuring privacy in blockchain-based healthcare systems is critical due to the sensitive nature of EHRs.",
+        "solucao": "advanced cryptographic techniques have been integrated with blockchain technology to enhance security and privacy.",
+        "avaliacao": "Low latency. High throughput",
+        "limites": "A limited number of voters may affect the network’s decentralization.",
+        "possibilidades": "Investigar a aplicação de SMPC e criptografia homomórfica em IoT de cidades inteligentes, combinando-as com ABE para controle de acesso granular; avaliar o trade‑off entre privacidade e latência em edge computing; criar protótipos de smart contracts que utilizem SMPC para análises de dados de sensores sem revelar informações sensíveis."
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "Os trabalhos analisados apresentam soluções baseadas em blockchain para domínios distintos: Alabdali_2025 demonstra um sistema de classificação de resíduos sólidos que combina sensores IoT, redes neurais convolucionais e registro em blockchain, reportando 95 % de acurácia, porém com alta complexidade computacional e sem tratamento de identidade descentralizada. Tawfik_2025 oferece um levantamento sistemático de controle de acesso e privacidade em saúde, distinguindo blockchains permissionless e permissioned e apontando a ausência de comparações holísticas e de técnicas avançadas como SMPC ou criptografia homomórfica. Ambos concordam que blockchain garante integridade e transparência dos dados; diferem na ênfase – Alabdali foca em eficiência operacional de cidades inteligentes, enquanto Tawfik enfatiza requisitos de privacidade e auditoria. Os trabalhos chegam a protótipos de coleta de resíduos e a análises de literatura, mas ainda não exploram SSI, credenciais verificáveis, ABE ou aprendizado federado em ambientes de borda.",
+    "ideias": [
+      {
+        "descricao": "Estender o sistema de resíduos de Alabdali_2025 com identidade auto‑soberana (SSI) para autenticar sensores e usar credenciais verificáveis armazenadas em blockchain, permitindo que diferentes municípios verifiquem a origem dos dados sem revelar chaves privadas. A lacuna surge ao comparar a ausência de SSI no trabalho de resíduos com a discussão de controle de acesso descentralizado em Tawfik_2025.",
+        "fontes": [
+          "Alabdali_2025",
+          "Tawfik_2025"
+        ],
+        "lacuna": "Falta de mecanismos de identidade descentralizada e verificação de credenciais entre organizações de coleta de resíduos."
+      },
+      {
+        "descricao": "Aplicar criptografia baseada em atributos (ABE) ao compartilhamento de informações sensíveis de resíduos entre agências municipais, inspirando‑se nas técnicas de privacidade e controle de acesso descritas em Tawfik_2025. O estudo de Alabdali_2025 menciona a necessidade de proteger dados de nível e peso, mas não avalia ABE; a comparação evidencia a oportunidade de integrar controle de acesso granular.",
+        "fontes": [
+          "Alabdali_2025",
+          "Tawfik_2025"
+        ],
+        "lacuna": "Ausência de avaliação de ABE para garantir acesso baseado em políticas em cenários intermunicipais de gestão de resíduos."
+      },
+      {
+        "descricao": "Desenvolver um modelo federado de aprendizado de máquina para classificação de resíduos que opere em nós de borda, combinando SMPC (sugerido por Tawfik_2025) para agregar parâmetros sem expor dados brutos. Essa proposta cruza a necessidade de escalabilidade e privacidade apontada por Alabdali_2025 com as técnicas avançadas de privacidade de blockchain estudadas em Tawfik_2025.",
+        "fontes": [
+          "Alabdali_2025",
+          "Tawfik_2025"
+        ],
+        "lacuna": "Nenhum dos trabalhos implementa aprendizado federado ou SMPC para melhorar a privacidade e a eficiência de modelos distribuídos em cidades inteligentes."
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:18:59"
+}

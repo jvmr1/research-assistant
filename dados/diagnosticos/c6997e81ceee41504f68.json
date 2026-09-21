@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T13:57:04",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control",
+    "perfil_anterior": {
+      "problema": "centralized control also means that these entities have the power to modify, revoke, or misuse identity privileges, often without the user’s consent",
+      "solucao": "YouGovern, a blockchain-based SSI system deployed on Binance Smart Chain (BSC) and compliant with W3C Decentralized Identifier (DID) standards",
+      "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a integração de criptografia baseada em atributos (ABE) para controle de acesso mais granular; testar a implantação em ambientes reais de cidades inteligentes com edge computing; comparar desempenho em outras blockchains públicas; avaliar a interoperabilidade com sistemas de identidade governamentais existentes."
+    },
+    "pagina": 2,
+    "texto": "Appl. Sci. 2025, 15, 6437 2 of 26\nThe Internet is such a valuable tool in our daily lives. We use it to access media,\nconnect with friends and colleagues, manage finances, learn, and more. Still, the web, as\nwe know it, implements centralized models to access this information. To a high degree, it\nis on servers and is operated by corporations. Centralization may pose a main concern for\ncensorship [9,10]. Since the content is hosted on just a few sites, it is easier for governments\nto block it. In 2017, the Turkish government ordered Internet providers to block Wikipedia\ndue to its unfavorable representation of the country [11]. Centralization of the web is not\na positive thing, but it was adopted because of what it can offer. The users want pages\nto load in an instant, and everything must be provided with the highest quality possible.\nServer centralization allows for full control of how quickly the content can be provided. As\nprivacy is continuously coming to the foreground and is emerging as one of the main users’\n(and citizens’) requirements, distributed models are attracting attention [12].\nThe 2016 Report of the UN Special Rapporteur on Freedom of Opinion and Expression\nis a strong statement of the importance of freedom of expression on the Internet [13]. Once\nblocking lists are introduced, they can grow. There have been attempts to block sites\ncontaining not only hate speech and advocacy of terrorism, but also political debate, infor-\nmation on minority rights, alleged defamation, purported copyright infringement—even\nthe “sacred texts” of Scientology. Data misuse occurs when individuals or organizations\nuse personal data beyond their stated intentions.\nA “Self-Sovereign Identity (SSI)” is an identity that is not dependent on any central\nauthority and cannot easily be removed by one administration [14]. On the contrary, SSI is\nan entirely distributed and portable digital identity [15]. It typically has six variables.\n1. An identity model in which its data is owned or controlled by any individual organi-\nzation or thing—a centralized authority does not control it.\n2. The owner of the identity system cannot remove an identity.\n3. Identity owners retain all the personal information stored in their accounts.\n4. The system does not require an intrinsic authority to trust the nature of the integrity,\nprotection, privacy, and identity of the owners—identity owners may use their data,\nas well as select who may access and manage their identity online.\n5. Modifications are easy to make for the challenge-response part (verification process).\n6. The transparency is preserved by rapidly providing six sections of the: (i) an-\nchor, (ii) credibility, (iii) entity, (iv) self-limit, (v) zero-knowledge proof (ZKP), and\n(vi) ZKP itself.\nThe implementation of blockchain-based identity management models has extended\nthe concept of the SSI paradigm to cover more than just cyberspace [ 16,17]. With SSI,\npeople can take back control of their electronically distributed data whenever they choose.\nBlockchain-based SSI implies that full user control will take decentralized identity a step\nfurther by giving users control of their identifiers as well as their data [18]. The incorpo-\nration with official identification is another potential. For instance, the EU supports the\nverification of identities through the European electronic identities (eID) and the eIDAS\nregulation, tools, and mechanisms, as well as the International Civil Aviation Organization\n(ICAO) endorsed “ePassport” or electronically machine-readable travel documents (eM-\nRTD) infrastructure. Now, there are several considerations to integrate these solutions and\nuse them via a blockchain-based solution [18].",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho discute os riscos da centralização da web, como censura e bloqueios governamentais, e destaca a crescente demanda por privacidade. Apresenta a Self‑Sovereign Identity (SSI) como identidade distribuída, independente de autoridade central, e descreve como a blockchain pode ampliar o controle do usuário sobre identificadores e dados. Também menciona a possibilidade de integrar SSI a sistemas oficiais como eID, eIDAS e ePassport, apontando desafios de adoção em soluções baseadas em blockchain.",
+    "perfil": {
+      "problema": "centralization may pose a main concern for censorship",
+      "solucao": "Self‑Sovereign Identity (SSI) is an identity that is not dependent on any central authority",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": [
+        "Integrar criptografia baseada em atributos (ABE) para controle de acesso mais granular em ambientes de cidades inteligentes.",
+        "Avaliar o desempenho e a escalabilidade da solução SSI em edge computing e redes de sensores IoT.",
+        "Testar a interoperabilidade com identidades governamentais (eID, eIDAS, ePassport) em cenários reais.",
+        "Comparar o uso da Binance Smart Chain com outras blockchains públicas quanto a latência e throughput.",
+        "Desenvolver mecanismos de revogação de credenciais baseados em contratos inteligentes."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Centralization may pose a main concern for censorship.",
+        "citacao": "centralization may pose a main concern for censorship"
+      },
+      {
+        "afirmacao": "A Self‑Sovereign Identity (SSI) is an identity that is not dependent on any central authority and cannot easily be removed by one administration.",
+        "citacao": "Self‑Sovereign Identity (SSI) is an identity that is not dependent on any central authority"
+      }
+    ],
+    "interpretacao": "O texto reforça a necessidade de modelos descentralizados como SSI para mitigar riscos de censura e controle centralizado, apontando ainda para a integração com identidades oficiais.",
+    "duvidas": "Como o YouGovern lida com revogação de credenciais? Qual o impacto de usar a Binance Smart Chain em ambientes de cidades inteligentes com restrições de latência?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T13:57:12"
+}

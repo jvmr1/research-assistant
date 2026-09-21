@@ -1,0 +1,17 @@
+{
+  "resumo": "A dissertação de mestrado de André Luiz Almeida Cardoso (2024), defendida na Universidade Federal do Maranhão, apresenta um modelo de gestão de identidades para cidades inteligentes fundamentado na tecnologia blockchain, especificamente na plataforma Hyperledger Fabric. O trabalho visa melhorar a segurança e a confiabilidade da identidade digital de cidadãos e entidades em ambientes urbanos, integrando dispositivos IoT e destacando a importância da segurança da informação. A proposta inclui avaliação do custo computacional da solução, mas os detalhes sobre requisitos funcionais e não funcionais, estratégias de revogação e recuperação de credenciais, privacidade, interoperabilidade com padrões existentes e limitações de escalabilidade não são explicitados nas fichas disponíveis.",
+  "lacunas_possiveis": [
+    "Detalhamento dos requisitos funcionais e não funcionais do modelo proposto.",
+    "Mecanismos de revogação e recuperação de credenciais perdidas.",
+    "Estratégias de interoperabilidade com padrões de identidade digital (ex.: DID, Verifiable Credentials).",
+    "Análise de privacidade e proteção de dados pessoais no contexto blockchain.",
+    "Avaliação de escalabilidade e desempenho em cenários de grande volume de transações IoT."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um módulo de revogação baseado em listas de revogação distribuídas (CRL) ou status de credenciais (VC Status List) integrado ao Hyperledger Fabric.",
+    "Projetar um mecanismo de recuperação de acesso que combine secret sharing com atributos verificáveis, permitindo ao cidadão restaurar credenciais perdidas sem comprometer a privacidade.",
+    "Mapear e alinhar o modelo proposto aos padrões W3C DID e Verifiable Credentials, definindo fluxos de interoperabilidade com sistemas legados de administração pública.",
+    "Realizar um estudo de privacidade que avalie a exposição de dados pessoais na blockchain pública versus permissionada, propondo técnicas de anonimização ou criptografia homomórfica para proteção adicional.",
+    "Implementar testes de carga e benchmark de desempenho para validar a escalabilidade do modelo em ambientes IoT de cidades inteligentes, identificando gargalos e propondo otimizações."
+  ]
+}

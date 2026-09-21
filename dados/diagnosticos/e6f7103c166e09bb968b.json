@@ -1,0 +1,52 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:29:04",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "AI edge cloud service provisioning for knowledge management smart applications",
+    "perfil_anterior": {
+      "problema": "they need a supporting computing architecture.",
+      "solucao": "Serverless edge computing enables running code at edge locations without managing servers.",
+      "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+      "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+      "possibilidades": "• Integrar identidade auto‑soberana (SSI) para autenticação dos nós de borda e gerenciamento de credenciais. • Aplicar credenciais verificáveis para rastrear a proveniência das funções de IA distribuídas. • Usar criptografia baseada em atributos (ABE) para proteger dados sensíveis nas funções serverless. • Criar camada de auditoria baseada em blockchain para registrar alocação, revogação e migração de funções entre borda e nuvem. • Avaliar aprendizado federado ou reforço para decisão dinâmica de placement de funções de IA, preservando privacidade. • Explorar provas de conhecimento zero‑knowled"
+    },
+    "pagina": 12,
+    "texto": "Where comp.(fi(data)) is the time it takes the function to compute with the associated data. Setup(fi) is the \ntime it takes for the edge or cloud environment to be ready to execute the function. The first time a service is \ninvoked, or after a long time, the corresponding function might not be present in the Edge environment. In that \ncase, the function has to be retrieved from the cloud server, and the execution environment has to be created. \nThis is a costly operation, but it is only performed the first time. Further invocations of the same function would \nfind the execution environment ready. Lastly, there is the communication time. It is expressed as Comm.(data) \nand Comm.(fi(data)). The first one is the time it takes for the data that wants to be processed to be transmitted \nto the edge or cloud environment. The second term is the time it takes for the result or response to reach its \ndestination.\nFigure 3 shows a sequence diagram of the interaction between the different components of the model. When \na processing request is made on an IoT device, it first reaches the local edge layer. If processing cannot be \ncompleted there, it is offloaded to the CDN edge layer. If it is still necessary, further processing can be done in \nthe cloud. This multilayered structure makes the architecture scalable. T echniques such as auto-scaling, load \nbalancing, resource pooling, edge-cloud orchestration or predictive scaling can be employed to do the offloading \ndecission from the lower layers to the upper layers 62. After the request is completed, further processing is \nperformed in the cloud to infer knowledge from the gathered data. Then, this knowledge is stored in knowledge \ndatabases, and IoT devices can make requests to retrieve it. Although a multi-layered architecture is able to \nallocate and distribute the execution of the task, it also introduces an overhead for the scheduling decision. In \nthis case, each layer makes the decision whether to execute the request locally, or to offload the task to the upper \nlayer. Therefore, in the worst case scenario, the time complexity is defined by Eq.  6, where the overhead time \n(O) of the scheduling decision in all the layers is aggregated. The overhead time in each layer is composed of the \ninitial scheduling decision time (S), and the final response time (R) where the response from the upper layer is \naggregated and sent to a lower layer of the architecture.\n O = OEdge + OCDN + OCloud =( SEdge + REdge )+( SCDN + RCDN )+( SCloud + RCloud ) (6)\nThe proposed framework integrates in every step of KM processes:\n• Knowledge creation: IoT devices capture relevant data that is processed at edge nodes. The AI functions \naggregate and analyse data in real time to produce actionable insights. On the other hand, cloud services are \nused to train and improve ML models that contribute to knowledge discovery, while also serve as support to \nprocess data in events of peak demand.\n• Knowledge storage: The cloud offers many services related to data storage. Services such as Amazon S3 or \nAzure Blob Storage store information such as documents, logs, and other raw data that can be stored. Cloud \ndatabases store structured knowledge for efficient access.\n• Knowledge sharing:  Cloud APIs expose data through RESTful or GraphQL interfaces. Users receive re -\nal-time updates via WebSocket services.\n• Knowledge application: The AI functions deliver personalized recommendations or insights based on user \nqueries. Also, contextual data is used to refine outputs dynamically.\n• Knowledge feedback: Users can rate or comment on knowledge outputs. That information is sent back to \nlogging and analytics applications that capture it for further refinement.\nSecurity is a major concern in all steps of knowledge management. Therefore, the proposed model must \nimplement measures to secure the data at every step. One of the main concerns is to secure the communications. \nFor that, data encryption techniques such as end-to-end encryption algorithms (e.g., TLS) can be employed. \nAuthentication of users and services is also crucial. Role-Based Access Control (RBAC) and Attribute-Based \nIoT devices Local Edge CDN Edge Cloud\nKnowledge processing\nProcessing request\nComputing offloading\nComputing offloading\nResponse\nResponse\nResponse\nKnowledge\ndatabase\nKnowledge storage\nKnowledge request\nKnowledge retrieval\nFig. 3. Sequence diagram showing the interaction between the different components of the model.\n \nScientific Reports |        (2025) 15:32246 12| https://doi.org/10.1038/s41598-025-14429-7\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O texto descreve o fluxo de execução de funções serverless em uma arquitetura multilayer (edge, CDN, nuvem), detalhando tempos de computação, setup e comunicação, bem como o overhead de decisão de escalonamento. Apresenta o modelo de gestão de conhecimento (KM) que integra criação, armazenamento, compartilhamento, aplicação e feedback, enfatizando a necessidade de segurança (TLS, RBAC) em todas as etapas.",
+    "perfil": {
+      "problema": "Security is a major concern in all steps of knowledge management.",
+      "solucao": "The proposed framework integrates in every step of KM processes: knowledge creation, storage, sharing, application, feedback.",
+      "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+      "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+      "possibilidades": [
+        "Incorporar identidade auto‑soberana (SSI) para autenticação dos nós de borda e gerenciamento de credenciais.",
+        "Utilizar credenciais verificáveis para rastrear a proveniência das funções de IA distribuídas.",
+        "Aplicar criptografia baseada em atributos (ABE) para proteger dados sensíveis nas funções serverless.",
+        "Criar camada de auditoria baseada em blockchain para registrar alocação, revogação e migração de funções entre borda e nuvem.",
+        "Explorar aprendizado federado ou reforço para decisão dinâmica de placement de funções de IA, preservando privacidade.",
+        "Investigar provas de conhecimento zero‑knowledge para validar credenciais sem revelar informações sensíveis.",
+        "Desenvolver políticas de controle de acesso baseadas em atributos (ABAC) que integrem atributos de dispositivos IoT e contextos de edge‑cloud.",
+        "Implementar mecanismos de revogação descentralizada de credenciais usando smart contracts."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "A primeira invocação de uma função na borda tem custo elevado porque a função precisa ser recuperada da nuvem.",
+        "citacao": "The first time a service is invoked, or after a long time, the corresponding function might not be present in the Edge environment. In that case, the function has to be retrieved from the cloud server, and the execution environment has to be created."
+      },
+      {
+        "afirmacao": "Medidas de segurança como TLS e RBAC são recomendadas para proteger a comunicação e autenticação.",
+        "citacao": "For that, data encryption techniques such as end-to-end encryption algorithms (e.g., TLS) can be employed. Authentication of users and services is also crucial. Role-Based Access Control (RBAC) and Attribute-Based ..."
+      }
+    ],
+    "interpretacao": "O trecho reforça que a arquitetura proposta, embora escalável, introduz overhead de decisão de offloading e requer mecanismos robustos de segurança. A ênfase na integração de processos de KM indica que a camada de edge deve suportar não só computação, mas também fluxo completo de conhecimento, o que abre espaço para soluções de identidade descentralizada e criptografia avançada.",
+    "duvidas": "Como o overhead de escalonamento (S + R) impacta a latência em cenários de alta frequência de requisições? Quais são os custos energéticos associados ao carregamento inicial de funções na borda? De que forma políticas ABAC podem ser operacionalizadas em tempo real nas camadas edge e CDN?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:29:24"
+}

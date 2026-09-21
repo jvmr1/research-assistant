@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho descreve que o framework proposto, baseado em blockchain com criptografia otimizada, mantém latência menor que modelos de referência e escala eficientemente com mais nós, oferecendo eficiência e robustez para ambientes IoT críticos.",
+  "perfil": {
+    "problema": "enhanced cybersecurity measures in IoT-based environments",
+    "solucao": "integration of blockchain technology with optimized encryption and authentication mechanisms",
+    "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+    "limites": "Não informado",
+    "possibilidades": "Explorar a combinação com Self‑Sovereign Identity para revogação de anonimato em cidades inteligentes; Avaliar o impacto da mobilidade e velocidade de dispositivos de borda na latência; Integrar Attribute‑Based Encryption para controle de acesso granular entre organizações públicas; Testar o framework em ambientes multi‑cloud e heterogêneos, incluindo cenários de edge computing."
+  },
+  "evidencias": [
+    {
+      "citacao": "maintains lower latency levels when compared to the benchmark models",
+      "afirmacao": "O framework mantém latência menor que os modelos de referência."
+    },
+    {
+      "citacao": "scaling effectively with a higher number of nodes",
+      "afirmacao": "A solução escala efetivamente com um número maior de nós."
+    }
+  ],
+  "interpretacao": "Os resultados indicam que a integração de blockchain com mecanismos de criptografia otimizados reduz atrasos na autenticação, tornando o modelo adequado para aplicações IoT que exigem respostas em tempo real.",
+  "duvidas": "Quais são os custos computacionais e de energia associados ao uso de assinaturas em anel e criptografia otimizada em dispositivos de borda? Como o modelo lida com a revogação de credenciais em ambientes distribuídos?",
+  "avisos": [],
+  "id": "dc47276240ccc7fe54f8",
+  "artigo": "Addula_2025",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "enhanced cybersecurity measures in IoT-based environments",
+    "solucao": "integration of blockchain technology with optimized encryption and authentication mechanisms",
+    "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a combinação com Self‑Sovereign Identity para revogação de anonimato em cidades inteligentes; Avaliar o impacto da mobilidade e velocidade de dispositivos de borda na latência; Integrar Attribute‑Based Encryption para controle de acesso granular entre organizações públicas; Testar o framework em ambientes multi‑cloud e heterogêneos, incluindo cenários de edge computing.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

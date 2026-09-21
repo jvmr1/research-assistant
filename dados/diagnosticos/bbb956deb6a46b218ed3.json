@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T20:17:23",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+    "perfil_anterior": {
+      "problema": "introduce significant computational overhead",
+      "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+      "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+      "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+      "possibilidades": "Aplicar o framework a dados reais de prontuários eletrônicos em ambientes de cidades inteligentes, integrando SSI e credenciais verificáveis para controle de acesso granular nos nós de borda.; Avaliar o impacto de algoritmos de consenso alternativos (e.g., PoA, BFT puro) em escala de milhares de dispositivos IoT.; Combinar o mecanismo híbrido com criptografia baseada em atributos (ABE) para políticas de compartilhamento interdepartamental.; Desenvolver técnicas adaptativas de ajuste do orçamento de privacidade (ε) baseadas em requisitos de utilidade em tempo real.; Investigar compressão de atu"
+    },
+    "pagina": 15,
+    "texto": "Impact of device heterogeneity\nTo assess the real-world applicability of the EPP-BCFL framework, we evaluated its performance across \nheterogeneous edge devices. The selected devices include:\n• Device A – High-end edge server (Intel Xeon, 32GB RAM).\n• Device B – Mid-range laptop (Intel i5, 8GB RAM).\n• Device C – Resource-constrained IoT device (Raspberry Pi 4B, 4GB RAM).\nWe measured the training time per local epoch, CPU and memory utilization, and energy consumption during \nlocal model updates. The results are shown in Table 8.\nDespite the resource disparity, the EPP-BCFL framework maintained high accuracy across all devices, with \nless than 1.2% deviation. This is primarily due to the Adaptive Aggregation Mechanism, which dynamically \nPrivacy Budget (ε) Accuracy (%)\n0.1 84.7\n0.5 88.2\n1.0 90.3\n5.0 92.6\n∞ (No DP) 93.7\nTable 7. Accuracy vs. Privacy budget (ε).\n \nPrivacy Configuration Accuracy (%) Communication Overhead\nDP Only 90.3 Medium\nSMPC Only 91.5 High\nDP + SMPC (Combined) 89.1 Very High\nNone (Baseline FL) 93.7 Low\nEPP-BCFL (Optimized) 95.2 Low\nTable 6. Ablation study of privacy Components.\n \nFig. 5. Accuracy Comparison.\n \nScientific Reports |        (2025) 15:27524 15| https://doi.org/10.1038/s41598-025-12225-x\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O estudo avalia o impacto da heterogeneidade de dispositivos no framework EPP-BCFL, testando um servidor de borda de alto desempenho, um laptop intermediário e um dispositivo IoT limitado. Apesar das diferenças de recursos, a precisão permaneceu alta (desvio <1,2%) graças ao Mecanismo de Agregação Adaptativa. Também são apresentados resultados de precisão versus orçamento de privacidade e um estudo de ablação que mostra trade‑offs entre precisão e overhead de comunicação para diferentes configurações de privacidade.",
+    "perfil": {
+      "problema": "introduce significant computational overhead",
+      "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+      "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+      "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+      "possibilidades": [
+        "Avaliar o Mecanismo de Agregação Adaptativa em cenários de cidades inteligentes com grande variedade de dispositivos de borda (sensores, câmeras, atuadores).",
+        "Incorporar métricas de consumo energético (medidas no Raspberry Pi) para otimizar o trade‑off entre privacidade e eficiência energética.",
+        "Testar o framework com diferentes algoritmos de consenso (PoA, BFT) em redes IoT de escala municipal.",
+        "Estender o estudo de ablação para incluir criptografia baseada em atributos (ABE) como camada adicional de controle de acesso interdepartamental."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O framework EPP-BCFL manteve alta precisão em todos os dispositivos, com menos de 1.2% de desvio.",
+        "citacao": "maintained high accuracy across all devices, with less than 1.2% deviation."
+      },
+      {
+        "afirmacao": "A configuração combinada de DP + SMPC resultou em precisão de 89.1% com overhead de comunicação muito alto.",
+        "citacao": "DP + SMPC (Combined) 89.1 Very High"
+      }
+    ],
+    "interpretacao": "Os resultados indicam que o mecanismo de agregação adaptativa consegue compensar disparidades de recursos computacionais, preservando a acurácia do modelo federado mesmo em dispositivos limitados, embora a combinação de DP e SMPC aumente significativamente o overhead de comunicação.",
+    "duvidas": "Como o aumento de overhead de comunicação impacta a latência em redes de cidades inteligentes? Qual seria o efeito de otimizar o orçamento de privacidade (ε) em tempo real para diferentes tipos de dispositivos?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:18:19"
+}

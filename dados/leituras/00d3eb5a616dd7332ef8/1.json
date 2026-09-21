@@ -1,0 +1,40 @@
+{
+  "resumo": "O trabalho apresenta o framework Enhanced Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) para gestão segura e eficiente de registros eletrônicos de saúde (EHR). Combina aprendizado federado, analytics na borda e blockchain, usando mecanismos híbridos de privacidade (SMPC e Differential Privacy), consenso PoS+BFT leve e agregação adaptativa que considera qualidade dos dados, confiança dos nós e detecção de anomalias, visando reduzir sobrecarga computacional, latência e vulnerabilidades a ataques.",
+  "perfil": {
+    "problema": "high computational overhead, communication latency, and susceptibility to data and model poisoning attacks",
+    "solucao": "Enhanced Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Aplicar o EPP-BCFL a cenários de smart cities IoT, integrando SSI e credenciais verificáveis.",
+      "Testar a escalabilidade do framework com milhares de nós de borda em ambientes urbanos.",
+      "Avaliar o impacto de diferentes mecanismos de consenso (PoS, BFT, PoA) em dispositivos de recursos limitados.",
+      "Incorporar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de saúde.",
+      "Explorar a integração de Vertical Federated Learning (VFL) para análise cruzada de dados heterogêneos entre instituições."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Federated Learning (FL) facilitates collaborative model training across multiple healthcare organizations without sharing raw patient data.",
+      "afirmacao": "FL facilitates collaborative model training across multiple healthcare organizations without sharing raw patient data."
+    }
+  ],
+  "interpretacao": "O artigo propõe uma solução integrada que combina aprendizado federado, blockchain e analytics na borda, buscando superar as limitações de desempenho e segurança dos BCFL existentes ao introduzir privacidade híbrida e consenso leve, além de adaptar a agregação ao contexto dos nós.",
+  "duvidas": "Como o framework lida com dados não-IID em larga escala? Qual o overhead real do consenso PoS+BFT em dispositivos IoMT? Existem métricas de energia consumida comparadas a abordagens tradicionais? Como a solução garante interoperabilidade com padrões de identidade digital (SSI) em cidades inteligentes?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "1f03669b04ec41d70341",
+  "artigo": "Munusamy_2025",
+  "pagina": 2,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "high computational overhead, communication latency, and susceptibility to data and model poisoning attacks",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o EPP-BCFL a cenários de smart cities IoT, integrando SSI e credenciais verificáveis.; Testar a escalabilidade do framework com milhares de nós de borda em ambientes urbanos.; Avaliar o impacto de diferentes mecanismos de consenso (PoS, BFT, PoA) em dispositivos de recursos limitados.; Incorporar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de saúde.; Explorar a integração de Vertical Federated Learning (VFL) para análise cruzada de dados heterogêneos entre instituições.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "resumo": "O texto descreve os benefícios da computação em nuvem para aplicações de cidades inteligentes, destacando acesso on‑demand a recursos configuráveis, redução de custos e agilidade, mas aponta como problema central a alocação de recursos e o cumprimento de SLAs em cenários de offloading, especialmente diante da variabilidade de demanda.",
+  "perfil": {
+    "problema": "An intrinsic problem for an offloading application is resource allocation.",
+    "solucao": "It enables ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources ... that can be rapidly provisioned and released with minimal management effort.",
+    "avaliacao": "Cloud computing helps knowledge management processes.",
+    "limites": "One of the main challenges of the offloading model is complying with the Service Level Agreement (SLA) between the cloud provider and the client.",
+    "possibilidades": [
+      "Investigar como identidades auto‑soberanas (SSI) podem ser usadas para validar o cumprimento de SLAs entre provedores de nuvem e aplicações de cidades inteligentes.",
+      "Aplicar credenciais verificáveis para autorizar dinamicamente recursos de edge computing em cenários de offloading.",
+      "Implementar criptografia baseada em atributos (ABE) para proteger dados sensíveis compartilhados entre dispositivos IoT e a nuvem.",
+      "Avaliar estratégias de alocação de recursos baseadas em aprendizado de máquina combinadas com mecanismos de privacidade descentralizada.",
+      "Desenvolver métricas de desempenho que correlacionem a variabilidade de demanda com a eficácia de políticas de revogação de acesso em ambientes distribuídos."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "The cloud brings numerous key benefits.",
+      "afirmacao": "The cloud brings numerous key benefits."
+    },
+    {
+      "citacao": "Cloud computing helps knowledge management processes.",
+      "afirmacao": "Cloud computing helps knowledge management processes."
+    }
+  ],
+  "interpretacao": "O trecho reforça que a nuvem oferece infraestrutura flexível e escalável para suportar aplicações de cidades inteligentes, mas destaca que a alocação eficiente de recursos e o respeito a acordos de nível de serviço são gargalos críticos que precisam ser abordados, sobretudo em contextos de offloading para dispositivos de baixa potência.",
+  "duvidas": "Como garantir que as políticas de SLA sejam verificáveis de forma descentralizada em ambientes de edge computing? Quais técnicas de alocação de recursos são mais adequadas para lidar com a variabilidade de demanda em tempo real?",
+  "avisos": [],
+  "id": "cde2914e2c84e6a08f94",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "An intrinsic problem for an offloading application is resource allocation.",
+    "solucao": "Cloud computing is a computing paradigm where the resources, be it applications and software, data, frameworks, servers or hardware, are stored on remote servers and accessed over the internet.",
+    "avaliacao": "Cloud computing helps knowledge management processes.",
+    "limites": "One of the main challenges of the offloading model is complying with the Service Level Agreement (SLA) between the cloud provider and the client.",
+    "possibilidades": "Investigar como identidades auto‑soberanas (SSI) podem ser usadas para validar o cumprimento de SLAs entre provedores de nuvem e aplicações de cidades inteligentes.; Aplicar credenciais verificáveis para autorizar dinamicamente recursos de edge computing em cenários de offloading.; Implementar criptografia baseada em atributos (ABE) para proteger dados sensíveis compartilhados entre dispositivos IoT e a nuvem.; Avaliar estratégias de alocação de recursos baseadas em aprendizado de máquina combinadas com mecanismos de privacidade descentralizada.; Desenvolver métricas de desempenho que correlac",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

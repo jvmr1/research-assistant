@@ -1,0 +1,71 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T19:39:39",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 7,
+        "resumo": "O trecho apresenta equações que demonstram a redução do tamanho dos blocos da blockchain ao armazenar arquivos no IPFS, comparando o tamanho sem IPFS e com IPFS, evidenciando ganhos de eficiência para o compartilhamento de dados de saúde.",
+        "interpretacao": "Ao mover os arquivos para o IPFS, apenas seus hashes são armazenados na blockchain, o que diminui significativamente o tamanho dos blocos e pode acelerar o processamento de transações e reduzir o consumo de armazenamento.",
+        "duvidas": "Como a redução do tamanho dos blocos impacta a segurança e a resistência a ataques de negação de serviço? Qual é o efeito da latência de rede ao recuperar dados do IPFS em ambientes de edge computing? Como garantir a integridade e a disponibilidade dos dados armazenados no IPFS em longo prazo?"
+      },
+      {
+        "pagina": 8,
+        "resumo": "O trecho da página 8 do artigo de Mallick et al. (2025) apresenta duas figuras: a Fig. 4 ilustra o processo de criptografia e descriptografia, e a Fig. 3 demonstra como os dados de saúde são acessados a partir da estrutura proposta, indicando a presença de mecanismos de segurança e acesso no framework de compartilhamento de dados.",
+        "interpretacao": "As figuras sugerem que o framework inclui etapas de criptografia para proteger os dados e um mecanismo de acesso que permite a recuperação segura das informações de saúde, embora o texto não detalhe os algoritmos ou políticas de controle de acesso.",
+        "duvidas": "Quais algoritmos de criptografia são utilizados no processo da Fig. 4? Como o controle de acesso é gerenciado na Fig. 3? O artigo descreve políticas de revogação ou auditoria para o acesso aos dados de saúde?"
+      },
+      {
+        "pagina": 9,
+        "resumo": "O trabalho apresenta um sistema de compartilhamento seguro de dados de saúde baseado em IoT e blockchain, implementado em laboratório com hardware Intel i7 e SSD, usando IPFS para armazenamento e contratos inteligentes para autenticação de dispositivos. Avaliam o desempenho variando o tamanho dos arquivos (20 MB a 140 MB) e analisam métricas como número total de transações por bloco e tempo de execução de cada transação.",
+        "interpretacao": "O estudo foca na viabilidade prática de integrar IPFS e blockchain para garantir integridade e autenticidade dos dados de saúde, usando métricas de desempenho que relacionam tamanho dos arquivos e carga de transações.",
+        "duvidas": "Não está claro como o modelo se comportaria em redes públicas ou com maior número de dispositivos simultâneos, nem quais estratégias de revogação de credenciais seriam adotadas."
+      },
+      {
+        "pagina": 10,
+        "resumo": "O trabalho propõe um framework onde um device proxy registra dispositivos mediante prova de identidade, e uma dApp baseada em smart contracts conecta usuários e pacientes ao sistema de saúde. Dados são armazenados no IPFS e seu hash criptográfico é gravado na blockchain; a recuperação ocorre mediante verificação do hash. O processo de criptografia/decriptação é descrito no Algoritmo 3.",
+        "interpretacao": "O trecho descreve um fluxo completo de registro, armazenamento e recuperação de dados de saúde, combinando um proxy de dispositivos para autenticação, uma dApp para interação e IPFS + blockchain para integridade e disponibilidade dos arquivos.",
+        "duvidas": "Qual o mecanismo exato de prova de identidade exigido pelo device proxy? Como são gerenciados os direitos de acesso ao arquivo após a verificação do hash?"
+      },
+      {
+        "pagina": 11,
+        "resumo": "A página 11 apresenta a referência a Mallick et al. (2025) e indica a presença do Algoritmo 1, que trata do registro e upload de dados de saúde em um cenário de IoT e blockchain.",
+        "interpretacao": "A presença do Algoritmo 1 sugere que o trabalho propõe um procedimento específico para registrar dispositivos e enviar dados de saúde, possivelmente usando blockchain como camada de confiança.",
+        "duvidas": "Não há detalhes sobre como o algoritmo garante a identidade dos dispositivos, nem sobre métricas de desempenho ou segurança avaliadas."
+      },
+      {
+        "pagina": 12,
+        "resumo": "O trecho apresenta dois algoritmos: o Algoritmo 2, que descreve como acessar dados de saúde armazenados no IPFS, e o Algoritmo 3, que trata da criptografia e descriptografia desses dados, indicando a integração de blockchain e IoT para compartilhamento seguro em ambientes de saúde inteligente.",
+        "interpretacao": "Os algoritmos sugerem que o estudo foca na utilização do IPFS como camada de armazenamento distribuído e na proteção dos dados por meio de criptografia, reforçando a proposta de compartilhamento seguro em smart healthcare.",
+        "duvidas": "Não há detalhes sobre métricas de desempenho, protocolos de consenso blockchain empregados ou mecanismos de controle de acesso associados aos algoritmos apresentados."
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta um framework para compartilhamento seguro de dados de saúde em ambientes de smart healthcare que combina IoT, blockchain e IPFS. Ao armazenar apenas os hashes dos arquivos no blockchain, reduz o tamanho dos blocos, o que pode acelerar transações e diminuir o consumo de armazenamento. O fluxo inclui um device proxy que registra dispositivos mediante prova de identidade, uma dApp baseada em smart contracts que conecta usuários e pacientes, e algoritmos que descrevem registro/upload (Algoritmo 1), acesso ao IPFS (Algoritmo 2) e criptografia/descriptografia (Algoritmo 3). O protótipo foi implementado em laboratório (Intel i7, SSD) e testado com arquivos de 20 MB a 140 MB, medindo número de transações por bloco e tempo de execução. As figuras ilustram processos de criptografia e acesso, embora não detalhem algoritmos ou políticas de controle de acesso, nem estratégias de revogação ou auditoria.",
+    "lacunas_possiveis": [
+      "Impacto da redução do tamanho dos blocos na resistência a ataques de negação de serviço.",
+      "Latência e disponibilidade dos dados armazenados no IPFS em cenários de edge computing.",
+      "Algoritmos de criptografia efetivamente empregados nas Figuras 3 e 4.",
+      "Mecanismos de controle de acesso, revogação e auditoria associados ao framework.",
+      "Escalabilidade do modelo em redes públicas e com grande número de dispositivos simultâneos.",
+      "Detalhes do mecanismo de prova de identidade usado pelo device proxy.",
+      "Tipo de protocolo de consenso blockchain adotado e suas implicações de desempenho."
+    ],
+    "propostas_possiveis": [
+      "Realizar experimentos de resistência a DoS comparando blocos com e sem uso de IPFS.",
+      "Medir latência de recuperação de arquivos no IPFS em diferentes topologias de edge computing.",
+      "Especificar e avaliar algoritmos de criptografia (ex.: AES‑GCM, RSA‑OAEP) dentro do Algoritmo 3.",
+      "Desenvolver um esquema de controle de acesso baseado em atributos ou SSI para gerenciar direitos após a verificação do hash.",
+      "Simular o framework em ambiente de rede pública com milhares de dispositivos IoT para analisar escalabilidade.",
+      "Implementar e testar mecanismos de revogação de credenciais e auditoria de acessos.",
+      "Comparar protocolos de consenso (Proof‑of‑Authority, PBFT) quanto a throughput e latência no contexto de saúde inteligente."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:40:07"
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:42:42",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication",
+    "perfil_anterior": {
+      "problema": "enhanced cybersecurity measures in IoT-based environments",
+      "solucao": "integration of blockchain technology with optimized encryption and authentication mechanisms",
+      "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a combinação com Self‑Sovereign Identity para revogação de anonimato em cidades inteligentes; Avaliar o impacto da mobilidade e velocidade de dispositivos de borda na latência; Integrar Attribute‑Based Encryption para controle de acesso granular entre organizações públicas; Testar o framework em ambientes multi‑cloud e heterogêneos, incluindo cenários de edge computing."
+    },
+    "pagina": 13,
+    "texto": " \n \n  \n \n234 \n \n \n \nJournal of Cyber Security and Risk Auditing Vol.2025, No.4                                         ISSN: 3079-5354 \nFigure 5 presents th e comparative analysis based on the number of nodes versus encryption time demonstrates that the \nproposed framework offers superior scalability and efficiency compared to benchmark models. As the number of IoT nodes \nincreases, the encryption time in tradit ional models rises significantly due to higher computational overhead and less \noptimized encryption schemes. In contrast, the proposed framework maintains relatively lower and more consistent \nencryption times across varying node densities. This performance  advantage is attributed to the implementation of fully \nhomomorphic encryption, which is optimized within the framework to support parallel processing and reduced complexity. \nAdditionally, the use of cluster -head selection and lightweight cryptographic alg orithms helps to distribute the workload \nefficiently, minimizing bottlenecks in encryption operations. This efficient handling of encryption tasks, regardless of node \ngrowth, ensures that the proposed model remains practical and responsive even in large-scale IoT networks. Therefore, the \nresults confirm the suitability of the proposed system for real-time, secure communication in environments with high node \ndensity. \n \nFigure 5. The comparative analysis based on the number of nodes versus encryption time. \n \nTo evaluate the attack resistance of the proposed framework, a comparative analysis was conducted with benchmark \nmodels, as shown in Table 2. This evaluation considers the framework's ability to withstand various cybersecurity threats, \nincluding collusion attacks, phishing attacks, replay attacks, and man-in-the-middle attacks. The analysis demonstrates that \nthe proposed framework outperforms benchmark models in multiple aspects. This enhanced resilience is primarily due to \nthe integration of blockchain-based authentication, fully homomorphic encryption, and a trust -aware security mechanism. \nBlockchain provides an immutable, decentralized ledger that ensures tamper -proof identity verification and traceability, \nsignificantly reducing the risk of unauthorized access and identity spoofing. Furthermore, the use of multi-signature smart \ncontracts and elliptic curve cryptography (ECC) strengthens the authentication layer, making it more resistant to key \ncompromise and forgery. The application of homomorphic enc ryption adds another security layer by enabling secure \ncomputations on encrypted data, minimizing exposure during data processing.  As a result, the proposed framework \nachieves a higher level of attack resistance across diverse IoT scenarios, making it part icularly well-suited for sensitive \ndomains such as healthcare, smart cities, and industrial automation where security is paramount.  \n \nTable 2. Comparative Analysis of Attack Resistance \n \nAttack Type   Merdec Mechain Ali et al.,  Proposed \nFramework \nCollusion Attack ✗ ✓ ✗ ✓ \nPhishing Attack ✗ ✗ ✓ ✓ \nReplay Attack ✗ ✗ ✗ ✓ \n",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O estudo apresenta um framework permissionado baseado em blockchain que utiliza criptografia homomórfica totalmente otimizada e algoritmos criptográficos leves, demonstrando escalabilidade superior e tempos de criptografia menores à medida que aumenta o número de nós IoT. Avaliações comparativas mostram maior resistência a ataques (colusão, phishing, replay, man‑in‑the‑middle) em relação a modelos de referência, indicando adequação para comunicação segura em tempo real em ambientes de alta densidade, como cidades inteligentes e saúde.",
+    "perfil": {
+      "problema": "enhanced cybersecurity measures in IoT-based environments",
+      "solucao": "integration of blockchain technology with optimized encryption and authentication mechanisms",
+      "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Investigar a integração de Self‑Sovereign Identity para gerenciamento de revogação de credenciais em cenários de mobilidade urbana; Avaliar o desempenho do framework em arquiteturas de edge computing com recursos limitados; Explorar a combinação de Attribute‑Based Encryption para controle de acesso baseado em atributos entre diferentes organizações públicas; Testar a interoperabilidade em ambientes multi‑cloud e com dispositivos heterogêneos."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "the proposed framework offers superior scalability and efficiency compared to benchmark models",
+        "citacao": "Figure 5 presents the comparative analysis based on the number of nodes versus encryption time"
+      },
+      {
+        "afirmacao": "the proposed framework outperforms benchmark models in multiple aspects of attack resistance",
+        "citacao": "Table 2. Comparative Analysis of Attack Resistance"
+      }
+    ],
+    "interpretacao": "Os resultados indicam que a combinação de blockchain permissionada, criptografia homomórfica e smart contracts multissignature reduz significativamente o tempo de criptografia e aumenta a resistência a ataques, tornando o modelo viável para IoT massiva em cidades inteligentes.",
+    "duvidas": "Como o framework se comporta sob condições de alta latência de rede típica de edge computing? Qual o custo computacional da criptografia homomórfica em dispositivos IoT com recursos restritos? Como garantir a revogação de credenciais sem comprometer a privacidade?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:43:06"
+}

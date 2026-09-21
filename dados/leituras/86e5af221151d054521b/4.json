@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho descreve como a integração de blockchain com Self‑Sovereign Identity (SSI) pode melhorar a rastreabilidade, transparência e privacidade na cadeia de suprimentos de vacinas, reduzindo a exposição de dados on‑chain e permitindo verificação descentralizada de credenciais. Destaca ainda que soluções anteriores baseadas apenas em blockchain dependem de identidades centralizadas, limitando a interoperabilidade e o controle de acesso fino.",
+  "perfil": {
+    "problema": "counterfeit detection",
+    "solucao": "integrating Self-Sovereign Identity (SSI) with blockchain-based traceability",
+    "avaliacao": "Não informado",
+    "limites": "identity-agnostic or centrally managed identity models",
+    "possibilidades": "• Integrar computação de borda para verificação em tempo real da autenticidade dos lotes nas fronteiras da cidade inteligente.\n• Combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de rastreamento.\n• Avaliar a interoperabilidade entre plataformas municipais de saúde e provedores de identidade descentralizada usando padrões de credenciais verificáveis.\n• Implementar revogação distribuída de credenciais SSI via contratos inteligentes.\n• Aplicar a arquitetura a sensores IoT de monitoramento de temperatura e localização na cadeia de frio das vacinas.\n• Explorar provas de conhecimento zero‑knowledge para reforçar a privacidade nas auditorias on‑chain."
+  },
+  "evidencias": [
+    {
+      "citacao": "Blockchain technology provides several advantages that can considerably improve COVID-19 vaccine delivery methods.",
+      "afirmacao": "Blockchain provides several advantages that can considerably improve COVID-19 vaccine delivery methods."
+    }
+  ],
+  "interpretacao": "A proposta demonstra que a separação da verificação de identidade das transações on‑chain reduz a exposição de dados sensíveis, ao mesmo tempo em que mantém a auditabilidade da cadeia de suprimentos, atendendo a requisitos de privacidade e interoperabilidade em ambientes multi‑jurisdicionais.",
+  "duvidas": "Como será gerenciado o desempenho e a latência das verificações off‑chain em cenários de alta frequência de transações? Quais mecanismos específicos de revogação de credenciais serão adotados e como garantirão consistência distribuída?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "1a0369b1eb4364f2a174",
+  "artigo": "Chaurasia_2026",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "counterfeit detection",
+    "solucao": "emerging technologies such as blockchain and Self-Sovereign Identity (SSI) have gained attention for improving the efficiency, transparency, and security of vaccine supply chain management",
+    "avaliacao": "empirical results prove the efficacy of the proposed supply chain framework",
+    "limites": "identity-agnostic or centrally managed identity models",
+    "possibilidades": "• Integrar computação de borda para verificação em tempo real da autenticidade dos lotes nas fronteiras da cidade inteligente.\n• Combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de rastreamento.\n• Avaliar a interoperabilidade entre plataformas municipais de saúde e provedores de identidade descentralizada usando padrões de credenciais verificáveis.\n• Implementar revogação distribuída de credenciais SSI via contratos inteligentes.\n• Aplicar a arquitetura a sensores IoT de monitoramento de temperatura e localização na cadeia de frio das vacinas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86e5af221151d054521b"
+  }
+}

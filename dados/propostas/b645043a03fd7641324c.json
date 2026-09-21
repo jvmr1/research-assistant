@@ -1,0 +1,32 @@
+{
+  "id": "b645043a03fd7641324c",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T14:45:54",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Addula_2025: Realizar testes de desempenho em ambientes de edge computing com latência variável para va",
+  "fontes": [
+    "Addula_2025"
+  ],
+  "problema": "Mecanismo de revogação de credenciais em tempo real e seu impacto na latência",
+  "hipotese_lacuna": "Mecanismo de revogação de credenciais em tempo real e seu impacto na latência",
+  "meu_trabalho": "Realizar testes de desempenho em ambientes de edge computing com latência variável para validar robustez do framework",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Realizar testes de desempenho em ambientes de edge computing com latência variável para validar robustez do framework",
+  "modo": "artigo",
+  "buscas": [
+    "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication limitations future work",
+    "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Como garantir que a emulação de latência com NetEm reflita condições reais de redes 5G/6G em cidades inteligentes?; Qual a melhor estratégia para parametrizar o tamanho dos blocos e o intervalo de consenso no Hyperledger Fabric de modo a equilibrar segurança e desempenho?; É viável integrar um mecanismo de SSI (Self‑Sovereign Identity) ao framework sem inflar o overhead de comunicação?; De que forma a criptografia homomórfica impacta a escalabilidade quando o número de sensores ultrapassa milhares de dispositivos?; Quais critérios de revogação de credenciais são mais adequados para ambientes de edge com conectividade intermitente?",
+  "evidencias_usadas": [
+    "df6bffac640d82c70f15",
+    "5f602c19ab7e3def8b54",
+    "7effbc03f18051519c19"
+  ],
+  "fatos": "A maioria das pesquisas existentes foca vulnerabilidades específicas, deixando de lado privacidade e confiança.; O estudo introduz criptografia homomórfica para proteger dados IoT antes da nuvem.; Blockchain technology has emerged as a promising solution to many of the IoT security challenges; A key innovation in the proposed model is the integration of homomorphic encryption; Finger vein (FV) recognition stands out as one of the most secure biometric approaches.",
+  "experimento": "descricao: Implementar o framework de autenticação IoT baseado em blockchain permissionada e criptografia homomórfica descrito por Addula (2025) em um cenário de edge computing com latência variável. Avaliar a robustez do framework comparando-o com (i) o modelo híbrido de blockchain + criptografia homomórfica para IIoT apresentado por Addula (2025) na página 2 e (ii) um esquema tradicional de PKI + TLS sem blockchain.; implementacao: Desenvolver nós de edge usando Raspberry Pi ou máquinas virtuais Docker.; Utilizar Hyperledger Fabric (permisioned) para a camada de ledger.; Integrar biblioteca de criptografia homomórfica (ex.: Microsoft SEAL).; Gerar tráfego IoT sintético (sensores de temperatura, vídeo) via MQTT.; Controlar a latência da rede com NetEm (Linux) variando entre 10 ms e 200 ms.; comparacao: Medir desempenho do framework proposto versus (a) o modelo híbrido de Addula (2025) que inclui aprendizado profundo leve para autenticação biométrica e (b) PKI/TLS tradicional, mantendo as mesmas condições de carga e latência.",
+  "recursos": "dados: Conjunto de dados sintéticos de sensores IoT (temperatura, umidade, fluxo de vídeo) gerados com IoT‑Sim.; Métricas de tráfego real de cidades inteligentes disponíveis no portal Open Data da cidade de Barcelona (público).; ferramentas: Hyperledger Fabric v2.5 (open‑source).; Microsoft SEAL (biblioteca de criptografia homomórfica).; Docker & Docker‑Compose para orquestração de nós de edge e cloud.; NetEm para emulação de latência variável.; MQTT broker (Eclipse Mosquitto).; Prometheus + Grafana para coleta e visualização de métricas.; infraestrutura: Laboratório de computação com 4 máquinas x86 (8 CPU, 16 GB RAM) ou equivalentes virtuais.; Raspberry Pi 4 (4 GB) para representar dispositivos de borda.",
+  "metricas": "Latência total da autenticação (ms).; Throughput de mensagens autenticadas (msg/s).; Uso de CPU e memória nos nós de edge durante a autenticação.; Overhead de tamanho de mensagem (bytes) introduzido pelos contratos inteligentes e criptografia homomórfica.; Taxa de falhas de autenticação sob diferentes níveis de latência.; Tempo de revogação de credenciais (quando aplicável).",
+  "detalhada": true
+}

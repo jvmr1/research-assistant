@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:31:31",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "prevent data from having a single point of failure",
+      "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+      "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde."
+    },
+    "pagina": 4,
+    "texto": "Page 4 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \nSect. 5 discusses the evaluation, outcomes, and performance analysis of the experiments \nconducted to test the proposed framework. Section  6 presents the findings and com -\npares the proposed framework with the existing works. The conclusion is presented in \nSect. 7.\n2 Related works\nThis section presents the literature on the opportunities and challenges of implement -\ning technological advancements in Smart healthcare systems. Some of the best research \nworks published in medical fields are highlighted here.\nZheng et al. [17] proposed an IPFS-based Blockchain system to reduce the data storage \nin Blockchain networks and increase processing speed. They implemented this scheme \non the Bitcoin Blockchain. A zigzag-based novel storage model is proposed by Chen et \nal. [18] to increase the block storage model. High throughput is achieved in this model \nwith the implementation of IPFS. Pan et al. [ 19] proposed an edge-IoT framework, \nEdgeChain, based on Blockchain and smart contracts for secure and scalable commu -\nnication. Jolfaei et al. [ 9] discuss different system models and how to improve the scal -\nability of Blockchain-based systems. Off-chain and on-chain-based models can be used \nto overcome the scalability issues in Blockchain-based IoMT systems. Providing a clear \nroute for tracing the activities and achieving a high level of trustworthiness, Nyaletey \net al. [20] proposed block IPFS a Blockchain-enabled IPFS. For secure storage, safe data \nsharing, and maintaining security while working in the system, Li et al. [ 21] proposed a \nhyperledger fabric and Interplanetary File System to safely share healthcare information. \nOn-chain and off-chain Blockchain-based Interplanetary File system solves scalability, \nconfidentiality, and storage problems. This model increases the confidentiality of shar -\ning healthcare information proposed by Mani et al. [ 22]. A Blockchain-based Interplan -\netary File System is proposed by Mamun et al. [ 23] for implementing Blockchain EMR \nand providing access rules. An immutable Blockchain-based Interplanetary File System \nis proposed by Sultana et al. [ 24] for enhancing the security of healthcare data transac -\ntions. For easy access, consistency, integrity, availability, and security, Kumar et al. [ 25] \nproposed off-chain data storage. Interplanetary File System uses blockchain technology \nin its model. Alrebdi et al. [ 26] proposed a Blockchain smart contract-based decentral -\nized medical record system with several features: immutability, anonymity, security, \ndecentralized, and tamper-proof. Interplanetary File Systems and cloud computing \ntechnology are used here for medical record-keeping. A security and privacy protection \nscheme using Blockchain technology is proposed by Tan et al. [ 27] with traceable and \ndirect revocation for COVID-19 records. Cipher text policy attribute-based encryption \nis used here. Distributed patient-centric image management (PCIM) system, an Ethe -\nreum Blockchain, and an Interplanetary File System (IPFS) are proposed by Jabarulla \net al. [ 28] for decentralized storage and global access to medical images. A systematic \nreview of Blockchain-based PHRs has been done by Fang et al. [ 11] for limitations, \ndesign choices, and future direction. The attribute-based encryption scheme is proposed \nby Sun et al. [ 29] for the storage and sharing of medical records using Blockchain tech -\nnology and the Interplanetary File System.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve a seção de avaliação e resultados do trabalho, apresenta um panorama de trabalhos relacionados que utilizam IPFS, blockchain e técnicas de criptografia para melhorar a escalabilidade, confidencialidade e segurança em sistemas de saúde inteligentes. São citados diversos estudos que combinam armazenamento off‑chain, contratos inteligentes, edge‑IoT e criptografia baseada em atributos para superar limitações de desempenho e privacidade.",
+    "perfil": {
+      "problema": "prevent data from having a single point of failure",
+      "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+      "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Zheng et al. proposed an IPFS-based Blockchain system to reduce the data storage in Blockchain networks and increase processing speed.",
+        "citacao": "Zheng et al. [17] proposed an IPFS-based Blockchain system to reduce the data storage in Blockchain networks and increase processing speed."
+      },
+      {
+        "afirmacao": "Pan et al. proposed an edge‑IoT framework, EdgeChain, based on Blockchain and smart contracts for secure and scalable communication.",
+        "citacao": "Pan et al. [19] proposed an edge‑IoT framework, EdgeChain, based on Blockchain and smart contracts for secure and scalable communication."
+      }
+    ],
+    "interpretacao": "O trabalho se alinha a uma tendência de combinar IPFS com blockchain para mitigar problemas de escalabilidade e ponto único de falha, reforçando a segurança e a eficiência na troca de dados de saúde, e posiciona-se dentro de um cenário de múltiplas propostas semelhantes que exploram off‑chain storage e criptografia avançada.",
+    "duvidas": "Quais métricas específicas de desempenho foram usadas na avaliação? Como o framework lida com a revogação de credenciais em ambientes multi‑organizacionais? Há detalhes sobre a implementação prática em edge devices de cidades inteligentes?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:32:11"
+}

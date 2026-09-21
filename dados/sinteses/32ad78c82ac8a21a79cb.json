@@ -1,0 +1,30 @@
+{
+  "titulo": "A review on WSN based resource constrained smart IoT systems",
+  "tipo_leitura": "pdf",
+  "fichas": [
+    {
+      "pagina": 13,
+      "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+      "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+      "duvidas": "Conferir manualmente este trecho se ele for importante."
+    },
+    {
+      "pagina": 14,
+      "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+      "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+      "duvidas": "Conferir manualmente este trecho se ele for importante."
+    },
+    {
+      "pagina": 15,
+      "resumo": "O trecho descreve uma revisão de sistemas IoT com restrições de recursos, destacando a necessidade de incluir mais parâmetros na seleção de heads de cluster para eficiência energética, a demanda por criptosistemas leves para preservar privacidade, a aplicação de paradigmas offline e online para mecanismos de privacidade com baixo consumo energético, e a potencialidade de tecnologias avançadas como SDN, ML, 5G e edge computing para aprimorar os sistemas inteligentes.",
+      "interpretacao": "A revisão identifica lacunas na eficiência energética e segurança em redes IoT, sugerindo que a inclusão de mais critérios na seleção de heads de cluster e a adoção de criptosistemas leves podem melhorar a segurança e a eficiência.",
+      "duvidas": "Como a integração de tecnologias avançadas como SDN e ML pode ser implementada sem sobrecarga energética em sistemas IoT com recursos limitados?"
+    },
+    {
+      "pagina": 16,
+      "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+      "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+      "duvidas": "Conferir manualmente este trecho se ele for importante."
+    }
+  ]
+}

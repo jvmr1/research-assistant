@@ -1,0 +1,40 @@
+{
+  "resumo": "O estudo apresenta uma arquitetura de computação de borda assistida por blockchain que atinge 1273 tps, reduz latência e protege contra ataques de replay e man‑in‑the‑middle. O desempenho é satisfatório até ~100 nós de borda, mas decai acima desse número devido ao consenso.",
+  "perfil": {
+    "problema": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+    "solucao": "edge-level implementation of authentication that lowers the computational burden and improves the industry platform’s security",
+    "avaliacao": "maximum throughput of 1273 tps",
+    "limites": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+    "possibilidades": [
+      "Avaliar a escalabilidade da arquitetura PoAh com milhares de dispositivos e mais de 100 nós de borda, medindo latência e taxa de transação.",
+      "Integrar credenciais verificáveis (verifiable credentials) e identidade auto‑soberana (SSI) ao processo de autenticação.",
+      "Comparar o consenso PoAh com outros mecanismos leves (Proof of Authority, Proof of Stake) em ambientes de borda heterogêneos.",
+      "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granulado entre dispositivos IoT e nós de borda.",
+      "Investigar estratégias de shard ou hierarquização da blockchain para mitigar o gargalo de consenso acima de 100 nós."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "maximum throughput of 1273 tps, a substantial improvement over Bitcoin and Ethereum",
+      "afirmacao": "Alto rendimento da blockchain"
+    }
+  ],
+  "interpretacao": "Os resultados indicam que a combinação de blockchain privada leve (PoAh) com computação de borda pode melhorar significativamente a eficiência e a segurança de IIoT, porém a escalabilidade do consenso se torna um gargalo crítico quando o número de nós de borda ultrapassa cerca de 100.",
+  "duvidas": "Como a arquitetura se comportaria em cenários com milhares de nós distribuídos geograficamente? Qual seria o impacto de integrar SSI ou ABE sobre a latência e o consumo de recursos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "b690824cdae3dbd03efc",
+  "artigo": "Asaithambi_2025",
+  "pagina": 15,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+    "solucao": "edge-level implementation of authentication that lowers the computational burden and improves the industry platform’s security",
+    "avaliacao": "maximum throughput of 1273 tps",
+    "limites": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+    "possibilidades": "Avaliar a escalabilidade da arquitetura PoAh com milhares de dispositivos e mais de 100 nós de borda, medindo latência e taxa de transação.; Integrar credenciais verificáveis (verifiable credentials) e identidade auto‑soberana (SSI) ao processo de autenticação.; Comparar o consenso PoAh com outros mecanismos leves (Proof of Authority, Proof of Stake) em ambientes de borda heterogêneos.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granulado entre dispositivos IoT e nós de borda.; Investigar estratégias de shard ou hierarquização da blockchain para mitigar o gargalo d",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "406a8d28108451c02b35"
+  }
+}

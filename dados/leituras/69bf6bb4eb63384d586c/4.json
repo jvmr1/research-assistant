@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo descreve um processo iterativo de desenvolvimento e validação de uma taxonomia para gestão de identidade baseada em DLT, envolvendo três iterações de categorização, consolidação e teste contra pesquisas existentes. A versão final contém 22 dimensões agrupadas em âncora de confiança, identidade e ledger, e foi avaliada quanto à generalização, robustez e utilidade, demonstrando sua abrangência para classificar arquiteturas DLT‑IDM.",
+  "perfil": {
+    "problema": "there is no structured method to assess and compare these solutions, particularly regarding critical aspects such as trust sources, governance frameworks, and credential management.",
+    "solucao": "The final taxonomy artifact (Table II) comprises 22 dimensions and 113 serving as a guide for understanding and classifying DLT-based identity management solutions.",
+    "avaliacao": "Evaluation against defined quality criteria",
+    "limites": "Não informado",
+    "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar com SSI e credenciais verificáveis em edge computing; avaliar desempenho e escalabilidade em cenários de IIoT distribuído; estender dimensões para incluir privacidade, revogação de credenciais e criptografia baseada em atributos (ABE)."
+  },
+  "evidencias": [
+    {
+      "citacao": "The taxonomy was systematically tested against prior research to confirm its generalizability and robustness across diverse solution architectures.",
+      "afirmacao": "The taxonomy was systematically tested against prior research to confirm its generalizability and robustness across diverse solution architectures."
+    },
+    {
+      "citacao": "The final taxonomy artifact (Table II) comprises 22 dimensions and 113 serving as a guide for understanding and classifying DLT-based identity management solutions.",
+      "afirmacao": "The final taxonomy artifact comprises 22 dimensions and 113 serving as a guide for understanding and classifying DLT-based identity management solutions."
+    }
+  ],
+  "interpretacao": "O processo descrito demonstra um esforço rigoroso de construção e validação de uma taxonomia, combinando abordagens conceituais e empíricas para garantir que a classificação seja robusta e aplicável a diferentes arquiteturas DLT‑IDM.",
+  "duvidas": "Quais critérios específicos foram usados na avaliação de qualidade? Como a taxonomia lida com aspectos de revogação de credenciais e privacidade? Há métricas de desempenho para validar a escalabilidade em ambientes de IoT distribuídos?",
+  "avisos": [],
+  "id": "b94ef84eb006358cbd0d",
+  "artigo": "Vaziry_2025",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "there is no structured method to assess and compare these solutions, particularly regarding critical aspects such as trust sources, governance frameworks, and credential management.",
+    "solucao": "The final taxonomy artifact (Table II) comprises 22 dimensions and 113 serving as a guide for understanding and classifying DLT-based identity management solutions.",
+    "avaliacao": "The taxonomy aims to provide a comprehensive framework spanning the complete spectrum of DLT-based IDM solutions while facilitating conceptual comparability through systematic classification of fundamental architectural components.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar com SSI e credenciais verificáveis em edge computing; avaliar desempenho e escalabilidade em cenários de IIoT distribuído; estender dimensões para incluir privacidade, revogação de credenciais e criptografia baseada em atributos (ABE).",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

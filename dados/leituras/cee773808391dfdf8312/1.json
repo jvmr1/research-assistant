@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta um modelo híbrido de blockchain combinado com criptografia homomórfica para autenticação escalável e preservação de privacidade em IoT industrial, especialmente em ambientes de saúde. Destaca a vulnerabilidade de arquiteturas centralizadas, a necessidade de segurança em redes 6G e propõe um framework de confiança que utiliza aprendizado profundo leve para autenticação biométrica, suportando milhares de sensores.",
+  "perfil": {
+    "problema": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+    "solucao": "integration of homomorphic encryption",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não informado",
+    "possibilidades": "Aplicar o modelo a cenários de cidades inteligentes com computação de borda; integrar identidade auto‑soberana (SSI) e credenciais verificáveis; explorar criptografia baseada em atributos (ABE) para controle de acesso granular; validar em implantação real com múltiplas organizações; investigar mecanismos de revogação de credenciais em ambientes híbridos."
+  },
+  "evidencias": [
+    {
+      "citacao": "Blockchain technology has emerged as a promising solution to many of the IoT security challenges [11].",
+      "afirmacao": "Blockchain technology has emerged as a promising solution to many of the IoT security challenges"
+    },
+    {
+      "citacao": "A key innovation in the proposed model is the integration of homomorphic encryption —introduced here for the first time.",
+      "afirmacao": "A key innovation in the proposed model is the integration of homomorphic encryption"
+    }
+  ],
+  "interpretacao": "O uso combinado de blockchain híbrido e criptografia homomórfica visa superar as limitações de privacidade e confiança das arquiteturas centralizadas, permitindo processamento de dados criptografados na nuvem sem expor informações sensíveis.",
+  "duvidas": "Como o modelo lida com a revogação de credenciais em tempo real? Qual o impacto de homomorphic encryption no consumo de energia dos dispositivos IoT de baixa potência? Como a solução se comporta em cenários de múltiplas organizações com políticas de acesso divergentes?",
+  "avisos": [],
+  "id": "5f602c19ab7e3def8b54",
+  "artigo": "Addula_2025",
+  "pagina": 2,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+    "solucao": "integration of homomorphic encryption",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o modelo a cenários de cidades inteligentes com computação de borda; integrar identidade auto‑soberana (SSI) e credenciais verificáveis; explorar criptografia baseada em atributos (ABE) para controle de acesso granular; validar em implantação real com múltiplas organizações; investigar mecanismos de revogação de credenciais em ambientes híbridos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

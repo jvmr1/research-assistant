@@ -1,0 +1,36 @@
+{
+  "resumo": "O método AAIFLF-PPCD foi testado em um conjunto de dados de referência, apresentando acurácia superior de 99,47% em comparação com modelos existentes, sob diferentes medidas de desempenho.",
+  "perfil": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "explorar compressão ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; avaliar impacto de diferentes proporções TRPH/TSPH na generalização; investigar eficiência de federated learning com comunicação otimizada."
+  },
+  "evidencias": [
+    {
+      "citacao": "the AAIFLF-PPCD technique was evaluated using a benchmark dataset.",
+      "afirmacao": "the AAIFLF-PPCD technique was evaluated using a benchmark dataset"
+    },
+    {
+      "citacao": "The performance validation of the AAIFLF-PPCD technique exhibited a superior accuracy value of 99.47% over existing models under diverse measures.",
+      "afirmacao": "superior accuracy value of 99.47% over existing models"
+    }
+  ],
+  "interpretacao": "Os resultados indicam que o modelo atinge alta acurácia, porém o trecho não detalha outras métricas nem descreve o benchmark utilizado, limitando a avaliação comparativa.",
+  "duvidas": "Qual a composição exata do benchmark dataset? Como foram definidos TRPH e TSPH? Qual o custo computacional observado nas fases de HHO, SSAE e WOA?",
+  "avisos": [],
+  "id": "e2363b4cb3a823b08f57",
+  "artigo": "Ragab_2025",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "explorar compressão ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; avaliar impacto de diferentes proporções TRPH/TSPH na generalização; investigar eficiência de federated learning com comunicação otimizada.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "c5214ad786b009c632b3"
+  }
+}

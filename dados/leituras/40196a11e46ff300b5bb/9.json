@@ -1,0 +1,36 @@
+{
+  "resumo": "O texto descreve o framework DNNs‑BCT que combina redes neurais profundas com blockchain para detectar anomalias em IoT. Utiliza funções de ativação avançadas, dropout e batch‑normalization, além de seleção de características (RFE, PCA, MI) extraídas de eventos de segurança blockchain, logs de dispositivos e tráfego de rede. Detecta exfiltração, DDoS, ataques Sybil e brute‑force. O pipeline inclui coleta e pré‑processamento de dados (75 % treino, 25 % teste) e treinamento de DNN para classificar o comportamento da rede como normal, benigno ou perigoso, gerando alertas em tempo real.",
+  "perfil": {
+    "problema": "single points of failure",
+    "solucao": "hybrid DNN-Blockchain architecture for IoT network security",
+    "avaliacao": "scalability—94.96%",
+    "limites": "computational cost analysis for DNN training and blockchain operations is necessary",
+    "possibilidades": "Aplicar a seleção avançada de características (RFE, PCA, MI) a dados de sensores de cidades inteligentes; integrar métricas de tráfego urbano (ex.: sensores de mobilidade, energia) ao modelo; avaliar desempenho em dispositivos de borda com recursos limitados; explorar aprendizado federado para atualização contínua dos DNNs sem expor logs sensíveis; investigar o uso de verifiable credentials para autenticação descentralizada de dispositivos IoT."
+  },
+  "evidencias": [
+    {
+      "citacao": "The DNNs-BCT framework’s feature selection procedure aims to improve anomaly detection accuracy with little computational cost.",
+      "afirmacao": "O procedimento de seleção de características do framework DNNs‑BCT visa melhorar a precisão da detecção de anomalias com baixo custo computacional."
+    },
+    {
+      "citacao": "The trained model sets network behavior as either normal, benign, or aberrant, either benign or dangerous.",
+      "afirmacao": "O modelo treinado classifica o comportamento da rede como normal, benigno ou anômalo, gerando alerta de risco de segurança."
+    }
+  ],
+  "interpretacao": "O trecho evidencia que a proposta combina técnicas avançadas de deep learning e blockchain para criar um sistema de detecção de anomalias que prioriza eficiência computacional e capacidade de identificar múltiplas ameaças, reforçando a ideia de segurança descentralizada e auto‑aprendente para ambientes IoT.",
+  "duvidas": "Não há detalhes sobre a avaliação empírica (métricas, benchmarks) nem sobre o impacto do custo computacional real em dispositivos de borda; também falta informação sobre como as credenciais verificáveis seriam integradas ao fluxo de detecção.",
+  "avisos": [],
+  "id": "8d50265a63f95315ede0",
+  "artigo": "Sathyabama_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "single points of failure",
+    "solucao": "hybrid DNN-Blockchain architecture for IoT network security",
+    "avaliacao": "scalability—94.96%",
+    "limites": "computational cost analysis for DNN training and blockchain operations is necessary",
+    "possibilidades": "Aplicar a seleção avançada de características (RFE, PCA, MI) a dados de sensores de cidades inteligentes; integrar métricas de tráfego urbano (ex.: sensores de mobilidade, energia) ao modelo; avaliar desempenho em dispositivos de borda com recursos limitados; explorar aprendizado federado para atualização contínua dos DNNs sem expor logs sensíveis; investigar o uso de verifiable credentials para autenticação descentralizada de dispositivos IoT.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "40196a11e46ff300b5bb"
+  }
+}

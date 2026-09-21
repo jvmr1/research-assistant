@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:32:24",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "prevent data from having a single point of failure",
+      "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+      "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde."
+    },
+    "pagina": 6,
+    "texto": "Page 6 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \nhashed IPFS to lower the network’s latency, increase security, and reduce data storage \ncosts. Unlike cloud storage, IPFS doesn’t rely on a single server, so there’s no need to \nentrust one another and no single point of failure. Each file is stored in an IPFS, with \nits corresponding hash maintained in the Blockchain network. Figure  2. depicts the \nworkflow of registering and uploading patient health records. Figure 3. depicts accessing \nmedical records stored in IPFS.\n3.2 Encryption and decryption process\nThe two-stage process of encryption and decryption is depicted in Fig.  4. This frame -\nwork hashes User1’s source text into a message digest. Message digests are in an unread-\nable format. The source text and the sender’s private key are used to construct a digital \nsignature through encryption and hashing. The original encrypted text, the message \ndigest, and the digital signature are sent onto the Blockchain. The receiver (user 2) sepa -\nrates the source text and the encrypted message digest. Using User1’s public key, decrypt \nthe encrypted message digest and extract the message digest. The message digest is com-\nputed from the original text using the same hashing technique. After computing mes -\nsage digests, they are compared with one another. If the digests of the two messages are \nthe same, then the data has not been tampered with, and if they are different, then the \nmessage has been tampered with.\n3.3 Minimizing data storage and transaction processing times\nIn this subsection, we employ quantitative analysis to demonstrate how IPFS facilitates \nfaster transaction processing and smaller Blockchain data sizes. Equation  1 represents \nTable 1 Table of notations\nNotations Descriptions Notations Descriptions\nUID UserID µut Mean of upload time\nUName User name Nut Numbers of measured upload times\nUAddress User address σdt Standard deviation in download time\nUContactno User contact number Xdt Each download time count\nUDob User date of birth µdt Mean of download time\nUIDproof User identity proof Ndt Numbers of measured download times\nDspec Device Specification HPfile Hash of Patient File\nIPFS Interplanetary file system PID Individual patient identity\nσat Standard deviation in access time PHfile Patient health file\nµat Mean of access time HFile Hash value of requested file\nNat Number of measured access times HBC Hash value stored in Blockchain\nHIPFS Hash value stored in IPFS TXNi Size of each transaction\nTXN Total number of transactions BHs Size of block header\nHSi Size of each hash BS Block size\nTXNn Number of transaction per block Ti Execution time of each transaction\nBt Total execution time for block PBks Public key of sender\nPBkr Public key of receiver PVKs Private Key Sender\nPVKr Private Key Receiver BSwithout IPFS Block size without IPFS\nXat Each access time count BSwith IPFS Block size with IPFS\nXut Each uploads time count HUID Healthcare User Identity\nHUName Healthcare User Name HData Healthcare Data\nHUContactno Healthcare User Contact Number PID Patient Identity\nPName Patient Name PData Patient Healthcare Data\nPContactno Patient Contact Number DigSig Digital Signature\nDcrptSig Decrypted Signature σut Standard deviation in upload time",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O estudo propõe armazenar registros de saúde em IPFS, mantendo apenas o hash na blockchain, para reduzir latência, custos de armazenamento e eliminar ponto único de falha; descreve um processo de criptografia de duas etapas e apresenta análise quantitativa que indica menor tempo de transação e tamanho reduzido da cadeia.",
+    "perfil": {
+      "problema": "no single point of failure",
+      "solucao": "Each file is stored in an IPFS, with its corresponding hash maintained in the Blockchain network.",
+      "avaliacao": "quantitative analysis to demonstrate how IPFS facilitates faster transaction processing and smaller Blockchain data sizes.",
+      "limites": "Não informado.",
+      "possibilidades": "• Avaliar a integração de identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Testar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Incorporar auditoria baseada em smart contracts para rastreamento de acessos;\n• Explorar políticas de zero‑trust entre provedores de saúde e autoridades municipais."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "IPFS elimina ponto único de falha.",
+        "citacao": "no single point of failure"
+      },
+      {
+        "afirmacao": "IPFS reduz tempo de processamento de transações e tamanho da blockchain.",
+        "citacao": "quantitative analysis to demonstrate how IPFS facilitates faster transaction processing and smaller Blockchain data sizes."
+      }
+    ],
+    "interpretacao": "A proposta combina IPFS e blockchain para melhorar a resiliência e eficiência do compartilhamento de dados de saúde, usando criptografia de duas etapas para garantir integridade e confidencialidade.",
+    "duvidas": "Quais são os custos operacionais de manter nós IPFS em larga escala? Como a solução lida com a revogação de credenciais em tempo real? Há avaliação de desempenho em redes 5G/edge típicas de cidades inteligentes?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:32:46"
+}

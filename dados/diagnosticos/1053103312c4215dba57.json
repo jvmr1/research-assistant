@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T20:18:20",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+    "perfil_anterior": {
+      "problema": "introduce significant computational overhead",
+      "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+      "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+      "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+      "possibilidades": "Avaliar o Mecanismo de Agregação Adaptativa em cenários de cidades inteligentes com grande variedade de dispositivos de borda (sensores, câmeras, atuadores).; Incorporar métricas de consumo energético (medidas no Raspberry Pi) para otimizar o trade‑off entre privacidade e eficiência energética.; Testar o framework com diferentes algoritmos de consenso (PoA, BFT) em redes IoT de escala municipal.; Estender o estudo de ablação para incluir criptografia baseada em atributos (ABE) como camada adicional de controle de acesso interdepartamental."
+    },
+    "pagina": 16,
+    "texto": "adjusts the weight contributions from devices based on their data quality and training reliability. Thus, model \nconvergence remains stable even in heterogeneous environments.\nTable  9 presents a detailed communication overhead analysis of the proposed EPP-BCFL framework, \nconsidering different numbers of participating clients, the amount of data sent per round, the total training \nrounds, and the overall data exchanged during the training process.\nAs shown in Table 9, when the number of clients increases, the data sent per round decreases gradually due \nto a corresponding increase in the compression ratio. We observe a compression efficiency gain of up to 28% \nwhen scaling from 10 to 50 clients.\nTo understand the trade-off between compression and performance, we conducted supplementary tests. Our \nfindings indicate that even at 30% compression, model accuracy dropped by less than 1.5%, demonstrating the \npracticality of our method in real-time environments.\nFurthermore, to reflect realistic medical network conditions, we simulated network fluctuations with a ± 15% \nlatency variance across clients. The EPP-BCFL framework incorporates an adaptive buffering mechanism and \nretransmission policy, ensuring robust communication synchronization and convergence, even under unstable \nnetwork conditions.\nTo assess the robustness of the EPP-BCFL framework, we simulated model poisoning attacks where \nadversaries attempted to inject malicious updates into the global model as in Table  10. Figure  6. shows the \naccuracy comparison with different attacks and Fig. 7. shows the response time.\nTo provide a more comprehensive evaluation of the EPP-BCFL framework’s resilience against various attacks, \nthe experimental setup detailed in Table 10 includes simulations of multiple adversarial scenarios. Three distinct \nattack types were considered: data poisoning, where malicious clients introduced mislabeled samples comprising \n30% of their local training data; model poisoning, in which attackers manipulated the model gradients through \ntechniques such as scaling or sign-flipping to disrupt learning; and adversarial attacks, implemented using \nthe Fast Gradient Sign Method (FGSM) to inject perturbed inputs during training. In this setup, 20% of the \ntotal participating clients were designated as adversarial, reflecting a moderately hostile environment. These \nattacks were executed in every communication round across 50 global training rounds to assess the framework’s \nrobustness under persistent threat. The EPP-BCFL framework employs an Adaptive Model Aggregation (AMA) \nmechanism to detect and mitigate the influence of malicious clients. This mechanism evaluates trust scores for \neach client by monitoring gradient deviations, local accuracy discrepancies, and historical behavior. Clients \nwith anomalous or suspicious updates are either assigned lower aggregation weights or filtered out entirely from \nthe global model update. This strategy ensures the integrity and robustness of the learning process, even in the \npresence of adversarial participants.\nThe results indicate a significant improvement in accuracy when using EPP-BCFL compared to baseline \nfederated learning (FL). For data poisoning attacks, EPP-BCFL achieves 93.2% accuracy, compared to 72.5% \nin baseline FL, demonstrating its robustness against malicious data injections. Similarly, for model poisoning \nAttack Type Baseline FL Accuracy (%) EPP-BCFL Accuracy (%) Baseline FL Security Response Time (s) EPP-BCFL Security Response Time (s)\nData Poisoning 72.5 93.2 5.8 2.1\nModel Poisoning 69.3 92.7 6.5 2.5\nAdversarial Attack 70.8 94.0 7.2 2.3\nTable 10. Attack resilience Analysis.\n \nNumber of Clients Data Sent per Round (MB) Total Training Rounds Total Data Sent (GB) Compression Ratio (%)\n10 2.5 50 1.25 0% (No compression)\n20 2.3 50 2.3 8%\n30 2.1 50 3.15 16%\n40 2.0 50 4.0 20%\n50 1.8 50 4.5 28%\nTable 9. Communication overhead Analysis.\n \nMetric Device A (Server) Device B (Laptop) Device C (IoT Device)\nTraining Time (per epoch) 18 s 32 s 59 s\nCPU Usage (%) 55% 72% 88%\nMemory Usage (MB) 620 530 410\nEnergy Consumption (Wh) 1.1 0.9 0.5\nLocal Accuracy (%) 95.3 94.8 94.1\nTable 8. Performance across heterogeneous edge Devices.\n \nScientific Reports |        (2025) 15:27524 16| https://doi.org/10.1038/s41598-025-12225-x\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve como o framework EPP-BCFL ajusta pesos de dispositivos conforme qualidade dos dados, reduzindo a sobrecarga de comunicação via compressão (até 28% de ganho) sem degradar significativamente a acurácia (<1,5% de perda). Avalia a robustez contra ataques de envenenamento de dados, modelo e adversários FGSM, mostrando acurácias acima de 92% e tempos de resposta menores que os do FL baseline, mesmo com latência variável e dispositivos heterogêneos.",
+    "perfil": {
+      "problema": "introduce significant computational overhead",
+      "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+      "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+      "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+      "possibilidades": [
+        "Aplicar o mecanismo de Agregação Adaptativa (AMA) em cenários de cidades inteligentes com dispositivos IoT heterogêneos.",
+        "Incluir métricas de consumo energético e latência para otimizar o trade‑off entre compressão, privacidade e eficiência energética em bordas municipais.",
+        "Testar a resistência do EPP-BCFL a ataques de envenenamento em redes de sensores urbanos distribuídos.",
+        "Integrar criptografia baseada em atributos (ABE) como camada adicional de controle de acesso interdepartamental.",
+        "Explorar diferentes algoritmos de consenso (PoA, BFT) em redes de borda de escala municipal."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Compression efficiency gain of up to 28% when scaling from 10 to 50 clients.",
+        "citacao": "We observe a compression efficiency gain of up to 28% when scaling from 10 to 50 clients."
+      },
+      {
+        "afirmacao": "EPP-BCFL achieves 93.2% accuracy against data poisoning attacks, compared to 72.5% in baseline FL.",
+        "citacao": "For data poisoning attacks, EPP-BCFL achieves 93.2% accuracy, compared to 72.5% in baseline FL."
+      }
+    ],
+    "interpretacao": "Os resultados indicam que a combinação de compressão adaptativa e o mecanismo AMA mantém a convergência e a acurácia mesmo em ambientes heterogêneos e sob condições de rede instáveis, reforçando a viabilidade do framework para aplicações críticas como gestão de registros de saúde eletrônicos.",
+    "duvidas": "Como a compressão afeta a privacidade dos dados sensíveis em cenários de cidades inteligentes? Qual seria o impacto de aumentar a proporção de clientes adversários além de 20%?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:18:32"
+}

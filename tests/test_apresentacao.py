@@ -13,15 +13,14 @@ class ApresentacaoTest(unittest.TestCase):
         self.p.painel()
         self.assertEqual({p.name for p in (self.root / 'vault').iterdir()}, {
             'INSTRUCOES.md', 'RELATORIO.md', 'METODOLOGIA-REVISAO.md',
-            'TRABALHOS-SEM-PROPOSTA.md', 'AVALIAR-PROPOSTAS.md', 'trabalhos',
+            'AVALIAR-PROPOSTAS.md', 'PROPOSTAS-DE-TRABALHO.md',
         })
 
     def test_artigo_sem_texto_nao_cria_nota_no_grafo(self):
         self.artigo('A')
         self.p.painel()
         self.assertFalse((self.root / 'vault/trabalhos/A.md').exists())
-        sem_proposta = (self.root / 'vault/TRABALHOS-SEM-PROPOSTA.md').read_text(encoding='utf-8')
-        self.assertIn('`A`', sem_proposta)
+        self.assertFalse((self.root / 'vault/TRABALHOS-SEM-PROPOSTA.md').exists())
 
     def test_relatorio_principal_nao_lista_acervo(self):
         self.artigo('A')
@@ -35,6 +34,8 @@ class ApresentacaoTest(unittest.TestCase):
     def test_tags_do_trabalho_usam_frontmatter_inline(self):
         a = self.artigo('A')
         a['pdf_local'] = 'pdfs/A.pdf'
+        self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia', 'revisao': self.p.revisao, 'fontes': ['A']}]
+        motor.json_gravar(self.root / 'dados/propostas/p.json', {'fontes': ['A'], 'meu_trabalho': 'Ideia', 'buscas': []})
         self.base.ARTIGOS.mkdir(parents=True, exist_ok=True)
         (self.base.ARTIGOS / 'A.md').write_text(
             '---\ntags:\n  - artigo\n  - status/novo\n---\n# A\n\n## Tags\n\n#artigo #status/novo\n',
@@ -45,8 +46,41 @@ class ApresentacaoTest(unittest.TestCase):
         self.assertRegex(nota, r'(?m)^tags: \[[^\n]*\]$')
         self.assertNotRegex(nota, r'(?m)^  - (artigo|status/novo)$')
 
+    def test_tags_sao_recriadas_quando_nota_nao_tem_frontmatter(self):
+        a = self.artigo('A')
+        a['titulo'] = 'Blockchain access control for IoT'
+        a['pdf_local'] = 'pdfs/A.pdf'
+        self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia', 'revisao': self.p.revisao, 'fontes': ['A']}]
+        motor.json_gravar(self.root / 'dados/propostas/p.json', {'fontes': ['A'], 'meu_trabalho': 'Ideia', 'buscas': []})
+        self.base.ARTIGOS.mkdir(parents=True, exist_ok=True)
+        (self.base.ARTIGOS / 'A.md').write_text('# A\n\nTexto antigo.\n', encoding='utf-8')
+        self.p.painel()
+        nota = (self.root / 'vault/trabalhos/A.md').read_text(encoding='utf-8')
+        self.assertTrue(nota.startswith('---\n'))
+        self.assertRegex(nota, r'(?m)^tags: \[[^\n]*(iot|blockchain)[^\n]*(iot|blockchain)[^\n]*\]$')
+        self.assertIn('## Tags', nota)
+        self.assertIn('#iot', nota)
+
+    def test_ficha_json_vazia_nao_quebra_painel(self):
+        a = self.artigo('A')
+        a['pdf_local'] = 'pdfs/A.pdf'
+        self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia', 'revisao': self.p.revisao, 'fontes': ['A']}]
+        motor.json_gravar(self.root / 'dados/propostas/p.json', {'fontes': ['A'], 'meu_trabalho': 'Ideia', 'buscas': []})
+        a['leitura_agente'] = {
+            'revisao': self.p.revisao, 'assinatura': 'assinatura', 'feitos': 1,
+            'total': 1, 'concluida': False, 'tipo': 'pdf', 'paginas_sem_texto': []
+        }
+        pasta = self.root / 'dados/leituras/assinatura'
+        pasta.mkdir(parents=True)
+        (pasta / '0.json').write_text('', encoding='utf-8')
+        self.p.painel()
+        nota = (self.root / 'vault/trabalhos/A.md').read_text(encoding='utf-8')
+        self.assertIn('Ficha 0 indisponível', nota)
+
     def test_nota_exibe_entendimento_consolidado_do_trabalho(self):
         artigo = self.artigo('A')
+        self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia', 'revisao': self.p.revisao, 'fontes': ['A']}]
+        motor.json_gravar(self.root / 'dados/propostas/p.json', {'fontes': ['A'], 'meu_trabalho': 'Ideia', 'buscas': []})
         artigo['perfil_revisao'] = {
             'revisao': self.p.revisao,
             'problema': 'Problema sustentado por ficha.',
@@ -84,9 +118,22 @@ class ApresentacaoTest(unittest.TestCase):
         self.assertIn('É citado por: [A](A.md)', nota_b)
         self.assertIn('A e B usam estratégias diferentes.', nota_a)
 
+    def test_proposta_descartada_some_do_relatorio_e_do_grafo(self):
+        a = self.artigo('A')
+        a['pdf_local'] = 'pdfs/A.pdf'
+        self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia ruim', 'revisao': self.p.revisao, 'fontes': ['A']}]
+        motor.json_gravar(self.root / 'dados/propostas/p.json', {
+            'fontes': ['A'], 'meu_trabalho': 'Ideia ruim', 'avaliacao_humana': 'descartar', 'buscas': []})
+        self.p.painel()
+        rel = (self.root / 'vault/RELATORIO.md').read_text(encoding='utf-8')
+        self.assertNotIn('Ideia ruim', rel)
+        self.assertFalse((self.root / 'vault/trabalhos/A.md').exists())
+
     def test_anotacoes_humanas_preservadas_ao_atualizar(self):
         a = self.artigo('A')
         a['pdf_local'] = 'pdfs/A.pdf'
+        self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia', 'revisao': self.p.revisao, 'fontes': ['A']}]
+        motor.json_gravar(self.root / 'dados/propostas/p.json', {'fontes': ['A'], 'meu_trabalho': 'Ideia', 'buscas': []})
         self.p.painel()
         nota = self.root / 'vault/trabalhos/A.md'
         nota.write_text('Minha observação pessoal.\n' + nota.read_text(encoding='utf-8') + '\nDecisão do orientador.', encoding='utf-8')

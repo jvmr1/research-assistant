@@ -1,0 +1,33 @@
+{
+  "id": "4080a44407f69bd9d90c",
+  "revisao": "e7b8232d88fc37f0003b",
+  "gerado_em": "2026-09-21T00:12:30",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Exemplo_55b3b0969325cccbbb2c: Realizar testes de carga massiva simulando milhares de dispositivos IoT para validar escal",
+  "fontes": [
+    "Exemplo_55b3b0969325cccbbb2c"
+  ],
+  "problema": "Ausência de descrição de requisitos de segurança, privacidade e desempenho detalhados",
+  "hipotese_lacuna": "Ausência de descrição de requisitos de segurança, privacidade e desempenho detalhados",
+  "meu_trabalho": "Realizar testes de carga massiva simulando milhares de dispositivos IoT para validar escalabilidade e latência",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Realizar testes de carga massiva simulando milhares de dispositivos IoT para validar escalabilidade e latência",
+  "modo": "artigo",
+  "buscas": [
+    "Danilo_TCC_final limitations future work",
+    "Danilo_TCC_final smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "1) Qual é o limite de latência considerado aceitável para verificação de credenciais em serviços críticos de cidades inteligentes (ex.: controle de acesso a estacionamento ou iluminação pública)? 2) O orientador prefere que a blockchain seja permissionada (Fabric) ou permissionless (Indy) para o experimento de revogação? 3) Até que ponto devemos incluir mecanismos de recuperação de credenciais perdidas (ex.: secret sharing) na mesma avaliação ou tratá‑los como extensão futura? 4) Há disponibilidade de datasets reais de sensores urbanos que poderíamos usar ao invés de dados sintéticos? 5) Qual o grau de detalhamento esperado na análise de usabilidade (ex.: tempo de onboarding do cidadão) e na interoperabilidade entre diferentes métodos DID? 6) O orientador recomenda priorizar a implementação de ABE ou explorar, como alternativa, criptografia homomórfica para processamento de atributos sensíveis?",
+  "validacao_estado_da_arte": "pendente: as buscas geradas a partir das tags desta proposta devem ser executadas e os trabalhos retornados precisam ser lidos antes de tratar a lacuna como novidade.",
+  "evidencias_usadas": [
+    "4d0d92e96ed42493301d",
+    "4af4e95bcf402163cf78",
+    "5cb5f57a5bb410182c9c"
+  ],
+  "fatos": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.; O estudo está inserido no contexto de cidades inteligentes.; O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.; O trabalho aborda Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes.; São listadas as palavras‑chave relacionadas ao tema.",
+  "experimento": "Problema específico: a literatura (Danilo Isaque Sousa Maia, 2025) demonstra que SSI baseada em blockchain pode garantir autenticação e controle de acesso em cidades inteligentes, mas não avalia como o sistema se comporta quando milhares de dispositivos IoT enviam credenciais simultaneamente. Hipótese: a combinação de credenciais verificáveis, revogação via lista distribuída em blockchain e criptografia baseada em atributos (ABE) permite que a latência de verificação permaneça abaixo de 150 ms mesmo com 10 000 dispositivos ativos. Arquitetura/artefato: cada sensor possui uma carteira SSI (Aries Cloud Agent), as credenciais são emitidas com atributos criptografados por ABE; o middleware InterSCity atua como ponto de agregação e consulta a um ledger Hyperledger Indy que hospeda a lista de revogação (CRL). Etapas: (1) modelar o fluxo de emissão/apresentação/revogação; (2) implementar protótipo usando Docker/Kubernetes; (3) gerar tráfego sintético com o simulador CityPulse (5 k sensores de estacionamento, 5 k de iluminação); (4) aplicar carga crescente (1 k‑10 k requisições/s); (5) coletar métricas de latência, taxa de falhas e tempo de atualização da CRL. Baseline: a solução proposta por Maia (2025) sem mecanismos de ABE nem testes de carga. Cenário de avaliação: serviço de estacionamento inteligente onde cada vaga publica credenciais de acesso ao cidadão e o backend verifica a validade em tempo real.",
+  "recursos": "Ferramentas: Hyperledger Indy/Aries para identidade descentralizada, DIDKit para geração de DIDs, biblioteca Charm‑Crypto (OpenABE) para criptografia baseada em atributos, Docker Compose e Kubernetes para orquestração, Grafana/Prometheus para monitoramento. Dados/simuladores: CityPulse IoT simulator (cenas de tráfego e sensores urbanos), conjuntos sintéticos de telemetria (gerados via Python), dataset público de tráfego de Santander (para validar carga realista). Padrões e bibliotecas: W3C DID Core (2023), Verifiable Credentials Data Model (2023), ISO/IEC 24760‑2 (identidade digital), Aries Cloud Agent‑Python, SDK do Hyperledger Fabric (caso se opte por cadeia permissionada). Todas as ferramentas citadas são de código‑aberto e disponíveis em repositórios públicos, sem necessidade de licenças proprietárias.",
+  "metricas": "Desempenho: throughput (requisições verificadas por segundo) e latência média/percentil‑95 da verificação de credenciais; Segurança: tempo de propagação da revogação na CRL distribuída e taxa de falsos positivos/negativos em ataques de replay simulados; Privacidade: número de atributos revelados ao verifier (medido em bits) e avaliação de conformidade com GDPR via auditoria de logs; Usabilidade/Interoperabilidade: tempo de emissão da credencial ao cidadão, taxa de sucesso de interoperabilidade entre diferentes métodos DID (did:indy, did:web) e esforço de integração com APIs do InterSCity (medido em horas de desenvolvimento). Cada métrica será comparada ao baseline de Maia (2025) e a estudos de revogação de credenciais (ex.: W3C VC Revocation Status List, 2022).",
+  "detalhada": true
+}

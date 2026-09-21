@@ -1,0 +1,187 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-16T14:28:24",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para aprofundar ou esclarecer as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Papatheodorou_2025",
+        "titulo": "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "a539adb6247c318d5314",
+            "pagina": 1,
+            "resumo": "O artigo apresenta o YouGovern, um sistema SSI baseado em blockchain (Binance Smart Chain) que segue os padrões W3C DID, usando contratos inteligentes para controle de acesso e armazenamento descentralizado via IPFS e Web3.Storage. O sistema permite registro, compartilhamento e revogação de identidades com privacidade e auditabilidade, suportando permissões baseadas em papéis e rotação de chaves. Avaliações de desempenho mostram latência média de registro de 0,94 s e pico de 12,5 transações por segundo, destacando melhorias em revogação e custos operacionais em relação a soluções como Sovrin e uPort.",
+            "evidencias": [
+              {
+                "citacao": "centralized control also means that these entities have the power to modify, revoke, or misuse identity privileges, often without the user’s consent or knowledge, posing significant risks to privacy and autonomy",
+                "afirmacao": "O controle centralizado permite que entidades modifiquem ou revoguem privilégios de identidade sem consentimento, gerando riscos de privacidade."
+              },
+              {
+                "citacao": "Results indicate an average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second.",
+                "afirmacao": "YouGovern apresenta latência de registro de DID de 0,94 s e taxa máxima de 12,5 transações por segundo."
+              }
+            ]
+          },
+          {
+            "id": "774154c2c04bbfd4c100",
+            "pagina": 3,
+            "resumo": "O trecho descreve que o problema central é a ausência de sistemas de identidade controlados pelo usuário, escaláveis, econômicos e compatíveis com infraestruturas descentralizadas, e propõe projetar, implementar e avaliar um SSI descentralizado que suporte credenciais verificáveis, controle de acesso com preservação de privacidade e interoperabilidade baseada em padrões.",
+            "evidencias": [
+              {
+                "citacao": "The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure.",
+                "afirmacao": "The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure."
+              },
+              {
+                "citacao": "This paper aims to design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability.",
+                "afirmacao": "This paper aims to design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability."
+              }
+            ]
+          },
+          {
+            "id": "923ed73b629f6f49d9d7",
+            "pagina": 5,
+            "resumo": "O trecho descreve a abordagem distribuída baseada em blockchain para SSI, destacando que os dados não ficam em servidor central, mas são armazenados em um ledger público e distribuído entre nós que atuam como servidores. Cada nó verifica transações, garantindo integridade e imutabilidade, o que confere confiança ao registro de credenciais. O texto enfatiza que a blockchain funciona simultaneamente como rede e banco de dados, facilitando a construção de aplicações SSI descentralizadas, exemplificando com a Binance Smart Chain (BSC).",
+            "evidencias": [
+              {
+                "citacao": "Blockchain solves these issues, and it is a safer option to create an SSI identity application",
+                "afirmacao": "Blockchain provides a decentralized storage and network for SSI applications."
+              },
+              {
+                "citacao": "both the network nodes act simultaneously to ensure the security of all public ledger data",
+                "afirmacao": "All nodes on the blockchain act simultaneously to ensure the security of the public ledger data."
+              }
+            ]
+          },
+          {
+            "id": "20dc2e00021188b98e4e",
+            "pagina": 6,
+            "resumo": "O trecho descreve o uso de contratos inteligentes na Binance Smart Chain (BSC) escritos em Solidity, que hospedam a lógica de negócios da aplicação YouGovern, permitindo a leitura/escrita de dados e a execução automática de acordos sem intermediários. São apresentados exemplos de aplicação em compra de carro, apostas e aluguel, ilustrando como os contratos garantem cumprimento de condições pré‑definidas, reduzindo custos e necessidade de terceiros.",
+            "evidencias": [
+              {
+                "citacao": "Smart contracts are written in the BSC and coded with a specific programming language known as Solidity [33].",
+                "afirmacao": "Smart contracts are written in the BSC and coded with a specific programming language known as Solidity"
+              },
+              {
+                "citacao": "A smart contract is like a web-based microservice.",
+                "afirmacao": "Smart contracts are like a web-based microservice"
+              }
+            ]
+          }
+        ],
+        "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+        "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+        "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+        "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+        "possibilidades": "Avaliar o desempenho da revogação de DIDs em termos de latência e custo de gas; integrar controle de acesso baseado em atributos (ABE) nas funções de concessão; testar interoperabilidade com outras blockchains públicas (ex.: Polygon, Avalanche); analisar a resiliência e privacidade do armazenamento híbrido IPFS + nós institucionais; implementar revogação automática via provas de conhecimento zero (ZKP)."
+      },
+      {
+        "id": "Ding_2025",
+        "titulo": "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 14,
+          "total": 14,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "aca07f96824f175c2454",
+            "pagina": 2,
+            "resumo": "O artigo apresenta o modelo VS‑DID para meta‑computação em IIoT, combinando armazenamento on‑chain e off‑chain e introduzindo um registro verificável baseado em compromissos chave‑valor para vincular chaves públicas a DIDs. Para reduzir custos de manutenção, propõe‑se um mecanismo de armazenamento com acumulador de janela deslizante que otimiza consultas e verificações, atendendo a metas de eficiência, economia de espaço e atualizações em tempo real.",
+            "evidencias": [
+              {
+                "citacao": "We have proposed a novel verifiable registry scheme that is specifically tailored for DID documents.",
+                "afirmacao": "O modelo propõe um registro verificável baseado em compromissos chave‑valor para documentos DID."
+              },
+              {
+                "citacao": "we propose a slide-window accumulator-based storage mechanism",
+                "afirmacao": "Um mecanismo de armazenamento baseado em acumulador de janela deslizante melhora o desempenho das consultas de identidade."
+              }
+            ]
+          },
+          {
+            "id": "c1096371d2c7a5ba19a1",
+            "pagina": 4,
+            "resumo": "O texto apresenta o conceito de meta‑computação aplicada ao IIoT, destacando a necessidade de verificação de identidade cruzada entre domínios. Identifica limitações de soluções centralizadas (PKI, identidade federada) e de abordagens descentralizadas (sobrecarga computacional, interoperabilidade limitada). Propõe um esquema DID híbrido on‑chain/off‑chain com acumulador de janela deslizante para melhorar escalabilidade e eficiência de verificação, integrando identidade de usuários e dispositivos em ambientes de meta‑computação.",
+            "evidencias": [
+              {
+                "citacao": "Existing identity management solutions in IIoT, such as centralized Public Key Infrastructure (PKI) and federated identity systems [13, 2], face challenges in scalability and trustworthiness due to their reliance on centralized authorities.",
+                "afirmacao": "Existing identity management solutions in IIoT ... face challenges in scalability and trustworthiness."
+              }
+            ]
+          },
+          {
+            "id": "af2b3bb0ebc4c645e2c7",
+            "pagina": 6,
+            "resumo": "O artigo apresenta um esquema de registro verificável baseado em identidade descentralizada (VS‑DID) que utiliza compromissos vetoriais, provas geradas via Hyperproof e polynomial commitments, e agrega provas por meio de Non‑interactive Inner Product Arguments (IPA) em uma árvore linear binária, permitindo geração, agregação, verificação e atualização de provas para vetores de identidade em IIoT.",
+            "evidencias": [
+              {
+                "citacao": "The proposed vector commitment scheme includes four phases: generation of proof,aggregationofproof,verificationofproof,andupdate of proof.",
+                "afirmacao": "O esquema inclui quatro fases: geração de prova, agregação de prova, verificação de prova e atualização de prova."
+              }
+            ]
+          },
+          {
+            "id": "d686b6b10ffd7d0e021c",
+            "pagina": 8,
+            "resumo": "O trecho descreve o processamento de consultas verificáveis em DIDs usando um acumulador de janela deslizante (SWAT). O método divide consultas em subconsultas, indexa palavras‑chave em blocos recentes e usa interseções de conjuntos para validar consultas, melhorando a eficiência em relação à agregação inter‑blocos tradicional. Algoritmos para consultas booleanas e de intervalo são apresentados, destacando a construção de provas Merkle e a capacidade de lidar com janelas de tempo maiores que K.",
+            "evidencias": [
+              {
+                "citacao": "If the result of the intersection operation is an empty set, the query is deemed invalid",
+                "afirmacao": "If the result of the intersection operation is an empty set, the query is deemed invalid"
+              },
+              {
+                "citacao": "The sliding window accumulator is similar to a Merkle tree",
+                "afirmacao": "The sliding window accumulator is similar to a Merkle tree"
+              }
+            ]
+          }
+        ],
+        "problema": "issue of authentication in meta-computing-enabled IIoT",
+        "solucao": "sliding window accumulator structure",
+        "avaliacao": "the verifier time remains constant at 0.003 seconds across all tree heights.",
+        "limites": "the size of the public parameters for the Merkle SNARK scheme reaches approximately 50GB, and the parameter generation process requires over 30 hours.",
+        "possibilidades": "Explorar a integração de governança de identidade baseada em cross‑chain (ref. 48) para melhorar a interoperabilidade entre diferentes domínios de IIoT; avaliar a aplicação de provas de conhecimento zero comprimidas (ref. 42) a fim de reduzir o tamanho dos parâmetros públicos e o tempo de geração; investigar a adoção de acumuladores dinâmicos autenticados por blockchain (ref. 46) para suportar revogação eficiente em ambientes de cidades inteligen"
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "Dois trabalhos recentes abordam identidade auto‑soberana (SSI) baseada em blockchain para ambientes distribuídos. O estudo de Papatheodorou (2025) apresenta o YouGovern, implementado na Binance Smart Chain, com registro de DIDs, armazenamento descentralizado (IPFS) e controle de acesso baseado em papéis; relata latência de registro de 0,94 s e throughput de 12,5 tps, mas carece de agente/guardião e de interoperabilidade cross‑chain. O artigo de Ding (2025) propõe o VS‑DID para IIoT, combinando on‑chain/off‑chain, um acumulador de janela deslizante e compromissos vetoriais que mantêm o tempo de verificação constante (0,003 s), porém exige parâmetros públicos de ~50 GB e gerações demoradas. Ambos concordam que blockchains fornecem descentralização e auditabilidade, mas divergem nas técnicas de controle de acesso (papéis vs. atributos) e nas estratégias de escalabilidade (smart contracts simples vs. provas agregadas).",
+    "ideias": [
+      {
+        "descricao": "Integrar criptografia baseada em atributos (ABE) ao mecanismo de concessão de acesso do YouGovern, usando o acumulador de janela deslizante de Ding para revogar atributos de forma eficiente. Isso permitiria controle de acesso mais granular em smart cities, combinando a praticidade dos contratos inteligentes de Papatheodorou com a eficiência de revogação de Ding.",
+        "fontes": [
+          "Papatheodorou_2025",
+          "Ding_2025"
+        ],
+        "lacuna": "YouGovern não oferece controle baseado em atributos; VS‑DID não incorpora ABE para políticas de acesso."
+      },
+      {
+        "descricao": "Estender o YouGovern para operar em múltiplas blockchains (BSC e Polygon) mediante um registro híbrido on/off‑chain inspirado no VS‑DID, permitindo que dispositivos IoT de cidades inteligentes mantenham um único DID interoperável entre diferentes redes. Avaliar a latência de registro e revogação cross‑chain e a consistência dos metadados armazenados em IPFS.",
+        "fontes": [
+          "Papatheodorou_2025",
+          "Ding_2025"
+        ],
+        "lacuna": "Ambas as soluções são limitadas a uma única cadeia; falta de interoperabilidade entre blockchains públicas."
+      },
+      {
+        "descricao": "Aplicar provas de conhecimento zero (ZK‑SNARK) otimizadas para reduzir o tamanho dos parâmetros públicos do VS‑DID, testando o impacto na latência de revogação de DIDs do YouGovern. A hipótese é que ZK‑SNARKs compactos podem manter a verificação constante de Ding enquanto melhoram a eficiência de revogação de Papatheodorou.",
+        "fontes": [
+          "Papatheodorou_2025",
+          "Ding_2025"
+        ],
+        "lacuna": "VS‑DID tem parâmetros de 50 GB; YouGovern ainda não usa ZK para revogação."
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:29:15"
+}

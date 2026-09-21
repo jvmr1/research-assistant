@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta uma taxonomia para gestão de identidade baseada em ledger distribuído, sustentada por um amplo conjunto de referências recentes (2020‑2025) que cobrem frameworks e esquemas de identidade auto‑soberana (SSI) aplicados a domínios como metaverso, redes veiculares, serviços públicos, saúde, transporte, registro de terras, IoT industrial, smart grids e edge computing. As fichas destacam que esses trabalhos abordam autenticação descentralizada, controle de compartilhamento de dados, revogação de credenciais, verificação de credenciais não transferíveis e criptografia baseada em identidade, tanto em blockchains públicos quanto permissionados. Embora a taxonomia seja proposta como ferramenta de organização e comparação, as fichas apontam a ausência de métricas de desempenho (latência, consumo energético), avaliações de privacidade e conformidade regulatória, bem como de critérios claros para classificação e interoperabilidade entre diferentes blockchains, especialmente em ambientes dinâmicos de cidades inteligentes.",
+  "lacunas_possiveis": [
+    "Falta de métricas padronizadas de desempenho (latência, escalabilidade, consumo energético) nas comparações de soluções.",
+    "Ausência de avaliação sistemática de privacidade e conformidade regulatória em casos de uso IoT e cidades inteligentes.",
+    "Critérios de classificação da taxonomia não detalhados, especialmente quanto à evolução rápida de padrões SSI.",
+    "Escassez de estudos sobre revogação de credenciais em ambientes altamente dinâmicos.",
+    "Carência de análises de interoperabilidade entre blockchains permissionados e públicos para aplicações de cidades inteligentes."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um benchmark que inclua latência, throughput e consumo energético para os esquemas identificados.",
+    "Estender a taxonomia incorporando dimensões de privacidade, conformidade (ex.: GDPR) e métricas de desempenho.",
+    "Realizar um estudo comparativo focado em mecanismos de revogação de credenciais em cenários de smart city.",
+    "Propor um framework de interoperabilidade que conecte blockchains permissionados e públicos usando padrões SSI.",
+    "Aplicar a taxonomia em um caso‑de‑uso piloto de IoT urbano (ex.: gestão de sensores de tráfego) para validar critérios de classificação."
+  ]
+}

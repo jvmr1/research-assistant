@@ -1,0 +1,40 @@
+{
+  "resumo": "O trecho propõe o uso de ABAC e identidade descentralizada baseada em blockchain para melhorar a privacidade e controle de dados, recomenda criptografia homomórfica para integridade, destaca a necessidade de conformidade com GDPR/CCPA e aborda interoperabilidade via multi‑cloud ou nuvem federada. Experimentos com Raspberry Pi e AWS mostram latência menor na borda, porém maior capacidade computacional na nuvem, e apontam desafios de padronização e impacto ambiental.",
+  "perfil": {
+    "problema": "There is the need to comply with privacy regulations such as GDPR or CCPA",
+    "solucao": "decentralized identity mechanisms can be integrated to enhance user privacy and control over personal data",
+    "avaliacao": "The results show the difference in computing capabilities for both platforms. The cloud server has a significant advantage over the edge server as it has more computing resources",
+    "limites": "components from different cloud providers lack standardization, making it difficult to manage resources from different providers and legacy applications",
+    "possibilidades": [
+      "Combinar ABAC com identidade auto‑soberana (SSI) para controle de acesso baseado em credenciais verificáveis.",
+      "Avaliar o overhead de criptografia homomórfica em dispositivos edge de baixa potência.",
+      "Desenvolver APIs padronizadas para orquestração multi‑cloud que incluam políticas de privacidade e auditoria em blockchain.",
+      "Quantificar a redução de emissões de carbono ao migrar cargas de trabalho da nuvem centralizada para edge computing.",
+      "Aplicar provas de conhecimento zero‑knowledge para verificação de credenciais sem revelar atributos sensíveis."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Access Control (ABAC) should be used to authenticate APIs and databases.",
+      "afirmacao": "Access Control (ABAC) should be used to authenticate APIs and databases."
+    }
+  ],
+  "interpretacao": "O texto amplia o escopo de segurança ao integrar controle de acesso baseado em atributos, identidade descentralizada e criptografia avançada, ao mesmo tempo que reconhece limitações de padronização e custos ambientais, oferecendo um panorama prático através de experimentos comparativos entre borda e nuvem.",
+  "duvidas": "Como medir o impacto de criptografia homomórfica na latência de aplicações em tempo real na borda? Quais padrões emergentes podem mitigar a falta de padronização entre provedores de nuvem? Qual é o trade‑off entre a maior capacidade computacional da nuvem e o menor consumo energético da borda em cenários de smart city?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "1124470049f097ec8332",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Security is a major concern in all steps of knowledge management.",
+    "solucao": "decentralized identity mechanisms can be integrated to enhance user privacy and control over personal data",
+    "avaliacao": "The results show the difference in computing capabilities for both platforms. The cloud server has a significant advantage over the edge server as it has more computing resources",
+    "limites": "components from different cloud providers lack standardization, making it difficult to manage resources from different providers and legacy applications",
+    "possibilidades": "Combinar ABAC com identidade auto‑soberana (SSI) para controle de acesso baseado em credenciais verificáveis.; Avaliar o overhead de criptografia homomórfica em dispositivos edge de baixa potência.; Desenvolver APIs padronizadas para orquestração multi‑cloud que incluam políticas de privacidade e auditoria em blockchain.; Quantificar a redução de emissões de carbono ao migrar cargas de trabalho da nuvem centralizada para edge computing.; Aplicar provas de conhecimento zero‑knowledge para verificação de credenciais sem revelar atributos sensíveis.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

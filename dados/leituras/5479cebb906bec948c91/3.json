@@ -1,0 +1,30 @@
+{
+  "resumo": "O artigo apresenta um sistema de gestão de resíduos sólido que combina IoT (sensores ultrassônicos, de carga e câmeras) com blockchain para garantir integridade, segurança e transparência dos dados. Deep learning (CNNs) classifica o lixo, enquanto protocolos MQTT e CoAP viabilizam a comunicação. Estudos relacionados são citados, destacando robôs com 95% de acurácia e frameworks blockchain leves. O modelo inclui camadas de aplicação, consenso, rede e dados, e discute vulnerabilidades e contramedidas.",
+  "perfil": {
+    "problema": "challenges of rapid urbanization and inadequate solid waste management",
+    "solucao": "smart waste management system that leverages blockchain technology",
+    "avaliacao": "with 95% accuracy",
+    "limites": "none have explored structural designs using deep learning",
+    "possibilidades": "Investigar a aplicação de identidade auto‑soberana (SSI) para controle de acesso aos dados dos sensores; aplicar criptografia baseada em atributos (ABE) para privacidade na troca de informações entre municípios; avaliar a escalabilidade da solução em arquiteturas de borda (edge computing) com sensores IoT; testar interoperabilidade entre plataformas de gestão de resíduos usando credenciais verificáveis; analisar o impacto econômico de contratos inteligentes para pagamento automático de serviços de coleta; explorar aprendizado federado para melhorar a acurácia dos modelos de classificação sem centralizar dados sensíveis."
+  },
+  "evidencias": [],
+  "interpretacao": "A integração de blockchain e IoT oferece uma base robusta para rastreamento e classificação de resíduos, mas a falta de exploração de designs profundos de aprendizado indica oportunidade de pesquisa.",
+  "duvidas": "Como o consenso escolhido impacta a latência em ambientes de borda? Qual a viabilidade de aplicar SSI e ABE nos sensores de recursos limitados?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "9c3688bcf713727246c4",
+  "artigo": "Alabdali_2025",
+  "pagina": 4,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "challenges of rapid urbanization and inadequate solid waste management",
+    "solucao": "smart waste management system that leverages blockchain technology",
+    "avaliacao": "with 95% accuracy",
+    "limites": "none have explored structural designs using deep learning",
+    "possibilidades": "Investigar a aplicação de identidade auto‑soberana (SSI) para controle de acesso aos dados dos sensores; aplicar criptografia baseada em atributos (ABE) para privacidade na troca de informações entre municípios; avaliar a escalabilidade da solução em arquiteturas de borda (edge computing) com sensores IoT; testar interoperabilidade entre plataformas de gestão de resíduos usando credenciais verificáveis; analisar o impacto econômico de contratos inteligentes para pagamento automático de serviços de coleta; explorar aprendizado federado para melhorar a acurácia dos modelos de classificação sem c",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "5479cebb906bec948c91"
+  }
+}

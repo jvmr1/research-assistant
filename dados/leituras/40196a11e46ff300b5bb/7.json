@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo propõe integrar redes neurais profundas (DNN) com blockchain para detectar e mitigar anomalias em dispositivos IoT em tempo real. As equações mostram a transição de dados processados para um sistema de redução de ameaças assegurado por blockchain, enquanto o DNN categoriza riscos. O blockchain fornece registro descentralizado, imutável e remediação automática. A arquitetura utiliza Hyperledger Fabric ou blockchains permissionados, aproveitando seu consenso de baixa latência (PBFT) para suportar ambientes de cidades inteligentes.",
+  "perfil": {
+    "problema": "the data flow that explains the storage, verification, and use of discovered abnormalities inside the blockchain network is lacking",
+    "solucao": "Integrating DL-based threat categorization with blockchain-based security and automated mitigation",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "significant computational overhead and delay, restricting their practical use in resource-limited IoT settings",
+    "possibilidades": "Explorar integração com redes de borda (edge computing) usando modelos DNN leves; Avaliar uso de consenso baseado em DAG para reduzir latência; Implementar mecanismos de revogação de credenciais baseados em verifiable credentials; Testar interoperabilidade com plataformas de cidades inteligentes baseadas em FIWARE; Incorporar identidade auto‑soberana (SSI) para autenticação descentralizada dos dispositivos."
+  },
+  "evidencias": [
+    {
+      "citacao": "The DNN boosts the detection of anomalies nx [o − er′′]",
+      "afirmacao": "O DNN aumenta a detecção de anomalias."
+    },
+    {
+      "citacao": "Blockchain guarantees safe, decentralized logging and automatic remediation",
+      "afirmacao": "O blockchain garante registro descentralizado e remediação automática."
+    }
+  ],
+  "interpretacao": "A combinação de DNN e blockchain visa criar um mecanismo de defesa em tempo real, onde a inteligência artificial identifica padrões anômalos e o ledger distribuído assegura a integridade e a ação corretiva automática, reduzindo a superfície de ataque em ambientes IoT de cidades inteligentes.",
+  "duvidas": "Como o modelo lida com a sobrecarga computacional em dispositivos de borda? Qual o impacto do consenso PBFT na latência de resposta a anomalias? Há avaliação de escalabilidade em cenários multi‑organização?",
+  "avisos": [],
+  "id": "cfe138fec6355151495f",
+  "artigo": "Sathyabama_2025",
+  "pagina": 8,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "the data flow that explains the storage, verification, and use of discovered abnormalities inside the blockchain network is lacking",
+    "solucao": "Integrating DL-based threat categorization with blockchain-based security and automated mitigation",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "significant computational overhead and delay, restricting their practical use in resource-limited IoT settings",
+    "possibilidades": "Explorar integração com redes de borda (edge computing) usando modelos DNN leves; Avaliar uso de consenso baseado em DAG para reduzir latência; Implementar mecanismos de revogação de credenciais baseados em verifiable credentials; Testar interoperabilidade com plataformas de cidades inteligentes baseadas em FIWARE; Incorporar identidade auto‑soberana (SSI) para autenticação descentralizada dos dispositivos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "40196a11e46ff300b5bb"
+  }
+}

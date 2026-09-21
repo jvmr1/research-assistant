@@ -1,0 +1,177 @@
+{
+  "versao": 3,
+  "revisao": "4ca599c1ad574448079b",
+  "assinatura": "5caf8f0e37cc48a66591",
+  "gerado_em": "2026-09-18T13:19:27",
+  "status": "rascunho_em_revisao",
+  "introducao": [
+    {
+      "titulo": "Introdução",
+      "texto": "Cidades inteligentes representam uma transformação significativa na forma como os serviços públicos são oferecidos e gerenciados, integrando tecnologias como Internet das Coisas (IoT), blockchain e sistemas distribuídos para otimizar a gestão urbana. Essas cidades dependem de infraestruturas digitais robustas para garantir a eficiência, segurança e transparência dos processos governamentais e de serviços ao cidadão. No entanto, a complexidade crescente dessas redes exige uma abordagem inovadora para a gestão de identidade e acesso, especialmente em um contexto onde a privacidade, a interoperabilidade e a segurança são elementos críticos. A identidade autossoberana (SSI) emerge como uma solução promissora para resolver essas demandas, permitindo que os cidadãos tenham controle total sobre suas credenciais digitais.",
+      "fontes": []
+    },
+    {
+      "titulo": "Introdução",
+      "texto": "A SSI é baseada na ideia de que os indivíduos devem ser os donos de suas identidades digitais, em vez de dependerem de autoridades centrais para gerenciar seus dados e acesso a serviços. Essa abordagem é especialmente relevante para cidades inteligentes, onde a interação entre cidadãos, entidades governamentais e organizações privadas exige um modelo de identidade que seja seguro, escalável e compatível com diferentes sistemas de informação. No entanto, a implementação de SSI em ambientes como cidades inteligentes ainda enfrenta desafios técnicos, legais e operacionais, que precisam ser investigados para garantir a viabilidade de sua adoção.",
+      "fontes": []
+    },
+    {
+      "titulo": "Introdução",
+      "texto": "O objetivo deste estudo é revisar como a identidade autossoberana pode ser utilizada em cidades inteligentes, mapeando as ações do cidadão e das entidades administrativas em cada fase do ciclo de vida da credencial e do dado. Isso inclui etapas como emissão, apresentação, verificação, transmissão, processamento, armazenamento, revogação e recuperação após perda de acesso. Para cada fase, serão registrados o estado da arte, os riscos de segurança e privacidade, os requisitos de interoperabilidade e as lacunas identificadas. A metodologia adotada priorizará fontes acadêmicas confiáveis, como OpenAlex, Crossref e Semantic Scholar, para garantir que as afirmações sejam sustentadas por evidências reais.",
+      "fontes": []
+    },
+    {
+      "titulo": "Introdução",
+      "texto": "A motivação para esta pesquisa surge da necessidade de estabelecer um modelo de gestão de identidade que responda às demandas das cidades inteligentes enquanto preserva a autonomia do cidadão. A segurança dos dados, a privacidade e a interoperabilidade são fatores críticos que devem ser considerados ao projetar sistemas que integrem SSI com tecnologias como blockchain e IoT. Além disso, a falta de estudos que abordem especificamente a interação entre cidadãos e entidades governamentais em contextos de identidade autossoberana justifica a necessidade de uma revisão focada nesse tema.",
+      "fontes": []
+    },
+    {
+      "titulo": "Introdução",
+      "texto": "A justificativa para esta pesquisa está na importância de criar um sistema de identidade que não apenas garanta a segurança e a privacidade dos dados, mas também promova a interoperabilidade entre diferentes organizações e sistemas. A implementação de SSI em cidades inteligentes pode contribuir para a redução de custos operacionais, a melhoria da transparência e a mitigação de riscos de segurança, como a exposição de dados sensíveis. Além disso, a SSI pode facilitar a revogação e a recuperação de credenciais, elementos essenciais para a gestão de identidade em ambientes dinâmicos e complexos.",
+      "fontes": []
+    },
+    {
+      "titulo": "Introdução",
+      "texto": "O objetivo geral deste estudo é mapear a aplicação da identidade autossoberana em cidades inteligentes, avaliando as implicações de segurança, privacidade e interoperabilidade para as ações do cidadão e das entidades administrativas em cada fase do ciclo de vida da credencial. Os objetivos específicos incluem: 1) identificar o estado da arte das tecnologias e abordagens relacionadas à SSI em cidades inteligentes; 2) analisar os riscos de segurança e privacidade associados ao uso de SSI; 3) investigar os requisitos de interoperabilidade para a integração de sistemas de identidade; 4) identificar lacunas que precisam ser investigadas para aprimorar a implementação de SSI em cidades inteligentes; 5) propor possíveis soluções para desafios relacionados à revogação e recuperação de credenciais após perda de acesso.",
+      "fontes": []
+    },
+    {
+      "titulo": "Introdução",
+      "texto": "A organização deste texto segue uma estrutura que permite uma análise detalhada do tema. Na seção de fundamentação teórica, serão discutidos os conceitos de cidades inteligentes, identidade digital e SSI, bem como as tecnologias associadas, como DID e credenciais verificáveis. Serão também abordadas questões como autenticação, controle de acesso, segurança e privacidade no ciclo de vida dos dados, além de interoperabilidade e governança. Em seguida, será apresentado o mapa de fases do ciclo de vida da credencial e do dado, com uma análise das ações do cidadão e das entidades administrativas, os riscos, o estado da arte e as lacunas identificadas. O texto busca fornecer um panorama atualizado sobre o tema, fundamentado em fontes acadêmicas confiáveis, sem inventar citações ou tratar hipóteses como consenso.",
+      "fontes": []
+    }
+  ],
+  "fundamentacao_teorica": [
+    {
+      "titulo": "Cidades Inteligentes e Atores",
+      "texto": "Cidades inteligentes são sistemas complexos que integram tecnologias como IoT, blockchain e sistemas distribuídos para melhorar a qualidade de vida dos cidadãos e a eficiência da gestão urbana. Essas cidades envolvem uma diversidade de atores, incluindo cidadãos, governos, organizações privadas e fornecedores de serviços. A interação entre esses atores exige um modelo de identidade que seja seguro, escalável e compatível com diferentes sistemas de informação. A identidade autossoberana (SSI) se encaixa nesse contexto, pois permite que os cidadãos tenham controle sobre suas identidades digitais, reduzindo a dependência de entidades centrais. No entanto, a implementação de SSI em cidades inteligentes ainda enfrenta desafios, como a necessidade de garantir a privacidade e a interoperabilidade entre diferentes sistemas.",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "titulo": "Identidade Digital e SSI",
+      "texto": "A identidade digital refere-se à representação de um indivíduo em um ambiente digital, que pode ser gerenciada por diferentes entidades. A identidade autossoberana (SSI) é um modelo que permite que os cidadãos sejam os donos de suas identidades, com controle total sobre suas credenciais e dados pessoais. Essa abordagem é baseada em padrões como W3C DID, que garantem a interoperabilidade e a privacidade. No entanto, a SSI ainda enfrenta desafios, como a necessidade de criar mecanismos de revogação e recuperação de credenciais, que são essenciais para garantir a segurança e a confiabilidade do sistema. A implementação de SSI em cidades inteligentes exige uma análise cuidadosa dos riscos associados à gestão de identidade em ambientes dinâmicos.",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "titulo": "DID e Credenciais Verificáveis",
+      "texto": "Os Decentralized Identifiers (DID) são um componente fundamental da SSI, pois permitem que os cidadãos tenham identidades únicas e autenticáveis sem depender de autoridades centrais. As credenciais verificáveis (VC) são uma extensão desse modelo, pois fornecem informações confiáveis sobre o status de um indivíduo, como certificados de habilitação ou documentos oficiais. Essas credenciais são armazenadas em um ledger distribuído, garantindo sua integridade e imutabilidade. No entanto, a implementação de DID e VC em cidades inteligentes exige um cuidadoso planejamento de interoperabilidade, para que diferentes sistemas possam compartilhar e validar as credenciais de maneira segura. A falta de padrões universais ainda é um desafio para a adoção generalizada dessas tecnologias.",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "titulo": "Autenticação e Controle de Acesso",
+      "texto": "A autenticação e o controle de acesso são elementos críticos para a segurança de sistemas de identidade em cidades inteligentes. A identidade autossoberana permite que os cidadãos autenticem suas identidades sem depender de entidades centrais, utilizando mecanismos como contratos inteligentes e assinaturas digitais. No entanto, a implementação desses mecanismos exige uma análise cuidadosa dos riscos de segurança, como a exposição de dados sensíveis e a possibilidade de ataques de falsificação. Além disso, o controle de acesso deve ser adaptado para diferentes contextos, como a verificação de credenciais em serviços públicos ou a proteção de dados sensíveis em ambientes corporativos. A falta de padrões universais de autenticação ainda é um desafio para a interoperabilidade entre diferentes sistemas.",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "titulo": "Segurança e Privacidade no Ciclo de Dados",
+      "texto": "A segurança e a privacidade são fatores essenciais para a implementação de sistemas de identidade em cidades inteligentes. O ciclo de vida dos dados, desde a emissão até a revogação, deve ser protegido contra riscos como acessos não autorizados, fraudes e vazamentos de informação. A identidade autossoberana oferece vantagens nesse aspecto, pois permite que os cidadãos controlem quem pode acessar seus dados e como esses dados são utilizados. No entanto, a proteção de dados sensíveis exige mecanismos robustos, como criptografia e armazenamento descentralizado, que ainda estão em desenvolvimento. A falta de soluções padronizadas para a proteção de dados em ambientes distribuídos é um desafio para a adoção generalizada de SSI.",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "titulo": "Interoperabilidade e Governança",
+      "texto": "A interoperabilidade é um desafio crítico para a implementação de sistemas de identidade em cidades inteligentes, especialmente em um ambiente onde diferentes entidades e sistemas precisam compartilhar e validar informações. A identidade autossoberana oferece uma abordagem promissora, pois permite a troca de credenciais entre diferentes organizações, desde que sejam baseadas em padrões universais. No entanto, a governança de sistemas descentralizados ainda está em desenvolvimento, e a falta de regulamentação clara pode dificultar a adoção de SSI. Além disso, a interoperabilidade exige a criação de mecanismos que garantam a segurança e a privacidade das informações trocadas, o que ainda é um desafio técnico e legal.",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "titulo": "Revogação e Recuperação de Acesso",
+      "texto": "A revogação e a recuperação de acesso são elementos essenciais para a gestão de identidade em sistemas de cidades inteligentes. A identidade autossoberana permite que os cidadãos revoguem suas credenciais em caso de perda de controle ou exposição de dados sensíveis. No entanto, a implementação de mecanismos de revogação exige uma análise cuidadosa dos riscos, como a possibilidade de falsificação ou acesso não autorizado. A recuperação de acesso após perda de credenciais também é um desafio, pois exige mecanismos que permitam restabelecer o acesso sem comprometer a privacidade ou a descentralização do sistema. A falta de soluções padronizadas para a revogação e recuperação de acesso ainda é um desafio para a adoção generalizada de SSI.",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    }
+  ],
+  "mapa_fases": [
+    {
+      "fase": "Emissão",
+      "acoes_cidadao": "O cidadão emite credenciais digitais, como certificados de habilitação ou documentos oficiais, utilizando um sistema de identidade autossoberana (SSI) que permite que ele controle os dados associados a essas credenciais.",
+      "acoes_entidades": "As entidades administrativas emitem credenciais verificáveis (VC) com base em padrões como W3C DID, garantindo que as credenciais sejam autenticáveis e imutáveis.",
+      "riscos": "A emissão de credenciais pode ser suscetível a fraudes, especialmente se os mecanismos de autenticação forem fracos ou se os sistemas de identidade não garantirem a privacidade dos dados.",
+      "estado_da_arte": "Sistemas como YouGovern, baseados em blockchain e padrões W3C DID, permitem a emissão de credenciais seguras e interoperáveis. A latência média de registro de DID é de 0,94 s, com uma taxa máxima de 12,5 transações por segundo.",
+      "lacunas": "Existe uma lacuna em relação à segurança de credenciais emitidas por entidades administrativas, especialmente em ambientes onde a privacidade e a interoperabilidade são críticas. A falta de padrões universais para a emissão de credenciais é uma questão a ser investigada [Papatheodorou_2025].",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "fase": "Apresentação/Verificação",
+      "acoes_cidadao": "O cidadão apresenta suas credenciais verificáveis a serviços públicos ou organizações privadas, utilizando um sistema de identidade autossoberana (SSI) que garante a autenticidade e a privacidade dos dados.",
+      "acoes_entidades": "As entidades administrativas verificam as credenciais apresentadas, garantindo que elas sejam válidas e que os dados sejam consistentes com as políticas de segurança e privacidade.",
+      "riscos": "A verificação de credenciais pode ser suscetível a falsificações, especialmente se os mecanismos de autenticação forem fracos ou se os sistemas de identidade não garantirem a privacidade dos dados.",
+      "estado_da_arte": "Sistemas baseados em blockchain e DID permitem a verificação de credenciais em tempo real, garantindo que as informações sejam autenticáveis e imutáveis. A integração de contratos inteligentes facilita a validação automática de credenciais.",
+      "lacunas": "A falta de padrões universais para a verificação de credenciais é uma lacuna a ser investigada, especialmente em ambientes onde diferentes sistemas precisam interagir [Papatheodorou_2025].",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "fase": "Transmissão",
+      "acoes_cidadao": "O cidadão transmite suas credenciais a entidades administrativas ou organizações privadas, garantindo que os dados sejam transmitidos de forma segura e privada.",
+      "acoes_entidades": "As entidades administrativas transmitem credenciais a outras partes, garantindo que os dados sejam transmitidos de forma segura e que a privacidade dos cidadãos seja preservada.",
+      "riscos": "A transmissão de credenciais pode ser suscetível a ataques de interceptação, especialmente se os sistemas de segurança não garantirem a criptografia adequada.",
+      "estado_da_arte": "A transmissão de credenciais em sistemas baseados em blockchain e DID é garantida por criptografia e armazenamento descentralizado, o que reduz os riscos de exposição de dados sensíveis.",
+      "lacunas": "A falta de soluções padronizadas para a transmissão de credenciais em ambientes distribuídos ainda é uma lacuna a ser investigada [Papatheodorou_2025].",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "fase": "Processamento",
+      "acoes_cidadao": "O cidadão envia suas credenciais para serem processadas por sistemas ou serviços, garantindo que as informações sejam usadas de forma segura e privada.",
+      "acoes_entidades": "As entidades administrativas processam as credenciais, garantindo que elas sejam usadas de forma consistente com as políticas de segurança e privacidade.",
+      "riscos": "O processamento de credenciais pode ser suscetível a erros, especialmente se os sistemas não garantirem a integridade dos dados ou se houver falhas na autenticação.",
+      "estado_da_arte": "Sistemas baseados em blockchain e DID permitem o processamento de credenciais de forma segura, garantindo que as informações sejam usadas de maneira confiável e transparente.",
+      "lacunas": "A falta de padrões universais para o processamento de credenciais é uma lacuna a ser investigada, especialmente em ambientes onde diferentes sistemas precisam interagir [Papatheodorou_2025].",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "fase": "Armazenamento",
+      "acoes_cidadao": "O cidadão armazena suas credenciais em um sistema de identidade autossoberana (SSI), garantindo que os dados sejam protegidos contra acesso não autorizado.",
+      "acoes_entidades": "As entidades administrativas armazenam credenciais em sistemas de segurança, garantindo que os dados sejam protegidos contra acesso não autorizado e que a privacidade dos cidadãos seja preservada.",
+      "riscos": "O armazenamento de credenciais pode ser suscetível a ataques de acesso não autorizado, especialmente se os sistemas de segurança não garantirem a criptografia adequada.",
+      "estado_da_arte": "Sistemas baseados em blockchain e DID permitem o armazenamento de credenciais em um ledger distribuído, garantindo que os dados sejam protegidos contra acesso não autorizado e que a privacidade dos cidadãos seja preservada.",
+      "lacunas": "A falta de soluções padronizadas para o armazenamento de credenciais em ambientes distribuídos ainda é uma lacuna a ser investigada [Papatheodorou_2025].",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "fase": "Revogação",
+      "acoes_cidadao": "O cidadão revoga suas credenciais em caso de perda de controle ou exposição de dados sensíveis, garantindo que os dados sejam removidos de sistemas não autorizados.",
+      "acoes_entidades": "As entidades administrativas revogam credenciais em caso de violação de políticas ou exposição de dados sensíveis, garantindo que os dados sejam removidos de sistemas não autorizados.",
+      "riscos": "A revogação de credenciais pode ser suscetível a falhas, especialmente se os sistemas de segurança não garantirem a integridade dos dados ou se houver falhas na autenticação.",
+      "estado_da_arte": "Sistemas baseados em blockchain e DID permitem a revogação de credenciais em tempo real, garantindo que os dados sejam removidos de sistemas não autorizados.",
+      "lacunas": "A falta de padrões universais para a revogação de credenciais é uma lacuna a ser investigada, especialmente em ambientes onde diferentes sistemas precisam interagir [Papatheodorou_2025].",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    },
+    {
+      "fase": "Recuperação de Acesso",
+      "acoes_cidadao": "O cidadão recupera seu acesso após perda de credenciais, garantindo que os dados sejam restabelecidos de forma segura e privada.",
+      "acoes_entidades": "As entidades administrativas ajudam no processo de recuperação de acesso, garantindo que os dados sejam restabelecidos de forma segura e que a privacidade dos cidadãos seja preservada.",
+      "riscos": "A recuperação de acesso pode ser suscetível a falhas, especialmente se os sistemas de segurança não garantirem a integridade dos dados ou se houver falhas na autenticação.",
+      "estado_da_arte": "Sistemas baseados em blockchain e DID permitem a recuperação de acesso em tempo real, garantindo que os dados sejam restabelecidos de forma segura e privada.",
+      "lacunas": "A falta de soluções padronizadas para a recuperação de acesso em ambientes distribuídos ainda é uma lacuna a ser investigada [Papatheodorou_2025].",
+      "fontes": [
+        "Papatheodorou_2025"
+      ]
+    }
+  ],
+  "fontes_usadas": [
+    "Papatheodorou_2025"
+  ]
+}

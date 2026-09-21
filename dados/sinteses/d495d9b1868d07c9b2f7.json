@@ -1,0 +1,15 @@
+{
+  "resumo": "O artigo apresenta uma arquitetura serverless híbrida edge‑cloud para apoiar processos de gestão do conhecimento (KM) em cidades inteligentes, combinando a escalabilidade da nuvem com o processamento próximo à fonte na borda. Experimentos demonstram redução de latência, congestionamento de rede e custos operacionais, além de melhorar a análise em tempo real e a tomada de decisão em aplicações de IA, alinhado à visão Society 5.0. O estudo destaca ainda a importância da confiança entre stakeholders, da capacitação da força‑de‑trabalho e dos desafios de interoperabilidade, escalabilidade, governança, alocação de recursos e cumprimento de SLAs. Embora a proposta mostre benefícios, reconhece limitações relacionadas à segurança e privacidade dos dados na borda, à heterogeneidade de dispositivos IoT, à verificação descentralizada de SLAs e ao custo de implantação de técnicas como ABE em ambientes de baixa potência.",
+  "lacunas_possiveis": [
+    "Impactos de segurança e privacidade ao expor dados de KM na borda",
+    "Comportamento da arquitetura diante de falhas de conectividade entre nuvem e edge",
+    "Escalabilidade de métricas de latência e custos em cenários de cidade real",
+    "Mecanismos de verificação descentralizada de SLAs em ambientes edge‑cloud"
+  ],
+  "propostas_possiveis": [
+    "Avaliar a integração de SSI/identidade descentralizada para gerenciar a heterogeneidade e confiança entre dispositivos IoT",
+    "Investigar a aplicação de ABE ou credenciais verificáveis para controle de acesso e privacidade em edge computing de baixa potência",
+    "Desenvolver um framework de monitoramento e recuperação automática para falhas de conectividade entre nuvem e borda",
+    "Modelar e simular custos operacionais e de alocação de recursos em escala de cidade completa"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:31:05",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "Centralized storage architecture in most IoT healthcare systems can lead to a single point of failure and easy manipulation.",
+      "solucao": "Blockchain with IoT integration can help healthcare systems overcome centralized communication architecture",
+      "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Investigar a integração de identidade auto‑soberana (SSI) para controle de acesso pelos pacientes; aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde; testar a arquitetura em ambientes de cidades inteligentes com edge computing distribuído; explorar mecanismos de revogação cross‑organizacional usando credenciais verificáveis; avaliar a escalabilidade e latência da solução em cenários com milhares de dispositivos IoT; combinar blockchain com arquiteturas zero‑trust para reforçar a confiança entre organizações de saúde."
+    },
+    "pagina": 3,
+    "texto": "Page 3 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \nchunks are then distributedly stored with their unique cryptographic hash, known as the \ncontent identifier (CID), attached to them. CID links all the connected hashes to store \nthe root hash, allowing the information chunks to be uniquely identified by their hash \nvalues. An open network like BitTorrent allows for the movement of files. In IPFS, the \naddresses of stored data are maintained in a DHT. IPFS uses a Merkle Tree structure to \nstore the hash values of linked files. To improve healthcare systems’ speed, accessibility, \nstorage capacity, and scalability, blockchain networks only save the file address rather \nthan the entire file. The Blockchain network within healthcare organizations are linked \nto the IPFS similarly to how webpages are linked. IPFS keeps a local hash file for fre -\nquently viewed files and enables rapid access to these files on subsequent tries. Anyone \naccessing the hash address can download a file via the IPFS distributed network [ 16]. In \nIPFS, once a file is uploaded, its hash is shared among all peer nodes in the network for \ninstant access and to prevent data from having a single point of failure. Here, scalability, \ninteroperability, and consistency issues are addressed with the IPFS, which also offers \nsecurity and boosts the efficiency of healthcare systems.\n1.1 Motivation\nAlthough we cannot entirely eradicate every disease that affects people today, we can \nadopt innovative technology to reduce the severity of patients’ conditions and offer \nsuperior healthcare for a healthier world. Most past research focused on sensor-based \nhealthcare systems to deliver remote healthcare services, improve patient cure rates, \nand eliminate the need for patients to travel to healthcare facilities. Still, the system’s \nprivacy, scalability, security, and efficiency should have been addressed. In recent years, \nhealthcare organizations have explored Blockchain integration with IoT to enable all IoT \ndevices to interact without relying on trustworthy third parties. Blockchain technology \nhas enabled healthcare businesses to effectively manage a growing number of distributed \ndata transactions instead of traditional centralized ones. As more patients are added, the \nBlockchain healthcare system’s ability to connect, store, preserve, transact, and retrieve \ndata becomes more challenging. This is because the system saves data in the Blockchain \nnetwork. This framework integrates an IPFS with the Blockchain network to address the \nchallenges of scalability, interoperability, efficiency, and security and improve storage \ncapability.\n1.2 Novel contributions\n1. It presents a Blockchain-based novel framework to address healthcare systems’ data \nprivacy, security, interoperability, scalability, and efficiency challenges.\n2. It Integrates an Interplanetary File System (IPFS) with the Blockchain network to \nreduce blockchain network overload and enhance healthcare systems’ scalability and \nstorage capacity.\n3. It employs a device proxy to keep track of vulnerable devices and a cryptographic \nmessage authentication mechanism to keep data confidential.\n1.3 The article structure\nThis paper’s remaining sections are organized as follows: Sect.  2 reviews the blockchain \nhealthcare related works. The system model of the M-Blockchain framework is pre -\nsented in Sect.  3. The proposed model’s implementation is described in Sect.  4, whereas ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo propõe uma arquitetura que combina blockchain e IPFS para superar limitações de privacidade, escalabilidade, segurança e eficiência em sistemas de saúde IoT. Os dados são fragmentados, armazenados com identificadores criptográficos (CID) e distribuídos via rede P2P, evitando ponto único de falha. A integração reduz a sobrecarga da blockchain, melhora a capacidade de armazenamento e permite acesso rápido a arquivos frequentes, enquanto um proxy de dispositivos e autenticação criptográfica protegem a confidencialidade dos dados.",
+    "perfil": {
+      "problema": "prevent data from having a single point of failure",
+      "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "once a file is uploaded, its hash is shared among all peer nodes in the network for instant access and to prevent data from having a single point of failure.",
+        "citacao": "once a file is uploaded, its hash is shared among all peer nodes in the network for instant access and to prevent data from having a single point of failure."
+      },
+      {
+        "afirmacao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity.",
+        "citacao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity."
+      }
+    ],
+    "interpretacao": "O texto descreve como a combinação de blockchain e IPFS pode eliminar o ponto único de falha ao distribuir dados de saúde, melhorar a escalabilidade ao armazenar apenas endereços na blockchain e acelerar o acesso via cache local, ao mesmo tempo que introduz mecanismos de autenticação para proteger a confidencialidade.",
+    "duvidas": "Não há detalhes sobre métricas de desempenho, custos de implementação ou avaliação prática em larga escala; também falta informação sobre como a solução lida com a revogação de credenciais ou a interoperabilidade entre diferentes provedores de saúde."
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:31:31"
+}

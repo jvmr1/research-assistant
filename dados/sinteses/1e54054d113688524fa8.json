@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta a primeira taxonomia metodológica para arquiteturas de identidade baseadas em ledger distribuído, resultante da análise de 390 artigos e discussões com especialistas. A taxonomia contém 22 dimensões e 113 características organizadas em três grupos (âncora de confiança, identidade e ledger) e foi desenvolvida em três iterações, sendo validada em duas arquiteturas representativas e por revisão de literatura e painel de especialistas. O trabalho descreve fundamentos de blockchain, identidade digital, SSI, DIDs e VCs, detalhando papéis de emissor, detentor e verificador, bem como modelos de âncora de confiança, governança, tipos de identificadores, credenciais, migração, vida útil, revogação, privacidade e recuperação. A proposta visa suprir a lacuna metodológica existente, permitindo a comparação sistemática e o design de soluções interoperáveis, centradas no usuário e adequadas a ambientes distribuídos como cidades inteligentes, IoT e edge computing.",
+  "lacunas_possiveis": [
+    "Critérios de validação prática da taxonomia em cenários reais.",
+    "Cobertura de requisitos de privacidade específicos (ex.: saúde, mobilidade urbana).",
+    "Mecanismos de revogação e recuperação de credenciais em ambientes de edge computing.",
+    "Avaliação de escalabilidade e latência das âncoras de confiança distribuídas em redes IoT de grande escala.",
+    "Métricas de desempenho para validar a taxonomia em contextos de IoT/IIoT."
+  ],
+  "propostas_possiveis": [
+    "Definir e aplicar critérios de validação prática por meio de estudos de caso em cidades inteligentes.",
+    "Estender a taxonomia com dimensões específicas de privacidade para setores como saúde e mobilidade urbana.",
+    "Desenvolver métricas de latência, escalabilidade e custo de transação para âncoras de confiança em redes permissionadas e permissionless.",
+    "Criar benchmarks de revogação e recuperação de credenciais adaptados a recursos limitados de edge computing.",
+    "Conduzir avaliações empíricas da taxonomia em projetos piloto de IoT/IIoT, medindo desempenho e robustez."
+  ]
+}

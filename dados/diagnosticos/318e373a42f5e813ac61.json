@@ -1,0 +1,100 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T20:19:14",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo apresenta o framework EPP-BCFL, que integra blockchain, aprendizado federado, analytics na borda e técnicas avançadas de privacidade (SMPC, Differential Privacy, ZKP, criptografia homomórfica). Utiliza um consenso leve PoS+BFT e agregação adaptativa que considera qualidade dos dados, confiança dos nós e detecção de anomalias. Os autores relatam redução de latência em 43%, diminuição de custo computacional em 37%, dobramento da velocidade de convergência e acurácia de aproximadamente 98,7%, com detecção de anomalias em cerca de 2,3 s. A validação, porém, está restrita a um benchmark de visão computacional, não abrangendo dados reais de registros eletrônicos de saúde (EHR) de alta dimensionalidade nem cenários de dispositivos IoT altamente heterogêneos. As fichas apontam dúvidas sobre desempenho em dados não‑IID, overhead energético do consenso e ZKP, interoperabilidade com identidade descentralizada (SSI) e ausência de mecanismos de incentivo para participação em ambientes de cidades inteligentes.",
+        "lacunas_possiveis": [
+          "Desempenho e escalabilidade do EPP-BCFL em dados reais de EHR de alta dimensionalidade e não‑IID.",
+          "Overhead energético e de comunicação do consenso PoS+BFT e das provas de conhecimento zero em dispositivos IoT de borda.",
+          "Integração e interoperabilidade com padrões de identidade descentralizada (SSI) em contextos de cidades inteligentes.",
+          "Ausência de mecanismos de incentivo para participação de nós IoT e instituições de saúde.",
+          "Suporte a aprendizado federado vertical e coordenação interinstitucional para dados heterogêneos."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um protótipo piloto em ambiente de saúde municipal, medindo energia, latência e acurácia com EHR reais.",
+          "Adaptar o consenso leve incorporando recompensas tokenizadas para incentivar a contribuição de dispositivos IoT.",
+          "Criar uma camada de interoperabilidade baseada em verifiable credentials que conecte o EPP-BCFL a sistemas SSI já adotados por órgãos públicos.",
+          "Estender a agregação adaptativa com técnicas de clustering para lidar com dados não‑IID e heterogêneos.",
+          "Incorporar aprendizado federado vertical para combinar dados clínicos e administrativos, facilitando a coordenação interinstitucional."
+        ]
+      },
+      {
+        "resumo": "O artigo apresenta o Efficient Privacy‑Preserving Blockchain‑Enabled Federated Learning (EPP‑BCFL), um framework em camadas que combina aprendizado federado, análise local nos nós de borda, criptografia homomórfica, privacidade diferencial, contratos inteligentes e um consenso híbrido PoS+BFT. A camada de borda executa analytics leves (Z‑score, PCA) e inferência rasa, reduzindo carga computacional e latência, enquanto as atualizações de modelo são protegidas e registradas na blockchain para garantir integridade e auditabilidade. O consenso híbrido seleciona um subconjunto pequeno de validadores com stake limitado, alcançando consenso com mais de 2/3 dos validadores e tolerando falhas bizantinas, o que diminui a sobrecarga de comunicação. Experimentos com CIFAR‑10 em cenário non‑IID mostram aumento de acurácia e menor tempo de convergência à medida que o número de nós cresce, embora a validação use um dataset sintético como proxy para registros eletrônicos de saúde.",
+        "lacunas_possiveis": [
+          "Detalhes do mecanismo de incentivo (tokenomics, recompensas) para participantes em smart cities",
+          "Algoritmo de consenso leve adotado e seu comportamento em larga escala urbana",
+          "Gestão dinâmica de stake e reputação dos nós IoT em ambientes urbanos heterogêneos",
+          "Impacto da latência e variabilidade da rede de smart city sobre o consenso PoS+BFT e sincronização de modelos",
+          "Validação do framework com dados reais de EHRs e de sensores urbanos, avaliando privacidade e carga computacional"
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um modelo de tokenomics que recompense nós de borda com recursos urbanos (ex.: créditos de energia ou acesso a serviços) e testar sua eficácia em piloto de smart city",
+          "Adaptar o consenso híbrido para incluir fallback dinâmico baseado em métricas de qualidade de conexão e disponibilidade dos nós",
+          "Implementar um mecanismo de stake baseado em reputação e contribuição histórica, ao invés de posse de tokens, para contextos públicos",
+          "Realizar experimentos de desempenho com redes de comunicação típicas de cidades inteligentes (variabilidade de latência, perda de pacotes) e medir impacto no tempo de consenso",
+          "Aplicar o EPP‑BCFL a datasets reais de registros de saúde e de sensores urbanos, avaliando precisão do modelo, privacidade diferencial e carga computacional"
+        ]
+      },
+      {
+        "resumo": "O artigo apresenta o framework EPP-BCFL, que combina aprendizado federado com análise de borda e uma camada blockchain para gerir registros eletrônicos de saúde. Experimentos mostram que aumentar os nós de borda de 10 para 50 eleva a acurácia de 88,5 % a 95,2 % e reduz as épocas de convergência de 20 para 10, embora a latência da blockchain cresça de 50 ms a 150 ms e o throughput caia de 100 para 55 Tx/s ao escalar de 500 para 10 000 transações. Um mecanismo híbrido de privacidade (MPC + DP) otimizado, aliado a consenso PoS+BFT, atinge 95,2 % de acurácia com baixa sobrecarga de comunicação e alta resiliência a ataques. A agregação adaptativa mantém a precisão (<1,2 % de desvio) mesmo em dispositivos heterogêneos, enquanto compressão adaptativa reduz a comunicação em até 28 % com perda de acurácia <1,5 %. O sistema demonstra robustez contra envenenamento de dados e ataques FGSM, mantendo acurácias acima de 92 % e tempos de resposta menores que o FL tradicional.",
+        "lacunas_possiveis": [
+          "Impacto da latência e do throughput reduzido da blockchain em atualizações em tempo real de saúde crítica.",
+          "Comportamento do mecanismo híbrido de privacidade em dispositivos de borda com recursos extremamente limitados.",
+          "Efeito do overhead de comunicação sobre a latência em redes de cidades inteligentes.",
+          "Consequências da compressão adaptativa na privacidade dos dados sensíveis.",
+          "Escalabilidade da robustez quando a proporção de clientes adversários ultrapassa 20 %."
+        ],
+        "propostas_possiveis": [
+          "Investigar estratégias de sharding ou agregação off‑chain para mitigar latência blockchain.",
+          "Desenvolver variantes leves de MPC e ajustar dinamicamente ε conforme recursos de borda.",
+          "Simular o framework em cenários de IoT de cidades inteligentes para medir latência de comunicação.",
+          "Avaliar a privacidade dos dados comprimidos usando métricas de vazamento de informação.",
+          "Testar a resistência do sistema com adversários >20 % e analisar a degradação de acurácia."
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo descreve o framework EPP‑BCFL, que integra aprendizado federado, analytics na borda e blockchain para a gestão segura e eficiente de registros eletrônicos de saúde (EHR). A arquitetura em camadas combina técnicas avançadas de privacidade – computação multipartidária segura (SMPC), privacidade diferencial (DP), provas de conhecimento zero (ZKP) e criptografia homomórfica – com um consenso híbrido leve PoS+BFT que seleciona validadores por stake limitado. A agregação adaptativa considera qualidade dos dados, confiança dos nós e detecção de anomalias, enquanto compressão adaptativa reduz a comunicação. Experimentos com o benchmark CIFAR‑10 (cenário non‑IID) relatam redução de latência em ~43 %, diminuição de custo computacional em ~37 %, aceleração da convergência e acurácia de ~98,7 %. Contudo, a validação está restrita a dados sintéticos de visão computacional, não abrangendo EHR reais de alta dimensionalidade nem ambientes IoT heterogêneos típicos de cidades inteligentes. As análises apontam lacunas relativas ao overhead energético e de comunicação do consenso e das ZKP, à interoperabilidade com identidade descentralizada (SSI), à ausência de mecanismos de incentivo e ao suporte limitado a aprendizado federado vertical e a cenários de latência variável. Fonte: PDF (parcial).",
+    "lacunas_possiveis": [
+      "Desempenho e escalabilidade em dados reais de EHR de alta dimensionalidade e não‑IID.",
+      "Overhead energético e de comunicação do consenso PoS+BFT e das provas de conhecimento zero em dispositivos IoT de borda.",
+      "Integração e interoperabilidade com padrões de identidade descentralizada (SSI) em contextos de cidades inteligentes.",
+      "Ausência de mecanismos de incentivo (tokenomics) para participação de nós IoT e instituições de saúde.",
+      "Suporte a aprendizado federado vertical e coordenação interinstitucional para dados heterogêneos.",
+      "Detalhes do algoritmo de consenso leve e seu comportamento em larga escala urbana.",
+      "Gestão dinâmica de stake e reputação dos nós IoT em ambientes urbanos heterogêneos.",
+      "Impacto da latência e variabilidade da rede de smart city sobre o consenso PoS+BFT e a sincronização de modelos.",
+      "Impacto da latência e do throughput reduzido da blockchain em atualizações em tempo real de saúde crítica.",
+      "Comportamento do mecanismo híbrido de privacidade em dispositivos de borda com recursos extremamente limitados.",
+      "Efeito do overhead de comunicação sobre a latência em redes de cidades inteligentes.",
+      "Consequências da compressão adaptativa na privacidade dos dados sensíveis.",
+      "Escalabilidade da robustez quando a proporção de clientes adversários ultrapassa 20 %."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver protótipo piloto em ambiente de saúde municipal usando EHR reais, medindo energia, latência e acurácia.",
+      "Adaptar o consenso leve incorporando recompensas tokenizadas para incentivar a contribuição de dispositivos IoT.",
+      "Criar camada de interoperabilidade baseada em verifiable credentials que conecte o EPP‑BCFL a sistemas SSI adotados por órgãos públicos.",
+      "Estender a agregação adaptativa com técnicas de clustering para lidar com dados não‑IID e heterogêneos.",
+      "Incorporar aprendizado federado vertical para combinar dados clínicos e administrativos, facilitando a coordenação interinstitucional.",
+      "Desenvolver modelo de tokenomics que recompense nós de borda com recursos urbanos (ex.: créditos de energia ou acesso a serviços) e testar em piloto de smart city.",
+      "Adaptar o consenso híbrido para incluir fallback dinâmico baseado em métricas de qualidade de conexão e disponibilidade dos nós.",
+      "Implementar mecanismo de stake baseado em reputação e contribuição histórica ao invés de posse de tokens para contextos públicos.",
+      "Realizar experimentos de desempenho com redes de comunicação típicas de cidades inteligentes (variabilidade de latência, perda de pacotes) e medir impacto no tempo de consenso.",
+      "Aplicar o EPP‑BCFL a datasets reais de registros de saúde e de sensores urbanos, avaliando precisão, privacidade diferencial e carga computacional.",
+      "Investigar estratégias de sharding ou agregação off‑chain para mitigar latência da blockchain.",
+      "Desenvolver variantes leves de MPC e ajustar dinamicamente ε conforme recursos de borda.",
+      "Simular o framework em cenários de IoT de cidades inteligentes para medir latência de comunicação.",
+      "Avaliar a privacidade dos dados comprimidos usando métricas de vazamento de informação.",
+      "Testar a resistência do sistema com adversários >20 % e analisar a degradação de acurácia."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:20:34"
+}

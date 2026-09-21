@@ -1,0 +1,32 @@
+{
+  "id": "bd67cf20b0fdb3865752",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T14:08:42",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Papatheodorou_2025: Realizar testes de carga simulando milhares de dispositivos IoT para medir latência, throu",
+  "fontes": [
+    "Papatheodorou_2025"
+  ],
+  "problema": "Comportamento do sistema em cenários de alta concorrência realista",
+  "hipotese_lacuna": "Comportamento do sistema em cenários de alta concorrência realista",
+  "meu_trabalho": "Realizar testes de carga simulando milhares de dispositivos IoT para medir latência, throughput e comportamento sob alta concorrência",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Realizar testes de carga simulando milhares de dispositivos IoT para medir latência, throughput e comportamento sob alta concorrência",
+  "modo": "artigo",
+  "buscas": [
+    "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control limitations future work",
+    "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual modelo de tráfego IoT (taxa de registro, frequência de acesso) melhor representa um cenário real de cidade inteligente?; Deveríamos usar a testnet pública do BSC ou um nó privado para garantir controle total sobre as variáveis de teste?; Qual biblioteca ABE oferece melhor integração com contratos inteligentes Solidity sem comprometer desempenho?; Como validar a interoperabilidade do YouGovern com outras blockchains públicas (ex.: Polygon) dentro do mesmo experimento?; Qual estratégia de revogação automática (ex.: ZKP) seria viável para implementar e medir dentro do prazo de mestrado?",
+  "experimento": "descricao: Implementação de um cenário de carga que simula milhares de dispositivos IoT registrando identidades e solicitando acesso via o sistema YouGovern (BSC). O experimento medirá latência de registro de DID, tempo de confirmação de transações, throughput, custo de gas e latência de revogação. Os resultados serão comparados com os valores reportados por Papatheodorou_2025 (latência média de registro 0.94 s, throughput máximo 12.5 tps) e, opcionalmente, com um benchmark de SSI baseado em Ethereum (ex.: uPort) extraído de literatura aberta.; implementacao: Desenvolver um simulador de dispositivos IoT (ex.: IoTIFY, Eclipse Ditto) que gera solicitações de registro e acesso em ritmo controlado.; Utilizar ferramentas de carga (Locust ou k6) para orquestrar até 10.000 dispositivos virtuais.; Implantar o contrato inteligente YouGovern em uma testnet pública do BSC (ex.: BSC Testnet) e, se possível, em uma rede de teste privada para controle de variáveis.; Estender o contrato com um módulo de controle de acesso baseado em Attribute‑Based Encryption (ABE) conforme a sugestão de Papatheodorou_2025.; Coletar métricas de desempenho via APIs de monitoramento da blockchain (ex.: BscScan API) e de recursos de infraestrutura (Prometheus).; comparacao: Os resultados obtidos serão comparados com os dados de desempenho de Papatheodorou_2025 e, quando disponível, com métricas de sistemas SSI concorrentes descritos em revisões de literatura (ex.: uPort, Sovrin).",
+  "recursos": "dados: Gerador sintético de identidades IoT (UUID, atributos de dispositivo).; Conjunto de políticas de acesso baseadas em atributos (ex.: localização, tipo de sensor).; ferramentas: Simulador IoT: IoTIFY (versão gratuita) ou Eclipse Ditto (open‑source).; Ferramenta de carga: Locust (Python) ou k6 (JavaScript).; Ambiente blockchain: BSC Testnet (acessível via RPC público) e opcionalmente um nó privado BSC (Docker).; Monitoramento: Prometheus + Grafana, BscScan API para métricas de gas e blocos.; Bibliotecas ABE: Charm‑Crypto (Python) ou libfenc (C).; infraestrutura: Máquina virtual ou servidor cloud com CPU ≥ 8 vCPUs, 32 GB RAM, conexão de rede estável.; Armazenamento para logs de carga (≥ 100 GB).; observacoes: Todos os recursos citados são de acesso público ou open‑source; caso algum não esteja disponível, pode‑se substituir por alternativas equivalentes (ex.: usar Ganache para blockchain privada).",
+  "metricas": "Latência média de registro de DID (segundos).; Latência de revogação de DID (segundos).; Throughput máximo (transações por segundo).; Custo médio de gas por operação (gwei).; Uso de CPU e memória do nó BSC durante o teste de carga.; Taxa de falhas de transação sob alta concorrência (%).; Tempo de resposta das políticas ABE (milissegundos).",
+  "detalhada": true,
+  "evidencias_usadas": [
+    "a539adb6247c318d5314",
+    "774154c2c04bbfd4c100",
+    "923ed73b629f6f49d9d7"
+  ],
+  "fatos": "O controle centralizado permite que entidades modifiquem ou revoguem privilégios de identidade sem consentimento, gerando riscos de privacidade.; YouGovern apresenta latência de registro de DID de 0,94 s e taxa máxima de 12,5 transações por segundo.; The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure.; This paper aims to design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability.; Blockchain provides a decentralized storage and network for SSI applications.; All nodes on the blockchain act simultaneously to ensure the security of the public ledger data."
+}

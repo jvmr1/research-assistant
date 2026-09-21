@@ -1,0 +1,41 @@
+{
+  "resumo": "O trecho descreve as camadas de processamento de IIoT, destacando a camada de nuvem como responsável por análises intensivas e aprendizado de máquina, e a camada de interface de usuário para visualização de dados. Em seguida, apresenta o conceito de fábricas inteligentes, onde a automação total, aprendizado de máquina, big data e cibersegurança permitem maior eficiência, redução de custos e integração de dispositivos na borda.",
+  "perfil": {
+    "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "system is not readily available as a commercial product",
+    "possibilidades": [
+      "Investigar a combinação de edge computing com blockchain para garantir a integridade e confidencialidade dos dados trocados entre a camada de percepção e a nuvem.",
+      "Propor a adoção de SSI baseada em verifiable credentials para autenticação segura de usuários e operadores nas interfaces HMI.",
+      "Avaliar o uso de Attribute‑Based Encryption (ABE) para controle de acesso granular aos dados armazenados na nuvem, considerando a latência introduzida pelos nós de borda.",
+      "Desenvolver um protótipo que aplique aprendizado de máquina federado na camada de borda, preservando a privacidade dos dados de sensores antes de enviá‑los ao cloud."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Here, the data has been successfully sent to a database or server located inside a data center. Significant computational resources are often required to carry out data analytics as well as machine learning computations. Hence, the cloud layer is where the most crucial and exhaustive data processing tasks take place via the cloud systems.",
+      "afirmacao": "The cloud layer encompasses the realm of cloud computing... the most crucial and exhaustive data processing tasks take place via the cloud systems."
+    },
+    {
+      "citacao": "Smart manufacturing, also known as smart factories, is a concept derived from the IIoT. It envisions a production environment where all systems are completely automated and intelligent.",
+      "afirmacao": "Smart manufacturing... envisions a production environment where all systems are completely automated and intelligent."
+    }
+  ],
+  "interpretacao": "O texto reforça a importância das camadas de nuvem e de interface para análise e visualização de dados em IIoT, ao mesmo tempo que destaca que fábricas inteligentes dependem de integração de dispositivos de borda, IA e cibersegurança para alcançar eficiência e segurança.",
+  "duvidas": "Como garantir que as políticas de segurança definidas nas camadas superiores sejam propagadas de forma automática para os dispositivos da camada de percepção? Qual o impacto da latência introduzida por ABE ou blockchain nas aplicações de controle em tempo real nas fábricas inteligentes?",
+  "avisos": [],
+  "id": "08cfbdae112d262027a3",
+  "artigo": "Abdullahi_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "system is not readily available as a commercial product",
+    "possibilidades": "Investigar a combinação de edge computing com blockchain para garantir a integridade e confidencialidade dos dados trocados entre a camada de percepção e a nuvem.; Propor a adoção de SSI baseada em verifiable credentials para autenticação segura de usuários e operadores nas interfaces HMI.; Avaliar o uso de Attribute‑Based Encryption (ABE) para controle de acesso granular aos dados armazenados na nuvem, considerando a latência introduzida pelos nós de borda.; Desenvolver um protótipo que aplique aprendizado de máquina federado na camada de borda, preservando a privacidade dos dados de sensores",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9de2ab0bcfc3fa9cca82"
+  }
+}

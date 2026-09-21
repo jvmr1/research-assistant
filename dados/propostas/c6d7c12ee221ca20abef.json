@@ -1,0 +1,22 @@
+{
+  "id": "c6d7c12ee221ca20abef",
+  "revisao": "e7b8232d88fc37f0003b",
+  "gerado_em": "2026-09-21T00:50:41",
+  "modelo": "openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free, qwen2.5:7b-instruct-q4_K_M",
+  "titulo": "Registro descentralizado de revogação para credenciais SSI em serviços públicos",
+  "fontes": [
+    "Exemplo_60479560a08f3b4cd724",
+    "Gudipati_2025"
+  ],
+  "problema": "Nenhum trabalho integra um registro de revogação descentralizado e eficiente para VCs/SSI em serviços públicos de cidades inteligentes.",
+  "hipotese_lacuna": "Nenhum trabalho integra um registro de revogação descentralizado e eficiente para VCs/SSI em serviços públicos de cidades inteligentes.",
+  "meu_trabalho": "Propõe um registro de revogação distribuído na blockchain que combina a abordagem de revogação limitada de Fioreze (2026) com as necessidades de gerenciamento de status de VCs apontadas por Gudipati (2025). O registro utiliza provas de conhecimento zero para atualizar o status sem revelar atributos, permitindo que entidades públicas verifiquem a validade das credenciais em tempo real, preenchendo a lacuna de revogação escalável em ambientes de administração municipal.",
+  "interpretacao": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na necessidade de combinar credenciais verificáveis (VCs) com mecanismos criptográficos avançados para garantir privacidade, controle de acesso granular e interoperabilidade. Fioreze (2026) propõe um framework baseado em blockchain e criptografia baseada em atributos (ABE) para compartilhamento seguro de dados IIoT, destacando limitações em revogação e recuperação de credenciais. Gudipati (2025) apresenta VCs como facilitadoras da identidade digital, apontando desafios de adoção e sugerindo a integração com ABE para controle de acesso em IoT. O trabalho de S_2026 (2026) explora identidade blockchain em um sistema de segurança turística, mas não detalha SSI ou mecanismos de recuperação. Em conjunto, os estudos concordam que a descentralização e a criptografia são essenciais, diferem nas ênfases (dados industriais vs. identidade de usuários) e ainda não cobrem plenamente revogação escalável, recuperação de credenciais perdidas e a aplicação de ABE/VCs em serviços urbanos de larga escala.",
+  "alteracao_sobre_trabalhos_proximos": "Propõe um registro de revogação distribuído na blockchain que combina a abordagem de revogação limitada de Fioreze (2026) com as necessidades de gerenciamento de status de VCs apontadas por Gudipati (2025). O registro utiliza provas de conhecimento zero para atualizar o status sem revelar atributos, permitindo que entidades públicas verifiquem a validade das credenciais em tempo real, preenchendo a lacuna de revogação escalável em ambientes de administração municipal.",
+  "modo": "brainstorm",
+  "buscas": [
+    "verifiable credentials revocation status list smart cities blockchain",
+    "SSI revocation decentralized identity smart city"
+  ],
+  "validacao_estado_da_arte": "pendente: executar as buscas registradas, ler trabalhos recentes retornados e comparar explicitamente o que já foi feito com o recorte proposto antes de afirmar novidade."
+}

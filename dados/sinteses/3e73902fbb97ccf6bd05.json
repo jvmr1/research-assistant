@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta um modelo de identidade descentralizada baseado em blockchain (Hyperledger Fabric) voltado para cidades inteligentes, enfatizando a segurança da informação. A proposta inclui uma arquitetura detalhada com diagramas de classe e sequência, além de experimentos que medem latência, consumo de memória e processamento ao comparar a solução com cenários sem o modelo. Tabelas complementam a análise ao comparar algoritmos de consenso (PBFT, PoA, etc.) e métricas de autenticação de dispositivos na plataforma InterSCity. O trabalho também fornece um glossário de siglas relevantes (SSI, DLT, IoT, TLS, entre outras) para padronizar a terminologia. Embora demonstre viabilidade técnica e custos computacionais, o artigo deixa em aberto questões sobre escalabilidade em grandes cidades, impactos de privacidade para os cidadãos, mecanismos de revogação e recuperação de credenciais, bem como detalhes quantitativos das medições de desempenho.",
+  "lacunas_possiveis": [
+    "Escalabilidade do modelo em ambientes urbanos de grande porte",
+    "Impacto da solução na privacidade dos cidadãos",
+    "Mecanismos de revogação e recuperação de credenciais perdidas",
+    "Detalhamento quantitativo das diferenças de memória e processamento",
+    "Influência dos diferentes algoritmos de consenso sobre latência e escalabilidade"
+  ],
+  "propostas_possiveis": [
+    "Realizar experimentos de desempenho em cenários com milhares de dispositivos IoT para avaliar a escalabilidade",
+    "Integrar técnicas de privacidade, como provas de conhecimento zero‑knowledge, ao fluxo de emissão e verificação de credenciais",
+    "Desenvolver protocolos de revogação e recuperação baseados em atributos verificáveis ou chaves de recuperação distribuídas",
+    "Publicar valores numéricos detalhados das medições de memória e processamento, incluindo configurações experimentais",
+    "Comparar empiricamente PBFT, PoA e outros consensos quanto ao tempo de verificação de credenciais em ambientes de alta densidade"
+  ]
+}

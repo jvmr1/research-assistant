@@ -1,0 +1,35 @@
+{
+  "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+  "perfil": {
+    "problema": "Autenticação e Controle de Acesso Baseados em Blockchain",
+    "solucao": "Identidades Autosoberanas",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Investigar integração de SSI com protocolos de consenso híbrido para escalabilidade em IoT urbano; desenvolver mecanismos de recuperação de credenciais perdidas usando secret sharing distribuído; avaliar desempenho de verifiable credentials em ambientes de baixa latência; propor framework de governança de identidade intermunicipal."
+  },
+  "evidencias": [
+    {
+      "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+      "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+    }
+  ],
+  "interpretacao": "O trecho confirma que o foco da pesquisa é a aplicação de blockchain e SSI para melhorar a segurança e a gestão de acesso em serviços urbanos, indicando um contexto acadêmico recente (2025).",
+  "duvidas": "Quais são os requisitos funcionais e não‑funcionais detalhados para a solução proposta? Existe alguma avaliação experimental ou estudo de caso descrito no documento?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "cb59efb152362ddd8ea7",
+  "artigo": "Exemplo_55b3b0969325cccbbb2c",
+  "pagina": 4,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Autenticação e Controle de Acesso Baseados em Blockchain",
+    "solucao": "Identidades Autosoberanas",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar integração de SSI com protocolos de consenso híbrido para escalabilidade em IoT urbano; desenvolver mecanismos de recuperação de credenciais perdidas usando secret sharing distribuído; avaliar desempenho de verifiable credentials em ambientes de baixa latência; propor framework de governança de identidade intermunicipal.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "aa6f199c752f47517c1c"
+  },
+  "reaproveitada_de": "0522a79789d7ab975ea8"
+}

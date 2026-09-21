@@ -1,0 +1,39 @@
+{
+  "resumo": "O trecho descreve detalhes do algoritmo de otimização Hawk‑Hawk (HH) usado na fase de seleção de características do modelo AAIFLF‑PPCD, explicando como números aleatórios (q, r) definem estratégias de exploração e exploração, e como o parâmetro En controla a transição entre esses estágios, incluindo táticas de cerco duro e suave.",
+  "perfil": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": [
+      "Avaliar o consumo energético e a latência do algoritmo HHO em dispositivos de borda de baixa potência.",
+      "Investigar a resistência do processo de seleção de características HHO a ataques de envenenamento de dados em ambientes federados.",
+      "Integrar identidade auto‑soberana (SSI) para validar a integridade dos parâmetros HHO trocados entre nós federados.",
+      "Explorar a combinação de HHO com técnicas de criptografia baseada em atributos (ABE) para reforçar a privacidade dos dados de treinamento."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "The randomly formed number r characterizes the likelihood that the prey would escape from the unsafe surroundings once the HH presents an unexpected attack.",
+      "afirmacao": "The randomly formed number r characterizes the likelihood that the prey would escape"
+    }
+  ],
+  "interpretacao": "O algoritmo HHO serve como mecanismo de busca meta‑heurística para selecionar características relevantes, alternando entre exploração e exploração guiada por parâmetros aleatórios e pela métrica En, o que pode influenciar a eficácia e o custo computacional da fase de pré‑processamento do modelo.",
+  "duvidas": "Como a escolha dos limites UB e LB e dos parâmetros aleatórios (q, r) afeta a convergência e a robustez da seleção de características em cenários de IoT com recursos limitados?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "6dee8b8b99f01dbdf25f",
+  "artigo": "Ragab_2025",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Avaliar o consumo energético e a latência do algoritmo HHO em dispositivos de borda de baixa potência.; Investigar a resistência do processo de seleção de características HHO a ataques de envenenamento de dados em ambientes federados.; Integrar identidade auto‑soberana (SSI) para validar a integridade dos parâmetros HHO trocados entre nós federados.; Explorar a combinação de HHO com técnicas de criptografia baseada em atributos (ABE) para reforçar a privacidade dos dados de treinamento.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "c5214ad786b009c632b3"
+  }
+}

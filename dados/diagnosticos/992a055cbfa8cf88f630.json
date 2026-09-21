@@ -1,0 +1,98 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T18:34:25",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "AI edge cloud service provisioning for knowledge management smart applications",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo apresenta uma arquitetura serverless híbrida edge‑cloud para apoiar processos de gestão do conhecimento (KM) em cidades inteligentes, combinando a escalabilidade da nuvem com o processamento próximo à fonte na borda. Experimentos demonstram redução de latência, congestionamento de rede e custos operacionais, além de melhorar a análise em tempo real e a tomada de decisão em aplicações de IA, alinhado à visão Society 5.0. O estudo destaca ainda a importância da confiança entre stakeholders, da capacitação da força‑de‑trabalho e dos desafios de interoperabilidade, escalabilidade, governança, alocação de recursos e cumprimento de SLAs. Embora a proposta mostre benefícios, reconhece limitações relacionadas à segurança e privacidade dos dados na borda, à heterogeneidade de dispositivos IoT, à verificação descentralizada de SLAs e ao custo de implantação de técnicas como ABE em ambientes de baixa potência.",
+        "lacunas_possiveis": [
+          "Impactos de segurança e privacidade ao expor dados de KM na borda",
+          "Comportamento da arquitetura diante de falhas de conectividade entre nuvem e edge",
+          "Escalabilidade de métricas de latência e custos em cenários de cidade real",
+          "Mecanismos de verificação descentralizada de SLAs em ambientes edge‑cloud"
+        ],
+        "propostas_possiveis": [
+          "Avaliar a integração de SSI/identidade descentralizada para gerenciar a heterogeneidade e confiança entre dispositivos IoT",
+          "Investigar a aplicação de ABE ou credenciais verificáveis para controle de acesso e privacidade em edge computing de baixa potência",
+          "Desenvolver um framework de monitoramento e recuperação automática para falhas de conectividade entre nuvem e borda",
+          "Modelar e simular custos operacionais e de alocação de recursos em escala de cidade completa"
+        ]
+      },
+      {
+        "resumo": "O artigo propõe uma arquitetura serverless Edge‑Cloud para provisionamento de serviços de IA voltados à gestão do conhecimento (KM) em cidades inteligentes. Utiliza servidores de borda de baixa potência interconectados via Wi‑Fi, 5G ou outras redes sem fio, permitindo que funções de IA sejam executadas localmente para reduzir latência e consumo de banda, com escalabilidade automática (scale‑to‑zero) e migração para a nuvem ou CDNs em picos de demanda. A solução combina quatro camadas – dispositivos IoT, borda da cidade, CDN de borda e nuvem – e define o tempo de processo (PT) como soma dos atrasos de comunicação, configuração, computação e retorno. Embora destaque benefícios de custo, rapidez e eficiência, reconhece a necessidade de segurança (TLS, RBAC), interoperabilidade entre provedores de edge, mecanismos de revogação de credenciais, orquestração automática, métricas de migração, avaliação de consumo energético e políticas ABAC em tempo real.",
+        "lacunas_possiveis": [
+          "Mecanismos de segurança e privacidade específicos para funções serverless em bordas de recursos limitados.",
+          "Interoperabilidade e orquestração automática entre diferentes provedores de edge serverless.",
+          "Estratégias de revogação de credenciais e integração de SSI/blockchain no fluxo de KM.",
+          "Métricas e políticas para decisão de migração de funções entre borda, CDN e nuvem.",
+          "Avaliação do overhead de escalonamento e consumo energético em cenários de alta frequência."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um framework de identidade descentralizada (SSI) com credenciais verificáveis e ABE para controle de acesso nas funções serverless edge.",
+          "Implementar um motor de orquestração baseado em políticas ABAC que ajuste dinamicamente a alocação de funções usando métricas de latência, carga e energia.",
+          "Criar um protocolo de interoperabilidade entre provedores de edge serverless que suporte revogação de credenciais via blockchain.",
+          "Medir e modelar o overhead de decisão de offloading (S + R) e seu impacto energético, propondo otimizações de carregamento de funções.",
+          "Definir um conjunto de indicadores de privacidade e consumo energético para avaliar o impacto da IA serverless em ambientes IoT/5G."
+        ]
+      },
+      {
+        "resumo": "O artigo propõe combinar ABAC e identidade descentralizada baseada em blockchain, complementados por criptografia homomórfica, para melhorar privacidade e controle de dados em serviços AI edge‑cloud, atendendo a requisitos GDPR/CCPA e interoperabilidade via multi‑cloud. Experimentos com um Raspberry Pi e AWS mostram que a borda reduz latência, enquanto a nuvem oferece maior capacidade computacional; limites críticos de carga determinam quando o tempo total de processamento (PT) da nuvem supera o da borda. A arquitetura edge‑cloud diminui o custo computacional em até 59,72×, reduz congestão de rede e aumenta resiliência, mas os testes são limitados a um único dispositivo e servidor. O estudo aponta lacunas como falta de adaptação a hardware especializado, ausência de monitoramento de carga em tempo real, desafios de padronização, escalabilidade, segurança distribuída, dependência de fornecedores e risco de lock‑in.",
+        "lacunas_possiveis": [
+          "Monitoramento de carga em tempo real sem sobrecarga nos nós edge",
+          "Suporte a topologias heterogêneas de edge (vários dispositivos, GPUs)",
+          "Padronização e interoperabilidade de identidade descentralizada entre provedores",
+          "Avaliação do overhead da criptografia homomórfica em aplicações de tempo real",
+          "Análise de impacto ambiental e energético da arquitetura edge‑cloud"
+        ],
+        "propostas_possiveis": [
+          "Desenvolver agentes leves de monitoramento de carga e algoritmos adaptativos de offloading baseados em ABAC",
+          "Implementar testes com múltiplos dispositivos edge, incluindo GPUs, para avaliar desempenho e consumo energético",
+          "Criar um framework SSI interoperável usando padrões DID/VC para autenticação entre edge e cloud",
+          "Benchmarkar a latência e o consumo de recursos da criptografia homomórfica em cenários de IA na borda",
+          "Realizar estudo de ciclo de vida para quantificar emissões e custos energéticos da solução"
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo (fonte: PDF parcial) descreve uma arquitetura serverless híbrida edge‑cloud destinada ao suporte de processos de gestão do conhecimento (KM) em cidades inteligentes, combinando a escalabilidade da nuvem com o processamento próximo à fonte na borda (fato). Experimentos com um Raspberry Pi e AWS mostram redução de latência, diminuição da congestão de rede e custos operacionais até 59,72×, além de maior resiliência (fato). Os autores interpretam esses resultados como alinhamento à visão Society 5.0 e destacam a importância da confiança entre stakeholders, capacitação da força‑de‑trabalho e desafios de interoperabilidade, governança, alocação de recursos e cumprimento de SLAs (interpretação). Limitações reconhecidas incluem questões de segurança e privacidade dos dados na borda, heterogeneidade de dispositivos IoT, verificação descentralizada de SLAs e custo de técnicas como ABE em ambientes de baixa potência (interpretação). A proposta também incorpora ABAC, identidade descentralizada baseada em blockchain e criptografia homomórfica para atender a requisitos GDPR/CCPA e multi‑cloud (fato). Contudo, os testes são limitados a um único dispositivo e não abordam monitoramento de carga em tempo real, topologias heterogêneas, padronização de SSI, overhead da criptografia homomórfica ou impactos ambientais (hipótese). O resumo sintetiza fatos, interpretações dos autores e hipóteses derivadas para orientar pesquisas futuras.",
+    "lacunas_possiveis": [
+      "Impactos de segurança e privacidade ao expor dados de KM na borda",
+      "Comportamento da arquitetura diante de falhas de conectividade entre nuvem e edge",
+      "Escalabilidade de métricas de latência e custos em cenários de cidade real",
+      "Mecanismos de verificação descentralizada de SLAs em ambientes edge‑cloud",
+      "Mecanismos de segurança e privacidade específicos para funções serverless em bordas de recursos limitados",
+      "Interoperabilidade e orquestração automática entre diferentes provedores de edge serverless",
+      "Estratégias de revogação de credenciais e integração de SSI/blockchain no fluxo de KM",
+      "Métricas e políticas para decisão de migração de funções entre borda, CDN e nuvem",
+      "Avaliação do overhead de escalonamento e consumo energético em cenários de alta frequência",
+      "Monitoramento de carga em tempo real sem sobrecarga nos nós edge",
+      "Suporte a topologias heterogêneas de edge (vários dispositivos, GPUs)",
+      "Padronização e interoperabilidade de identidade descentralizada entre provedores",
+      "Avaliação do overhead da criptografia homomórfica em aplicações de tempo real",
+      "Análise de impacto ambiental e energético da arquitetura edge‑cloud"
+    ],
+    "propostas_possiveis": [
+      "Avaliar a integração de SSI/identidade descentralizada para gerenciar a heterogeneidade e confiança entre dispositivos IoT",
+      "Investigar a aplicação de ABE ou credenciais verificáveis para controle de acesso e privacidade em edge computing de baixa potência",
+      "Desenvolver um framework de monitoramento e recuperação automática para falhas de conectividade entre nuvem e borda",
+      "Modelar e simular custos operacionais e de alocação de recursos em escala de cidade completa",
+      "Desenvolver um framework de identidade descentralizada (SSI) com credenciais verificáveis e ABE para controle de acesso nas funções serverless edge",
+      "Implementar um motor de orquestração baseado em políticas ABAC que ajuste dinamicamente a alocação de funções usando métricas de latência, carga e energia",
+      "Criar um protocolo de interoperabilidade entre provedores de edge serverless que suporte revogação de credenciais via blockchain",
+      "Medir e modelar o overhead de decisão de offloading (S + R) e seu impacto energético, propondo otimizações de carregamento de funções",
+      "Definir um conjunto de indicadores de privacidade e consumo energético para avaliar o impacto da IA serverless em ambientes IoT/5G",
+      "Desenvolver agentes leves de monitoramento de carga e algoritmos adaptativos de offloading baseados em ABAC",
+      "Implementar testes com múltiplos dispositivos edge, incluindo GPUs, para avaliar desempenho e consumo energético",
+      "Criar um framework SSI interoperável usando padrões DID/VC para autenticação entre edge e cloud",
+      "Benchmarkar a latência e o consumo de recursos da criptografia homomórfica em cenários de IA na borda",
+      "Realizar estudo de ciclo de vida para quantificar emissões e custos energéticos da solução"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:34:52"
+}

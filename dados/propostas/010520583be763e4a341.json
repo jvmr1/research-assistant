@@ -1,0 +1,26 @@
+{
+  "id": "010520583be763e4a341",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T19:25:47",
+  "modelo": "síntese individual já extraída",
+  "titulo": "S_2026: Desenvolver um modelo de arquitetura detalhado que descreva a integração entre módulos de ",
+  "fontes": [
+    "S_2026"
+  ],
+  "problema": "Ausência de descrição da arquitetura do sistema (componentes, fluxos de dados e integração entre IA, geo‑fencing e blockchain).",
+  "hipotese_lacuna": "Ausência de descrição da arquitetura do sistema (componentes, fluxos de dados e integração entre IA, geo‑fencing e blockchain).",
+  "meu_trabalho": "Desenvolver um modelo de arquitetura detalhado que descreva a integração entre módulos de IA, geo‑fencing e blockchain, incluindo diagramas de fluxo.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver um modelo de arquitetura detalhado que descreva a integração entre módulos de IA, geo‑fencing e blockchain, incluindo diagramas de fluxo.",
+  "modo": "artigo",
+  "buscas": [
+    "AI-Powered Smart Tourist Safety System with Geo-Fencing and Blockchain Identity limitations future work",
+    "AI-Powered Smart Tourist Safety System with Geo-Fencing and Blockchain Identity smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "a72d2e3304525221eb41"
+  ],
+  "fatos": "O trabalho propõe um sistema de segurança para turistas baseado em IA, geo‑fencing e identidade blockchain."
+}

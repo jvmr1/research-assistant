@@ -1,0 +1,22 @@
+{
+  "id": "ccdf38b1eaf0a2309fea",
+  "artigo": "Li_2025",
+  "pagina": 15,
+  "tipo": "pdf",
+  "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+  "evidencias": [],
+  "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+  "duvidas": "Conferir manualmente este trecho se ele for importante.",
+  "avisos": [
+    "falha_tecnica_ficha"
+  ],
+  "perfil_acumulado": {
+    "problema": "efficiency and performance problems",
+    "solucao": "various blockchain-based solutions have been proposed, each addressing specific challenges.",
+    "avaliacao": "excluding inferred data does not materially alter the main findings",
+    "limites": "reliance on trust among consortium members",
+    "possibilidades": "Explorar a aplicação do padrão de blockchain permissionless com PoS em cidades inteligentes, avaliando impactos na interoperabilidade de identidade auto‑soberana.; Comparar o desempenho e a privacidade de soluções permissionless versus consórcio privado em ambientes de edge computing para IoT industrial.; Investigar mecanismos de revogação de credenciais verificáveis adaptados ao modelo permissionless, mitigando a dependência de confiança entre participantes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "b8443972948d3ef5dd5c"
+  }
+}

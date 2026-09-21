@@ -1,0 +1,41 @@
+{
+  "resumo": "O artigo apresenta uma taxonomia abrangente para gestão de identidade baseada em DLT, centrada na confiança, estruturada em três grupos (trust anchor, identidade e ledger). Validada por revisão de especialistas, a taxonomia serve como ferramenta analítica e guia de design, embora sua relevância possa ser afetada pela rápida evolução do campo.",
+  "perfil": {
+    "problema": "Trust emerged as the central concern across various layers of DLT-based IDM architectures",
+    "solucao": "a comprehensive taxonomy for DLT-based identity management",
+    "avaliacao": "The taxonomy provides a structured framework for classifying existing solutions, uncovering their shortcomings, and identifying improvements",
+    "limites": "Another limitation could be the rapid evolution of the research field",
+    "possibilidades": [
+      "Aplicar a taxonomia para avaliar soluções de identidade auto‑soberana (SSI) em cidades inteligentes com computação de borda.",
+      "Estender o modelo de trust anchor incorporando controle de divulgação baseado em ABE para dispositivos IoT.",
+      "Comparar impactos de ledgers permissioned versus permissionless na latência e privacidade de serviços públicos.",
+      "Desenvolver ferramentas interativas que automatizem o preenchimento da taxonomia para facilitar sua adoção por praticantes."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Trust emerged as the central concern across various layers of DLT-based IDM architectures",
+      "afirmacao": "A confiança é a preocupação central nas arquiteturas de IDM baseadas em DLT."
+    },
+    {
+      "citacao": "Another limitation could be the rapid evolution of the research field. However, we view the taxonomy as a living artifact",
+      "afirmacao": "A taxonomia foi validada por revisão de especialistas e considerada um artefato vivo."
+    }
+  ],
+  "interpretacao": "A taxonomia proposta estrutura de forma detalhada os componentes críticos de identidade em DLT, facilitando a análise comparativa e o design de soluções, mas requer atualização contínua para acompanhar inovações tecnológicas.",
+  "duvidas": "Como a taxonomia pode ser adaptada para suportar mecanismos de revogação descentralizada em tempo real? Qual o custo de implementação de ferramentas interativas para preenchimento automático da taxonomia?",
+  "avisos": [],
+  "id": "f470faa98c95154b636b",
+  "artigo": "Vaziry_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Trust emerged as the central concern across various layers of DLT-based IDM architectures",
+    "solucao": "a comprehensive taxonomy for DLT-based identity management",
+    "avaliacao": "The taxonomy effectively classified two distinct architectural solutions, showcasing its versatility.",
+    "limites": "Another limitation could be the rapid evolution of the research field",
+    "possibilidades": "Aplicar a taxonomia para avaliar soluções de identidade auto‑soberana (SSI) em cidades inteligentes com computação de borda.; Estender o modelo de trust anchor incorporando controle de divulgação baseado em ABE para dispositivos IoT.; Comparar impactos de ledgers permissioned versus permissionless na latência e privacidade de serviços públicos.; Desenvolver ferramentas interativas que automatizem o preenchimento da taxonomia para facilitar sua adoção por praticantes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

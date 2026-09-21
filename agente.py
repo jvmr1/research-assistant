@@ -26,6 +26,12 @@ SESSOES = DATA / "sessoes"
 PROPOSTAS = DATA / "propostas"
 MODELO_OLLAMA = "qwen2.5:7b-instruct-q4_K_M"
 MODELO_OPENROUTER = "openai/gpt-oss-120b"
+MODELOS_OPENROUTER = [
+    MODELO_OPENROUTER,
+    "nex-agi/nex-n2.5-pro:free",
+    "z-ai/glm-5.2:free",
+    "google/gemma-4-26b-a4b-it:free",
+]
 MODELOS_INVALIDOS = {"free", "openrouter/free", "gratis", "gratuito"}
 
 
@@ -50,6 +56,7 @@ O agente nunca sobrescreve este arquivo automaticamente.
 
 ## Configuração
 
+- modo de pesquisa: focada
 - ano mínimo: 2025
 - resultados por consulta: 10
 - trabalhos simultâneos: 1
@@ -57,14 +64,19 @@ O agente nunca sobrescreve este arquivo automaticamente.
 - fontes acadêmicas auxiliares: semantic_scholar, crossref
 - modelo ia: openrouter
 - modelo openrouter: openai/gpt-oss-120b
+- fila openrouter: openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free
 - modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
+
+Use `modo de pesquisa: geral` para a revisão exploratória de lacunas e propostas.
+Use `modo de pesquisa: focada` para construir o estado da arte e redigir uma
+introdução/fundamentação teórica a partir das fontes lidas.
 
 ## Variáveis de busca
 
-- domínio: smart cities, IoT, industrial IoT, cyber-physical systems
-- tecnologia: blockchain, self-sovereign identity, decentralized identity, verifiable credentials, attribute-based encryption
-- problema: authentication, access control, interoperability, privacy, data sharing, revocation, cross-organization security
-- contexto: public sector, smart city services, edge computing, distributed systems
+- domínio: smart cities, urban computing, public administration, digital public services
+- tecnologia: self-sovereign identity, decentralized identity, verifiable credentials, decentralized identifiers, attribute-based encryption, homomorphic encryption
+- problema: citizen actions, administrative entity actions, transmission security, processing security, storage security, revocation, credential recovery, loss of access, selective disclosure, privacy-preserving access control, interoperability
+- contexto: smart city services, public sector, citizen identity, cross-organization data sharing, IoT services, urban data governance
 
 ## Consultas iniciais
 
@@ -75,6 +87,25 @@ O agente nunca sobrescreve este arquivo automaticamente.
 - blockchain enabled secure IIoT data sharing organizations
 - authentication access control blockchain smart cities
 
+## Trabalhos-base
+
+Quando houver PDFs em `exemplos/`, o agente os importa como sementes
+prioritárias, faz leitura integral e usa suas ideias para orientar novas buscas.
+Esses trabalhos também podem orientar a estrutura da redação, mas não são
+copiados nem tratados como citações automáticas.
+
+## Objetivo da pesquisa focada
+
+Revisar como a identidade autossoberana do cidadão pode ser usada em cidades
+inteligentes. Mapear as ações do cidadão e das entidades administrativas em
+cada fase do ciclo de vida da credencial e do dado: emissão, apresentação,
+verificação, transmissão, processamento, armazenamento, revogação e
+recuperação após perda de acesso. Para cada fase, registrar estado da arte,
+riscos de segurança e privacidade, requisitos de interoperabilidade, fontes
+que sustentam cada afirmação e lacunas ainda abertas. Ao acumular fontes,
+escrever uma introdução e uma fundamentação teórica provisórias, sem inventar
+citações ou tratar hipótese como consenso.
+
 ## Critérios de interesse
 
 Priorize trabalhos que ajudem a encontrar lacunas próximas ao grupo de pesquisa:
@@ -83,7 +114,9 @@ SSI, controle de acesso, ABE, interoperabilidade, segurança e privacidade.
 
 Aceite ideias exploratórias. Uma proposta pode ser uma combinação, adaptação,
 avaliação ou extensão de trabalhos existentes, desde que fique claro quais
-trabalhos sustentam a hipótese e o que ainda precisaria ser verificado.
+trabalhos sustentam a hipótese e o que ainda precisaria ser verificado. A
+introdução e a fundamentação geradas são rascunhos de apoio: o pesquisador
+deve revisar a redação, conferir as referências e produzir a versão final.
 """
 
 
@@ -133,9 +166,10 @@ def carregar_instrucoes(caminho=INSTRUCOES):
     fonte_academica_principal = "openalex"
     fontes_academicas_auxiliares = ["semantic_scholar", "crossref"]
     modelo_ia = "ollama"
-    modelo_openrouter = MODELO_OPENROUTER
+    modelos_openrouter = list(MODELOS_OPENROUTER)
     modelo_ollama = MODELO_OLLAMA
     artigos_por_ciclo_ia = 10
+    modo_pesquisa = "geral"
     lendo_consultas = False
     lendo_variaveis = False
     variaveis_busca = {}
@@ -151,6 +185,10 @@ def carregar_instrucoes(caminho=INSTRUCOES):
 
         if linha_limpa.lower().startswith("- ano mínimo:"):
             ano_minimo = int(linha_limpa.split(":", 1)[1].strip())
+
+        if linha_limpa.lower().startswith("- modo de pesquisa:"):
+            valor = linha_limpa.split(":", 1)[1].strip().lower()
+            modo_pesquisa = "focada" if valor in {"focada", "foco", "especifica", "específica"} else "geral"
 
         if linha_limpa.lower().startswith("- resultados por consulta:"):
             resultados_por_consulta = int(
@@ -177,7 +215,7 @@ def carregar_instrucoes(caminho=INSTRUCOES):
         if linha_limpa.lower().startswith("- modelo openrouter:"):
             valor = linha_limpa.split(":", 1)[1].strip()
             if not modelo_invalido(valor):
-                modelo_openrouter = valor
+                modelos_openrouter = [valor]
 
         if (linha_limpa.lower().startswith("- modelo ollama:") or
             linha_limpa.lower().startswith("- modelo ollama de reserva:")):
@@ -187,9 +225,8 @@ def carregar_instrucoes(caminho=INSTRUCOES):
             linha_limpa.lower().startswith("- fila openrouter:")):
             bruto = linha_limpa.split(":", 1)[1].strip()
             modelos_validos = [m.strip() for m in bruto.split(",") if m.strip() and not modelo_invalido(m.strip())]
-            primeiro = next(iter(modelos_validos), "")
-            if primeiro:
-                modelo_openrouter = primeiro
+            if modelos_validos:
+                modelos_openrouter = list(dict.fromkeys(modelos_validos))
 
         if linha_limpa.lower().startswith("- artigos analisados por ciclo:"):
             artigos_por_ciclo_ia = int(
@@ -217,10 +254,11 @@ def carregar_instrucoes(caminho=INSTRUCOES):
         "fonte_academica_principal": fonte_academica_principal,
         "fontes_academicas_auxiliares": fontes_academicas_auxiliares,
         "modelo_ia": modelo_ia,
-        "modelo_openrouter": modelo_openrouter,
-        "modelos_openrouter": [modelo_openrouter] if modelo_openrouter else [],
+        "modelo_openrouter": modelos_openrouter[0] if modelos_openrouter else "",
+        "modelos_openrouter": modelos_openrouter,
         "modelo_ollama": modelo_ollama,
         "artigos_por_ciclo_ia": artigos_por_ciclo_ia,
+        "modo_pesquisa": modo_pesquisa,
     }
 
 
@@ -549,6 +587,8 @@ def criar_tags(consulta, artigo=None):
         "blockchain": ["blockchain", "distributed ledger"],
         "contratos-inteligentes": ["smart contract"],
         "abe": ["attribute-based encryption", "attribute based encryption", " abe ", "ciphertext-policy"],
+        "criptografia-homomorfica": ["homomorphic encryption", "fully homomorphic", "partially homomorphic"],
+        "criptografia": ["cryptography", "cryptographic", "encryption", "ciphertext"],
         "controle-de-acesso": ["access control", "authorization", "authentication"],
         "privacidade": ["privacy", "confidentiality", "privacy-preserving", "homomorphic encryption"],
         "seguranca": ["cybersecurity", "cyber security", "intrusion detection", "threat detection"],
@@ -898,6 +938,4 @@ if __name__ == "__main__":
     import sys
     from motor import principal
     principal(sys.modules[__name__])
-
-
 

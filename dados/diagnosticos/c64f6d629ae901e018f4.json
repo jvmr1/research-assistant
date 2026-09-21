@@ -1,0 +1,183 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-16T17:57:16",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para aprofundar ou esclarecer as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Sathyabama_2025",
+        "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "6a8f0b952a23d59feaeb",
+            "pagina": 1,
+            "resumo": "O artigo propõe um framework que combina Deep Neural Networks para detecção de anomalias e blockchain privado com smart contracts para garantir integridade, transparência e respostas automáticas a ameaças em ambientes IoT, alcançando 99,18% de acurácia e 15,42% de falsos positivos.",
+            "evidencias": [
+              {
+                "citacao": "With a low false-positive rate of 15.42% and a strong detection accuracy of 99.18%",
+                "afirmacao": "O modelo DNN atinge taxa de falsos positivos de 15,42% e precisão de detecção de 99,18%."
+              }
+            ]
+          },
+          {
+            "id": "b9c2f52d3610c303cb17",
+            "pagina": 2,
+            "resumo": "O artigo propõe a arquitetura DNNs‑BCT, que combina redes neurais profundas com blockchain privado para detectar anomalias em redes IoT em tempo real, reduzindo falsos positivos e aumentando a precisão. O blockchain garante integridade e resposta automática via contratos inteligentes, enquanto o DNN aprende padrões de ataque, inclusive zero‑day. Avaliações com datasets de benchmark mostram desempenho superior a IDS tradicionais. Futuras linhas incluem DNNs leves e aprendizado federado para dispositivos com recursos limitados.",
+            "evidencias": [
+              {
+                "citacao": "Every IoT device logs activities on a private blockchain network, ensuring secure communication and preventing unlawful access",
+                "afirmacao": "Every IoT device logs activities on a private blockchain network, ensuring secure communication and preventing unlawful access"
+              }
+            ]
+          },
+          {
+            "id": "eda521031516b8b36a16",
+            "pagina": 3,
+            "resumo": "O artigo propõe DNNs-BCT, que combina redes neurais profundas com blockchain para detecção de anomalias em IoT, usando edge computing para pré‑processamento, reduzindo custos computacionais, consumo de energia e latência em relação a soluções baseadas em Ethereum ou Bitcoin.",
+            "evidencias": [
+              {
+                "citacao": "processing, reduced storage overhead, and efficient energy use for IoT environments, in contrast to traditional blockchain-based security solutions that depend on Ethereum or Bitcoin, which have high computational costs, energy consumption, and latency.",
+                "afirmacao": "DNNs-BCT reduces computational costs and latency compared to traditional blockchain solutions."
+              },
+              {
+                "citacao": "DNNs-BCT uses edge computing to preprocess data before DNN inference and blockchain logging, greatly reducing bandwidth load and allowing for real-time anomaly detection.",
+                "afirmacao": "Edge computing preprocesses data before DNN inference and blockchain logging, enabling real‑time anomaly detection."
+              }
+            ]
+          },
+          {
+            "id": "c3afa76dff606b4ad5e4",
+            "pagina": 4,
+            "resumo": "O trecho apresenta uma revisão de literatura que destaca a superação de obstáculos ao uso de deep learning em áreas como saúde e bioinformática, e descreve múltiplos estudos que combinam algoritmos bio‑inspirados, blockchain e redes neurais para otimizar coleta de dados, detecção de intrusões, confiabilidade de sensores e desempenho de IIoT. São citados critérios de avaliação (escalabilidade, flexibilidade, latência, métricas de classificação) e diversas propostas que melhoram confiabilidade, eficiência e segurança em ambientes distribuídos.",
+            "evidencias": [
+              {
+                "citacao": "most articles are assessed based on scalability, flexibility, latency, Fscore, specificity, sensitivity, and accuracy.",
+                "afirmacao": "Most articles are assessed based on scalability, flexibility, latency, Fscore, specificity, sensitivity, and accuracy."
+              }
+            ]
+          }
+        ],
+        "problema": "single points of failure",
+        "solucao": "a bespoke lightweight blockchain integrate efficient consensus methods such as Proof of Authority (PoA) or Directed Acyclic Graphs (DAGs)",
+        "avaliacao": "over 98% accuracy in identifying cyber threats",
+        "limites": "computational cost analysis for DNN training and blockchain operations is necessary",
+        "possibilidades": "Avaliar o desempenho de Hyperledger Fabric com PoA/DAGs em ambientes de borda de cidades inteligentes; integrar verifiable credentials para autenticação descentralizada de dispositivos IoT; explorar aprendizado federado para atualização contínua dos DNNs sem expor logs sensíveis; aplicar seleção avançada de características (RFE, PCA, MI) a dados de sensores urbanos; investigar a escalabilidade da solução em redes massivas de sensores."
+      },
+      {
+        "id": "Ragab_2025",
+        "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "3365ebacbbc86eb8ad7b",
+            "pagina": 1,
+            "resumo": "O artigo propõe o AAIFLF-PPCD, um framework que combina inteligência artificial avançada, aprendizado federado e otimizações meta-heurísticas para detectar ciberameaças em IoT de cidades inteligentes, preservando a privacidade dos usuários e alcançando 99,47% de acurácia em dataset de referência.",
+            "evidencias": [
+              {
+                "citacao": "Federated Learning (FL) offers an encouraging solution to address these challenges by providing a privacy-preserving solution for investigating and detecting cyberattacks in IoT systems",
+                "afirmacao": "Federated Learning offers a privacy-preserving solution for detecting cyberattacks in IoT systems"
+              },
+              {
+                "citacao": "The performance validation of the AAIFLF-PPCD technique exhibited a superior accuracy value of 99.47% over existing models",
+                "afirmacao": "The AAIFLF-PPCD technique achieved 99.47% accuracy"
+              }
+            ]
+          },
+          {
+            "id": "4c147c115c45c215e76d",
+            "pagina": 2,
+            "resumo": "O trecho destaca a importância da segurança em cidades inteligentes, apontando vulnerabilidades de hardware e software que podem levar a dados falsos e falhas por ataques. Propõe investigar a impossibilidade do aprendizado federado (FL) para detecção de ciberameaças preservando a privacidade, reconhecendo ainda que FL pode ser vulnerável a ataques de envenenamento e enfrentar desafios de alta dimensionalidade e heterogeneidade dos dispositivos IoT.",
+            "evidencias": [
+              {
+                "citacao": "Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats.",
+                "afirmacao": "Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats."
+              },
+              {
+                "citacao": "To address these problems, this work investigates the impossibility of FL for privacy-preserving cyberthreat detection",
+                "afirmacao": "This work investigates the impossibility of FL for privacy-preserving cyberthreat detection."
+              }
+            ]
+          },
+          {
+            "id": "0496bd8c9938d870579f",
+            "pagina": 3,
+            "resumo": "O artigo propõe o AAIFLF‑PPCD, um framework que combina aprendizado federado, seleção de atributos via Harris Hawk Optimization, classificação por stacked sparse auto‑encoder e ajuste de hiperparâmetros com Walrus Optimization para detectar ameaças cibernéticas em cidades inteligentes assistidas por IoT, preservando a privacidade dos usuários. O método visa melhorar a acurácia e reduzir o tempo de resposta, integrando técnicas avançadas de IA em ambientes distribuídos.",
+            "evidencias": [
+              {
+                "citacao": "The AAIFLF-PPCD model introduces a novel feature selection mechanism based on HHO to improve cyberthreat detection performance.",
+                "afirmacao": "The AAIFLF-PPCD model introduces a novel feature selection mechanism based on HHO to improve cyberthreat detection performance."
+              },
+              {
+                "citacao": "The AAIFLF-PPCD approach integrates the WOA model for hyperparameter tuning to enhance classifier performance.",
+                "afirmacao": "The AAIFLF-PPCD approach integrates the WOA model for hyperparameter tuning to enhance classifier performance."
+              }
+            ]
+          },
+          {
+            "id": "313b9e85272462586464",
+            "pagina": 4,
+            "resumo": "O artigo apresenta o método AAIFLF‑PPCD para cidades inteligentes sustentáveis assistidas por IoT, focado em detecção robusta e escalável de ciberameaças com preservação da privacidade dos usuários. O modelo opera em três estágios – seleção de características baseada em HHO, reconhecimento de ataques via SSAE e ajuste de hiperparâmetros com WOA – visando melhorar a acurácia e a eficiência computacional. O texto também destaca limitações de alto custo computacional e complexidade ao integrar blockchain, aprendizado federado e IA, especialmente em ambientes com recursos limitados, apontando lacunas de escalabilidade e explicabilidade.",
+            "evidencias": [
+              {
+                "citacao": "The primary focus of the AAIFLF-PPCD method is to ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities.",
+                "afirmacao": "The primary focus of the AAIFLF-PPCD method is to ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities."
+              },
+              {
+                "citacao": "The limitations of the existing studies in this domain include the high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments.",
+                "afirmacao": "The limitations of the existing studies in this domain include the high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments."
+              }
+            ]
+          }
+        ],
+        "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+        "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+        "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+        "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+        "possibilidades": "explorar compressão ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; avaliar impacto de diferentes proporções TRPH/TSPH na generalização; investigar eficiência de federated learning com comunicação otimizada."
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "Os trabalhos Sathyabama_2025 e Ragab_2025 abordam a segurança de IoT em cidades inteligentes combinando inteligência artificial e blockchain. Sathyabama propõe um framework DNN‑BCT que usa redes neurais profundas, edge computing e um blockchain privado com smart contracts para detecção de anomalias, alcançando 99,18% de acurácia e destacando a necessidade de consensos leves (PoA/DAG). Ragab apresenta o AAIFLF‑PPCD, que integra aprendizado federado, seleção de atributos via Harris Hawk Optimization e ajuste de hiperparâmetros (WOA), também com blockchain, obtendo 99,47% de acurácia, mas apontando alto custo computacional e complexidade em ambientes restritos. Ambos concordam que IA + blockchain aumentam a precisão e a privacidade, porém divergem quanto ao modelo de treinamento (centralizado vs federado) e ao papel do blockchain (registro de logs vs suporte ao FL). Nenhum dos estudos avalia identidade auto‑soberana (SSI) nem compara diferentes mecanismos de consenso em larga escala.",
+    "ideias": [
+      {
+        "descricao": "Criar um híbrido que execute inferência DNN na borda (como em Sathyabama) e atualize os pesos via aprendizado federado (como em Ragab). Dispositivos autenticariam suas contribuições usando credenciais verificáveis (SSI), permitindo controle de acesso descentralizado. O experimento mediria acurácia, latência e consumo energético, preenchendo a lacuna de integração DNN‑edge + FL + SSI.",
+        "fontes": [
+          "Sathyabama_2025",
+          "Ragab_2025"
+        ],
+        "lacuna": "Nenhum trabalho combina inferência local DNN com agregação federada nem emprega SSI para autenticação de dispositivos IoT."
+      },
+      {
+        "descricao": "Comparar empiricamente dois mecanismos de consenso para blockchains privados em ambientes de borda de cidades inteligentes: PoA/DAG (sugerido por Sathyabama) versus Hyperledger Fabric (frequentemente usado em cenários de FL como no de Ragab). A avaliação incluiria latência, uso de energia e escalabilidade em redes de milhares de sensores, abordando a ausência de estudos comparativos de consenso em IoT de cidades.",
+        "fontes": [
+          "Sathyabama_2025",
+          "Ragab_2025"
+        ],
+        "lacuna": "Falta de análise prática de diferentes protocolos de consenso sob restrições de recursos e alta densidade de dispositivos."
+      },
+      {
+        "descricao": "Aplicar a seleção de atributos baseada em Harris Hawk Optimization (proposta por Ragab) ao pipeline DNN‑BCT de Sathyabama, visando reduzir a dimensionalidade dos dados de sensores antes da inferência. O objetivo é diminuir o tamanho do modelo e o consumo computacional nos nós de borda, testando se a precisão permanece acima de 98% e quantificando a economia de recursos.",
+        "fontes": [
+          "Sathyabama_2025",
+          "Ragab_2025"
+        ],
+        "lacuna": "Nenhum estudo avaliou o impacto de técnicas avançadas de seleção de características sobre modelos DNN integrados a blockchain para detecção de anomalias em IoT."
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:57:31"
+}

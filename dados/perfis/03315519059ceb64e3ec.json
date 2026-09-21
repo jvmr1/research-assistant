@@ -1,0 +1,7 @@
+{
+  "problema": "autenticação e controle de acesso em cidades inteligentes",
+  "solucao": "modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas",
+  "avaliacao": "latência inferior a 500 ms por operação, indicando viabilidade prática",
+  "limites": "Não identificado nas fichas/trechos disponíveis.",
+  "possibilidades": "Integrar criptografia baseada em atributos (ABE) ao modelo SSI para controle de acesso granular e acrescentar um mecanismo de recuperação de credenciais usando secret sharing, permitindo que o cidadão recupere o acesso perdido de forma segura."
+}

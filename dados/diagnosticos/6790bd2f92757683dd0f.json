@@ -1,0 +1,98 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T17:34:40",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo apresenta o framework DNNs‑BCT, que integra Deep Neural Networks leves com blockchain privado e smart contracts para detecção e prevenção de anomalias em redes IoT, especialmente em cenários de cidades inteligentes. Os experimentos relatam 99,18 % de acurácia e 15,42 % de falsos positivos, destacando redução de falsos positivos, integridade dos registros e respostas automáticas via contratos inteligentes. A arquitetura utiliza computação de borda para pré‑processamento, reduzindo latência e consumo energético em comparação a soluções baseadas em Ethereum ou Bitcoin. A revisão de literatura aponta tendências de combinar deep learning, blockchain e algoritmos bio‑inspirados para melhorar segurança, escalabilidade e eficiência em IIoT. Contudo, permanecem questões sobre overhead de blockchain, consumo energético dos DNNs, privacidade dos dados, atualização de modelos em dispositivos limitados, resistência a ataques adversariais, revogação de credenciais e interoperabilidade entre organizações públicas e privadas.",
+        "lacunas_possiveis": [
+          "Impacto da latência e overhead do blockchain privado em respostas em tempo real.",
+          "Consumo energético dos DNNs leves em dispositivos de borda com recursos limitados.",
+          "Mecanismos de privacidade e proteção de dados ao registrar informações sensíveis na cadeia.",
+          "Estratégias de atualização e manutenção de modelos DNN em dispositivos heterogêneos.",
+          "Resistência a ataques adversariais direcionados ao modelo DNN e ao ledger."
+        ],
+        "propostas_possiveis": [
+          "Avaliar desempenho de DNNs‑BCT com blockchains permissionados de baixa latência (ex.: Hyperledger Fabric) em ambientes de edge computing.",
+          "Desenvolver DNNs ultra‑leves ou usar aprendizado federado para reduzir consumo energético nos nós de borda.",
+          "Integrar técnicas de privacidade como homomorphic encryption ou zero‑knowledge proofs ao registro de dados na blockchain.",
+          "Implementar protocolos de atualização segura de modelos (ex.: OTA com assinatura digital) para dispositivos heterogêneos.",
+          "Criar um benchmark de resistência a ataques adversariais que inclua manipulação de entradas e comprometimento do ledger."
+        ]
+      },
+      {
+        "resumo": "O artigo apresenta um framework que combina redes neurais profundas (DNN) com blockchain para detectar e mitigar anomalias em ambientes IoT, especialmente em cidades inteligentes. Os DNN analisam logs de tráfego e classificam ameaças, enviando os resultados a um ledger distribuído (Hyperledger Fabric ou outras blockchains permissionadas) para registro imutável e transparência. O consenso de baixa latência (PBFT, PoA ou DAG) é usado para suportar respostas em tempo real, e smart contracts são propostos para remediação automática. A solução inclui técnicas avançadas de deep learning (ativação, dropout, batch‑normalization) e seleção de características (RFE, PCA, MI), alcançando acurácia acima de 98 % na detecção de DDoS, malware, Sybil e brute‑force. Contudo, o artigo não detalha como os resultados são codificados na blockchain, a lógica dos contratos inteligentes, nem avalia latência, consumo de energia, custo computacional ou escalabilidade em dispositivos de borda e cenários multi‑organização.",
+        "lacunas_possiveis": [
+          "Codificação e inserção dos resultados de detecção na blockchain",
+          "Lógica e políticas dos smart contracts para mitigação automática",
+          "Impacto de latência e consumo de energia ao combinar DNN em tempo real com operações blockchain em dispositivos de borda",
+          "Análise de custo computacional e escalabilidade em ambientes multi‑organização",
+          "Integração de credenciais verificáveis ou SSI no fluxo de detecção"
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um esquema de payload e assinatura digital para registrar anomalias na blockchain",
+          "Implementar e testar smart contracts que executem ações de mitigação baseadas em categorias de ameaça",
+          "Realizar benchmarks de latência, energia e uso de CPU/GPU em nós de borda com diferentes consensos (PBFT, PoA, DAG)",
+          "Comparar custos de treinamento DNN e operação blockchain em cenários de cidades inteligentes com múltiplas organizações",
+          "Incorporar verifiable credentials/SSI para autenticação descentralizada dos dispositivos antes da análise de anomalias"
+        ]
+      },
+      {
+        "resumo": "O artigo propõe uma arquitetura híbrida que combina blockchain privada e redes neurais profundas (DNN) para detectar e prevenir anomalias em ambientes IoT, inclusive em aplicações marítimas. Os resultados relatados mostram alta acurácia (99,18 %), redução de falsos positivos (15,42 %), eficiência de reação (95,25 %) e escalabilidade (94,96 %). A solução utiliza contratos inteligentes para respostas automáticas, armazenamento off‑chain (IPFS ou nuvem) e edge computing para pré‑processamento, além de técnicas de batch de transações e compressão de logs para mitigar o inchaço da cadeia. Apesar dos benefícios, os autores reconhecem vulnerabilidades a ataques a contratos inteligentes e ataques de 51 %, bem como desafios de custo computacional, consumo energético e desempenho em dispositivos IoT com recursos limitados. São sugeridas melhorias como verificação formal de contratos e uso de algoritmos criptográficos leves, mas permanecem dúvidas sobre a implementação prática, overhead de borda e resistência a ataques avançados.",
+        "lacunas_possiveis": [
+          "Desempenho e overhead em dispositivos IoT com recursos extremamente limitados",
+          "Impacto energético da operação de nós IoT em blockchain privada",
+          "Escalabilidade da solução para milhares de dispositivos simultâneos",
+          "Detalhes do algoritmo de consenso adotado e sua latência em borda",
+          "Eficácia prática da compressão de logs na detecção de anomalias"
+        ],
+        "propostas_possiveis": [
+          "Realizar benchmarks de algoritmos criptográficos leves versus segurança oferecida",
+          "Medir o consumo energético e tempo de processamento de contratos inteligentes em hardware de borda",
+          "Testar a arquitetura em cenários de grande escala (milhares de dispositivos) para avaliar latência e throughput",
+          "Desenvolver e aplicar verificação formal de contratos inteligentes para mitigar vulnerabilidades",
+          "Comparar diferentes mecanismos de consenso (e.g., PoA, Raft) focados em ambientes de borda"
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo descreve o framework DNNs‑BCT, que combina redes neurais profundas leves com uma blockchain privada e smart contracts para detecção e prevenção de anomalias em redes IoT, com foco em cenários de cidades inteligentes. Os experimentos reportam acurácia acima de 99 % e taxa de falsos positivos em torno de 15 %, além de melhorias de latência e consumo energético ao usar computação de borda para pré‑processamento, em comparação a soluções baseadas em Ethereum ou Bitcoin. A arquitetura inclui registro imutável de eventos em ledger (ex.: Hyperledger Fabric), contratos inteligentes para respostas automáticas, armazenamento off‑chain (IPFS ou nuvem) e compressão de logs. A revisão de literatura aponta tendências de integração entre deep learning, blockchain e algoritmos bio‑inspirados para segurança em IIoT. Contudo, o estudo deixa em aberto questões sobre overhead e latência da blockchain, consumo energético dos DNNs em dispositivos limitados, privacidade dos dados registrados, estratégias de atualização de modelos, resistência a ataques adversariais, revogação de credenciais, interoperabilidade multi‑organização, detalhes da codificação dos resultados na cadeia, lógica dos contratos e custos computacionais. O material analisado provém de um PDF parcial.",
+    "lacunas_possiveis": [
+      "Impacto da latência e overhead do blockchain privado em respostas em tempo real",
+      "Consumo energético dos DNNs leves em dispositivos de borda com recursos limitados",
+      "Mecanismos de privacidade e proteção de dados ao registrar informações sensíveis na cadeia",
+      "Estratégias de atualização e manutenção de modelos DNN em dispositivos heterogêneos",
+      "Resistência a ataques adversariais direcionados ao modelo DNN e ao ledger",
+      "Codificação e inserção dos resultados de detecção na blockchain",
+      "Lógica e políticas dos smart contracts para mitigação automática",
+      "Análise de custo computacional e escalabilidade em ambientes multi‑organização",
+      "Integração de credenciais verificáveis ou SSI no fluxo de detecção",
+      "Detalhes do algoritmo de consenso adotado e sua latência em borda",
+      "Escalabilidade da solução para milhares de dispositivos simultâneos",
+      "Eficácia prática da compressão de logs na detecção de anomalias"
+    ],
+    "propostas_possiveis": [
+      "Avaliar desempenho de DNNs‑BCT com blockchains permissionados de baixa latência (ex.: Hyperledger Fabric, Raft) em ambientes de edge computing",
+      "Desenvolver DNNs ultra‑leves ou aplicar aprendizado federado para reduzir consumo energético nos nós de borda",
+      "Integrar técnicas de privacidade como homomorphic encryption ou zero‑knowledge proofs ao registro de dados na blockchain",
+      "Implementar protocolos de atualização segura de modelos (ex.: OTA com assinatura digital) para dispositivos heterogêneos",
+      "Criar benchmark de resistência a ataques adversariais que inclua manipulação de entradas e comprometimento do ledger",
+      "Definir esquema de payload e assinatura digital para registrar anomalias na blockchain",
+      "Projetar e testar smart contracts que executem ações de mitigação baseadas em categorias de ameaça",
+      "Realizar benchmarks de latência, consumo de energia e uso de CPU/GPU em nós de borda com diferentes consensos (PBFT, PoA, DAG)",
+      "Comparar custos de treinamento DNN e operação blockchain em cenários de cidades inteligentes com múltiplas organizações",
+      "Incorporar verifiable credentials/SSI para autenticação descentralizada dos dispositivos antes da análise de anomalias",
+      "Medir o consumo energético e tempo de processamento de contratos inteligentes em hardware de borda",
+      "Testar a arquitetura em escala de milhares de dispositivos para avaliar latência, throughput e escalabilidade",
+      "Aplicar verificação formal a smart contracts para mitigar vulnerabilidades",
+      "Benchmark de algoritmos criptográficos leves versus segurança oferecida"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:35:47"
+}

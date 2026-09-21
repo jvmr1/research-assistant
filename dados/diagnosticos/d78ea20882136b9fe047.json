@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T20:15:14",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+    "perfil_anterior": {
+      "problema": "reducing the risk of model poisoning attacks",
+      "solucao": "decentralized model update storage",
+      "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+      "limites": "While CIFAR-10 is an image dataset primarily used in computer vision tasks, it was selected in this study to facilitate controlled experimentation of the federated learning process under non-IID conditions",
+      "possibilidades": "Aplicar o framework a dados reais de prontuários eletrônicos (EHR) em ambientes de cidades inteligentes, integrando SSI e credenciais verificáveis para controle de acesso granular nos nós de borda; avaliar o impacto de diferentes algoritmos de consenso (PoS, BFT) em escala de milhares de dispositivos IoT; combinar o mecanismo de privacidade com criptografia baseada em atributos (ABE) para políticas de compartilhamento interdepartamental; investigar técnicas de compressão de atualizações para reduzir a latência e melhorar o throughput da blockchain."
+    },
+    "pagina": 14,
+    "texto": "One of the key distinctions of our approach is the hybrid privacy mechanism, which combines Secure \nMultiparty Computation (MPC) and Differential Privacy (DP) to achieve a very high level of privacy. In contrast, \nChang et al. (2021) and Mahato et al. (2024) rely solely on Homomorphic Encryption and Secure Multiparty \nComputation, which provide high privacy but introduce significant computational overhead. Ren et al. (2024) \nemploys Differential Privacy alone, which, while lightweight, results in lower security levels. Figure 5. shows the \naccuracy comparison of the proposed model with state of the art models.\nAblation study of privacy mechanisms\nTo further assess the contributions of individual privacy-preserving techniques, we performed an ablation \nstudy by selectively enabling Differential Privacy (DP), Secure Multiparty Computation (SMPC), or both in the \nfederated learning pipeline. Table 6 summarizes the observed model accuracy and communication overhead for \neach configuration.\nThis study reveals that combining DP and SMPC without optimization may degrade accuracy and increase \noverhead due to compounded noise and encryption complexity. However, in EPP-BCFL, these mechanisms are \njointly optimized, achieving the best performance.\nPrivacy budget sensitivity analysis\nTo quantify the privacy–utility trade-off, we evaluated the impact of varying the privacy budget (ε) in Differential \nPrivacy on the model’s accuracy. Table 7 shows the results:\nAs expected, smaller ε values offer stronger privacy but at the cost of reduced accuracy. This analysis allows \npractitioners to choose an appropriate ε depending on application-specific privacy requirements.\nMethods Accuracy (%) Communication Overhead Blockchain Consensus Attack Resilience\nHomomorphic Encryption 91.4 High PoW Moderate\nDifferential Privacy 89.6 Medium PoA Low\nDirect Acyclic Graph (DAG) 92.8 Medium PoS High\nSecure Multiparty Computation 90.2 High PoW Moderate\nProposed EPP-BCFL 95.2 Low PoS + BFT Very High\nTable 5. Comparative analysis with existing Approaches.\n \nFig. 4. Block chain performance.\n \nScientific Reports |        (2025) 15:27524 14| https://doi.org/10.1038/s41598-025-12225-x\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho apresenta um mecanismo híbrido de privacidade que combina Computação Segura Multipartidária (MPC) e Privacidade Diferencial (DP), otimizado para reduzir a sobrecarga computacional e melhorar a precisão. Estudos de ablação mostram que a combinação sem otimização degrada desempenho, enquanto a solução proposta (EPP-BCFL) atinge 95,2% de acurácia, baixa sobrecarga de comunicação e alta resiliência a ataques, usando consenso PoS+BFT.",
+    "perfil": {
+      "problema": "introduce significant computational overhead",
+      "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+      "avaliacao": "Proposed EPP-BCFL 95.2% Low PoS + BFT Very High",
+      "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+      "possibilidades": [
+        "Aplicar o framework a dados reais de prontuários eletrônicos em ambientes de cidades inteligentes, integrando SSI e credenciais verificáveis para controle de acesso granular nos nós de borda.",
+        "Avaliar o impacto de algoritmos de consenso alternativos (e.g., PoA, BFT puro) em escala de milhares de dispositivos IoT.",
+        "Combinar o mecanismo híbrido com criptografia baseada em atributos (ABE) para políticas de compartilhamento interdepartamental.",
+        "Desenvolver técnicas adaptativas de ajuste do orçamento de privacidade (ε) baseadas em requisitos de utilidade em tempo real.",
+        "Investigar compressão de atualizações de modelo e uso de provas de conhecimento zero-knowledge para reduzir latência e tráfego na blockchain."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O mecanismo híbrido combina MPC e DP para alcançar alto nível de privacidade.",
+        "citacao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)"
+      },
+      {
+        "afirmacao": "O modelo proposto atinge 95,2% de acurácia com baixa sobrecarga de comunicação e alta resiliência a ataques.",
+        "citacao": "Proposed EPP-BCFL 95.2% Low PoS + BFT Very High"
+      }
+    ],
+    "interpretacao": "A combinação otimizada de MPC e DP permite equilibrar privacidade e desempenho, superando abordagens que utilizam apenas uma técnica, e a escolha de consenso PoS+BFT contribui para a robustez contra ataques.",
+    "duvidas": "Como o mecanismo híbrido se comporta em cenários com recursos de borda extremamente limitados? Qual seria o impacto de variar dinamicamente ε durante o treinamento em ambientes de saúde sensíveis?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:17:23"
+}

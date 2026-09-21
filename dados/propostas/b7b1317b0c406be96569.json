@@ -1,0 +1,28 @@
+{
+  "id": "b7b1317b0c406be96569",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T20:34:12",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Abdullahi_2025: Desenvolver um framework sistemático que una blockchain, SSI e ABE para suportar as diretr",
+  "fontes": [
+    "Abdullahi_2025"
+  ],
+  "problema": "Requisitos específicos de infraestrutura (edge computing, redes 5G) para aplicar as diretrizes propostas.",
+  "hipotese_lacuna": "Requisitos específicos de infraestrutura (edge computing, redes 5G) para aplicar as diretrizes propostas.",
+  "meu_trabalho": "Desenvolver um framework sistemático que una blockchain, SSI e ABE para suportar as diretrizes de segurança e privacidade.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver um framework sistemático que una blockchain, SSI e ABE para suportar as diretrizes de segurança e privacidade.",
+  "modo": "artigo",
+  "buscas": [
+    "On the adoption and deployment of secure and privacy-preserving IIoT in smart manufacturing: a comprehensive guide with recent advances limitations future work",
+    "On the adoption and deployment of secure and privacy-preserving IIoT in smart manufacturing: a comprehensive guide with recent advances smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "dd3da9e9b6d40d1d2019",
+    "ed4ab4a74904066e6ad9",
+    "2861ffdd0f638b3b4781"
+  ],
+  "fatos": "A interconectividade inerente do IIoT gera desafios significativos de segurança e privacidade.; Existe falta de guias específicos para adoção e implementação dos mecanismos de defesa.; cybersecurity concerns pose a significant obstacle to the adoption of IIoT; Foram apresentadas diretrizes abrangentes para garantir a segurança e privacidade das ferramentas IIoT."
+}

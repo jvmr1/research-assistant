@@ -1,0 +1,32 @@
+{
+  "id": "3432e49ec5d9c077328c",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T18:21:58",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Chaurasia_2026: Desenvolver e testar protocolos de autenticação e controle de acesso baseados em SSI para ",
+  "fontes": [
+    "Chaurasia_2026"
+  ],
+  "problema": "Protocolos específicos de autenticação e controle de acesso não descritos.",
+  "hipotese_lacuna": "Protocolos específicos de autenticação e controle de acesso não descritos.",
+  "meu_trabalho": "Desenvolver e testar protocolos de autenticação e controle de acesso baseados em SSI para IoT de cidades inteligentes.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver e testar protocolos de autenticação e controle de acesso baseados em SSI para IoT de cidades inteligentes.",
+  "modo": "artigo",
+  "buscas": [
+    "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity limitations future work",
+    "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Como adaptar as políticas de acesso baseadas em papéis de Chaurasia_2026 para o modelo de dispositivos IoT, que possuem recursos limitados e podem exigir controle de acesso baseado em atributos?; Qual algoritmo de consenso (ex.: Raft, PBFT, PoET) oferece o melhor trade‑off entre latência e segurança para um ledger distribuído em edge nodes de cidades inteligentes?; De que forma a revogação de credenciais SSI pode ser realizada em tempo real sem sobrecarregar a rede de sensores, considerando a alta frequência de atualizações de estado?; Quais métricas de privacidade são mais adequadas para quantificar a exposição de atributos sensoriais em credenciais verificáveis?; É necessário integrar o protocolo proposto com padrões existentes (ex.: FIWARE, OneM2M) para garantir interoperabilidade, ou a solução pode permanecer isolada?",
+  "evidencias_usadas": [
+    "4ceb6ac97cf63c6923c0",
+    "586efd8043390c482550",
+    "1a0369b1eb4364f2a174"
+  ],
+  "fatos": "Received: 24 November 2025; Empirical results prove the efficacy of the proposed supply chain framework; Blockchain provides several advantages that can considerably improve COVID-19 vaccine delivery methods.",
+  "experimento": "descricao: Implementar um protocolo de autenticação e controle de acesso baseado em Self‑Sovereign Identity (SSI) para dispositivos IoT em ambientes de cidades inteligentes, usando credenciais verificáveis e políticas de acesso baseadas em papéis. Comparar o desempenho e a privacidade do protocolo proposto com o modelo descrito em Chaurasia_2026 (SSI + blockchain aplicado à cadeia de suprimentos de vacinas), adaptando‑o ao contexto de sensores urbanos e edge computing.; comparativo: Chaurasia_2026 fornece um caso de uso concreto de SSI + blockchain; a hipótese é que, ao adaptar seus mecanismos de verificação de credenciais e revogação para IoT de cidades inteligentes, será possível obter controle de acesso mais granular e menor exposição de dados, embora diferenças de carga (transações de sensores vs. eventos de logística) possam impactar a escalabilidade.",
+  "recursos": "dados: Conjuntos de dados abertos de sensores urbanos (ex.: tráfego, qualidade do ar) disponíveis nos portais de dados de cidades como Barcelona, Helsinki ou São Paulo.; Dataset sintético gerado com ferramentas como IoT‑Sim ou Python‑based simulators, caso os dados reais não cubram todos os cenários de carga.; ferramentas: Plataforma de ledger permissionado (ex.: Hyperledger Fabric ou Indy) para suportar transações de credenciais.; Framework SSI compatível com o padrão DIF (ex.: Veramo, Trinsic SDK) para emissão, apresentação e revogação de credenciais.; Ambiente de edge computing (ex.: EdgeX Foundry ou Kubernetes‑based edge nodes) para executar os agentes IoT.; Ferramentas de medição de desempenho (ex.: Locust, JMeter) e de análise de segurança (ex.: OWASP ZAP).; infraestrutura: Cluster de servidores de teste (mínimo 3 nós) ou ambiente de nuvem pública com instâncias de tamanho pequeno/médio.; Rede de dispositivos simulados (ex.: Raspberry Pi ou contêineres Docker) para representar sensores heterogêneos.",
+  "metricas": "Latência média de autenticação (ms) entre dispositivo e verificador de credenciais.; Taxa de transferência (transactions per second) suportada pelo ledger sob carga de sensores.; Número de tentativas de acesso não autorizado detectadas vs. bloqueadas.; Índice de privacidade (quantidade de atributos divulgados por transação).; Escalabilidade: variação de latência e throughput ao aumentar o número de dispositivos de 100 para 10 000.; Interoperabilidade: percentual de dispositivos que conseguem usar o protocolo sem modificações de firmware (compatibilidade com OMA LwM2M, MQTT, CoAP).",
+  "detalhada": true
+}

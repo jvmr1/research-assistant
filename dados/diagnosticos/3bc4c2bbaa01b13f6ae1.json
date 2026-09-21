@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:50:00",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+    "perfil_anterior": {
+      "problema": "some solutions did not provide enough information",
+      "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+      "avaliacao": "excluding inferred data does not materially alter the main findings",
+      "limites": "We recognize that such inference may introduce bias",
+      "possibilidades": "Aplicar a estratégia de inferência de dados ausentes a revisões sobre cidades inteligentes e IoT, avaliando seu impacto nas métricas de interoperabilidade.; Desenvolver um método automatizado para identificar e classificar tipos de blockchain e protocolos de consenso em artigos de smart cities.; Estender a análise de sensibilidade para incluir métricas de privacidade (ABE, ZKP) e comparar resultados com e sem inferência.; Criar um repositório de configurações padrão documentadas (ex.: PBFT, Ethereum público) para uso em revisões sistemáticas de domínios emergentes."
+    },
+    "pagina": 12,
+    "texto": "Peer-to-Peer Networking and Applications (2025) 18:302\nFor blockchain types, public blockchains accounted for \n22.6% of studies (vs. 24.6%) and consortium blockchains \nfor 43.9% (vs. 41.9%).\nThese results suggest that the inference of missing data \ndid not materially affect the observed distributions or the \noverall conclusions of this review. Full details are provided \nin Table 11.\n4 Results and analysis\nThis section summarizes the findings of our systematic \nreview and provides an initial analysis. It focuses on the \napplication of blockchain in healthcare, privacy-preserving \ntechnologies across different stages of data sharing, and the \nmaturity evaluation of the reviewed solutions.\nFigure 4 shows an overview of the selected papers based \non the methodology described in Section 3. Over the span \nof nine years, there was limited research activity in the \nearly years (2016-2019), with an significant increase from \n2020 onward. This suggests that privacy-preserving block -\nchain-based solutions have become a highly active area of \nresearch in healthcare data sharing. A complete image of the \nextracted data in placed in Appendix B.\nQuantitatively, out of 334 studies, 205 (61.4%) did not report \nconsensus protocols; of these, 125 (37.4%) were assigned \ninferred values. Similarly, 113 (33.8%) studies lacked infor-\nmation on blockchain types, and 75 (22.5%) were assigned \ninferred values based on the rules above.\nTo assess the robustness of our findings against the infer-\nence of missing data, we conducted a sensitivity analysis \nby recalculating the distributions after excluding studies \nwith inferred consensus protocols (n=125) and, separately, \nstudies with inferred blockchain types (n=75). The result -\ning distributions showed only minor changes. For consen -\nsus protocols, PBFT accounted for 27.9% of studies (vs. \n26.9% in the full dataset) and PoW for 24.0% (vs. 30.5%). \nTable 11 Sensitivity analysis of consensus protocol and blockchain \ntype distributions\nCategory Original (with \ninference)\nSensitivity \n(without \ninference)\nConsensus Protocol\nPBFT 90 (26.9%) 36 (27.9%)\nPoW 102 (30.5%) 31 (24.0%)\nBlockchain Type\nPublic 82 (24.6%) 50 (22.6%)\nConsortium 140 (41.9%) 97 (43.9%)\nFig. 4 Annual publication trend of papers on blockchain-based privacy-preserving healthcare data sharing from 2016 to 2023\n \n1 3\n302 Page 12 of 53",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "A revisão sistemática analisou 334 estudos sobre blockchain para compartilhamento de dados de saúde com preservação de privacidade. Embora 61,4% dos trabalhos não relatem protocolos de consenso e 33,8% não informem o tipo de blockchain, valores foram inferidos. Análises de sensibilidade mostraram que a exclusão desses estudos inferidos alterou pouco as distribuições: blockchains públicos representam 22,6% (vs. 24,6% original) e consórcios 43,9% (vs. 41,9%). O aumento de publicações a partir de 2020 indica crescente interesse na área.",
+    "perfil": {
+      "problema": "some solutions did not provide enough information",
+      "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+      "avaliacao": "excluding inferred data does not materially alter the main findings",
+      "limites": "We recognize that such inference may introduce bias",
+      "possibilidades": [
+        "Aplicar a análise de sensibilidade de inferência de dados ausentes a revisões sobre identidade auto-soberana em cidades inteligentes, verificando impacto nas métricas de interoperabilidade.",
+        "Investigar como diferentes tipos de blockchain (público vs. consórcio) afetam a privacidade de credenciais verificáveis em ambientes de IoT industrial.",
+        "Desenvolver um framework que combine ABE e ZKP para avaliar a robustez de soluções de controle de acesso em smart cities, comparando cenários com e sem inferência de dados.",
+        "Criar um benchmark de protocolos de consenso (PBFT, PoW, etc.) focado em edge computing para IIoT, incorporando métricas de latência e escalabilidade."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "The inference of missing data did not materially affect the observed distributions",
+        "citacao": "These results suggest that the inference of missing data did not materially affect the observed distributions or the overall conclusions of this review."
+      },
+      {
+        "afirmacao": "Public blockchains accounted for 22.6% of studies and consortium blockchains for 43.9%",
+        "citacao": "Public blockchains accounted for 22.6% of studies (vs. 24.6%) and consortium blockchains for 43.9% (vs. 41.9%)."
+      }
+    ],
+    "interpretacao": "A análise indica que a estratégia de inferir dados ausentes é robusta, pois as distribuições de tipos de blockchain e protocolos de consenso permanecem estáveis após a remoção dos registros inferidos. Além disso, a predominância de blockchains consórcio sugere preferência por soluções permissionadas no contexto de saúde, possivelmente por requisitos de controle de acesso e privacidade.",
+    "duvidas": "Como foram definidas as regras para inferir os protocolos de consenso e tipos de blockchain? Qual seria o impacto da inferência nas métricas de privacidade específicas, como uso de ABE ou ZKP, que não foram analisadas neste estudo?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:50:29"
+}

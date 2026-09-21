@@ -1,0 +1,32 @@
+{
+  "id": "f2a4b72b038e2b2dba46",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T14:29:15",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Ding_2025: Comparar VS‑DID com outras soluções (Merkle‑SNARK, IPFS, PLONK, Bulletproofs) em ambientes",
+  "fontes": [
+    "Ding_2025"
+  ],
+  "problema": "Mecanismo de revogação de credenciais em tempo real não detalhado",
+  "hipotese_lacuna": "Mecanismo de revogação de credenciais em tempo real não detalhado",
+  "meu_trabalho": "Comparar VS‑DID com outras soluções (Merkle‑SNARK, IPFS, PLONK, Bulletproofs) em ambientes de edge/fog computing, quantificando custos de armazenamento e comunicação",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Comparar VS‑DID com outras soluções (Merkle‑SNARK, IPFS, PLONK, Bulletproofs) em ambientes de edge/fog computing, quantificando custos de armazenamento e comunicação",
+  "modo": "artigo",
+  "buscas": [
+    "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT) limitations future work",
+    "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT) smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual a melhor estratégia para parametrizar o tamanho da janela deslizante no VS‑DID em função da taxa de atualização dos DIDs?; Como garantir a consistência dos metadados armazenados em IPFS quando múltiplas fog nodes atualizam simultaneamente?; É necessário adaptar o circuito de PLONK para suportar compromissos vetoriais ou podemos reutilizar um circuito genérico de Merkle‑tree?; Qual o trade‑off entre tamanho dos parâmetros públicos (ex.: 50 GB para Merkle‑SNARK) e a frequência de geração de chaves em um cenário edge?; Como medir de forma confiável a revogação de DIDs usando acumuladores dinâmicos sem inflar o overhead de rede?",
+  "evidencias_usadas": [
+    "aca07f96824f175c2454",
+    "c1096371d2c7a5ba19a1",
+    "af2b3bb0ebc4c645e2c7"
+  ],
+  "fatos": "O modelo propõe um registro verificável baseado em compromissos chave‑valor para documentos DID.; Um mecanismo de armazenamento baseado em acumulador de janela deslizante melhora o desempenho das consultas de identidade.; Existing identity management solutions in IIoT ... face challenges in scalability and trustworthiness.; O esquema inclui quatro fases: geração de prova, agregação de prova, verificação de prova e atualização de prova.",
+  "experimento": "descricao: Implementar o esquema VS‑DID descrito por Ding (2025) em um ambiente de edge/fog computing simulando um cenário IIoT de cidades inteligentes. Comparar seu desempenho com três alternativas de prova de conhecimento zero: Merkle‑SNARK (implementação padrão de Groth16), PLONK (circuito genérico) e Bulletproofs (provas de intervalo). Cada solução será integrada a um backend de armazenamento: VS‑DID usa o acumulador de janela deslizante on‑chain/off‑chain; Merkle‑SNARK e PLONK armazenam provas em IPFS; Bulletproofs usa armazenamento direto em banco de dados distribuído. O experimento medirá custos de armazenamento, tráfego de rede e tempos de verificação em diferentes tamanhos de lote de DIDs.; comparacao_base: Ding_2025 (VS‑DID) como referência de estado da arte.",
+  "recursos": "dados: Conjunto sintético de 10.000 DIDs de dispositivos IoT (gerado a partir de especificação de atributos típicos – ID, chave pública, credenciais de acesso).; Traces de comunicação de edge/fog (arquivo de logs de MQTT/CoAP público, ex.: dataset \"IoT‑Edge‑Traffic\" disponível no repositório GitHub da comunidade IoT).; ferramentas: Framework de simulação de edge/fog: Eclipse Fog05 ou EdgeX Foundry (ambos open‑source).; Implementação de VS‑DID baseada no código‑fonte disponibilizado pelos autores (se não houver, usar a descrição do algoritmo de acumulador de janela deslizante).; Bibliotecas de provas ZK: libsnark (para Merkle‑SNARK), arkworks (para PLONK), bulletproofs‑rust.; IPFS (versão 0.12) para armazenamento de provas Merkle‑SNARK e PLONK.; Banco de dados distribuído (e.g., Apache Cassandra) para Bulletproofs.; Ferramentas de medição: Prometheus + Grafana, Wireshark para captura de tráfego.; infraestrutura: Cluster de 3 nós edge (Raspberry Pi 4) e 2 nós fog (máquinas virtuais com 8 vCPU, 16 GB RAM).; Rede local configurada com latência simulada (10 ms, 50 ms) usando NetEm.",
+  "metricas": "Custo de armazenamento total (MB) por 10 000 DIDs.; Volume de dados transmitidos por operação de registro/atualização (KB).; Tempo de geração de prova (ms) por DID.; Tempo de verificação de prova (ms) por lote de 100 DIDs.; Uso de CPU e memória durante geração/verificação (percentual).; Escalabilidade: variação dos tempos acima para lotes de 1 k, 5 k e 10 k DIDs.; Impacto da latência de rede na comunicação de provas (comparação 10 ms vs 50 ms).",
+  "detalhada": true
+}

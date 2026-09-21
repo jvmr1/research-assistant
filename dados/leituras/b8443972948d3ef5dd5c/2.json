@@ -1,0 +1,35 @@
+{
+  "resumo": "O artigo apresenta uma revisão sistemática de soluções de privacidade baseadas em blockchain para compartilhamento de dados de saúde, destacando lacunas como a ausência de avaliação de maturidade e de frameworks estruturados. Propõe um framework para desenvolvedores, diretrizes acionáveis e avaliação de prontidão tecnológica (TRL) para avançar de provas de conceito a implantações reais, especialmente em ambientes IoT de saúde.",
+  "perfil": {
+    "problema": "patients’ limited control over their healthcare data",
+    "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+    "avaliacao": "most solutions remain at the proof-of-concept stage (TRL3)",
+    "limites": "privacy-preserving search and verification remain underexplored",
+    "possibilidades": [
+      "Adaptar o framework proposto para cidades inteligentes, incorporando attribute-based encryption (ABE) para controle de acesso granular em dispositivos IoT.",
+      "Integrar identidade auto-soberana (SSI) para gerenciamento de consentimento de cidadãos em serviços públicos de smart cities.",
+      "Desenvolver um modelo de avaliação de maturidade (TRL) específico para soluções de identidade descentralizada em ambientes de edge computing.",
+      "Criar protocolos de revogação de credenciais baseados em provas de conhecimento zero para garantir o direito ao esquecimento em infraestruturas distribuídas."
+    ]
+  },
+  "evidencias": [],
+  "interpretacao": "O estudo avança o estado da arte ao combinar análise técnica de privacidade, avaliação de maturidade e diretrizes práticas, preenchendo lacunas identificadas em revisões anteriores que não abordavam a integração blockchain‑IoT nem a prontidão para implantação.",
+  "duvidas": "Como o framework proposto pode ser adaptado para contextos de cidades inteligentes com restrições de recursos? Quais métricas de TRL são mais relevantes para soluções de identidade descentralizada em edge computing? Existe suporte a revogação de credenciais que preserve o direito ao esquecimento sem comprometer a auditabilidade?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "f1612e716cdd35f69338",
+  "artigo": "Li_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "patients’ limited control over their healthcare data",
+    "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+    "avaliacao": "most solutions remain at the proof-of-concept stage (TRL3)",
+    "limites": "privacy-preserving search and verification remain underexplored",
+    "possibilidades": "Adaptar o framework proposto para cidades inteligentes, incorporando attribute-based encryption (ABE) para controle de acesso granular em dispositivos IoT.; Integrar identidade auto-soberana (SSI) para gerenciamento de consentimento de cidadãos em serviços públicos de smart cities.; Desenvolver um modelo de avaliação de maturidade (TRL) específico para soluções de identidade descentralizada em ambientes de edge computing.; Criar protocolos de revogação de credenciais baseados em provas de conhecimento zero para garantir o direito ao esquecimento em infraestruturas distribuídas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "b8443972948d3ef5dd5c"
+  }
+}

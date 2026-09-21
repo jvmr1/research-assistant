@@ -1,0 +1,28 @@
+{
+  "id": "8a5e63e6363abb7903f0",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T19:18:59",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Tawfik_2025: Criar um conjunto de métricas padronizadas (ex",
+  "fontes": [
+    "Tawfik_2025"
+  ],
+  "problema": "Escalabilidade e latência de contratos inteligentes em ambientes de saúde com alta taxa de transações.",
+  "hipotese_lacuna": "Escalabilidade e latência de contratos inteligentes em ambientes de saúde com alta taxa de transações.",
+  "meu_trabalho": "Criar um conjunto de métricas padronizadas (ex.: tempo de revogação, índice de privacidade, overhead de interoperabilidade) aplicáveis a soluções de controle de acesso.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Criar um conjunto de métricas padronizadas (ex.: tempo de revogação, índice de privacidade, overhead de interoperabilidade) aplicáveis a soluções de controle de acesso.",
+  "modo": "artigo",
+  "buscas": [
+    "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey limitations future work",
+    "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "178303345bbd3bb29308",
+    "15878b05c8879d1ac8ee",
+    "d62d99f39b030d90c814"
+  ],
+  "fatos": "privacy is a major concern in shared environments; blockchain can play a key role in access control; Accounting involves tracking and logging user activity within the healthcare system, including who accessed patient data, when it was accessed, and what actions were taken.; The survey categorizes recent EHR access control methods based on blockchain into two categories: permissionless and permissioned.; O estudo categoriza métodos de controle de acesso em blockchains permissionless e permissioned."
+}

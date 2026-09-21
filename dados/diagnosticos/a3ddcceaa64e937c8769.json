@@ -1,0 +1,65 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T15:02:10",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 7,
+        "resumo": "O trecho descreve tecnologias criptográficas aplicadas ao compartilhamento de dados de saúde em blockchains, como PEKS para busca privada, contratos inteligentes para automação de regras, proxy re‑encryption para armazenamento off‑chain, e provas de conhecimento zero (ZKP) para verificação de atributos sem revelar dados. Também são apresentadas exigências de completude, solidez e zero‑conhecimento para ZKP, e benefícios de contratos inteligentes como automação, precisão, transparência e persistência.",
+        "interpretacao": "O texto evidencia que, embora a blockchain ofereça infraestrutura para controle e auditabilidade, ainda depende de técnicas avançadas como PEKS, proxy re‑encryption e ZKP para atender requisitos de privacidade e busca segura em ambientes de saúde distribuídos.",
+        "duvidas": "Como garantir a escalabilidade de PEKS e ZKP em redes de sensores urbanos de grande volume? Qual o impacto de combinar proxy re‑encryption com diferentes modelos de consenso (ex.: PoS + PBFT) na latência de acesso a dados de saúde?"
+      },
+      {
+        "pagina": 8,
+        "resumo": "O artigo descreve a metodologia de uma revisão sistemática sobre privacidade em compartilhamento de dados de saúde baseado em blockchain, apresentando três perguntas de pesquisa, estratégia de busca (2008‑2024, IEEE, ACM, etc.) e critérios de inclusão. Destaca o uso de proxy re‑encryption para compartilhar dados sem expor privacidade e adota os Níveis de Maturidade Tecnológica (TRL) para avaliar a prontidão das soluções, indicando que a maioria está em estágio de prova de conceito (TRL3).",
+        "interpretacao": "A revisão sistemática reforça que, embora blockchain ofereça potencial para controle de dados de saúde, as soluções ainda são incipientes (TRL3) e carecem de mecanismos robustos de busca e verificação de privacidade; o uso de proxy re‑encryption surge como estratégia prática para proteger dados durante o compartilhamento.",
+        "duvidas": "• Como escalar o proxy re‑encryption para ambientes de alta frequência de dados IoT? • Quais adaptações são necessárias nos TRLs para refletir requisitos de privacidade específicos de cidades inteligentes? • Existe avaliação empírica de custos de armazenamento off‑chain combinado com re‑encryption em larga escala?"
+      },
+      {
+        "pagina": 9,
+        "resumo": "O trecho descreve a metodologia da revisão sistemática, apresentando o fluxo de seleção de estudos (Figura 2) e detalhando os critérios de elegibilidade: inclusão de artigos em inglês (2008‑2024) focados em privacidade baseada em blockchain para compartilhamento de dados de saúde, e exclusão de tipos de publicação como surveys e trabalhos que não tratam de privacidade ou compartilhamento de dados.",
+        "interpretacao": "O texto evidencia que a revisão sistemática segue um processo rigoroso de seleção, usando critérios claros de inclusão e exclusão para garantir que apenas estudos relevantes ao uso de blockchain para privacidade em compartilhamento de dados de saúde sejam analisados.",
+        "duvidas": "Como os critérios de inclusão/exclusão poderiam ser ajustados para capturar pesquisas sobre SSI e identidade digital em serviços de cidades inteligentes? Existe alguma justificativa para limitar o período a 2008‑2024 que possa excluir trabalhos recentes relevantes ao contexto de edge computing?"
+      },
+      {
+        "pagina": 10,
+        "resumo": "O trecho descreve o processo de seleção de estudos segundo PRISMA 2020: a partir de 6.577 documentos identificados em bases como IEEE Xplore e ScienceDirect, foram removidos duplicados, resultando em 5.739; após triagem de título, palavras‑chave e resumo, 639 foram retidos; a leitura completa com critérios IC3‑IC5 excluiu mais 304, culminando em 334 artigos incluídos para extração de dados.",
+        "interpretacao": "O estudo demonstra um rigor metodológico robusto, mas a alta taxa de exclusão indica que poucos trabalhos atendem aos critérios específicos de blockchain para saúde, sugerindo espaço para investigação em domínios adjacentes como smart cities.",
+        "duvidas": "Quais foram os critérios IC3‑IC5 aplicados na leitura completa? Como a exclusão de um artigo retratado impactou a análise de tendências temporais?"
+      },
+      {
+        "pagina": 11,
+        "resumo": "O estudo descreve como, diante da falta de detalhes técnicos em artigos sobre blockchain na saúde, os autores inferem informações ausentes (ex.: atribuem PBFT ao Hyperledger Fabric) e documentam essas deduções. Avaliam a maturidade das soluções via TRLs e realizam análise de sensibilidade, constatando que a exclusão dos dados inferidos não altera os resultados principais, embora reconheçam risco de viés.",
+        "interpretacao": "A inferência de detalhes técnicos permite completar a análise sistemática, mas introduz viés que deve ser monitorado; a abordagem de TRL oferece um panorama claro da maturidade das soluções, embora a maioria ainda esteja em estágios iniciais.",
+        "duvidas": "Qual a robustez da inferência quando aplicada a domínios com maior heterogeneidade tecnológica, como smart cities? Como quantificar o viés introduzido por suposições padrão em métricas de interoperabilidade?"
+      },
+      {
+        "pagina": 12,
+        "resumo": "A revisão sistemática analisou 334 estudos sobre blockchain para compartilhamento de dados de saúde com preservação de privacidade. Embora 61,4% dos trabalhos não relatem protocolos de consenso e 33,8% não informem o tipo de blockchain, valores foram inferidos. Análises de sensibilidade mostraram que a exclusão desses estudos inferidos alterou pouco as distribuições: blockchains públicos representam 22,6% (vs. 24,6% original) e consórcios 43,9% (vs. 41,9%). O aumento de publicações a partir de 2020 indica crescente interesse na área.",
+        "interpretacao": "A análise indica que a estratégia de inferir dados ausentes é robusta, pois as distribuições de tipos de blockchain e protocolos de consenso permanecem estáveis após a remoção dos registros inferidos. Além disso, a predominância de blockchains consórcio sugere preferência por soluções permissionadas no contexto de saúde, possivelmente por requisitos de controle de acesso e privacidade.",
+        "duvidas": "Como foram definidas as regras para inferir os protocolos de consenso e tipos de blockchain? Qual seria o impacto da inferência nas métricas de privacidade específicas, como uso de ABE ou ZKP, que não foram analisadas neste estudo?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo \"Privacy preservation in blockchain-based healthcare data sharing: A systematic review\" apresenta uma revisão sistemática (2008‑2024) que analisou 334 estudos sobre o uso de blockchain para compartilhamento de dados de saúde com foco em privacidade. A metodologia segue o PRISMA 2020, iniciando com 6.577 documentos e, após remoções e triagens, resultando em 334 artigos para extração de dados. Os trabalhos analisados descrevem o uso de técnicas criptográficas avançadas, como PEKS para busca privada, proxy re‑encryption para armazenamento off‑chain, provas de conhecimento zero (ZKP) e contratos inteligentes que trazem automação, transparência e persistência. A maioria das soluções está em estágio de prova de conceito (TRL3) e predominam blockchains consórcio, indicando preferência por ambientes permissionados. Como muitos artigos omitem detalhes técnicos (protocolos de consenso, tipo de blockchain), os autores inferem essas informações, constatando que a inferência não altera significativamente as distribuições observadas. O estudo evidencia lacunas em escalabilidade, avaliação de custos e adaptação de métricas de maturidade para contextos de cidades inteligentes.",
+    "lacunas_possiveis": [
+      "Escalabilidade de PEKS e ZKP em redes de sensores urbanos de grande volume.",
+      "Impacto da combinação de proxy re‑encryption com diferentes modelos de consenso (ex.: PoS + PBFT) na latência de acesso a dados.",
+      "Adaptação dos Níveis de Maturidade Tecnológica (TRL) para requisitos de privacidade específicos de cidades inteligentes e edge computing.",
+      "Avaliação empírica de custos e desempenho de armazenamento off‑chain combinado com proxy re‑encryption em larga escala."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver e testar um protótipo de busca privada baseado em PEKS otimizado para alta taxa de mensagens IoT em ambientes de cidades inteligentes.",
+      "Investigar a latência e throughput de sistemas que integram proxy re‑encryption com consenso híbrido PoS/PBFT em redes de edge computing.",
+      "Estender o framework de avaliação de TRL para incluir indicadores de privacidade, interoperabilidade e requisitos de identidade digital (SSI) em serviços públicos de smart cities.",
+      "Realizar estudo de caso que mensure custos de armazenamento off‑chain e tempo de re‑encryption em cenários de alta frequência de dados de saúde e IoT."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T15:02:51"
+}

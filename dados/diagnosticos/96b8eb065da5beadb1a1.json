@@ -1,0 +1,65 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-21T00:11:20",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Danilo_TCC_final",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 1,
+        "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+        "interpretacao": "O título indica que a pesquisa foca na combinação de blockchain e identidade autosoberana como solução para melhorar a segurança e o controle de acesso em serviços urbanos de cidades inteligentes.",
+        "duvidas": "Quais são os requisitos específicos de segurança e privacidade considerados? Como será realizada a avaliação prática da solução proposta? Existe algum plano para lidar com a revogação e recuperação de credenciais perdidas?"
+      },
+      {
+        "pagina": 2,
+        "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+        "interpretacao": "O autor busca combinar tecnologias de blockchain com SSI para criar um framework de segurança que suporte as necessidades de identidade e acesso nas infraestruturas de cidades inteligentes.",
+        "duvidas": "Quais são os requisitos técnicos específicos para a implementação prática do modelo proposto? Como será tratada a escalabilidade em ambientes urbanos com grande volume de transações?"
+      },
+      {
+        "pagina": 3,
+        "resumo": "O trabalho de Danilo Isaque Sousa Maia (2025) propõe o uso de blockchain e identidades autosoberanas para autenticação e controle de acesso em cidades inteligentes, apresentando o tema, palavras‑chave e a orientação acadêmica.",
+        "interpretacao": "O trecho indica que a monografia foca na convergência de blockchain e SSI como solução de segurança para serviços urbanos, mas ainda não detalha avaliação ou limitações técnicas.",
+        "duvidas": "Quais são os métodos específicos de implementação propostos? Há resultados experimentais ou estudo de caso que validem a abordagem? Como será tratada a revogação de credenciais e a recuperação de acesso perdido?"
+      },
+      {
+        "pagina": 4,
+        "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+        "interpretacao": "O trecho confirma que o foco da pesquisa é a aplicação de blockchain e SSI para melhorar a segurança e a gestão de acesso em serviços urbanos, indicando um contexto acadêmico recente (2025).",
+        "duvidas": "Quais são os requisitos funcionais e não‑funcionais detalhados para a solução proposta? Existe alguma avaliação experimental ou estudo de caso descrito no documento?"
+      },
+      {
+        "pagina": 5,
+        "resumo": "O trecho apresenta os agradecimentos do autor, reconhecendo o apoio dos pais, amigos e professores, em especial o professor Francisco, que contribuiu para seu desenvolvimento técnico e como pesquisador.",
+        "interpretacao": "O conteúdo do trecho é exclusivamente de natureza pessoal e não traz informações técnicas que alterem o entendimento anterior sobre o problema, solução ou avaliação do trabalho.",
+        "duvidas": "Não há informações sobre metodologias, resultados ou limitações técnicas; quais são as contribuições específicas do estudo em relação à SSI em cidades inteligentes?"
+      },
+      {
+        "pagina": 6,
+        "resumo": "O trabalho propõe um modelo de gestão de identidades baseado em blockchain para Cidades Inteligentes, utilizando Identidades Autosoberanas (SSI) para autenticação e controle de acesso. O modelo foi implementado com middleware InterSCity e Hyperledger, e experimentos mostram latência inferior a 500 ms por operação, indicando viabilidade prática.",
+        "interpretacao": "O estudo demonstra que a combinação de SSI e blockchain pode atender aos requisitos de segurança e eficiência em serviços urbanos, alcançando baixa latência, embora a avaliação se limite a métricas de desempenho sem aprofundar aspectos de privacidade, revogação ou escalabilidade em larga escala.",
+        "duvidas": "Como o modelo trata a revogação de credenciais e a recuperação de acesso perdido? Quais mecanismos de proteção de privacidade são empregados além da autenticação? Qual é o comportamento do sistema sob carga de milhares de dispositivos IoT simultâneos? Como garantir interoperabilidade entre diferentes cidades ou plataformas de blockchain?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "A monografia de Danilo Isaque Sousa Maia (UFMA, 2025) propõe um modelo de autenticação e controle de acesso para cidades inteligentes que combina blockchain e identidades autosoberanas (SSI). O modelo foi implementado com o middleware InterSCity e a plataforma Hyperledger, e experimentos preliminares demonstram latência inferior a 500 ms por operação, indicando viabilidade prática. O trabalho descreve o contexto, objetivo e palavras‑chave, mas não detalha requisitos funcionais e não‑funcionais, mecanismos de revogação ou recuperação de credenciais, proteções de privacidade além da autenticação, avaliação de escalabilidade em grande volume de dispositivos IoT, nem interoperabilidade entre diferentes cidades ou blockchains.",
+    "lacunas_possiveis": [
+      "Ausência de descrição de requisitos de segurança, privacidade e desempenho detalhados",
+      "Falta de mecanismo de revogação de credenciais e de recuperação de acesso perdido",
+      "Escalabilidade limitada: não há avaliação sob carga de milhares de dispositivos IoT",
+      "Interoperabilidade entre diferentes plataformas de blockchain ou cidades inteligentes não abordada"
+    ],
+    "propostas_possiveis": [
+      "Incorporar listas de revogação (CRL ou status list) ou protocolos de revogação descentralizada para SSI",
+      "Aplicar criptografia baseada em atributos (ABE) ou criptografia homomórfica para controle de acesso seletivo e preservação de privacidade",
+      "Realizar testes de carga massiva simulando milhares de dispositivos IoT para validar escalabilidade e latência",
+      "Desenvolver um módulo de interoperabilidade que traduza identidades e credenciais entre diferentes redes blockchain usadas em cidades inteligentes"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:11:34"
+}

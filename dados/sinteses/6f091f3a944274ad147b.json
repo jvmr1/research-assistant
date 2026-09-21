@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo propõe um framework de autenticação para IoT baseado em blockchain permissionada que combina armazenamento otimizado, contratos inteligentes e criptografia homomórfica para preservar a privacidade dos dados antes de enviá‑los à nuvem. O modelo inclui um mecanismo de autenticação leve, suporte a biometria de veia digital e aprendizado profundo leve para autenticação biométrica, além de um algoritmo de criação, atualização e revogação de registros que utiliza blocos de status \"REVOKED\". Simulações comparativas indicam melhora na escalabilidade e redução da sobrecarga de armazenamento, embora questões sobre latência, consumo energético, revogação em tempo real e sobrecarga de comunicação/computação permaneçam em aberto. O trabalho também discute a aplicação em ambientes críticos como saúde, cidades inteligentes e redes 6G, apontando a necessidade de otimizações para borda e políticas de acesso multi‑organização.",
+  "lacunas_possiveis": [
+    "Mecanismo de revogação de credenciais em tempo real e seu impacto na latência",
+    "Overhead de criptografia homomórfica em dispositivos de baixa potência e na comunicação em tempo real",
+    "Escalabilidade e consumo de armazenamento ao adicionar blocos de revogação em redes IoT massivas",
+    "Custo computacional dos contratos inteligentes durante autenticação em tempo real",
+    "Validação prática em cenários reais de cidades inteligentes e múltiplas organizações"
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um protocolo de revogação baseado em blocos de status que minimize comunicação adicional",
+    "Avaliar o desempenho energético da criptografia homomórfica em hardware de borda e propor otimizações leves",
+    "Implementar métricas de latência e overhead de contratos inteligentes para diferentes tamanhos de rede",
+    "Integrar controle de acesso baseado em atributos (ABE) para suportar políticas divergentes entre organizações",
+    "Realizar um piloto em um testbed de cidade inteligente que combine biometria de veia digital, SSI e blockchain permissionada"
+  ]
+}

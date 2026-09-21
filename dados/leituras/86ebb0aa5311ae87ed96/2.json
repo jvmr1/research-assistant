@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo propõe uma arquitetura que combina blockchain e IPFS para superar limitações de privacidade, escalabilidade, segurança e eficiência em sistemas de saúde IoT. Os dados são fragmentados, armazenados com identificadores criptográficos (CID) e distribuídos via rede P2P, evitando ponto único de falha. A integração reduz a sobrecarga da blockchain, melhora a capacidade de armazenamento e permite acesso rápido a arquivos frequentes, enquanto um proxy de dispositivos e autenticação criptográfica protegem a confidencialidade dos dados.",
+  "perfil": {
+    "problema": "prevent data from having a single point of failure",
+    "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde."
+  },
+  "evidencias": [
+    {
+      "citacao": "once a file is uploaded, its hash is shared among all peer nodes in the network for instant access and to prevent data from having a single point of failure.",
+      "afirmacao": "once a file is uploaded, its hash is shared among all peer nodes in the network for instant access and to prevent data from having a single point of failure."
+    },
+    {
+      "citacao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity.",
+      "afirmacao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity."
+    }
+  ],
+  "interpretacao": "O texto descreve como a combinação de blockchain e IPFS pode eliminar o ponto único de falha ao distribuir dados de saúde, melhorar a escalabilidade ao armazenar apenas endereços na blockchain e acelerar o acesso via cache local, ao mesmo tempo que introduz mecanismos de autenticação para proteger a confidencialidade.",
+  "duvidas": "Não há detalhes sobre métricas de desempenho, custos de implementação ou avaliação prática em larga escala; também falta informação sobre como a solução lida com a revogação de credenciais ou a interoperabilidade entre diferentes provedores de saúde.",
+  "avisos": [],
+  "id": "44492b3f922b7e3bdd1b",
+  "artigo": "Mallick_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "prevent data from having a single point of failure",
+    "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+    "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86ebb0aa5311ae87ed96"
+  }
+}

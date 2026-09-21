@@ -1,0 +1,22 @@
+{
+  "id": "25b81da2874712609390",
+  "revisao": "9a4532f511c88c05cbf9",
+  "gerado_em": "2026-09-16T11:54:08",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Mansoor_2025: Desenvolvimento de um padrão comum para interoperabilidade entre protocolos IoT",
+  "fontes": [
+    "Mansoor_2025"
+  ],
+  "problema": "Falta de padrões comuns para interoperabilidade entre protocolos IoT em agricultura de precisão",
+  "hipotese_lacuna": "Falta de padrões comuns para interoperabilidade entre protocolos IoT em agricultura de precisão",
+  "meu_trabalho": "Desenvolvimento de um padrão comum para interoperabilidade entre protocolos IoT",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolvimento de um padrão comum para interoperabilidade entre protocolos IoT",
+  "modo": "artigo",
+  "buscas": [
+    "Integration of smart sensors and IOT in precision agriculture: trends, challenges and future prospectives limitations future work",
+    "Integration of smart sensors and IOT in precision agriculture: trends, challenges and future prospectives smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?"
+}

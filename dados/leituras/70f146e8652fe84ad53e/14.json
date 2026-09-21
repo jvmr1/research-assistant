@@ -1,0 +1,37 @@
+{
+  "resumo": "O trecho destaca a necessidade de interoperabilidade orientada à governança e segurança para troca de dados entre domínios administrativos independentes, sem confiança prévia. Embora a interoperabilidade semântica esteja fora do escopo, a expansão dos dispositivos IoT (prevista em 29 bi até 2030) intensifica desafios de compartilhamento seguro, governança de acesso, privacidade e auditoria. Um cenário de cadeia de suprimentos ilustra a necessidade de controle de acesso granular, permitindo que organizações mantenham autonomia e evitem dependência de um intermediário centralizado.",
+  "perfil": {
+    "problema": "governance- and security-oriented interoperability",
+    "solucao": "mechanisms that ensure granular access control over shared data",
+    "avaliacao": "Não informado",
+    "limites": "Semantic interoperability ... is outside the scope of this research.",
+    "possibilidades": "Investigar a integração de identidades auto‑soberanas (SSI/DIDs) com políticas de controle de acesso baseadas em ABE para ambientes IIoT; explorar credenciais verificáveis como mecanismo de autenticação de dispositivos IoT em cadeias de suprimentos; propor extensões que combinam criptografia homomórfica com smart contracts para auditoria de acesso sem revelar dados sensíveis; avaliar estratégias de revogação distribuída de credenciais em redes industriais sem intermediário central."
+  },
+  "evidencias": [
+    {
+      "citacao": "This need for data sharing between organizations can be supported by mechanisms that ensure granular access control over shared data, without requiring all parties to depend on a single centralized authority.",
+      "afirmacao": "A necessidade de compartilhamento seguro de dados entre organizações requer controle de acesso granular."
+    },
+    {
+      "citacao": "Recent forecasts indicate that the global number of IoT-connected devices will reach 29 billion by 2030 (ABUSERRIEH; ALALFI, 2024).",
+      "afirmacao": "Previsões indicam 29 bilhões de dispositivos IoT conectados até 2030."
+    }
+  ],
+  "interpretacao": "O autor enfatiza que, apesar do crescimento explosivo de dispositivos IoT, a falta de mecanismos de governança e controle de acesso granular impede a colaboração interorganizacional segura, exigindo soluções que preservem a autonomia de cada entidade sem depender de autoridades centrais.",
+  "duvidas": "Quais são os requisitos específicos de desempenho para os mecanismos de controle de acesso granular em ambientes IIoT de alta frequência? Como a exclusão da interoperabilidade semântica afeta a aplicabilidade prática das propostas de controle de acesso?",
+  "avisos": [],
+  "id": "7072a39ef1e3f9edfeb1",
+  "artigo": "Exemplo_60479560a08f3b4cd724",
+  "pagina": 15,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "governance- and security-oriented interoperability",
+    "solucao": "mechanisms that ensure granular access control over shared data",
+    "avaliacao": "The developed architecture reduces the dependence on unilateral control over access rules",
+    "limites": "Traditional solutions tend to depend on centralized intermediaries",
+    "possibilidades": "Investigar a integração de identidades auto‑soberanas (SSI/DIDs) com políticas de controle de acesso baseadas em ABE para ambientes IIoT; explorar credenciais verificáveis como mecanismo de autenticação de dispositivos IoT em cadeias de suprimentos; propor extensões que combinam criptografia homomórfica com smart contracts para auditoria de acesso sem revelar dados sensíveis; avaliar estratégias de revogação distribuída de credenciais em redes industriais sem intermediário central.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "d54bdcaf66d25b3bc5ea"
+  },
+  "reaproveitada_de": "d54bdcaf66d25b3bc5ea"
+}

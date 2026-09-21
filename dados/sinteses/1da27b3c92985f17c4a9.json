@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta um modelo de gestão de identidades baseado em contratos inteligentes para ambientes de cidades inteligentes, integrando identidade digital autossoberana, blockchain e componentes específicos para IoT, como Entity Manager, IoT Cataloguer e Secure Resource Adaptor. A estrutura proposta abrange registro, autenticação e revogação de credenciais, e inclui avaliação experimental de latência, consumo de memória e processamento. O trabalho contextualiza a cidade inteligente como uso de TIC para mitigar problemas de urbanização, destacando a IoT como elemento central e apontando a segurança da informação como desafio crítico. A gestão de identidades é defendida como meio de garantir confidencialidade, integridade e controle de acesso, mitigando ameaças como negação de serviço e acesso não autorizado. O sumário indica ainda revisão de literatura, análise de algoritmos de consenso e comparação com soluções existentes para identidade em IoT.",
+  "lacunas_possiveis": [
+    "Critérios de seleção dos trabalhos relacionados não foram explicitados.",
+    "Detalhes do mecanismo de revogação de credenciais nos contratos inteligentes permanecem ausentes.",
+    "Escalabilidade da solução para milhares de dispositivos IoT simultâneos não foi avaliada.",
+    "Suporte à interoperabilidade entre plataformas de identidade públicas e privadas não foi descrito.",
+    "Requisitos específicos para implementar SSI em dispositivos IoT de baixa potência e com conectividade intermitente não foram abordados."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um benchmark de revogação que meça latência e consumo de recursos em grandes frotas de dispositivos IoT.",
+    "Projetar um protocolo SSI leve, adaptado a dispositivos de baixa potência, usando criptografia baseada em atributos ou chaves derivadas.",
+    "Criar uma camada de interoperabilidade baseada em DID e Verifiable Credentials para integrar identidades públicas e privadas em ambientes de cidades inteligentes.",
+    "Avaliar empiricamente a sobrecarga de memória e processamento introduzida por blockchains permissionadas em cenários de smart city.",
+    "Implementar um mecanismo de revogação resiliente a conectividade intermitente, por exemplo, usando secret sharing ou listas de revogação distribuídas."
+  ]
+}

@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="https://www.techscience.com/static/css/style.css?t=20230215" />
+        <link rel="stylesheet" type="text/css" href="https://www.techscience.com/static/css/animate.min.css?t=20230215" />
+        <link rel="stylesheet" href="https://www.techscience.com/static/css/iconfont.css?t=20230215" />
+        <link rel="stylesheet" type="text/css" href="https://www.techscience.com/static/bu/bu.css?t=20230215" />
+        <title>CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain</title>
+        <meta name="keywords"    content="Edge blockchain; CP-ABE; data security sharing; IoT" />
+                
+                <link rel="canonical" href="https://www.techscience.com/cmc/v83n3/60981" />
+                                    
+            <meta name="title" content="A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain" />
+<meta name="description" content="The accelerated advancement of the Internet of Things (IoT) has generated substantial data, including sensitive and private information. Consequently, it is imperative to guarantee the security of data sharing. While facilitating fine-grained access control, Ciphertext Policy Attribute-Based Encryption (CP-ABE) can effectively ensure the confidentiality of shared data. Nevertheless, the conventional centralized CP-ABE scheme is plagued by the issues of key misuse, key escrow, and large computation, which will result in security risks. This paper suggests a lightweight IoT data security sharing scheme that integrates blockchain technology and CP-ABE to address the abovementioned issues. The integrity and traceability of shared data are guaranteed by the use of blockchain technology to store and verify access transactions. The encryption and decryption operations of the CP-ABE algorithm have been implemented using elliptic curve scalar multiplication to accommodate lightweight IoT devices, as opposed to the more arithmetic bilinear pairing found in the traditional CP-ABE algorithm. Additionally, a portion of the computation is delegated to the edge nodes to alleviate the computational burden on users. A distributed key management method is proposed to address the issues of key escrow and misuse. This method employs the edge blockchain to facilitate the storage and distribution of attribute private keys. Meanwhile, data security sharing is enhanced by combining off-chain and on-chain ciphertext storage. The security and performance analysis indicates that the proposed scheme is more efficient and secure." />
+<meta name="dc.identifier" content="doi:10.32604/cmc.2025.060297"/>
+<meta name="DOI" content="10.32604/cmc.2025.060297"/>
+<meta property="twitter:site" content="@TechScience_TSP"/>
+<meta property="twitter:creator" content="@TechScience_TSP"/>
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:url" content="https://www.techscience.com/cmc/v83n3/60981"/>
+<meta property="og:site" content="Tech Science Press"/>
+<meta property="og:site_name" content="Tech Science Press"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain"/>
+<meta property="og:description" content="The accelerated advancement of the Internet of Things (IoT) has generated substantial data, including sensitive and private information. Consequently, it is imperative to guarantee the security of data sharing. While facilita... | Find, read and cite all the research you need on Tech Science Press"/>
+<meta property="og:url" content="https://www.techscience.com/cmc/v83n3/60981"/>
+<meta property="og:image" content="https://www.techscience.com/static/images/logo/logo-200.png?t=20230215"/>
+<meta name="citation_title" content="A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain"/>
+<meta name="citation_author" content="Hongliang Tian"/>
+<meta name="citation_author" content="Meiruo Li"/>
+<meta name="citation_publication_date" content="2025/05/19"/>
+<meta name="citation_online_date" content=""/>
+<meta name="citation_journal_title" content="Computers, Materials &amp; Continua"/>
+<meta name="citation_year" content="2025"/>
+<meta name="citation_volume" content="83"/>
+<meta name="citation_issue" content="3"/>
+<meta name="citation_firstpage" content="5539"/>
+<meta name="citation_lastpage" content="5559"/>
+<meta name="citation_article_type" content="ARTICLE"/>
+<meta name="citation_fulltext_world_readable" content=""/>
+<meta name="citation_pdf_url" content="https://cdn.techscience.press/files/cmc/2025/TSP_CMC-83-3/TSP_CMC_60297/TSP_CMC_60297.pdf" />
+<meta name="citation_publisher" content="Tech Science Press"/>
+<meta name="citation_public_url" content="https://www.techscience.com/cmc/v83n3/60981" />
+<meta name="citation_abstract_html_url" content="https://www.techscience.com/cmc/v83n3/60981"/>
+<meta name="citation_fulltext_html_url" content="https://www.techscience.com/cmc/v83n3/60981.html"/>
+<meta name="citation_issn" content="1546-2218"/>
+<meta name="citation_issn" content="1546-2226"/>
+<meta name="citation_doi" content="10.32604/cmc.2025.060297"/>
+<meta name="citation_journal_abbrev" content="CMC" />
+<meta name="citation_language" content="en" />
+<meta name="citation_date" content="2025"/>
+<meta name="citation_reference" content="citation_title=A review of IoT-enabled mobile healthcare: technologies, challenges, and future trends;citation_article_type=journal;citation_volume=9;citation_issue=12;citation_firstpage=9478;citation_lastpage=502;citation_publication_date=2022;citation_doi=10.1109/JIOT.2022.3144400;citation_author=YL Yang;citation_author=HC Wang;citation_author=RZ Jiang;citation_author=XN Guo;citation_author=J Cheng;citation_author=YY Chen;"/>
+<meta name="citation_reference" content="citation_title=Integrating artificial intelligence internet of things and 5G for next-generation smartgrid: a survey of trends challenges and prospect;citation_article_type=journal;citation_volume=10;citation_issue=4;citation_firstpage=4794;citation_lastpage=831;citation_publication_date=2022;citation_doi=10.1109/ACCESS.2022.3140595;citation_author=E Esenogho;citation_author=K Djouani;citation_author=AM Kurien;"/>
+<meta name="citation_reference" content="citation_title=FADSF: a data sharing model for intelligent connected vehicles based on blockchain technology;citation_article_type=journal;citation_volume=80;citation_issue=2;citation_firstpage=2351;citation_lastpage=62;citation_publication_date=2024;citation_doi=10.32604/cmc.2024.048903;citation_author=Y Sun;citation_author=C Liu;citation_author=J Li;citation_author=Y Liu;"/>
+<meta name="citation_reference" content="citation_title=IoT threat detection advances, challenges and future directions;citation_article_type=conf-proc;citation_firstpage=22;citation_lastpage=9;citation_publication_date=2020;citation_author=NM Karie;citation_author=NM Sahri;citation_author=P Haskell-Dowland;"/>
+<meta name="citation_reference" content="citation_title=Secure framework for data leakage detection and prevention in iot application;citation_article_type=conf-proc;citation_firstpage=1;citation_lastpage=6;citation_publication_date=2022;citation_author=SK Nayak;citation_author=SK Swain;citation_author=BK Mohanta;citation_author=BK Paikaray;"/>
+<meta name="citation_reference" content="citation_title=A practical attribute-based document collection hierarchical encryption scheme in cloud computing;citation_article_type=journal;citation_volume=7;citation_firstpage=36218;citation_lastpage=32;citation_publication_date=2019;citation_doi=10.1109/ACCESS.2019.2905346;citation_author=JS Fu;citation_author=N Wang;"/>
+<meta name="citation_reference" content="citation_title=Key-policy attribute-based encryption with keyword search in virtualized environments;citation_article_type=journal;citation_volume=38;citation_issue=6;citation_firstpage=1242;citation_lastpage=51;citation_publication_date=2020;citation_doi=10.1109/JSAC.2020.2986620;citation_author=Y Yu;citation_author=JB Shi;citation_author=HL Li;citation_author=YN Li;citation_author=XJ Du;citation_author=M Guizani;"/>
+<meta name="citation_reference" content="citation_title=A traceable and revocable ciphertext-policy attribute-based encryption scheme based on privacy protection;citation_article_type=journal;citation_volume=19;citation_issue=1;citation_firstpage=316;citation_lastpage=27;citation_publication_date=2022;citation_doi=10.1109/TDSC.2020.2977646;citation_author=DZ Han;citation_author=NN Pan;citation_author=KC Li;"/>
+<meta name="citation_reference" content="citation_title=SEM-ACSIT: secure and efficient multiauthority access control for IoT cloud storage;citation_article_type=journal;citation_volume=7;citation_issue=4;citation_firstpage=2914;citation_lastpage=27;citation_publication_date=2020;citation_doi=10.1109/JIOT.2020.2963899;citation_author=SM Xiong;citation_author=Q Ni;citation_author=LM Wang;citation_author=Q Wang;"/>
+<meta name="citation_reference" content="citation_title=Efficient and secure attribute-based access control with identical sub-policies frequently used in cloud storage;citation_article_type=journal;citation_volume=19;citation_issue=1;citation_firstpage=635;citation_lastpage=46;citation_publication_date=2022;citation_doi=10.1109/TDSC.2020.2987903;citation_author=KP Xue;citation_author=N Gai;citation_author=JN Hong;citation_author=DSL Wei;citation_author=PL Hong;citation_author=NH Yu;"/>
+<meta name="citation_reference" content="citation_title=RPEDS: a recoverable and revocable privacy-preserving edge data sharing scheme;citation_article_type=journal;citation_volume=7;citation_issue=9;citation_firstpage=8077;citation_lastpage=89;citation_publication_date=2020;citation_doi=10.1109/JIOT.2020.2997389;citation_author=YW Pu;citation_author=CQ Hu;citation_author=SJ Deng;citation_author=A Alrawais;"/>
+<meta name="citation_reference" content="citation_title=NutBaaS: a Blockchain-as-a-service platform;citation_article_type=journal;citation_volume=7;citation_firstpage=134422;citation_lastpage=33;citation_publication_date=2019;citation_doi=10.1109/ACCESS.2019.2941905;citation_author=WL Zheng;citation_author=ZB Zheng;citation_author=XP Chen;citation_author=KM Dai;citation_author=PS Li;citation_author=RF Chen;"/>
+<meta name="citation_reference" content="citation_title=TDRB: an efficient tamper-proof detection middleware for relational database based on blockchain technology;citation_article_type=journal;citation_volume=9;citation_firstpage=66707;citation_lastpage=22;citation_publication_date=2021;citation_doi=10.1109/ACCESS.2021.3076235;citation_author=J Lian;citation_author=S Wang;citation_author=Y Xie;"/>
+<meta name="citation_reference" content="citation_title=A blockchain based approach for the definition of auditable access control systems;citation_article_type=journal;citation_volume=84;citation_issue=7;citation_firstpage=93;citation_lastpage=119;citation_publication_date=2019;citation_doi=10.1016/j.cose.2019.03.016;citation_author=DDF Maesa;citation_author=P Mori;citation_author=L Ricci;"/>
+<meta name="citation_reference" content="citation_title=A blockchain consensus mechanism to optimize reputation-based distributed energy trading in urban energy system;citation_article_type=journal;citation_volume=12;citation_firstpage=53698;citation_lastpage=712;citation_publication_date=2024;citation_doi=10.1109/ACCESS.2024.3387715;citation_author=C Zhao;citation_author=D Han;citation_author=C Li;citation_author=H Wang;"/>
+<meta name="citation_reference" content="citation_title=Attribute-based encryption with blockchain protection scheme for electronic health records;citation_article_type=journal;citation_volume=19;citation_issue=4;citation_firstpage=3884;citation_lastpage=95;citation_publication_date=2022;citation_doi=10.1109/TNSM.2022.3193707;citation_author=Y Jiang;citation_author=XL Xu;citation_author=F Xiao;"/>
+<meta name="citation_reference" content="citation_title=BDSS-FA: a blockchain-based data security sharing platform with fine-grained access control;citation_article_type=journal;citation_volume=8;citation_firstpage=87552;citation_lastpage=61;citation_publication_date=2020;citation_doi=10.1109/ACCESS.2020.2992649;citation_author=H Xu;citation_author=Q He;citation_author=XC Li;citation_author=BC Jiang;citation_author=KY Qin;"/>
+<meta name="citation_reference" content="citation_title=Fuzzy identity-based encryption;citation_article_type=conf-proc;citation_firstpage=457;citation_lastpage=73;citation_publication_date=2005 May 22–26;citation_author=A Sahai;citation_author=B Waters;"/>
+<meta name="citation_reference" content="citation_title=Ciphertext-policy attribute-based encryption;citation_article_type=conf-proc;citation_firstpage=321;citation_lastpage=34;citation_publication_date=2007;citation_author=J Bethencourt;citation_author=A Sahai;citation_author=B Waters;"/>
+<meta name="citation_reference" content="citation_title=Efficient CP-ABE scheme with shared decryption in cloud storage;citation_article_type=journal;citation_volume=71;citation_issue=1;citation_firstpage=175;citation_lastpage=84;citation_publication_date=2022;citation_doi=10.1109/TC.2020.3043950;citation_author=NY Chen;citation_author=JG Li;citation_author=YC Zhang;citation_author=YY Guo;"/>
+<meta name="citation_reference" content="citation_title=RS-HABE: revocable-storage and hierarchical attribute-based access scheme for secure sharing of e-health records in public cloud;citation_article_type=journal;citation_volume=18;citation_issue=5;citation_firstpage=2301;citation_lastpage=15;citation_publication_date=2021;citation_author=JH Wei;citation_author=XF Chen;citation_author=XY Huang;citation_author=XX Hu;citation_author=W Susilo;"/>
+<meta name="citation_reference" content="citation_title=Toward secure and privacy-preserving cloud data sharing: online/offline multiauthority CP-ABE with hidden policy;citation_article_type=journal;citation_volume=16;citation_issue=3;citation_firstpage=4804;citation_lastpage=15;citation_publication_date=2022;citation_doi=10.1109/JSYST.2022.3169601;citation_author=CB Zhao;citation_author=L Xu;citation_author=JG Li;citation_author=H Fang;citation_author=YH Zhang;"/>
+<meta name="citation_reference" content="citation_title=A scalable and auditable secure data sharing scheme with traceability for fog-based smart logistics;citation_article_type=journal;citation_volume=10;citation_issue=10;citation_firstpage=8603;citation_lastpage=17;citation_publication_date=2023;citation_doi=10.1109/JIOT.2022.3220850;citation_author=YB Yang;citation_author=JW Zhang;citation_author=XM Liu;citation_author=JF Ma;"/>
+<meta name="citation_reference" content="citation_title=A multi-group-supporting policy hidden fine-grained data sharing scheme in 5G-enabled IoT with edge computing;citation_article_type=journal;citation_volume=12;citation_firstpage=46362;citation_lastpage=78;citation_publication_date=2024;citation_doi=10.1109/ACCESS.2024.3381509;citation_author=JY Cai;citation_author=HJ Zhang;citation_author=Z Duo;citation_author=X Wang;citation_author=XW Zhao;"/>
+<meta name="citation_reference" content="citation_title=Publicly accountable data-sharing scheme supporting privacy protection for fog-enabled VANETs;citation_article_type=journal;citation_volume=73;citation_issue=6;citation_firstpage=8487;citation_lastpage=502;citation_publication_date=2024;citation_doi=10.1109/TVT.2024.3360698;citation_author=CC Zhao;citation_author=LY Zhang;citation_author=Q Wu;citation_author=F Rezaeibagha;"/>
+<meta name="citation_reference" content="citation_title=FADB: a fine-grained access control scheme for VANET data based on blockchain;citation_article_type=journal;citation_volume=8;citation_firstpage=85190;citation_lastpage=203;citation_publication_date=2020;citation_doi=10.1109/ACCESS.2020.2992203;citation_author=H Li;citation_author=LS Pei;citation_author=D Liao;citation_author=S Chen;citation_author=M Zhang;citation_author=D Xu;"/>
+<meta name="citation_reference" content="citation_title=A hybrid blockchain-based log management scheme with nonrepudiation for smart grids;citation_article_type=journal;citation_volume=18;citation_issue=9;citation_firstpage=5771;citation_lastpage=82;citation_publication_date=2022;citation_doi=10.1109/TII.2021.3136580;citation_author=TV Le;citation_author=CL Hsu;citation_author=WX Chen;"/>
+<meta name="citation_reference" content="citation_title=Secure decentralized attribute-based sharing of personal health records with blockchain;citation_article_type=journal;citation_volume=9;citation_issue=14;citation_firstpage=12482;citation_lastpage=96;citation_publication_date=2021;citation_doi=10.1109/JIOT.2021.3137240;citation_author=LY Zhang;citation_author=TS Zhang;citation_author=Q Wu;citation_author=Y Mu;citation_author=F Rezaeibagha;"/>
+<meta name="citation_reference" content="citation_title=A multifactor combined data sharing scheme for vehicular fog computing using blockchain;citation_article_type=journal;citation_volume=10;citation_issue=22;citation_firstpage=20049;citation_lastpage=64;citation_publication_date=2023;citation_doi=10.1109/JIOT.2023.3282672;citation_author=ZZ Guo;citation_author=GL Wang;citation_author=GY Zhang;citation_author=YX Li;citation_author=JQ Ni;"/>
+<meta name="citation_reference" content="citation_title=Secure and fine-grained access control with optimized revocation for outsourced IoT EHRs with adaptive load-sharing in fog-assisted cloud environment;citation_article_type=journal;citation_volume=12;citation_firstpage=82753;citation_lastpage=68;citation_publication_date=2024;citation_doi=10.1109/ACCESS.2024.3412754;citation_author=S Fugkeaw;citation_author=RP Gupta;citation_author=K Worapaluk;"/>
+<meta name="citation_reference" content="citation_title=Revocable and efficient blockchain-based fine-grained access control against EDoS attacks in cloud storage;citation_article_type=journal;citation_volume=73;citation_issue=8;citation_firstpage=2012;citation_lastpage=24;citation_publication_date=2024;citation_doi=10.1109/TC.2024.3398502;citation_author=QY Zhang;citation_author=C Xu;citation_author=H Zhong;citation_author=CJ Gu;citation_author=J Cui;"/>
+<meta name="citation_reference" content="citation_title=A CP-ABE scheme based on multi-authority in hybrid clouds for mobile devices;citation_article_type=journal;citation_volume=121;citation_issue=5;citation_firstpage=114;citation_lastpage=22;citation_publication_date=2021;citation_doi=10.1016/j.future.2021.03.021;citation_author=MD Xie;citation_author=YY Ruan;citation_author=HB Hong;citation_author=J Shao;"/>
+<meta name="citation_reference" content="citation_title=A partially hidden policy CP-ABE scheme against attribute values guessing attacks with online privacy-protective decryption testing in IoT assisted cloud computing;citation_article_type=journal;citation_volume=123;citation_issue=4;citation_firstpage=181;citation_lastpage=95;citation_publication_date=2021;citation_doi=10.1016/j.future.2021.04.022;citation_author=ZS Zhang;citation_author=W Zhang;citation_author=ZG Qin;"/>
+<meta name="citation_reference" content="citation_title=A decentralized strongly secure attribute-based encryption and authentication scheme for distributed Internet of Mobile Things;citation_article_type=journal;citation_volume=201;citation_issue=1;citation_firstpage=108553;citation_publication_date=2021;citation_doi=10.1016/j.comnet.2021.108553;citation_author=Z Zhang;citation_author=S Zhou;"/>
+<meta name="citation_keywords" content="Edge blockchain; CP-ABE; data security sharing; IoT" />
+<meta name="citation_id" content="60981" />
+<meta name="citation_state" content="" />
+<meta name="DC.Contributor" content="Hongliang Tian"/>
+<meta name="DC.Creator" content="Hongliang Tian"/>
+<meta name="DC.Contributor" content="Meiruo Li"/>
+<meta name="DC.Creator" content="Meiruo Li"/>
+<meta name="DC.Created" content="2025-05-19"/>
+<meta name="DC.Date" content="2025-05-19"/>
+<meta name="DC.Format" content="text/html" />
+<meta name="DC.Type" content="text" />
+<meta name="DC.Title" content="A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain"/>
+<meta name="DC.Description" content="The accelerated advancement of the Internet of Things (IoT) has generated substantial data, including sensitive and private information. Consequently, it is imperative to guarantee the security of data sharing. While facilita... | Find, read and cite all the research you need on Tech Science Press"/>
+<meta name="DC.Publisher" content="Tech Science Press"/>
+<meta name="dc.subject" content="ARTICLE"/>
+
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@id":"https:\/\/www.techscience.com\/cmc\/v83n3\/60981","@type":"ScholarlyArticle","headline":"A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain","author":[{"@type":"Person","name":"Tian, Hongliang"},{"@type":"Person","name":"Li, Meiruo"}],"datePublished":"2025\/05\/19","publisher":{"@id":"https:\/\/www.techscience.com\/ndetail\/abt","@type":"NewsMediaOrganization","name":"Tech Science Press","logo":{"@type":"ImageObject","url":"https:\/\/www.techscience.com\/static\/images\/logo.png"}},"name":"A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain","keywords":"Edge blockchain, CP-ABE, data security sharing, IoT","articleSection":"Computers, Materials & Continua","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http:\/\/schema.org\/ReadAction","userInteractionCount":"2362"},{"@type":"InteractionCounter","interactionType":"http:\/\/schema.org\/DownloadAction","userInteractionCount":"886"}],"sameAs":"https:\/\/doi.org\/10.32604\/cmc.2025.060297"}</script>
+
+                
+                <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.techscience.com\/"},{"@type":"ListItem","position":2,"name":"Journals","item":"https:\/\/www.techscience.com\/journals"},{"@type":"ListItem","position":3,"name":"CMC","item":"https:\/\/www.techscience.com\/journal\/cmc"},{"@type":"ListItem","position":4,"name":"Vol.83, No.3, 2025","item":"https:\/\/www.techscience.com\/cmc\/v83n3"},{"@type":"ListItem","position":5,"name":"10.32604\/cmc.2025.060297"}]}</script>
+                        </head><style>
+/* Downloads / Citation Tools 下拉：改用纯 CSS 控制展开，
+   原来依赖 Bootstrap(jQuery) 的 data-toggle="dropdown"，外部 JS 未加载完成时点击无反应。
+   现在用 hover + focus-within 展开，不依赖 JS，资源没加载好也能点开使用。
+   作用域限定 .nkslj，不影响页面其它下拉。 */
+.nkslj .dropdown{ position: relative; }
+.nkslj .dropdown > .dropdown-toggle{ cursor: pointer; outline: none; }
+.nkslj .dropdown > .dropdown-menu{ display: none; }
+.nkslj .dropdown:hover > .dropdown-menu,
+.nkslj .dropdown:focus-within > .dropdown-menu{ display: block; }
+ .rotate90{
+ width: 15px; height: 25px;
+transform:rotate(90deg);
+-ms-transform:rotate(90deg); 	/* IE 9 */
+-moz-transform:rotate(90deg); 	/* Firefox */
+-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+-o-transform:rotate(90deg); 	/* Opera */
+}
+.menudetail li a{
+     width: 170px;cursor: auto;
+}
+.menudetail li a:hover{
+    text-decoration: none; cursor: auto
+}
+.menudetail li a span{
+ float: right; padding-right: 15px
+}
+.cite_detail{
+    padding:0px; position: relative; padding-left: 110px;line-height: 19px;font-size: 12px
+}
+.cite_detail a{
+    cursor: pointer;
+    color: #235abf;
+    text-decoration: none;
+    text-decoration: none;
+    outline: none;}
+.cite_detail a:hover{ text-decoration: underline;}
+.sub-item-box{
+    padding-top: 0px; overflow: hidden;
+}
+.sub-item-box-item{
+    float: left; width: 120px; text-align: center;
+}
+.sub-item-box-item a{
+    display: block; 
+}
+.clear{ clear: both;}
+.crossmark_svg_box{ position: relative; }
+.crossmark_svg{
+    position: absolute;
+	right: 10px;
+	top: -47px;
+	width: 50px;
+	height: 50px;
+}
+@media only screen and (max-width:600px){	
+    #section_abstract img{ max-width: 95% !important}
+}
+
+.RetractedContainer{
+    margin-top: 20px;
+    border-left: 5px solid #e87626;
+    padding-left: 10px;
+    background-color: #fff6ec;
+}
+.RetractedContainer__content {
+    padding: 16px 24px 16px 12px;
+    border-bottom: 1px solid #ffcb8d;
+}
+.RetractedContainer__alertText{
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+}
+.RetractedContainer__alertText::before {
+    content: "";
+    display: inline-block;
+    min-width: 16px;
+    min-height: 20px;
+    margin-top: 2px;
+    margin-right: 8px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iNCIgeT0iMy4zMzM1IiB3aWR0aD0iOCIgaGVpZ2h0PSI5LjMzMzMzIiBmaWxsPSIjMjgyODI4Ii8+CjxwYXRoIGQ9Ik03Ljk5OTk2IDAuOTU5OTYxQzYuNjA3NTggMC45NTk5NjEgNS4yNDY0NyAxLjM3Mjg1IDQuMDg4NzUgMi4xNDY0MUMyLjkzMTAzIDIuOTE5OTggMi4wMjg2OSA0LjAxOTQ4IDEuNDk1ODUgNS4zMDU4N0MwLjk2MzAxMSA2LjU5MjI2IDAuODIzNTk2IDguMDA3NzcgMS4wOTUyNCA5LjM3MzRDMS4zNjY4OCAxMC43MzkgMi4wMzczNyAxMS45OTM0IDMuMDIxOTMgMTIuOTc4QzQuMDA2NDkgMTMuOTYyNiA1LjI2MDkgMTQuNjMzIDYuNjI2NTMgMTQuOTA0N0M3Ljk5MjE2IDE1LjE3NjMgOS40MDc2NiAxNS4wMzY5IDEwLjY5NDEgMTQuNTA0MUMxMS45ODA0IDEzLjk3MTIgMTMuMDc5OSAxMy4wNjg5IDEzLjg1MzUgMTEuOTExMkMxNC42MjcxIDEwLjc1MzUgMTUuMDQgOS4zOTIzNCAxNS4wNCA3Ljk5OTk2QzE1LjAzNzggNi4xMzM0OSAxNC4yOTU1IDQuMzQ0MDcgMTIuOTc1NyAzLjAyNDI3QzExLjY1NTkgMS43MDQ0NyA5Ljg2NjQ0IDAuOTYyMDc4IDcuOTk5OTYgMC45NTk5NjFaTTguNjM5OTYgMTEuNTM2QzguNjM5OTYgMTEuNjIwOCA4LjYwNjI1IDExLjcwMjIgOC41NDYyNCAxMS43NjIyQzguNDg2MjMgMTEuODIyMiA4LjQwNDgzIDExLjg1NiA4LjMxOTk2IDExLjg1Nkg3LjY3OTk2QzcuNTk1MSAxMS44NTYgNy41MTM3IDExLjgyMjIgNy40NTM2OSAxMS43NjIyQzcuMzkzNjggMTEuNzAyMiA3LjM1OTk2IDExLjYyMDggNy4zNTk5NiAxMS41MzZWMTAuODk2QzcuMzU5OTYgMTAuODExMSA3LjM5MzY4IDEwLjcyOTcgNy40NTM2OSAxMC42Njk3QzcuNTEzNyAxMC42MDk3IDcuNTk1MSAxMC41NzYgNy42Nzk5NiAxMC41NzZIOC4zMTk5NkM4LjQwNDgzIDEwLjU3NiA4LjQ4NjIzIDEwLjYwOTcgOC41NDYyNCAxMC42Njk3QzguNjA2MjUgMTAuNzI5NyA4LjYzOTk2IDEwLjgxMTEgOC42Mzk5NiAxMC44OTZWMTEuNTM2Wk04LjYzOTk2IDguOTc1OTZDOC42Mzk5NiA5LjA2MDgzIDguNjA2MjUgOS4xNDIyMiA4LjU0NjI0IDkuMjAyMjRDOC40ODYyMyA5LjI2MjI1IDguNDA0ODMgOS4yOTU5NiA4LjMxOTk2IDkuMjk1OTZINy42Nzk5NkM3LjU5NTEgOS4yOTU5NiA3LjUxMzcgOS4yNjIyNSA3LjQ1MzY5IDkuMjAyMjRDNy4zOTM2OCA5LjE0MjIyIDcuMzU5OTYgOS4wNjA4MyA3LjM1OTk2IDguOTc1OTZWNC40OTU5NkM3LjM1OTk2IDQuNDExMDkgNy4zOTM2OCA0LjMyOTcgNy40NTM2OSA0LjI2OTY5QzcuNTEzNyA0LjIwOTY4IDcuNTk1MSA0LjE3NTk2IDcuNjc5OTYgNC4xNzU5Nkg4LjMxOTk2QzguNDA0ODMgNC4xNzU5NiA4LjQ4NjIzIDQuMjA5NjggOC41NDYyNCA0LjI2OTY5QzguNjA2MjUgNC4zMjk3IDguNjM5OTYgNC40MTEwOSA4LjYzOTk2IDQuNDk1OTZWOC45NzU5NloiIGZpbGw9IiNFODc2MjYiLz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+}
+.RetractedContainer__info{
+    padding-left: 24px;
+}
+.RetractedContainer-full{
+    margin-top: 20px;
+}
+.TSP2022 span.sup{
+    line-height: 10px;
+}
+
+#modal {
+        display: none;
+    }
+    .modal {
+        margin: auto;
+        padding-top: 5%;
+        width: 50%;
+        height: 80%;
+        z-index: 1;
+    }
+
+    .modal img {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+        display: block;
+        padding: 10px;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        box-shadow: 0 2px 6px rgb(0, 0, 0, 0.2), 0 10px 20px rgb(0, 0, 0, 0.2);
+        border-radius: 12px;
+        border: 1px solid white;
+    }
+    
+    .modal-close{
+        color: #333;
+        overflow: visible;
+        cursor: pointer;
+        background: 0 0;
+        border: 0;
+        -webkit-appearance: none;
+        display: block;
+        outline: 0;
+        padding: 0;
+        z-index: 1046;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        position: absolute;
+        right: 0px;
+        top: 10px;
+        text-decoration: none;
+        text-align: center;
+        opacity: .65;
+
+        font-style: normal;
+        font-size: 28px;
+    }
+        
+    @media only screen and (max-width:992px){	
+        .modal {
+             width: 100%;
+             padding-top: 20%;
+        }
+        .modal img {
+            padding: 5px;
+            max-width: calc(100% - 20px);
+        }
+        .modal-close{
+            right: 10px;
+            top: 0px;
+        }
+    }
+
+    @keyframes zoom {
+        from {transform: scale(0.1)}
+        to {transform: scale(1)}
+    }
+</style>
+<body>
+            <div style='position:fixed;width:100%;height:100%;z-index: 99999999;background-color:rgb(0,0,0,0.65)' id='modal'>
+        <div class='modal' id='modalw'>
+            <div style="position: relative;">
+                <button title="Close (Esc)" type="button" class="modal-close" onclick="modalClose()">×</button>
+            </div>
+            <a href="" target="_blank" id="bgImgLink">
+                <img id='bgImg' />
+            </a>
+        </div>
+    </div>
+    
+    
+
+
+<div class="header">
+    <div class="top1">
+        <div class="logo"><a href="https://www.techscience.com/" title="www.techscience.com"><img src="https://www.techscience.com/static/images/logo.png?t=20230215" alt="logo"/></a></div>
+  
+    <div class="shui">
+        <div class="ss"><a href="https://www.techscience.com/results" title="Search"><i class="iconfont icon-sousuo"></i></a></div>
+    
+
+
+    <div class="btn1"><a href="https://ijs.tspsubmission.com/homepage?returnUrl=/submission/1">Submit</a></div>
+<div class="btn2">
+    <p>
+        <a href="https://ijs.tspsubmission.com/homepage?returnUrl=/submission/1"><img src="https://www.techscience.com/static/images/r1.png?t=20230215" alt="Login" width="15" height="15" /> Login</a>
+    </p>
+    <p>
+        <a href="https://ijs.tspsubmission.com/regist"><img src="https://www.techscience.com/static/images/r2.png?t=20230215" alt="Register" width="15" height="15" /> Register</a>
+    </p>
+</div>
+
+      </div>
+     
+       
+ 
+  </div>
+  
+  <div class="top2">  <div class="an"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+  
+       
+
+        <div class="nav">
+            <ul>
+                <li>
+                    <div class="y_j"><a href="https://www.techscience.com/" class="o_lm">Home</a></div>
+                </li>     
+                  
+                    <li>
+                        <div class="y_j">
+                            <a href="https://www.techscience.com/journals" class="o_lm">Academic Journals</a>
+                                                    </div>
+                                                    
+                    </li>  
+                      
+                    <li>
+                        <div class="y_j">
+                            <a href="https://www.techscience.com/info/books" class="o_lm">Books &amp; Monographs</a>
+                                                    </div>
+                                                    
+                    </li>  
+                      
+                    <li>
+                        <div class="y_j">
+                            <a href="https://www.techscience.com/conferences" class="o_lm">Conferences</a>
+                                                    </div>
+                                                    
+                    </li>  
+                      
+                    <li>
+                        <div class="y_j">
+                            <a href="https://www.techscience.com/ndetail/languageservice" class="o_lm">Language Service</a>
+                            <i class="iconfont icon-jiantou"></i>                        </div>
+                                                <div class="e_j">
+                        <ul>
+                              
+                            <li><a href="https://www.techscience.com/ndetail/editingservice">Standard Editing Service</a></li>
+                              
+                            <li><a href="https://www.techscience.com/ndetail/scientificediting">Expert Scientific Editing Service</a></li>
+                              
+                            <li><a href="https://www.techscience.com/ndetail/translationservice">Academic Translation Service</a></li>
+                                                    </ul>
+                        </div>
+                                                    
+                    </li>  
+                      
+                    <li>
+                        <div class="y_j">
+                            <a href="https://www.techscience.com/newslist" class="o_lm">News &amp; Announcements</a>
+                                                    </div>
+                                                    
+                    </li>  
+                      
+                    <li>
+                        <div class="y_j">
+                            <a href="https://www.techscience.com/ndetail/abt" class="o_lm">About</a>
+                                                    </div>
+                                                    
+                    </li>  
+                         
+            </ul>
+        </div>
+      
+ </div>
+  
+  </div>
+    <div class="jiange"></div>
+    <div class="hui2">
+        <div class="weizhi breadcrumb breadcrumbs avia-breadcrumbs">
+             
+                    <a href="https://www.techscience.com/">Home</a><span>/</span> 
+                     
+                    <a href="https://www.techscience.com/journals">Journals</a><span>/</span> 
+                     
+                    <a href="https://www.techscience.com/journal/cmc">CMC</a><span>/</span> 
+                     
+                    <a href="https://www.techscience.com/cmc/v83n3">Vol.83, No.3, 2025</a><span>/</span> 
+                     
+                    10.32604/cmc.2025.060297 
+
+                     
+        </div>
+    </div>
+    
+    <div class="nmain">
+        <div class="nlf">
+         
+            
+
+<div class="k1">
+<ul>
+  
+    <li><a href="https://www.techscience.com/journal/cmc"><img src="https://file.techscience.com/uploads/imgs/202507/e46d74fe50e298f5b40da10d61974dde.png?t=20220620" alt="Journal Logo" width="350" height="84" /></a></li>
+  
+     
+    <li><a href="https://ijs.tspsubmission.com/homepage?returnUrl=/submission/1"><img src="https://www.techscience.com/static/images/k10.png?t=20230215" alt="Submit a Paper icon" width="50" height="50" />Submit a Paper</a></li>
+    
+      
+    <li><a href="https://ijs.tspsubmission.com/journal/issues/propose"><img src="https://www.techscience.com/static/images/k11.png?t=20230215" alt="Propose a Special lssue icon" width="50" height="50" />Propose a Special lssue</a></li>
+           
+    <li><a href="https://ijs.tspsubmission.com/page/index.html#/volunteer/apply?jid=1" target="_blank">Review for CMC</a></li>
+   
+</ul>
+</div>
+
+
+            <div class="k2 gsfd">
+                <h2 class="nbt">Table of Content</h2>
+
+                <ul>
+                    <li><a href="#section_abstract">Abstract</a></li>
+                                        <li><a href="https://www.techscience.com/cmc/v83n3/60981/html#s1" target="_blank">Introduction</a></li>
+                                        <li><a href="https://www.techscience.com/cmc/v83n3/60981/html#s2" target="_blank">Related Works</a></li>
+                                        <li><a href="https://www.techscience.com/cmc/v83n3/60981/html#s3" target="_blank">Preliminaries</a></li>
+                                        <li><a href="https://www.techscience.com/cmc/v83n3/60981/html#s4" target="_blank">System Model</a></li>
+                                        <li><a href="https://www.techscience.com/cmc/v83n3/60981/html#s5" target="_blank">Safety Analysis and Performance Analysis</a></li>
+                                        <li><a href="https://www.techscience.com/cmc/v83n3/60981/html#s6" target="_blank">Conclusion</a></li>
+                                        <li><a href="https://www.techscience.com/cmc/v83n3/60981/html#sref" target="_blank">References</a></li>
+                                    </ul>
+
+            </div>
+
+
+        </div>
+
+        <div class="ncenter">
+             <article>
+            <div class="html-article-content xxjs">
+                <span itemprop="publisher" content="Tech Science Press"></span>
+                <span itemprop="url" content="https://www.techscience.com/cmc/v83n3/60981"></span>
+                <div class="bq1">
+                    <p class="hong"><img src="https://www.techscience.com/static/images/suob.png?t=20230215" alt="Open Access icon" width="126" height="198" />Open Access</p>
+       <p class="lv">ARTICLE</p>
+                
+                
+                 </div>
+                <div class="bq2">
+                    <div class="crossmark_svg_box">
+                                                      <!-- Start Crossmark Snippet v2.0 -->
+                            <script src="https://crossmark-cdn.crossref.org/widget/v2.0/widget.js"></script>
+                            <a data-target="crossmark" ><img class="crossmark_svg" alt="crossmark" src="https://crossmark-cdn.crossref.org/widget/v2.0/logos/CROSSMARK_Color_square.svg" width="50" /></a>
+                            <!-- End Crossmark Snippet -->
+                                                </div>
+                     
+                    <h1 class="title citation_title" itemprop="name">A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain</h1>
+                                   
+                    <p class="authors citation_author">
+                        Hongliang Tian<sup></sup>, Meiruo Li<sup>*</sup>                    </p>
+
+                    <p class="affiliation">
+                        College of Electric Power Engineering, Northeast Electric Power University, Jilin, 132012, China                    </p>
+
+                                            <p class="Corresponding">
+
+                        * Corresponding Author: Meiruo Li. Email: <img style="vertical-align: middle" alt="email" src="https://www.techscience.com/psh.php?mailname=2202200361@neepu.edu.cn" />  
+
+                        </p>
+                    
+                                            <p class="SpecialIssue">
+                        (This article belongs to the Special Issue: <a href="https://www.techscience.com/cmc/special_detail/Blockchain-empowered_IoT">Security and Privacy for Blockchain-empowered Internet of Things</a>)
+                        </p>
+                                            <p class="cite-info">
+                       <i>Computers, Materials &amp; Continua</i> <b>2025</b>, <i>83</i>(3), 5539-5559. <a href="https://doi.org/10.32604/cmc.2025.060297">https://doi.org/10.32604/cmc.2025.060297</a>                    </p>
+                    <p class="article-date">
+                         <strong>Received</strong> 29 October 2024; <strong>Accepted</strong> 02 April 2025;                         <strong>Issue published</strong> 19 May 2025                        
+                                            </p>
+                                        
+                                        
+                                        
+                                        
+                </div>
+                <div class="bq3">
+                    <div class="gengduo">
+                    <ul>
+                                                <li><a href="https://www.techscience.com/cmc/v83n3/60981/html"><img src="https://www.techscience.com/static/images/bb1.png?t=20230215" alt="View Full Text icon" />View Full Text</a></li>
+                                                                            <li><a href="https://www.techscience.com/cmc/v83n3/60981/pdf"><img src="https://www.techscience.com/static/images/bb2.png?t=20230215" alt="Download PDF icon" />Download PDF</a></li>
+                                                                        </ul>
+                    </div>
+
+                    <div class="fenxiang">
+                        <ul>
+                            <li style="display: none"><a href="javascript:addStar('60981')"><i class="iconfont icon-dianzan_kuai"></i></a></li>
+                            <li><a class="button" data-sharer="linkedin" data-title="CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain" data-url="https://www.techscience.com/cmc/v83n3/60981"><i class="iconfont icon-LinkedinIn"></i></a></li>
+                            <li><a class="button" data-sharer="facebook" data-title="CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain" data-url="https://www.techscience.com/cmc/v83n3/60981"><i class="iconfont icon-Facebook-copy"></i></a></li>
+                            <li><a class="button" data-sharer="twitter" data-title="CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain" data-url="https://www.techscience.com/cmc/v83n3/60981"><i class="iconfont icon-twitter"></i></a></li>
+                            <li><a onClick="javascript:document.getElementById('sasas').style.display='block';"><i class="iconfont icon-rizhi"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>   
+                
+                <div class="bq2">
+                                        
+                                            
+                     
+
+                                            
+                                            
+                      
+                        
+                </div>
+
+                <div class="bq4" id="section_abstract">
+
+                    <h2 class="xiaobt">Abstract</h2>
+
+                    The accelerated advancement of the Internet of Things (IoT) has generated substantial data, including sensitive and private information. Consequently, it is imperative to guarantee the security of data sharing. While facilitating fine-grained access control, Ciphertext Policy Attribute-Based Encryption (CP-ABE) can effectively ensure the confidentiality of shared data. Nevertheless, the conventional centralized CP-ABE scheme is plagued by the issues of key misuse, key escrow, and large computation, which will result in security risks. This paper suggests a lightweight IoT data security sharing scheme that integrates blockchain technology and CP-ABE to address the abovementioned issues. The integrity and traceability of shared data are guaranteed by the use of blockchain technology to store and verify access transactions. The encryption and decryption operations of the CP-ABE algorithm have been implemented using elliptic curve scalar multiplication to accommodate lightweight IoT devices, as opposed to the more arithmetic bilinear pairing found in the traditional CP-ABE algorithm. Additionally, a portion of the computation is delegated to the edge nodes to alleviate the computational burden on users. A distributed key management method is proposed to address the issues of key escrow and misuse. This method employs the edge blockchain to facilitate the storage and distribution of attribute private keys. Meanwhile, data security sharing is enhanced by combining off-chain and on-chain ciphertext storage. The security and performance analysis indicates that the proposed scheme is more efficient and secure.                    <hr />
+                    
+                                        
+                         
+                
+                                        <h2 class="xiaobt">Keywords</h2>
+                    <div itemprop="keywords">
+                        Edge blockchain; CP-ABE; data security sharing; IoT                    </div>
+                    <hr />
+                                         
+                                        
+                     
+                        
+                     
+                    
+                      
+					
+           <div id="cite_article_list">           
+            <h2 class="xiaobt">Cite This Article</h2>
+            <div>
+                <b>APA Style</b>
+                <div>Tian, H., Li, M. (2025). A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain. <i>Computers, Materials &amp; Continua</i>, <i>83</i><i>(3)</i>, 5539–5559. <a href="https://doi.org/10.32604/cmc.2025.060297">https://doi.org/10.32604/cmc.2025.060297</a></div>
+            </div>
+            <div>
+                <b>Vancouver Style</b>
+                <div>Tian H, Li M. A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain. Comput Mater Contin. 2025;83(3):5539–5559. <a href="https://doi.org/10.32604/cmc.2025.060297">https://doi.org/10.32604/cmc.2025.060297</a></div>
+            </div>
+            <div>
+                <b>IEEE Style</b>
+                <div>H. Tian and M. Li, “A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain,” <i>Comput. Mater. Contin.</i>, vol. 83, no. 3, pp. 5539–5559, 2025. <a href="https://doi.org/10.32604/cmc.2025.060297">https://doi.org/10.32604/cmc.2025.060297</a></div>
+            </div>
+          
+
+          <div class="citation-link cite_detail" style="padding-left:0">
+              <a href="https://www.techscience.com/cmc/v83n3/60981/bibtex" >BibTex</a>
+              <a href="https://www.techscience.com/cmc/v83n3/60981/enw" >EndNote</a>
+              <a href="https://www.techscience.com/cmc/v83n3/60981/ris" >RIS</a>
+            </div>
+          </div>
+    
+          </div><!-- comment -->
+      <br/>
+      <br/>
+      <br/>
+                    <div class="cite_detail" style='line-height: 14px; padding-left: 120px;'>
+                  <img src="https://www.techscience.com/static/images/cc.jpg?t=20230215" alt="cc" width="110" style="position:absolute; left: 0" /> Copyright © 2025 The Author(s). Published by Tech Science Press.<br/> This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a> , which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. 
+              </div>
+       
+        
+       
+
+
+
+
+<div id="trendmd-suggestions"></div>
+
+<script defer src='//js.trendmd.com/trendmd.min.js' data-trendmdconfig='{"journal_id":"74181", "element":"#trendmd-suggestions"}'></script>
+
+ 
+
+
+
+
+
+                
+                </div>   
+
+            </article>
+
+            </div>
+
+
+       
+        <div class="nlf2">
+            <script src="https://www.techscience.com/static/js/tan.js?t=20230215"></script>
+
+            <div class="nkslj">
+                <ul >
+                    <li class="dropdown">
+                        <a data-target="#" class="dropdown-toggle" data-test-id="download-button" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://www.techscience.com/static/images/gj2.png?t=20230215" alt="Downloads icon"  />Downloads
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="download-files-pdf action-link" href="https://www.techscience.com/cmc/v83n3/60981/pdf" >Full-Text PDF</a></li>
+                                                        <li><a class="download-files-readcube" href="https://www.techscience.com/cmc/v83n3/60981/html" >Full-Text HTML</a></li>
+                                                                                    <li><a class="download-files-epub" href="https://www.techscience.com/cmc/v83n3/60981/xml" >Full-Text XML</a></li>
+                                                          
+
+                        </ul>
+                    </li>                   
+                    <li class="dropdown">
+                        <a data-target="#" class="dropdown-toggle" data-test-id="citation-button" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://www.techscience.com/static/images/gj.png?t=20230215" alt="Citation Tools icon" />Citation Tools
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://www.techscience.com/cmc/v83n3/60981/bibtex"   >BibTex</a></li>
+                            <li><a href="https://www.techscience.com/cmc/v83n3/60981/enw" >EndNote</a></li>
+                            <li><a href="https://www.techscience.com/cmc/v83n3/60981/ris"  >RIS</a></li>
+                        </ul>
+                    </li>
+                    <div class="clear"></div>            
+                </ul>
+
+            </div>
+
+            <div class="shuliang">
+                <ul>
+                    <li>
+                        <h3>2362</h3>
+                        <p><i class="iconfont icon-yanjing1"></i>View</p>
+
+                    </li>
+                    <li>
+                        <h3>886</h3>
+                        <p><i class="iconfont icon-xiazai2"></i>Download</p>
+
+                    </li>
+                    <li style="display: none">
+                        <h3 id="star_60981">0</h3>
+                        <p><i class="iconfont icon-dianzan_kuai"></i>Like</p>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+           <div class="acade-j" style="margin-top: 15px; padding-left: 33%;">
+          
+<span class="__dimensions_badge_embed__" data-doi="10.32604/cmc.2025.060297"   data-hide-zero-citations="true" data-style="small_circle"></span><script async="true" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+      </div>
+                        <div class="k2">
+                <h2 class="nbt">Related articles</h2>
+                <div class="weizhang">
+                    <ul>
+                           
+                        <li>
+                            <p>
+                                <a href="https://www.techscience.com/cmc/v74n1/49763" title="Stress Detector Supported Galvanic Skin Response System with IoT and LabVIEW GUI">
+                                    Stress Detector Supported Galvanic Skin Response System with IoT and LabVIEW GUI                                </a> 
+                            </p>
+                            <span title="Rajesh Singh, Anita Gehlot, Ritika Saxena, Khalid Alsubhi, Divya Anand, Irene Delgado Noya, Shaik Vaseem Akram, Sushabhan Choudhury">Rajesh Singh, Anita Gehlot, Ritika...</span>
+                        </li>
+                              
+                        <li>
+                            <p>
+                                <a href="https://www.techscience.com/cmc/v74n1/49777" title="Privacy Data Management Mechanism Based on Blockchain and Federated Learning">
+                                    Privacy Data Management Mechanism Based on Blockchain and Federated Learning                                </a> 
+                            </p>
+                            <span title="Mingsen Mo, Shan Ji, Xiaowan Wang, Ghulam Mohiuddin, Yongjun Ren">Mingsen Mo, Shan Ji, Xiaowan Wang,...</span>
+                        </li>
+                              
+                        <li>
+                            <p>
+                                <a href="https://www.techscience.com/cmc/v74n1/49802" title="Augmenting IoT Intrusion Detection System Performance Using Deep Neural Network">
+                                    Augmenting IoT Intrusion Detection System Performance Using Deep Neural Network                                </a> 
+                            </p>
+                            <span title="Nasir Sayed, Muhammad Shoaib, Waqas Ahmed, Sultan Noman Qasem, Abdullah M. Albarrak, Faisal Saeed">Nasir Sayed, Muhammad Shoaib,...</span>
+                        </li>
+                              
+                        <li>
+                            <p>
+                                <a href="https://www.techscience.com/cmc/v74n1/49806" title="Smart Home IoT Privacy and Security Preservation via Machine Learning Techniques">
+                                    Smart Home IoT Privacy and Security Preservation via Machine Learning Techniques                                </a> 
+                            </p>
+                            <span title="Mubarak Almutairi">Mubarak Almutairi</span>
+                        </li>
+                              
+                        <li>
+                            <p>
+                                <a href="https://www.techscience.com/cmc/v74n1/49832" title="Intrusion Detection Based on Bidirectional Long Short-Term Memory with Attention Mechanism">
+                                    Intrusion Detection Based on Bidirectional Long Short-Term Memory with Attention Mechanism                                </a> 
+                            </p>
+                            <span title="Yongjie Yang, Shanshan Tu, Raja Hashim Ali, Hisham Alasmary, Muhammad Waqas, Muhammad Nouman Amjad">Yongjie Yang, Shanshan Tu, Raja...</span>
+                        </li>
+                                               </ul>
+                </div>
+            </div>
+                                </div>
+        <div class="clear"></div>
+    </div>
+        <div class="clear"></div>
+
+
+    <!-- footer start -->
+<div class="footer wow fadeIn" >
+    <!-- footer-container -->
+    <div class="foot1">
+        <div class="dlink">
+            <ul>
+                                    <li><h3>Further Information</h3>
+                         
+                            <p><a href="https://www.techscience.com/ndetail/abt"  title="About Tech Science Press">About Tech Science Press</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/openaccess"  title="Open Access Policy">Open Access Policy</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/apc"  title="Article Processing Charges">Article Processing Charges</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/specialissue"  title="Special Issue Policy">Special Issue Policy</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/494"  title="Generative AI Policies for Journals">Generative AI Policies for Journals</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/researchtopic"  title="Research Topic Policy">Research Topic Policy</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/terms"  title="Terms and Conditions">Terms and Conditions</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/privacy"  title="Privacy Policy">Privacy Policy</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/advertising"  title="Advertising Policy">Advertising Policy</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/contact"  title="Contact">Contact</a></p>
+                                                </li>
+                                        <li><h3>Guidelines</h3>
+                         
+                            <p><a href="https://www.techscience.com/ndetail/editors"  title="For Editors">For Editors</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/reviewers"  title="For Reviewers">For Reviewers</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/authors"  title="For Authors">For Authors</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/organizers"  title="For Conference Organizers">For Conference Organizers</a></p>
+                             
+                            <p><a href="https://www.techscience.com/ndetail/subscribers"  title="For Subscribers">For Subscribers</a></p>
+                                                </li>
+                                    <li>
+                    <h3>Follow Us</h3>    
+                    <p><a href="https://www.linkedin.com/company/tech-science-press-2022/"  title="LinkedIn">LinkedIn</a></p>
+                    <p><a href="https://twitter.com/TechScience_TSP"  title="LinkedIn">Twitter</a></p>
+                </li>
+                <li>
+                    <h3>Join Us</h3>    
+                    <p><a href="https://www.techscience.com/join-as-editor" >Join TSP editorial community</a></p>
+                </li>
+                <li class="dguanzhu1">
+                    <h3>Contact Us</h3>    
+                    <div>
+                        <a href="https://www.techscience.com/ndetail/contact"><i class="iconfont icon-youxiang"></i></a>
+                        <a href="https://www.techscience.com/ndetail/contact"><i class="iconfont icon-w_dizhi-"></i></a>
+                        <a href="javascript:showWhatsApp();"><i class="iconfont icon-whats-app"></i></a>
+                    </div>
+                </li>
+            </ul>       
+        </div>        
+        
+    </div>
+    <div id="whats-app" class="zx_bm" style="display: none;">
+        <div class="bm_bj"></div>
+        <div class="b_m" style="padding: 30px 30px; max-width: 280px"> 
+            <h3>WhatsApp:</h3>
+            <div class="fuzhi">
+                +1（702）9272320
+            </div>
+            <a href="javascript:hideWhatsApp();" style="float:right; position:absolute; right:10px; top:10px;">
+                <img src="https://www.techscience.com/static/images/fixe_esc1.png?t=20230215" width="25" height="25">
+            </a> 
+        </div>
+    </div>
+
+    <div class="foot2"> 
+           <div>  
+        Copyright© 2026 Tech Science Press <br/>
+© 1997-2026 TSP (Henderson, USA) unless otherwise stated    </div>
+    <span id="siteseal" style="margin-left: 15px;margin-top: 7px; display: block;"><script async="true" type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=NyuRzmGl5GM74T5fwbHA1hxL09vRSUVWcF3oFoQPks7JU48TJ739mUEZzqqm"></script></span>
+</div></div>
+<!-- footer end -->
+
+<script src="https://www.techscience.com/static/js/iconfont.js?t=20230215"></script>
+<script src="https://www.techscience.com/static/js/jquery-1.8.3.min.js?t=20230215" type="text/javascript" ></script>
+<script src="https://www.techscience.com/static/js/main.js?t=20230215" type="text/javascript" ></script>
+<script src="https://www.techscience.com/static/js/detail.js?t=20230215" type="text/javascript" ></script>
+<script src="https://www.techscience.com/static/js/wow.min.js?t=20230215"></script>
+
+<script>
+    new WOW().init();
+    
+    function showWhatsApp() {
+        document.getElementById('whats-app').style.display = 'block';
+    }
+    function hideWhatsApp() {
+        document.getElementById('whats-app').style.display = 'none';
+    }
+</script>
+<link rel="stylesheet" href="https://www.techscience.com/static/css/swiper.min.css?t=20230215" />
+<!-- Google tag (gtag.js) -->
+<script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-PD3QTEE3HW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PD3QTEE3HW');
+</script>
+<script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
+<script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="hGjI_wnNp25nVw" async></script>
+
+    
+<div class="sddh">
+    <ul>
+        <li><a href="https://www.techscience.com/"><i class="iconfont icon-shouye"></i>Home</a></li>
+        <li><a href="https://ijs.tspsubmission.com/homepage?returnUrl=/submission/1"><i class="iconfont icon-tijiao"></i>Submit</a></li>
+        <li><a href="https://ijs.tspsubmission.com/homepage?returnUrl=/submission/1"><i class="iconfont icon-touxiang"></i>Login</a></li>
+        <li><a href="https://ijs.tspsubmission.com/regist"><i class="iconfont icon-zhuce"></i>Register</a></li>
+    </ul>
+</div>
+
+<div id="sasas" class="zx_bm">
+    <div class="bm_bj"></div>
+    <div class="b_m"> 
+        <h3>Share Link</h3>
+        <div class="tguanzhu">
+            <ul>
+                <li>
+                    <a class="button" data-sharer="email" data-title="CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain" data-url="https://www.techscience.com/cmc/v83n3/60981" data-subject="Hey! Check out that URL" data-to="office@techscience.com">
+                        <i class="iconfont icon-youxiang"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" data-sharer="twitter" data-title="CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain" data-url="https://www.techscience.com/cmc/v83n3/60981">
+                        <i class="iconfont icon-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" data-sharer="linkedin" data-title="CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain" data-url="https://www.techscience.com/cmc/v83n3/60981">
+                        <i class="iconfont icon-LinkedinIn"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" data-sharer="facebook" data-title="CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain" data-url="https://www.techscience.com/cmc/v83n3/60981" >
+                        <i class="iconfont icon-Facebook-copy"></i>
+                    </a>
+                </li>
+
+                    <!--<li><a href="javascript:document.getElementById('sasas1').style.display = 'block';"><i class="iconfont icon-weixin1"></i></a></li>-->
+            </ul>
+        </div>
+        <div class="fuzhi">
+            <input id="foo" type="text" value="https://www.techscience.com/cmc/v83n3/60981" class="fz1" />
+            <button class="fz2" data-clipboard-action="copy" data-clipboard-target="#foo">Copy</button> 
+            <!-- 2. Include library -->
+            <script src="https://www.techscience.com/static/js/clipboard.min.js?t=20230215"></script>
+        </div>
+
+        <a href="javascript:hideShareLinked()" style="float:right; position:absolute; right:10px; top:10px;" >
+            <img src="https://www.techscience.com/static/images/fixe_esc1.png?t=20230215" width="25" height="25" />
+        </a> 
+    </div>
+</div>
+<div class="toTop" id="roll_top"><i class="iconfont icon-dingbu1"></i></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*返回顶部*/
+        $('#roll_top').hide();
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#roll_top').fadeIn(400);//当滑动栏向下滑动时，按钮渐现的时间
+            } else {
+                $('#roll_top').fadeOut(0);//当页面回到顶部第一屏时，按钮渐隐的时间
+            }
+        });
+        $('#roll_top').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 300);//返回顶部所用的时间 返回顶部也可调用goto()函数
+        });
+    });
+    function goto(selector) {
+        $.scrollTo(selector, 1000);
+    }
+
+    $(function () {
+        var clipboard = new Clipboard('.fz2');
+
+        clipboard.on('success', function (e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function (e) {
+            console.log(e);
+        });
+                
+        $(".nlf .nbt").click(function () {
+            $(this).toggleClass("currentDd").siblings(".nbt").removeClass("currentDd")
+            $(this).toggleClass("currentDt").siblings(".nbt").removeClass("currentDt")
+            // 修改数字控制速度， slideUp(500)控制卷起速度
+            $(this).next(".k2 ul").slideToggle(500).siblings(".k2 ul").slideUp(500),
+                    $(this).next(".k2 .news ").slideToggle(500).siblings(".k2 .news ").slideUp(500),
+                    $(this).next(".k2 .weizhang ").slideToggle(500).siblings(".k2 .weizhang ").slideUp(500),
+                    $(this).next(".k3 .gdg").slideToggle(500).siblings(".k3 .gdg").slideUp(500);
+        })
+    })
+</script>    
+
+        <script>
+   var modal = document.getElementById('modal');
+   var bgImg = document.getElementById('bgImg');
+   var bgImgLink = document.getElementById('bgImgLink');
+
+  function showBgImg(e) {
+       modal.style.display = 'block';
+       bgImg.src = e.src;
+       bgImgLink.href = e.src;
+   }
+
+   modal.onclick = function() {
+       modal.style.display = 'none';
+   }
+   
+   bgImg.onclick = function() {
+       event.stopPropagation();    // 上层加上这行代码，可以阻止点击穿透
+   }
+   
+   function modalClose(){
+       modal.style.display = 'none';
+   }
+    </script>
+    <script type="text/javascript">
+  $(window).scroll(function(){
+    var top = $(window).scrollTop();
+	var hed = $(".gsfd").innerHeight();
+    if(top>hed){
+      $(".gsfd").addClass("on");
+    }else{
+      $(".gsfd").removeClass("on");
+    };
+  });
+</script>
+
+
+    <script>
+
+    
+    function loadCitationList(id) {
+        $('#cite_article_msg').html('loading...')
+        req_html( 'https://www.techscience.com/tg/home/journal/citation_list',{id: id}, function (data) {
+            $('#cite_article_msg').html('')
+            $("#citation_detail").html(data); 
+        }, 'get')
+    }
+    
+    /*
+    * 实现点赞功能
+    * @param    资源id
+    * */
+    function addStar(id){
+        var num =  $('#star_'+id).html();
+        var cookieKey = "star_" + id
+        var star=getCookieById(cookieKey,1);
+        if(star==""){
+            addCookieById(cookieKey,1,365);
+            //后台点赞操作
+            req_html( 'https://www.techscience.com/tg/home/journal/addStar',{id: id, num: num}, function (data) {
+                $('#star_'+id).html(data.data)
+            }, 'get','json')
+        }else{
+            alert("Already “LIKED” it! Thanks for loving this article!");
+        }
+    }
+    
+    $(document).ready(function(){
+            // jQuery加载后，将toggleIssueAccordion升级为带滑动动画的版本
+            window.toggleIssueAccordion = function (dome) {
+                var $ej = $(dome).siblings(".nav_div_ej");
+                var isHidden = $ej.is(":hidden");
+                $(".nav_div_ej").slideUp();
+                $(".nav_div_dome").removeClass("on");
+                if (isHidden) {
+                    $ej.slideDown();
+                    $(dome).addClass("on");
+                }
+            };
+            
+            $("#cite_btn").click(function(){
+               $('#more_cite').toggle('slow');
+            });
+            -
+            $("#article_information").click(function(){
+                
+              if(   $(this).find('div').hasClass('rotate90') ){
+                  $(this).find('div').removeClass('rotate90');
+                  $('#affiliation').hide();
+              }else{
+                  $(this).find('div').addClass('rotate90');
+                  $('#affiliation').show();   
+              }
+            });  
+           
+           
+
+              });
+ 
+
+
+</script>
+</body>
+</html>

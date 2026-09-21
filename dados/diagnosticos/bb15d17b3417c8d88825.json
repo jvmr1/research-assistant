@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:34:22",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain",
+    "perfil_anterior": {
+      "problema": "",
+      "solucao": "",
+      "avaliacao": "",
+      "limites": "",
+      "possibilidades": ""
+    },
+    "pagina": null,
+    "texto": "CMC | A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain × Submit Login Register Home Academic Journals Books & Monographs Conferences Language Service Standard Editing Service Expert Scientific Editing Service Academic Translation Service News & Announcements About Home / Journals / CMC / Vol.83, No.3, 2025 / 10.32604/cmc.2025.060297 Submit a Paper Propose a Special lssue Review for CMC Table of Content Abstract Introduction Related Works Preliminaries System Model Safety Analysis and Performance Analysis Conclusion References Open Access ARTICLE A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain Hongliang Tian , Meiruo Li * College of Electric Power Engineering, Northeast Electric Power University, Jilin, 132012, China * Corresponding Author: Meiruo Li. Email: (This article belongs to the Special Issue: Security and Privacy for Blockchain-empowered Internet of Things ) Computers, Materials & Continua 2025 , 83 (3), 5539-5559. https://doi.org/10.32604/cmc.2025.060297 Received 29 October 2024; Accepted 02 April 2025; Issue published 19 May 2025 View Full Text Download PDF Abstract The accelerated advancement of the Internet of Things (IoT) has generated substantial data, including sensitive and private information. Consequently, it is imperative to guarantee the security of data sharing. While facilitating fine-grained access control, Ciphertext Policy Attribute-Based Encryption (CP-ABE) can effectively ensure the confidentiality of shared data. Nevertheless, the conventional centralized CP-ABE scheme is plagued by the issues of key misuse, key escrow, and large computation, which will result in security risks. This paper suggests a lightweight IoT data security sharing scheme that integrates blockchain technology and CP-ABE to address the abovementioned issues. The integrity and traceability of shared data are guaranteed by the use of blockchain technology to store and verify access transactions. The encryption and decryption operations of the CP-ABE algorithm have been implemented using elliptic curve scalar multiplication to accommodate lightweight IoT devices, as opposed to the more arithmetic bilinear pairing found in the traditional CP-ABE algorithm. Additionally, a portion of the computation is delegated to the edge nodes to alleviate the computational burden on users. A distributed key management method is proposed to address the issues of key escrow and misuse. This method employs the edge blockchain to facilitate the storage and distribution of attribute private keys. Meanwhile, data security sharing is enhanced by combining off-chain and on-chain ciphertext storage. The security and performance analysis indicates that the proposed scheme is more efficient and secure. Keywords Edge blockchain; CP-ABE; data security sharing; IoT Cite This Article APA Style Tian, H., Li, M. (2025). A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain. Computers, Materials & Continua , 83 (3) , 5539–5559. https://doi.org/10.32604/cmc.2025.060297 Vancouver Style Tian H, Li M. A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain. Comput Mater Contin. 2025;83(3):5539–5559. https://doi.org/10.32604/cmc.2025.060297 IEEE Style H. Tian and M. Li, “A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain,” Comput. Mater. Contin. , vol. 83, no. 3, pp. 5539–5559, 2025. https://doi.org/10.32604/cmc.2025.060297 BibTex EndNote RIS Copyright © 2025 The Author(s). Published by Tech Science Press. This work is licensed under a Creative Commons Attribution 4.0 International License , which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. Downloads Full-Text PDF Full-Text HTML Full-Text XML Citation Tools BibTex EndNote RIS 2362 View 886 Download 0 Like Related articles Stress Detector Supported Galvanic Skin Response System with IoT and LabVIEW GUI Rajesh Singh, Anita Gehlot, Ritika... Privacy Data Management Mechanism Based on Blockchain and Federated Learning Mingsen Mo, Shan Ji, Xiaowan Wang,... Augmenting IoT Intrusion Detection System Performance Using Deep Neural Network Nasir Sayed, Muhammad Shoaib,... Smart Home IoT Privacy and Security Preservation via Machine Learning Techniques Mubarak Almutairi Intrusion Detection Based on Bidirectional Long Short-Term Memory with Attention Mechanism Yongjie Yang, Shanshan Tu, Raja... Further Information About Tech Science Press Open Access Policy Article Processing Charges Special Issue Policy Generative AI Policies for Journals Research Topic Policy Terms and Conditions Privacy Policy Advertising Policy Contact Guidelines For Editors For Reviewers For Authors For Conference Organizers For Subscribers Follow Us LinkedIn Twitter Join Us Join TSP editorial community Contact Us WhatsApp: +1（702）9272320 Copyright© 2026 Tech Science Press © 1997-2026 TSP (Henderson, USA) unless otherwise stated Home Submit Login Register Share Link Copy",
+    "tipo": "html"
+  },
+  "resposta": {
+    "resumo": "O artigo propõe um esquema leve de compartilhamento seguro de dados IoT que combina CP-ABE otimizado por curvas elípticas e blockchain, delegando parte do processamento a nós de borda e usando gerenciamento distribuído de chaves para evitar escrow e uso indevido, demonstrando maior eficiência e segurança.",
+    "perfil": {
+      "problema": "issues of key misuse, key escrow, and large computation",
+      "solucao": "lightweight IoT data security sharing scheme integrating blockchain and CP-ABE",
+      "avaliacao": "more efficient and secure",
+      "limites": "Não informado",
+      "possibilidades": "Avaliar o esquema em ambientes de cidades inteligentes reais; integrar identidade auto-soberana (SSI) para gerenciamento de credenciais; testar a escalabilidade com milhares de dispositivos IoT; combinar com criptografia baseada em atributos para assinatura de dados; investigar mecanismos de revogação distribuída entre organizações."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O esquema centralizado CP-ABE apresenta problemas de uso indevido de chaves, escrow e alto custo computacional.",
+        "citacao": "conventional centralized CP-ABE scheme is plagued by the issues of key misuse, key escrow, and large computation"
+      },
+      {
+        "afirmacao": "A análise de segurança e desempenho indica que o esquema proposto é mais eficiente e seguro.",
+        "citacao": "security and performance analysis indicates that the proposed scheme is more efficient and secure"
+      }
+    ],
+    "interpretacao": "A proposta busca superar limitações de CP-ABE tradicional ao usar criptografia baseada em curvas elípticas e delegar tarefas a edge nodes, enquanto a blockchain garante rastreabilidade e gerenciamento de chaves distribuído, resultando em menor carga para dispositivos IoT.",
+    "duvidas": "Quais são os custos de armazenamento on‑chain versus off‑chain em cenários de grande volume de dados? Como o esquema lida com revogação de atributos em tempo real?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:35:25"
+}

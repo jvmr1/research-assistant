@@ -1,0 +1,30 @@
+{
+  "resumo": "O artigo apresenta um levantamento abrangente sobre controle de acesso baseado em blockchain para registros eletrônicos de saúde (EHR), destacando que sistemas de e‑health tradicionais apresentam riscos de privacidade como acessos não autorizados. Propõe a integração de blockchain com técnicas de preservação de privacidade e contratos inteligentes para melhorar transparência, integridade e disponibilidade, além de automatizar autenticação e controle de acesso. A revisão inclui 45 trabalhos selecionados, analisa plataformas, protocolos de consenso e técnicas criptográficas, e discute estudos de caso reais, apontando desafios e direções futuras.",
+  "perfil": {
+    "problema": "Traditional e-health systems facilitate EHR sharing among healthcare providers but also introduce significant privacy risks, such as unauthorized access and data breaches.",
+    "solucao": "Blockchain, when integrated with privacy‑preserving techniques, enhances transparency, integrity, and availability in EHR management.",
+    "avaliacao": "The survey includes 45 papers and presents real‑world case studies illustrating strengths and challenges.",
+    "limites": "Não informado.",
+    "possibilidades": "Explorar a aplicação dos frameworks de controle de acesso baseados em blockchain a ambientes de IoT em cidades inteligentes; investigar a integração de identidade auto‑soberana (SSI) e credenciais verificáveis para interoperabilidade entre organizações de saúde; avaliar o desempenho de técnicas de criptografia baseada em atributos (ABE) em cenários de edge computing; propor métricas de privacidade e escalabilidade específicas para sistemas de saúde distribuídos."
+  },
+  "evidencias": [],
+  "interpretacao": "O estudo demonstra que a combinação de blockchain com técnicas criptográficas pode mitigar os principais riscos de privacidade nos sistemas de saúde eletrônicos, oferecendo um caminho promissor para controle de acesso automatizado e auditável.",
+  "duvidas": "Quais são as limitações práticas de escalabilidade e latência ao aplicar contratos inteligentes em ambientes de saúde com alta taxa de transações? Como os requisitos regulatórios (ex.: GDPR, HIPAA) influenciam a escolha de plataformas permissionadas versus permissionless?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "731872fe2d0aa6d0a3c9",
+  "artigo": "Tawfik_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Traditional e-health systems facilitate EHR sharing among healthcare providers but also introduce significant privacy risks, such as unauthorized access and data breaches.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a aplicação dos frameworks de controle de acesso baseados em blockchain a ambientes de IoT em cidades inteligentes; investigar a integração de identidade auto‑soberana (SSI) e credenciais verificáveis para interoperabilidade entre organizações de saúde; avaliar o desempenho de técnicas de criptografia baseada em atributos (ABE) em cenários de edge computing; propor métricas de privacidade e escalabilidade específicas para sistemas de saúde distribuídos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "36f23c87078e4a5a079a"
+  }
+}

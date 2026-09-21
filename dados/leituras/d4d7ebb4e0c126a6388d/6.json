@@ -1,0 +1,42 @@
+{
+  "resumo": "O trecho apresenta o índice de figuras da dissertação, destacando fluxos de ABE, contratos inteligentes, etapas da revisão de literatura, diagramas de componentes e métricas de desempenho, indicando foco em arquitetura baseada em criptografia e blockchain para ambientes IIoT.",
+  "perfil": {
+    "problema": "secure exchange of data in distributed IIoT environments",
+    "solucao": "smart contracts on the Hyperledger Besu blockchain",
+    "avaliacao": "The developed architecture reduces the dependence on unilateral control over access rules",
+    "limites": "Traditional solutions tend to depend on centralized intermediaries",
+    "possibilidades": [
+      "Explorar a integração do fluxo de ABE (Figura 2.1) com políticas dinâmicas de SSI para ajuste em tempo real de permissões de cidadãos.",
+      "Utilizar o diagrama de componentes (Figura 5.1) para inserir módulos de verifiable credentials e DIDs, ampliando a interoperabilidade entre serviços de cidades inteligentes.",
+      "Aproveitar os resultados de desempenho (Figuras 6.1‑6.5) para otimizar o overhead de payloads ABE em dispositivos IoT de baixa capacidade.",
+      "Desenvolver mecanismos de revogação automática baseados no Smart contract Flow (Figura 2.2) que atualizem listas de revogação distribuídas em caso de perda de credenciais."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "2.1 Attribute-Based Encryption Workflow",
+      "afirmacao": "O trabalho inclui um fluxo de criptografia baseado em atributos."
+    },
+    {
+      "citacao": "6.1 Encryption time by message",
+      "afirmacao": "São avaliados tempos de criptografia e overhead de payloads protegidos por ABE."
+    }
+  ],
+  "interpretacao": "A presença de figuras detalhando ABE, contratos inteligentes, diagramas de arquitetura e métricas de desempenho evidencia que a dissertação investiga profundamente a viabilidade técnica de combinar criptografia avançada e blockchain para garantir segurança, privacidade e eficiência em ambientes IIoT de cidades inteligentes.",
+  "duvidas": "Como o fluxo de ABE será conectado ao modelo de identidade auto‑soberana (SSI) proposto? O estudo aborda mecanismos de recuperação de credenciais perdidas dentro do Smart contract Flow? Quais são os critérios para escolher a complexidade das políticas de acesso nas avaliações de overhead?",
+  "avisos": [],
+  "id": "c9e2ca17df5f5709c61c",
+  "artigo": "Exemplo_60479560a08f3b4cd724",
+  "pagina": 7,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "secure exchange of data in distributed IIoT environments",
+    "solucao": "smart contracts on the Hyperledger Besu blockchain",
+    "avaliacao": "The developed architecture reduces the dependence on unilateral control over access rules",
+    "limites": "Traditional solutions tend to depend on centralized intermediaries",
+    "possibilidades": "Explorar a integração do fluxo de ABE (Figura 2.1) com políticas dinâmicas de SSI para ajuste em tempo real de permissões de cidadãos.; Utilizar o diagrama de componentes (Figura 5.1) para inserir módulos de verifiable credentials e DIDs, ampliando a interoperabilidade entre serviços de cidades inteligentes.; Aproveitar os resultados de desempenho (Figuras 6.1‑6.5) para otimizar o overhead de payloads ABE em dispositivos IoT de baixa capacidade.; Desenvolver mecanismos de revogação automática baseados no Smart contract Flow (Figura 2.2) que atualizem listas de revogação distribuídas em caso de",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "d54bdcaf66d25b3bc5ea"
+  },
+  "reaproveitada_de": "ea057871f53fa1fe1709"
+}

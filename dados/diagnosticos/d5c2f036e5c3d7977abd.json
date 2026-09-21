@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:05:11",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control",
+    "perfil_anterior": {
+      "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+      "solucao": "addressed by YouGovern through its use of BSC, role-based smart contracts, and hybrid storage",
+      "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+      "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+      "possibilidades": "Avaliar a usabilidade e segurança do fluxo de consentimento baseado em solicitações de acesso via smart contracts em ambientes de cidades inteligentes;; Integrar controle de acesso baseado em atributos (ABE) ao modelo de solicitação de dados armazenados no IPFS;; Testar a escalabilidade do armazenamento híbrido (on‑chain + IPFS) com múltiplos usuários simultâneos;; Explorar revogação automática de permissões usando ZKP quando o usuário altera seu endereço MetaMask;; Investigar a interoperabilidade do modelo de autoridade (endereços verificados) entre diferentes organizações públicas."
+    },
+    "pagina": 13,
+    "texto": "Appl. Sci. 2025, 15, 6437 13 of 26\nrules. For example, a university acting as an authority can verify a graduate’s credentials\nby calling the verification function, which cross-checks the DID, credential hash, and\nissuer identity.\n4. Implementation\nThe YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart\ncontracts to establish a decentralized framework for self-sovereign identity management.\nThis section details the technical implementation, including the development environment\nsetup, smart contract deployment, and user interaction interfaces.\nFigure 7 illustrates the overall architecture of YouGovern. The system comprises a web-\nbased client, a suite of smart contracts deployed on BSC, a DID registry, and decentralized\nstorage integrated with IPFS and Web3.Storage. User interactions—such as identity registra-\ntion, credential issuance, or access revocation—are initiated from the browser interface and\nsigned via MetaMask. Transactions are recorded on the blockchain, where smart contracts\nenforce permission rules and update the state of DID records. Metadata and verifiable\ncredentials are serialized in JSON format and stored off-chain using IPFS, with content-\naddressable hashes linked on-chain. API interactions follow a RESTful schema, allowing\nstandard HTTP calls to query DID status, retrieve credentials, or submit identity updates.\nFigure 7. YouGovern architecture.\n4.1. Development Environment\nYouGovern was developed using a robust technology stack to support the creation,\ntesting, and deployment of smart contracts. The main tools include:\n• Truffle Suite: Used for compiling, migrating, and testing smart contracts. It in-\ntegrates with Ganache, a personal Ethereum blockchain that simulates various\nnetwork conditions.\n• Solidity: The programming language used to implement smart contracts on BSC,\nvalued for its security features and suitability for contract-based logic.\n• Node.js and npm: Serve as the runtime environment and package manager, respec-\ntively, facilitating the management of project dependencies.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O YouGovern foi implementado na Binance Smart Chain usando contratos inteligentes, registro de DIDs, armazenamento descentralizado via IPFS/Web3.Storage e interface web com MetaMask; as interações são expostas por API RESTful e o ambiente de desenvolvimento inclui Truffle Suite, Solidity e Node.js.",
+    "perfil": {
+      "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+      "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": [
+        "Avaliar desempenho de consultas RESTful em cenários de alta concorrência;",
+        "Integrar controle de acesso baseado em atributos (ABE) nas políticas dos smart contracts;",
+        "Testar interoperabilidade com outras blockchains públicas além da BSC;",
+        "Implementar revogação automática de permissões usando provas de conhecimento zero (ZKP);",
+        "Expandir suporte a agentes/guardians para gestão delegada de identidades."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "User interactions—such as identity registration, credential issuance, or access revocation—are initiated from the browser interface and signed via MetaMask.",
+        "citacao": "User interactions—such as identity registration, credential issuance, or access revocation—are initiated from the browser interface and signed via MetaMask."
+      },
+      {
+        "afirmacao": "Metadata and verifiable credentials are serialized in JSON format and stored off-chain using IPFS, with content-addressable hashes linked on-chain.",
+        "citacao": "Metadata and verifiable credentials are serialized in JSON format and stored off-chain using IPFS, with content-addressable hashes linked on-chain."
+      }
+    ],
+    "interpretacao": "O trecho detalha a arquitetura e o ambiente de desenvolvimento do YouGovern, evidenciando a combinação de armazenamento on‑chain e off‑chain e a exposição de APIs RESTful para gerenciamento de DIDs.",
+    "duvidas": "Como são garantidas as propriedades de privacidade dos dados armazenados no IPFS? Qual o impacto de usar Ganache para simular condições de rede na avaliação de desempenho real? Existe suporte a múltiplas cadeias além da BSC?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:05:57"
+}

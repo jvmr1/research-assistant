@@ -1,0 +1,34 @@
+{
+  "resumo": "O artigo propõe um framework que combina Deep Neural Networks para detecção de anomalias e blockchain privado com smart contracts para garantir integridade, transparência e respostas automáticas a ameaças em ambientes IoT, alcançando 99,18% de acurácia e 15,42% de falsos positivos.",
+  "perfil": {
+    "problema": "The rapid adoption of Internet of Things (IoT) devices has significantly increased cybersecurity risks, making them vulnerable to anomalies, attacks, and unauthorized access.",
+    "solucao": "Our proposed framework employs DNNs for intelligent anomaly detection... integrates Blockchain technology into the IoT ecosystem to ensure data integrity, transparency, and decentralized security.",
+    "avaliacao": "With a low false-positive rate of 15.42% and a strong detection accuracy of 99.18%... reaction time efficiency (95.25%) and general system scalability (94.96%).",
+    "limites": "Não informado",
+    "possibilidades": "Explorar a aplicação do modelo em cenários de cidades inteligentes, integrar identidade auto‑soberana (SSI) para autenticação descentralizada, avaliar o uso de criptografia baseada em atributos (ABE) para controle de acesso granular, e testar a abordagem em ambientes de edge computing com recursos limitados."
+  },
+  "evidencias": [
+    {
+      "citacao": "With a low false-positive rate of 15.42% and a strong detection accuracy of 99.18%",
+      "afirmacao": "O modelo DNN atinge taxa de falsos positivos de 15,42% e precisão de detecção de 99,18%."
+    }
+  ],
+  "interpretacao": "A combinação de DNNs e blockchain oferece uma solução adaptativa que supera limitações de IDS baseados em regras, reduz falsos positivos e garante a integridade dos registros IoT, potencialmente viável para infraestruturas críticas de cidades inteligentes.",
+  "duvidas": "Como o overhead de blockchain privado e smart contracts afeta a latência em redes IoT massivas? Qual o custo energético da execução contínua de DNNs em dispositivos de borda? Como garantir a privacidade dos dados sensíveis ao registrar informações na cadeia?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "6a8f0b952a23d59feaeb",
+  "artigo": "Sathyabama_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "The rapid adoption of Internet of Things (IoT) devices has significantly increased cybersecurity risks, making them vulnerable to anomalies, attacks, and unauthorized access.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a aplicação do modelo em cenários de cidades inteligentes, integrar identidade auto‑soberana (SSI) para autenticação descentralizada, avaliar o uso de criptografia baseada em atributos (ABE) para controle de acesso granular, e testar a abordagem em ambientes de edge computing com recursos limitados.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "40196a11e46ff300b5bb"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:26:44",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)",
+    "perfil_anterior": {
+      "problema": "issue of authentication in meta-computing-enabled IIoT",
+      "solucao": "sliding window accumulator structure",
+      "avaliacao": "the verifier time remains constant at 0.003 seconds across all tree heights.",
+      "limites": "the size of the public parameters for the Merkle SNARK scheme reaches approximately 50GB, and the parameter generation process requires over 30 hours.",
+      "possibilidades": "Avaliar desempenho em ambientes edge/fog com milhares de dispositivos; integrar provas de conhecimento zero‑knowledge para revogação distribuída; adaptar dinamicamente o tamanho da janela conforme carga de atualizações em cidades inteligentes; interoperar com padrões SSI de órgãos públicos usando atributos ABE; explorar esquemas SNARK mais leves para reduzir tamanho de parâmetros e tempo de geração; medir consumo energético em dispositivos restritos; testar sob redes de alta latência; integrar blockchain para trilhas de auditoria imutáveis."
+    },
+    "pagina": 13,
+    "texto": "Journal Pre-proof\nJournal Pre-proof\nNational Natural Science Foundation of China (Grant No.s\nU24B20146,62372044),andBeijingMunicipalScienceand\nTechnology Commission Project (Z241100009124008).",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho indica que o artigo, ainda em fase de pre‑proof, recebeu apoio financeiro da National Natural Science Foundation of China (grant nos. U24B20146, 62372044) e do Beijing Municipal Science and Technology Commission (projeto Z241100009124008).",
+    "perfil": {
+      "problema": "Não informado",
+      "solucao": "Não informado",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "Investigar como o financiamento pode ser direcionado a experimentos de implantação de identidade descentralizada em ambientes de IIoT de cidades inteligentes; explorar parcerias com agências de fomento para validar protótipos em larga escala; propor métricas de impacto socioeconômico dos projetos financiados."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O trabalho recebeu apoio da National Natural Science Foundation of China.",
+        "citacao": "National Natural Science Foundation of China (Grant No.s U24B20146,62372044)"
+      },
+      {
+        "afirmacao": "O projeto foi financiado pela Beijing Municipal Science and Technology Commission.",
+        "citacao": "Beijing Municipal Science and Technology Commission Project (Z241100009124008)"
+      }
+    ],
+    "interpretacao": "O trecho fornece apenas informações de financiamento, sem detalhes sobre o problema abordado, a solução proposta, avaliações ou limitações técnicas do estudo.",
+    "duvidas": "Quais são os objetivos específicos do trabalho? Como o financiamento será utilizado nas fases de desenvolvimento e validação? Existem resultados preliminares ou métricas de desempenho associadas ao projeto?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:26:59"
+}

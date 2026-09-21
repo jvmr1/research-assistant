@@ -1,0 +1,19 @@
+{
+  "resumo": "O artigo propõe uma arquitetura de computação de borda assistida por blockchain para o Industrial Internet of Things (IIoT), incorporando um processo de autorização em três etapas (submissão de transação, autenticação e concessão de acesso). Em testes com laptops, PCs e um servidor cloud, implementados em Golang e Node.js, a latência de coleta e acesso a dados de sensores ficou abaixo de 875 ms para a maioria dos lotes e em média 1612 ms para o maior lote, atendendo aos requisitos industriais. O consenso leve Proof‑of‑Authentication‑Handshake (PoAh) demonstrou taxa de transferência crescente com largura de arquitetura e tamanho de bloco, alcançando 225 tps em um cenário com atrasos de propagação de 35–55 ms, e até 1273 tps em avaliações posteriores, superando Bitcoin (7 tps) e Ethereum (27 tps). O desempenho manteve‑se satisfatório até cerca de 100 nós de borda, mas decai acima desse número, indicando um gargalo de consenso. A solução também protege contra ataques de replay e man‑in‑the‑middle, reforçando a segurança em ambientes de IIoT.",
+  "lacunas_possiveis": [
+    "Comportamento do mecanismo de autorização sob alta concorrência de solicitações.",
+    "Impacto da variabilidade e intermitência da conectividade de borda na latência de autenticação e concessão de acesso.",
+    "Efeito dos atrasos de propagação (35–55 ms) na consistência e segurança da cadeia PoAh.",
+    "Resistência do consenso PoAh a ataques de 51% em redes de maior escala.",
+    "Escalabilidade da arquitetura para milhares de nós distribuídos geograficamente.",
+    "Consequências da integração de SSI ou ABE sobre latência e consumo de recursos."
+  ],
+  "propostas_possiveis": [
+    "Realizar experimentos de carga com múltiplas solicitações simultâneas para avaliar a robustez do processo de autorização.",
+    "Simular cenários de conectividade intermitente e medir variações de latência e taxa de sucesso nas etapas de autenticação e concessão.",
+    "Investigar a consistência da cadeia sob diferentes valores de atraso de propagação e propor mecanismos de mitigação.",
+    "Testar a resistência do PoAh a ataques de 51% em topologias de rede ampliada, incluindo nós adicionais e maior largura de banda.",
+    "Expandir o testbed para incluir centenas a milhares de nós distribuídos em múltiplas regiões e analisar o ponto de ruptura do consenso.",
+    "Prototipar a incorporação de protocolos de Self‑Sovereign Identity (SSI) e esquemas de Attribute‑Based Encryption (ABE) na camada de autorização, medindo impacto de desempenho."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:14:09",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+    "perfil_anterior": {
+      "problema": "drug counterfeiting",
+      "solucao": "the integration of SSI enables selective disclosure and role-based authorization",
+      "avaliacao": "empirical results prove the efficacy of the proposed supply chain framework",
+      "limites": "identity linkability across transactions",
+      "possibilidades": "• Integrar computação de borda para verificação em tempo real da autenticidade dos lotes nas fronteiras da cidade inteligente.\n• Combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular.\n• Avaliar interoperabilidade entre plataformas municipais de saúde e provedores de identidade descentralizada usando credenciais verificáveis.\n• Implementar revogação distribuída de credenciais SSI via contratos inteligentes.\n• Aplicar a arquitetura a sensores IoT de monitoramento de temperatura e localização na cadeia de frio.\n• Explorar provas de conhecimento zero‑knowledge ("
+    },
+    "pagina": 7,
+    "texto": "3 SSI Self-Sovereign Identity\n4 SOTA State-of-the-art \n5 IPFS InterPlanetary File System\n6 SSI Self-sovereign identity\n7 DL  Distributed ledger \n8 BT  Blockchain Technology \n9 IoT  Internet of Things\n10 RFID  Radio Frequency Identification\n11 DApps  Decentralized Applications\n12 AI Artificial Intelligence\n13 PoW Proof of Work\n14 PoS Proof of Stake\n15 PBFT Practical Byzantine Fault \nTolerance \n16 VCs Verifiable Credentials\n17 DIDs  Decentralized Identifiers \n18 W3C World Wide Web Consortium \n19 SCM Supply Chain Management \n20 EHRs Electronic health records\n21 GPS Global positioning system\n22 GDPR General Data Protection \nRegulation\n23 HIPAA Health Insurance Portability and \nAccountability Act\n1.2 Contribution\nThe contributions of the work are summarized as follows:\nThe paper extensively studies existing drug traceability \nsystems, offering a detailed analysis of their methodologies, \nACCEPTED MANUSCRIPT\nARTICLE IN PRESSARTICLE IN PRESS",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho apresenta a seção de contribuições do artigo, indicando que o trabalho realiza um estudo extensivo dos sistemas de rastreabilidade de medicamentos, analisando detalhadamente suas metodologias. Também lista abreviações relevantes (SSI, blockchain, IoT, etc.) e menciona que o manuscrito foi aceito para publicação.",
+    "perfil": {
+      "problema": "drug counterfeiting",
+      "solucao": "the integration of SSI enables selective disclosure and role-based authorization",
+      "avaliacao": "empirical results prove the efficacy of the proposed supply chain framework",
+      "limites": "identity linkability across transactions",
+      "possibilidades": "• Avaliar a aplicação da análise metodológica a casos de uso de cidades inteligentes, como monitoramento de vacinas em postos de saúde distribuídos.\n• Expandir o estudo para incluir métricas de desempenho de IoT e blockchain em ambientes de edge computing.\n• Investigar a integração de DIDs e VCs com protocolos de comunicação MQTT para dispositivos IoT de saúde.\n• Propor um framework de avaliação comparativa entre diferentes algoritmos de consenso (PoS, PBFT) para rastreabilidade em tempo real.\n• Desenvolver um protótipo que combine a análise de metodologias com simulação de ataques de privacidade, medindo a eficácia de técnicas de anonimização."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "The paper extensively studies existing drug traceability systems, offering a detailed analysis of their methodologies.",
+        "citacao": "The paper extensively studies existing drug traceability systems, offering a detailed analysis of their methodologies."
+      },
+      {
+        "afirmacao": "The contributions of the work are summarized as follows:",
+        "citacao": "The contributions of the work are summarized as follows:"
+      }
+    ],
+    "interpretacao": "O trecho indica que o foco principal do artigo está na revisão e análise crítica dos sistemas de rastreabilidade de medicamentos, servindo como base para futuras implementações de SSI e blockchain no contexto de cadeias de suprimentos de saúde.",
+    "duvidas": "Não há detalhes sobre a metodologia específica empregada na análise, nem sobre resultados experimentais ou métricas de avaliação que sustentem as contribuições descritas."
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:14:49"
+}

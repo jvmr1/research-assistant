@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-20T18:15:50",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "André Luiz Almeida Cardoso",
+    "perfil_anterior": {
+      "problema": "without security mechanisms, it becomes impossible to develop and deploy smart city applications.",
+      "solucao": "Identity management presents itself as a solution to create a secure ecosystem for the development of smart city applications.",
+      "avaliacao": "the results demonstrating the model’s applicability and measuring the cost of adoption.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Investigar a integração de identidade autossoberana (SSI) e credenciais verificáveis ao modelo baseado em Hyperledger Fabric, incorporando criptografia baseada em atributos (ABE) ou homomórfica para controle de acesso seletivo, revogação e recuperação de credenciais perdidas em ambientes IoT de cidades inteligentes."
+    },
+    "pagina": 8,
+    "texto": "Lista de ilustrações\nFigura 1 – Atores de um Sistema de Gestão de Identidades Tradicional. . . . . . . 21\nFigura 2 – Arquiteturas para Gestão de Identidades: Independente, Centralizada e\nFederada. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22\nFigura 3 – Estrutura básica de umablockchain. . . . . . . . . . . . . . . . . . . . 25\nFigura 4 – Atualização do estado de umablockchain. . . . . . . . . . . . . . . . . 26\nFigura 5 – Principais algoritmos de consenso emblockchains. . . . . . . . . . . . . 26\nFigura 6 – Tipos de blockchain. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31\nFigura 7 – Arquitetura geral da solução e interações. . . . . . . . . . . . . . . . . 35\nFigura 8 – Modelo de Identidade. . . . . . . . . . . . . . . . . . . . . . . . . . . . 37\nFigura 9 – Arquitetura proposta. . . . . . . . . . . . . . . . . . . . . . . . . . . . 38\nFigura 10 – Arquitetura do sistema proposto. . . . . . . . . . . . . . . . . . . . . . 41\nFigura 11 –Diagrama de classe do modelo de identidade e do seu contrato inteligente.49\nFigura 12 –Diagrama de classe do registro de autenticações e seu contrato inteligente.50\nFigura 13 – Diagrama de classe do registro de revogações e seu contrato inteligente. 50\nFigura 14 – Diagrama de sequência da instalação de novo dispositivo. . . . . . . . . 52\nFigura 15 –Diagrama de sequência da coleta e envio de dados por dispositivos de IoT.53\nFigura 16 – Diagrama de sequência da remoção de dispositivos de IoT. . . . . . . . 54\nFigura 17 –Arquitetura geral da plataforma InterSCity, incluindo os novos compo-\nnentes desenvolvidos. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56\nFigura 18 – Processo de registro de novas Identidades. . . . . . . . . . . . . . . . . 57\nFigura 19 –Diagrama entidade relacionamento entre: dispositivos IoT, recursos,\ncapacidades e autorizações. . . . . . . . . . . . . . . . . . . . . . . . . 59\nFigura 20 –Estrutura do token recuperado pelo dispositivo como resultado da\nautenticação. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60\nFigura 21 –Diagrama de sequência correspondente ao processo de registro de dispo-\nsitivos, autenticação e envio de dados a plataforma InterSCity. . . . . . 61\nFigura 22 – Diagrama dedeployment que ilustra o ambiente de execução. . . . . . . 65\nFigura 23 –Latência (ms) e número de clientes virtuais ao longo do tempo, para as\noperações de autenticação. Fonte: Autoria própria. . . . . . . . . . . . 67\nFigura 24 –Latência (ms) e número de clientes ao longo do tempo, inserindo os\ndados diretamente noInterSCity. . . . . . . . . . . . . . . . . . . . . . 69\nFigura 25 –Latência (ms) e número de clientes ao longo do tempo, utilizando o\nmodelo proposto. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69\nFigura 26 –Consumo de processamento ao longo do tempo ao utilizar e ao não\nutilizar o modelo proposto. . . . . . . . . . . . . . . . . . . . . . . . . 72",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho lista as ilustrações do trabalho, destacando arquiteturas, diagramas de sequência e avaliações de latência e consumo de processamento da solução proposta para gestão de identidades em ambientes IoT de cidades inteligentes.",
+    "perfil": {
+      "problema": "Não informado.",
+      "solucao": "Arquitetura geral da solução e interações.",
+      "avaliacao": "Latência (ms) e número de clientes ao longo do tempo, utilizando o modelo proposto.",
+      "limites": "Não informado.",
+      "possibilidades": "Investigar a integração de credenciais verificáveis nos diagramas de sequência; aplicar criptografia baseada em atributos (ABE) para controle de acesso nos dispositivos IoT; avaliar mecanismos de revogação e recuperação de credenciais usando blockchain; medir impacto de criptografia homomórfica no consumo de processamento apresentado."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Avaliação de desempenho da solução proposta.",
+        "citacao": "Figura 25 –Latência (ms) e número de clientes ao longo do tempo, utilizando o modelo proposto."
+      },
+      {
+        "afirmacao": "Medição de latência para operações de autenticação.",
+        "citacao": "Figura 23 –Latência (ms) e número de clientes virtuais ao longo do tempo, para as operações de autenticação."
+      }
+    ],
+    "interpretacao": "O material demonstra que o estudo inclui uma arquitetura detalhada, diagramas de classe e sequência, além de experimentos de desempenho (latência e consumo) que sustentam a viabilidade da solução de identidade proposta para cidades inteligentes.",
+    "duvidas": "O trecho não fornece descrições textuais que relacionem as figuras ao problema de segurança ou às limitações da abordagem; faltam detalhes sobre como as métricas de latência se traduzem em benefícios de privacidade ou interoperabilidade."
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:16:09"
+}

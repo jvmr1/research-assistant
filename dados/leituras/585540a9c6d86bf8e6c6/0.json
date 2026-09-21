@@ -1,0 +1,32 @@
+{
+  "resumo": "O trecho apresenta o artigo intitulado \"AI-Powered Smart Tourist Safety System with Geo-Fencing and Blockchain Identity\", publicado na revista open‑access International Journal of Scientific Research in Engineering and Management (IJSREM) em 2026, com licença CC BY 4.0. Não há detalhes sobre o conteúdo técnico, mas o título indica um sistema de segurança para turistas que combina IA, geo‑fencing e identidade baseada em blockchain.",
+  "perfil": {
+    "problema": "Não informado",
+    "solucao": "Não informado",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Explorar a integração de identidade auto‑soberana (SSI) para melhorar a privacidade dos turistas; avaliar a eficácia da IA na detecção de situações de risco em tempo real; comparar diferentes algoritmos de geo‑fencing para otimizar a cobertura em áreas urbanas; investigar a escalabilidade da solução em ambientes de cidades inteligentes com múltiplas partes interessadas."
+  },
+  "evidencias": [
+    {
+      "citacao": "AI-Powered Smart Tourist Safety System with Geo-Fencing and Blockchain Identity",
+      "afirmacao": "O trabalho propõe um sistema de segurança para turistas baseado em IA, geo‑fencing e identidade blockchain."
+    }
+  ],
+  "interpretacao": "O título sugere que o estudo aborda a segurança de turistas usando tecnologias de IA, geo‑fencing e blockchain, porém o trecho fornecido não contém informações sobre o problema específico, a solução detalhada, avaliação experimental ou limitações do método.",
+  "duvidas": "Quais são os requisitos de hardware e software para implementar o sistema? Como a identidade baseada em blockchain garante a privacidade dos turistas? Qual o desempenho da IA na detecção de incidentes em tempo real? Existem testes de campo ou simulações que validam a eficácia do geo‑fencing em ambientes urbanos?",
+  "avisos": [],
+  "id": "a72d2e3304525221eb41",
+  "artigo": "S_2026",
+  "pagina": null,
+  "tipo": "html",
+  "perfil_acumulado": {
+    "problema": "Não identificado nas fichas/trechos disponíveis.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração de identidade auto‑soberana (SSI) para melhorar a privacidade dos turistas; avaliar a eficácia da IA na detecção de situações de risco em tempo real; comparar diferentes algoritmos de geo‑fencing para otimizar a cobertura em áreas urbanas; investigar a escalabilidade da solução em ambientes de cidades inteligentes com múltiplas partes interessadas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "585540a9c6d86bf8e6c6"
+  }
+}

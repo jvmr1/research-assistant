@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:01:07",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control",
+    "perfil_anterior": {
+      "problema": "The latest SSI frameworks do not include a mediator, only a person-to-person arrangement",
+      "solucao": "uPort has been built on the BSC public blockchain without authorization",
+      "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+      "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+      "possibilidades": "Avaliar a integração do esquema DNS‑IdM com dispositivos IoT de cidades inteligentes, usando contratos inteligentes para delegar controle de identidade a edge agents leves; projetar mecanismos de revogação baseados em ZKP que operem sobre uPort e DNS‑IdM simultaneamente; testar a escalabilidade de uPort e DNS‑IdM em redes BSC/Ethereum com milhares de nós edge; explorar armazenamento híbrido (on‑chain + IPFS) para reduzir custos de transação e melhorar portabilidade."
+    },
+    "pagina": 10,
+    "texto": "Appl. Sci. 2025, 15, 6437 10 of 26\nattributes or their approval of the details being monitored. DNS–IdM gives clients the\nability to control their identification details. For suppliers of services, that would make\nit possible for any of them to utilize already presented identity attributes and to request\nthem directly from beneficiaries through smart contracts when the needed features do not\nexist. The entire identity management process (e.g., the persistence of attributes, requests,\nand verification) is seamlessly enforced by integrating authorization and unauthorized\nblockchains with intelligent contracts. The blockchain’s intrinsic properties, including\nresistance, longevity, and traceability, render the DNS-IdM secure and trustworthy.\nRecent innovations have introduced blockchain consensus models tailored for con-\nstrained environments such as wireless networks and 6G systems. For example, symbiotic\nblockchain consensus (SBC) leverages cognitive backscatter communication to enable sus-\ntainable consensus operations in power-limited and spectrum-constrained contexts [45,46].\nWhile these designs primarily target network efficiency and spectrum sharing, their inte-\ngration into identity frameworks could pave the way for ultra-lightweight decentralized\nidentity in edge and IoT scenarios.\nExisting SSI solutions such as uPort, Sovrin, and Microsoft ION offer varying degrees\nof decentralization, interoperability, and governance. However, these systems still exhibit\nsignificant limitations. uPort lacks native revocation mechanisms and fine-grained access\ncontrol; Sovrin relies on a permissioned ledger, limiting its openness and scalability; and\nMicrosoft ION, while decentralized, does not incorporate smart contract–based permission\nmanagement or integrated data storage. Moreover, many existing systems do not offer\nseamless integration with decentralized file systems such as IPFS, limiting their flexibility in\nstoring and sharing large verifiable credentials. These gaps highlight the need for a modular,\nlow-cost, and access-controlled SSI framework—requirements addressed by YouGovern\nthrough its use of BSC, role-based smart contracts, and hybrid storage.\n3. The YouGovern SSI Solution\n3.1. Design\nIn the Design Stage, we will show the details for how the project will be managed and\ngoverned. Design differs from the Operational Planning Stage in that things at a higher\nlevel are about managing the YouGovern solution.\nFor example:\n• How will decisions be made, and who has the authority?\n• If the Implementation Phase must happen in August, then when does the money have\nto be secured to start?\n• What staff training is required and when?\nThe following section presents the architecture of YouGovern.\n3.2. Saving Data into Blockchain\nA blockchain gathers information in groupings, often known as blocks, that hold sets\nof data. When a block’s storage capacity is reached, it is chained onto the previously filled\nblock, producing a data chain known as the “blockchain” [47]. All new information that\nfollows the newly added block is compiled into a newly formed block, which is then added\nto the chain once it is complete, as shown in Figure 4. It links all blocks by storing the\nprevious hash and timestamp; the timestamp should be greater than the previous block.\nThe transaction root contains the hash of the Merkle Tree, and the Merkle Tree has all\nhashed transactions in that block. This is called transaction processing; one can just check\nthe validity of the block by checking the header hash of the block because the header hash\ncontains the hash of all items in that block. In many cases, the blockchain is modelled as a\nchain of header hashes, and one header hash is connected to the previous header hash.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve como o DNS‑IdM permite que clientes controlem seus atributos de identidade e como o YouGovern propõe um SSI modular, de baixo custo e com controle de acesso usando BSC, contratos inteligentes baseados em papéis e armazenamento híbrido, apontando limitações de soluções existentes como uPort, Sovrin e Microsoft ION.",
+    "perfil": {
+      "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+      "solucao": "addressed by YouGovern through its use of BSC, role-based smart contracts, and hybrid storage",
+      "avaliacao": "Não informado",
+      "limites": "Existing SSI solutions still exhibit significant limitations",
+      "possibilidades": "Investigar a integração do consenso SBC com o YouGovern para identidade ultra‑leve em edge IoT; avaliar a combinação de DNS‑IdM e YouGovern para delegação de identidade a agentes de borda em cidades inteligentes; desenvolver mecanismos de revogação baseados em ZKP sobre a arquitetura híbrida; medir o desempenho e custo do armazenamento híbrido (on‑chain + IPFS) em cenários de grande escala."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "DNS‑IdM gives clients the ability to control their identification details.",
+        "citacao": "DNS–IdM gives clients the ability to control their identification details."
+      },
+      {
+        "afirmacao": "YouGovern addresses the need for a modular, low‑cost, and access‑controlled SSI framework.",
+        "citacao": "These gaps highlight the need for a modular, low‑cost, and access‑controlled SSI framework—requirements addressed by YouGovern through its use of BSC, role‑based smart contracts, and hybrid storage."
+      }
+    ],
+    "interpretacao": "O texto enfatiza que, embora existam soluções SSI como uPort, Sovrin e ION, elas ainda carecem de revogação, controle de acesso granular e integração com sistemas de armazenamento descentralizado. O YouGovern surge como proposta que combina blockchain BSC, contratos inteligentes baseados em papéis e armazenamento híbrido para suprir essas lacunas, e sugere ainda que tecnologias emergentes como SBC podem ser incorporadas para ambientes de IoT de baixa potência.",
+    "duvidas": "Como o YouGovern implementa a revogação de credenciais? Qual é o overhead de usar armazenamento híbrido (on‑chain + IPFS) em termos de latência e custo? De que forma o consenso SBC pode ser integrado ao protocolo SSI proposto? Existem métricas de escalabilidade para milhares de dispositivos edge?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:01:46"
+}

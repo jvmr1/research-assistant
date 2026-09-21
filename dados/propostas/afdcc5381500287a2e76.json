@@ -1,0 +1,32 @@
+{
+  "id": "afdcc5381500287a2e76",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T17:36:19",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Sathyabama_2025: Avaliar desempenho de DNNs‑BCT com blockchains permissionados de baixa latência (ex",
+  "fontes": [
+    "Sathyabama_2025"
+  ],
+  "problema": "Impacto da latência e overhead do blockchain privado em respostas em tempo real",
+  "hipotese_lacuna": "Impacto da latência e overhead do blockchain privado em respostas em tempo real",
+  "meu_trabalho": "Avaliar desempenho de DNNs‑BCT com blockchains permissionados de baixa latência (ex.: Hyperledger Fabric, Raft) em ambientes de edge computing",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Avaliar desempenho de DNNs‑BCT com blockchains permissionados de baixa latência (ex.: Hyperledger Fabric, Raft) em ambientes de edge computing",
+  "modo": "artigo",
+  "buscas": [
+    "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security limitations future work",
+    "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual consenso (Raft vs PoA) oferece melhor trade‑off entre latência e segurança para um cenário de borda com recursos limitados?; Como garantir que as credenciais verificáveis emitidas pelos dispositivos não introduzam sobrecarga de comunicação na rede IoT?; É suficiente treinar o DNN offline e implantar o modelo estático, ou será necessário aprendizado federado para manter a eficácia contra novos ataques?; Qual estratégia de particionamento de ledger (channel vs private data collection) minimiza o impacto na latência sem comprometer a privacidade dos dados sensoriais?; Como validar a representatividade dos datasets públicos (UNSW‑NB15, IoT‑23) para tráfego real de cidades inteligentes?",
+  "evidencias_usadas": [
+    "6a8f0b952a23d59feaeb",
+    "b9c2f52d3610c303cb17",
+    "eda521031516b8b36a16"
+  ],
+  "fatos": "O modelo DNN atinge taxa de falsos positivos de 15,42% e precisão de detecção de 99,18%.; Every IoT device logs activities on a private blockchain network, ensuring secure communication and preventing unlawful access; DNNs-BCT reduces computational costs and latency compared to traditional blockchain solutions.; Edge computing preprocesses data before DNN inference and blockchain logging, enabling real‑time anomaly detection.",
+  "experimento": "descricao: Implementar a arquitetura DNNs‑BCT usando Hyperledger Fabric com consenso Raft/PoA em um cenário de edge computing para cidades inteligentes, integrando verifiable credentials para autenticação de dispositivos IoT. Comparar o desempenho com o framework proposto por Sathyabama_2025 (DNNs‑BCT em blockchain privado) e com um IDS tradicional baseado em regras.; implementacao: Desenvolver módulos de pré‑processamento na camada edge (Raspberry Pi ou Jetson Nano), treinamento de DNN leve (e.g., MobileNetV2) para detecção de anomalias, registro de eventos em ledger Hyperledger Fabric, e smart contracts para resposta automática. Utilizar Fabric CA para emitir verifiable credentials a cada sensor.; comparacao: work: Sathyabama_2025; aspectos: acurácia 99,18 %, FP 15,42 %, blockchain privado sem especificar consenso; work: IDS tradicional (Snort); aspectos: detecção baseada em assinaturas, latência maior",
+  "recursos": "dados: nome: UNSW‑NB15; descricao: Dataset de tráfego de rede com ataques variados, disponível em OpenML; nome: IoT‑23; descricao: Conjunto de capturas de tráfego de dispositivos IoT, público; nome: CityPulse sensor dataset; descricao: Medições de sensores urbanos (temperatura, tráfego, qualidade do ar), acessível via portal CityPulse; ferramentas: nome: Hyperledger Fabric; versao: 2.5; fonte: https://github.com/hyperledger/fabric; nome: Docker & Docker‑Compose; versao: latest; nome: Kubernetes (minikube); versao: latest; nome: TensorFlow 2.x ou PyTorch 2.x; versao: latest; nome: Edge hardware; descricao: Raspberry Pi 4 ou Jetson Nano; nome: Verifiable Credentials library; descricao: Hyperledger Aries/Indy ou DIF VC‑JS; infraestrutura: Laboratório de computação da universidade com rede local, acesso a servidores de teste para simular múltiplas organizações (3 peers, 1 orderer).",
+  "metricas": "nome: Acurácia de detecção; definicao: Proporção de eventos corretamente classificados como anômalos ou normais; nome: Taxa de falsos positivos (FPR); definicao: Proporção de eventos normais classificados como anômalos; nome: Latência end‑to‑end; definicao: Tempo entre a captura do dado na edge e a decisão registrada no ledger; nome: Throughput da blockchain; definicao: Transações por segundo (TPS) suportadas pelo canal Fabric; nome: Consumo de recursos; definicao: Uso médio de CPU, memória e energia nos nós edge durante a inferência; nome: Escalabilidade; definicao: Variação de latência e TPS ao aumentar o número de dispositivos de 50 para 500",
+  "detalhada": true
+}

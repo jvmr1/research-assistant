@@ -1,0 +1,34 @@
+{
+  "resumo": "O artigo relata que, ao empregar contratos inteligentes na blockchain, o sistema de segurança IoT reage automaticamente a ameaças, eliminando atrasos humanos e alcançando 95,25% de eficiência no tempo de reação, o que garante mitigação em tempo real e baixa latência na preservação da integridade dos dispositivos conectados.",
+  "perfil": {
+    "problema": "unauthorized access, malware assaults, and data breaches",
+    "solucao": "blockchain-based architecture and integrated DNN to ensure data integrity, enhance anomaly detection, and offer IoT networks autonomous, distributed threat-mitigating properties",
+    "avaliacao": "Showing a 95.25% efficiency in reaction time",
+    "limites": "weaknesses in smart contracts, Sybil attacks, and 51% assaults may still penetrate blockchain-based security procedures",
+    "possibilidades": "Investigar consenso leve (PoA, DAG) para reduzir latência em bordas de cidades inteligentes; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar quantização e poda de modelos DNN para diminuir carga computacional; explorar aprendizado federado para treinamento distribuído sem expor dados sensíveis; avaliar robustez contra ataques adversariais usando técnicas de defesa avançadas."
+  },
+  "evidencias": [
+    {
+      "citacao": "Smart contracts built within the Blockchain enable the system to react to threats automatically, therefore eliminating delays in human interaction.",
+      "afirmacao": "O sistema reage a ameaças em tempo real, eliminando atrasos humanos."
+    }
+  ],
+  "interpretacao": "A combinação de contratos inteligentes e DNN permite uma resposta quase instantânea a incidentes, reduzindo a janela de vulnerabilidade típica de intervenções manuais, embora a dependência de contratos inteligentes introduza novos vetores de risco.",
+  "duvidas": "Como o modelo escala em ambientes com milhares de dispositivos IoT? Qual o overhead de execução dos contratos inteligentes em hardware de borda com recursos limitados?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "27ed43bd5cebc0425cce",
+  "artigo": "Sathyabama_2025",
+  "pagina": 14,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "unauthorized access, malware assaults, and data breaches",
+    "solucao": "blockchain-based architecture and integrated DNN to ensure data integrity, enhance anomaly detection, and offer IoT networks autonomous, distributed threat-mitigating properties",
+    "avaliacao": "Showing a 95.25% efficiency in reaction time",
+    "limites": "weaknesses in smart contracts, Sybil attacks, and 51% assaults may still penetrate blockchain-based security procedures",
+    "possibilidades": "Investigar consenso leve (PoA, DAG) para reduzir latência em bordas de cidades inteligentes; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar quantização e poda de modelos DNN para diminuir carga computacional; explorar aprendizado federado para treinamento distribuído sem expor dados sensíveis; avaliar robustez contra ataques adversariais usando técnicas de defesa avançadas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "40196a11e46ff300b5bb"
+  }
+}

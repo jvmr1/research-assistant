@@ -1,0 +1,13 @@
+{
+  "resumo": "O artigo apresenta um panorama abrangente da adoção de IIoT seguro e preservador de privacidade na manufatura inteligente, destacando fragilidades críticas nos protocolos de comunicação (NB‑IoT, Wireless‑HART, Modbus, MQTT) e na governança entre equipes de TI e OT. Identifica vulnerabilidades decorrentes de sistemas operacionais e firmware obsoletos, ausência de mecanismos robustos de autenticação e controle de acesso, e riscos associados a acessos remotos não protegidos. Explora diversas propostas recentes de autenticação, como esquemas mutuais com chaves de sessão, CMAF‑IIoT, AP‑CDE, e soluções baseadas em quantum walk, honey‑lists, PUFs e blockchain (DHACS, contratos inteligentes, criptografia NTRU). Avalia‑as em termos de segurança, custo computacional e consumo energético, apontando a tendência de combinar identidade soberana, criptografia baseada em atributos e modelos híbridos de controle de acesso para atender às exigências de ambientes industriais de larga escala.",
+  "lacunas_possiveis": [
+    "Ausência de padrões emergentes que ofereçam autenticação forte para protocolos como NB‑IoT e Wireless‑HART.",
+    "Escassez de métricas práticas para mensurar a eficácia de novos mecanismos de autenticação em cenários de acesso remoto heterogêneo.",
+    "Falta de avaliações detalhadas de custos computacionais e de latência de soluções blockchain e PUFs em aplicações de tempo‑crítico."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um framework de avaliação comparativa que inclua desempenho, consumo energético e latência de esquemas de autenticação e controle de acesso propostos.",
+    "Propor um padrão de autenticação baseada em identidade soberana (SSI) integrado a protocolos IIoT vulneráveis, com suporte a verifiable credentials.",
+    "Criar um plano de migração incremental para dispositivos legacy, combinando sandboxing, atualização segura de firmware e monitoramento contínuo de integridade."
+  ]
+}

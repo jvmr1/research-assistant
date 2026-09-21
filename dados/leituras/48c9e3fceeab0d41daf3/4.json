@@ -1,0 +1,37 @@
+{
+  "resumo": "O trecho apresenta os agradecimentos do autor, reconhecendo o apoio dos pais, amigos e professores, em especial o professor Francisco, que contribuiu para seu desenvolvimento técnico e como pesquisador.",
+  "perfil": {
+    "problema": "Autenticação e Controle de Acesso Baseados em Blockchain",
+    "solucao": "Identidades Autosoberanas",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a aplicação prática de SSI em serviços de mobilidade urbana; integrar mecanismos de recuperação de credenciais baseados em secret sharing distribuído para cidadãos; avaliar a usabilidade de carteiras digitais SSI em dispositivos IoT de baixa potência; propor diretrizes de governança intermunicipal para interoperabilidade de credenciais verificáveis."
+  },
+  "evidencias": [
+    {
+      "citacao": "Agradeço profundamente aos meus pais, pois só estou onde estou graças a eles.",
+      "afirmacao": "O autor agradece aos pais pelo apoio emocional e pelos valores transmitidos."
+    },
+    {
+      "citacao": "Ao professor Francisco, que me acolheu como voluntário no LSDi desde o início do curso.",
+      "afirmacao": "O professor Francisco foi fundamental para o desenvolvimento técnico e de pesquisa do autor."
+    }
+  ],
+  "interpretacao": "O conteúdo do trecho é exclusivamente de natureza pessoal e não traz informações técnicas que alterem o entendimento anterior sobre o problema, solução ou avaliação do trabalho.",
+  "duvidas": "Não há informações sobre metodologias, resultados ou limitações técnicas; quais são as contribuições específicas do estudo em relação à SSI em cidades inteligentes?",
+  "avisos": [],
+  "id": "704dc55def08096ddd2e",
+  "artigo": "Exemplo_55b3b0969325cccbbb2c",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Autenticação e Controle de Acesso Baseados em Blockchain",
+    "solucao": "Identidades Autosoberanas",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a aplicação prática de SSI em serviços de mobilidade urbana; integrar mecanismos de recuperação de credenciais baseados em secret sharing distribuído para cidadãos; avaliar a usabilidade de carteiras digitais SSI em dispositivos IoT de baixa potência; propor diretrizes de governança intermunicipal para interoperabilidade de credenciais verificáveis.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "aa6f199c752f47517c1c"
+  },
+  "reaproveitada_de": "8f0988d32f16c593b727"
+}

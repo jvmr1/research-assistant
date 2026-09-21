@@ -1,0 +1,18 @@
+{
+  "resumo": "A revisão sistemática analisou 78 estudos sobre identidade auto‑soberana (SSI) aplicada a cadeias de suprimentos agrícolas, constatando que nenhuma solução atende integralmente aos requisitos de transparência, controle do usuário e descentralização; Sovrin foi apontado como a mais promissora. Os autores destacam a escassez de avaliações práticas, especialmente em ambientes rurais com recursos limitados, e apontam desafios de escalabilidade, latência, revogação de credenciais, consumo energético, privacidade em blockchains públicos e interoperabilidade entre setores. Também são levantadas dúvidas sobre infraestrutura necessária, custos computacionais da integração com criptografia baseada em atributos (ABE) e adequação a regulamentações de privacidade. A revisão identifica a necessidade de pesquisas piloto, critérios de avaliação e frameworks que integrem blockchain e SSI de forma segura e eficiente para o contexto agro‑digital.",
+  "lacunas_possiveis": [
+    "Integração conjunta de blockchain e SSI ainda não estudada em cadeias agrícolas.",
+    "Ausência de avaliações piloto em escala real com dispositivos IoT rurais.",
+    "Mecanismos de revogação de credenciais eficientes para ambientes distribuídos.",
+    "Escalabilidade e latência da combinação SSI‑ABE em dispositivos de borda.",
+    "Interoperabilidade de credenciais SSI entre setores (agro, saúde, energia).",
+    "Requisitos de infraestrutura (conectividade, energia) em áreas de baixa tecnologia."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um protótipo piloto que combine blockchain, SSI e sensores IoT em uma cadeia agrícola real.",
+    "Criar um framework de avaliação que inclua métricas de escalabilidade, latência e consumo energético para SSI‑ABE em edge devices.",
+    "Projetar um mecanismo de revogação baseado em atributos que opere em redes com conectividade intermitente.",
+    "Definir protocolos de consenso leves (ex.: Proof‑of‑Authority) adequados a pequenos produtores com recursos limitados.",
+    "Estabelecer padrões e métricas de interoperabilidade de credenciais SSI entre diferentes setores de cidades inteligentes."
+  ]
+}

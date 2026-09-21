@@ -1,0 +1,37 @@
+{
+  "resumo": "O trecho descreve a plataforma de middleware InterSCity, um software livre baseado em microsserviços projetado para cidades inteligentes. É modular, escalável e flexível, composta por seis microsserviços, entre eles o Resource Adaptor, que permite a integração de dispositivos IoT à plataforma.",
+  "perfil": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+    "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+    "limites": "o modelo atual não aborda a gestão de identidades dos cidadãos",
+    "possibilidades": "Integrar módulos SSI ao InterSCity, usando o Resource Adaptor para conectar carteiras digitais de cidadãos e sensores IoT; explorar contratos inteligentes para revogação de credenciais dentro da arquitetura de microsserviços; aplicar ABE e criptografia homomórfica nos fluxos de dados do middleware para controle de acesso e processamento privativo."
+  },
+  "evidencias": [
+    {
+      "citacao": "InterSCity é uma plataforma de código aberto estruturada em microsserviços",
+      "afirmacao": "InterSCity é uma plataforma de código aberto estruturada em microsserviços"
+    },
+    {
+      "citacao": "Resource Adaptor . Facilita a integração de dispositivos IoT com a plataforma",
+      "afirmacao": "Resource Adaptor facilita a integração de dispositivos IoT com a plataforma"
+    }
+  ],
+  "interpretacao": "A descrição do InterSCity indica que a plataforma já possui uma camada de integração IoT (Resource Adaptor), o que pode ser aproveitado para conectar identidades autossoberanas dos cidadãos e credenciais verificáveis aos sensores e serviços urbanos.",
+  "duvidas": "Como adaptar os microsserviços existentes do InterSCity para suportar emissão, verificação e revogação de credenciais SSI? Quais são os impactos de desempenho ao inserir criptografia homomórfica ou ABE nos fluxos de dados do middleware?",
+  "avisos": [],
+  "id": "f8bd821be7e2076f26e4",
+  "artigo": "Exemplo_55b3b0969325cccbbb2c",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+    "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+    "limites": "o modelo atual não aborda a gestão de identidades dos cidadãos",
+    "possibilidades": "Integrar módulos SSI ao InterSCity, usando o Resource Adaptor para conectar carteiras digitais de cidadãos e sensores IoT; explorar contratos inteligentes para revogação de credenciais dentro da arquitetura de microsserviços; aplicar ABE e criptografia homomórfica nos fluxos de dados do middleware para controle de acesso e processamento privativo.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "aa6f199c752f47517c1c"
+  },
+  "reaproveitada_de": "aa6f199c752f47517c1c"
+}

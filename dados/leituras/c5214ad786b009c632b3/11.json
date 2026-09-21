@@ -1,0 +1,40 @@
+{
+  "resumo": "A análise dos resultados do modelo AAIFLF-PPCD, testado no conjunto de dados Kaggle com 30.000 instâncias e 12 classes, mostrou que apenas 32 das 65 características foram selecionadas. A matriz de correlação revelou relações variadas entre parâmetros de rede, destacando uma forte correlação positiva (0,93) entre File_activity e Process_activity e correlações fracas ou negativas entre outras variáveis, como Scr_port e Des_port (‑0,04).",
+  "perfil": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": [
+      "Utilizar a matriz de correlação para implementar seleção de recursos baseada em dependência, descartando atributos altamente correlacionados e reduzindo a carga computacional nos dispositivos de borda.",
+      "Estender o modelo incorporando aprendizado federado adaptativo que ajuste dinamicamente o número de recursos selecionados conforme a variabilidade da correlação observada em tempo real.",
+      "Integrar métricas de energia ao processo de otimização WOA, penalizando combinações de recursos que aumentem o consumo nos nós IoT restritos."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "but only 32 have been selected.",
+      "afirmacao": "Only 32 out of 65 features were selected for the model."
+    },
+    {
+      "citacao": "File_activity and Process_activity share a robust positive correlation of 0.93",
+      "afirmacao": "File_activity and Process_activity share a robust positive correlation of 0.93."
+    }
+  ],
+  "interpretacao": "A correlação forte entre atividades de arquivos e processos indica que esses atributos são críticos para a detecção de ameaças, enquanto correlações fracas sugerem que alguns atributos podem ser descartados sem perda significativa de informação, potencialmente aliviando a carga computacional.",
+  "duvidas": "Como a seleção de apenas 32 atributos impacta a capacidade de generalização do modelo em cenários reais de cidades inteligentes? Qual seria o efeito de incorporar a energia consumida pelos nós IoT na função de fitness do algoritmo WOA?",
+  "avisos": [],
+  "id": "5f1ba42b08864a2ef0ef",
+  "artigo": "Ragab_2025",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Utilizar a matriz de correlação para implementar seleção de recursos baseada em dependência, descartando atributos altamente correlacionados e reduzindo a carga computacional nos dispositivos de borda.; Estender o modelo incorporando aprendizado federado adaptativo que ajuste dinamicamente o número de recursos selecionados conforme a variabilidade da correlação observada em tempo real.; Integrar métricas de energia ao processo de otimização WOA, penalizando combinações de recursos que aumentem o consumo nos nós IoT restritos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "c5214ad786b009c632b3"
+  }
+}

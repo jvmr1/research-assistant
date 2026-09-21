@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:29:57",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "",
+      "solucao": "",
+      "avaliacao": "",
+      "limites": "",
+      "possibilidades": ""
+    },
+    "pagina": 1,
+    "texto": "RESEARCH Open Access\n© The Author(s) 2025. Open Access  This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International \nLicense, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate \ncredit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. \nYou do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party \nmaterial in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material \nis not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted \nuse, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit  h t t p : /  / c r e a  t i v e c o  m m o n  s . o r g  / l i c e  n s \ne s / b  y - n c  - n d / 4 . 0 /.\nMallick et al. Discover Internet of Things            (2025) 5:90 \nhttps://doi.org/10.1007/s43926-025-00195-5\n*Correspondence:\nSoubhagya Ranjan Mallick\nsoubhagya.mallick@sitnagpur.siu.\nedu.in\n1Symbiosis Institute of Technology, \nNagpur Campus, Symbiosis \nInternational (Deemed University), \nPune, India\n2Department of Computer Science \nand Engineering, IIIT, Bhubaneswar, \nOdisha, India\n3Department of Computer Science, \nCentral University of Odisha, \nKoraput, India\nSecure and trusted data sharing in smart \nhealthcare using blockchain and IoT integration\nSoubhagya Ranjan Mallick1*, Srichandan Sobhanayak2 and Rakesh Kumar Lenkar3\n1 Introduction\nWith the growth in the global population, the number of patients are gradually rising. \nHealthcare organizations are advancing and adopting the latest technologies, which \nalter how this generation is treated. The most exciting technological advancement is \nthe Internet of Things (IoT), which connects things and enables them to make deci -\nsions independently in intelligent environments. In terms of offering a framework for \ntying together everyday smart devices to collect, share, transmit, and manage data, \nIoT has performed better than the expectations made by researchers during the past \ndecades. IoT technology connects heterogeneous healthcare sensor devices to improve \npatient care by minimizing hospital visits [ 1, 2]. Due to the proliferation of IoT medi -\ncal devices, healthcare organizations must regularly gather, store, process, and provide \naccess to enormous amounts of healthcare data. Centralized storage architecture in \nmost IoT healthcare systems can lead to a single point of failure and easy manipulation. \nDiscover Internet of Things\nAbstract\nRemote service delivery and automation using Blockchain and Internet of Things (IoT) \nare revolutionising healthcare operations. Enhancing healthcare data interchange \nand providing real-time treatment is becoming more difficult due to the exponential \ngrowth of patient populations around the globe. It is still very difficult to develop \na digital healthcare platform that is entirely decentralised, secure, trustworthy, \ninteroperable, and scalable, even if existing studies have improved these platforms \nto improve patient outcomes and reduce hospital visits. This paper proposes a \nrobust and scalable healthcare architecture using Blockchain smart contracts and \nIoT, with the integration of the InterPlanetary File System (IPFS). By securely storing \nsensitive medical records, the framework enhances data privacy and interoperability \nfor patients as well as healthcare professionals. A device proxy monitors potentially \nvulnerable IoT devices and uses cryptography to ensure that data remains private. \nExperimental evaluations of the system’s performance have focused on key factors, \nincluding healthcare record upload, download, access, and mining times. The results \nshow that public healthcare systems based on the Blockchain considerably boost \nefficiency and performance by integrating IPFS.\nKeywords Blockchain, IoT, IPFS, Scalability, Smart healthcare, Security, Proxy device\n",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta uma arquitetura de saúde inteligente que combina blockchain, contratos inteligentes e IPFS para armazenar registros médicos de forma segura e descentralizada. Um dispositivo proxy protege sensores IoT vulneráveis usando criptografia. Avaliações experimentais medem tempos de upload, download, acesso e mineração, indicando ganhos de eficiência e desempenho ao integrar IPFS. O objetivo é superar falhas de sistemas centralizados, melhorar privacidade, interoperabilidade e escalabilidade em ambientes de saúde conectados.",
+    "perfil": {
+      "problema": "Centralized storage architecture in most IoT healthcare systems can lead to a single point of failure and easy manipulation.",
+      "solucao": "This paper proposes a robust and scalable healthcare architecture using Blockchain smart contracts and IoT, with the integration of the InterPlanetary File System (IPFS).",
+      "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+      "limites": "Não informado",
+      "possibilidades": "Investigar a integração de identidade auto-soberana (SSI) para controle de acesso pelos pacientes; aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados; testar a arquitetura em múltiplas cidades inteligentes com edge computing; analisar mecanismos de revogação cross‑organizacional; avaliar a escalabilidade em cenários de grande volume de dispositivos IoT."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Centralized storage architecture ... can lead to a single point of failure and easy manipulation.",
+        "citacao": "Centralized storage architecture in most IoT healthcare systems can lead to a single point of failure and easy manipulation."
+      },
+      {
+        "afirmacao": "Public blockchain‑based healthcare systems improve efficiency and performance when IPFS is integrated.",
+        "citacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS."
+      }
+    ],
+    "interpretacao": "O trabalho demonstra que combinar blockchain com IPFS pode mitigar vulnerabilidades de armazenamento centralizado em sistemas de saúde IoT, oferecendo maior privacidade e interoperabilidade, embora ainda não explore controle de identidade descentralizado ou criptografia fina.",
+    "duvidas": "Como a solução lida com a revogação de credenciais de dispositivos comprometidos? Qual o impacto do uso de IPFS em termos de latência para consultas em tempo real? O modelo de proxy criptográfico escala para milhares de sensores simultâneos?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:30:03"
+}

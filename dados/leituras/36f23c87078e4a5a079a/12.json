@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho discute a preservação de privacidade, controle de acesso e buscas seguras em dados criptografados, destacando o protocolo Proof of Authentication (PoAh) como solução leve para dispositivos IoT de recursos limitados. Aponta vantagens de baixa energia e riscos de centralização, além de analisar a importância da escolha de plataformas blockchain (Bitcoin, Ethereum, Hyperledger, etc.) e de protocolos de consenso para atender a requisitos de escalabilidade, segurança e eficiência.",
+  "perfil": {
+    "problema": "limited scalability and reliance on consortium-based validation.",
+    "solucao": "Proof of Authentication (PoAh) is a lightweight blockchain authentication protocol for resource-constrained devices.",
+    "avaliacao": "PoAh has the benefits of low power consumption and suitability for IoT but poses centralization risks due to reliance on trusted nodes.",
+    "limites": "centralization risks due to reliance on trusted nodes.",
+    "possibilidades": "Avaliar o desempenho do PoAh em cenários de edge computing de cidades inteligentes, combinando-o com criptografia baseada em atributos (ABE) para privacidade granular; comparar PoAh com outros protocolos leves (PoA, PoET) quanto a throughput e consumo energético; investigar mecanismos híbridos que mitigam a centralização ao distribuir a validação entre nós semi‑confiáveis."
+  },
+  "evidencias": [
+    {
+      "citacao": "Proof of Authentication (PoAh) [ 69] is a lightweight blockchain authentication protocol for resource-constrained devices in IoT and edge computing.",
+      "afirmacao": "Proof of Authentication (PoAh) is a lightweight blockchain authentication protocol for resource-constrained devices in IoT and edge computing."
+    },
+    {
+      "citacao": "These protocols vary in performance efficiency, security guarantees, and levels of decentralization, as outlined in Table 3.",
+      "afirmacao": "Consensus protocols vary in performance efficiency, security guarantees, and levels of decentralization."
+    }
+  ],
+  "interpretacao": "O texto enfatiza que, embora protocolos como PoAh ofereçam eficiência energética para IoT, a dependência de nós confiáveis introduz riscos de centralização, o que requer cuidadosa seleção de plataformas e consensos adequados ao contexto de cidades inteligentes.",
+  "duvidas": "Como equilibrar a necessidade de baixa latência em edge computing com a mitigação de riscos de centralização? Quais métricas específicas de desempenho são mais críticas ao comparar PoAh com outros protocolos leves em ambientes de smart city?",
+  "avisos": [],
+  "id": "726e8cb5353080b1a7c5",
+  "artigo": "Tawfik_2025",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "limited scalability and reliance on consortium-based validation.",
+    "solucao": "PoS provides a fast block creation time, high throughput, independence from specialized hardware, and energy efficiency.",
+    "avaliacao": "PoAh has the benefits of low power consumption and suitability for IoT but poses centralization risks due to reliance on trusted nodes.",
+    "limites": "centralization risks due to reliance on trusted nodes.",
+    "possibilidades": "Avaliar o desempenho do PoAh em cenários de edge computing de cidades inteligentes, combinando-o com criptografia baseada em atributos (ABE) para privacidade granular; comparar PoAh com outros protocolos leves (PoA, PoET) quanto a throughput e consumo energético; investigar mecanismos híbridos que mitigam a centralização ao distribuir a validação entre nós semi‑confiáveis.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "36f23c87078e4a5a079a"
+  }
+}

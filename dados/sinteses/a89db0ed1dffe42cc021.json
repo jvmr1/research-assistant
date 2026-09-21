@@ -1,0 +1,16 @@
+{
+  "resumo": "A dissertação apresenta, nos capítulos finais, discussões sobre privacidade, controle de acesso e escalabilidade criptográfica, destacando a revogação de atributos como desafio e apontando a necessidade de ampliar a avaliação de escalabilidade. O trabalho contextualiza a evolução da Indústria 4.0 e o IIoT, enfatizando a importância da interoperabilidade técnica, semântica, organizacional e legal, mas delimita seu escopo à camada técnica suportada por comunicação publish/subscribe. Reconhece a necessidade de interoperabilidade orientada à governança e segurança para troca de dados entre domínios administrativos independentes, sem confiança prévia, especialmente diante da projeção de 29 bi dispositivos IoT até 2030. Um cenário de cadeia de suprimentos ilustra a demanda por controle de acesso granular que preserve a autonomia das organizações e evite dependência de intermediários centralizados, embora a interoperabilidade semântica permaneça fora do escopo.",
+  "lacunas_possiveis": [
+    "Ausência de métricas específicas para avaliar a escalabilidade criptográfica.",
+    "Escopo limitado da avaliação de escalabilidade, dificultando a generalização para diferentes contextos de cidades inteligentes.",
+    "Falta de integração de SSI/DIDs nas comunicações publish/subscribe técnicas.",
+    "Impacto da exclusão da interoperabilidade semântica e organizacional nas propostas de controle de acesso."
+  ],
+  "propostas_possiveis": [
+    "Definir e aplicar métricas de desempenho (latência, throughput, consumo de recursos) para a escalabilidade criptográfica em ambientes IIoT.",
+    "Ampliar a avaliação de escalabilidade para incluir cenários de alta densidade de dispositivos e diferentes topologias de rede.",
+    "Projetar extensões ao modelo publish/subscribe que incorporem DIDs e credenciais verificáveis para identidade descentralizada.",
+    "Desenvolver mecanismos de controle de acesso granular baseados em criptografia baseada em atributos (ABE) que suportem revogação eficiente.",
+    "Explorar camadas semânticas por meio de ontologias interoperáveis que complementem a camada técnica já abordada."
+  ]
+}

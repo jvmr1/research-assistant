@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:26:59",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)",
+    "perfil_anterior": {
+      "problema": "issue of authentication in meta-computing-enabled IIoT",
+      "solucao": "sliding window accumulator structure",
+      "avaliacao": "the verifier time remains constant at 0.003 seconds across all tree heights.",
+      "limites": "the size of the public parameters for the Merkle SNARK scheme reaches approximately 50GB, and the parameter generation process requires over 30 hours.",
+      "possibilidades": "Investigar como o financiamento pode ser direcionado a experimentos de implantação de identidade descentralizada em ambientes de IIoT de cidades inteligentes; explorar parcerias com agências de fomento para validar protótipos em larga escala; propor métricas de impacto socioeconômico dos projetos financiados."
+    },
+    "pagina": 14,
+    "texto": "Journal Pre-proof\nJournal Pre-proof\n[38] Sedlmeir, J., Smethurst, R., Rieger, A., Fridgen, G., 2021. Digital\nidentitiesandverifiablecredentials. Business&InformationSystems\nEngineering 63, 603–613.\n[39] Shen, X., Luo, X., Yuan, F., Wang, B., Chen, Y., Tang, D., Gao, L.,\n2024.Verifiableprivacy-preservingfederatedlearningundermultiple\nencrypted keys. IEEE Internet of Things Journal 11, 3430–3445.\n[40] Smarr, L., Catlett, C.E., 1992. Metacomputing. Communications of\nthe ACM 35, 44–52.\n[41] Srinivasan,S.,Chepurnoy,A.,Papamanthou,C.,Tomescu,A.,Zhang,\nY., 2022. Hyperproofs: Aggregating and maintaining proofs in vec-\ntor commitments, in: 31st USENIX Security Symposium, USENIX\nSecurity 2022, Boston, MA, USA. pp. 3001–3018.\n[42] S.Si, X.Lin, P.Wei, 2024. Compressed zero-knowledge proofs for\nlattice-based accumulator. The Computer Journal 67, 694–708.\n[43] Szalachowski, P., 2021. Password-authenticated decentralized iden-\ntities. IEEE Transactions on Information Forensics and Security 16,\n4801–4810.\n[44] W3C, 2018. Decentralized Identifiers v0.11: Data Model and Syn-\ntaxes for Decentralized Identifiers. Technical Report.\n[45] Wang, J., Hu, J., Min, G., Zomaya, A.Y., Georgalas, N., 2020. Fast\nadaptive task offloading in edge computing based on meta reinforce-\nmentlearning.IEEETransactionsonParallelandDistributedSystems\n32, 242–253.\n[46] Wang, L., Tian, Y., Zhang, D., 2021. Toward cross-domain dynamic\naccumulatorauthenticationbasedonblockchainininternetofthings.\nIEEE Transactions on Industrial Informatics 18, 2858–2867.\n[47] Wang, X., Cao, J., Buyya, R., 2022. Adaptive cloud bundle provi-\nsioning and multi-workflow scheduling via coalition reinforcement\nlearning. IEEE Transactions on Computers 72, 1041–1054.\n[48] Xie, T., Gai, K., Zhu, L., Guo, Y., Choo, K.K.R., 2023. Cross-chain-\nbased trustworthy node identity governance in internet of things.\nIEEE Internet of Things Journal 10, 21580–21594.\n[49] Xin, J., Haghighi, A., Tian, X., Papadopoulos, D., 2024. Notus:\nDynamicproofsofliabilitiesfromzero-knowledge {RSA}accumula-\ntors, in: 33rd USENIX Security Symposium (USENIX Security 24),\nPhiladelphia, PA, USA. pp. 1453–1470.\n[50] Xiong, R., Ren, W., Hao, X., He, J., Choo, K.K.R., 2023. Bdim:\nA blockchain-based decentralized identity management scheme for\nlarge scale internet of things. IEEE Internet of Things Journal 10,\n22581–22590.\n[51] Xu,C.,Zhang,C.,Xu,J.,Pei,J.,2021. Slimchain:Scalingblockchain\ntransactions through off-chain storage and parallel processing. Pro-\nceedings of the VLDB Endowment 14, 2314–2326.\n[52] Zhang, L.F., Wang, H., 2022. Multi-server verifiable computation of\nlow-degree polynomials, in: 2022 IEEE Symposium on Security and\nPrivacy (SP), IEEE, San Francisco, CA, USA. pp. 596–613.\n[53] Zhang,Z.,Yang,K.,Tian,Y.,Ma,J.,2024. Ananti-disguiseauthenti-\ncation system using the first impression of avatar in metaverse. IEEE\nTransactions on Information Forensics and Security 19, 6393–6408.\n[54] Zhuang, T., Qin, Z., Ding, Y., Deng, F., Chen, L., Qin, Z., Choo,\nK.K.R., 2023. Temporal refinement graph convolutional network for\nskeleton-based action recognition. IEEE Transactions on Artificial\nIntelligence 5, 1586–1598.\nKai Ding et al.:Preprint submitted to Elsevier Page 14 of 14",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "A página apresenta um conjunto de referências bibliográficas que abordam identidades digitais, credenciais verificáveis, meta‑computação, provas de conhecimento zero, identificadores descentralizados (DIDs), esquemas de identidade baseada em blockchain para IoT, acumuladores dinâmicos e governança de identidade em ambientes de cadeia cruzada, entre outros tópicos relevantes para identidade descentralizada em IIoT.",
+    "perfil": {
+      "problema": "Não informado.",
+      "solucao": "Não informado.",
+      "avaliacao": "Não informado.",
+      "limites": "Não informado.",
+      "possibilidades": "Explorar a integração de governança de identidade baseada em cross‑chain (ref. 48) para melhorar a interoperabilidade entre diferentes domínios de IIoT; avaliar a aplicação de provas de conhecimento zero comprimidas (ref. 42) a fim de reduzir o tamanho dos parâmetros públicos e o tempo de geração; investigar a adoção de acumuladores dinâmicos autenticados por blockchain (ref. 46) para suportar revogação eficiente em ambientes de cidades inteligentes; conduzir experimentos de implantação em borda computacional de cidades inteligentes para validar desempenho e privacidade em escala real."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O trabalho cita o padrão W3C Decentralized Identifiers v0.11.",
+        "citacao": "[44] W3C, 2018. Decentralized Identifiers v0.11: Data Model and Syntaxes for Decentralized Identifiers."
+      },
+      {
+        "afirmacao": "O trabalho referencia um esquema de identidade descentralizada baseado em blockchain para IoT em grande escala.",
+        "citacao": "[50] Xiong, R., Ren, W., Hao, X., He, J., Choo, K.K.R., 2023. Bdim: A blockchain-based decentralized identity management scheme for large scale internet of things."
+      }
+    ],
+    "interpretacao": "A lista de referências indica que o estudo está inserido em um contexto de pesquisa avançada sobre identidade digital descentralizada, credenciais verificáveis e técnicas criptográficas de prova de conhecimento zero, reforçando a relevância do trabalho para aplicações de IIoT em cidades inteligentes.",
+    "duvidas": "Quais são os detalhes específicos da estrutura de acumulador de janela deslizante proposta e como ela se compara, em termos de desempenho e consumo de recursos, com os acumuladores dinâmicos citados nas referências (por exemplo, ref. 46)?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:27:07"
+}

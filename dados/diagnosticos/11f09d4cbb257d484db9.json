@@ -1,0 +1,129 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-16T16:59:55",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. A ideia já está publicada; esta etapa só acrescenta um caminho possível.",
+  "entrada": {
+    "ideia": "Criar protocolos de controle de acesso baseado em atributos que integrem políticas granulares e preservem a descentralização.",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Li_2025",
+          "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "9204f94425974d5dcd28",
+              "pagina": 1,
+              "resumo": "Revisão sistemática que analisa soluções baseadas em blockchain para preservação de privacidade no compartilhamento de dados de saúde, identificando que a maioria das propostas está em estágio de prova de conceito (TRL3) e que buscas e verificações privativas ainda são pouco exploradas.",
+              "evidencias": [
+                {
+                  "citacao": "privacy-preserving search and verification remain underexplored",
+                  "afirmacao": "privacy-preserving search and verification remain underexplored"
+                }
+              ]
+            },
+            {
+              "id": "a401c6bcf9ae3644122e",
+              "pagina": 4,
+              "resumo": "O trecho destaca a importância da integridade, verificação, autenticação e autorização dos dados de saúde em ambientes de blockchain, ressaltando requisitos regulatórios (HIPAA, GDPR) e a necessidade de mecanismos de busca eficientes para uso secundário, além de descrever as etapas do compartilhamento de dados em saúde.",
+              "evidencias": [
+                {
+                  "citacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage",
+                  "afirmacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage"
+                }
+              ]
+            },
+            {
+              "id": "a11b06389fc8def579c1",
+              "pagina": 6,
+              "resumo": "O trecho descreve os principais desafios de privacidade ao usar blockchain para compartilhamento de dados de saúde, como transparência, imutabilidade, inferência de identidade, vulnerabilidades em contratos inteligentes e a complexa gestão on/off‑chain. Também apresenta métodos de preservação, destacando mecanismos on/off‑chain, PoS e PBFT como opções mais adequadas para ambientes de saúde.",
+              "evidencias": [
+                {
+                  "citacao": "Blockchain’s transparency is beneficial for data integrity but creates risks when sensitive data is involved.",
+                  "afirmacao": "Blockchain’s transparency is beneficial for data integrity but creates risks when sensitive data is involved."
+                }
+              ]
+            },
+            {
+              "id": "cb8ef267426e5f148dfd",
+              "pagina": 8,
+              "resumo": "O artigo descreve a metodologia de uma revisão sistemática sobre privacidade em compartilhamento de dados de saúde baseado em blockchain, apresentando três perguntas de pesquisa, estratégia de busca (2008‑2024, IEEE, ACM, etc.) e critérios de inclusão. Destaca o uso de proxy re‑encryption para compartilhar dados sem expor privacidade e adota os Níveis de Maturidade Tecnológica (TRL) para avaliar a prontidão das soluções, indicando que a maioria está em estágio de prova de conceito (TRL3).",
+              "evidencias": [
+                {
+                  "citacao": "When a data requester applies for it, the proxy can transform the ciphertext of healthcare data into one that the requester can decode with their private key.",
+                  "afirmacao": "Proxy re‑encryption enables healthcare data to be shared without revealing individual privacy."
+                },
+                {
+                  "citacao": "First assessment of the feasibility of the concept and technologies with prototypes",
+                  "afirmacao": "The study classifies technology maturity using TRL levels, identifying most solutions at TRL3."
+                }
+              ]
+            }
+          ],
+          "problema": "Performance may degrade as the number of nodes increases due to communication overhead.",
+          "solucao": "Permissioned access: Only authorized participants can join the network, ensuring controlled and secure data sharing within the consortium.",
+          "avaliacao": "High performance: The consortium blockchain, in combination with the PBFT consensus algorithm, enables fast transaction throughput and efficient resource usage.",
+          "limites": "Relies on trust between consortium members, which may limit adoption in competitive environments.",
+          "possibilidades": "Avaliar a aplicação de blockchains permissionless com SSI em cidades inteligentes, medindo impactos na interoperabilidade de identidade auto‑soberana.; Comparar desempenho e privacidade entre padrões permissioned e permissionless em ambientes de edge computing para IoT industrial.; Desenvolver mecanismos de revogação de credenciais verificáveis adaptados a consórcios, reduzindo a dependência de confiança entre participantes.; Integrar criptografi",
+          "assinatura": "b8443972948d3ef5dd5c"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": {
+      "descricao": "Implementar um protocolo de Controle de Acesso Baseado em Atributos (ABAC) descentralizado que combine criptografia baseada em atributos (ABE) com credenciais verificáveis (Verifiable Credentials) emitidas por um framework SSI (e.g., Hyperledger Indy/Aries). O protótipo será integrado a um blockchain permissionless (Ethereum) para registro de políticas e auditoria. O desempenho e a privacidade serão comparados com a solução de controle de acesso baseada em políticas descrita por Li_2025 (ABAC em blockchain permissionado para saúde).",
+      "comparacao": "Li_2025 – revisão sistemática que identifica soluções de controle de acesso e privacidade em blockchains permissionados (TRL 3)."
+    },
+    "recursos": {
+      "dados": [
+        {
+          "nome": "SmartSantander",
+          "descricao": "Conjunto de dados de sensores urbanos (tráfego, qualidade do ar, energia) coletados em Santander, Espanha.",
+          "disponibilidade": "Repositório público (https://smartcitylab.org/dataset)"
+        },
+        {
+          "nome": "CityPulse",
+          "descricao": "Fluxos de eventos de serviços de cidade inteligente (mobilidade, iluminação pública).",
+          "disponibilidade": "Open data portal da cidade de Lisboa"
+        }
+      ],
+      "ferramentas": [
+        "Hyperledger Fabric (para protótipo permissionado de referência)",
+        "Ethereum Goerli testnet (para blockchain permissionless)",
+        "Hyperledger Indy/Aries (geração e verificação de Verifiable Credentials)",
+        "Charm-Crypto (implementação de CP-ABE)",
+        "Docker + Kubernetes (orquestração de nós de edge)",
+        "Prometheus + Grafana (monitoramento de métricas)"
+      ],
+      "infraestrutura": [
+        "Cluster de 5 máquinas virtuais (2 CPU, 8 GB RAM cada) para simular nós de edge e nós de blockchain",
+        "Rede LAN emulada com latência configurável (tc netem) para testar escalabilidade"
+      ]
+    },
+    "metricas": [
+      "Latência média da autorização (ms) – tempo entre requisição e decisão de acesso",
+      "Throughput de transações de política (tx/s) – número de atualizações de política registradas no blockchain",
+      "Tempo de revogação de credencial (ms) – intervalo entre revogação e efeito efetivo no sistema",
+      "Overhead de comunicação (KB por operação) – volume de dados trocados entre nós de edge e blockchain",
+      "Taxa de falsos positivos/negativos na aplicação de políticas ABAC",
+      "Índice de privacidade (leakage) medido por análise de atributos expostos em logs de transação"
+    ],
+    "duvidas_orientador": [
+      "Qual modelo de consenso (PBFT vs. PoS) oferece melhor trade‑off entre latência e segurança para o cenário de edge computing em cidades inteligentes?",
+      "Como garantir a revogação eficiente de credenciais verificáveis sem sobrecarregar a rede blockchain, considerando a necessidade de atualização de políticas ABAC?",
+      "É mais vantajoso armazenar políticas ABAC on‑chain (immutabilidade) ou off‑chain com hash de referência, considerando requisitos de privacidade e escalabilidade?",
+      "Qual estratégia de gerenciamento de chaves (atributo‑based vs. identity‑based) reduz o risco de comprometimento em ambientes com milhares de dispositivos IoT?",
+      "De que forma a heterogeneidade dos dispositivos (capacidade computacional limitada) impacta a escolha da biblioteca ABE (e.g., CP‑ABE vs. KP‑ABE) no protótipo?"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:00:41"
+}

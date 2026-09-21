@@ -1,0 +1,71 @@
+{
+  "fontes": [
+    {
+      "id": "Vaziry_2025",
+      "titulo": "SoK: A Taxonomy for Distributed-Ledger-Based Identity Management",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "315584a7579e15581c02",
+          "pagina": 1,
+          "resumo": "O artigo apresenta a primeira taxonomia metodológica para arquiteturas de identidade baseadas em ledger distribuído, derivada da análise de 390 artigos e discussões de especialistas, contendo 22 dimensões e 113 características organizadas em três grupos, facilitando a análise, comparação e design de soluções de identidade blockchain.",
+          "evidencias": [
+            {
+              "citacao": "The intersection of blockchain (distributed ledger) and identity management lacks a comprehensive architectural framework for classifying distributed-ledger-based identity solutions.",
+              "afirmacao": "The intersection of blockchain (distributed ledger) and identity management lacks a comprehensive architectural framework for classifying distributed-ledger-based identity solutions."
+            },
+            {
+              "citacao": "The resulting artifact comprises 22 dimensions with 113 characteristics organized into three groups: trust anchor implementations, identity architectures (identifiers and credentials), and ledger specifications.",
+              "afirmacao": "The resulting artifact comprises 22 dimensions with 113 characteristics organized into three groups: trust anchor implementations, identity architectures (identifiers and credentials), and ledger specifications."
+            }
+          ]
+        },
+        {
+          "id": "812ceb6743b1dcaabce7",
+          "pagina": 2,
+          "resumo": "O artigo propõe uma taxonomia para gestão de identidade baseada em ledger distribuído, contendo 22 dimensões e 113 características, desenvolvida em três iterações e validada em duas arquiteturas de sistemas representativas. Apresenta fundamentos de blockchain, identidade digital, SSI, DIDs e VCs, e discute os papéis de emissor, detentor e verificador.",
+          "evidencias": [
+            {
+              "citacao": "SSI proclaims a system design that empowers individuals to control their digital identities without relying on central authorities",
+              "afirmacao": "SSI proclama um design de sistema que capacita indivíduos a controlar suas identidades digitais sem autoridades centrais."
+            }
+          ]
+        },
+        {
+          "id": "3c0d20a12c6881d609bc",
+          "pagina": 3,
+          "resumo": "O trecho descreve como âncoras de confiança em sistemas de identidade baseados em ledger distribuído podem ser o próprio ledger, estruturas de governança ou chaves criptográficas. Explica as diferenças entre redes permissionadas e permissionless, destacando custos de transação. Aponta que DLT oferece registro imutável e compartilhamento seguro, mitigando falhas únicas, e argumenta que taxonomias existentes são insuficientes, motivando a criação de uma nova classificação abrangente.",
+          "evidencias": [
+            {
+              "citacao": "DLT provides promising capabilities including immutable record-keeping and secure sharing of verification material, without a single point of failure.",
+              "afirmacao": "DLT provides promising capabilities including immutable record-keeping and secure sharing of verification material, without a single point of failure."
+            }
+          ]
+        },
+        {
+          "id": "cb4ad45dabf0401bd9a1",
+          "pagina": 4,
+          "resumo": "O trecho descreve a criação de uma taxonomia para sistemas de identidade baseados em DLT, destacando a ausência de método estruturado para comparar soluções quanto a confiança, governança e gerenciamento de credenciais. A taxonomia, desenvolvida iterativamente segundo a metodologia de Nickerson, busca cobrir todo o espectro de arquiteturas IDM, garantindo completude, consistência e utilidade, e foi validada por revisão de literatura e painel de especialistas.",
+          "evidencias": [
+            {
+              "citacao": "there is no structured method to assess and compare these solutions, particularly regarding critical aspects such as trust sources, governance frameworks, and credential management.",
+              "afirmacao": "não há método estruturado para avaliar e comparar soluções DLT‑based IDM"
+            }
+          ]
+        }
+      ],
+      "problema": "device identity verification",
+      "solucao": "blockchain-based framework",
+      "avaliacao": "highly reliable cross-domain identity authentication protocol",
+      "limites": "Another limitation could be the rapid evolution of the research field",
+      "possibilidades": "Mapear os esquemas citados usando a taxonomia proposta para identificar lacunas de interoperabilidade entre blockchains públicos e permissionados em cenários de IoT urbano; avaliar desempenho de revogação dinâmica de credenciais em edge/fog computing; integrar atributos de criptografia baseada em atributos (ABE) para controle de acesso granular; explorar a combinação com SSI e credenciais verificáveis para melhorar a privacidade dos cidadãos em s",
+      "assinatura": "69bf6bb4eb63384d586c"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

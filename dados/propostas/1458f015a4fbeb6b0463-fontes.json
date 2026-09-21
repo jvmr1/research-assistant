@@ -1,0 +1,75 @@
+{
+  "fontes": [
+    {
+      "id": "Abdullahi_2025",
+      "titulo": "On the adoption and deployment of secure and privacy-preserving IIoT in smart manufacturing: a comprehensive guide with recent advances",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "dd3da9e9b6d40d1d2019",
+          "pagina": 1,
+          "resumo": "O artigo apresenta um guia detalhado para adoção e implantação de mecanismos de defesa que garantam segurança e privacidade no IIoT aplicado à manufatura inteligente, destacando os desafios de segurança decorrentes da convergência IT/OT e a carência de orientações práticas.",
+          "evidencias": [
+            {
+              "citacao": "such inherent interconnectivity introduces significant security and privacy challenges.",
+              "afirmacao": "A interconectividade inerente do IIoT gera desafios significativos de segurança e privacidade."
+            },
+            {
+              "citacao": "there is a lack of specific follow-through guides on how to adopt and implement such mechanisms.",
+              "afirmacao": "Existe falta de guias específicos para adoção e implementação dos mecanismos de defesa."
+            }
+          ]
+        },
+        {
+          "id": "ed4ab4a74904066e6ad9",
+          "pagina": 2,
+          "resumo": "O trecho descreve que a adoção do IIoT na manufatura inteligente enfrenta sérias barreiras de cibersegurança devido à integração heterogênea de dispositivos, ampliando a superfície de ataque. O trabalho propõe um levantamento abrangente que oferece mecanismos de defesa robustos e diretrizes detalhadas para garantir uma infraestrutura IIoT segura e preservadora da privacidade, preenchendo a lacuna de guias práticos deixada por pesquisas anteriores.",
+          "evidencias": [
+            {
+              "citacao": "However, cybersecurity concerns pose a significant obstacle to the adoption of IIoT, making it challenging to effectively utilize its capabilities.",
+              "afirmacao": "cybersecurity concerns pose a significant obstacle to the adoption of IIoT"
+            }
+          ]
+        },
+        {
+          "id": "2861ffdd0f638b3b4781",
+          "pagina": 3,
+          "resumo": "O artigo apresenta diretrizes abrangentes para adoção e implantação segura e com preservação de privacidade do IIoT em manufatura inteligente, descrevendo a arquitetura de quatro camadas, analisando ataques e contramedidas, e destacando a falta de um framework sistemático consolidado.",
+          "evidencias": [
+            {
+              "citacao": "Guidelines for ensuring the security and privacy of the IIoT tools and infrastructure are covered",
+              "afirmacao": "Foram apresentadas diretrizes abrangentes para garantir a segurança e privacidade das ferramentas IIoT."
+            }
+          ]
+        },
+        {
+          "id": "2ee88b18acabfedb3234",
+          "pagina": 4,
+          "resumo": "O artigo apresenta uma comparação de suas contribuições com outras revisões sobre vulnerabilidades e mecanismos de defesa em IIoT, inclui uma tabela detalhada e discute guias de segurança como o NIST IR 8259A e as recomendações da ENISA, apontando a ausência de procedimentos de implementação prática e a necessidade de recursos operacionais para fortalecer a segurança em ambientes de manufatura inteligente.",
+          "evidencias": [
+            {
+              "citacao": "the guide fails to provide implementation procedures for these guidelines.",
+              "afirmacao": "the guide fails to provide implementation procedures for these guidelines."
+            },
+            {
+              "citacao": "The framework proposed in the guide has been widely used to reduce cybersecurity threats in different manufacturing use cases.",
+              "afirmacao": "The framework proposed in the guide has been widely used to reduce cybersecurity threats in different manufacturing use cases."
+            }
+          ]
+        }
+      ],
+      "problema": "Lack of account suspension or deactivation regulations in place.",
+      "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+      "avaliacao": "The technique outperforms other access control-based methods in terms of security, computational expenses, storage complexity, and energy usage.",
+      "limites": "system is not readily available as a commercial product",
+      "possibilidades": "Integrar DHACS com Self‑Sovereign Identity e Verifiable Credentials para autenticação descentralizada de dispositivos.; Aplicar Attribute‑Based Encryption ao mecanismo de controle de acesso híbrido para reforçar a privacidade dos atributos.; Avaliar o desempenho de HASAO e DHACS em ambientes de edge computing com recursos limitados.; Combinar os protocolos de autenticação baseados em PUFs com técnicas de aprendizado de máquina para detecção proat",
+      "assinatura": "9de2ab0bcfc3fa9cca82"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

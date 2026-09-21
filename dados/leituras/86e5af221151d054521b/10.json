@@ -1,0 +1,42 @@
+{
+  "resumo": "O trecho descreve como credenciais verificáveis armazenadas em carteiras controladas pelos pacientes, associadas a blockchain, permitem rastrear prescrições e melhorar a rastreabilidade na cadeia de suprimentos de vacinas. Aponta exemplos de sistemas de rastreamento em alimentos e farmacêuticos que combinam IoT, IPFS e SSI, e destaca a adoção de contratos inteligentes para garantir integridade, condições de cadeia fria e relatórios de eventos adversos. Também menciona lacunas, como a falta de mecanismos de identidade descentralizada em algumas propostas.",
+  "perfil": {
+    "problema": "absence of decentralized identity mechanisms and cross-border compliance limits its applicability in global contexts.",
+    "solucao": "verifiable credentials in patient-controlled wallets and leveraging blockchain to track prescriptions",
+    "avaliacao": "Não informado",
+    "limites": "absence of decentralized identity mechanisms and cross-border compliance limits its applicability in global contexts.",
+    "possibilidades": [
+      "Integrar sensores IoT de cidades inteligentes para monitoramento em tempo real da cadeia de frio das vacinas.",
+      "Avaliar a interoperabilidade com registros SSI municipais e padrões de identidade descentralizada adotados por governos locais.",
+      "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de vacinação.",
+      "Testar mecanismos de revogação de credenciais transfronteiriças em ambientes de edge computing.",
+      "Adaptar o framework para tokenização e compartilhamento de energia em micro‑redes urbanas."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "verifiable credentials in patient-controlled wallets and leveraging blockchain to track prescriptions",
+      "afirmacao": "verifiable credentials in patient-controlled wallets and leveraging blockchain to track prescriptions"
+    },
+    {
+      "citacao": "absence of decentralized identity mechanisms and cross-border compliance limits its applicability in global contexts",
+      "afirmacao": "absence of decentralized identity mechanisms and cross-border compliance limits its applicability in global contexts"
+    }
+  ],
+  "interpretacao": "O texto evidencia que a combinação de SSI e blockchain pode fortalecer a confiança e a transparência na cadeia de suprimentos de vacinas, mas a ausência de identidade descentralizada em alguns projetos impede sua adoção global, sugerindo a necessidade de integrar SSI de forma padronizada.",
+  "duvidas": "Como garantir a escalabilidade das carteiras controladas pelos pacientes em ambientes de alta demanda? Quais são os custos operacionais de integrar ABE e IoT em cidades inteligentes para rastreamento de vacinas?",
+  "avisos": [],
+  "id": "f0b78c7ab1cdbe98764a",
+  "artigo": "Chaurasia_2026",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "absence of decentralized identity mechanisms and cross-border compliance limits its applicability in global contexts.",
+    "solucao": "verifiable credentials in patient-controlled wallets and leveraging blockchain to track prescriptions",
+    "avaliacao": "The results show the efficacy of the proposed system.",
+    "limites": "absence of decentralized identity mechanisms and cross-border compliance limits its applicability in global contexts.",
+    "possibilidades": "Integrar sensores IoT de cidades inteligentes para monitoramento em tempo real da cadeia de frio das vacinas.; Avaliar a interoperabilidade com registros SSI municipais e padrões de identidade descentralizada adotados por governos locais.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de vacinação.; Testar mecanismos de revogação de credenciais transfronteiriças em ambientes de edge computing.; Adaptar o framework para tokenização e compartilhamento de energia em micro‑redes urbanas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86e5af221151d054521b"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "fontes": [
+    {
+      "id": "Mansoor_2025",
+      "titulo": "Integration of smart sensors and IOT in precision agriculture: trends, challenges and future prospectives",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "problema": "Não identificado nas fichas/trechos disponíveis.",
+      "solucao": "Não identificado nas fichas/trechos disponíveis.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Integração de blockchain para gerenciamento de propriedade de dados, redução de custos por meio de sistemas de IoT descentralizados, melhorias na segurança cibernética para sistemas autônomos",
+      "assinatura": "e73bf8f305e248c11acb"
+    },
+    {
+      "id": "Hudda_2025",
+      "titulo": "A review on WSN based resource constrained smart IoT systems",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "problema": "The predominant focus of current research works on energy efficiency is on selecting cluster heads using criteria like distance, residual energy, and node degree.",
+      "solucao": "Não identificado nas fichas/trechos disponíveis.",
+      "avaliacao": "The current study also recognizes that advanced technologies like SDN, ML, 5G, D2D communication, big data, cloud computing, computer vision, and edge computing could significantly enhance the capabilities of smart systems.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Extensão de mecanismos de seleção de heads de cluster com inclusão de parâmetros adicionais como carga, contagem de heads, atraso e SNR.",
+      "assinatura": "8cb3601322181c7d0ac2"
+    }
+  ],
+  "metodo": "perfis acumulados"
+}

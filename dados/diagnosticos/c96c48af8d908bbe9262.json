@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:40:16",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Evaluating self-sovereign identity solutions for agricultural supply chains: a systematic review",
+    "perfil_anterior": {
+      "problema": "there is a lack of literature on their combined application in agricultural supply chains.",
+      "solucao": "prompting the exploration of SSI as a complementary technology to enhance trust and user-controlled authentication",
+      "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+      "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+      "possibilidades": "Realizar análise bibliométrica comparando a tendência de publicações sobre SSI em cadeias agrícolas com a de cidades inteligentes, identificando lacunas de pesquisa específicas.; Ampliar a revisão sistemática incluindo bases como ACM Digital Library e IEEE Xplore para capturar trabalhos emergentes em smart cities que combinam SSI e blockchain.; Desenvolver um protótipo que integre SSI, blockchain e ABE para controle de acesso granular a dados de sensores em edge computing de cidades inteligentes, avaliando desempenho sob diferentes cargas de publicação.; Investigar a relação entre o aumento de"
+    },
+    "pagina": 10,
+    "texto": "FIGURE 4 \nPercentage distribution of papers across years.\nTABLE 4 Summary of regional case studies dealing with blockchain application in food supply chain.\nRef Country Initiative \nname\nSector Blockchain \napplication\nFeatures\nMohammed et al. (2024) Ghana Cocoa Traceability \nInitiative\nCocoa Supply chain transparency Enhances ethical sourcing and transparency \nin cocoa supply chains\nKamath (2018) United States of \nAmerica\nIBM Food Trust General Food Food safety and traceability Improves food safety and reduces waste by \nproviding end-to-end visibility of the food \nsupply chain\nGulen et al. (2024) Turkey Turkish Agricultural \nBlockchain\nGeneral Food Traceability and quality \nassurance\nAims to improve transparency and \ntraceability in food supply chains\nPeng et al. (2022) China Smart Agriculture \nBlockchain\nGeneral Food Agricultural finance and \ntraceability\nIntegrates financial services with supply \nchain transparency\nMishra and Maheshwari \n(2021)\nIndia Blockchain in Public \nDistribution\nFood Security Prevents supply leakage Enhances transparency and reduces \ncorruption\nPremchandran and \nBatchu Veera (2023)\nIndia AgriChain General \nAgriculture\nSupply chain management Improves efficiency and reduces waste\nRambhia et al. (2022) India Agri10x Agriculture Marketplace Platform Connects farmers directly with buyers, \nensures transparency\nXu et al. (2019) Australia AgriDigital Grains Digital grain trading Facilitates secure transactions and \nownership\nKamilaris et al. (2019) Netherlands Provenance Various \nAgricultural\nProduct origin tracking Empowers consumers with information \nabout product origins\nKumar and Perepu \n(2023)\nKenya Twiga Foods Fresh Produce Supply Chain Optimization Connects farmers directly with retailers\nNdlovu and Masuku \n(2021)\nSouth Africa Grain SA Grains Market access for farmers Enhances market transparency and farmer \nincome\nLi et al. (2023b) Brazil BlockAgro General \nAgriculture\nTraceability in agricultural \nproducts\nCombats fraud and ensures quality\nThiruchelvam et al. \n(2018)\nBurundi Coffee Blockchain Coffee Supply \nChain\nCoffee traceability and fair trade Ensures transparency, traceability, and \nfairness for coffee producers and exporters\nNyuk Mee et al. (2021) Malaysia Agrolink Agriculture and \nFood Supply\nInformation sharing platform \nfor agricultural stakeholders\nLinks farmers, producers, service providers, \nand institutions for seamless supply chain \nconnectivity\nFrontiers in Blockchain frontiersin.org10\nAlar et al. 10.3389/fbloc.2025.1672752",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho apresenta a Figura 4, que mostra a distribuição percentual de artigos ao longo dos anos, e a Tabela 4, que resume estudos de caso regionais de aplicação de blockchain em cadeias de suprimentos alimentares. São listadas iniciativas de diversos países (Gana, EUA, Turquia, China, Índia, etc.) focadas em rastreabilidade, transparência, segurança alimentar, financiamento agrícola e conectividade entre produtores e compradores.",
+    "perfil": {
+      "problema": "there is a lack of literature on their combined application in agricultural supply chains.",
+      "solucao": "prompting the exploration of SSI as a complementary technology to enhance trust and user-controlled authentication",
+      "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+      "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+      "possibilidades": [
+        "Comparar as iniciativas de blockchain listadas na Tabela 4 com projetos de cidades inteligentes que utilizam SSI, identificando lacunas de interoperabilidade e oportunidades de integração.",
+        "Desenvolver um protótipo que combine SSI, blockchain e ABE para controle de acesso granular aos dados de sensores agrícolas citados, avaliando desempenho em edge computing.",
+        "Realizar análise bibliométrica da evolução temporal (Figura 4) das publicações sobre blockchain em cadeias agrícolas versus publicações sobre identidade auto-soberana em smart cities.",
+        "Investigar a viabilidade de estender as soluções de rastreabilidade (ex.: IBM Food Trust) para incluir credenciais verificáveis que garantam a privacidade dos agricultores."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Existem iniciativas de blockchain em cadeias de suprimentos agrícolas em diversos países.",
+        "citacao": "TABLE 4 Summary of regional case studies dealing with blockchain application in food supply chain."
+      },
+      {
+        "afirmacao": "A iniciativa IBM Food Trust nos EUA melhora a segurança alimentar e a rastreabilidade.",
+        "citacao": "Kamath (2018) United States of America IBM Food Trust ... Improves food safety and reduces waste by providing end-to-end visibility of the food supply chain"
+      }
+    ],
+    "interpretacao": "O material evidencia que a adoção de blockchain para rastreabilidade e transparência está disseminada globalmente em cadeias agrícolas, mas não aborda a integração com identidades auto-soberanas, sugerindo uma oportunidade de pesquisa para combinar essas tecnologias em contextos de cidades inteligentes.",
+    "duvidas": "Como a SSI poderia ser incorporada às iniciativas de blockchain descritas? Quais desafios de interoperabilidade surgiriam ao conectar credenciais verificáveis com sistemas de rastreabilidade agrícola existentes?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:41:23"
+}

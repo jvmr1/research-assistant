@@ -1,0 +1,129 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-16T14:45:54",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. A ideia já está publicada; esta etapa só acrescenta um caminho possível.",
+  "entrada": {
+    "ideia": "Realizar testes de desempenho em hardware IoT de baixa potência, medindo latência, consumo de energia e throughput",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Ding_2025",
+          "titulo": "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 14,
+            "total": 14,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "aca07f96824f175c2454",
+              "pagina": 2,
+              "resumo": "O artigo apresenta o modelo VS‑DID para meta‑computação em IIoT, combinando armazenamento on‑chain e off‑chain e introduzindo um registro verificável baseado em compromissos chave‑valor para vincular chaves públicas a DIDs. Para reduzir custos de manutenção, propõe‑se um mecanismo de armazenamento com acumulador de janela deslizante que otimiza consultas e verificações, atendendo a metas de eficiência, economia de espaço e atualizações em tempo real.",
+              "evidencias": [
+                {
+                  "citacao": "We have proposed a novel verifiable registry scheme that is specifically tailored for DID documents.",
+                  "afirmacao": "O modelo propõe um registro verificável baseado em compromissos chave‑valor para documentos DID."
+                },
+                {
+                  "citacao": "we propose a slide-window accumulator-based storage mechanism",
+                  "afirmacao": "Um mecanismo de armazenamento baseado em acumulador de janela deslizante melhora o desempenho das consultas de identidade."
+                }
+              ]
+            },
+            {
+              "id": "c1096371d2c7a5ba19a1",
+              "pagina": 4,
+              "resumo": "O texto apresenta o conceito de meta‑computação aplicada ao IIoT, destacando a necessidade de verificação de identidade cruzada entre domínios. Identifica limitações de soluções centralizadas (PKI, identidade federada) e de abordagens descentralizadas (sobrecarga computacional, interoperabilidade limitada). Propõe um esquema DID híbrido on‑chain/off‑chain com acumulador de janela deslizante para melhorar escalabilidade e eficiência de verificação, integrando identidade de usuários e dispositivos em ambientes de meta‑computação.",
+              "evidencias": [
+                {
+                  "citacao": "Existing identity management solutions in IIoT, such as centralized Public Key Infrastructure (PKI) and federated identity systems [13, 2], face challenges in scalability and trustworthiness due to their reliance on centralized authorities.",
+                  "afirmacao": "Existing identity management solutions in IIoT ... face challenges in scalability and trustworthiness."
+                }
+              ]
+            },
+            {
+              "id": "af2b3bb0ebc4c645e2c7",
+              "pagina": 6,
+              "resumo": "O artigo apresenta um esquema de registro verificável baseado em identidade descentralizada (VS‑DID) que utiliza compromissos vetoriais, provas geradas via Hyperproof e polynomial commitments, e agrega provas por meio de Non‑interactive Inner Product Arguments (IPA) em uma árvore linear binária, permitindo geração, agregação, verificação e atualização de provas para vetores de identidade em IIoT.",
+              "evidencias": [
+                {
+                  "citacao": "The proposed vector commitment scheme includes four phases: generation of proof,aggregationofproof,verificationofproof,andupdate of proof.",
+                  "afirmacao": "O esquema inclui quatro fases: geração de prova, agregação de prova, verificação de prova e atualização de prova."
+                }
+              ]
+            },
+            {
+              "id": "d686b6b10ffd7d0e021c",
+              "pagina": 8,
+              "resumo": "O trecho descreve o processamento de consultas verificáveis em DIDs usando um acumulador de janela deslizante (SWAT). O método divide consultas em subconsultas, indexa palavras‑chave em blocos recentes e usa interseções de conjuntos para validar consultas, melhorando a eficiência em relação à agregação inter‑blocos tradicional. Algoritmos para consultas booleanas e de intervalo são apresentados, destacando a construção de provas Merkle e a capacidade de lidar com janelas de tempo maiores que K.",
+              "evidencias": [
+                {
+                  "citacao": "If the result of the intersection operation is an empty set, the query is deemed invalid",
+                  "afirmacao": "If the result of the intersection operation is an empty set, the query is deemed invalid"
+                },
+                {
+                  "citacao": "The sliding window accumulator is similar to a Merkle tree",
+                  "afirmacao": "The sliding window accumulator is similar to a Merkle tree"
+                }
+              ]
+            }
+          ],
+          "problema": "issue of authentication in meta-computing-enabled IIoT",
+          "solucao": "sliding window accumulator structure",
+          "avaliacao": "the verifier time remains constant at 0.003 seconds across all tree heights.",
+          "limites": "the size of the public parameters for the Merkle SNARK scheme reaches approximately 50GB, and the parameter generation process requires over 30 hours.",
+          "possibilidades": "Explorar a integração de governança de identidade baseada em cross‑chain (ref. 48) para melhorar a interoperabilidade entre diferentes domínios de IIoT; avaliar a aplicação de provas de conhecimento zero comprimidas (ref. 42) a fim de reduzir o tamanho dos parâmetros públicos e o tempo de geração; investigar a adoção de acumuladores dinâmicos autenticados por blockchain (ref. 46) para suportar revogação eficiente em ambientes de cidades inteligen",
+          "assinatura": "88b0facc537cd8e26acd"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": {
+      "descricao": "Implementar o esquema VS‑DID com acumulador de janela deslizante (conforme Ding_2025) em hardware IoT de baixa potência e comparar seu desempenho com um mecanismo de identidade tradicional (PKI baseada em certificados X.509) em termos de latência, consumo de energia e throughput de operações de registro, verificação e revogação.",
+      "comparacao": "Ding_2025 – VS‑DID com sliding‑window accumulator vs. solução PKI convencional (bibliotecas mbedTLS/OpenSSL) implementada no mesmo dispositivo."
+    },
+    "recursos": {
+      "hardware": [
+        "Placa ESP32‑WROOM‑32 (CPU Tensilica Xtensa 240 MHz, 520 KB SRAM, 4 MB Flash)",
+        "Placa STM32L4R9 (ARM Cortex‑M4 80 MHz, 1 MB SRAM, 2 MB Flash)",
+        "Raspberry Pi Zero 2 W (ARM Cortex‑A53 1 GHz, 512 MB RAM) para testes de escalabilidade"
+      ],
+      "instrumentos_de_medicao": [
+        "Medidor de corrente/voltagem de alta resolução (ex.: INA219) conectado ao dispositivo para registro de energia em tempo real",
+        "Osciloscópio ou analisador lógico para captura de timestamps de rede",
+        "Software de profiling (e.g., Espressif ESP‑IDF perf, ARM Keil µVision) para uso de memória e CPU"
+      ],
+      "software": [
+        "Framework de blockchain de teste (e.g., Hyperledger Besu private network ou Ganache) para armazenar registros on‑chain",
+        "Bibliotecas de criptografia pós‑quântica e de compromissos vetoriais (ex.: libsnark, arkworks) adaptadas ao C/C++/Rust",
+        "Implementação de PKI baseada em mbedTLS (para o baseline)",
+        "Ferramentas de automação de testes (Python pytest, Docker) para execução repetida"
+      ],
+      "dados": [
+        "Conjunto de mensagens sintéticas representando sensores (tamanho 64 B a 512 B) geradas por script",
+        "Perfis de carga de rede (latência 10‑200 ms, perda 0‑5 %) simulados com tc/netem"
+      ]
+    },
+    "metricas": [
+      "Latência média (ms) de registro de identidade no dispositivo",
+      "Latência média (ms) de verificação de credencial/DID",
+      "Consumo de energia (Joules) por operação (registro, verificação, revogação)",
+      "Throughput máximo (operacoes/s) sustentado sob carga contínua",
+      "Uso de memória RAM e Flash (KB) durante execução",
+      "Tempo de geração de parâmetros públicos (segundos) – relevante para viabilidade prática"
+    ],
+    "duvidas_orientador": [
+      "Qual o limite prático de tamanho dos parâmetros públicos (ex.: Merkle SNARK) que o ESP32 pode armazenar sem comprometer outras funções?",
+      "A implementação de provas de conhecimento zero (IPA, Hyperproof) pode ser otimizada para rodar em <100 ms em dispositivos de 80 MHz?",
+      "Como garantir a sincronização segura do acumulador de janela deslizante entre dispositivos e a blockchain pública em cenários de conectividade intermitente?",
+      "É necessário adaptar o protocolo de comunicação (MQTT, CoAP) para transportar provas compactas sem inflar o overhead de rede?",
+      "Quais estratégias de gerenciamento de energia (sleep modes, duty cycling) são compatíveis com a necessidade de atualização frequente do acumulador?"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:46:20"
+}

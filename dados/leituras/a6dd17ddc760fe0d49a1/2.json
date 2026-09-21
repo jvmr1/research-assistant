@@ -1,0 +1,32 @@
+{
+  "resumo": "Dissertação de mestrado de André Luiz Almeida Cardoso (2024) intitulada “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, com 77 páginas, orientada por Francisco José da Silva e Silva e coorientada por Arlindo Flavio da Conceição, apresentada ao Programa de Pós‑graduação em Ciência da Computação da UFMA.",
+  "perfil": {
+    "problema": "Não identificado nas fichas/trechos disponíveis.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração do modelo proposto com identidades autossoberanas (SSI) e credenciais verificáveis; avaliar interoperabilidade entre diferentes plataformas de cidades inteligentes; investigar mecanismos de revogação e recuperação de credenciais usando criptografia homomórfica ou ABE; analisar desempenho e escalabilidade em ambientes IoT."
+  },
+  "evidencias": [
+    {
+      "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+      "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+    }
+  ],
+  "interpretacao": "O trabalho parece focar na construção de um framework de identidade digital para ambientes urbanos inteligentes, utilizando a plataforma Hyperledger Fabric e integrando dispositivos IoT, visando melhorar a segurança e a confiabilidade da gestão de identidades.",
+  "duvidas": "Quais são os requisitos funcionais e não funcionais detalhados do modelo? Como foi realizada a avaliação experimental ou de desempenho? O estudo aborda questões de privacidade, revogação ou recuperação de credenciais? Há discussões sobre interoperabilidade com outros padrões de identidade digital?",
+  "avisos": [],
+  "id": "68eb2691f5e562c5f06f",
+  "artigo": "Exemplo_da24de257de987bc603b",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Não identificado nas fichas/trechos disponíveis.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração do modelo proposto com identidades autossoberanas (SSI) e credenciais verificáveis; avaliar interoperabilidade entre diferentes plataformas de cidades inteligentes; investigar mecanismos de revogação e recuperação de credenciais usando criptografia homomórfica ou ABE; analisar desempenho e escalabilidade em ambientes IoT.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "a6dd17ddc760fe0d49a1"
+  }
+}

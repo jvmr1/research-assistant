@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:35:10",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "device authentication",
+      "solucao": "registration and uploading of the file into the proposed framework",
+      "avaliacao": "Total number of transactions per block",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Avaliar o impacto da latência de rede em ambientes de cidades inteligentes com múltiplas sub-redes.; Comparar o uso de diferentes algoritmos de hash (ex.: SHA‑256 vs Keccak‑256) quanto ao consumo energético em dispositivos IoT de saúde.; Integrar mecanismos de identidade auto‑soberana (SSI) para substituir a autenticação baseada apenas em contratos inteligentes.; Estender a avaliação de desempenho para ambientes de nuvem híbrida, combinando edge computing e recursos de data‑center."
+    },
+    "pagina": 10,
+    "texto": "Page 10 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \ncontract functionalities. A device proxy is used to identify and register these devices. All \nactions done by these devices are watched by the device proxy. Registration of a device \nrequires proof of identity. The decentralised application (dApp) based on smart con -\ntracts connects all users and patients to the healthcare system, addressing the concerns \nof security, privacy, scalability, trustworthiness, and transparency. Users’ data uploaded \nusing the decentralized app are stored in the Interplanetary File System. A crypto -\ngraphic hash value generated from this file will be uploaded to the Blockchain network. \nA step-by-step process for using this proposed framework to retrieve the files is pro -\nvided in Algorithm 2. When a user connects to the decentralized application and desires \nto access a file from this system, the user must first send a request to the system. The \nfile’s unique Hash value will be retrieved from the Blockchain network. This hash value \nwill be checked against the hash values in the interplanetary file system. Once the hash \nvalue has been matched, the user will obtain the appropriate file for further processing. \nThe encryption and decryption process of proposed healthcare system is presented in \nAlgorithm 3.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho propõe um framework onde um device proxy registra dispositivos mediante prova de identidade, e uma dApp baseada em smart contracts conecta usuários e pacientes ao sistema de saúde. Dados são armazenados no IPFS e seu hash criptográfico é gravado na blockchain; a recuperação ocorre mediante verificação do hash. O processo de criptografia/decriptação é descrito no Algoritmo 3.",
+    "perfil": {
+      "problema": "requires proof of identity",
+      "solucao": "A device proxy is used to identify and register these devices.",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "Integrar identidade auto‑soberana (SSI) para substituir a prova de identidade baseada em proxy; Avaliar o impacto da latência de rede na recuperação de arquivos em ambientes de cidades inteligentes; Comparar diferentes algoritmos de hash (ex.: SHA‑256 vs Keccak‑256) quanto ao consumo energético dos dispositivos IoT de saúde; Extender o framework para suportar computação de borda (edge computing) e nuvem híbrida, medindo desempenho e escalabilidade."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "A device proxy is used to identify and register these devices.",
+        "citacao": "A device proxy is used to identify and register these devices."
+      },
+      {
+        "afirmacao": "The encryption and decryption process of proposed healthcare system is presented in Algorithm 3.",
+        "citacao": "The encryption and decryption process of proposed healthcare system is presented in Algorithm 3."
+      }
+    ],
+    "interpretacao": "O trecho descreve um fluxo completo de registro, armazenamento e recuperação de dados de saúde, combinando um proxy de dispositivos para autenticação, uma dApp para interação e IPFS + blockchain para integridade e disponibilidade dos arquivos.",
+    "duvidas": "Qual o mecanismo exato de prova de identidade exigido pelo device proxy? Como são gerenciados os direitos de acesso ao arquivo após a verificação do hash?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:35:51"
+}

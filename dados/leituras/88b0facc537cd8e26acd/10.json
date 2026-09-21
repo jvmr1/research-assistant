@@ -1,0 +1,30 @@
+{
+  "resumo": "O estudo compara o esquema Merkle SNARK com o método proposto (Ours) para registro DID em IIoT, apresentando tabelas de tempos de agregação, verificação, compromisso e geração de parâmetros. Os resultados mostram que o método Ours tem tempos de prova agregada significativamente menores e que o tempo de verificação permanece constante (0.003 s) independentemente da altura da árvore Merkle. Também são detalhados os custos de geração de parâmetros e prova conforme o tamanho do vetor e a altura da árvore, evidenciando escalabilidade e eficiência.",
+  "perfil": {
+    "problema": "Security of DID Registry.DID Register scheme meets the correctness and soundness of the classic commitment scheme.",
+    "solucao": "sliding window accumulator structure",
+    "avaliacao": "the verifier time remains constant at 0.003 seconds across all tree heights.",
+    "limites": "the size of the public parameters for the Merkle SNARK scheme reaches approximately 50GB, and the parameter generation process requires over 30 hours.",
+    "possibilidades": "Avaliar o desempenho em ambientes edge/fog com milhares de dispositivos IIoT; integrar provas de conhecimento zero‑knowledge para revogação distribuída; adaptar dinamicamente o tamanho da janela conforme carga de atualizações em cidades inteligentes; interoperar com padrões SSI de órgãos públicos usando atributos ABE; explorar esquemas SNARK mais leves para reduzir tamanho de parâmetros e tempo de geração; medir consumo energético em dispositivos restritos."
+  },
+  "evidencias": [],
+  "interpretacao": "Os dados indicam que a estrutura de acumulador proposta oferece melhor desempenho em geração e verificação de provas, mantendo a verificação extremamente rápida mesmo com árvores de maior profundidade, o que é favorável para aplicações IIoT em cidades inteligentes onde a latência é crítica.",
+  "duvidas": "Não há informações sobre o consumo de energia dos dispositivos ao executar o algoritmo proposto nem sobre a robustez frente a falhas de rede em ambientes distribuídos.",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "ccfa292a645f6aa93019",
+  "artigo": "Ding_2025",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Security of DID Registry.DID Register scheme meets the correctness and soundness of the classic commitment scheme.",
+    "solucao": "sliding window accumulator structure",
+    "avaliacao": "the verifier time remains constant at 0.003 seconds across all tree heights.",
+    "limites": "the size of the public parameters for the Merkle SNARK scheme reaches approximately 50GB, and the parameter generation process requires over 30 hours.",
+    "possibilidades": "Avaliar o desempenho em ambientes edge/fog com milhares de dispositivos IIoT; integrar provas de conhecimento zero‑knowledge para revogação distribuída; adaptar dinamicamente o tamanho da janela conforme carga de atualizações em cidades inteligentes; interoperar com padrões SSI de órgãos públicos usando atributos ABE; explorar esquemas SNARK mais leves para reduzir tamanho de parâmetros e tempo de geração; medir consumo energético em dispositivos restritos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "88b0facc537cd8e26acd"
+  }
+}

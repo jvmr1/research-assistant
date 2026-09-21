@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:01:46",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control",
+    "perfil_anterior": {
+      "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+      "solucao": "addressed by YouGovern through its use of BSC, role-based smart contracts, and hybrid storage",
+      "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+      "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+      "possibilidades": "Investigar a integração do consenso SBC com o YouGovern para identidade ultra‑leve em edge IoT; avaliar a combinação de DNS‑IdM e YouGovern para delegação de identidade a agentes de borda em cidades inteligentes; desenvolver mecanismos de revogação baseados em ZKP sobre a arquitetura híbrida; medir o desempenho e custo do armazenamento híbrido (on‑chain + IPFS) em cenários de grande escala."
+    },
+    "pagina": 11,
+    "texto": "Appl. Sci. 2025, 15, 6437 11 of 26\n \n \n \n \n \n \n \n \n \n \n \n \n \n \nFigure 4. Blockchain Storage Explanation.\n3.3. Use Case Model\nUse case models are models of how several types of users interrelate with the system\nto solve a problem. The use case model shown in Figure 5 defines the journey of the user to\nthis web application. A user first signs in or signs up with his MetaMask account, and his\naddress is recorded in the blockchain; he can also change their account address. Then he\nneeds to enter all detailed information about himself. There is also an option to upload a\nfile to IPFS, in which the hash of the file is internally stored in a smart contract. Now, other\nusers can send a request to see that data by sending a request transaction from a function.\nThen the owner of the data will see the request, and he can accept or reject that request. If\nthe user who requested the data gets his request approved, then he can download the file\ncontaining all the data for a particular user only.\n \n \n \n \n \nFigure 5. Use Case Diagram with respect to the User.\n3.4. Use Case Essential\nThe essential use case is also known as a business use case. It is a simplified, abstract,\ngeneralized use case that captures the intentions of a user in the desired technology and\nperforms independently (Table 3).",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve o modelo de caso de uso do YouGovern, onde o usuário entra com MetaMask, registra seu endereço na blockchain, carrega arquivos no IPFS e armazena o hash no contrato inteligente. Outros usuários podem solicitar acesso ao arquivo via transação; o proprietário aprova ou rejeita e, se aprovado, o solicitante baixa o dado.",
+    "perfil": {
+      "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+      "solucao": "addressed by YouGovern through its use of BSC, role-based smart contracts, and hybrid storage",
+      "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+      "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+      "possibilidades": "Avaliar a usabilidade e segurança do fluxo de consentimento baseado em solicitações de acesso via smart contracts em ambientes de cidades inteligentes; integrar controle de acesso baseado em atributos (ABE) ao modelo de solicitação de dados armazenados no IPFS; testar a escalabilidade do armazenamento híbrido (on‑chain + IPFS) com múltiplos usuários simultâneos; explorar revogação automática de permissões usando ZKP quando o usuário altera seu endereço MetaMask."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "User signs in or signs up with his MetaMask account, and his address is recorded in the blockchain",
+        "citacao": "A user first signs in or signs up with his MetaMask account, and his address is recorded in the blockchain"
+      },
+      {
+        "afirmacao": "The hash of the uploaded file is stored in a smart contract and other users can request access via a transaction",
+        "citacao": "There is also an option to upload a file to IPFS, in which the hash of the file is internally stored in a smart contract. Now, other users can send a request to see that data by sending a request transaction from a function."
+      }
+    ],
+    "interpretacao": "O modelo de caso de uso demonstra como o YouGovern implementa controle de acesso descentralizado a dados pessoais armazenados em IPFS, usando solicitações de transação para aprovação pelo proprietário, reforçando a proposta de identidade auto‑soberana e gerenciamento de permissões na blockchain.",
+    "duvidas": "Como o sistema revoga acessos concedidos após mudanças de endereço ou políticas? Qual o impacto de múltiplas solicitações simultâneas no desempenho medido (12,5 tps)? Existe suporte para agentes/guardians no fluxo de consentimento descrito?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:03:32"
+}

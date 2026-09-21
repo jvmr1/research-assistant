@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta uma abordagem baseada em blockchain permissionada para autenticação escalável e preservação de privacidade em ambientes IoT, incluindo cidades inteligentes e industriais. Propõe algoritmos que validam atributos de usuários usando criptografia avançada (ECC, ring signatures, chaves mestras) e criptografia homomórfica total (FHE), permitindo processamento de dados criptografados sem descriptografia. O framework inclui seleção de cluster head baseada na energia da bateria, contratos inteligentes multi‑assinatura, e mecanismos de anonimato via ring signatures. Avaliações (AVISPA, METRE) demonstram resistência a ataques de colusão e phishing, com latência inferior a modelos de referência e boa escalabilidade em Hyperledger Fabric. Os resultados sugerem que a combinação de técnicas criptográficas leves e blockchain pode atender aos requisitos de segurança, privacidade e eficiência energética de IoT crítico.",
+  "lacunas_possiveis": [
+    "Custo computacional e de energia da criptografia homomórfica (FHE) em dispositivos de baixa potência.",
+    "Gestão e distribuição segura de chaves mestras em ambientes distribuídos.",
+    "Mecanismos de revogação de credenciais, especialmente com blocos de revogação e ring signatures.",
+    "Impacto da verificação de atributos homomórficos na latência de tempo real.",
+    "Escalabilidade de gas e tempo de execução de contratos inteligentes com grande número de dispositivos."
+  ],
+  "propostas_possiveis": [
+    "Realizar benchmarks de FHE em hardware IoT de recursos limitados para quantificar energia e latência.",
+    "Desenvolver um protocolo leve de distribuição de chaves mestras usando técnicas de consenso permissionado.",
+    "Implementar e testar estratégias de revogação híbrida (on‑chain/off‑chain) para credenciais baseadas em ring signatures.",
+    "Otimizar o algoritmo de verificação de atributos para reduzir tempo de resposta em cenários de tempo real.",
+    "Analisar e otimizar o consumo de gas dos contratos inteligentes, possivelmente usando técnicas de batching ou side‑chains."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T17:39:48",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "perfil_anterior": {
+      "problema": "cloud and IoT frameworks vulnerable to cyberattacks",
+      "solucao": "Advanced Artificial Intelligence with a Federated Learning Framework for Privacy-Preserving Cyberthreat Detection (AAIFLF-PPCD)",
+      "avaliacao": "superior accuracy value of 99.47% over existing models",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a integração de identidade auto-soberana (SSI) para autenticação descentralizada nas trocas de modelo FL; avaliar o framework em ambientes reais de cidades inteligentes com múltiplas organizações; investigar o uso de blockchain para garantir a integridade e rastreabilidade das atualizações de modelo; analisar o consumo de recursos em dispositivos de borda e otimizar para ambientes de baixa potência."
+    },
+    "pagina": 2,
+    "texto": "negative impact on the environment. The main aim of a maintainable smart city is to enhance the effectiveness \nof urban services and operations2. Utilizing ICTs, cities can improve transportation systems, waste management, \nresource allocation, and energy consumption. The smart city method contains a sensing layer and data analytical \nprocess to recognize the real-world patterns of the city services in dissimilar regions like energy, transport, \nhealth, environment, and waste management3. Ensuring security in smart cities means sustaining data and the \nlattice from any evil actions and threats. Cyber-security of hardware and software made for smart cities is not \nusually considered by their vendors. Thus, using such insecure products can lead to the method being filled with \nfake data, malfunctioning through hacking, and the system being stopped4. To address these problems, this work \ninvestigates the impossibility of FL for privacy-preserving cyberthreat detection, which, as far as we know, is one \nof the innovative contributions. As a distributed learning model, FL is familiar with numerous privacy-sensitive \nfields, such as the next-word prediction task and medical imaging understanding in virtual keyboards 5. In this \nnutshell, FL permits distributed clients (data owners) to collectively train a machine learning (ML) approach \nwithout exposing their local datasets to some parties. Figure 1signifies the architecture of FL6.\nDespite attaining encouraging performance outcomes in some privacy-sensitive ML tasks, FL is also \nvulnerable to adverse ML attacks, particularly poisoning assaults. In this case, FL methods have exposed \nencouraging outcomes in achieving large-scale datasets from different IoT devices, providing a possible path \nforward7. Developing the current investigation is pivoting to the DL and ML methods to avoid these restrictions. \nMany applications and IoT services with ML-based methods are emerging in massive regions such as healthcare, \nobject monitoring, transport, security, surveillance, and control. DL approaches provide critical essential services \nand strong security methods to protect IoT devices, and preventive security designs have been consistent \nwith implementation errors and inadequate activity approaches, as threats were unavoidable 8. Furthermore, \nconventional cyberattack detection provides a fight with the ‘high-dimensional curse’ after handling higher-\ndimensional IoT data streams. It results in enhanced computational cost and decreased detection precision. \nThe heterogeneous nature of IoT devices also offers novel challenges regarding model generalization and data \nstandardization9. The rapid advancement of technology has created new opportunities for improving urban \nliving through interconnected systems and effectual resource management. However, as smart cities become \nmore dependent on the IoT and data analytics, the requirement for robust security and privacy measures has \nbecome increasingly critical. The challenge is safeguarding sensitive data while maintaining the performance \nof smart city services. FL, paired with advanced AI techniques, presents a promising approach to improving \nFig. 1. General framework of FL.\n \nScientific Reports |         (2025) 15:4470 2| https://doi.org/10.1038/s41598-025-88843-2\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho destaca a importância da segurança em cidades inteligentes, apontando vulnerabilidades de hardware e software que podem levar a dados falsos e falhas por ataques. Propõe investigar a impossibilidade do aprendizado federado (FL) para detecção de ciberameaças preservando a privacidade, reconhecendo ainda que FL pode ser vulnerável a ataques de envenenamento e enfrentar desafios de alta dimensionalidade e heterogeneidade dos dispositivos IoT.",
+    "perfil": {
+      "problema": "Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats.",
+      "solucao": "This work investigates the impossibility of FL for privacy-preserving cyberthreat detection",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "Avaliar mecanismos de defesa contra ataques de envenenamento em FL no contexto de cidades inteligentes; integrar identidade auto‑soberana (SSI) para autenticação descentralizada das atualizações de modelo; usar blockchain para garantir integridade e rastreabilidade dos modelos federados; analisar consumo de recursos em dispositivos de borda e otimizar para ambientes de baixa potência; testar o framework em cenários reais de múltiplas organizações e serviços urbanos."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats.",
+        "citacao": "Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats."
+      },
+      {
+        "afirmacao": "This work investigates the impossibility of FL for privacy-preserving cyberthreat detection.",
+        "citacao": "To address these problems, this work investigates the impossibility of FL for privacy-preserving cyberthreat detection"
+      }
+    ],
+    "interpretacao": "O texto enfatiza que a segurança dos dados é crítica nas cidades inteligentes e que os produtos atuais frequentemente ignoram essa necessidade, expondo o sistema a falsificações e interrupções. Embora o aprendizado federado seja apresentado como solução potencial, os autores sugerem que sua aplicação para detecção de ameaças pode ser inviável devido a vulnerabilidades como ataques de envenenamento e à complexidade dos dados IoT.",
+    "duvidas": "Quais são os cenários específicos em que o FL seria inviável para detecção de ciberameaças? Como os autores propõem contornar os ataques de envenenamento em FL? Há métricas ou experimentos que quantifiquem o impacto da alta dimensionalidade nos modelos propostos? Como a integração de SSI ou blockchain poderia ser concretizada dentro do framework descrito?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:40:35"
+}

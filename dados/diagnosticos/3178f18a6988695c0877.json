@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:49:17",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+    "perfil_anterior": {
+      "problema": "patients’ limited control over their healthcare data",
+      "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+      "avaliacao": "most solutions remain at the proof-of-concept stage (TRL3)",
+      "limites": "privacy-preserving search and verification remain underexplored",
+      "possibilidades": "• Avaliar a integração de proxy re‑encryption com computação de borda em IoT urbano para reduzir latência e custos de contratos inteligentes. • Construir um roadmap TRL‑orientado para adoção de SSI e credenciais verificáveis em serviços de saúde de cidades inteligentes. • Criar um benchmark comparativo de técnicas de privacidade (ABE, ZKP, PEKS) aplicadas a blockchains híbridas (on‑chain/off‑chain) em cenários inter‑organizacionais."
+    },
+    "pagina": 9,
+    "texto": "Peer-to-Peer Networking and Applications (2025) 18:302\n3.4 Overview of the review process\nFigure 2 shows the overall methodology steps used for \nselecting the relevant studies: \n1. The search results were filtered according to the eligi -\nbility criteria listed in Section 3.3; In this step, we had \nthe papers published in English from 2008 - 2024 (IC1), \nand the papers identified as relevant to our research \n3.3 Eligibility criteria\nTo identify relevant papers, we defined inclusion criteria \n(IC) and exclusion criteria (EC) as shown in Table 8. The \nRationale column presents a justification only when the rel-\nevance or importance might not be apparent from the crite -\nrion itself. Criteria that are self-explanatory based on their \ndescriptions have been marked with a dash (“-\") in the same \ncolumn.\nTable 8 Selection criteria for including studies in the systematic review of privacy-preserving solutions for blockchain-based healthcare data \nsharing\nSelection \ncriteria\nTag Description Rationale\nInclusion IC1 Published in English between 2008 and 2024 -\nIC2 On the topic of preserving privacy based on blockchain in healthcare \ndata sharing\nFocuses review on the intersection of block-\nchain technology and privacy in healthcare\nIC3 Proposed and/or implemented a new approach or algorithm -\nIC4 Applied existing approaches or algorithms to healthcare data sharing -\nIC5 Designed and/or implemented a solution or architecture for healthcare \ndata sharing based on blockchain\n-\nExclusion EC1 Publication type of survey, literature review, poster, workshop abstract, \ncase study, discussion and grey literature\n-\nEC2 Not considering healthcare as a topic, such as Internet of Things (IoT) Critical to exclude as the review aims to address \nspecific challenges and solutions relevant only \nto healthcare, ensuring focus and applicability.\nEC3 Not preserving privacy -\nEC4 Not data sharing Ensures the review remains focused on solu-\ntions that facilitate data exchange\nFig. 2 Methodology workflow for selecting relevant studies in the systematic review\n \n1 3\nPage 9 of 53 302",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve a metodologia da revisão sistemática, apresentando o fluxo de seleção de estudos (Figura 2) e detalhando os critérios de elegibilidade: inclusão de artigos em inglês (2008‑2024) focados em privacidade baseada em blockchain para compartilhamento de dados de saúde, e exclusão de tipos de publicação como surveys e trabalhos que não tratam de privacidade ou compartilhamento de dados.",
+    "perfil": {
+      "problema": "Não informado",
+      "solucao": "Não informado",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "• Adaptar os critérios de inclusão para abranger estudos que tratem de identidade auto‑soberana (SSI) e credenciais verificáveis em contextos de cidades inteligentes. • Expandir a revisão para incluir trabalhos que utilizem IoT urbano e edge computing, avaliando como esses ambientes impactam a privacidade em blockchains de saúde. • Desenvolver um framework de avaliação comparativa entre técnicas de privacidade (ABE, ZKP, PEKS) aplicadas a blockchains híbridas, focando em interoperabilidade inter‑organizacional."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "The search results were filtered according to the eligibility criteria listed in Section 3.3",
+        "citacao": "\"The search results were filtered according to the eligi -bility criteria listed in Section 3.3\""
+      },
+      {
+        "afirmacao": "Inclusion IC1 Published in English between 2008 and 2024",
+        "citacao": "\"IC1 Published in English between 2008 and 2024\""
+      }
+    ],
+    "interpretacao": "O texto evidencia que a revisão sistemática segue um processo rigoroso de seleção, usando critérios claros de inclusão e exclusão para garantir que apenas estudos relevantes ao uso de blockchain para privacidade em compartilhamento de dados de saúde sejam analisados.",
+    "duvidas": "Como os critérios de inclusão/exclusão poderiam ser ajustados para capturar pesquisas sobre SSI e identidade digital em serviços de cidades inteligentes? Existe alguma justificativa para limitar o período a 2008‑2024 que possa excluir trabalhos recentes relevantes ao contexto de edge computing?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:49:28"
+}

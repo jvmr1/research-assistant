@@ -1,0 +1,67 @@
+{
+  "fontes": [
+    {
+      "id": "Munusamy_2025",
+      "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "9c572813c3334a9c02c0",
+          "pagina": 1,
+          "resumo": "O artigo propõe o framework EPP-BCFL, que combina blockchain, aprendizado federado, SMPC e diferencial privacidade para reduzir custos computacionais e de comunicação, melhorar a precisão e proteger contra ataques de envenenamento em gestão de registros eletrônicos de saúde.",
+          "evidencias": [
+            {
+              "citacao": "Experimental evaluation on CIFAR-10 demonstrates 95.2% accuracy, a 43% reduction in communication latency, a 37% decrease in computational cost",
+              "afirmacao": "O EPP-BCFL alcança alta acurácia e reduz latência e custo computacional."
+            }
+          ]
+        },
+        {
+          "id": "1f03669b04ec41d70341",
+          "pagina": 2,
+          "resumo": "O trabalho apresenta o framework Enhanced Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) para gestão segura e eficiente de registros eletrônicos de saúde (EHR). Combina aprendizado federado, analytics na borda e blockchain, usando mecanismos híbridos de privacidade (SMPC e Differential Privacy), consenso PoS+BFT leve e agregação adaptativa que considera qualidade dos dados, confiança dos nós e detecção de anomalias, visando reduzir sobrecarga computacional, latência e vulnerabilidades a ataques.",
+          "evidencias": [
+            {
+              "citacao": "Federated Learning (FL) facilitates collaborative model training across multiple healthcare organizations without sharing raw patient data.",
+              "afirmacao": "FL facilitates collaborative model training across multiple healthcare organizations without sharing raw patient data."
+            }
+          ]
+        },
+        {
+          "id": "cc73fc3dc8e665986b0d",
+          "pagina": 3,
+          "resumo": "O trabalho apresenta o framework EPP-BCFL, que combina aprendizado federado, blockchain e técnicas de privacidade (SMPC, Differential Privacy, ZKP) para gerir registros eletrônicos de saúde. Destaca-se um consenso energeticamente eficiente que reduz latência em 43% e custo computacional em 37%, além de estratégias dinâmicas de agregação que dobram a velocidade de convergência. O sistema mantém alta acurácia (≈98,7%) e detecta anomalias em tempo real (~2,3 s).",
+          "evidencias": [
+            {
+              "citacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks.",
+              "afirmacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks."
+            }
+          ]
+        },
+        {
+          "id": "862bec4e31919ba54052",
+          "pagina": 4,
+          "resumo": "O trecho revisa literatura sobre aprendizado federado baseado em blockchain (BCFL), destacando contribuições como segurança aprimorada via criptografia homomórfica e provas de conhecimento zero, mas apontando limitações recorrentes de sobrecarga computacional/comunicação, desafios de escalabilidade e ausência de mecanismos de incentivo, especialmente em ambientes de recursos limitados como IoT, saúde e cidades inteligentes.",
+          "evidencias": [
+            {
+              "citacao": "Several frameworks extended this idea by implementing federated learning in UAV ecosystems, emphasizing both data protection and scalability.",
+              "afirmacao": "Several frameworks extended this idea by implementing federated learning in UAV ecosystems, emphasizing both data protection and scalability."
+            }
+          ]
+        }
+      ],
+      "problema": "introduce significant computational overhead",
+      "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+      "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+      "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+      "possibilidades": "Aplicar o mecanismo de Agregação Adaptativa (AMA) em cenários de cidades inteligentes com dispositivos IoT heterogêneos.; Incluir métricas de consumo energético e latência para otimizar o trade‑off entre compressão, privacidade e eficiência energética em bordas municipais.; Testar a resistência do EPP-BCFL a ataques de envenenamento em redes de sensores urbanos distribuídos.; Integrar criptografia baseada em atributos (ABE) como camada adicional ",
+      "assinatura": "00d3eb5a616dd7332ef8"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

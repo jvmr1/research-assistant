@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:38:54",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication",
+    "perfil_anterior": {
+      "problema": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+      "solucao": "integration of homomorphic encryption",
+      "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a integração de biometria de veia digital com identidade auto‑soberana (SSI) para credenciais verificáveis em cidades inteligentes; avaliar o desempenho da combinação FV‑blockchain em cenários de computação de borda; investigar mecanismos de revogação de credenciais biométricas em redes permissioned; adaptar o modelo para suportar múltiplas modalidades biométricas (multimodal) e analisar o trade‑off entre segurança e sobrecarga."
+    },
+    "pagina": 5,
+    "texto": " \n \n  \n \n226 \n \n \n \nJournal of Cyber Security and Risk Auditing Vol.2025, No.4                                         ISSN: 3079-5354 \n2.2 IoT Data Flow \n \nThe Internet of Things (IoT) generates an extensive volume of data through a network of interconnected devices and sensors \ndeployed across various domains. These devices—ranging from industrial equipment and household appliances to vehicles \nand smart home systems —continuously produce data such as sensor readings, geolocation (GPS) coordinates, and user \ninteraction patterns.  To ensure the integrity and trustworthiness of this data, IoT architectures increasingly incorporate \nblockchain technology. One of the key integration points is through the use of smart contracts —self-executing code that \nenforces the terms of an agreement embedded directly within the blockchain. These smart contracts automatically validate, \nlog, and manage data transactions,  thereby providing a secure, immutable, and transparent mechanism for handling IoT \ndata. \n \nAs illustrated in Figure 2, a common method for authenticating IoT  data involves programming smart contracts to verify \nthe data's authenticity before it is committed to the blockchain ledger. This ensures that only verified and trustworthy data  \nare stored, enhancing the reliability of the system [31]. By embedding authen tication logic into smart contracts, data from \nIoT devices can be validated in real time, mitigating risks such as data falsification, unauthorized access, and replay attacks. \nIn the context of this study, integrating smart contracts within IoT -blockchain ecosystems serves to strengthen the overall \ndata governance framework. It offers a verifiable and automated method for authenticating IoT data, thereby contributing \nto the development of secure, decentralized, and tamper-resistant IoT applications. \n \n \nFigure 2. IoT Data Flow [1]  \n3. Methodology \n \n \nThe proposed methodology outlines a structured sequence of steps performed during the experimental phase to achieve the \ndesired system output. Each step in the methodology is described in detail and visually suppor ted by a schematic diagram \nillustrating the system workflow. In the first step, data are collected from IoT sensors and transmitted to a designated cluster \nhead. In the second step, these data are processed through the blockchain , where they undergo verification and \nauthentication from a large number of IoT edge devices. Following verification, the data are encrypted using homomorphic \nencryption and securely outsourced to the cloud. The integration of homomorphic encryption enable s statistical and deep \nlearning operations to be performed directly on the encrypted data without decryption, thereby preserving data privacy.  \nThe subsequent step involves feature extraction, where key attributes such as heart rate, age, sex, weight, and h eight are \nderived from the encrypted data. The framework then employs a Support Vector Machine (SVM) classifier to categorize \n",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve como a integração de contratos inteligentes em blockchains permissionadas permite a autenticação em tempo real de dados IoT, garantindo integridade e mitigando falsificação, acesso não autorizado e replay attacks. Após a verificação, os dados são criptografados com homomorphic encryption e enviados ao cloud, possibilitando análises sem revelar o conteúdo. O fluxo inclui coleta, verificação, criptografia e classificação via SVM.",
+    "perfil": {
+      "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+      "solucao": "programming smart contracts to verify the data's authenticity before it is committed to the blockchain ledger",
+      "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+      "limites": "Não informado",
+      "possibilidades": "Investigar a combinação de contratos inteligentes com credenciais verificáveis baseadas em SSI para controle de acesso em cidades inteligentes; avaliar o impacto de homomorphic encryption em cenários de borda com recursos limitados; propor mecanismos de revogação de credenciais criptografadas em blockchains permissionadas; explorar a integração de ABE para políticas de compartilhamento de dados entre organizações públicas."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Smart contracts automatically validate, log, and manage data transactions, thereby providing a secure, immutable, and transparent mechanism for handling IoT data.",
+        "citacao": "These smart contracts automatically validate, log, and manage data transactions, thereby providing a secure, immutable, and transparent mechanism for handling IoT data."
+      },
+      {
+        "afirmacao": "Data are encrypted using homomorphic encryption and securely outsourced to the cloud.",
+        "citacao": "the data are encrypted using homomorphic encryption and securely outsourced to the cloud."
+      }
+    ],
+    "interpretacao": "O autor propõe um fluxo de dados IoT que combina verificação por contratos inteligentes e privacidade via homomorphic encryption, permitindo análises avançadas sem comprometer a confidencialidade, o que reforça a governança de dados em ambientes distribuídos.",
+    "duvidas": "Como é medido o overhead de execução dos contratos inteligentes em tempo real? Qual o custo computacional da homomorphic encryption para dispositivos de borda? Existem testes de escalabilidade com milhares de dispositivos?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:39:20"
+}

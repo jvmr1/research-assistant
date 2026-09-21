@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:37:01",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "accessing a file using the IPFS network is significantly faster than using the Blockchain network",
+      "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+      "avaliacao": "upload, download, access, and mining times",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Avaliar o desempenho do IPFS em cenários de borda com recursos limitados; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar o algoritmo de criptografia proposto com técnicas pós‑quânticas; estudar a escalabilidade quando múltiplas cidades inteligentes compartilham simultaneamente grandes volumes de dados de saúde; analisar o impacto de diferentes protocolos de rede (e.g., 5G, LoRaWAN) na latência de acesso ao IPFS."
+    },
+    "pagina": 15,
+    "texto": "Page 15 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \nfiles than the Blockchain network. We tested the Blockchain and IPFS networks with \nfiles of varying sizes to see how quickly they could be uploaded, downloaded, and \naccessed. The findings are displayed in Table 3.\nTo test our framework, we have considered 50, 100, 150, and 200 peers connected to \nthe network and uploaded data of 20MB, 40MB, 60MB, 80MB, 100MB, 120MB, and \n140MB. Figure 8. depicts the IPFS network upload time analysis. The experimental result \nshows that the upload time increased with both the number of peers and the size of the \nfile being uploaded, but that at a certain point, the upload time varies very little even \nwhen the number of peers and the size of the file both vary. Once a certain threshold is \nachieved, every further increase in the file size for uploading results in a small increase \nin uploading time. IPFS download time analysis is shown in Fig.  9. The result shows that \nthe download time increased with both the file size and the number of peers. The time \nrequired to download the file significantly decreased when we increased its size while \nkeeping the number of peers constant. The experimental results show that uploading \nfiles to the IPFS network takes longer than downloading. Download and Upload times \nwere measured with a number of peer counts and file sizes for experimental evaluation, \nas shown in Table 4. Figure 10. analyzes the upload and download times between Block -\nchain and IPFS. Based on experimental evaluation and analysis, it has been observed \nthat the IPFS network has much faster upload and download speeds than the Blockchain \nnetwork.\nThe proposed framework’s mining time is calculated using 200 peers with varying \nfile sizes. The result shows that Blockchain networks require more time to mine than \nTable 3 Access, Download, and Upload Times in Blockchain and IPFS\nFile Size (In MB) Download Time (in Second) Upload Time (in Second) Access Time (in \nSecond)\nBlockchain IPFS Blockchain IPFS Blockchain IPFS\n20 0.22 0.28 0.21 0.29 0.22 0.21\n40 0.81 0.91 0.83 0.96 0.76 0.47\n60 1.68 1.13 1.71 1.28 1.53 0.76\n80 2.57 1.21 2.83 1.62 2.48 0.9\n100 2.88 1.29 3.24 1.69 2.79 1.22\n120 3.37 1.83 3.78 2.01 3.11 1.74\n140 3.51 1.97 3.99 2.09 3.48 1.86\nFig. 8 Upload time analysis in IPFS\n ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O estudo compara desempenho de upload, download e acesso de arquivos entre IPFS e blockchain em um cenário de saúde inteligente, mostrando que IPFS oferece velocidades significativamente maiores, embora o tempo de mineração seja maior no blockchain.",
+    "perfil": {
+      "problema": "IPFS network has much faster upload and download speeds than the Blockchain network.",
+      "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+      "avaliacao": "upload, download, access, and mining times",
+      "limites": "Não informado",
+      "possibilidades": "Avaliar o desempenho do IPFS em ambientes de borda com recursos limitados; integrar identidade auto‑soberana (SSI) para autenticação de dispositivos; comparar o algoritmo de criptografia proposto com técnicas pós‑quânticas; estudar a escalabilidade em múltiplas cidades inteligentes; analisar o impacto de diferentes protocolos de rede (5G, LoRaWAN) na latência de IPFS para dados de saúde."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O tempo de upload aumenta com o número de pares e o tamanho do arquivo, mas estabiliza após certo ponto.",
+        "citacao": "upload time increased with both the number of peers and the size of the file being uploaded, but that at a certain point, the upload time varies very little"
+      },
+      {
+        "afirmacao": "IPFS apresenta velocidades de upload e download muito superiores às da rede blockchain.",
+        "citacao": "IPFS network has much faster upload and download speeds than the Blockchain network"
+      }
+    ],
+    "interpretacao": "Os resultados indicam que, para compartilhamento de dados de saúde em cidades inteligentes, utilizar IPFS pode reduzir significativamente a latência de transferência, embora a camada de blockchain ainda seja necessária para garantir integridade e consenso, refletindo um trade‑off entre desempenho e segurança.",
+    "duvidas": "Como a latência de mineração impacta aplicações que exigem respostas em tempo real? Qual seria o efeito de integrar SSI ao fluxo de dados entre IPFS e blockchain?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:37:08"
+}

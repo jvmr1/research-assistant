@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta uma arquitetura de computação de borda assistida por blockchain para IIoT, introduzindo um mecanismo de autenticação ponto‑a‑ponto baseado em reputação da blockchain e contratos inteligentes, com consenso Proof of Authentication (PoAh). A proposta visa substituir o armazenamento centralizado, reduzindo latência e consumo de banda ao processar dados na borda, ao mesmo tempo que garante integridade, transparência e rastreabilidade via ledger distribuído. São descritos requisitos de confiabilidade, leveza e escalabilidade, incluindo nós pequenos com máquinas virtuais para criptografia assimétrica. A revisão da literatura aponta desafios de energia, latência, taxa de transferência e interoperabilidade ao aplicar blockchains tradicionais em IoT, sugerindo blockchains leves, estruturas EOG e consenso PoS otimizado. Embora a solução prometa melhorar segurança e eficiência, faltam avaliações práticas detalhadas sobre custos computacionais, revogação de credenciais, interoperabilidade com padrões de identidade digital e validação em ambientes reais de cidades inteligentes.",
+  "lacunas_possiveis": [
+    "Custos computacionais e consumo energético do consenso PoAh em dispositivos de borda.",
+    "Mecanismos de revogação de credenciais e tratamento de nós comprometidos.",
+    "Interoperabilidade com padrões de identidade digital (SSI, verifiable credentials).",
+    "Avaliação empírica de escalabilidade, latência e sobrecarga da integração edge‑blockchain.",
+    "Validação da arquitetura em ambientes reais de cidades inteligentes e com heterogeneidade de dispositivos."
+  ],
+  "propostas_possiveis": [
+    "Realizar experimentos de benchmark comparando PoAh com outros consensos leves (e.g., PoS, PBFT) em termos de latência e energia.",
+    "Desenvolver um módulo de revogação baseado em smart contracts que suporte atualização dinâmica de reputação e remoção de nós comprometidos.",
+    "Integrar protocolos de identidade auto‑soberana (SSI) e credenciais verificáveis à camada de autenticação da arquitetura.",
+    "Construir um testbed em uma zona piloto de cidade inteligente para medir desempenho, escalabilidade e interoperabilidade com dispositivos heterogêneos.",
+    "Estudar estratégias de gerenciamento de conectividade intermitente para garantir a consistência da blockchain leve em ambientes com infraestrutura limitada."
+  ]
+}

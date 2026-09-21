@@ -1,0 +1,82 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T14:28:12",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo propõe o modelo Verifiable and Searchable Decentralized Identity (VS‑DID) para meta‑computação no IIoT, combinando armazenamento híbrido on‑chain/off‑chain com um registro verificável baseado em compromissos chave‑valor. A inovação central é o acumulador de janela deslizante, que permite atualizações incrementais e consultas eficientes, reduzindo o tempo de prova agregada em 93,5 % e o tempo de compromisso em 96,5 % em relação a esquemas Merkle‑SNARK, mantendo verificação prática. O esquema utiliza compromissos vetoriais, provas geradas via Hyperproof e agregação por Non‑interactive Inner Product Arguments em uma árvore binária, visando baixo custo de armazenamento e escalabilidade para grandes volumes de dados e dispositivos IIoT. As fichas destacam a necessidade de verificação cruzada de identidades, redução da sobrecarga computacional e suporte a atualizações em tempo real, mas apontam lacunas em revogação, avaliação prática e interoperabilidade.",
+        "lacunas_possiveis": [
+          "Mecanismo de revogação de credenciais em tempo real não detalhado",
+          "Ausência de experimentos em dispositivos IoT com recursos limitados",
+          "Falta de métricas de latência, throughput e custos de armazenamento/comunicação em cenários reais de cidades inteligentes",
+          "Interoperabilidade limitada com padrões SSI existentes"
+        ],
+        "propostas_possiveis": [
+          "Desenvolver e validar um protocolo de revogação incremental integrado ao acumulador de janela deslizante",
+          "Realizar testes de desempenho em hardware IoT de baixa potência, medindo latência e consumo de energia",
+          "Comparar o VS‑DID com outras soluções (Merkle‑SNARK, IPFS, etc.) em ambientes de edge computing, quantificando custos de armazenamento e comunicação",
+          "Estender o modelo para suportar interoperabilidade com padrões SSI como DID‑Core e Verifiable Credentials da W3C"
+        ]
+      },
+      {
+        "resumo": "O artigo propõe um modelo de identidade descentralizada verificável para IIoT que combina registros DID baseados em compromissos vetoriais, acumuladores de janela deslizante (SWAT) e um dicionário autenticado RSA estendido. São descritos algoritmos de atualização de provas, consultas verificáveis usando provas Merkle e suporte a versões históricas, permitindo auditoria e rastreabilidade. Avaliações experimentais com BLS12‑381, IPA e SNARK Groth16 mostram tempos de verificação muito baixos (≈0,003 s) e provas agregadas mais rápidas que o Merkle SNARK tradicional, embora a geração de parâmetros SNARK seja pesada (≈50 GB, >30 h). Os resultados indicam boa escalabilidade e eficiência para ambientes IIoT de cidades inteligentes, mas apontam desafios de consumo de recursos, latência de atualização e revogação em dispositivos com recursos limitados.",
+        "lacunas_possiveis": [
+          "Impacto de latência e consumo de energia da operação Update(C,i′,Δ) em dispositivos edge.",
+          "Escalabilidade do acumulador de janela deslizante com alta taxa de geração de blocos e grandes valores de K.",
+          "Custo computacional e memória do RSA autenticado e dos parâmetros SNARK em larga escala.",
+          "Mecanismos de revogação eficiente sem reprocessar todo o dicionário ou acumulador."
+        ],
+        "propostas_possiveis": [
+          "Avaliar protocolos de prova mais leves (ex.: PLONK ou Bulletproofs) para reduzir tamanho e tempo de geração de parâmetros.",
+          "Implementar versões otimizadas do algoritmo Update usando técnicas de computação aproximada ou offloading para fog/edge.",
+          "Projetar estratégias de gerenciamento de janela dinâmica que ajustem K conforme a taxa de blocos, mitigando sobrecarga de consultas.",
+          "Desenvolver um mecanismo de revogação incremental baseado em provas de não‑inclusão ou atributos revogáveis dentro do acumulador."
+        ]
+      },
+      {
+        "resumo": "O artigo intitulado \"Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)\" está em fase de pre‑proof e recebeu apoio financeiro da National Natural Science Foundation of China (grant nos. U24B20146, 62372044) e da Beijing Municipal Science and Technology Commission (projeto Z241100009124008). Embora o texto completo não seja apresentado, a página 14 traz um conjunto de referências que cobrem identidades digitais, credenciais verificáveis, meta‑computação, provas de conhecimento zero, identificadores descentralizados (DIDs), esquemas de identidade baseados em blockchain para IoT, acumuladores dinâmicos e governança de identidade em ambientes de cadeia cruzada. Essas referências situam o estudo no contexto avançado de identidade descentralizada aplicada ao IIoT, sugerindo que o trabalho pretende integrar técnicas criptográficas e de blockchain para melhorar a segurança e a interoperabilidade em cenários de cidades inteligentes.",
+        "lacunas_possiveis": [
+          "Objetivos específicos do trabalho não são descritos nas fichas fornecidas.",
+          "Detalhes sobre como o financiamento será utilizado nas fases de desenvolvimento e validação não são apresentados.",
+          "Ausência de resultados preliminares, métricas de desempenho ou avaliações experimentais.",
+          "Falta de descrição da estrutura do acumulador de janela deslizante proposto e comparação com acumuladores dinâmicos citados nas referências."
+        ],
+        "propostas_possiveis": [
+          "Elaborar e divulgar claramente os objetivos de pesquisa e os resultados esperados.",
+          "Desenvolver um plano detalhado de uso dos recursos financeiros, incluindo marcos de desenvolvimento e validação.",
+          "Implementar e testar um protótipo de acumulador de janela deslizante, comparando seu desempenho e consumo de recursos com acumuladores dinâmicos existentes.",
+          "Apresentar métricas de desempenho (latência, throughput, consumo de energia) em um cenário de IIoT real ou simulado.",
+          "Investigar a governança de identidade em ambientes de cadeia cruzada, avaliando a interoperabilidade entre diferentes blockchains."
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta o modelo Verifiable and Searchable Decentralized Identity (VS‑DID) para meta‑computação no Industrial Internet of Things (IIoT). O modelo combina armazenamento híbrido on‑chain/off‑chain com um registro verificável baseado em compromissos chave‑valor e introduz um acumulador de janela deslizante (SWAT) que permite atualizações incrementais e consultas eficientes. As provas são geradas via Hyperproof e agregadas por Non‑interactive Inner Product Arguments em uma árvore binária, reduzindo o tempo de prova agregada em cerca de 93,5 % e o tempo de compromisso em 96,5 % em comparação a esquemas Merkle‑SNARK, mantendo verificação prática (≈0,003 s). O trabalho também descreve um dicionário autenticado RSA estendido e avalia o esquema com curvas BLS12‑381, IPA e SNARK Groth16, apontando boa escalabilidade para grandes volumes de dados e dispositivos IIoT. Contudo, o texto completo não está disponível; as informações provêm de um PDF parcial e de referências citadas. As lacunas identificadas incluem a ausência de mecanismos de revogação em tempo real, falta de experimentos em dispositivos de recursos limitados, carência de métricas de latência, throughput e custos em cenários reais de cidades inteligentes, e limitada interoperabilidade com padrões SSI existentes. As propostas de continuação sugerem desenvolver protocolos de revogação incremental, validar o modelo em hardware IoT de baixa potência, comparar VS‑DID com outras soluções (Merkle‑SNARK, IPFS, PLONK, Bulletproofs), e estender a interoperabilidade com DID‑Core e Verifiable Credentials da W3C.",
+    "lacunas_possiveis": [
+      "Mecanismo de revogação de credenciais em tempo real não detalhado",
+      "Ausência de experimentos em dispositivos IoT com recursos limitados",
+      "Falta de métricas de latência, throughput e custos de armazenamento/comunicação em cenários reais de cidades inteligentes",
+      "Interoperabilidade limitada com padrões SSI existentes (DID‑Core, Verifiable Credentials)",
+      "Impacto de latência e consumo de energia das operações de atualização (Update) em dispositivos edge",
+      "Escalabilidade do acumulador de janela deslizante com alta taxa de geração de blocos e grandes valores de K",
+      "Custo computacional e memória do RSA autenticado e dos parâmetros SNARK em larga escala",
+      "Objetivos específicos e plano de uso dos recursos financeiros não descritos"
+    ],
+    "propostas_possiveis": [
+      "Desenvolver e validar um protocolo de revogação incremental integrado ao acumulador de janela deslizante",
+      "Realizar testes de desempenho em hardware IoT de baixa potência, medindo latência, consumo de energia e throughput",
+      "Comparar VS‑DID com outras soluções (Merkle‑SNARK, IPFS, PLONK, Bulletproofs) em ambientes de edge/fog computing, quantificando custos de armazenamento e comunicação",
+      "Estender o modelo para suportar interoperabilidade plena com padrões SSI como DID‑Core e Verifiable Credentials da W3C",
+      "Projetar estratégias de gerenciamento de janela dinâmica que ajustem K conforme a taxa de blocos, mitigando sobrecarga de consultas",
+      "Elaborar um plano detalhado de marcos de desenvolvimento e validação, incluindo uso transparente dos recursos financeiros"
+    ],
+    "fonte": "PDF parcial"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:28:24"
+}

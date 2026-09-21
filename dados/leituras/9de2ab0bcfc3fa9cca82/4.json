@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho descreve normas e guias (ETSI EN‑303 645, ISO/IEC 27400:2022, CISA) que oferecem recomendações de segurança cibernética de alto nível para IoT/IIoT, mas apontam que tais recomendações não são diretamente aplicáveis a sistemas de baixo nível. Destaca a necessidade de converter diretrizes gerais em regulamentos de segurança específicos e de abordar ameaças de privacidade na troca de dados em IIoT, sugerindo foco em regulamentações de baixo nível.",
+  "perfil": {
+    "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+    "solucao": "Our guides focus on low-level security regulations as well as the privacy threats related to the sharing of data in IIoT",
+    "avaliacao": "Não informado",
+    "limites": "The recommendations are high-level and lack low-level system-specific information",
+    "possibilidades": "Desenvolver ferramentas automatizadas que traduzam diretrizes de alto nível em políticas de segurança de baixo nível; integrar identidade auto‑soberana e blockchain para controle de acesso descentralizado em dispositivos IIoT; criar métricas de avaliação de privacidade para compartilhamento de dados em ambientes de edge computing; validar as regulamentações de baixo nível em linhas de produção reais de cidades inteligentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "our guides focus on low-level security regulations as well as the privacy threats related to the sharing of data in IIoT",
+      "afirmacao": "Our guides focus on low-level security regulations as well as the privacy threats related to the sharing of data in IIoT"
+    }
+  ],
+  "interpretacao": "O texto evidencia uma lacuna prática: embora existam normas robustas, falta orientação detalhada para implementação em dispositivos IIoT de baixo nível, especialmente quanto à privacidade de dados.",
+  "duvidas": "Quais metodologias específicas podem ser adotadas para converter as recomendações de alto nível em políticas operacionais de baixo nível? Como validar a eficácia dessas políticas em ambientes reais de cidades inteligentes?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "592130eb002b24adb44f",
+  "artigo": "Abdullahi_2025",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "the guide fails to provide implementation procedures for these guidelines.",
+    "possibilidades": "Desenvolver ferramentas automatizadas que traduzam diretrizes de alto nível em políticas de segurança de baixo nível; integrar identidade auto‑soberana e blockchain para controle de acesso descentralizado em dispositivos IIoT; criar métricas de avaliação de privacidade para compartilhamento de dados em ambientes de edge computing; validar as regulamentações de baixo nível em linhas de produção reais de cidades inteligentes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9de2ab0bcfc3fa9cca82"
+  }
+}

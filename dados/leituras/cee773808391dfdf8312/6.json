@@ -1,0 +1,30 @@
+{
+  "resumo": "O trecho descreve procedimentos de atualização e revogação de registros em uma blockchain permissionada, e apresenta o Algoritmo 2, que valida atributos de usuários usando chaves mestras, grupos bilineares (G1, G2) e assinaturas digitais. O algoritmo incorpora criptografia homomórfica, permitindo cálculos sobre dados criptografados sem necessidade de descriptografia, reforçando a privacidade e a segurança em ambientes IoT sensíveis, como registros de saúde.",
+  "perfil": {
+    "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+    "solucao": "programming smart contracts to verify the data's authenticity before it is committed to the blockchain ledger",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Avaliar o impacto de integrar criptografia homomórfica ao modelo SSI para proteção de dados sensíveis em cidades inteligentes.\n• Medir o overhead de desempenho do Algoritmo 2 em dispositivos de borda com recursos limitados.\n• Explorar provas de conhecimento zero‑knowledge para reforçar a privacidade durante a revogação de credenciais.\n• Testar a escalabilidade dos blocos de atualização/revogação em cenários massivos de IoT, analisando latência e consumo energético."
+  },
+  "evidencias": [],
+  "interpretacao": "A inclusão de validação de atributos baseada em criptografia avançada e o uso de criptografia homomórfica reforçam tanto o controle de acesso quanto a confidencialidade dos dados, atendendo a requisitos críticos de privacidade em IoT de cidades inteligentes.",
+  "duvidas": "• Qual é o custo computacional e de energia da criptografia homomórfica em dispositivos IoT de baixa potência?\n• Como o modelo lida com a gestão e distribuição segura das chaves mestras em ambientes distribuídos?\n• Existem limitações práticas na revogação de credenciais usando blocos de revogação descritos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "66308cb5e07c3e45f374",
+  "artigo": "Addula_2025",
+  "pagina": 7,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+    "solucao": "programming smart contracts to verify the data's authenticity before it is committed to the blockchain ledger",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Avaliar o impacto de integrar criptografia homomórfica ao modelo SSI para proteção de dados sensíveis em cidades inteligentes.\n• Medir o overhead de desempenho do Algoritmo 2 em dispositivos de borda com recursos limitados.\n• Explorar provas de conhecimento zero‑knowledge para reforçar a privacidade durante a revogação de credenciais.\n• Testar a escalabilidade dos blocos de atualização/revogação em cenários massivos de IoT, analisando latência e consumo energético.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

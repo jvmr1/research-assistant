@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-20T18:46:18",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Danilo_TCC_final",
+    "perfil_anterior": {
+      "problema": "Autenticação e Controle de Acesso Baseados em Blockchain",
+      "solucao": "Identidades Autosoberanas",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a aplicação prática de SSI em serviços de mobilidade urbana; integrar mecanismos de recuperação de credenciais baseados em secret sharing distribuído para cidadãos; avaliar a usabilidade de carteiras digitais SSI em dispositivos IoT de baixa potência; propor diretrizes de governança intermunicipal para interoperabilidade de credenciais verificáveis."
+    },
+    "pagina": 6,
+    "texto": "Resumo\nAs Cidades Inteligentes prometem transformar a vida urbana, oferecendo serviços públicos\nmais seguros, eficientes e acessíveis. A segurança da informação é um pilar para a confiança\ne o funcionamento adequado das cidades inteligentes. A exposição a ameaças cibernéticas,\ncomo acessos não autorizados, fraudes e ataques de negação de serviço, pode comprometer\na integridade e a disponibilidade de serviços críticos. A gestão de identidades, mecanismos\nde autenticação e de controle de acesso são fundamentais para proteger a privacidade e os\ndados sensíveis no contexto das aplicações de Cidades Inteligentes. Este trabalho propõe\num modelo de gestão de identidades, bem como mecanismos de autenticação e controle\nde acesso a aplicações para Cidades Inteligentes baseados na tecnologiablockchain. Para\na identidade dos cidadãos utiliza-se uma abordagem de Identidades Autosoberanas, que\npermite aos próprios cidadãos controlarem suas credenciais digitais de maneira segura\ne sem intermediários, promovendo maior transparência e segurança no uso dos serviços\npúblicos. O modelo proposto foi implementado utilizando-se omiddleware para Cidades\nInteligentesInterSCity e a plataforma deblockchain Hyperledger. Resultados experimentais\nindicam que a solução tem um desempenho satisfatório, com latência inferior a 500ms por\noperação, o que valida a viabilidade do uso deblockchain e Identidades Autosoberanas\npara criar um ambiente urbano digital mais seguro e eficiente para as Cidades Inteligentes.\nPalavras-chave: Cidades Inteligentes,Blockchain, Identidades Autosoberanas, Controle\nde Acesso, Autenticação.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho propõe um modelo de gestão de identidades baseado em blockchain para Cidades Inteligentes, utilizando Identidades Autosoberanas (SSI) para autenticação e controle de acesso. O modelo foi implementado com middleware InterSCity e Hyperledger, e experimentos mostram latência inferior a 500 ms por operação, indicando viabilidade prática.",
+    "perfil": {
+      "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+      "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+      "avaliacao": "latência inferior a 500ms por operação",
+      "limites": "Não informado",
+      "possibilidades": "Investigar a integração de criptografia baseada em atributos (ABE) para controle de acesso seletivo; aplicar criptografia homomórfica para processamento de dados sensíveis sem revelar informações; desenvolver mecanismos de recuperação de credenciais perdidas usando secret sharing distribuído; avaliar a interoperabilidade entre diferentes plataformas de blockchain e padrões de credenciais verificáveis; analisar a escalabilidade do modelo em cenários de alta densidade de dispositivos IoT."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O modelo proposto foi implementado utilizando-se um middleware para Cidades Inteligentes InterSCity e a plataforma de blockchain Hyperledger.",
+        "citacao": "O modelo proposto foi implementado utilizando-se omiddleware para Cidades InteligentesInterSCity e a plataforma deblockchain Hyperledger."
+      },
+      {
+        "afirmacao": "Resultados experimentais indicam que a solução tem um desempenho satisfatório, com latência inferior a 500ms por operação.",
+        "citacao": "Resultados experimentais indicam que a solução tem um desempenho satisfatório, com latência inferior a 500ms por operação"
+      }
+    ],
+    "interpretacao": "O estudo demonstra que a combinação de SSI e blockchain pode atender aos requisitos de segurança e eficiência em serviços urbanos, alcançando baixa latência, embora a avaliação se limite a métricas de desempenho sem aprofundar aspectos de privacidade, revogação ou escalabilidade em larga escala.",
+    "duvidas": "Como o modelo trata a revogação de credenciais e a recuperação de acesso perdido? Quais mecanismos de proteção de privacidade são empregados além da autenticação? Qual é o comportamento do sistema sob carga de milhares de dispositivos IoT simultâneos? Como garantir interoperabilidade entre diferentes cidades ou plataformas de blockchain?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:46:44"
+}

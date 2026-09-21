@@ -1,0 +1,79 @@
+{
+  "fontes": [
+    {
+      "id": "Pandey_2025",
+      "titulo": "An investigation on real-time insights: enhancing process control with IoT-enabled sensor networks",
+      "escopo": {
+        "tipo": "html",
+        "feitos": 7,
+        "total": 7,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "a60accfaeb2b9e169465",
+          "pagina": null,
+          "resumo": "O artigo revisa aplicações, desafios e tendências da IoT e redes de sensores no controle de processos, propondo um framework que usa protocolos MQTT/CoAP, edge computing e tecnologias como blockchain, 5G e IA para melhorar coleta, processamento e decisão em tempo real, embora ainda enfrente questões de segurança, energia e escalabilidade.",
+          "evidencias": [
+            {
+              "citacao": "its pervasive adoption is impeded by obstacles such as data overload, scalability, and energy efficiency.",
+              "afirmacao": "A adoção generalizada é impedida por sobrecarga de dados, escalabilidade e eficiência energética."
+            },
+            {
+              "citacao": "presents a comprehensive framework for the integration of IoT-enabled sensor networks into real-time process control systems",
+              "afirmacao": "O estudo apresenta um framework abrangente para integrar redes de sensores habilitadas por IoT em sistemas de controle de processos em tempo real."
+            }
+          ]
+        },
+        {
+          "id": "26f621a6aee48c9c0993",
+          "pagina": null,
+          "resumo": "O trecho descreve as principais características e limitações de redes de sensores sem fio (WSN) para aplicações industriais e de cidades inteligentes, destacando escalabilidade, eficiência energética e confiabilidade. Apresenta tecnologias habilitadoras em diferentes camadas da IoT e protocolos de comunicação como MQTT, CoAP e LoRaWAN, além de seu papel no monitoramento de processos e na Indústria 4.0.",
+          "evidencias": [
+            {
+              "citacao": "Scalability is used to describe a sensor network's capacity to grow by adding additional nodes that collect information without materially affecting the network's general efficiency.",
+              "afirmacao": "Scalability is used to describe a sensor network's capacity to grow by adding additional nodes that collect information without materially affecting the network's general efficiency."
+            },
+            {
+              "citacao": "Energy efficiency is another essential feature of sensor networks.",
+              "afirmacao": "Energy efficiency is another essential feature of sensor networks."
+            }
+          ]
+        },
+        {
+          "id": "c73aa8f2f5d817109c91",
+          "pagina": null,
+          "resumo": "O trecho descreve como plataformas em nuvem suportam a análise de dados da Indústria 4.0, enfatizando a necessidade de fortes medidas de cibersegurança. Apresenta aplicações de redes de sensores em agricultura inteligente – como irrigação de precisão e monitoramento climático – e em saúde inteligente, incluindo monitoramento remoto de pacientes e dispositivos vestíveis. Destaca ainda o papel da IA e analytics no processamento de grandes volumes de dados para decisões sustentáveis e personalizadas.",
+          "evidencias": [
+            {
+              "citacao": "Cybersecurity is a critical consideration in Industry 4.0, as increased connectivity and reliance on digital technologies introduce new vulnerabilities.",
+              "afirmacao": "Cybersecurity is a critical consideration in Industry 4.0, as increased connectivity and reliance on digital technologies introduce new vulnerabilities."
+            },
+            {
+              "citacao": "Smart irrigation systems minimize water waste and enhance crop health by optimizing water usage through the use of soil moisture sensors, weather data, and real-time monitoring.",
+              "afirmacao": "Smart irrigation systems minimize water waste and enhance crop health by optimizing water usage through the use of soil moisture sensors, weather data, and real-time monitoring."
+            }
+          ]
+        },
+        {
+          "id": "0a14f9243f9cb09e5bc8",
+          "pagina": null,
+          "resumo": "O trecho descreve como redes de sensores IoT ampliam conectividade, reduzem latência e permitem monitoramento em tempo real em cidades inteligentes, indústrias e saúde, impulsionadas por IA/ML. Destaca benefícios como manutenção preditiva, eficiência energética e sustentabilidade, mas aponta preocupações de segurança, privacidade, interoperabilidade e alto consumo de energia, sugerindo pesquisas em padrões globais, dispositivos de baixa potência, blockchain e IA preservadora de privacidade.",
+          "evidencias": [
+            {
+              "citacao": "IoT devices introduce novel vulnerabilities for cybercriminals, heightening dangers to data security and privacy.",
+              "afirmacao": "IoT devices introduce novel vulnerabilities for cybercriminals, heightening dangers to data security and privacy."
+            }
+          ]
+        }
+      ],
+      "problema": "IoT devices introduce novel vulnerabilities for cybercriminals, heightening dangers to data security and privacy.",
+      "solucao": "strategies like energy harvesting, low-power communication protocols and sleep scheduling are being investigated",
+      "avaliacao": "These technologies facilitate interconnected systems and optimize operations by enhancing efficiency, predictive maintenance, and sustainability.",
+      "limites": "Energy efficiency is one of the main issues with sensor network deployment, particularly in isolated or difficult-to-reach places.",
+      "possibilidades": "Explorar a integração de SSI baseada em verifiable credentials para autenticação de sensores em tempo real; avaliar o uso de edge AI com preservação de privacidade para análise instantânea de dados de processo; investigar blockchain para rastreabilidade e integridade dos dados de sensores; comparar latência e consumo de MQTT vs CoAP em loops de controle críticos; desenvolver técnicas adaptativas de harvesting energético para monitoramento contínu",
+      "assinatura": "73aafbaad119de736d67"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

@@ -1,0 +1,17 @@
+{
+  "resumo": "A dissertação de mestrado de André Luiz Almeida Cardoso, defendida em 2024 na Universidade Federal do Maranhão, apresenta um modelo de gestão de identidades para cidades inteligentes fundamentado na tecnologia blockchain, especificamente na plataforma Hyperledger Fabric. O trabalho enfatiza a importância da segurança da informação e avalia o custo computacional da solução proposta, que integra dispositivos IoT ao framework de identidade descentralizada. Embora descreva a motivação e a arquitetura geral, o documento não detalha requisitos funcionais e não funcionais, estratégias de revogação ou recuperação de credenciais, mecanismos de privacidade, escalabilidade ou interoperabilidade com padrões existentes de identidade digital. Tampouco apresenta resultados experimentais ou avaliações de desempenho. Assim, a dissertação oferece uma base conceitual para identidade digital baseada em blockchain em ambientes urbanos, mas deixa várias questões abertas para investigação futura.",
+  "lacunas_possiveis": [
+    "Ausência de requisitos funcionais e não funcionais detalhados para o modelo.",
+    "Falta de descrição de mecanismos de revogação e recuperação de credenciais perdidas.",
+    "Escassez de avaliação experimental ou de desempenho da solução proposta.",
+    "Limitações não explicitadas quanto à privacidade e proteção de dados dos cidadãos.",
+    "Carência de estratégias de interoperabilidade com padrões de identidade digital existentes."
+  ],
+  "propostas_possiveis": [
+    "Integrar identidades autossoberanas (SSI) e credenciais verificáveis ao modelo baseado em Hyperledger Fabric.",
+    "Aplicar criptografia baseada em atributos (ABE) para controle de acesso seletivo e divulgação mínima de atributos.",
+    "Desenvolver mecanismos de revogação distribuída, como registradores de revogação on‑chain, e protocolos de recuperação social de credenciais.",
+    "Incorporar provas de conhecimento zero‑knowledge para preservar a privacidade durante a verificação de credenciais.",
+    "Criar uma camada de interoperabilidade que suporte DID methods e padrões como W3C Verifiable Credentials."
+  ]
+}

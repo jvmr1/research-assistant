@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo propõe uma arquitetura serverless edge‑cloud para suportar processos de gestão do conhecimento em cidades inteligentes, combinando escalabilidade da nuvem e processamento próximo à fonte na borda, reduzindo latência e congestionamento de rede, conforme demonstrado em experimentos.",
+  "perfil": {
+    "problema": "successful implementation requires a supportive organizational culture, dedicated leadership, and continuous improvement of both processes and technologies",
+    "solucao": "proposed architecture leverages cloud computing for scalability and on-demand resource provisioning, and edge computing for cost-efficiency and data processing closer to data sources, while also supporting serverless computing for simplified application development",
+    "avaliacao": "Experimental analysis demonstrates the benefits of deploying KM processes on this hybrid architecture, particularly in reducing data transmission times and alleviating network congestion",
+    "limites": "identifies the characteristics, opportunities and limitations of the edge and cloud environment in terms of computation and network communication times",
+    "possibilidades": "Investigar a integração de blockchain para controle de acesso e auditoria dos dados de KM; aplicar identidade auto‑soberana (SSI) para compartilhamento seguro de informações entre cidadãos e serviços públicos; estender a arquitetura a ambientes IIoT industriais; avaliar criptografia baseada em atributos (ABE) para privacidade de dados sensíveis; testar a solução em cenários de edge computing com recursos limitados."
+  },
+  "evidencias": [
+    {
+      "citacao": "reducing data transmission times and alleviating network congestion",
+      "afirmacao": "A arquitetura híbrida edge‑cloud reduz o tempo de transmissão de dados."
+    },
+    {
+      "citacao": "supporting serverless computing for simplified application development",
+      "afirmacao": "Computação serverless simplifica o desenvolvimento de aplicações."
+    }
+  ],
+  "interpretacao": "O estudo demonstra que combinar recursos de nuvem e borda em um modelo serverless pode acelerar processos de gestão do conhecimento nas cidades inteligentes, ao mesmo tempo em que diminui a carga de rede, porém reconhece que ainda há limitações de desempenho e comunicação que precisam ser aprofundadas.",
+  "duvidas": "Quais são os impactos de segurança e privacidade ao expor dados de KM na borda? Como a arquitetura se comporta sob falhas de conectividade entre nuvem e edge? Há avaliação de custos operacionais em escala real de cidade?",
+  "avisos": [],
+  "id": "24b5878738d870783ad9",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "successful implementation requires a supportive organizational culture, dedicated leadership, and continuous improvement of both processes and technologies",
+    "solucao": "proposed architecture leverages cloud computing for scalability and on-demand resource provisioning, and edge computing for cost-efficiency and data processing closer to data sources, while also supporting serverless computing for simplified application development",
+    "avaliacao": "Experimental analysis demonstrates the benefits of deploying KM processes on this hybrid architecture, particularly in reducing data transmission times and alleviating network congestion",
+    "limites": "identifies the characteristics, opportunities and limitations of the edge and cloud environment in terms of computation and network communication times",
+    "possibilidades": "Investigar a integração de blockchain para controle de acesso e auditoria dos dados de KM; aplicar identidade auto‑soberana (SSI) para compartilhamento seguro de informações entre cidadãos e serviços públicos; estender a arquitetura a ambientes IIoT industriais; avaliar criptografia baseada em atributos (ABE) para privacidade de dados sensíveis; testar a solução em cenários de edge computing com recursos limitados.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

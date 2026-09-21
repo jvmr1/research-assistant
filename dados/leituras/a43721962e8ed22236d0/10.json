@@ -1,0 +1,34 @@
+{
+  "resumo": "O estudo revisa 78 artigos centrais sobre blockchain na cadeia de suprimentos agrícola, destacando um crescimento de publicações de 2018 a 2024. Identifica desafios de implementação, como confiança e transparência, e apresenta casos regionais (Gana, EUA). A integração de blockchain e IoT é apontada como promissora para rastreabilidade e segurança alimentar.",
+  "perfil": {
+    "problema": "What challenges arise in implementing blockchain within the agricultural supply chain sector?",
+    "solucao": "The integration of advanced technologies—such as blockchain and IoT—has brought the agricultural supply chain a number of favorable changes.",
+    "avaliacao": "The decentralized, tamper‑proof nature of blockchain could solve long‑standing issues of trust and transparency in supply chains.",
+    "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+    "possibilidades": "Aplicar a análise de casos regionais a cidades inteligentes, avaliando a interoperabilidade entre SSI e blockchain; desenvolver protótipo que combine SSI, blockchain e ABE para controle de acesso granular a sensores IoT em edge computing nas smart cities; comparar métricas de escalabilidade de soluções SSI usadas em cadeias agrícolas com aquelas adotadas em serviços públicos de cidades inteligentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "By the end of 2024, a total of 19 papers were published, which is more than six times the number published in 2018",
+      "afirmacao": "O número de artigos publicados aumentou mais de seis vezes entre 2018 e 2024."
+    }
+  ],
+  "interpretacao": "O crescimento acelerado da literatura indica crescente interesse e maturidade da pesquisa em blockchain para agricultura, mas ainda há lacunas em como integrar SSI e ABE para controle de acesso em ambientes distribuídos.",
+  "duvidas": "Quais métricas específicas foram usadas para avaliar a eficácia dos casos de uso regionais? Como os critérios de inclusão/exclusão afetaram a representatividade dos 78 artigos selecionados?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "04f1533c17180f30b2c9",
+  "artigo": "Alar_2026",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "What challenges arise in implementing blockchain within the agricultural supply chain sector?",
+    "solucao": "The integration of advanced technologies—such as blockchain and IoT—has brought the agricultural supply chain a number of favorable changes.",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+    "possibilidades": "Aplicar a análise de casos regionais a cidades inteligentes, avaliando a interoperabilidade entre SSI e blockchain; desenvolver protótipo que combine SSI, blockchain e ABE para controle de acesso granular a sensores IoT em edge computing nas smart cities; comparar métricas de escalabilidade de soluções SSI usadas em cadeias agrícolas com aquelas adotadas em serviços públicos de cidades inteligentes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "a43721962e8ed22236d0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "resumo": "O trecho apresenta um amplo conjunto de referências que abordam a gestão de identidade baseada em blockchain e identidade auto‑soberana (SSI) em múltiplos domínios, incluindo saúde, transporte público, registro de terras, IoT industrial, redes veiculares e educação. As obras citam esquemas de autenticação, controle de acesso, verificação de credenciais e mecanismos de revogação, demonstrando a crescente adoção de DLT para segurança e privacidade em ambientes distribuídos.",
+  "perfil": {
+    "problema": "Não informado",
+    "solucao": "Não informado",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Investigar como a taxonomia proposta pode ser aplicada para integrar identidades auto‑soberanas em sistemas de IoT de cidades inteligentes, focando em controle de acesso inter‑organizacional, revogação dinâmica e uso de credenciais verificáveis; avaliar a interoperabilidade entre diferentes blockchains públicos e permissionados em cenários de transporte público e registro de terras."
+  },
+  "evidencias": [],
+  "interpretacao": "O conjunto de referências indica que a pesquisa sobre identidade distribuída baseada em blockchain está se expandindo para múltiplas áreas críticas, reforçando a relevância da taxonomia proposta como ferramenta de organização e análise desses trabalhos.",
+  "duvidas": "Quais critérios específicos foram usados pelos autores para classificar as soluções apresentadas? Como a taxonomia lida com a evolução rápida de padrões de SSI e com a heterogeneidade de blockchains permissionados versus públicos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "6df87207aa3f96a12162",
+  "artigo": "Vaziry_2025",
+  "pagina": 14,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Trust emerged as the central concern across various layers of DLT-based IDM architectures",
+    "solucao": "provides conceptual clarity about fundamental components while remaining adaptable to emerging technologies and implementation patterns",
+    "avaliacao": "the taxonomy supports both theoretical advancement and practical implementation in this critical domain",
+    "limites": "Another limitation could be the rapid evolution of the research field",
+    "possibilidades": "Investigar como a taxonomia proposta pode ser aplicada para integrar identidades auto‑soberanas em sistemas de IoT de cidades inteligentes, focando em controle de acesso inter‑organizacional, revogação dinâmica e uso de credenciais verificáveis; avaliar a interoperabilidade entre diferentes blockchains públicos e permissionados em cenários de transporte público e registro de terras.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

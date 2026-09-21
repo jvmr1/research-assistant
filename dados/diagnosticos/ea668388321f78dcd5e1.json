@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:09:10",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey",
+    "perfil_anterior": {
+      "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+      "solucao": "we systematically categorize access control methods into permissionless and permissioned blockchains, evaluate critical privacy and security factors, and analyze widely used blockchain platforms.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "scalability, energy consumption, interoperability, and security",
+      "possibilidades": "Aplicar a categorização de blockchains permissioned e permissionless a ambientes IoT de cidades inteligentes, avaliando desempenho e requisitos de privacidade.; Integrar identidade auto‑soberana (SSI) e credenciais verificáveis ao framework de controle de acesso para serviços públicos urbanos cross‑organizacionais.; Estender a análise de fatores de privacidade e segurança para incluir criptografia baseada em atributos (ABE) em edge computing de smart cities.; Desenvolver métricas específicas de privacidade e escalabilidade para sistemas de saúde distribuídos em contextos urbanos, comparando di"
+    },
+    "pagina": 6,
+    "texto": "Table 1 A comparison between this survey and other surveys in the healthcare domain\nSurvey\nauthors\nPublication\nyear\nMain contributions EHR\nframeworks\nBlockchain\ntypes\nConsensus\nprotocols\nPrivacy\ntechniques\nAccess\ncontrol\nCovered\nyears\nKassab\net al. [ 12]\n2019 Review the blockchain-based\nchallenges, beneﬁts, and\nscenarios in healthcare\nU xx x x 2015–2018\nSyed\net al. [ 13]\n2019 Review of several blockchain\nbased healthcare applications\nUU U xx 2015–2018\nHussien\net al. [ 14]\n2019 A review of blockchain solutions\nin healthcare and their\nclassiﬁcations, problems, and\nsecurity objectives\nUU xx U 2016–2019\nAgbo\net al. [ 15]\n2019 A review of various use cases for\nimplementing blockchain\ntechnology in the healthcare\nsector\nUU xx x 2016–2018\nTandona\net al. [ 16]\n2020 Review of the handling and\nsharing of healthcare data,\nincluding EHRs\nUU xx x 2016–2019\nSoltanisehat\net al. [ 17]\n2020 Review of the blockchain-based\napplications, challenges, and\nfuture directions in healthcare\nUU U xx 2016–2020\nHasselgren\net al. [ 18]\n2020 A blockchain review of healthcare\ndata integrity, interoperability,\nand access control challenges\nUU U x U 2018–2020\nFarouk\net al. [ 19]\n2020 A review of blockchain in\nhealthcare systems, including an\nexploration of start-up\ncompanies involved\nUU U xx 2016–2019\nQadri\net al. [ 20]\n2020 Review of Blockchain as an\nemerging technology for the\nhealthcare IoT\nU xx U x 2016–2019\nShi\net al. [ 21]\n2020 A review of healthcare systems\nrequirements and limitations,\nand potential research directions\nUU U x U 2016–2019\nChukwu\net al. [ 22]\n2020 Review of applications in\nHealthcare Systems, along with\na consideration of potential\nresearch directions\nUU U xx 2017–2019\nKhatri\net al. [ 23]\n2021 A systematic review of\nblockchain trends and\nhealthcare challenges\nU xx x x 2016–2020\nHussien\net al. [ 24]\n2021 Review the bibliometric analysis\nof healthcare data systems to\nimprove privacy and security\nUU U x U 2016–2020\nArbabi\net al. [ 25]\n2022 Analyze interactions among\nhealthcare stakeholders and\nexplored storage systems’\nfunctional components and non-\nfunctional requirements\nUU U x U 2016–2021\nVillarreal\net al. [ 26]\n2023 Review blockchain applications\nin healthcare, focusing on\nblockchain interoperability and\nsecurity solutions\nUU U xx 2017–2022\nPopoola\net al. [ 27]\n2024 Review security and privacy\nchallenges in IoT-based smart\nhome healthcare, proposing\nblockchain solutions and future\ndirections\nUU U x U 2016–2023\n529 Page 6 of 45 Cluster Computing (2025) 28:529\n123",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "A Tabela 1 apresenta uma comparação entre o presente levantamento e demais surveys na área de saúde, listando autores, ano de publicação, principais contribuições (frameworks EHR, tipos de blockchain, protocolos de consenso, técnicas de privacidade, controle de acesso) e o período coberto por cada estudo, evidenciando a abrangência e as lacunas abordadas pelo trabalho em relação a revisões anteriores de 2019 a 2024.",
+    "perfil": {
+      "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+      "solucao": "we systematically categorize access control methods into permissionless and permissioned blockchains, evaluate critical privacy and security factors, and analyze widely used blockchain platforms.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "scalability, energy consumption, interoperability, and security",
+      "possibilidades": "Adaptar a comparação de surveys para o domínio de IoT em cidades inteligentes, incluindo métricas de desempenho em edge computing; integrar identidade auto‑soberana (SSI) e credenciais verificáveis ao framework de controle de acesso para serviços públicos urbanos; avaliar a eficácia de técnicas de privacidade baseadas em ABE em ambientes distribuídos de smart cities; propor um benchmark de interoperabilidade entre blockchains permissioned e permissionless para aplicações de saúde e infraestrutura urbana."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Table 1 A comparison between this survey and other surveys in the healthcare domain",
+        "citacao": "Table 1 A comparison between this survey and other surveys in the healthcare domain"
+      },
+      {
+        "afirmacao": "Review of blockchain applications in healthcare, focusing on blockchain interoperability and security solutions",
+        "citacao": "Review blockchain applications in healthcare, focusing on blockchain interoperability and security solutions"
+      }
+    ],
+    "interpretacao": "A tabela demonstra que o estudo atual amplia o escopo das revisões anteriores ao combinar múltiplas dimensões (tipos de blockchain, consenso, privacidade, controle de acesso) e ao cobrir um período mais recente, indicando uma visão mais integrada das soluções de blockchain para saúde.",
+    "duvidas": "Quais critérios específicos foram usados para classificar os tipos de blockchain e as técnicas de privacidade nos surveys comparados? Como o presente survey trata de questões de escalabilidade e consumo de energia em relação aos trabalhos listados?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:09:44"
+}

@@ -1,0 +1,51 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T19:00:35",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Blockchain based solid waste classification with AI powered tracking and IoT integration",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 13,
+        "resumo": "O estudo apresenta um framework de gestão de resíduos baseado em IA que utiliza CNNs para classificação, sensores IoT para monitoramento em tempo real e blockchain para garantir integridade dos dados. A precisão de classificação atinge 95%, a latência é reduzida para 1,2 s por imagem, a integridade dos dados chega a 98% e a eficiência de coleta atinge 92%, reduzindo emissões de CO₂ em 30% e apoiando metas de sustentabilidade em cidades inteligentes.",
+        "interpretacao": "A combinação de CNNs, IoT e blockchain eleva significativamente a precisão e a confiabilidade da gestão de resíduos, permitindo decisões de coleta mais rápidas e seguras, o que se traduz em maior eficiência operacional e redução de emissões de CO₂ nas cidades inteligentes.",
+        "duvidas": "Como a complexidade computacional adicional impacta a viabilidade em dispositivos de borda com recursos limitados? Qual é o custo de implantação da infraestrutura blockchain em escala municipal? Como garantir a interoperabilidade das credenciais SSI entre diferentes provedores de serviços urbanos?"
+      },
+      {
+        "pagina": 14,
+        "resumo": "O texto destaca que a integração de IoT e blockchain ao sistema de classificação de resíduos aumenta a integridade e a segurança dos dados, mas reconhece vulnerabilidades a vazamentos e ataques cibernéticos em implantações em larga escala. Sugere ainda explorar análises preditivas para otimizar a geração e coleta de resíduos e aborda preocupações éticas como viés de IA, mitigadas por conjuntos de dados representativos.",
+        "interpretacao": "O trecho reforça a proposta central do trabalho ao evidenciar benefícios de segurança trazidos pela blockchain, ao mesmo tempo em que aponta lacunas de proteção em ambientes IoT massivos e a necessidade de abordagens preditivas e éticas para melhorar a robustez e a justiça do sistema.",
+        "duvidas": "Quais estratégias específicas de mitigação de riscos de IoT serão adotadas? Como os modelos preditivos de geração e coleta de resíduos serão integrados ao fluxo de classificação existente? Há planos para validar a eficácia das medidas de mitigação em cenários reais?"
+      },
+      {
+        "pagina": 15,
+        "resumo": "O trecho apresenta referências a trabalhos que utilizam blockchain como serviço para IoT, arquiteturas de gerenciamento de acesso escaláveis, VANET habilitado por blockchain para gestão inteligente de resíduos sólidos e contratos inteligentes para sistemas de resíduos. Também inclui agradecimentos ao financiamento da King Abdulaziz University e informações de licenciamento aberto da publicação.",
+        "interpretacao": "O material indica que o artigo se apoia em uma base crescente de literatura que combina blockchain e IoT para melhorar a gestão de resíduos sólidos, sugerindo que a solução proposta está alinhada a tendências de segurança, escalabilidade e automação no contexto de cidades inteligentes.",
+        "duvidas": "Como a blockchain é integrada ao modelo de classificação AI descrito? Qual o impacto da camada blockchain na latência de coleta de dados dos sensores? Existem métricas de consumo energético da solução proposta? Como são tratadas questões de privacidade das imagens de resíduos?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo propõe um framework de gestão de resíduos sólidos que combina redes neurais convolucionais (CNNs) para classificação de imagens, sensores IoT para monitoramento em tempo real e blockchain para garantir a integridade dos dados. Os resultados experimentais indicam precisão de classificação de 95%, latência de 1,2 s por imagem, integridade de dados de 98% e eficiência de coleta de 92%, com redução de emissões de CO₂ em 30%, contribuindo para metas de sustentabilidade em cidades inteligentes. Os autores ressaltam que a integração de IoT e blockchain aumenta a segurança dos dados, mas reconhecem vulnerabilidades a vazamentos e ataques cibernéticos em larga escala, além de questões éticas relacionadas ao viés de IA. O trabalho se apoia em literatura recente sobre blockchain como serviço para IoT, arquiteturas de acesso escaláveis e contratos inteligentes, mas ainda não esclarece detalhes sobre a integração da camada blockchain ao modelo de classificação, impactos de latência, consumo energético e privacidade das imagens.",
+    "lacunas_possiveis": [
+      "Impacto da complexidade computacional das CNNs em dispositivos de borda com recursos limitados",
+      "Custo e viabilidade da implantação de infraestrutura blockchain em escala municipal",
+      "Interoperabilidade de credenciais SSI entre diferentes provedores de serviços urbanos",
+      "Estratégias específicas de mitigação de riscos de segurança em implantações massivas de IoT",
+      "Integração e validação de modelos preditivos de geração e coleta de resíduos no fluxo existente"
+    ],
+    "propostas_possiveis": [
+      "Avaliar versões leves de CNNs (e.g., MobileNet) para execução em edge devices",
+      "Realizar análise de custo-benefício comparando blockchains permissionadas e públicas para uso municipal",
+      "Desenvolver um framework SSI que padronize credenciais digitais para serviços de resíduos em cidades inteligentes",
+      "Implementar mecanismos de segurança IoT, como TLS mutuo, detecção de anomalias baseada em aprendizado de máquina e atualização segura de firmware",
+      "Integrar modelos preditivos de geração de resíduos ao sistema de classificação e testar em cenários piloto reais",
+      "Aplicar técnicas de privacidade, como criptografia homomórfica ou anonimização de imagens, para proteger dados sensíveis",
+      "Medir e otimizar o consumo energético da solução completa, considerando sensores, processamento AI e operação da blockchain"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:00:39"
+}

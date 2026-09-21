@@ -1,0 +1,41 @@
+{
+  "resumo": "O artigo propõe DNNs-BCT, que combina redes neurais profundas com blockchain para detecção de anomalias em IoT, usando edge computing para pré‑processamento, reduzindo custos computacionais, consumo de energia e latência em relação a soluções baseadas em Ethereum ou Bitcoin.",
+  "perfil": {
+    "problema": "IoT devices’ exponential development has raised serious security issues as they are distributed, have limited processing capabilities, and are prone to cyberattacks.",
+    "solucao": "DNNs-BCT integrates blockchain-authenticated anomaly logs",
+    "avaliacao": "Não informado.",
+    "limites": "Não informado.",
+    "possibilidades": [
+      "Integrar identidade auto‑soberana (SSI) para autenticação descentralizada dos dispositivos IoT em cidades inteligentes.",
+      "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados registrados no blockchain.",
+      "Explorar aprendizado federado combinado com DNNs‑BCT para melhorar a escalabilidade e privacidade em ambientes de edge computing.",
+      "Avaliar a abordagem em cenários de cidades inteligentes com múltiplas organizações públicas e privadas, medindo interoperabilidade e latência."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "processing, reduced storage overhead, and efficient energy use for IoT environments, in contrast to traditional blockchain-based security solutions that depend on Ethereum or Bitcoin, which have high computational costs, energy consumption, and latency.",
+      "afirmacao": "DNNs-BCT reduces computational costs and latency compared to traditional blockchain solutions."
+    },
+    {
+      "citacao": "DNNs-BCT uses edge computing to preprocess data before DNN inference and blockchain logging, greatly reducing bandwidth load and allowing for real-time anomaly detection.",
+      "afirmacao": "Edge computing preprocesses data before DNN inference and blockchain logging, enabling real‑time anomaly detection."
+    }
+  ],
+  "interpretacao": "O texto enfatiza que a combinação de DNNs com blockchain, apoiada por computação de borda, pode superar as limitações de energia e latência das abordagens tradicionais, tornando a detecção de anomalias viável para ambientes IoT restritos.",
+  "duvidas": "Quais métricas específicas foram usadas para validar a eficiência de DNNs‑BCT? Como a solução lida com a atualização dos modelos DNN em dispositivos com recursos limitados? Existe avaliação de resistência a ataques adversariais direcionados ao modelo DNN?",
+  "avisos": [],
+  "id": "eda521031516b8b36a16",
+  "artigo": "Sathyabama_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "IoT devices’ exponential development has raised serious security issues as they are distributed, have limited processing capabilities, and are prone to cyberattacks.",
+    "solucao": "DNNs-BCT integrates blockchain-authenticated anomaly logs",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Future research will focus on developing lightweight DNN architectures for IoT devices with limited resources",
+    "possibilidades": "Integrar identidade auto‑soberana (SSI) para autenticação descentralizada dos dispositivos IoT em cidades inteligentes.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados registrados no blockchain.; Explorar aprendizado federado combinado com DNNs‑BCT para melhorar a escalabilidade e privacidade em ambientes de edge computing.; Avaliar a abordagem em cenários de cidades inteligentes com múltiplas organizações públicas e privadas, medindo interoperabilidade e latência.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "40196a11e46ff300b5bb"
+  }
+}

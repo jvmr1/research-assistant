@@ -1,0 +1,129 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-16T16:55:36",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. A ideia já está publicada; esta etapa só acrescenta um caminho possível.",
+  "entrada": {
+    "ideia": "Desenvolver um protocolo de revogação baseado em blocos de status que minimize comunicação adicional e preserve anonimato",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Addula_2025",
+          "titulo": "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "df6bffac640d82c70f15",
+              "pagina": 1,
+              "resumo": "O artigo propõe um framework de autenticação IoT baseado em blockchain permissionada, combinando armazenamento otimizado, mecanismo de autenticação leve e criptografia homomórfica para proteger dados antes da nuvem. Visa melhorar a escalabilidade e reduzir a sobrecarga de armazenamento, oferecendo maior privacidade e confiança em ambientes IoT de grande escala, avaliado por simulações comparativas.",
+              "evidencias": [
+                {
+                  "citacao": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+                  "afirmacao": "A maioria das pesquisas existentes foca vulnerabilidades específicas, deixando de lado privacidade e confiança."
+                },
+                {
+                  "citacao": "we introduce, for the first time, the integration of homomorphic encryption to secure IoT data at the user end before uploading it to the cloud.",
+                  "afirmacao": "O estudo introduz criptografia homomórfica para proteger dados IoT antes da nuvem."
+                }
+              ]
+            },
+            {
+              "id": "5f602c19ab7e3def8b54",
+              "pagina": 2,
+              "resumo": "O artigo apresenta um modelo híbrido de blockchain combinado com criptografia homomórfica para autenticação escalável e preservação de privacidade em IoT industrial, especialmente em ambientes de saúde. Destaca a vulnerabilidade de arquiteturas centralizadas, a necessidade de segurança em redes 6G e propõe um framework de confiança que utiliza aprendizado profundo leve para autenticação biométrica, suportando milhares de sensores.",
+              "evidencias": [
+                {
+                  "citacao": "Blockchain technology has emerged as a promising solution to many of the IoT security challenges [11].",
+                  "afirmacao": "Blockchain technology has emerged as a promising solution to many of the IoT security challenges"
+                },
+                {
+                  "citacao": "A key innovation in the proposed model is the integration of homomorphic encryption —introduced here for the first time.",
+                  "afirmacao": "A key innovation in the proposed model is the integration of homomorphic encryption"
+                }
+              ]
+            },
+            {
+              "id": "7effbc03f18051519c19",
+              "pagina": 4,
+              "resumo": "O trecho descreve o uso de biometria de veia digital (FV) como método de autenticação robusto para IoT, destacando sua resistência a falsificações e a geração de chaves criptográficas a partir de características biométricas. Em seguida, apresenta a estrutura de blockchain como ledger descentralizado, imutável e transparente, adequado para gerenciamento seguro de dados em ambientes como saúde IoT, embora ressalte desafios de sobrecarga de comunicação e computação.",
+              "evidencias": [
+                {
+                  "citacao": "Among these methods, finger vein (FV) recognition stands out as one of the most secure biometric approaches.",
+                  "afirmacao": "Finger vein (FV) recognition stands out as one of the most secure biometric approaches."
+                }
+              ]
+            },
+            {
+              "id": "a8dfb592fcf8fdfaf689",
+              "pagina": 5,
+              "resumo": "O trecho descreve como a integração de contratos inteligentes em blockchains permissionadas permite a autenticação em tempo real de dados IoT, garantindo integridade e mitigando falsificação, acesso não autorizado e replay attacks. Após a verificação, os dados são criptografados com homomorphic encryption e enviados ao cloud, possibilitando análises sem revelar o conteúdo. O fluxo inclui coleta, verificação, criptografia e classificação via SVM.",
+              "evidencias": [
+                {
+                  "citacao": "These smart contracts automatically validate, log, and manage data transactions, thereby providing a secure, immutable, and transparent mechanism for handling IoT data.",
+                  "afirmacao": "Smart contracts automatically validate, log, and manage data transactions, thereby providing a secure, immutable, and transparent mechanism for handling IoT data."
+                },
+                {
+                  "citacao": "the data are encrypted using homomorphic encryption and securely outsourced to the cloud.",
+                  "afirmacao": "Data are encrypted using homomorphic encryption and securely outsourced to the cloud."
+                }
+              ]
+            }
+          ],
+          "problema": "privacy-preserving authentication framework tailored for industrial IoT applications",
+          "solucao": "integrates hash evaluation and MAC verification",
+          "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+          "limites": "Não identificado nas fichas/trechos disponíveis.",
+          "possibilidades": "Avaliar a integração de identidade auto‑soberana (SSI) para interoperabilidade entre serviços públicos de cidades inteligentes; testar o modelo em arquiteturas de edge computing; incorporar mecanismos de revogação de credenciais baseados em blockchain; analisar a escalabilidade em ambientes IIoT heterogêneos.",
+          "assinatura": "cee773808391dfdf8312"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": {
+      "descricao": "Implementar um protocolo de revogação baseado em blocos de status (Status‑Block Revocation – SBR) que registra, de forma compacta, o estado de validade de credenciais SSI em uma blockchain permissionada. O protótipo será integrado ao framework de autenticação IoT proposto por Addula_2025 (blockchain permissionada + homomorphic encryption) substituindo o mecanismo de revogação implícito por SBR. Serão realizados testes comparativos entre (i) Addula_2025 sem revogação explícita, (ii) SBR integrado ao mesmo framework, e (iii) um esquema tradicional de lista de revogação (CRL) em blockchain.",
+      "comparacao_trabalho_base": "Addula_2025 – \"A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication\""
+    },
+    "recursos": {
+      "dados": [
+        "Conjunto de dados públicos de sensores urbanos (ex.: CityPulse, Smart* City dataset) contendo leituras de temperatura, tráfego e energia.",
+        "Logs de autenticação simulados gerados a partir de 500 dispositivos IoT virtuais."
+      ],
+      "ferramentas": [
+        "Plataforma de blockchain permissionada (Hyperledger Fabric ou Besu).",
+        "Bibliotecas SSI (DIF Universal Resolver, Aries Cloud Agent).",
+        "Implementação de criptografia homomórfica leve (Microsoft SEAL).",
+        "Ambiente de edge computing (Raspberry Pi 4 ou Jetson Nano).",
+        "Orquestrador de containers (Docker‑Compose) para replicar nós da rede."
+      ],
+      "infraestrutura": [
+        "Cluster de 3 máquinas virtuais (2 CPU, 8 GB RAM) para nós de ordem.",
+        "1 máquina física para atuar como edge gateway.",
+        "Rede local configurada com latência controlada (tc)."
+      ]
+    },
+    "metricas": [
+      "Latência de revogação (tempo entre a emissão da ordem de revogação e a efetiva negação de acesso).",
+      "Overhead de comunicação (bytes adicionais por transação de revogação).",
+      "Tamanho do anonimato (número de credenciais indistinguíveis no bloco de status).",
+      "Taxa de sucesso de autenticação (percentual de tentativas legítimas aceitas).",
+      "Throughput de autenticação (autenticações por segundo).",
+      "Escalabilidade (variação das métricas acima ao aumentar de 100 para 1000 dispositivos)."
+    ],
+    "duvidas_orientador": [
+      "Como garantir que o bloco de status preserve o anonimato dos dispositivos sem revelar identidades ao registrar revogações?",
+      "Qual a frequência ideal de criação de blocos de status para equilibrar latência e overhead de rede?",
+      "O uso de homomorphic encryption impacta significativamente a latência de revogação comparado ao CRL tradicional?",
+      "Como validar a interoperabilidade do protocolo SBR entre diferentes domínios de cidades inteligentes (ex.: energia vs. mobilidade)?",
+      "Quais limites de tamanho de bloco de status são aceitáveis antes de comprometer a performance da rede permissionada?"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T16:56:25"
+}

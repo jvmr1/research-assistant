@@ -1,0 +1,30 @@
+{
+  "resumo": "O trecho descreve a metodologia da revisão sistemática, apresentando o fluxo de seleção de estudos (Figura 2) e detalhando os critérios de elegibilidade: inclusão de artigos em inglês (2008‑2024) focados em privacidade baseada em blockchain para compartilhamento de dados de saúde, e exclusão de tipos de publicação como surveys e trabalhos que não tratam de privacidade ou compartilhamento de dados.",
+  "perfil": {
+    "problema": "Não informado",
+    "solucao": "Não informado",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "• Adaptar os critérios de inclusão para abranger estudos que tratem de identidade auto‑soberana (SSI) e credenciais verificáveis em contextos de cidades inteligentes. • Expandir a revisão para incluir trabalhos que utilizem IoT urbano e edge computing, avaliando como esses ambientes impactam a privacidade em blockchains de saúde. • Desenvolver um framework de avaliação comparativa entre técnicas de privacidade (ABE, ZKP, PEKS) aplicadas a blockchains híbridas, focando em interoperabilidade inter‑organizacional."
+  },
+  "evidencias": [],
+  "interpretacao": "O texto evidencia que a revisão sistemática segue um processo rigoroso de seleção, usando critérios claros de inclusão e exclusão para garantir que apenas estudos relevantes ao uso de blockchain para privacidade em compartilhamento de dados de saúde sejam analisados.",
+  "duvidas": "Como os critérios de inclusão/exclusão poderiam ser ajustados para capturar pesquisas sobre SSI e identidade digital em serviços de cidades inteligentes? Existe alguma justificativa para limitar o período a 2008‑2024 que possa excluir trabalhos recentes relevantes ao contexto de edge computing?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "9b4fdcd6847d47cb2e36",
+  "artigo": "Li_2025",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "patients’ limited control over their healthcare data",
+    "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+    "avaliacao": "most solutions remain at the proof-of-concept stage (TRL3)",
+    "limites": "privacy-preserving search and verification remain underexplored",
+    "possibilidades": "• Adaptar os critérios de inclusão para abranger estudos que tratem de identidade auto‑soberana (SSI) e credenciais verificáveis em contextos de cidades inteligentes. • Expandir a revisão para incluir trabalhos que utilizem IoT urbano e edge computing, avaliando como esses ambientes impactam a privacidade em blockchains de saúde. • Desenvolver um framework de avaliação comparativa entre técnicas de privacidade (ABE, ZKP, PEKS) aplicadas a blockchains híbridas, focando em interoperabilidade inter‑organizacional.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "b8443972948d3ef5dd5c"
+  }
+}

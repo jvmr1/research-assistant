@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T12:15:16",
+  "revisao": "9a4532f511c88c05cbf9",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A review on WSN based resource constrained smart IoT systems",
+    "perfil_anterior": {
+      "problema": "",
+      "solucao": "",
+      "avaliacao": "",
+      "limites": "",
+      "possibilidades": ""
+    },
+    "pagina": 15,
+    "texto": "Vol.:(0123456789)\nDiscover Internet of Things            (2025) 5:56  | https://doi.org/10.1007/s43926-025-00152-2 \n \n Review\n• Multiple Parameters: The predominant focus of current research works on energy efficiency is on selecting cluster \nheads using criteria like distance, residual energy, and node degree. This narrow approach for selection of parameters \nhighlights a gap and suggests the potential for developing an energy efficient mechanism in smart IoT systems by \nincorporating additional parameters, including load, cluster head count (i.e. CHC), delay, and signal-to-noise ratio (i.e. \nSNR), either individually or together.\n• Lightweight Cryptosystems: Studies on privacy preservation and security enhancement frequently use public \ncryptosystems such as RSA and Elgamal. However, these cryptosystems are computationally demanding and \nconsume considerable energy. As a result, there is a demand for lightweight cryptosystems to provide security \nand protect privacy in smart IoT networks.\n• Offline and Online Design Paradigm: The authors identify that applying the offline and online design paradigm \nin smart IoT systems offers a promising approach to developing privacy preserving mechanisms that minimize \nenergy consumption.\n• Advanced Technologies: The current study also recognizes that advanced technologies like SDN, ML, 5G, D2D \ncommunication, big data, cloud computing, computer vision, and edge computing could significantly enhance \nthe capabilities of smart systems.\nTable 3  A list of the \nabbreviations used \nthroughout in the text\nS. No. Abbreviation Stands For\n1. D Distance\n2. E Energy\n3. I Imbalance data communication\n4. L Load\n5. 5G 5th Generation\n6. AI Artificial intelligence\n7. De Transmission delay\n8. DL Deep learning\n9. ML Machine learning\n10. ND Node degree\n11. CHC Cluster head count\n12. D2D Device-to-device\n13. DoS Denial of service\n14. IDS Intrusion detection system\n15. IoT Internet of things\n16. M2M Machine-to-machine\n17. NFV Network function virtualization\n18. QoS Quality of service\n19. RAM Random Access memory\n20. SDN Software defined networking\n21. SNR Signal-to-Noise Ratio\n22. UAV Unmanned Aerial Vehicle\n23. ALAM Anonymous Lightweight Authentication Method\n24. DDoS Distributed Denial of Service\n25. IIoT Industrial Internet of Things\n26. PISA Protocol Independent Switch Architecture\n27. RFID Radio Frequency Identification\n28. SLoc Sink Node Location\n29. TDMA Time Division Multiple Access\n30. LEACH Low Energy Adaptive Clustering Hierarchy\n31. SCADA Supervisory Control and Data Acquisition\n32. EEPROM Electrically Erasable Programmable Read Only Memory\n33. LoRaWAN Long Range Wide Area Network",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve uma revisão de sistemas IoT com restrições de recursos, destacando a necessidade de incluir mais parâmetros na seleção de heads de cluster para eficiência energética, a demanda por criptosistemas leves para preservar privacidade, a aplicação de paradigmas offline e online para mecanismos de privacidade com baixo consumo energético, e a potencialidade de tecnologias avançadas como SDN, ML, 5G e edge computing para aprimorar os sistemas inteligentes.",
+    "perfil": {
+      "problema": "The predominant focus of current research works on energy efficiency is on selecting cluster heads using criteria like distance, residual energy, and node degree.",
+      "solucao": "There is a demand for lightweight cryptosystems to provide security and protect privacy in smart IoT networks.",
+      "avaliacao": "The current study also recognizes that advanced technologies like SDN, ML, 5G, D2D communication, big data, cloud computing, computer vision, and edge computing could significantly enhance the capabilities of smart systems.",
+      "limites": "Não informado",
+      "possibilidades": "Extensão de mecanismos de seleção de heads de cluster com inclusão de parâmetros adicionais como carga, contagem de heads, atraso e SNR."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Multiple Parameters: The predominant focus of current research works on energy efficiency is on selecting cluster heads using criteria like distance, residual energy, and node degree.",
+        "citacao": "The predominant focus of current research works on energy efficiency is on selecting cluster heads using criteria like distance, residual energy, and node degree."
+      },
+      {
+        "afirmacao": "Lightweight Cryptosystems: Studies on privacy preservation and security enhancement frequently use public cryptosystems such as RSA and Elgamal.",
+        "citacao": "Studies on privacy preservation and security enhancement frequently use public cryptosystems such as RSA and Elgamal."
+      }
+    ],
+    "interpretacao": "A revisão identifica lacunas na eficiência energética e segurança em redes IoT, sugerindo que a inclusão de mais critérios na seleção de heads de cluster e a adoção de criptosistemas leves podem melhorar a segurança e a eficiência.",
+    "duvidas": "Como a integração de tecnologias avançadas como SDN e ML pode ser implementada sem sobrecarga energética em sistemas IoT com recursos limitados?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T12:15:25"
+}

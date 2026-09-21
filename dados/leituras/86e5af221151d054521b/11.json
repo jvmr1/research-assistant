@@ -1,0 +1,42 @@
+{
+  "resumo": "O trecho descreve como soluções blockchain empresariais (Hyperledger, Ethereum) têm sido usadas para rastrear vacinas, abordando privacidade, autenticação e escalabilidade, mas ainda carecem de mecanismos de identidade descentralizada (SSI) e controle de acesso centrado no paciente. Estudos apontam integrações blockchain‑IoT com RFID, porém a verificação de identidade e a interoperabilidade transfronteiriça permanecem limitadas, exigindo validação organizacional e modelos de dados mais ricos.",
+  "perfil": {
+    "problema": "most existing solutions lack integration with decentralized identity mechanisms such as SSI and fail to support interoperable, cross-border drug logistics",
+    "solucao": "permissioned blockchain frameworks to enhance pharmaceutical traceability and counterfeit prevention, emphasizing secure access control and real-time visibility",
+    "avaliacao": "Prototype implementations confirm the practicality of blockchain-based vaccination tracking while acknowledging the need for richer data models and real-world organizational validation",
+    "limites": "identity verification and patient-centric access control remain largely unaddressed",
+    "possibilidades": [
+      "Desenvolver modelo de governança descentralizada para SSI em cadeias de suprimentos transfronteiriças;",
+      "Implementar protocolos de consenso leves adequados a ambientes edge em cidades inteligentes;",
+      "Avaliar aprendizado federado combinado com blockchain para previsão de demanda de vacinas;",
+      "Criar framework de auditoria automática usando smart contracts e verifiable credentials;",
+      "Investigar integração com plataformas de identidade nacional baseadas em DID para interoperabilidade governamental."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Prior work has demonstrated that blockchain can serve as a coordination and trust layer in distributed learning and edge-based systems, although these solutions often lack identity-centric privacy guarantees and domain-specific governance mechanisms [86].",
+      "afirmacao": "Blockchain can serve as a coordination and trust layer in distributed learning and edge-based systems"
+    },
+    {
+      "citacao": "Blockchain–IoT integrations using RFID sensors extend these capabilities by linking physical drug movement with immutable digital records, although identity verification and patient-centric access control remain largely unaddressed [29].",
+      "afirmacao": "Blockchain–IoT integrations using RFID sensors extend these capabilities by linking physical drug movement with immutable digital records"
+    }
+  ],
+  "interpretacao": "O texto evidencia que, embora a blockchain ofereça rastreabilidade e transparência para a cadeia de suprimentos de vacinas, a ausência de identidade auto‑soberana impede controle de acesso granular e interoperabilidade internacional, limitando a adoção em contextos de cidades inteligentes.",
+  "duvidas": "Quais padrões de SSI seriam mais adequados para integração com sistemas de saúde pública? Como garantir a escalabilidade de soluções permissionadas em ambientes edge de cidades inteligentes? Que mecanismos de revogação de credenciais são compatíveis com requisitos regulatórios transfronteiriços?",
+  "avisos": [],
+  "id": "4224f8d472c385f69779",
+  "artigo": "Chaurasia_2026",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "most existing solutions lack integration with decentralized identity mechanisms such as SSI and fail to support interoperable, cross-border drug logistics",
+    "solucao": "permissioned blockchain frameworks to enhance pharmaceutical traceability and counterfeit prevention, emphasizing secure access control and real-time visibility",
+    "avaliacao": "Prototype implementations confirm the practicality of blockchain-based vaccination tracking while acknowledging the need for richer data models and real-world organizational validation",
+    "limites": "identity verification and patient-centric access control remain largely unaddressed",
+    "possibilidades": "Desenvolver modelo de governança descentralizada para SSI em cadeias de suprimentos transfronteiriças;; Implementar protocolos de consenso leves adequados a ambientes edge em cidades inteligentes;; Avaliar aprendizado federado combinado com blockchain para previsão de demanda de vacinas;; Criar framework de auditoria automática usando smart contracts e verifiable credentials;; Investigar integração com plataformas de identidade nacional baseadas em DID para interoperabilidade governamental.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86e5af221151d054521b"
+  }
+}

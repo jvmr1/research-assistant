@@ -1,0 +1,22 @@
+{
+  "id": "fec9ed4d315e2680ed68",
+  "revisao": "e7b8232d88fc37f0003b",
+  "gerado_em": "2026-09-21T00:17:44",
+  "modelo": "openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free, qwen2.5:7b-instruct-q4_K_M",
+  "titulo": "Arquitetura híbrida SSI‑IA para segurança de turistas em cidades inteligentes",
+  "fontes": [
+    "S_2026",
+    "Exemplo_55b3b0969325cccbbb2c"
+  ],
+  "problema": "Integração insuficiente entre SSI e IA para proteção de identidade em serviços de segurança urbana.",
+  "hipotese_lacuna": "Integração insuficiente entre SSI e IA para proteção de identidade em serviços de segurança urbana.",
+  "meu_trabalho": "Desenvolver uma arquitetura que incorpora identidade autossoberana com módulos de IA para detecção de risco em tempo real, estendendo o sistema de turismo seguro de S_2026. A ideia combina a proposta de IA e geo‑fencing (S_2026) com a base de SSI para garantir privacidade dos dados de localização, abordando a lacuna de proteção de identidade em aplicações de segurança urbana.",
+  "interpretacao": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na proposta de usar blockchain e credenciais verificáveis (VCs) para autenticação e controle de acesso (Exemplo_55b3b0969325cccbbb2c). Os trabalhos de revisão apontam que VCs trazem privacidade, descentralização e redução de fraudes (Gudipati_2025). Há consenso de que a integração com IoT e serviços públicos requer mecanismos de revogação e recuperação de credenciais, ainda pouco explorados. Divergem quanto ao papel da IA e geo‑fencing: S_2026 propõe um sistema de segurança turística baseado em IA e identidade blockchain, enquanto outros focam apenas na camada de identidade. Os estudos chegam a protótipos de middleware ou casos de uso específicos, mas carecem de avaliações de escalabilidade, interoperabilidade entre diferentes órgãos e de combinações com criptografia baseada em atributos (ABE) ou homomórfica.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver uma arquitetura que incorpora identidade autossoberana com módulos de IA para detecção de risco em tempo real, estendendo o sistema de turismo seguro de S_2026. A ideia combina a proposta de IA e geo‑fencing (S_2026) com a base de SSI para garantir privacidade dos dados de localização, abordando a lacuna de proteção de identidade em aplicações de segurança urbana.",
+  "modo": "brainstorm",
+  "buscas": [
+    "self sovereign identity AI smart city safety",
+    "privacy preserving geo-fencing SSI"
+  ],
+  "validacao_estado_da_arte": "pendente: executar as buscas registradas, ler trabalhos recentes retornados e comparar explicitamente o que já foi feito com o recorte proposto antes de afirmar novidade."
+}

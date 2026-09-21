@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:40:02",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication",
+    "perfil_anterior": {
+      "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+      "solucao": "programming smart contracts to verify the data's authenticity before it is committed to the blockchain ledger",
+      "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "• Avaliar o impacto de integrar criptografia homomórfica ao modelo SSI para proteção de dados sensíveis em cidades inteligentes.\n• Medir o overhead de desempenho do Algoritmo 2 em dispositivos de borda com recursos limitados.\n• Explorar provas de conhecimento zero‑knowledge para reforçar a privacidade durante a revogação de credenciais.\n• Testar a escalabilidade dos blocos de atualização/revogação em cenários massivos de IoT, analisando latência e consumo energético."
+    },
+    "pagina": 8,
+    "texto": " \n \n  \n \n229 \n \n \n \nJournal of Cyber Security and Risk Auditing Vol.2025, No.4                                         ISSN: 3079-5354 \n3.3. Compare received attributes with access policy \n3.4. If attributes satisfy policy, proceed; else Reject Request \n4. Homomorphic Encryption Setup: \n4.1. For each attribute ai ∈ Attributesa_  \n  4.1.1. Encrypt using homomorphic encryption scheme: \n    EAi= HE_Encrypt (ai,PK)  \n4.2. Store EA={EA1,EA2,...,EAn} on blockchain \n5. Return: \nStatus = Authenticated \nReturn Encrypted Attributes EA \n \n \nAlgorithm 3 outlines the procedure for selecting a cluster head within the IoT network. The selection is determined based \non the available battery power of the sensor nodes. Among the nodes, the one with the highest remaining power is \ndesignated as the cluster head. Once selected, the cluster head is responsible for receiving IoT data from the other sensor \nnodes in the network, thereby facilitating efficient communication and energy management.  \n \nAlgorithm 3.  Selection of Cluster Head \n \n1. Initialize: \nSet CH ← null \nSet maxBattery ← 0 \n2. For each node nᵢ ∈ N do \na. Measure battery level B(nᵢ) \nb. If B(nᵢ) > maxBattery then \n   i. maxBattery ← B(nᵢ) \n   ii. CH ← nᵢ \n3. End For \n4. Return CH as the selected Cluster Head. \n \n \nAlgorithm 4 outlines the step -by-step procedure for encrypting Electronic Medical Records (EMR) using Homomorphic \nEncryption (HE). Homomorphic encryption enables mathematical and statistical computations to be performed directly on \nencrypted data, eliminat ing the need for decryption beforehand. This capability ensures that sensitive health information \nremains secure and private throughout the data processing lifecycle. In the proposed model, HE allows users to encrypt \ntheir data locally and securely outsour ce it to the cloud for processing. Among the three main types of homomorphic \nencryption—fully homomorphic encryption (FHE), partially homomorphic encryption (PHE), and hybrid HE —this study \nemploys FHE. This choice aligns with the system’s requirements, particularly the need to support complex computations  \nacross a large number of Internet of Medical Things (IoMT) devices, while maintaining strong privacy guarantees.  \n \nAlgorithm 4.  EMR Encryption Using Fully Homomorphic Encryption (FHE) \n \n1. Initialize FHE Scheme \nGenerate a key pair: \n(pk,sk)←HE.KeyGen() \n2. Data Collection \nAcquire raw EMR data from IoMT devices (e.g., heart rate, temperature, glucose levels).  \nD={d1,d2,...,dn} \n3. Encrypt EMR Data \nFor each data element di ∈ D: \nE(di)=HE.Encrypt (pk,di) E(d_i)  \n4. Form Encrypted Dataset ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho propõe um método de autenticação IoT que combina verificação de atributos contra políticas de acesso, criptografia homomórfica dos atributos armazenados em blockchain e seleção de cluster head baseada na energia da bateria. Também descreve a criptografia de registros médicos usando FHE, visando privacidade e eficiência energética.",
+    "perfil": {
+      "problema": "ensuring that sensitive health information remains secure and private throughout the data processing lifecycle.",
+      "solucao": "Encrypt using homomorphic encryption scheme: EAi= HE_Encrypt (ai,PK)",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "• Avaliar o impacto de combinar criptografia homomórfica com atributos baseados em políticas de acesso (ABE) para controle de acesso granular em cidades inteligentes.\n• Medir o overhead de comunicação e latência introduzidos pela seleção dinâmica de cluster head em ambientes de borda.\n• Testar a escalabilidade da armazenagem de atributos criptografados em blockchain sob alta taxa de dispositivos IoT.\n• Explorar a integração de credenciais verificáveis (VCs) com o esquema de criptografia homomórfica para suportar revogação segura."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Os atributos são criptografados usando esquema de criptografia homomórfica e armazenados na blockchain.",
+        "citacao": "Encrypt using homomorphic encryption scheme: EAi= HE_Encrypt (ai,PK) ... Store EA={EA1,EA2,...,EAn} on blockchain"
+      },
+      {
+        "afirmacao": "A seleção do cluster head é baseada no nível de bateria mais alto entre os nós sensores.",
+        "citacao": "Selection of Cluster Head ... the one with the highest remaining power is designated as the cluster head."
+      }
+    ],
+    "interpretacao": "A inclusão de criptografia homomórfica permite que atributos sensíveis sejam processados sem descriptografia, reforçando a privacidade. A escolha do cluster head por energia prolonga a vida útil da rede, mas pode introduzir variabilidade no caminho de comunicação. O uso de FHE para EMR demonstra viabilidade em cenários de saúde, sugerindo aplicação similar em outros domínios de IoT.",
+    "duvidas": "Como o esquema de criptografia homomórfica afeta o tempo de verificação de atributos em tempo real? Qual o custo de armazenamento dos atributos criptografados na blockchain para grandes escalas de dispositivos? O algoritmo de seleção de cluster head considera mobilidade ou falhas de nós? Há avaliação de resistência a ataques de replay ou falsificação de atributos?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:40:32"
+}

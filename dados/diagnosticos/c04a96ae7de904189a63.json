@@ -1,0 +1,93 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-21T00:14:22",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Desenvolva esta sugestão em nível de reunião com orientador, como brainstorm profundo e útil. Não escreva só uma frase. JSON com strings: experimento, recursos, metricas, riscos e duvidas_orientador. Em experimento, detalhe: problema específico, hipótese, arquitetura/artefato a implementar, etapas, baseline ou trabalhos de comparação, e cenário de avaliação. Em recursos, liste ferramentas, dados/simuladores, padrões e bibliotecas possíveis, sem inventar disponibilidade. Em métricas, inclua desempenho, segurança, privacidade, usabilidade/interoperabilidade quando couber. Em riscos, explique o que pode inviabilizar ou reduzir a novidade, incluindo o risco de a proposta já ter sido tratada e quais buscas/tags precisam ser lidas para checar anterioridade. Em dúvidas, escreva perguntas concretas para levar à reunião. Use as fontes fornecidas e deixe claro quando for inferência exploratória. Cada campo deve ter entre 120 e 250 palavras quando houver informação suficiente.",
+  "entrada": {
+    "ideia": "Aplicar criptografia baseada em atributos (ABE) ou criptografia homomórfica para controle de acesso seletivo e preservação de privacidade",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Exemplo_55b3b0969325cccbbb2c",
+          "titulo": "Danilo_TCC_final",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "4d0d92e96ed42493301d",
+              "pagina": 1,
+              "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                },
+                {
+                  "citacao": "Cidades Inteligentes",
+                  "afirmacao": "O estudo está inserido no contexto de cidades inteligentes."
+                }
+              ]
+            },
+            {
+              "id": "4af4e95bcf402163cf78",
+              "pagina": 2,
+              "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                }
+              ]
+            },
+            {
+              "id": "5cb5f57a5bb410182c9c",
+              "pagina": 3,
+              "resumo": "O trabalho de Danilo Isaque Sousa Maia (2025) propõe o uso de blockchain e identidades autosoberanas para autenticação e controle de acesso em cidades inteligentes, apresentando o tema, palavras‑chave e a orientação acadêmica.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes / Danilo Isaque Sousa Maia. - 2025.",
+                  "afirmacao": "O trabalho aborda Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes."
+                },
+                {
+                  "citacao": "1. Cidades Inteligentes. 2. Blockchain. 3. Identidades Autosoberanas. 4. Controle de Acesso. 5. Autenticação.",
+                  "afirmacao": "São listadas as palavras‑chave relacionadas ao tema."
+                }
+              ]
+            },
+            {
+              "id": "cb59efb152362ddd8ea7",
+              "pagina": 4,
+              "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                }
+              ]
+            }
+          ],
+          "problema": "Não identificado nas fichas/trechos disponíveis.",
+          "solucao": "uso de identidades autosoberanas (SSI) baseadas em blockchain para dar controle aos cidadãos sobre suas credenciais digitais",
+          "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+          "limites": "Não identificado nas fichas/trechos disponíveis.",
+          "possibilidades": "Explorar a integração de mecanismos de revogação de credenciais verificáveis, como listas de revogação distribuídas, ao middleware InterSCity para melhorar a gestão de identidade e a resiliência contra comprometimento de credenciais.",
+          "assinatura": "48c9e3fceeab0d41daf3"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": "Problema: nas soluções atuais de autenticação e controle de acesso em cidades inteligentes baseadas em blockchain e identidade autossoberana (Maia, 2025) ainda não há mecanismos que permitam ao cidadão selecionar, de forma criptograficamente garantida, quais atributos de suas credenciais são revelados a serviços IoT, nem processar dados sensíveis sem expô‑los. Hipótese: a combinação de credenciais verificáveis (VC) emitidas via DID com criptografia baseada em atributos (ABE) ou criptografia homomórfica (HE) permite controle de acesso seletivo e processamento de dados preservando a privacidade, sem degradar a escalabilidade da infraestrutura blockchain. Arquitetura/artefato: um middleware integrado ao InterSCity que (i) emite VC usando Hyperledger Indy/DID, (ii) encapsula atributos sensíveis em ciphertexts ABE (esquema CP‑ABE via Charm‑Crypto) ou em ciphertexts HE (Microsoft SEAL), (iii) fornece APIs para que sensores IoT verifiquem políticas de acesso antes de consumir dados. Etapas: (1) modelagem de políticas de acesso para serviços típicos (ex.: coleta de tráfego, iluminação pública); (2) implementação de módulos ABE/HE no agente SSI; (3) integração ao fluxo de emissão/apresentação de VC; (4) testes de carga e latência em ambiente de simulação InterSCity; (5) avaliação de privacidade via análise de vazamento de atributos. Baseline: solução de controle de acesso baseada apenas em blockchain/DID descrita por Maia (2025) e abordagens de revogação via listas distribuídas. Cenário de avaliação: cidade‑teste simulada com 10 000 cidadãos virtuais, 500 sensores IoT e 20 serviços públicos, medindo tempo de autenticação, throughput de transações e taxa de sucesso de políticas seletivas.",
+    "recursos": "Ferramentas: Hyperledger Indy/Aries para DID e VC, Aries Cloud Agent‑Python para wallets, Charm‑Crypto (Python) para implementação de CP‑ABE, Microsoft SEAL (C++) para HE, Docker/Kubernetes para orquestração dos componentes, InterSCity (simulador de cidades inteligentes) para gerar carga de sensores e serviços, Grafana/Prometheus para monitoramento. Dados/Simuladores: datasets de tráfego e consumo de energia disponíveis no repositório InterSCity, perfis de atributos de cidadãos (nome, idade, residência, permissões de acesso) sintetizados conforme a taxonomia de atributos proposta por Goyal et al. (2019) sobre ABE. Padrões e bibliotecas: W3C DID Core, Verifiable Credentials Data Model, JSON‑LD, Decentralized Identifier (DID) resolver, libvcx para manipulação de credenciais, OpenAPI para exposição de APIs de política. Todas as ferramentas citadas são de código aberto ou disponibilizadas publicamente, sem necessidade de licenças proprietárias.",
+    "metricas": "Desempenho: latência média (ms) da emissão, apresentação e verificação de VC com ABE/HE; throughput (transações/s) no blockchain durante picos de acesso; consumo de recursos (CPU, memória) dos agentes SSI. Segurança: taxa de detecção de tentativas de acesso não autorizado em testes de penetração; resistência a ataques de replay e comprometimento de chaves privadas (medido por tempo até revogação efetiva). Privacidade: índice de vazamento de atributos (número de atributos indevidamente revelados) comparado ao baseline sem ABE/HE; avaliação de anonimato usando métricas de entropia de atributos. Usabilidade/Interoperabilidade: número de cliques/tempo necessário para que o cidadão configure políticas de acesso; taxa de sucesso de interoperabilidade entre diferentes serviços públicos (medida por conformidade com W3C VC/DID). Cada métrica será coletada em múltiplas execuções para garantir significância estatística (p < 0,05).",
+    "riscos": "Risco de novidade: a literatura recente inclui trabalhos que já combinam SSI com ABE para controle de acesso em IoT (ex.: busca por \"SSI ABE IoT\" em OpenAlex, Crossref, Semantic Scholar) e propostas de HE para processamento de credenciais (\"homomorphic encryption verifiable credentials\"). Se tais estudos abordarem exatamente a integração proposta, a contribuição pode ser reduzida. Para validar a anterioridade, deverão ser realizadas buscas com as tags: self‑sovereign identity, attribute‑based encryption, verifiable credentials, smart city, IoT, privacy‑preserving access control. Outro risco técnico: a sobrecarga criptográfica de ABE/HE pode tornar inviável a operação em dispositivos de borda com recursos limitados, comprometendo a escalabilidade. Finalmente, a dependência de padrões emergentes (ex.: VC revocation registries) pode gerar incompatibilidades se as especificações evoluírem durante o projeto. Mitigações incluem prototipagem incremental, benchmarking contra baseline e revisão contínua das buscas de anterioridade.",
+    "duvidas_orientador": "1. O escopo de políticas de acesso seletivo deve focar apenas em atributos de identidade (ex.: idade, residência) ou incluir dados sensoriais (ex.: localização em tempo real)? 2. Qual abordagem criptográfica (CP‑ABE vs. HE) seria mais alinhada ao requisito de latência baixa para serviços críticos como controle de iluminação? 3. Devemos priorizar a integração com o middleware InterSCity existente ou desenvolver um protótipo independente para validar a arquitetura? 4. Qual baseline de revogação de credenciais (lista de revogação distribuída vs. status registry) seria mais adequado para comparar a eficácia da proposta? 5. Há disponibilidade de datasets reais de atributos de cidadãos que possam ser usados em vez de dados sintéticos, respeitando a LGPD? 6. Qual a expectativa de esforço de desenvolvimento (horas) para implementar os módulos ABE e HE dentro do agente SSI, considerando a curva de aprendizado das bibliotecas selecionadas?"
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:14:35"
+}

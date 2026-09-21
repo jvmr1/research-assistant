@@ -1,0 +1,15 @@
+{
+  "resumo": "O artigo apresenta um levantamento sobre controle de acesso e preservação de privacidade em ambientes de saúde usando blockchain. Destaca o protocolo Proof of Authentication (PoAh) como solução de baixo consumo energético para dispositivos IoT limitados, mas aponta risco de centralização ao depender de nós autenticadores. Analisa comparativamente protocolos de consenso (PoW, PoS, DPoS, PoAc, PBFT, DBFT, PoA) e evidencia trade‑offs entre segurança, throughput, latência e consumo de energia. Explora ainda protocolos emergentes (PoET, PoV, PoC, PoAh), ressaltando limitações como dependência de hardware Intel (PoET) ou falta de suporte a buscas conjuntivas (PoC). Por fim, discute a integração de técnicas criptográficas avançadas – Secure Multi‑Party Computation e Homomorphic Encryption – ao blockchain para melhorar privacidade, reconhecendo a sobrecarga de desempenho como barreira para adoção em dispositivos de borda.",
+  "lacunas_possiveis": [
+    "Ausência de métricas quantitativas que comparem latência e consumo energético do PoAh com outros protocolos leves em cenários de smart city.",
+    "Impacto da dependência de hardware especializado (ex.: Intel SGX) na descentralização de redes públicas de cidades inteligentes.",
+    "Escalabilidade e tráfego adicional introduzidos pelos nós autenticadores do PoAh em implantações massivas de IoT.",
+    "Sobre‑carga de comunicação do SMPC em dispositivos de recursos limitados e sua compatibilidade com diferentes consensos."
+  ],
+  "propostas_possiveis": [
+    "Realizar experimentos de benchmark que mensurem latência, throughput e energia de PoAh versus PoET, PoV e PBFT em ambientes de edge computing.",
+    "Desenvolver um modelo híbrido de consenso que combine PBFT para operações críticas de tempo‑real com PoS para manutenção de estado, avaliando o trade‑off entre descentralização e eficiência.",
+    "Projetar uma camada de abstração que substitua a dependência de Intel SGX por enclaves de código aberto, testando seu efeito na descentralização e segurança.",
+    "Implementar protocolos SMPC otimizados para comunicação mínima e validar sua integração com blockchains permissionadas em redes de sensores de baixa potência."
+  ]
+}

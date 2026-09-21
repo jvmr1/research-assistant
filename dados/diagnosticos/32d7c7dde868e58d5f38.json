@@ -1,0 +1,171 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-16T18:34:52",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para aprofundar ou esclarecer as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Chaurasia_2026",
+        "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "4ceb6ac97cf63c6923c0",
+            "pagina": 1,
+            "resumo": "O artigo em pré‑publicação propõe um gerenciamento da cadeia de suprimentos de vacinas que preserva a privacidade, utilizando blockchain e identidade auto‑soberana (SSI). Foi recebido em 24 de novembro de 2025, aceito em 21 de janeiro de 2026 e está disponível em acesso aberto sob licença Creative Commons BY‑NC‑ND 4.0.",
+            "evidencias": [
+              {
+                "citacao": "Received: 24 November 2025",
+                "afirmacao": "Received: 24 November 2025"
+              }
+            ]
+          },
+          {
+            "id": "586efd8043390c482550",
+            "pagina": 2,
+            "resumo": "O artigo apresenta um estudo que combina blockchain, identidade auto-soberana (SSI) e técnicas de preservação de privacidade para melhorar a cadeia de suprimentos de vacinas. Os autores comparam frameworks baseados em blockchain, destacando benefícios em rastreabilidade, prevenção de falsificações e privacidade dos dados. Resultados empíricos indicam eficácia da solução proposta, embora reconheçam desafios de escalabilidade, interoperabilidade e privacidade que precisam ser superados.",
+            "evidencias": [
+              {
+                "citacao": "The empirical results prove the efficacy of the proposed supply chain framework",
+                "afirmacao": "Empirical results prove the efficacy of the proposed supply chain framework"
+              }
+            ]
+          },
+          {
+            "id": "1a0369b1eb4364f2a174",
+            "pagina": 5,
+            "resumo": "O trecho descreve como a integração de blockchain com Self‑Sovereign Identity (SSI) pode melhorar a rastreabilidade, transparência e privacidade na cadeia de suprimentos de vacinas, reduzindo a exposição de dados on‑chain e permitindo verificação descentralizada de credenciais. Destaca ainda que soluções anteriores baseadas apenas em blockchain dependem de identidades centralizadas, limitando a interoperabilidade e o controle de acesso fino.",
+            "evidencias": [
+              {
+                "citacao": "Blockchain technology provides several advantages that can considerably improve COVID-19 vaccine delivery methods.",
+                "afirmacao": "Blockchain provides several advantages that can considerably improve COVID-19 vaccine delivery methods."
+              }
+            ]
+          },
+          {
+            "id": "cd33818834c2cc89a843",
+            "pagina": 6,
+            "resumo": "O trecho descreve como a integração de Self‑Sovereign Identity (SSI) ao blockchain elimina a vinculatividade de identidade e permite divulgação seletiva e autorização baseada em papéis, garantindo privacidade dos participantes e interoperabilidade transfronteiriça em cadeias de suprimentos de vacinas. Destaca ainda a necessidade de combater o contrabando de medicamentos e a escassez de soluções que conciliem rastreabilidade e privacidade.",
+            "evidencias": [
+              {
+                "citacao": "By combining SSI with blockchain, the proposed framework supports cross-border interoperability, revocable trust, and patient-centric privacy guarantees",
+                "afirmacao": "the proposed framework supports cross-border interoperability, revocable trust, and patient-centric privacy guarantees"
+              }
+            ]
+          }
+        ],
+        "problema": "Absence of decentralized identity; no patient-centric or role-based access control",
+        "solucao": "Blockchain technology with SSI is needed for the vaccine supply chain system",
+        "avaliacao": "Prototype implementations confirm the practicality of blockchain-based vaccination tracking while acknowledging the need for richer data models and real-world organizational validation",
+        "limites": "Governance layer unclear; interoperability challenges with healthcare IT systems",
+        "possibilidades": "Investigar quais algoritmos de consenso são mais adequados para dispositivos edge em cidades inteligentes.; Aplicar a descentralização do ledger para coordenar sensores IoT heterogêneos em tempo real.; Desenvolver mecanismos de mitigação de ameaças internas usando políticas de acesso baseadas em credenciais verificáveis.; Estender o modelo de governança descentralizada para suportar requisitos regulatórios de saúde pública."
+      },
+      {
+        "id": "Maciá-Lillo_2025",
+        "titulo": "AI edge cloud service provisioning for knowledge management smart applications",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "24b5878738d870783ad9",
+            "pagina": 1,
+            "resumo": "O artigo propõe uma arquitetura serverless edge‑cloud para suportar processos de gestão do conhecimento em cidades inteligentes, combinando escalabilidade da nuvem e processamento próximo à fonte na borda, reduzindo latência e congestionamento de rede, conforme demonstrado em experimentos.",
+            "evidencias": [
+              {
+                "citacao": "reducing data transmission times and alleviating network congestion",
+                "afirmacao": "A arquitetura híbrida edge‑cloud reduz o tempo de transmissão de dados."
+              },
+              {
+                "citacao": "supporting serverless computing for simplified application development",
+                "afirmacao": "Computação serverless simplifica o desenvolvimento de aplicações."
+              }
+            ]
+          },
+          {
+            "id": "5267fad6cf2ca41bbe8d",
+            "pagina": 2,
+            "resumo": "O artigo apresenta uma arquitetura híbrida edge‑cloud serverless para suportar processos de gestão do conhecimento (KM) em cidades inteligentes. A proposta combina computação em nuvem para escalabilidade, edge computing para proximidade dos dados e serverless para simplificar o desenvolvimento e otimizar recursos. Experimentos mostram redução de latência, congestionamento de rede e custos operacionais, além de melhorar a análise em tempo real e a tomada de decisão em aplicações de IA. O estudo contextualiza a solução dentro da Sociedade 5.0, destacando seu potencial para governança urbana mais eficiente e sustentável.",
+            "evidencias": [
+              {
+                "citacao": "significantly reducing data transmission times, network congestion, and operational costs",
+                "afirmacao": "A arquitetura híbrida edge‑cloud reduz significativamente os tempos de transmissão de dados, congestionamento de rede e custos operacionais."
+              },
+              {
+                "citacao": "simplify application deployment, optimize resource utilization, and enhance responsiveness",
+                "afirmacao": "Computação serverless simplifica o deployment de aplicações e otimiza a utilização de recursos, aumentando a responsividade."
+              }
+            ]
+          },
+          {
+            "id": "f19ff35cf132e391c78a",
+            "pagina": 3,
+            "resumo": "O trecho descreve Society 5.0 como uma visão centrada no ser humano que combina espaços físicos e virtuais, promovendo ética, descentralização e democratização de dados. Destaca o papel da gestão do conhecimento (KM) ao integrar IA, IoT, blockchain e computação cloud‑edge, permitindo aquisição de conhecimento em tempo real e apoio à tomada de decisão em cidades inteligentes, indústrias e agricultura. Apresenta ainda uma tabela que relaciona técnicas (ex.: IA, IoT, blockchain) a limitações como viés algorítmico, interoperabilidade e escalabilidade.",
+            "evidencias": [
+              {
+                "citacao": "Blockchain for knowledge governance Decentralized knowledge storage, tokenized intellectual property",
+                "afirmacao": "Blockchain for knowledge governance – Decentralized knowledge storage, tokenized intellectual property."
+              }
+            ]
+          },
+          {
+            "id": "cc0e814d50e4c40f5800",
+            "pagina": 4,
+            "resumo": "O texto descreve como cidades inteligentes utilizam IA, IoT e Big Data para gestão do conhecimento, destacando a importância de plataformas baseadas em nuvem e edge computing. Aponta que a integração de aplicações inteligentes enfrenta o desafio da lacuna de habilidades da força‑de‑trabalho e que a confiança entre stakeholders é essencial. Também menciona a necessidade de treinamento e o papel da computação em nuvem para offloading.",
+            "evidencias": [
+              {
+                "citacao": "A major challenge for the integration of smart applications into knowledge management processes is the workforce skill gap.",
+                "afirmacao": "A major challenge for the integration of smart applications into knowledge management processes is the workforce skill gap."
+              }
+            ]
+          }
+        ],
+        "problema": "Security is a major concern in all steps of knowledge management.",
+        "solucao": "advanced methods such as decentralized identity and authentication, homomorphic encryption, or zero trust architecture.",
+        "avaliacao": "The results show the difference in computing capabilities for both platforms.",
+        "limites": "First, the experiments were made on a limited set of devices, a single raspberry pi and cloud server, representing only two scenarios, the edge and the cloud.",
+        "possibilidades": "Investigar balanceamento dinâmico de carga com monitoramento em tempo real; adaptar a arquitetura para suportar GPUs e outros aceleradores; desenvolver protocolos de segurança adaptativos baseados em identidade descentralizada e zero‑trust; avaliar custos e desempenho em múltiplas regiões geográficas; criar ferramentas de orquestração que reduzam a dependência de expertise especializada; testar estratégias de tolerância a falhas distribuídas e mi"
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "[Fato] Dois trabalhos recentes abordam segurança e privacidade em cidades inteligentes usando tecnologias descentralizadas. Chaurasia_2026 propõe um framework que combina blockchain e Self‑Sovereign Identity (SSI) para rastrear vacinas, destacando controle de acesso baseado em credenciais verificáveis e privacidade de dados. Maciá‑Lillo_2025 apresenta uma arquitetura serverless edge‑cloud para gestão do conhecimento, enfatizando latência reduzida e simplificação de desenvolvimento. [Interpretação] Ambos concordam que a descentralização (blockchain/SSI) pode melhorar a confiança entre stakeholders e que a proximidade ao dado (edge) é crucial para aplicações em tempo real. [Diferença] O primeiro foca em rastreabilidade de suprimentos de saúde com ênfase em governança de identidade; o segundo foca em processamento distribuído e ainda carece de mecanismos de identidade descentralizada. [Hipótese] A lacuna principal reside na integração de SSI e controle de acesso granular (ex.: ABE) com arquiteturas edge‑cloud, bem como na avaliação de governança e escalabilidade em ambientes urbanos heterogêneos.",
+    "ideias": [
+      {
+        "descricao": "Integrar o framework SSI‑blockchain de Chaurasia_2026 com a arquitetura serverless edge‑cloud de Maciá‑Lillo_2025, criando um mecanismo de autenticação e controle de acesso baseado em credenciais verificáveis para sensores IoT urbanos. Avaliar latência, consumo de energia e privacidade em cenários reais de coleta de dados ambientais.",
+        "fontes": [
+          "Chaurasia_2026",
+          "Maciá-Lillo_2025"
+        ],
+        "lacuna": "Ausência de integração entre identidade auto‑soberana e processamento edge, limitando a aplicação de controle de acesso fino em tempo real."
+      },
+      {
+        "descricao": "Estender o modelo de SSI de Chaurasia_2026 incorporando criptografia baseada em atributos (ABE) para permitir controle de acesso granular por papéis em cadeias de suprimentos de vacinas e serviços de saúde de cidades inteligentes. Prototipar políticas ABE e comparar com o controle baseado em papéis atual.",
+        "fontes": [
+          "Chaurasia_2026",
+          "Maciá-Lillo_2025"
+        ],
+        "lacuna": "O trabalho de Chaurasia não explora ABE, enquanto Maciá‑Lillo fornece um ambiente de edge onde tais políticas podem ser testadas em dispositivos limitados."
+      },
+      {
+        "descricao": "Desenvolver um mecanismo de balanceamento dinâmico de carga que usa identidade descentralizada (SSI) e princípios de zero‑trust, combinando a necessidade de governança identificada em Chaurasia_2026 com a arquitetura edge‑cloud de Maciá‑Lillo_2025. Medir impacto em latência, resiliência e custos operacionais em múltiplas zonas geográficas.",
+        "fontes": [
+          "Maciá-Lillo_2025",
+          "Chaurasia_2026"
+        ],
+        "lacuna": "Falta de estratégias de orquestração que considerem identidade descentralizada e segurança zero‑trust em ambientes edge‑cloud distribuídos."
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:35:39"
+}

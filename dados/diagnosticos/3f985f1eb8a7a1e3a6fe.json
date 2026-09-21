@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T17:44:43",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "perfil_anterior": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "improving both model accuracy and computational efficiency",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "Explorar a aplicação do algoritmo WO em conjunto com técnicas de quantização de modelo para reduzir ainda mais o consumo de energia em nós de borda; Avaliar a eficácia de penalidades de esparsidade adaptativas que variam β conforme a carga de trabalho do dispositivo; Integrar mecanismos de verificação de integridade baseados em blockchain nos pesos otimizados pelo WO para garantir autenticidade distribuída."
+    },
+    "pagina": 10,
+    "texto": " Dangersignal = A × R  (25)  \n A =2 × α  (26)  \n α =1 − k/it−max  (27)  \n R =2 × r1 − 1  (28)  \n Saf ety_signal = r2  (29)  \nHere, A and R characterize coefficients of danger; α  means the descending factor that reduces from (1- 0\n) through iterations, k and it−max is, correspondingly, the iteration amount and the maximal pre-defined \niteration counts; and r1 and r2 are randomly generated numbers in the interval of [0,1] .\nExploration (Migration)\nIf danger signals are incredibly high, more than a particular pre-defined level, the walrus group must migrate to \nother, suitable regions for survival. During WO, this method can take place in the initial phase of the technique, \ngiving a chance to maximize the global hunt. Therefore, the location of all solutions in the population of WO \nwould be upgraded as shown:\n Sk+1\ni = Sk\ni + M igration−step  (30) \n M igration−step =\n(\nSk\nm − Sk\nu\n)\n× β × r2\n3  (31)  \n \nβ =1 − 1/\n(\n1+ exp\n(\n−10 × k − 0.5 × it−max\nit−max\n))\n (32)\n \nNow Sk+1\ni  and Sk\ni  are the novel and present locations of the ith solution vector; migration−step means \nwalrus motion’ s step length; Sk\nm and Sk\nu  mean dual solution vectors selected at random from the group at kth \niterations, representative vigilantes within the group; β  characterizes the migrating stage controller coefficient \nchanging quickly through iterations; and r3 stands for randomly generated numbers in the interval of [0,1] .\nExploitation (Reproduction)\nOn the contrary, in the migration stage, the walrus group tends to reproduce in its present region rather than \nmigrate if the dangers are lower. According to the safety signal level, the reproduction phase might be separated \ninto two major activities: foraging underwater and roosting onshore. This activity will likely occur late during \nWO, presenting a chance for maximizing local search. The mathematics approaches demonstrating both actions \nare as follows:\nBehavior of roosting\nThis behaviour has three major types of the population of WO— juveniles, males, and females in the walrus \ngroup updated their locations in 3 distinct ways. Halton sequence distribution has been accepted to reallocate \nthe solution vector associated with male walruses arbitrarily. This novel location of the female walrus is targeted \nthrough the male walrus \n(\nM alek\ni\n)\n and the walrus in the leader \n(\nSk\nbest\n)\n. During the system’s development, the \nfemale walrus was compelled by the lead rather than the mate.\n P emalek+1\ni = P emalek\ni + α ×\n(\nM alek\ni − P emalek\ni\n)\n+ (1 − α ) ×\n(\nSk\nbest − P emalek\ni\n)\n (33) \nWhereas P emalek+1\ni  and P emalek\ni  represent the novel and present locations of the ith female walrus, \nM alek\ni  refers to the present location of the ith male walrus. Then, juvenile walruses are required to alter their \nlocation to prevent predators.\n J uvenilek+1\ni =\n(\n0 − J uvenilek\ni\n)\n× P  (34)  \n O = Sk\nbest + J uvenilek\ni × LF  (35)  \nHere, J uvenilek+1\ni  and J uvenilek\ni  represent novel and present locations of the iih juvenile walrus, \nindividually; P  embodies the suffering feature of the juvenile walrus, has arbitrary values in the interval of 0 \nand 1 represents securer locations; and LF  denotes a randomly generated vector based-on the Lévy function.\n \nLvy (a)=0 .05 ×\n(\ng\n|h|\n1\na\n)\n (36)\n \nNow, g and h characterize dual variables taking a normal distribution, \n(\n0,σ 2\ng\n)\n, hN\n(\n0,σ 2\nh\n)\n.\nScientific Reports |         (2025) 15:4470 10| https://doi.org/10.1038/s41598-025-88843-2\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve os mecanismos de migração e reprodução do algoritmo Whale Optimization (WO) usados para ajustar a posição dos vetores solução, incluindo sinais de perigo, coeficiente β, passos de migração, e comportamentos de roosting e juvenis baseados em sequências de Halton e voos de Lévy.",
+    "perfil": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "improving both model accuracy and computational efficiency",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": [
+        "Aplicar o mecanismo de migração baseado em sinais de perigo para adaptar dinamicamente a alocação de recursos de borda durante o treinamento federado.",
+        "Explorar o coeficiente β adaptativo como controlador de fase de exploração/exploração em ambientes IoT com carga variável.",
+        "Integrar a sequência de Halton e o voo de Lévy nas atualizações de modelo federado para melhorar a diversidade de soluções e acelerar a convergência.",
+        "Definir limiares de safety_signal que acionem re‑treinamento imediato do detector de ameaças quando riscos críticos forem detectados."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "If danger signals are incredibly high, more than a particular pre-defined level, the walrus group must migrate to other, suitable regions for survival.",
+        "citacao": "If danger signals are incredibly high, more than a particular pre-defined level, the walrus group must migrate to other, suitable regions for survival."
+      },
+      {
+        "afirmacao": "The behavior of roosting has three major types of the population of WO—juveniles, males, and females in the walrus group updated their locations in 3 distinct ways.",
+        "citacao": "The behavior of roosting has three major types of the population of WO—juveniles, males, and females in the walrus group updated their locations in 3 distinct ways."
+      }
+    ],
+    "interpretacao": "Os detalhes do WO apresentados (sinais de perigo, coeficiente β, passos de migração e estratégias de roosting) sugerem um controle fino entre exploração global e exploração local, o que pode ser aproveitado para melhorar a busca de hiperparâmetros e a robustez do modelo federado em cenários de cidades inteligentes.",
+    "duvidas": "Como o coeficiente β evolui ao longo das iterações em ambientes reais de IoT? Qual o impacto da migração baseada em danger_signal sobre o consumo energético dos nós de borda? Como integrar as estratégias de roosting (Halton, Lévy) ao processo de agregação federada sem comprometer a privacidade?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:46:05"
+}

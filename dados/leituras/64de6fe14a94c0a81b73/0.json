@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta um levantamento sobre sistemas de identidade descentralizada baseados em blockchain, abordando segurança, privacidade e interoperabilidade. Discute técnicas criptográficas como ZKPs, VCs e DIDs, compara plataformas (Ethereum, Hyperledger Indy, IOTA, IoTeX) e destaca o SSI como meio de dar controle aos usuários, especialmente em contextos sensíveis como saúde.",
+  "perfil": {
+    "problema": "Identity owners cannot stop others from using their data or prevent their own identities and privacy from being exploited",
+    "solucao": "Self-sovereign identification (SSI), a decentralized identification based on blockchain, can establish a foundation of trust by granting users ownership and control over their identities",
+    "avaliacao": "provides a comprehensive analysis of blockchain-based IAM systems, comparing leading blockchain platforms and examining key security enhancements",
+    "limites": "Não informado",
+    "possibilidades": "Avaliar a aplicação de SSI e VCs em cidades inteligentes para controle de acesso a serviços IoT; integrar criptografia baseada em atributos (ABE) para políticas de compartilhamento de dados sensíveis; testar a escalabilidade da solução em ambientes de edge computing distribuído; investigar mecanismos de revogação de credenciais em redes inter‑organizacionais."
+  },
+  "evidencias": [
+    {
+      "citacao": "Self -sovereign identification (SSI), a decentralized identification based on blockchain, can establish a foundation of trust by granting users ownership and control over their identities",
+      "afirmacao": "Self-sovereign identification (SSI), a decentralized identification based on blockchain, can establish a foundation of trust by granting users ownership and control over their identities"
+    },
+    {
+      "citacao": "Identity owners cannot stop others from using their data or prevent their own identities and privacy from being exploited",
+      "afirmacao": "Identity owners cannot stop others from using their data or prevent their own identities and privacy from being exploited"
+    }
+  ],
+  "interpretacao": "O estudo indica que a combinação de blockchain com identidades descentralizadas pode suprir lacunas de confiança e privacidade em sistemas IAM, especialmente onde a interoperabilidade entre serviços é crítica, como na saúde. Contudo, ainda carece de avaliações práticas em cenários de cidades inteligentes.",
+  "duvidas": "Quais são os desafios de desempenho ao aplicar SSI em dispositivos IoT de baixa potência? Como garantir a revogação eficiente de VCs em ambientes distribuídos? Existem métricas comparativas de escalabilidade entre as plataformas citadas (Ethereum, Hyperledger Indy, IOTA, IoTeX) para uso em smart cities?",
+  "avisos": [],
+  "id": "2d70b0cecbe496711cc4",
+  "artigo": "Prajapati_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Identity owners cannot stop others from using their data or prevent their own identities and privacy from being exploited",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Avaliar a aplicação de SSI e VCs em cidades inteligentes para controle de acesso a serviços IoT; integrar criptografia baseada em atributos (ABE) para políticas de compartilhamento de dados sensíveis; testar a escalabilidade da solução em ambientes de edge computing distribuído; investigar mecanismos de revogação de credenciais em redes inter‑organizacionais.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "64de6fe14a94c0a81b73"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "resumo": "O YouGovern foi implementado na Binance Smart Chain usando contratos inteligentes, registro de DIDs, armazenamento descentralizado via IPFS/Web3.Storage e interface web com MetaMask; as interações são expostas por API RESTful e o ambiente de desenvolvimento inclui Truffle Suite, Solidity e Node.js.",
+  "perfil": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Avaliar desempenho de consultas RESTful em cenários de alta concorrência;",
+      "Integrar controle de acesso baseado em atributos (ABE) nas políticas dos smart contracts;",
+      "Testar interoperabilidade com outras blockchains públicas além da BSC;",
+      "Implementar revogação automática de permissões usando provas de conhecimento zero (ZKP);",
+      "Expandir suporte a agentes/guardians para gestão delegada de identidades."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "User interactions—such as identity registration, credential issuance, or access revocation—are initiated from the browser interface and signed via MetaMask.",
+      "afirmacao": "User interactions—such as identity registration, credential issuance, or access revocation—are initiated from the browser interface and signed via MetaMask."
+    }
+  ],
+  "interpretacao": "O trecho detalha a arquitetura e o ambiente de desenvolvimento do YouGovern, evidenciando a combinação de armazenamento on‑chain e off‑chain e a exposição de APIs RESTful para gerenciamento de DIDs.",
+  "duvidas": "Como são garantidas as propriedades de privacidade dos dados armazenados no IPFS? Qual o impacto de usar Ganache para simular condições de rede na avaliação de desempenho real? Existe suporte a múltiplas cadeias além da BSC?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "232d5732acb7bfb458f2",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": "Avaliar desempenho de consultas RESTful em cenários de alta concorrência;; Integrar controle de acesso baseado em atributos (ABE) nas políticas dos smart contracts;; Testar interoperabilidade com outras blockchains públicas além da BSC;; Implementar revogação automática de permissões usando provas de conhecimento zero (ZKP);; Expandir suporte a agentes/guardians para gestão delegada de identidades.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  },
+  "reaproveitada_de": "ad0ae8a32d584f7fbea6"
+}

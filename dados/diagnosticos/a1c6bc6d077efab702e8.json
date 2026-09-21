@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T15:00:39",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 1,
+        "resumo": "Revisão sistemática que analisa soluções baseadas em blockchain para preservação de privacidade no compartilhamento de dados de saúde, identificando que a maioria das propostas está em estágio de prova de conceito (TRL3) e que buscas e verificações privativas ainda são pouco exploradas.",
+        "interpretacao": "O estudo destaca que, embora o blockchain ofereça promessas de maior controle e interoperabilidade dos dados de saúde, a maioria das soluções ainda está em fase inicial e carece de funcionalidades avançadas de busca segura, indicando um caminho de pesquisa focado em maturidade tecnológica e validação prática.",
+        "duvidas": "Quais são os principais obstáculos para avançar das provas de conceito (TRL3) para protótipos validados (TRL4‑TRL5) no contexto de saúde? Como integrar de forma segura e escalável mecanismos de busca privativos em blockchains públicos?"
+      },
+      {
+        "pagina": 2,
+        "resumo": "O texto destaca a insuficiência das técnicas tradicionais de privacidade para compartilhamento de dados de saúde em escala interinstitucional e propõe o blockchain como solução descentralizada, embora reconheça novos riscos de privacidade associados ao seu uso.",
+        "interpretacao": "Os autores argumentam que, embora as abordagens tradicionais de privacidade sejam inadequadas para o compartilhamento de dados de saúde em larga escala, o blockchain pode suprir essas lacunas ao proporcionar descentralização, imutabilidade e auditoria transparente, porém introduz novos vetores de ataque que precisam ser mitigados.",
+        "duvidas": "Como mitigar ataques de inferência de identidade e de linkabilidade de transações no blockchain de saúde? Quais mecanismos permitem controle de acesso granular sem comprometer a descentralização? Qual é o nível de maturidade tecnológica necessário para implantação em ambientes clínicos reais? Como garantir conformidade regulatória (HIPAA, GDPR, etc.) em redes blockchain interorganizacionais?"
+      },
+      {
+        "pagina": 3,
+        "resumo": "O artigo apresenta uma revisão sistemática de soluções de privacidade baseadas em blockchain para compartilhamento de dados de saúde, destacando lacunas como a ausência de avaliação de maturidade e de frameworks estruturados. Propõe um framework para desenvolvedores, diretrizes acionáveis e avaliação de prontidão tecnológica (TRL) para avançar de provas de conceito a implantações reais, especialmente em ambientes IoT de saúde.",
+        "interpretacao": "O estudo avança o estado da arte ao combinar análise técnica de privacidade, avaliação de maturidade e diretrizes práticas, preenchendo lacunas identificadas em revisões anteriores que não abordavam a integração blockchain‑IoT nem a prontidão para implantação.",
+        "duvidas": "Como o framework proposto pode ser adaptado para contextos de cidades inteligentes com restrições de recursos? Quais métricas de TRL são mais relevantes para soluções de identidade descentralizada em edge computing? Existe suporte a revogação de credenciais que preserve o direito ao esquecimento sem comprometer a auditabilidade?"
+      },
+      {
+        "pagina": 4,
+        "resumo": "O trecho destaca a importância da integridade, verificação, autenticação e autorização dos dados de saúde em ambientes de blockchain, ressaltando requisitos regulatórios (HIPAA, GDPR) e a necessidade de mecanismos de busca eficientes para uso secundário, além de descrever as etapas do compartilhamento de dados em saúde.",
+        "interpretacao": "O texto reforça que, além da proteção de privacidade, a confiança nos dados depende de verificações robustas e de controles de acesso bem definidos, aspectos críticos para adaptar soluções de blockchain de saúde a contextos de cidades inteligentes e IoT.",
+        "duvidas": "Como mapear as etapas de autenticação/autorizaç​ão descritas para ambientes de edge computing em smart cities? Quais padrões regulatórios específicos de cidades inteligentes (além de HIPAA/GDPR) precisam ser considerados ao aplicar esses mecanismos?"
+      },
+      {
+        "pagina": 5,
+        "resumo": "O trecho classifica blockchains em públicos, privados, consórcios e híbridos, apontando trade‑offs entre descentralização, desempenho e controle de acesso. Descreve ainda os principais protocolos de consenso (PoW, PoS, PBFT) e suas implicações para privacidade e escalabilidade em compartilhamento de dados de saúde. Menciona técnicas de transferência segura, como Proxy Re‑Encryption (PRE) e TLS, essenciais para proteger dados sensíveis em ambientes distribuídos.",
+        "interpretacao": "O texto evidencia que a escolha do tipo de blockchain e do protocolo de consenso impacta diretamente a viabilidade de compartilhamento seguro de dados sensíveis, sugerindo que soluções híbridas e mecanismos de criptografia avançada podem ser cruciais para aplicações em cidades inteligentes.",
+        "duvidas": "Qual tipo de blockchain (público, privado, consórcio ou híbrido) oferece o melhor equilíbrio entre privacidade e desempenho para dispositivos IoT em smart cities? Como adaptar protocolos como PBFT para ambientes com recursos limitados sem comprometer a segurança?"
+      },
+      {
+        "pagina": 6,
+        "resumo": "O trecho descreve os principais desafios de privacidade ao usar blockchain para compartilhamento de dados de saúde, como transparência, imutabilidade, inferência de identidade, vulnerabilidades em contratos inteligentes e a complexa gestão on/off‑chain. Também apresenta métodos de preservação, destacando mecanismos on/off‑chain, PoS e PBFT como opções mais adequadas para ambientes de saúde.",
+        "interpretacao": "O texto evidencia que, embora a blockchain ofereça integridade e rastreabilidade, sua natureza pública e imutável conflita com requisitos de privacidade na saúde, demandando soluções híbridas e mecanismos de controle de acesso avançados.",
+        "duvidas": "Como garantir o direito ao esquecimento em blockchains imutáveis? Qual o impacto de usar PBFT em larga escala em redes de sensores urbanos?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "A revisão sistemática analisa soluções baseadas em blockchain para preservação de privacidade no compartilhamento de dados de saúde, constatando que a maioria está em estágio de prova de conceito (TRL 3) e carece de mecanismos de busca privativos, controle de acesso granular e avaliação de maturidade tecnológica. O estudo aponta que técnicas tradicionais de privacidade são insuficientes para ambientes interinstitucionais e que o blockchain introduz novos riscos, como inferência de identidade e linkabilidade. São discutidos tipos de blockchain (público, privado, consórcio, híbrido), protocolos de consenso (PoW, PoS, PBFT) e técnicas como Proxy Re‑Encryption e TLS, ressaltando impactos em privacidade, desempenho e escalabilidade, especialmente para IoT em cidades inteligentes. Um framework com diretrizes e métricas de TRL é proposto, mas ainda requer adaptação a contextos de edge computing, revogação de credenciais e conformidade regulatória (HIPAA, GDPR).",
+    "lacunas_possiveis": [
+      "Transição de TRL 3 para TRL 4‑5 em soluções de saúde baseadas em blockchain.",
+      "Mecanismos de busca seguros e escaláveis em blockchains públicos.",
+      "Mitigação de ataques de inferência e linkabilidade sem perder descentralização.",
+      "Adaptação do framework de maturidade para ambientes de IoT com recursos limitados em smart cities.",
+      "Estratégias de revogação que preservem o direito ao esquecimento em ledgers imutáveis."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver um roadmap de maturidade tecnológica que inclua métricas TRL específicas para identidade descentralizada em edge computing.",
+      "Projetar esquemas de searchable encryption compatíveis com blockchains públicos para consultas privativas de dados de saúde.",
+      "Criar protocolos de controle de acesso baseado em atributos que integrem políticas granulares e preservem a descentralização.",
+      "Estender o framework proposto para incluir requisitos regulatórios de cidades inteligentes além de HIPAA/GDPR.",
+      "Implementar variantes leves de PBFT adaptadas a dispositivos IoT de baixa capacidade, mantendo segurança e privacidade."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T15:02:10"
+}

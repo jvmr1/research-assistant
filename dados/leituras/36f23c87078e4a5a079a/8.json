@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho descreve os diferentes tipos de blockchain (públicas, privadas e consórcios), destacando que blockchains de consórcio são permissionadas e governadas por múltiplas organizações. Apresenta ainda os elementos-chave da tecnologia, como transparência, integridade e uso de Merkle trees, e compara características como identidade dos participantes, necessidade de autenticação e throughput.",
+  "perfil": {
+    "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+    "solucao": "blockchain technology can be classified into two main categories based on access control: permissionless and permissioned blockchains.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "public blockchains offer high decentralization but may encounter scalability and privacy challenges.",
+    "possibilidades": "Investigar como blockchains de consórcio podem ser adaptados para suportar identidade auto‑soberana (SSI) em serviços de cidades inteligentes; avaliar o uso de Merkle trees para auditoria eficiente de dados de IoT em ambientes de saúde; propor um modelo híbrido que combine transparência de blockchains públicas com controle de acesso granular de blockchains permissioned usando ABE."
+  },
+  "evidencias": [
+    {
+      "citacao": "Transparency is one of the main advantages of blockchain, particularly in applications that require trust and accountability.",
+      "afirmacao": "Transparency is one of the main advantages of blockchain, particularly in applications that require trust and accountability."
+    }
+  ],
+  "interpretacao": "O texto enfatiza que a escolha entre blockchains públicas, privadas ou de consórcio impacta diretamente aspectos críticos como privacidade, escalabilidade e segurança, sendo essencial para setores sensíveis como saúde e cidades inteligentes.",
+  "duvidas": "Como garantir a privacidade dos dados sensíveis em blockchains de consórcio sem sacrificar a transparência? Qual o custo de desempenho ao integrar ABE em blockchains permissioned para controle de acesso granular?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "44ca747a234ee9a11aa2",
+  "artigo": "Tawfik_2025",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+    "solucao": "blockchain technology can be classified into two main categories based on access control: permissionless and permissioned blockchains.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "public blockchains offer high decentralization but may encounter scalability and privacy challenges.",
+    "possibilidades": "Investigar como blockchains de consórcio podem ser adaptados para suportar identidade auto‑soberana (SSI) em serviços de cidades inteligentes; avaliar o uso de Merkle trees para auditoria eficiente de dados de IoT em ambientes de saúde; propor um modelo híbrido que combine transparência de blockchains públicas com controle de acesso granular de blockchains permissioned usando ABE.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "36f23c87078e4a5a079a"
+  }
+}

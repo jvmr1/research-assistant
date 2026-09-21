@@ -1,0 +1,31 @@
+{
+  "resumo": "O texto descreve os desafios de segurança em cidades inteligentes, como ataques man-in-the-middle, DoS e acesso não autorizado a dados sensíveis, e destaca a importância da gestão de identidades. Propõe o uso de identidades autosoberanas (SSI) baseadas em blockchain para dar controle aos cidadãos sobre suas credenciais digitais, complementando um modelo existente que ainda não cobre a identidade dos cidadãos.",
+  "perfil": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "identidades autosoberanas (SSI) baseadas em blockchain",
+    "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+    "limites": "o modelo atual não aborda a gestão de identidades dos cidadãos",
+    "possibilidades": "Integrar SSI com DIDComm para comunicação segura entre agentes; aplicar ABE para divulgação seletiva de atributos de sensores IoT; usar criptografia homomórfica para processamento de dados sensíveis sem revelar conteúdo; desenvolver mecanismos de revogação e recuperação de credenciais via contratos inteligentes adaptados ao middleware de cidades inteligentes."
+  },
+  "evidencias": [],
+  "interpretacao": "O autor argumenta que a adoção de SSI baseada em blockchain pode suprir lacunas críticas de segurança e privacidade nas cidades inteligentes, especialmente ao estender a gestão de identidade dos cidadãos, ainda ausente nos modelos atuais.",
+  "duvidas": "Como será medido o impacto da SSI na latência das operações? Quais protocolos de comunicação serão adotados para integrar SSI ao InterSCity? Como garantir a escalabilidade da solução em ambientes IoT massivos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "96ef7e484e566f794bfe",
+  "artigo": "Exemplo_55b3b0969325cccbbb2c",
+  "pagina": 14,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+    "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+    "limites": "o modelo atual não aborda a gestão de identidades dos cidadãos",
+    "possibilidades": "Integrar SSI com DIDComm para comunicação segura entre agentes; aplicar ABE para divulgação seletiva de atributos de sensores IoT; usar criptografia homomórfica para processamento de dados sensíveis sem revelar conteúdo; desenvolver mecanismos de revogação e recuperação de credenciais via contratos inteligentes adaptados ao middleware de cidades inteligentes.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "aa6f199c752f47517c1c"
+  },
+  "reaproveitada_de": "aa6f199c752f47517c1c"
+}

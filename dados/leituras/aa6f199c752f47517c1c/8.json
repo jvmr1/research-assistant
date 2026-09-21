@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho apresenta três tabelas que relatam métricas de desempenho em milissegundos: estabelecimento de conexão, emissão e armazenamento de credenciais, e envio e verificação de prova de credencial.",
+  "perfil": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+    "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Expandir a avaliação de desempenho incluindo throughput, escalabilidade e consumo energético; comparar diferentes protocolos de comunicação; analisar o impacto de diferentes tamanhos de credenciais; validar os resultados em ambientes de borda ou em cenários de IoT realistas."
+  },
+  "evidencias": [
+    {
+      "citacao": "Tabela 1 – Métricas de estabelecimento de conexão, em milissegundos",
+      "afirmacao": "Métricas de estabelecimento de conexão são apresentadas."
+    },
+    {
+      "citacao": "Tabela 2 – Métricas de operações de emissão e armazenamento de credenciais, em milissegundos",
+      "afirmacao": "Métricas de emissão e armazenamento de credenciais são apresentadas."
+    }
+  ],
+  "interpretacao": "O trabalho inclui uma avaliação quantitativa da latência nas fases críticas de SSI (conexão, emissão/armazenamento e verificação), indicando foco em desempenho técnico.",
+  "duvidas": "Quais são as condições experimentais (hardware, rede, número de credenciais) usadas para gerar as métricas? Como os resultados se comparam com abordagens alternativas? Há análise de variabilidade ou apenas valores médios?",
+  "avisos": [],
+  "id": "e73270d88638ea14d0bb",
+  "artigo": "Exemplo_55b3b0969325cccbbb2c",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+    "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Expandir a avaliação de desempenho incluindo throughput, escalabilidade e consumo energético; comparar diferentes protocolos de comunicação; analisar o impacto de diferentes tamanhos de credenciais; validar os resultados em ambientes de borda ou em cenários de IoT realistas.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "aa6f199c752f47517c1c"
+  }
+}

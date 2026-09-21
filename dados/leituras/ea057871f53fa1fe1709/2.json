@@ -1,0 +1,35 @@
+{
+  "resumo": "O autor agradece aos pais, irmão, parceira, à Universidade Federal de São Paulo e aos orientadores Prof. Dr. Arlindo Flavio da Conceição e Prof. Dr. Vladimir Rocha pelo apoio ao desenvolvimento da dissertação.",
+  "perfil": {
+    "problema": "SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS",
+    "solucao": "BLOCKCHAIN-ENABLED ABE FRAMEWORK",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração de SSI com o framework ABE para gerenciamento de credenciais de dispositivos IIoT em cidades inteligentes, avaliando revogação baseada em atributos e uso de criptografia homomórfica para processamento seguro de dados."
+  },
+  "evidencias": [
+    {
+      "citacao": "I would like to express my sincere gratitude to all the people who supported me directly and indirectly during the stages of this project.",
+      "afirmacao": "I would like to express my sincere gratitude to all the people who supported me directly and indirectly during the stages of this project."
+    }
+  ],
+  "interpretacao": "O trecho revela o reconhecimento pessoal e institucional do autor, indicando vínculo com a Universidade Federal de São Paulo e orientação de dois professores, o que reforça a validade acadêmica do trabalho, embora não aporte conteúdo técnico.",
+  "duvidas": "Quais foram as contribuições específicas dos orientadores para o desenvolvimento do framework proposto? Como o apoio institucional influenciou a escolha das tecnologias (blockchain, ABE) empregadas na dissertação?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "a9a4bdbb3703f579e472",
+  "artigo": "Exemplo_60479560a08f3b4cd724",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS",
+    "solucao": "BLOCKCHAIN-ENABLED ABE FRAMEWORK",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração de SSI com o framework ABE para gerenciamento de credenciais de dispositivos IIoT em cidades inteligentes, avaliando revogação baseada em atributos e uso de criptografia homomórfica para processamento seguro de dados.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "d54bdcaf66d25b3bc5ea"
+  },
+  "reaproveitada_de": "70f146e8652fe84ad53e"
+}

@@ -1,0 +1,75 @@
+{
+  "fontes": [
+    {
+      "id": "Exemplo_55b3b0969325cccbbb2c",
+      "titulo": "Danilo_TCC_final",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "4d0d92e96ed42493301d",
+          "pagina": 1,
+          "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+          "evidencias": [
+            {
+              "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+              "afirmacao": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+            },
+            {
+              "citacao": "Cidades Inteligentes",
+              "afirmacao": "O estudo está inserido no contexto de cidades inteligentes."
+            }
+          ]
+        },
+        {
+          "id": "4af4e95bcf402163cf78",
+          "pagina": 2,
+          "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+          "evidencias": [
+            {
+              "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+              "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+            }
+          ]
+        },
+        {
+          "id": "5cb5f57a5bb410182c9c",
+          "pagina": 3,
+          "resumo": "O trabalho de Danilo Isaque Sousa Maia (2025) propõe o uso de blockchain e identidades autosoberanas para autenticação e controle de acesso em cidades inteligentes, apresentando o tema, palavras‑chave e a orientação acadêmica.",
+          "evidencias": [
+            {
+              "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes / Danilo Isaque Sousa Maia. - 2025.",
+              "afirmacao": "O trabalho aborda Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes."
+            },
+            {
+              "citacao": "1. Cidades Inteligentes. 2. Blockchain. 3. Identidades Autosoberanas. 4. Controle de Acesso. 5. Autenticação.",
+              "afirmacao": "São listadas as palavras‑chave relacionadas ao tema."
+            }
+          ]
+        },
+        {
+          "id": "cb59efb152362ddd8ea7",
+          "pagina": 4,
+          "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+          "evidencias": [
+            {
+              "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+              "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+            }
+          ]
+        }
+      ],
+      "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+      "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+      "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+      "limites": "o modelo atual não aborda a gestão de identidades dos cidadãos",
+      "possibilidades": "Integrar módulos SSI ao InterSCity, usando o Resource Adaptor para conectar carteiras digitais de cidadãos e sensores IoT; explorar contratos inteligentes para revogação de credenciais dentro da arquitetura de microsserviços; aplicar ABE e criptografia homomórfica nos fluxos de dados do middleware para controle de acesso e processamento privativo.",
+      "assinatura": "aa6f199c752f47517c1c"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

@@ -1,0 +1,47 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:49:28",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+    "perfil_anterior": {
+      "problema": "patients’ limited control over their healthcare data",
+      "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+      "avaliacao": "most solutions remain at the proof-of-concept stage (TRL3)",
+      "limites": "privacy-preserving search and verification remain underexplored",
+      "possibilidades": "• Adaptar os critérios de inclusão para abranger estudos que tratem de identidade auto‑soberana (SSI) e credenciais verificáveis em contextos de cidades inteligentes. • Expandir a revisão para incluir trabalhos que utilizem IoT urbano e edge computing, avaliando como esses ambientes impactam a privacidade em blockchains de saúde. • Desenvolver um framework de avaliação comparativa entre técnicas de privacidade (ABE, ZKP, PEKS) aplicadas a blockchains híbridas, focando em interoperabilidade inter‑organizacional."
+    },
+    "pagina": 10,
+    "texto": "Peer-to-Peer Networking and Applications (2025) 18:302\n4. The remaining papers were assessed in more detail \nby a full-text reading using IC3-IC5. In this step, we \nexcluded papers with EC2-EC4. Finally, 335 papers \nwere included in the review.\n5. One paper was retracted during this study; the final \nnumber of selected papers was 334.\nAs recommended by PRISMA 2020, we further illustrate \nthe study selection process in a standardized flow diagram, \nas shown in Fig. 3.\n3.5 Data gathering\nAfter selecting the relevant papers, we gathered data from \n334 papers. For each paper, we initially collected basic \ninformation like title, author(s), and publication year. Fur -\nthermore, we focused on the specifics of the blockchain \nquestions by digital database searching engine(IC2), the \nresult is presented in Table 9;\n2. 5739 papers left after removing duplicates by Digital \nObject Identifiers (DOI);\n3. Based on the relevance of the research questions (IC2), \nwe evaluated and selected the results by checking the \ntitle, keywords, and abstract. In this step, we selected \n639 papers using EC1-EC4;\nTable 9 Summary of search results\nData Sources Papers identified and screened\nIEEE Xplore 692\nScienceDirect 2472\nSpringerLink 2119\nACM 758\nWeb of Science 536\nTotal 6577\nFig. 3 PRISMA 2020 flow diagram \nof study selection\n \n1 3\n302 Page 10 of 53",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve o processo de seleção de estudos segundo PRISMA 2020: a partir de 6.577 documentos identificados em bases como IEEE Xplore e ScienceDirect, foram removidos duplicados, resultando em 5.739; após triagem de título, palavras‑chave e resumo, 639 foram retidos; a leitura completa com critérios IC3‑IC5 excluiu mais 304, culminando em 334 artigos incluídos para extração de dados.",
+    "perfil": {
+      "problema": "patients’ limited control over their healthcare data",
+      "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+      "avaliacao": "most solutions remain at the proof-of-concept stage (TRL3)",
+      "limites": "privacy-preserving search and verification remain underexplored",
+      "possibilidades": [
+        "Aplicar a mesma estratégia de busca e filtragem (PRISMA 2020) a literatura sobre cidades inteligentes, IoT e identidade auto‑soberana, ampliando o escopo da revisão.",
+        "Incluir bases de dados específicas de smart cities (ex.: OpenALEX tags de urban IoT) para capturar trabalhos que combinam blockchain com edge computing.",
+        "Desenvolver um protocolo de extração de métricas de interoperabilidade e privacidade (ABE, ZKP, SSI) a partir dos artigos selecionados, permitindo comparação quantitativa entre abordagens."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "335 papers were included in the review.",
+        "citacao": "Finally, 335 papers were included in the review."
+      },
+      {
+        "afirmacao": "The final number of selected papers was 334.",
+        "citacao": "One paper was retracted during this study; the final number of selected papers was 334."
+      }
+    ],
+    "interpretacao": "O estudo demonstra um rigor metodológico robusto, mas a alta taxa de exclusão indica que poucos trabalhos atendem aos critérios específicos de blockchain para saúde, sugerindo espaço para investigação em domínios adjacentes como smart cities.",
+    "duvidas": "Quais foram os critérios IC3‑IC5 aplicados na leitura completa? Como a exclusão de um artigo retratado impactou a análise de tendências temporais?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:49:39"
+}

@@ -1,0 +1,36 @@
+{
+  "resumo": "O texto revisa diversas abordagens de segurança para IoT, destacando o uso de blockchain e contratos inteligentes para gerenciamento de recursos, autenticação e controle de acesso. Aponta soluções como o protocolo Trust‑Aware Blockchain Seamless Authentication (TAB‑SAPP) e a Segurança de Camada Física (PLS) como alternativas leves. Também discute desafios de privacidade, regulamentação e a necessidade de criptografia eficiente para dispositivos restritos, especialmente em contextos médicos e de cidades inteligentes.",
+  "perfil": {
+    "problema": "privacy regulations remain a critical concern",
+    "solucao": "privacy -preserving blockchain frameworks —such as the Trust -Aware Blockchain Seamless Authentication Protocol (TAB -SAPP)—offer promising solutions for securing user identities and enabling seamless authentication",
+    "avaliacao": "The framework operates in three stages: random pattern generation using biometric fusion, secure authentication via CIA‑compliant encryption and steganography, and empirical validation of the overall system",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Aplicar o protocolo TAB‑SAPP em cenários de cidades inteligentes com computação de borda",
+      "Integrar identidade auto‑soberana (SSI) e credenciais verificáveis ao framework blockchain",
+      "Explorar criptografia baseada em atributos (ABE) para controle de acesso granular em IoT",
+      "Validar o modelo em implantação real envolvendo múltiplas organizações públicas",
+      "Investigar mecanismos de revogação de credenciais em ambientes híbridos de nuvem e edge"
+    ]
+  },
+  "evidencias": [],
+  "interpretacao": "O trecho evidencia um movimento crescente para combinar blockchain com técnicas leves (PLS, biometria, ABE) a fim de atender às restrições de recursos dos dispositivos IoT, ao mesmo tempo em que busca cumprir exigências de privacidade e regulamentação, especialmente em aplicações críticas como saúde e cidades inteligentes.",
+  "duvidas": "Como o TAB‑SAPP lida com a revogação de credenciais em ambientes distribuídos? Qual o impacto de delegar PoW a servidores de borda na latência de autenticação? Existem métricas comparativas entre PLS e criptografia tradicional em termos de consumo energético em sensores médicos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "64aba68c5f6981536bcb",
+  "artigo": "Addula_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+    "solucao": "integration of homomorphic encryption",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o protocolo TAB‑SAPP em cenários de cidades inteligentes com computação de borda; Integrar identidade auto‑soberana (SSI) e credenciais verificáveis ao framework blockchain; Explorar criptografia baseada em atributos (ABE) para controle de acesso granular em IoT; Validar o modelo em implantação real envolvendo múltiplas organizações públicas; Investigar mecanismos de revogação de credenciais em ambientes híbridos de nuvem e edge",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

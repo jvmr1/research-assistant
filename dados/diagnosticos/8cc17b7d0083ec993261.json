@@ -1,0 +1,42 @@
+{
+  "etapa": "reaproveitar-leituras",
+  "inicio": "2026-09-20T22:10:54",
+  "revisao": "5f8412cc6e604fb9d78f",
+  "tarefa": "Reorganize o entendimento já extraído destes trechos. JSON com problema, solucao, avaliacao, limites, possibilidades. Nos primeiros QUATRO campos copie uma frase literal curta das fichas ou do perfil anterior (até 500 caracteres); quando ausente, escreva Não informado. Não transforme uma descrição de aplicação em avaliação experimental, nem foco do estudo em limitação declarada. Em possibilidades você pode sugerir livremente uma extensão pequena. Acumule o perfil anterior e não invente fatos.",
+  "entrada": {
+    "perfil_anterior": {
+      "problema": "autenticação e controle de acesso em cidades inteligentes",
+      "solucao": "modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas",
+      "avaliacao": "latência inferior a 500 ms por operação, indicando viabilidade prática",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Integrar criptografia baseada em atributos (ABE) ao modelo SSI para permitir controle de acesso granular a serviços IoT e dados sensíveis nas cidades inteligentes."
+    },
+    "fichas": [
+      {
+        "resumo": "O trecho destaca que cidades inteligentes dependem de IoT e middleware como InterSCity para integrar dispositivos heterogêneos, mas enfrentam sérios desafios de segurança da informação, incluindo acessos não autorizados, fraudes e ataques de negação de serviço.",
+        "pagina": 13
+      },
+      {
+        "resumo": "O texto descreve os desafios de segurança em cidades inteligentes, como ataques man-in-the-middle, DoS e acesso não autorizado a dados sensíveis, e destaca a importância da gestão de identidades. Propõe o uso de identidades autosoberanas (SSI) baseadas em blockchain para dar controle aos cidadãos sobre suas credenciais digitais, complementando um modelo existente que ainda não cobre a identidade dos cidadãos.",
+        "pagina": 14
+      },
+      {
+        "resumo": "O trabalho propõe desenvolver mecanismos distribuídos baseados em blockchain para garantir segurança e controle de acesso a dados e recursos em cidades inteligentes, considerando a complexidade dos atores envolvidos (entidades públicas e privadas, cidadãos, sensores IoT). Define como objetivo geral a criação de um modelo de gestão de identidades e uma arquitetura de segurança que cubra comunicação entre componentes de middleware e controle de acesso centrado nos dados, além de disponibilizar uma plataforma de apoio ao desenvolvimento de aplicações.",
+        "pagina": 15
+      },
+      {
+        "resumo": "O trecho descreve a plataforma de middleware InterSCity, um software livre baseado em microsserviços projetado para cidades inteligentes. É modular, escalável e flexível, composta por seis microsserviços, entre eles o Resource Adaptor, que permite a integração de dispositivos IoT à plataforma.",
+        "pagina": 16
+      }
+    ]
+  },
+  "resposta": {
+    "problema": "autenticação e controle de acesso em cidades inteligentes",
+    "solucao": "modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas",
+    "avaliacao": "latência inferior a 500 ms por operação, indicando viabilidade prática",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Integrar criptografia baseada em atributos (ABE) ao modelo SSI para controle de acesso granular e acrescentar um mecanismo de recuperação de credenciais usando secret sharing, permitindo que o cidadão recupere o acesso perdido de forma segura."
+  },
+  "ia": null,
+  "fim": "2026-09-20T22:11:06"
+}

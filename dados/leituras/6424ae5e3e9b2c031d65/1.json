@@ -1,0 +1,37 @@
+{
+  "resumo": "O trecho discute os riscos da centralização da web, como censura e bloqueios governamentais, e destaca a crescente demanda por privacidade. Apresenta a Self‑Sovereign Identity (SSI) como identidade distribuída, independente de autoridade central, e descreve como a blockchain pode ampliar o controle do usuário sobre identificadores e dados. Também menciona a possibilidade de integrar SSI a sistemas oficiais como eID, eIDAS e ePassport, apontando desafios de adoção em soluções baseadas em blockchain.",
+  "perfil": {
+    "problema": "centralization may pose a main concern for censorship",
+    "solucao": "Self‑Sovereign Identity (SSI) is an identity that is not dependent on any central authority",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Integrar criptografia baseada em atributos (ABE) para controle de acesso mais granular em ambientes de cidades inteligentes.",
+      "Avaliar o desempenho e a escalabilidade da solução SSI em edge computing e redes de sensores IoT.",
+      "Testar a interoperabilidade com identidades governamentais (eID, eIDAS, ePassport) em cenários reais.",
+      "Comparar o uso da Binance Smart Chain com outras blockchains públicas quanto a latência e throughput.",
+      "Desenvolver mecanismos de revogação de credenciais baseados em contratos inteligentes."
+    ]
+  },
+  "evidencias": [],
+  "interpretacao": "O texto reforça a necessidade de modelos descentralizados como SSI para mitigar riscos de censura e controle centralizado, apontando ainda para a integração com identidades oficiais.",
+  "duvidas": "Como o YouGovern lida com revogação de credenciais? Qual o impacto de usar a Binance Smart Chain em ambientes de cidades inteligentes com restrições de latência?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "d1741ae45168524d94a2",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 2,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "centralized control also means that these entities have the power to modify, revoke, or misuse identity privileges, often without the user’s consent",
+    "solucao": "YouGovern, a blockchain-based SSI system deployed on Binance Smart Chain (BSC) and compliant with W3C Decentralized Identifier (DID) standards",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Integrar criptografia baseada em atributos (ABE) para controle de acesso mais granular em ambientes de cidades inteligentes.; Avaliar o desempenho e a escalabilidade da solução SSI em edge computing e redes de sensores IoT.; Testar a interoperabilidade com identidades governamentais (eID, eIDAS, ePassport) em cenários reais.; Comparar o uso da Binance Smart Chain com outras blockchains públicas quanto a latência e throughput.; Desenvolver mecanismos de revogação de credenciais baseados em contratos inteligentes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  },
+  "reaproveitada_de": "ad0ae8a32d584f7fbea6"
+}

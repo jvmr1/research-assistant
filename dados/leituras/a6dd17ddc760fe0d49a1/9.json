@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho apresenta a lista de tabelas do documento, incluindo comparações de algoritmos de consenso, trabalhos relacionados, métricas de latência de autenticação de dispositivos na plataforma InterSCity, formas de inserção de dados, e medições de consumo de memória RAM e processamento com e sem o modelo proposto.",
+  "perfil": {
+    "problema": "Não informado.",
+    "solucao": "Não informado.",
+    "avaliacao": "Não informado.",
+    "limites": "Não informado.",
+    "possibilidades": "Investigar o efeito de diferentes algoritmos de consenso sobre a latência de autenticação em ambientes SSI; analisar como técnicas de compressão de estado podem reduzir o consumo de memória RAM ao usar credenciais verificáveis; comparar o custo de processamento de revogação de credenciais com e sem uso de ABE; propor métricas de interoperabilidade entre plataformas de cidades inteligentes ao empregar identificadores descentralizados."
+  },
+  "evidencias": [
+    {
+      "citacao": "Tabela 7 – Consumo de memória RAM não utilizando o modelo",
+      "afirmacao": "Consumo de memória RAM não utilizando o modelo"
+    },
+    {
+      "citacao": "Tabela 8 – Consumo de memória RAM utilizando o modelo proposto",
+      "afirmacao": "Consumo de memória RAM utilizando o modelo proposto"
+    }
+  ],
+  "interpretacao": "As tabelas indicam que o documento mede o desempenho (latência, memória e processamento) de sistemas de identidade autossoberana em cenários de cidades inteligentes, comparando a situação com e sem a solução proposta.",
+  "duvidas": "Quais são os valores numéricos específicos das medições de memória e processamento? Como os algoritmos de consenso influenciam esses resultados? O documento detalha os métodos de revogação e recuperação de credenciais?",
+  "avisos": [],
+  "id": "dc393adc50d57c237444",
+  "artigo": "Exemplo_da24de257de987bc603b",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "without security mechanisms, it becomes impossible to develop and deploy smart city applications.",
+    "solucao": "Arquitetura geral da solução e interações.",
+    "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar o efeito de diferentes algoritmos de consenso sobre a latência de autenticação em ambientes SSI; analisar como técnicas de compressão de estado podem reduzir o consumo de memória RAM ao usar credenciais verificáveis; comparar o custo de processamento de revogação de credenciais com e sem uso de ABE; propor métricas de interoperabilidade entre plataformas de cidades inteligentes ao empregar identificadores descentralizados.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "a6dd17ddc760fe0d49a1"
+  }
+}

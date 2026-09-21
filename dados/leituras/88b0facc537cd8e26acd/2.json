@@ -1,0 +1,30 @@
+{
+  "resumo": "O trabalho propõe um acumulador de janela deslizante para identidade descentralizada verificável em IIoT, suportando meta‑computação e grande volume de dados, com análise teórica e experimentos que mostram maior segurança e eficiência em comparação a métodos existentes.",
+  "perfil": {
+    "problema": "addressing security issues in identity registry and updates within DID systems",
+    "solucao": "sliding window accumulator to achieve verifiable identity authentication",
+    "avaliacao": "Our evaluation results have demonstrated that our approach has an advantage in offering secure verifiability and high efficiency, comparing to other existing methods",
+    "limites": "Não informado",
+    "possibilidades": "Aplicar o acumulador a serviços de cidades inteligentes; integrar criptografia baseada em atributos (ABE) para controle de acesso granular; avaliar a escalabilidade em ambientes de edge computing; explorar interoperabilidade com padrões SSI do setor público; combinar estratégia on‑chain/off‑chain para gerenciamento de dados de cidades; investigar mecanismos de revogação distribuída entre organizações."
+  },
+  "evidencias": [],
+  "interpretacao": "O acumulador de janela deslizante permite atualizar identidades de forma incremental, reduzindo a carga computacional e mantendo a verificabilidade, o que é crucial para ambientes IIoT de alta escala e recursos limitados.",
+  "duvidas": "Como o acumulador se comporta em cenários de alta churn de dispositivos? Qual o impacto da estratégia on‑chain/off‑chain na latência de autenticação em edge nodes? Existem custos de armazenamento adicionais ao usar o acumulador em larga escala?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "2e97874960accf6763c2",
+  "artigo": "Ding_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "addressing security issues in identity registry and updates within DID systems",
+    "solucao": "sliding window accumulator to achieve verifiable identity authentication",
+    "avaliacao": "Our evaluation results have demonstrated that our approach has an advantage in offering secure verifiability and high efficiency, comparing to other existing methods",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o acumulador a serviços de cidades inteligentes; integrar criptografia baseada em atributos (ABE) para controle de acesso granular; avaliar a escalabilidade em ambientes de edge computing; explorar interoperabilidade com padrões SSI do setor público; combinar estratégia on‑chain/off‑chain para gerenciamento de dados de cidades; investigar mecanismos de revogação distribuída entre organizações.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "88b0facc537cd8e26acd"
+  }
+}

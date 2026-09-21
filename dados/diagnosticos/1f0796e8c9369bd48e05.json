@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T18:05:40",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "An investigation on real-time insights: enhancing process control with IoT-enabled sensor networks",
+    "tipo_leitura": "html",
+    "fichas": [
+      {
+        "pagina": null,
+        "resumo": "O artigo revisa aplicações, desafios e tendências da IoT e redes de sensores no controle de processos, propondo um framework que usa protocolos MQTT/CoAP, edge computing e tecnologias como blockchain, 5G e IA para melhorar coleta, processamento e decisão em tempo real, embora ainda enfrente questões de segurança, energia e escalabilidade.",
+        "interpretacao": "O trabalho destaca que, apesar dos avanços nas tecnologias de comunicação e computação de borda, a principal barreira ainda reside na gestão eficiente de grandes volumes de dados e na garantia de segurança e energia, indicando que soluções híbridas (blockchain, IA, 5G) são promissoras, mas carecem de validação prática em cenários de cidades inteligentes.",
+        "duvidas": "Como garantir a privacidade dos dados coletados pelos sensores ao usar blockchain público? Qual é o impacto real da integração de SSI e credenciais verificáveis na latência de controle de processos críticos? Quais métricas de energia são mais adequadas para comparar soluções de edge computing em ambientes de IoT industrial?"
+      },
+      {
+        "pagina": null,
+        "resumo": "O trecho descreve as principais características e limitações de redes de sensores sem fio (WSN) para aplicações industriais e de cidades inteligentes, destacando escalabilidade, eficiência energética e confiabilidade. Apresenta tecnologias habilitadoras em diferentes camadas da IoT e protocolos de comunicação como MQTT, CoAP e LoRaWAN, além de seu papel no monitoramento de processos e na Indústria 4.0.",
+        "interpretacao": "O texto enfatiza que, embora as WSNs ofereçam recursos críticos para monitoramento em tempo real, sua adoção ainda enfrenta barreiras de energia, escalabilidade e confiabilidade, que precisam ser mitigadas por protocolos leves e estratégias de economia de energia.",
+        "duvidas": "Como garantir a segurança e privacidade dos dados coletados pelas WSNs sem comprometer a eficiência energética? Qual o impacto da adoção de blockchain e SSI na latência das aplicações de controle de processos em tempo real?"
+      },
+      {
+        "pagina": null,
+        "resumo": "O trecho descreve como plataformas em nuvem suportam a análise de dados da Indústria 4.0, enfatizando a necessidade de fortes medidas de cibersegurança. Apresenta aplicações de redes de sensores em agricultura inteligente – como irrigação de precisão e monitoramento climático – e em saúde inteligente, incluindo monitoramento remoto de pacientes e dispositivos vestíveis. Destaca ainda o papel da IA e analytics no processamento de grandes volumes de dados para decisões sustentáveis e personalizadas.",
+        "interpretacao": "O texto amplia o escopo do trabalho ao conectar a infraestrutura de sensores IoT a domínios críticos como agricultura e saúde, ressaltando que a segurança cibernética e a análise de dados em tempo real são pilares para a adoção efetiva dessas tecnologias em cidades inteligentes.",
+        "duvidas": "Quais são os requisitos específicos de latência e confiabilidade para a transmissão segura de dados de sensores agrícolas em redes 5G? Como a integração de SSI pode ser padronizada em dispositivos vestíveis de saúde já existentes?"
+      },
+      {
+        "pagina": null,
+        "resumo": "O trecho descreve como redes de sensores IoT impulsionam cidades e edifícios inteligentes, melhorando gestão de tráfego, energia, resíduos, água e segurança pública. Destaca benefícios como otimização de recursos, monitoramento ambiental e resposta rápida a emergências. Contudo, aponta desafios críticos de escalabilidade, interoperabilidade, eficiência energética, segurança, privacidade e gerenciamento de grandes volumes de dados em tempo real, exigindo soluções avançadas de comunicação, criptografia e análise.",
+        "interpretacao": "O texto evidencia que, embora sensores IoT ofereçam ganhos expressivos em eficiência e qualidade de vida nas cidades e edifícios inteligentes, a falta de padrões interoperáveis, restrições energéticas e vulnerabilidades de segurança ainda impedem uma adoção plena e confiável.",
+        "duvidas": "Quais padrões ou frameworks podem ser adotados para melhorar a interoperabilidade entre dispositivos heterogêneos? Como equilibrar a necessidade de baixa energia com requisitos de segurança robusta em sensores remotos? De que forma identidades auto‑soberanas podem ser integradas a sistemas de controle de acesso existentes em smart buildings?"
+      },
+      {
+        "pagina": null,
+        "resumo": "O trecho descreve como redes de sensores IoT ampliam conectividade, reduzem latência e permitem monitoramento em tempo real em cidades inteligentes, indústrias e saúde, impulsionadas por IA/ML. Destaca benefícios como manutenção preditiva, eficiência energética e sustentabilidade, mas aponta preocupações de segurança, privacidade, interoperabilidade e alto consumo de energia, sugerindo pesquisas em padrões globais, dispositivos de baixa potência, blockchain e IA preservadora de privacidade.",
+        "interpretacao": "O texto enfatiza o potencial transformador das redes de sensores IoT, mas sublinha desafios críticos de segurança, privacidade, interoperabilidade e consumo energético, indicando a necessidade de soluções baseadas em blockchain, identidade auto‑soberana, criptografia baseada em atributos e padrões globais.",
+        "duvidas": "Quais protocolos de comunicação são mais adequados para garantir baixa latência e eficiência energética em ambientes de cidades inteligentes? Como integrar de forma prática SSI e ABE em infraestruturas existentes? Qual o impacto real de blockchain na latência de controle de processos em tempo real?"
+      },
+      {
+        "pagina": null,
+        "resumo": "O artigo \"An investigation on real-time insights: enhancing process control with IoT-enabled sensor networks\" (2025) apresenta uma revisão de literatura sobre o uso de redes de sensores IoT para monitoramento em tempo real e controle de processos. Publicado em acesso aberto sob licença CC‑BY 4.0, destaca palavras‑chave como IoT, sensores, monitoramento de processos, dados e inteligência artificial, e inclui extensiva referência a aplicações em agricultura, saúde, cidades inteligentes e indústria.",
+        "interpretacao": "O trabalho enfatiza a importância de combinar sensores IoT com técnicas de IA para obter insights em tempo real, reforçando a necessidade de soluções que conciliem eficiência energética e segurança dos dados.",
+        "duvidas": "Quais métricas específicas de latência e precisão foram avaliadas? Como a proposta lida com a escalabilidade em ambientes industriais heterogêneos?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo revisa o estado da arte das redes de sensores IoT aplicadas ao controle de processos em tempo real, destacando o uso de protocolos leves (MQTT, CoAP, LoRaWAN), computação de borda, e tecnologias emergentes como blockchain, 5G, IA e identidade auto‑soberana (SSI). Aponta benefícios como redução de latência, manutenção preditiva, otimização de recursos em cidades inteligentes, agricultura e saúde, ao mesmo tempo em que evidencia desafios persistentes de segurança, privacidade, eficiência energética, escalabilidade e interoperabilidade. As fichas ressaltam a necessidade de soluções híbridas que conciliem blockchain e IA, mas apontam a falta de validação prática, métricas adequadas de energia e padrões interoperáveis. Dúvidas recorrentes incluem a privacidade em blockchains públicos, o impacto da SSI na latência, métricas de energia para edge computing e requisitos de latência em redes 5G para aplicações críticas.",
+    "lacunas_possiveis": [
+      "Privacidade dos dados em blockchains públicos usados por sensores IoT.",
+      "Impacto da integração de SSI e credenciais verificáveis na latência de controle de processos críticos.",
+      "Métricas de energia adequadas para comparar soluções de edge computing em ambientes industriais heterogêneos.",
+      "Ausência de padrões ou frameworks consolidados para interoperabilidade entre dispositivos heterogêneos.",
+      "Requisitos específicos de latência e confiabilidade para transmissão segura de dados agrícolas em redes 5G."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver e validar um protótipo híbrido (blockchain + IA) em cenário de cidade inteligente, medindo latência, consumo energético e segurança.",
+      "Criar um conjunto de métricas de energia focadas em dispositivos de borda IoT e aplicá‑las a diferentes arquiteturas de edge computing.",
+      "Propor um framework de interoperabilidade baseado em padrões abertos (ex.: MQTT, CoAP, LwM2M) integrado a mecanismos de SSI para controle de acesso em smart buildings.",
+      "Realizar estudo experimental sobre o efeito da SSI/VC na latência de processos de controle em tempo real, comparando blockchains permissionadas e públicas.",
+      "Definir requisitos de latência e confiabilidade para sensores agrícolas em redes 5G, incluindo cenários de irrigação de precisão e monitoramento climático."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:05:50"
+}

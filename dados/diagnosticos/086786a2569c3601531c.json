@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-20T18:17:35",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "André Luiz Almeida Cardoso",
+    "perfil_anterior": {
+      "problema": "Caracterização do Problema",
+      "solucao": "Arquiteturas para Gestão de Identidade",
+      "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a integração de algoritmos de consenso (ex.: PBFT, PoA) com SSI para melhorar a disponibilidade de credenciais em ambientes IoT; mapear as siglas do sumário a uma ontologia que relacione DID, ABE e criptografia homomórfica, facilitando a interoperabilidade entre serviços de cidades inteligentes."
+    },
+    "pagina": 14,
+    "texto": "4 SOLUÇÃO PROPOSTA . . . . . . . . . . . . . . . . . . . . . . . . . 45\n4.1 Modelo de Gestão de Identidades . . . . . . . . . . . . . . . . . . . . 45\n4.2 Contratos Inteligentes: Registro, Autenticação e Revogação de\nIdentidades . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47\n4.3 Relacionamentos Entre os Atores . . . . . . . . . . . . . . . . . . . . 51\n4.3.1 Instalação de Dispositivos de IoT . . . . . . . . . . . . . . . . . . . . . . . 51\n4.3.2 Deployment de Aplicações de CI . . . . . . . . . . . . . . . . . . . . . . . 52\n4.3.3 Coleta e Envio de Dados por Dispositivos de IoT . . . . . . . . . . . . . . 52\n4.3.4 Manutenção e Remoção de Dispositivos de IoT . . . . . . . . . . . . . . . 53\n4.4 Implementação do Modelo de Gestão de Identidades . . . . . . . . . 53\n4.4.1 Entity Manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56\n4.4.2 IoT Cataloguer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58\n4.4.3 Secure Resource Adaptor . . . . . . . . . . . . . . . . . . . . . . . . . . . 59\n4.5 Comparação com Trabalhos Relacionados . . . . . . . . . . . . . . . 60\n5 A VALIAÇÃO EXPERIMENTAL . . . . . . . . . . . . . . . . . . . . . 64\n5.1 Ambiente de Execução . . . . . . . . . . . . . . . . . . . . . . . . . . 64\n5.2 Latência nas Operações de Autenticação . . . . . . . . . . . . . . . . 65\n5.2.1 Resultados Obtidos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 66\n5.3 Latência na Inserção de Dados na Plataforma InterSCity . . . . . . 67\n5.3.1 Resultados Obtidos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68\n5.4 Consumo de Memória e Processamento por Clientes . . . . . . . . . 70\n5.4.1 Resultados Obtidos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71\n5.5 Discussão . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73\n6 CONCLUSÃO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74\n6.1 Limitações . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75\n6.2 Trabalhos Futuros . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75\n6.3 Publicações . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76\nREFERÊNCIAS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho apresenta a estrutura da solução proposta, detalhando um Modelo de Gestão de Identidades suportado por contratos inteligentes para registro, autenticação e revogação. Descreve os relacionamentos entre atores, processos de instalação, deployment, coleta, envio e manutenção de dispositivos IoT, e a implementação de componentes como Entity Manager, IoT Cataloguer e Secure Resource Adaptor. Inclui ainda a comparação com trabalhos relacionados, avaliação experimental (latência, consumo de memória e processamento) e discussões sobre limitações e trabalhos futuros.",
+    "perfil": {
+      "problema": "Caracterização do Problema",
+      "solucao": "Arquiteturas para Gestão de Identidade",
+      "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": [
+        "Integrar criptografia baseada em atributos (ABE) para divulgação seletiva de credenciais em cenários IoT.",
+        "Aplicar criptografia homomórfica para análises de dados coletados preservando a privacidade dos cidadãos.",
+        "Explorar algoritmos de consenso (ex.: PBFT, PoA) para garantir alta disponibilidade e integridade das credenciais SSI em ambientes distribuídos de cidades inteligentes.",
+        "Mapear as siglas do sumário a uma ontologia que relacione DID, ABE e criptografia homomórfica, facilitando a interoperabilidade entre serviços urbanos."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Modelo de Gestão de Identidades",
+        "citacao": "4.1 Modelo de Gestão de Identidades . . . . . . . . . . . . . . . . . . . . . . . . . . 45"
+      },
+      {
+        "afirmacao": "Latência nas Operações de Autenticação",
+        "citacao": "5.2 Latência nas Operações de Autenticação . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65"
+      }
+    ],
+    "interpretacao": "O documento estrutura uma proposta abrangente de gerenciamento de identidade autossoberana para cidades inteligentes, combinando modelos de identidade, contratos inteligentes e componentes específicos para IoT, e valida sua viabilidade por meio de experimentos de desempenho.",
+    "duvidas": "Quais são os detalhes do mecanismo de revogação de credenciais implementado nos contratos inteligentes? Como a solução escala com milhares de dispositivos IoT simultâneos? Existe suporte a interoperabilidade entre diferentes plataformas de identidade pública e privada?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:17:41"
+}

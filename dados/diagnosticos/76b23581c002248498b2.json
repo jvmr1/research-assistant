@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:40:32",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication",
+    "perfil_anterior": {
+      "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+      "solucao": "Encrypt using homomorphic encryption scheme: EAi= HE_Encrypt (ai,PK)",
+      "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "• Avaliar o impacto de combinar criptografia homomórfica com atributos baseados em políticas de acesso (ABE) para controle de acesso granular em cidades inteligentes.\n• Medir o overhead de comunicação e latência introduzidos pela seleção dinâmica de cluster head em ambientes de borda.\n• Testar a escalabilidade da armazenagem de atributos criptografados em blockchain sob alta taxa de dispositivos IoT.\n• Explorar a integração de credenciais verificáveis (VCs) com o esquema de criptografia homomórfica para suportar revogação segura."
+    },
+    "pagina": 9,
+    "texto": " \n \n  \n \n230 \n \n \n \nJournal of Cyber Security and Risk Auditing Vol.2025, No.4                                         ISSN: 3079-5354 \nCombine encrypted elements: \nE(D)={E(d1),E(d2),...,E(dn)} \n5. Outsource to Cloud \nTransmit E(D) securely to the cloud for storage or processing. \n6. Perform Encrypted Computations \nAllow statistical or machine learning operations over E (D) using:  \nHE.Eval(f,E(D)), where f is a supported function (e.g., sum, average). \n7. Return: \nEncrypted dataset E(D) \n \nAlgorithm 4 outlines a systematic approach to encrypting Electronic Medical Records (EMR) using Fully Homomorphic \nEncryption (FHE), ens uring end-to-end data confidentiality and privacy preservation within IoMT (Internet of Medical \nThings) environments. The algorithm begins by initializing the FHE scheme and generating a secure key pair. This \nfoundational step is crucial for enabling secur e encryption and subsequent operations on the data.  Once the IoMT devices \ncollect patient-specific medical data (such as vital signs and biometric metrics), each data point is encrypted individually \nusing the public key. This encryption step ensures that s ensitive health data are transformed into a cipher text form that is \nunintelligible to unauthorized users, including third -party cloud providers.  A critical advantage of using FHE, as \ndemonstrated in this algorithm, is the ability to perform meaningful computations—such as statistical analysis or machine \nlearning inference —directly on encrypted data without requiring decryption. This feature eliminates the security risk \ntypically associated with decrypting data before processing, thereby preserving privacy throughout the data lifecycle. \n \nAfter encryption, the data are outsourced to a cloud server, where they can be stored securely or used for encrypted \ncomputations. This model is particularly well-suited for healthcare systems that need to process large volumes of data while \ncomplying with strict regulatory requirements such as HIPAA or GDPR. The choice of FHE, rather than partially or hybrid \nhomomorphic encryption, is deliberate in this context. FHE provides maximum flexibility for supporting diverse and \ncomplex operations over encrypted data —an essential requirement for healthcare applications involving  predictive \nanalytics or AI-driven diagnostics. In summary, Algorithm 4 plays a vital role in enabling secure, scalable, and privacy -\npreserving data handling in IoMT networks. It addresses key concerns related to data confidentiality, unauthorized access, \nand compliance, making it an essential component in the design of modern, secure healthcare information systems.  \n \n3.2. System Model \n \nThis section introduces a secure and efficient industrial automation authentication system designed to ensure \ntrustworthiness and simplicity. The system leverages a multi -signature-compatible smart contract to verify private keys, \nensuring that unauthorize d access is prevented. Within the context of industrial automation, the model adopts a pay -as-\nyou-go intelligent framework to evaluate and manage the computational processes of IoT devices effectively. As illustrated \nin Figure 2, the Internet of Things (Io T) ecosystem encompasses a vast network of components —including thousands to \nmillions of sensors, edge devices, computing units, Wi -Fi modules, and RFID tags—all generating large volumes of data. \nThe scale and heterogeneity of this data make it particularly susceptible to security breaches and data mismanagement. The \nuse of multi -signature-compatible smart contracts allows for comprehensive assessment of each transaction’s integrity, \ncovering everything from quality assurance and operational procedures to a utomated decision-making. These contracts \nenable the system to analyze traffic patterns and make autonomous decisions that improve system intelligence and \nresponsiveness. Smart contracts are further utilized to assess the core functional behavior of each I oT device, optimizing \nthe performance and efficiency of the entire network. The model ensures scalability, resilience, and reliability in processing \nindustrial IoT operations. Table 1 presents the application of the TAB -SAPP framework, which demonstrates h ow \nresearchers formalize trust-aware authentication protocols within this context. \nTable 1. Simulation setup \nParameters Details \n \nDataset size 150 number of blocks + PHR \n \nHardware Software Parameters GPU-enabled system Ethereum, hyperledger fabric \n ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho propõe o uso de Fully Homomorphic Encryption (FHE) para criptografar dados de dispositivos IoMT, permitindo seu armazenamento e processamento seguro na nuvem, e emprega contratos inteligentes multi‑assinatura para autenticação de chaves privadas, visando confidencialidade, privacidade e prevenção de acessos não autorizados em ambientes industriais.",
+    "perfil": {
+      "problema": "ensuring end-to-end data confidentiality and privacy preservation within IoMT environments",
+      "solucao": "utiliza Fully Homomorphic Encryption (FHE) para criptografar dados e contratos inteligentes compatíveis com múltiplas assinaturas para verificação de chaves privadas",
+      "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+      "limites": "Não informado",
+      "possibilidades": [
+        "Combinar FHE com Attribute‑Based Encryption (ABE) para controle de acesso granular em cidades inteligentes.",
+        "Avaliar o overhead de latência introduzido pelos contratos inteligentes multi‑assinatura em cenários de borda.",
+        "Integrar credenciais verificáveis (VCs) ao esquema de FHE para suportar revogação segura de identidades de dispositivos.",
+        "Testar a escalabilidade do processamento de grandes volumes de dados IoT usando FHE em redes distribuídas."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "FHE permite realizar computações sobre dados criptografados sem necessidade de descriptografia.",
+        "citacao": "FHE provides maximum flexibility for supporting diverse and complex operations over encrypted data"
+      },
+      {
+        "afirmacao": "Contratos inteligentes compatíveis com múltiplas assinaturas verificam chaves privadas para prevenir acesso não autorizado.",
+        "citacao": "The system leverages a multi-signature-compatible smart contract to verify private keys, ensuring that unauthorized access is prevented."
+      }
+    ],
+    "interpretacao": "O artigo demonstra que a combinação de criptografia homomórfica total com contratos inteligentes pode atender aos requisitos de privacidade e integridade de dados em IoMT, ao mesmo tempo em que oferece mecanismos de autenticação robustos para ambientes industriais.",
+    "duvidas": "Como o custo computacional do FHE impacta a latência em aplicações de tempo real? Qual é o desempenho dos contratos multi‑assinatura em dispositivos de borda com recursos limitados?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:41:09"
+}

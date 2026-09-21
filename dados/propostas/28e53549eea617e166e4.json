@@ -1,0 +1,22 @@
+{
+  "id": "28e53549eea617e166e4",
+  "revisao": "e7b8232d88fc37f0003b",
+  "gerado_em": "2026-09-21T00:19:25",
+  "modelo": "openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free, qwen2.5:7b-instruct-q4_K_M",
+  "titulo": "Integrar o modelo de identidade baseado em blockchain de Cardoso com o framework de Verifiable Credentials de Gudipati, acrescentando criptografia baseada em atributos (ABE) para permitir divulgação seletiva de atributos de sensores IoT em serviços urbanos. O artefato seria uma carteira SSI que emite VCs contendo políticas ABE, suportando revogação via lista de status na blockchain. Avaliar desempenho de emissão, verificação e controle de acesso em cenários de mobilidade urbana.",
+  "fontes": [
+    "Exemplo_da24de257de987bc603b",
+    "Gudipati_2025"
+  ],
+  "problema": "Ausência de mecanismos de controle de acesso seletivo e de políticas de atributos dentro de soluções blockchain‑centricas para cidades inteligentes.",
+  "hipotese_lacuna": "Ausência de mecanismos de controle de acesso seletivo e de políticas de atributos dentro de soluções blockchain‑centricas para cidades inteligentes.",
+  "meu_trabalho": "Integrar o modelo de identidade baseado em blockchain de Cardoso com o framework de Verifiable Credentials de Gudipati, acrescentando criptografia baseada em atributos (ABE) para permitir divulgação seletiva de atributos de sensores IoT em serviços urbanos. O artefato seria uma carteira SSI que emite VCs contendo políticas ABE, suportando revogação via lista de status na blockchain. Avaliar desempenho de emissão, verificação e controle de acesso em cenários de mobilidade urbana.",
+  "interpretacao": "A literatura sobre identidade digital em cidades inteligentes converge para três vertentes principais. Cardoso (2024) propõe um modelo de gestão de identidades baseado em blockchain, enfatizando a integridade da cadeia de confiança, mas avalia apenas consumo de memória e não trata revogação ou recuperação de credenciais. Gudipati (2025) apresenta as Verifiable Credentials (VCs) como facilitadoras da descentralização e privacidade, discute desafios de adoção e requisitos regulatórios, porém não explora mecanismos criptográficos avançados para controle de acesso seletivo. O trabalho de S_2026 (2026) combina IA, geo‑fencing e identidade blockchain para segurança de turistas, introduzindo um caso de uso concreto, mas foca na camada de identificação sem detalhar o ciclo completo da credencial (emissão, revogação, recuperação). Em conjunto, os estudos concordam que a descentralização (blockchain/DID) e a privacidade (SSI, VCs) são essenciais, diferem nas avaliações de desempenho (memória vs. escalabilidade) e na profundidade de cobertura dos estágios da credencial, deixando lacunas abertas em revogação eficiente, recuperação pós‑perda e controle de acesso baseado em atributos ou criptografia homomórfica.",
+  "alteracao_sobre_trabalhos_proximos": "Integrar o modelo de identidade baseado em blockchain de Cardoso com o framework de Verifiable Credentials de Gudipati, acrescentando criptografia baseada em atributos (ABE) para permitir divulgação seletiva de atributos de sensores IoT em serviços urbanos. O artefato seria uma carteira SSI que emite VCs contendo políticas ABE, suportando revogação via lista de status na blockchain. Avaliar desempenho de emissão, verificação e controle de acesso em cenários de mobilidade urbana.",
+  "modo": "brainstorm",
+  "buscas": [
+    "self-sovereign identity blockchain verifiable credentials attribute-based encryption smart city IoT revocation",
+    "DID VC ABE access control urban computing"
+  ],
+  "validacao_estado_da_arte": "pendente: executar as buscas registradas, ler trabalhos recentes retornados e comparar explicitamente o que já foi feito com o recorte proposto antes de afirmar novidade."
+}

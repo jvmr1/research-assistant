@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T16:49:26",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+    "perfil_anterior": {
+      "problema": "unauthorized access, malware assaults, and data breaches",
+      "solucao": "blockchain-based architecture and integrated DNN to ensure data integrity, enhance anomaly detection, and offer IoT networks autonomous, distributed threat-mitigating properties",
+      "avaliacao": "threat detection accuracy of 99.18%",
+      "limites": "weaknesses in smart contracts, Sybil attacks, and 51% assaults may still penetrate blockchain-based security procedures",
+      "possibilidades": "Explorar consenso leve (PoA, DAG) para reduzir latência em bordas de cidades inteligentes; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar quantização e poda de modelos DNN para diminuir carga computacional; investigar aprendizado federado para treinamento distribuído sem expor dados sensíveis; avaliar a robustez contra ataques adversariais usando técnicas de defesa avançadas."
+    },
+    "pagina": 14,
+    "texto": "Showing a 95.25% efficiency in reaction time, the system ensures real-time threat mitigation (Fig.  8). \nConventions in cybersecurity often suffer from delays in seeing and addressing anomalies, increasing the risk of \ndamage. Smart contracts built within the Blockchain enable the system to react to threats automatically, therefore \neliminating delays in human interaction. This fast decision-making ability enhances IoT security by rapidly \nneutralizing assaults, halting data breaches, and maintaining low latency linked device integrity preservation.\n RT =\n[\nui − ew′′]\n+ Ba\n[\ns − t′′]\n+ Ya\n[\nenk − ny′′]\n (23)\nFig. 7. Analysis of false-positive.\n \nFig. 6. Analysis of threat detection accuracy.\n \nScientific Reports |        (2025) 15:22369 14| https://doi.org/10.1038/s41598-025-04164-4\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo relata que, ao empregar contratos inteligentes na blockchain, o sistema de segurança IoT reage automaticamente a ameaças, eliminando atrasos humanos e alcançando 95,25% de eficiência no tempo de reação, o que garante mitigação em tempo real e baixa latência na preservação da integridade dos dispositivos conectados.",
+    "perfil": {
+      "problema": "unauthorized access, malware assaults, and data breaches",
+      "solucao": "blockchain-based architecture and integrated DNN to ensure data integrity, enhance anomaly detection, and offer IoT networks autonomous, distributed threat-mitigating properties",
+      "avaliacao": "Showing a 95.25% efficiency in reaction time",
+      "limites": "weaknesses in smart contracts, Sybil attacks, and 51% assaults may still penetrate blockchain-based security procedures",
+      "possibilidades": "Investigar consenso leve (PoA, DAG) para reduzir latência em bordas de cidades inteligentes; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar quantização e poda de modelos DNN para diminuir carga computacional; explorar aprendizado federado para treinamento distribuído sem expor dados sensíveis; avaliar robustez contra ataques adversariais usando técnicas de defesa avançadas."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O sistema reage a ameaças em tempo real, eliminando atrasos humanos.",
+        "citacao": "Smart contracts built within the Blockchain enable the system to react to threats automatically, therefore eliminating delays in human interaction."
+      },
+      {
+        "afirmacao": "A eficiência de tempo de reação foi de 95.25%.",
+        "citacao": "Showing a 95.25% efficiency in reaction time, the system ensures real-time threat mitigation."
+      }
+    ],
+    "interpretacao": "A combinação de contratos inteligentes e DNN permite uma resposta quase instantânea a incidentes, reduzindo a janela de vulnerabilidade típica de intervenções manuais, embora a dependência de contratos inteligentes introduza novos vetores de risco.",
+    "duvidas": "Como o modelo escala em ambientes com milhares de dispositivos IoT? Qual o overhead de execução dos contratos inteligentes em hardware de borda com recursos limitados?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T16:50:02"
+}

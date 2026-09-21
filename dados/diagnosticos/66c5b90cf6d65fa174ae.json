@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:32:46",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "no single point of failure",
+      "solucao": "Each file is stored in an IPFS, with its corresponding hash maintained in the Blockchain network.",
+      "avaliacao": "quantitative analysis to demonstrate how IPFS facilitates faster transaction processing and smaller Blockchain data sizes.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "• Avaliar a integração de identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Testar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Incorporar auditoria baseada em smart contracts para rastreamento de acessos;\n• Explorar políticas de zero‑trust entre provedores de saúde e autoridades "
+    },
+    "pagina": 7,
+    "texto": "Page 7 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \nthe reduction of block size, Eq.  2 shows the total number of transactions per block, and \nEq. 3 provides the execution time of each transaction.\nBlock size without IPFS\n(BSwithoutIP F S )=\nn∑\ni=1\nTXN i +\nn∑\ni=1\nHSi + BHs\nBlock Size with IPFS\n(BSwithIP F S )=\nn∑\ni=1\nHSi + BHs\nReduction of size per block\n=( BSwithoutIP F S ) − (BSwithIP F S )\n=\nn∑\ni=1\n(TXN i + HSi)+BH s −\nn∑\ni=1\nHSi + BHs (1)\nSize of total transactions per block\nTXN = BS −\nn∑\ni=1\nHSi + BHs\nFig. 2 Uploading healthcare data into IPFS\n ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho apresenta equações que demonstram a redução do tamanho dos blocos da blockchain ao armazenar arquivos no IPFS, comparando o tamanho sem IPFS e com IPFS, evidenciando ganhos de eficiência para o compartilhamento de dados de saúde.",
+    "perfil": {
+      "problema": "no single point of failure",
+      "solucao": "Each file is stored in an IPFS, with its corresponding hash maintained in the Blockchain network.",
+      "avaliacao": "the reduction of block size",
+      "limites": "Não informado",
+      "possibilidades": "• Avaliar o impacto da redução de tamanho de bloco na latência de rede em cenários de edge computing;\n• Investigar como a diminuição do tamanho dos blocos afeta a escalabilidade com milhares de dispositivos IoT;\n• Integrar métricas de consumo energético ao analisar o uso de IPFS versus armazenamento direto na blockchain;\n• Explorar combinações de IPFS com SSI para controle de acesso granular aos dados de saúde."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "A utilização do IPFS reduz o tamanho dos blocos da blockchain.",
+        "citacao": "Reduction of size per block = ( BSwithoutIPFS ) − (BSwithIPFS )"
+      },
+      {
+        "afirmacao": "Equações 2 e 3 quantificam, respectivamente, o número total de transações por bloco e o tempo de execução de cada transação.",
+        "citacao": "Eq. 2 shows the total number of transactions per block, and Eq. 3 provides the execution time of each transaction."
+      }
+    ],
+    "interpretacao": "Ao mover os arquivos para o IPFS, apenas seus hashes são armazenados na blockchain, o que diminui significativamente o tamanho dos blocos e pode acelerar o processamento de transações e reduzir o consumo de armazenamento.",
+    "duvidas": "Como a redução do tamanho dos blocos impacta a segurança e a resistência a ataques de negação de serviço? Qual é o efeito da latência de rede ao recuperar dados do IPFS em ambientes de edge computing? Como garantir a integridade e a disponibilidade dos dados armazenados no IPFS em longo prazo?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:33:26"
+}

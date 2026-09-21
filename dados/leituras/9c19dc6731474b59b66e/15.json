@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo discute limitações da arquitetura geral de provisionamento de serviços AI edge‑cloud para gestão de conhecimento, destacando a falta de adaptação a dispositivos especializados, ausência de análise de carga em tempo real, questões de escalabilidade e custo, variações regionais de latência, desafios de segurança e privacidade, dependência de recursos humanos qualificados e risco de lock‑in com fornecedores proprietários.",
+  "perfil": {
+    "problema": "Security and privacy challenges in managing and storing sensitive data across multiple layers of the architecture.",
+    "solucao": "advanced methods such as decentralized identity and authentication, homomorphic encryption, or zero trust architecture.",
+    "avaliacao": "The results show the difference in computing capabilities for both platforms.",
+    "limites": "The long-term scalability and cost-effectiveness of the proposed architecture remain unexplored.",
+    "possibilidades": "Investigar balanceamento dinâmico de carga com monitoramento em tempo real; adaptar a arquitetura para suportar GPUs e outros aceleradores; desenvolver protocolos de segurança adaptativos baseados em identidade descentralizada e zero‑trust; avaliar custos e desempenho em múltiplas regiões geográficas; criar ferramentas de orquestração que reduzam a dependência de expertise especializada; testar estratégias de tolerância a falhas distribuídas e mitigação de lock‑in de fornecedores."
+  },
+  "evidencias": [
+    {
+      "citacao": "does not account for the specifics of different applications. Some applications may require specialized computing devices, such as GPUs",
+      "afirmacao": "A arquitetura proposta não considera dispositivos de computação especializados, como GPUs."
+    },
+    {
+      "citacao": "The paper also identifies security and privacy challenges in managing and storing sensitive data across multiple layers of the architecture",
+      "afirmacao": "Desafios de segurança e privacidade são reconhecidos em todas as camadas (edge, CDN e cloud)."
+    }
+  ],
+  "interpretacao": "O estudo evidencia que, embora a proposta seja genérica e promissora, sua aplicabilidade prática é limitada por falta de suporte a hardware especializado, ausência de mecanismos de balanceamento adaptativo e lacunas em segurança distribuída, o que pode comprometer a adoção em cenários reais de cidades inteligentes.",
+  "duvidas": "Como a arquitetura poderia integrar monitoramento de carga em tempo real sem sobrecarregar os nós edge? Quais seriam os impactos de incluir GPUs nos nós edge sobre energia e custo? De que forma protocolos de identidade descentralizada poderiam ser inseridos de maneira interoperável entre diferentes provedores de cloud?",
+  "avisos": [],
+  "id": "9f4b71e77561b03507df",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Security is a major concern in all steps of knowledge management.",
+    "solucao": "advanced methods such as decentralized identity and authentication, homomorphic encryption, or zero trust architecture.",
+    "avaliacao": "The results show the difference in computing capabilities for both platforms.",
+    "limites": "First, the experiments were made on a limited set of devices, a single raspberry pi and cloud server, representing only two scenarios, the edge and the cloud.",
+    "possibilidades": "Investigar balanceamento dinâmico de carga com monitoramento em tempo real; adaptar a arquitetura para suportar GPUs e outros aceleradores; desenvolver protocolos de segurança adaptativos baseados em identidade descentralizada e zero‑trust; avaliar custos e desempenho em múltiplas regiões geográficas; criar ferramentas de orquestração que reduzam a dependência de expertise especializada; testar estratégias de tolerância a falhas distribuídas e mitigação de lock‑in de fornecedores.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

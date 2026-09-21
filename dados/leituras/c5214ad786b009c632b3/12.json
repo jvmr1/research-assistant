@@ -1,0 +1,30 @@
+{
+  "resumo": "O trecho descreve a análise de correlações entre variáveis de rede e demonstra que o modelo AAIFLF‑PPCD alcança alta precisão (≈99,5%) e AUC (~98%) na detecção de múltiplas classes de ameaças em cenários com 80%/20% de treinamento/validação, confirmando sua eficácia preditiva.",
+  "perfil": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "average accuracy of 99.47% and AUC of 98.28%",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Aplicar quantização ou poda de modelo para reduzir carga computacional nos nós de borda; integrar identidade auto‑soberana (SSI) para controle de acesso aos dados de detecção; avaliar o desempenho contra ataques zero‑day usando geração sintética de tráfego; explorar seleção de recursos baseada em matriz de correlação para eliminar atributos redundantes em tempo real."
+  },
+  "evidencias": [],
+  "interpretacao": "Os resultados indicam que o modelo possui excelente desempenho de classificação, embora a presença de correlações fortes sugira oportunidade de reduzir dimensionalidade para melhorar eficiência.",
+  "duvidas": "Qual é o impacto do custo computacional em dispositivos de borda limitados? Como o modelo se comporta em ambientes com recursos de rede variáveis? A avaliação cobre cenários de ataque emergentes ou apenas as classes listadas?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "78d52304ff1e01680875",
+  "artigo": "Ragab_2025",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Aplicar quantização ou poda de modelo para reduzir carga computacional nos nós de borda; integrar identidade auto‑soberana (SSI) para controle de acesso aos dados de detecção; avaliar o desempenho contra ataques zero‑day usando geração sintética de tráfego; explorar seleção de recursos baseada em matriz de correlação para eliminar atributos redundantes em tempo real.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "c5214ad786b009c632b3"
+  }
+}

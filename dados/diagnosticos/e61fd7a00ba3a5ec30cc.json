@@ -1,0 +1,50 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T12:16:17",
+  "revisao": "9a4532f511c88c05cbf9",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "A review on WSN based resource constrained smart IoT systems",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "",
+        "lacunas_possiveis": [],
+        "propostas_possiveis": []
+      },
+      {
+        "resumo": "",
+        "lacunas_possiveis": [],
+        "propostas_possiveis": []
+      },
+      {
+        "resumo": "",
+        "lacunas_possiveis": [],
+        "propostas_possiveis": []
+      }
+    ]
+  },
+  "resposta": {
+    "titulo": "A review on WSN based resource constrained smart IoT systems",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "",
+        "lacunas_possiveis": [],
+        "propostas_possiveis": []
+      },
+      {
+        "resumo": "",
+        "lacunas_possiveis": [],
+        "propostas_possiveis": []
+      },
+      {
+        "resumo": "",
+        "lacunas_possiveis": [],
+        "propostas_possiveis": []
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T12:16:19"
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T21:07:24",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "SoK: A Taxonomy for Distributed-Ledger-Based Identity Management",
+    "perfil_anterior": {
+      "problema": "limited standardization, interoperability, and poor user experience of current solutions continue to hinder the widespread adoption of secure ledger-based identity systems",
+      "solucao": "Não identificado nas fichas/trechos disponíveis.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar a abordagem com Self‑Sovereign Identity e credenciais verificáveis; avaliar o desempenho da taxonomia em ambientes de edge computing; estender as dimensões para incluir requisitos de privacidade e revogação de credenciais."
+    },
+    "pagina": 2,
+    "texto": "aspects of IDM solutions leveraging Distributed\nLedger Technology (DLT). The resulting artifact\ncomprises 22 dimensions with 113 characteristics,\nrefined through three methodical iterations. To\nvalidate the taxonomy’s practical utility and\nanalytical power, we apply it exemplarily to two\nrepresentative system architectures. It effectively\nclassifies the solutions, highlighting key design\ndecisions and potential shortcomings that might\notherwise remain overlooked.\nThe article starts with a discussion of blockchain\nand IDM fundamentals in Section II, followed by\na review of relevant taxonomies in Section III. The\ntaxonomy’s development methodology is presented\nin Section IV, while the taxonomy itself and its\nevaluation are detailed in Sections V and VII.\nLimitations and conclusions are discussed in\nSections VIII and IX.\nII. B ACKGROUND\nThis section discusses the technical and\ntheoretical concepts of blockchain, digital identity.\nIt explores key identity-related terminology,\ndecentralized identity frameworks, and DLTs,\nproviding a foundation for this work\nA. Identity Concepts and Terminology\nIdentity is defined by the International\nOrganization for Standardization (ISO) as a\n”set of attributes related to an entity ” [8], where\nan entity may be a person, organization, server,\napplication, or service [9]. Building on this, we\ndefine identity as a collection of characteristic\nattributes that uniquely describe a physical or non-\nphysical being within a specific system. Digital\nidentity extends this concept to digital realm.\nInspired by the definitions given by NIST [10],\nDomingo et al. [11], and Sedlmeir et al. [12], we\ndefine digital identity as a digital collection of\nattributes uniquely describing a physical or non-\nphysical being within a specific system, enabling\nparticipation within this specific system and\nresponding to identity-related transactions. IDM\nencompasses then the processes and technologies\nto create, manage, and authenticate identities. Key\nelements include identifiers (unique labels for\ndigital identities), authentication (verification of\nidentity control), authenticators (verification tools),\nand authorization (managing access) [9], [10].\nB. Decentralized Digital Identity\nUser-centric identity systems have gained\nmomentum in recent years [2], [13], driven by\nthe privacy-preserving paradigm of Self-Sovereign\nIdentity (SSI), alongside the technical concepts\nof Decentralized Identifiers (DIDs) [14], and\nVerifiable Credentials (VCs) [15]. SSI proclaims\na system design that empowers individuals to\ncontrol their digital identities without relying\non central authorities by leveraging distributed\nledgers for secure verification [1]. DIDs provide\nunique identification in a decentralized manner,\nresolving to DID documents containing metadata,\ncryptographic keys, and service endpoints. The DID\ndocuments of public DIDs are stored in verifiable\ndata registries such as distributed ledgers, while\ntheir counterparts of private DIDs are derived from\nthe identifier. VCs contain claims about a subject,\nmust include the subject’s identifier (often a DID),\nand are signed by an issuer to ensure integrity and\nnon-repudiation. Holders can generate Verifiable\nPresentations (VPs) from VCs to selectively share\nverified information [10], [15].\nC. Identity Roles and Trust Relationships\nThe issuer-holder-verifier model is fundamental\nto all decentralized identity frameworks. Issuers\ncreate and sign VCs about subjects. Holders (often\nthe subjects themselves) control these VCs and\ndetermine when and with whom to share them\nthrough VPs. Verifiers authenticate the presented\nVPs, confirming their validity and provenance [15].\nTraditional federated identity models operate with\ndifferent roles. Identity Providers (IdPs) manage\nidentity information and issue assertions about\nusers. Relying Parties (RPs) or service providers\ntrust these IdPs to verify user identities and validate\nassertions [16]. These established trust relationships\nform the foundation of identity transactions across\nboth traditional and decentralized systems. Central\nto these are trust anchors which are fundamental\nelements that serve as the basis to establish trust in",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo propõe uma taxonomia para gestão de identidade baseada em ledger distribuído, contendo 22 dimensões e 113 características, desenvolvida em três iterações e validada em duas arquiteturas de sistemas representativas. Apresenta fundamentos de blockchain, identidade digital, SSI, DIDs e VCs, e discute os papéis de emissor, detentor e verificador.",
+    "perfil": {
+      "problema": "limited standardization, interoperability, and poor user experience of current solutions continue to hinder the widespread adoption of secure ledger-based identity systems",
+      "solucao": "Não identificado nas fichas/trechos disponíveis.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar a abordagem com Self‑Sovereign Identity e credenciais verificáveis em ambientes de edge computing; avaliar desempenho e escalabilidade da taxonomia em cenários de IIoT distribuído; estender as dimensões para incluir requisitos de privacidade, revogação de credenciais e criptografia baseada em atributos."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "A taxonomia resultante compreende 22 dimensões com 113 características.",
+        "citacao": "the resulting artifact comprises 22 dimensions with 113 characteristics"
+      },
+      {
+        "afirmacao": "SSI proclama um design de sistema que capacita indivíduos a controlar suas identidades digitais sem autoridades centrais.",
+        "citacao": "SSI proclaims a system design that empowers individuals to control their digital identities without relying on central authorities"
+      }
+    ],
+    "interpretacao": "A taxonomia proposta oferece um framework estruturado para analisar e comparar soluções de identidade digital baseadas em DLT, destacando decisões de design e lacunas que podem passar despercebidas, o que pode orientar a criação de sistemas mais interoperáveis e centrados no usuário.",
+    "duvidas": "Quais são os critérios específicos usados nas três iterações de desenvolvimento da taxonomia? Como a taxonomia lida com requisitos de revogação de credenciais e privacidade em ambientes de edge computing? Há avaliação empírica de desempenho em cenários de IoT ou IIoT?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T21:07:50"
+}

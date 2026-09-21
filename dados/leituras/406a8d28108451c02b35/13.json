@@ -1,0 +1,42 @@
+{
+  "resumo": "O estudo implementou uma rede de teste com laptops, PCs e um servidor cloud usando Golang e Node.js para avaliar o consenso PoAh. Foram introduzidos atrasos de propagação de 35–55 ms. Os resultados mostraram que a taxa de transferência aumenta com a largura da arquitetura e o tamanho dos blocos, atingindo 225 tps, muito superior ao Bitcoin (7 tps) e Ethereum (27 tps).",
+  "perfil": {
+    "problema": "the network’s 51% attack and erratic network connection",
+    "solucao": "PoAh offers adequate security when combined with ECDSA in decentralized IIoT networks",
+    "avaliacao": "the total execution time was less than 875 ms",
+    "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+    "possibilidades": [
+      "Avaliar o impacto de diferentes atrasos de propagação (35–55 ms) na taxa de transações e na consistência da cadeia.",
+      "Testar a escalabilidade da arquitetura PoAh com milhares de dispositivos IoT em ambientes de borda heterogêneos.",
+      "Integrar credenciais verificáveis (verifiable credentials) ao processo de concessão de acesso para suportar identidade auto‑soberana (SSI).",
+      "Comparar o desempenho de PoAh com outros consensos leves (Proof of Authority, Proof of Stake) considerando variações de largura e tamanho de bloco.",
+      "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados armazenados na blockchain."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Our blockchain achieves 225 tps, a significant improvement over Bitcoin and Ethereum, which achieves 7 tps and 27 tps respectively.",
+      "afirmacao": "Our blockchain achieves 225 tps, a significant improvement over Bitcoin and Ethereum"
+    },
+    {
+      "citacao": "As the width of the PoAh architecture grows, throughput rises with a fixed block size, as seen in Fig. 8.",
+      "afirmacao": "As the width of the PoAh architecture grows, throughput rises with a fixed block size"
+    }
+  ],
+  "interpretacao": "Os experimentos indicam que a arquitetura PoAh escala bem em largura e tamanho de bloco, proporcionando alta taxa de transações comparada a blockchains públicas.",
+  "duvidas": "Como a latência introduzida (35–55 ms) afeta a consistência e a segurança da cadeia? Qual o comportamento da arquitetura em cenários com conectividade intermitente? O mecanismo PoAh resiste a ataques de 51% em redes maiores?",
+  "avisos": [],
+  "id": "4aee7ffe466649e1508a",
+  "artigo": "Asaithambi_2025",
+  "pagina": 14,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "the network’s 51% attack and erratic network connection",
+    "solucao": "PoAh offers adequate security when combined with ECDSA in decentralized IIoT networks",
+    "avaliacao": "the total execution time was less than 875 ms",
+    "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+    "possibilidades": "Avaliar o impacto de diferentes atrasos de propagação (35–55 ms) na taxa de transações e na consistência da cadeia.; Testar a escalabilidade da arquitetura PoAh com milhares de dispositivos IoT em ambientes de borda heterogêneos.; Integrar credenciais verificáveis (verifiable credentials) ao processo de concessão de acesso para suportar identidade auto‑soberana (SSI).; Comparar o desempenho de PoAh com outros consensos leves (Proof of Authority, Proof of Stake) considerando variações de largura e tamanho de bloco.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granula",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "406a8d28108451c02b35"
+  }
+}

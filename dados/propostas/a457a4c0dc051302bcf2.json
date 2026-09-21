@@ -1,0 +1,32 @@
+{
+  "id": "a457a4c0dc051302bcf2",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T18:21:58",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Chaurasia_2026: Implementar e comparar mecanismos de revogação distribuída de credenciais, medindo consist",
+  "fontes": [
+    "Chaurasia_2026"
+  ],
+  "problema": "Protocolos específicos de autenticação e controle de acesso não descritos.",
+  "hipotese_lacuna": "Protocolos específicos de autenticação e controle de acesso não descritos.",
+  "meu_trabalho": "Implementar e comparar mecanismos de revogação distribuída de credenciais, medindo consistência e tempo de propagação.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Implementar e comparar mecanismos de revogação distribuída de credenciais, medindo consistência e tempo de propagação.",
+  "modo": "artigo",
+  "buscas": [
+    "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity limitations future work",
+    "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual mecanismo de consenso (e.g., Raft vs. BFT) deve ser adotado no Fabric para equilibrar latência e segurança nas revogações distribuídas?; É viável usar um accumulator RSA‑based em dispositivos edge com recursos limitados, ou seria necessário um esquema mais leve como Merkle‑tree?; Como validar a interoperabilidade entre o modelo de revogação baseado em smart‑contract e o protocolo peer‑to‑peer do Indy sem criar dependências proprietárias?; Qual estratégia de governança (política de atualização de smart‑contracts) será necessária para garantir que as revogações permaneçam válidas ao longo de ciclos de atualização do ledger?",
+  "evidencias_usadas": [
+    "4ceb6ac97cf63c6923c0",
+    "586efd8043390c482550",
+    "1a0369b1eb4364f2a174"
+  ],
+  "fatos": "Received: 24 November 2025; Empirical results prove the efficacy of the proposed supply chain framework; Blockchain provides several advantages that can considerably improve COVID-19 vaccine delivery methods.",
+  "experimento": "descricao: Implementar três mecanismos de revogação distribuída de credenciais verificáveis (VC) em um ambiente de cidades inteligentes: (i) lista de revogação baseada em blockchain (smart‑contract que registra hashes de VC revogadas); (ii) accumulator criptográfico (e.g., RSA‑based accumulator) integrado ao ledger; (iii) protocolo de revogação peer‑to‑peer inspirado no Hyperledger Indy/Aries. Cada mecanismo será integrado a um protótipo de gerenciamento de identidade SSI para sensores IoT, seguindo a arquitetura proposta por Chaurasia_2026 (blockchain + SSI para cadeia de suprimentos). O desempenho de cada solução será comparado quanto à consistência dos estados de revogação entre nós e ao tempo de propagação da informação de revogação.; comparacao_base: Chaurasia_2026 – modelo de blockchain + SSI aplicado à cadeia de suprimentos de vacinas, que inclui um mecanismo de revogação centralizado no smart‑contract.",
+  "recursos": "dados: Conjunto de dados aberto de sensores urbanos (ex.: Open Data Portal da cidade de Barcelona – tráfego, qualidade do ar).; Dataset sintético de credenciais de sensores gerado com o framework SSI (Hyperledger Aries) para simular diferentes papéis (sensor, gateway, autoridade).; ferramentas: Plataforma de ledger permissionado: Hyperledger Fabric (versão 2.5) – para o smart‑contract de revogação.; Hyperledger Indy/Aries – para implementação de accumulator e protocolos peer‑to‑peer.; Docker + Kubernetes – orquestração de nós edge e cloud.; Simulador de IoT: Eclipse Ditto ou FIWARE IoT Agents – para gerar tráfego de credenciais.; Ferramentas de medição: Prometheus + Grafana, Wireshark (para latência de rede).; infraestrutura: Cluster de 5 máquinas virtuais (2 CPU, 8 GB RAM cada) em ambiente de nuvem pública (ex.: AWS Free Tier ou Google Cloud Free).; Rede emulada com latências variáveis (tc netem) para reproduzir condições de edge‑cloud.",
+  "metricas": "Tempo médio de propagação da revogação (ms) entre o nó que emite a revogação e todos os nós participantes.; Taxa de consistência (% de nós que apresentam o estado correto da revogação após um intervalo de 5 s).; Overhead de rede gerado pela mensagem de revogação (KB por evento).; Consumo de armazenamento por credencial revogada (KB).; Escalabilidade: variação do tempo de propagação e consistência ao aumentar o número de nós de 5 para 20.",
+  "detalhada": true
+}

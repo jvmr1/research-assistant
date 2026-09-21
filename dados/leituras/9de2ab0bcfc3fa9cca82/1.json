@@ -1,0 +1,40 @@
+{
+  "resumo": "O trecho descreve que a adoção do IIoT na manufatura inteligente enfrenta sérias barreiras de cibersegurança devido à integração heterogênea de dispositivos, ampliando a superfície de ataque. O trabalho propõe um levantamento abrangente que oferece mecanismos de defesa robustos e diretrizes detalhadas para garantir uma infraestrutura IIoT segura e preservadora da privacidade, preenchendo a lacuna de guias práticos deixada por pesquisas anteriores.",
+  "perfil": {
+    "problema": "cybersecurity concerns pose a significant obstacle to the adoption of IIoT",
+    "solucao": "This survey provides robust defense mechanisms and comprehensive guidelines for a secure and privacy-preserving infrastructure for the IIoT in smart manufacturing",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Investigar a integração de blockchain para controle de acesso descentralizado em ambientes IIoT de manufatura inteligente.",
+      "Aplicar identidade auto‑soberana (SSI) e credenciais verificáveis ao gerenciamento de dispositivos e sensores IIoT.",
+      "Avaliar esquemas de criptografia baseada em atributos (ABE) para compartilhamento seguro de dados entre fábricas.",
+      "Conduzir estudos de caso em linhas de produção reais para validar a eficácia prática das diretrizes propostas.",
+      "Desenvolver ferramentas automatizadas que reduzam a necessidade de expertise técnica na implementação das medidas de segurança."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "However, cybersecurity concerns pose a significant obstacle to the adoption of IIoT, making it challenging to effectively utilize its capabilities.",
+      "afirmacao": "cybersecurity concerns pose a significant obstacle to the adoption of IIoT"
+    }
+  ],
+  "interpretacao": "O trabalho identifica que as pesquisas existentes focam apenas em desafios específicos ou em mecanismos isolados, sem oferecer um roteiro completo de adoção. Ao apresentar diretrizes integradas e mecanismos de defesa, ele preenche uma necessidade crítica de orientação prática para a implantação segura do IIoT em fábricas inteligentes.",
+  "duvidas": "Como as diretrizes propostas serão validadas em ambientes industriais reais? Quais são os custos e a complexidade de implementar as recomendações em infraestruturas legadas? Existe suporte a padrões emergentes de identidade descentralizada dentro das recomendações?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "ed4ab4a74904066e6ad9",
+  "artigo": "Abdullahi_2025",
+  "pagina": 2,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "cybersecurity concerns pose a significant obstacle to the adoption of IIoT",
+    "solucao": "providing in-depth guidance on adopting and deploying different defense mechanisms designed to mitigate various cyber threats while ensuring secure and privacy-preserving IIoT infrastructure.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "most of these techniques require major technical expertise to be implemented.",
+    "possibilidades": "Investigar a integração de blockchain para controle de acesso descentralizado em ambientes IIoT de manufatura inteligente.; Aplicar identidade auto‑soberana (SSI) e credenciais verificáveis ao gerenciamento de dispositivos e sensores IIoT.; Avaliar esquemas de criptografia baseada em atributos (ABE) para compartilhamento seguro de dados entre fábricas.; Conduzir estudos de caso em linhas de produção reais para validar a eficácia prática das diretrizes propostas.; Desenvolver ferramentas automatizadas que reduzam a necessidade de expertise técnica na implementação das medidas de segurança.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9de2ab0bcfc3fa9cca82"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "fontes": [
+    {
+      "id": "Alar_2026",
+      "titulo": "Evaluating self-sovereign identity solutions for agricultural supply chains: a systematic review",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "fb7504b1c48c53a1ba82",
+          "pagina": 1,
+          "resumo": "Revisão sistemática de 78 estudos sobre identidade auto‑soberana (SSI) aplicada a cadeias de suprimentos agrícolas, destacando que nenhum SSI atende totalmente aos requisitos, embora Sovrin seja o mais promissor, e apontando lacunas para pesquisas piloto e avaliações reais.",
+          "evidencias": [
+            {
+              "citacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection.",
+              "afirmacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection."
+            }
+          ]
+        },
+        {
+          "id": "f157611da758320fcd3b",
+          "pagina": 2,
+          "resumo": "O trecho destaca que, embora o blockchain aumente a transparência nas cadeias de suprimentos agrícolas, a verificação de identidade ainda é um grande desafio, especialmente em contextos rurais com recursos limitados. A identidade auto-soberana (SSI) surge como solução promissora, oferecendo controle descentralizado, privacidade e credenciais verificáveis, porém há escassez de estudos que avaliem sua adequação, escalabilidade e implementação prática no setor agro.",
+          "evidencias": [
+            {
+              "citacao": "identity verification remains a major challenge, particularly in multi-stakeholder agricultural networks.",
+              "afirmacao": "identity verification remains a major challenge"
+            },
+            {
+              "citacao": "technology that enables self-sovereign identity is very promising for creating decentralized identity management systems.",
+              "afirmacao": "self-sovereign identity is very promising for creating decentralized identity management systems"
+            }
+          ]
+        },
+        {
+          "id": "faa94b1a5337c8f64d03",
+          "pagina": 3,
+          "resumo": "O trecho descreve a complexidade das cadeias de suprimentos agrícolas, destacando a necessidade de transparência, rastreabilidade e verificação de identidade dos atores. Embora tecnologias digitais como IoT, análise de dados e computação móvel estejam sendo adotadas para melhorar a eficiência, ainda faltam salvaguardas de identidade descentralizada, o que compromete a confiança. Essa lacuna motiva a exploração de soluções de identidade auto-soberana (SSI) para autenticação controlada pelos usuários e maior segurança nos processos agrícolas.",
+          "evidencias": [
+            {
+              "citacao": "most agricultural supply chains also lack reliable mechanisms for verifying stakeholder identity",
+              "afirmacao": "Falta de mecanismos confiáveis para verificação de identidade dos stakeholders."
+            }
+          ]
+        },
+        {
+          "id": "abfb952d42f151bc2d4e",
+          "pagina": 4,
+          "resumo": "O texto aponta que a dependência de bancos de dados centralizados em IoT agrícola gera vulnerabilidades de segurança e assimetria de informação. Soluções descentralizadas – blockchain e identidade auto‑soberana (SSI) – são apresentadas como remédios, oferecendo rastreabilidade, transparência e controle de identidade. Contudo, desafios de custo, escalabilidade, consumo energético e privacidade ainda limitam a adoção em larga escala.",
+          "evidencias": [
+            {
+              "citacao": "SSI offers a way to manage identity in a decentralized fashion, allowing stakeholders to control their identity and information.",
+              "afirmacao": "SSI offers a way to manage identity in a decentralized fashion, allowing stakeholders to control their identity and information"
+            }
+          ]
+        }
+      ],
+      "problema": "Complexity and Accessibility: SSI solutions can be technologically complex, presenting challenges for stakeholders with limited digital literacy, such as smallholder farmers.",
+      "solucao": "Sovrin is offering an approach to digital identity management within agricultural supply chains that is truly transformative and tackles the three “Ts” of transparency, traceability, and stakeholder empowerment.",
+      "avaliacao": "Sovrin’s support for verifiable credentials and selective disclosure can help authenticate farmers, certifiers, and logistics providers while preserving privacy",
+      "limites": "Scalability is hampered by the complex integration requirements and the absence of standardized frameworks",
+      "possibilidades": "Adaptar as soluções SSI analisadas (ex.: Sovrin, uPort) para controle de acesso de sensores IoT em cidades inteligentes, combinando com criptografia baseada em atributos (ABE) para compartilhamento seguro de dados sensoriais.; Desenvolver um framework de interoperabilidade que traduza os princípios de SSI para padrões de edge computing e protocolos de comunicação em smart cities.; Avaliar a usabilidade e escalabilidade das soluções SSI em ambient",
+      "assinatura": "a43721962e8ed22236d0"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

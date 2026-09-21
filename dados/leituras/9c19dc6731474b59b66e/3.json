@@ -1,0 +1,40 @@
+{
+  "resumo": "O texto descreve como cidades inteligentes utilizam IA, IoT e Big Data para gestão do conhecimento, destacando a importância de plataformas baseadas em nuvem e edge computing. Aponta que a integração de aplicações inteligentes enfrenta o desafio da lacuna de habilidades da força‑de‑trabalho e que a confiança entre stakeholders é essencial. Também menciona a necessidade de treinamento e o papel da computação em nuvem para offloading.",
+  "perfil": {
+    "problema": "A major challenge for the integration of smart applications into knowledge management processes is the workforce skill gap.",
+    "solucao": "Cloud computing is a computing paradigm where the resources, be it applications and software, data, frameworks, servers or hardware, are stored on remote servers and accessed over the internet.",
+    "avaliacao": "Não informado.",
+    "limites": "Não informado.",
+    "possibilidades": [
+      "Avaliar a aplicação de identidade auto‑soberana (SSI) para estabelecer confiança entre cidadãos, municípios e provedores de serviços.",
+      "Investigar o uso de credenciais verificáveis e smart contracts para tokenização de direitos de acesso em ambientes de edge computing com recursos limitados.",
+      "Implementar criptografia baseada em atributos (ABE) para proteger dados sensíveis compartilhados entre diferentes organizações da cidade inteligente.",
+      "Desenvolver métricas e estudos de caso que relacionem programas de capacitação de trabalhadores à eficácia da gestão do conhecimento em plataformas híbridas.",
+      "Projetar e testar protocolos de revogação de credenciais verificáveis que operem em redes distribuídas de IoT e edge."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "A major challenge for the integration of smart applications into knowledge management processes is the workforce skill gap.",
+      "afirmacao": "A major challenge for the integration of smart applications into knowledge management processes is the workforce skill gap."
+    }
+  ],
+  "interpretacao": "O trabalho enfatiza que, além da infraestrutura tecnológica avançada, o fator humano – especialmente a capacitação da força‑de‑trabalho e a confiança entre stakeholders – é crítico para o sucesso da gestão do conhecimento em cidades inteligentes.",
+  "duvidas": "Como a arquitetura proposta garante a confiança entre múltiplos stakeholders em ambientes altamente distribuídos? Qual a estratégia de validação prática para os programas de treinamento sugeridos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "cc0e814d50e4c40f5800",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 4,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "A major challenge for the integration of smart applications into knowledge management processes is the workforce skill gap.",
+    "solucao": "Cloud computing is a computing paradigm where the resources, be it applications and software, data, frameworks, servers or hardware, are stored on remote servers and accessed over the internet.",
+    "avaliacao": "Experimental analysis demonstrates the benefits of deploying KM processes on this hybrid architecture, particularly in reducing data transmission times and alleviating network congestion",
+    "limites": "Scalability issues, complex regulatory compliance",
+    "possibilidades": "Avaliar a aplicação de identidade auto‑soberana (SSI) para estabelecer confiança entre cidadãos, municípios e provedores de serviços.; Investigar o uso de credenciais verificáveis e smart contracts para tokenização de direitos de acesso em ambientes de edge computing com recursos limitados.; Implementar criptografia baseada em atributos (ABE) para proteger dados sensíveis compartilhados entre diferentes organizações da cidade inteligente.; Desenvolver métricas e estudos de caso que relacionem programas de capacitação de trabalhadores à eficácia da gestão do conhecimento em plataformas híbridas",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

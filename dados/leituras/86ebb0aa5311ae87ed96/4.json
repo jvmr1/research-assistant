@@ -1,0 +1,22 @@
+{
+  "id": "f56295978fa01c1e4014",
+  "artigo": "Mallick_2025",
+  "pagina": 5,
+  "tipo": "pdf",
+  "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+  "evidencias": [],
+  "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+  "duvidas": "Conferir manualmente este trecho se ele for importante.",
+  "avisos": [
+    "falha_tecnica_ficha"
+  ],
+  "perfil_acumulado": {
+    "problema": "prevent data from having a single point of failure",
+    "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+    "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86ebb0aa5311ae87ed96"
+  }
+}

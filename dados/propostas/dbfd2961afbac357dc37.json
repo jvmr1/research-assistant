@@ -1,0 +1,28 @@
+{
+  "id": "dbfd2961afbac357dc37",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T20:03:20",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Asaithambi_2025: Desenvolver módulo de revogação baseado em smart contracts que suporte atualização dinâmic",
+  "fontes": [
+    "Asaithambi_2025"
+  ],
+  "problema": "Custos computacionais e consumo energético do consenso PoAh em dispositivos de borda.",
+  "hipotese_lacuna": "Custos computacionais e consumo energético do consenso PoAh em dispositivos de borda.",
+  "meu_trabalho": "Desenvolver módulo de revogação baseado em smart contracts que suporte atualização dinâmica de reputação e remoção de nós comprometidos, integrando credenciais verificáveis (SSI).",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver módulo de revogação baseado em smart contracts que suporte atualização dinâmica de reputação e remoção de nós comprometidos, integrando credenciais verificáveis (SSI).",
+  "modo": "artigo",
+  "buscas": [
+    "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things limitations future work",
+    "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "458e1cc4f946bb50f100",
+    "7a9f5dac96afa43d0dc9",
+    "4641a8464bde80281737"
+  ],
+  "fatos": "End-to-end authentication is developed based on the blockchain’s reputation; the proposed architecture lowers the authentication time and obtains a high response rate; Centralized data storage is a big obstacle.; Consensus algorithms play a crucial role in establishing the trustworthiness of every node in the blockchain."
+}

@@ -1,0 +1,153 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-16T18:49:27",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. A ideia já está publicada; esta etapa só acrescenta um caminho possível.",
+  "entrada": {
+    "ideia": "Medir e otimizar o overhead de comunicação e latência em nós de borda, possivelmente usando compressão de modelo ou atualização esparsa",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Ragab_2025",
+          "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "3365ebacbbc86eb8ad7b",
+              "pagina": 1,
+              "resumo": "O artigo propõe o AAIFLF-PPCD, um framework que combina inteligência artificial avançada, aprendizado federado e otimizações meta-heurísticas para detectar ciberameaças em IoT de cidades inteligentes, preservando a privacidade dos usuários e alcançando 99,47% de acurácia em dataset de referência.",
+              "evidencias": [
+                {
+                  "citacao": "Federated Learning (FL) offers an encouraging solution to address these challenges by providing a privacy-preserving solution for investigating and detecting cyberattacks in IoT systems",
+                  "afirmacao": "Federated Learning offers a privacy-preserving solution for detecting cyberattacks in IoT systems"
+                },
+                {
+                  "citacao": "The performance validation of the AAIFLF-PPCD technique exhibited a superior accuracy value of 99.47% over existing models",
+                  "afirmacao": "The AAIFLF-PPCD technique achieved 99.47% accuracy"
+                }
+              ]
+            },
+            {
+              "id": "4c147c115c45c215e76d",
+              "pagina": 2,
+              "resumo": "O trecho destaca a importância da segurança em cidades inteligentes, apontando vulnerabilidades de hardware e software que podem levar a dados falsos e falhas por ataques. Propõe investigar a impossibilidade do aprendizado federado (FL) para detecção de ciberameaças preservando a privacidade, reconhecendo ainda que FL pode ser vulnerável a ataques de envenenamento e enfrentar desafios de alta dimensionalidade e heterogeneidade dos dispositivos IoT.",
+              "evidencias": [
+                {
+                  "citacao": "Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats.",
+                  "afirmacao": "Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats."
+                },
+                {
+                  "citacao": "To address these problems, this work investigates the impossibility of FL for privacy-preserving cyberthreat detection",
+                  "afirmacao": "This work investigates the impossibility of FL for privacy-preserving cyberthreat detection."
+                }
+              ]
+            },
+            {
+              "id": "0496bd8c9938d870579f",
+              "pagina": 3,
+              "resumo": "O artigo propõe o AAIFLF‑PPCD, um framework que combina aprendizado federado, seleção de atributos via Harris Hawk Optimization, classificação por stacked sparse auto‑encoder e ajuste de hiperparâmetros com Walrus Optimization para detectar ameaças cibernéticas em cidades inteligentes assistidas por IoT, preservando a privacidade dos usuários. O método visa melhorar a acurácia e reduzir o tempo de resposta, integrando técnicas avançadas de IA em ambientes distribuídos.",
+              "evidencias": [
+                {
+                  "citacao": "The AAIFLF-PPCD model introduces a novel feature selection mechanism based on HHO to improve cyberthreat detection performance.",
+                  "afirmacao": "The AAIFLF-PPCD model introduces a novel feature selection mechanism based on HHO to improve cyberthreat detection performance."
+                },
+                {
+                  "citacao": "The AAIFLF-PPCD approach integrates the WOA model for hyperparameter tuning to enhance classifier performance.",
+                  "afirmacao": "The AAIFLF-PPCD approach integrates the WOA model for hyperparameter tuning to enhance classifier performance."
+                }
+              ]
+            },
+            {
+              "id": "313b9e85272462586464",
+              "pagina": 4,
+              "resumo": "O artigo apresenta o método AAIFLF‑PPCD para cidades inteligentes sustentáveis assistidas por IoT, focado em detecção robusta e escalável de ciberameaças com preservação da privacidade dos usuários. O modelo opera em três estágios – seleção de características baseada em HHO, reconhecimento de ataques via SSAE e ajuste de hiperparâmetros com WOA – visando melhorar a acurácia e a eficiência computacional. O texto também destaca limitações de alto custo computacional e complexidade ao integrar blockchain, aprendizado federado e IA, especialmente em ambientes com recursos limitados, apontando lacunas de escalabilidade e explicabilidade.",
+              "evidencias": [
+                {
+                  "citacao": "The primary focus of the AAIFLF-PPCD method is to ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities.",
+                  "afirmacao": "The primary focus of the AAIFLF-PPCD method is to ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities."
+                },
+                {
+                  "citacao": "The limitations of the existing studies in this domain include the high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments.",
+                  "afirmacao": "The limitations of the existing studies in this domain include the high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments."
+                }
+              ]
+            }
+          ],
+          "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+          "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+          "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+          "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+          "possibilidades": "explorar compressão ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; avaliar impacto de diferentes proporções TRPH/TSPH na generalização; investigar eficiência de federated learning com comunicação otimizada.",
+          "assinatura": "c5214ad786b009c632b3"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": {
+      "descricao": "Implementação de um módulo de compressão de modelo (pruning + quantização) e de atualização esparsa (sparse federated learning) para o framework AAIFLF‑PPCD de Ragab (2025). O módulo será integrado ao nó de borda (Raspberry Pi 4 ou Jetson Nano) e medirá o overhead de comunicação (bytes por rodada) e a latência de inferência/comunicação. Os resultados serão comparados com a versão original do AAIFLF‑PPCD (sem compressão) reportada no artigo de Ragab (2025).",
+      "comparacao": "Ragab, 2025 – AAIFLF‑PPCD (baseline sem compressão nem atualização esparsa)."
+    },
+    "recursos": [
+      {
+        "tipo": "dataset",
+        "nome": "N-BaIoT",
+        "descricao": "Conjunto de tráfego de rede de dispositivos IoT com ataques rotulados, disponível publicamente no repositório da Universidade de New Brunswick.",
+        "disponibilidade": "download livre via GitHub"
+      },
+      {
+        "tipo": "dataset",
+        "nome": "UNSW‑NB15",
+        "descricao": "Dataset de tráfego de rede com ataques cibernéticos, amplamente usado em pesquisas de detecção de ameaças.",
+        "disponibilidade": "acesso aberto via site da UNSW"
+      },
+      {
+        "tipo": "framework",
+        "nome": "OpenFL",
+        "descricao": "Plataforma open‑source para aprendizado federado que suporta compressão de modelo e atualização esparsa.",
+        "disponibilidade": "pip install openfl"
+      },
+      {
+        "tipo": "biblioteca",
+        "nome": "TensorFlow Lite",
+        "descricao": "Ferramenta para quantização e otimização de modelos para dispositivos de borda.",
+        "disponibilidade": "documentação oficial e binários para Linux ARM"
+      },
+      {
+        "tipo": "hardware",
+        "nome": "Raspberry Pi 4 (4 GB) ou Nvidia Jetson Nano",
+        "descricao": "Plataformas de borda de baixo custo para experimentos de comunicação e latência.",
+        "disponibilidade": "comercialmente disponíveis"
+      },
+      {
+        "tipo": "software de medição",
+        "nome": "Perf / Py‑Perf",
+        "descricao": "Ferramentas para coleta de métricas de tempo de execução e uso de rede.",
+        "disponibilidade": "pacotes Linux"
+      }
+    ],
+    "metricas": [
+      "Overhead de comunicação (KB transmitidos por rodada de FL)",
+      "Latência de agregação (ms) – tempo entre envio de atualização e recebimento da nova global model",
+      "Precisão de detecção de ameaças (F1‑score) – para garantir que a compressão não degrade a eficácia",
+      "Consumo energético do nó de borda (Joules por rodada)",
+      "Tamanho final do modelo (MB) após compressão",
+      "Taxa de convergência (número de rodadas para atingir 95 % da acurácia baseline)"
+    ],
+    "duvidas_orientador": [
+      "Qual nível de compressão (porcentagem de pruning) mantém a acurácia acima de 95 % do baseline e ainda reduz o overhead em pelo menos 30 %?",
+      "Deveríamos usar quantização inteira (INT8) ou binarização de pesos para maximizar a redução de tamanho sem comprometer a detecção de ataques zero‑day?",
+      "Qual estratégia de atualização esparsa (top‑k, threshold‑based) oferece melhor trade‑off entre latência e precisão em ambientes com conectividade intermitente?",
+      "É necessário adaptar o protocolo de consenso da blockchain usada no AAIFLF‑PPCD para suportar mensagens menores, ou a camada de compressão já resolve o gargalo?",
+      "Como validar a robustez contra ataques de envenenamento de modelo quando as atualizações são esparsas e comprimidas?"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:51:05"
+}

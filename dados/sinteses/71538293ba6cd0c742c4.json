@@ -1,0 +1,15 @@
+{
+  "resumo": "O artigo analisa a dependência de cidades inteligentes de IoT e de middleware como o InterSCity para integrar dispositivos heterogêneos, apontando sérios desafios de segurança da informação, como acessos não autorizados, fraudes, ataques man‑in‑the‑middle e negação de serviço. Destaca a ausência de gestão de identidade dos cidadãos nos modelos atuais e propõe a adoção de identidades autosoberanas (SSI) baseadas em blockchain para conferir controle sobre credenciais digitais. O objetivo geral é desenvolver um modelo de gestão de identidades e uma arquitetura de segurança distribuída que cubra a comunicação entre componentes do middleware e ofereça controle de acesso centrado nos dados, suportando múltiplos atores (entidades públicas, privadas, cidadãos e sensores IoT). A plataforma InterSCity, composta por microsserviços modulares, é apresentada como base para integrar emissão, verificação e revogação de credenciais SSI, embora permaneçam dúvidas sobre escalabilidade da blockchain, protocolos de revogação, impacto de criptografia homomórfica ou ABE e efeitos na latência.",
+  "lacunas_possiveis": [
+    "Integração prática de SSI ao middleware InterSCity, incluindo adaptação dos microsserviços existentes.",
+    "Definição e avaliação de protocolos de revogação adequados para ambientes IoT de alta latência.",
+    "Impacto de criptografia homomórfica ou ABE no desempenho e escalabilidade do fluxo de dados do middleware.",
+    "Medição do efeito da SSI na latência das operações e na escalabilidade em cenários massivos de IoT."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver extensões de microsserviços no InterSCity para emissão, verificação e revogação de credenciais SSI usando DIDs e verifiable credentials.",
+    "Implementar um mecanismo de revogação baseado em status list ou blockchain off‑chain otimizado para baixa latência.",
+    "Avaliar a inserção de criptografia homomórfica ou ABE nos pipelines de dados para permitir processamento de atributos sensíveis sem revelar informações brutas.",
+    "Criar métricas de latência e carga para quantificar o impacto da SSI e das técnicas criptográficas em ambientes IoT de alta densidade."
+  ]
+}

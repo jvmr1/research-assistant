@@ -1,0 +1,30 @@
+{
+  "resumo": "O artigo apresenta o modelo Verifiable and Searchable Decentralized Identity (VS-DID) para IIoT, focado na verificação de documentos DID e em consultas eficientes em grande escala. Utiliza um registro verificável e estratégia on‑chain/off‑chain com acumulador de janela deslizante, reduzindo o tempo de prova agregada em 93,5% e o tempo de compromisso em 96,5% frente ao esquema Merkle‑SNARK, mantendo tempo de verificação razoável.",
+  "perfil": {
+    "problema": "users identities are encountering security and verification issues since emerging threats derive from dynamic inter‑operations in the cross‑organization context.",
+    "solucao": "We propose a novel Verifiable and Searchable Decentralized Identity (VS-DID) model.",
+    "avaliacao": "our scheme reduces aggregate proof time and commitment time by 93.5% and 96.5%, respectively, compared to the Merkle SNARK scheme, while maintaining reasonable verification time.",
+    "limites": "Não informado.",
+    "possibilidades": "Aplicar o VS‑DID a serviços de cidades inteligentes; integrar criptografia baseada em atributos (ABE) para controle de acesso granular; avaliar a escalabilidade em ambientes de edge computing; explorar interoperabilidade com padrões SSI de setores públicos."
+  },
+  "evidencias": [],
+  "interpretacao": "O trabalho avança o estado da arte ao combinar verificação de documentos DID com mecanismos de consulta eficientes, abordando a vulnerabilidade de terceiros que mantêm ligações entre IDs e chaves públicas. A estratégia on‑chain/off‑chain com acumulador de janela deslizante parece ser a principal inovação de desempenho.",
+  "duvidas": "Como o VS‑DID lida com revogação de credenciais em tempo real? Qual o impacto da solução em dispositivos IoT com recursos limitados? Existem avaliações de privacidade frente a possíveis vazamentos de metadados nas consultas on‑chain/off‑chain?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "bde23eb3fff1b074dfaa",
+  "artigo": "Ding_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Não identificado nas fichas/trechos disponíveis.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o VS‑DID a serviços de cidades inteligentes; integrar criptografia baseada em atributos (ABE) para controle de acesso granular; avaliar a escalabilidade em ambientes de edge computing; explorar interoperabilidade com padrões SSI de setores públicos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "88b0facc537cd8e26acd"
+  }
+}

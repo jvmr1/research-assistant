@@ -1,0 +1,18 @@
+{
+  "resumo": "O artigo analisa a dependência de cidades inteligentes de IoT e do middleware InterSCity para integrar dispositivos heterogêneos, apontando graves desafios de segurança como acessos não autorizados, fraudes e ataques DoS. Propõe a adoção de identidades autosoberanas (SSI) baseadas em blockchain para que cidadãos controlem suas credenciais digitais, complementando modelos atuais que não contemplam a identidade cidadã. O objetivo geral é criar um modelo de gestão de identidades e uma arquitetura de segurança distribuída que cubra comunicação entre componentes do middleware e controle de acesso centrado nos dados, suportando múltiplos atores (entidades públicas, privadas, cidadãos e sensores). A plataforma InterSCity, composta por microsserviços, é apresentada como base para integrar emissão, verificação e revogação de credenciais SSI, embora questões de escalabilidade, latência e desempenho ainda precisem ser investigadas.",
+  "lacunas_possiveis": [
+    "Integração prática de SSI ao middleware InterSCity e seus microsserviços",
+    "Protocolos de revogação adequados para ambientes IoT de alta latência",
+    "Impacto da criptografia homomórfica no processamento de fluxos de sensores",
+    "Medição da latência introduzida pela SSI nas operações de cidade inteligente",
+    "Escalabilidade da solução blockchain em cenários massivos de dispositivos IoT"
+  ],
+  "propostas_possiveis": [
+    "Adaptar o Resource Adaptor do InterSCity para suportar emissão, verificação e revocação de credenciais SSI",
+    "Empregar Attribute‑Based Encryption (ABE) para controle de acesso seletivo a dados urbanos",
+    "Implementar mecanismos de revogação leve via smart contracts blockchain para dispositivos IoT",
+    "Prototipar uso de criptografia homomórfica em agregação de dados de sensores, avaliando desempenho",
+    "Definir um protocolo de comunicação (ex.: DIDComm) entre SSI e os microsserviços do InterSCity",
+    "Criar um microserviço modular para recuperação de credenciais perdidas pelos cidadãos"
+  ]
+}

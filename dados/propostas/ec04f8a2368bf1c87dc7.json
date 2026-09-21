@@ -1,0 +1,28 @@
+{
+  "id": "ec04f8a2368bf1c87dc7",
+  "revisao": "4ca599c1ad574448079b",
+  "gerado_em": "2026-09-18T10:31:32",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Papatheodorou_2025: Desenvolver protocolo de revogação off‑chain com atualização de status via eventos de cont",
+  "fontes": [
+    "Papatheodorou_2025"
+  ],
+  "problema": "Desempenho e latência do YouGovern sob alta concorrência realista",
+  "hipotese_lacuna": "Desempenho e latência do YouGovern sob alta concorrência realista",
+  "meu_trabalho": "Desenvolver protocolo de revogação off‑chain com atualização de status via eventos de contrato inteligente",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver protocolo de revogação off‑chain com atualização de status via eventos de contrato inteligente",
+  "modo": "artigo",
+  "buscas": [
+    "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control limitations future work",
+    "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "a539adb6247c318d5314",
+    "774154c2c04bbfd4c100",
+    "923ed73b629f6f49d9d7"
+  ],
+  "fatos": "O controle centralizado permite que entidades modifiquem ou revoguem privilégios de identidade sem consentimento, gerando riscos de privacidade.; YouGovern apresenta latência de registro de DID de 0,94 s e taxa máxima de 12,5 transações por segundo.; The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure.; This paper aims to design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability.; Blockchain provides a decentralized storage and network for SSI applications.; All nodes on the blockchain act simultaneously to ensure the security of the public ledger data."
+}

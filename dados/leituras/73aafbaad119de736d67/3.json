@@ -1,0 +1,30 @@
+{
+  "resumo": "O trecho descreve como redes de sensores IoT impulsionam cidades e edifícios inteligentes, melhorando gestão de tráfego, energia, resíduos, água e segurança pública. Destaca benefícios como otimização de recursos, monitoramento ambiental e resposta rápida a emergências. Contudo, aponta desafios críticos de escalabilidade, interoperabilidade, eficiência energética, segurança, privacidade e gerenciamento de grandes volumes de dados em tempo real, exigindo soluções avançadas de comunicação, criptografia e análise.",
+  "perfil": {
+    "problema": "Ensuring interoperability across heterogeneous devices and systems gets more difficult as IoT and sensor networks grow.",
+    "solucao": "strategies like energy harvesting, low-power communication protocols and sleep scheduling are being investigated",
+    "avaliacao": "Smart cities combines cutting‑edge technologies in order to improve the management of urban services and resources and increase their sustainability and resilience",
+    "limites": "Energy efficiency is one of the main issues with sensor network deployment, particularly in isolated or difficult-to-reach places.",
+    "possibilidades": "Aplicar blockchain para garantir integridade e controle de acesso dos dados de sensores em cidades inteligentes; Integrar identidade auto‑soberana (SSI) para autenticação de dispositivos em edifícios inteligentes; Desenvolver esquemas de criptografia baseada em atributos (ABE) para compartilhamento seguro de dados entre diferentes órgãos municipais; Avaliar a interoperabilidade de MQTT e CoAP sobre redes 5G medindo latência e consumo energético; Implementar revogação descentralizada de credenciais usando verifiable credentials para sensores críticos; Explorar edge AI com privacidade preservada via homomorphic encryption para detecção de anomalias em tempo real."
+  },
+  "evidencias": [],
+  "interpretacao": "O texto evidencia que, embora sensores IoT ofereçam ganhos expressivos em eficiência e qualidade de vida nas cidades e edifícios inteligentes, a falta de padrões interoperáveis, restrições energéticas e vulnerabilidades de segurança ainda impedem uma adoção plena e confiável.",
+  "duvidas": "Quais padrões ou frameworks podem ser adotados para melhorar a interoperabilidade entre dispositivos heterogêneos? Como equilibrar a necessidade de baixa energia com requisitos de segurança robusta em sensores remotos? De que forma identidades auto‑soberanas podem ser integradas a sistemas de controle de acesso existentes em smart buildings?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "fa8296df9d6c6c855875",
+  "artigo": "Pandey_2025",
+  "pagina": null,
+  "tipo": "html",
+  "perfil_acumulado": {
+    "problema": "Ensuring interoperability across heterogeneous devices and systems gets more difficult as IoT and sensor networks grow.",
+    "solucao": "strategies like energy harvesting, low-power communication protocols and sleep scheduling are being investigated",
+    "avaliacao": "has extensive implications, enabling various industries to achieve enhanced operational efficiencies, robust scalability, and improved safety.",
+    "limites": "Energy efficiency is one of the main issues with sensor network deployment, particularly in isolated or difficult-to-reach places.",
+    "possibilidades": "Aplicar blockchain para garantir integridade e controle de acesso dos dados de sensores em cidades inteligentes; Integrar identidade auto‑soberana (SSI) para autenticação de dispositivos em edifícios inteligentes; Desenvolver esquemas de criptografia baseada em atributos (ABE) para compartilhamento seguro de dados entre diferentes órgãos municipais; Avaliar a interoperabilidade de MQTT e CoAP sobre redes 5G medindo latência e consumo energético; Implementar revogação descentralizada de credenciais usando verifiable credentials para sensores críticos; Explorar edge AI com privacidade preservada",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "73aafbaad119de736d67"
+  }
+}

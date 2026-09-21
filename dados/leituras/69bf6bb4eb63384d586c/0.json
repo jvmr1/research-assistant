@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta a primeira taxonomia metodológica para arquiteturas de identidade baseadas em ledger distribuído, derivada da análise de 390 artigos e discussões de especialistas, contendo 22 dimensões e 113 características organizadas em três grupos, facilitando a análise, comparação e design de soluções de identidade blockchain.",
+  "perfil": {
+    "problema": "limited standardization, interoperability, and poor user experience of current solutions continue to hinder the widespread adoption of secure ledger-based identity systems",
+    "solucao": "present the first comprehensive taxonomy for system architectures of distributed-ledger-based identity solutions",
+    "avaliacao": "The taxonomy enables systematic analysis, comparison, and design of distributed-ledger-based identity solutions, as demonstrated through application to two distinct architectures",
+    "limites": "Não informado",
+    "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar a abordagem com Self‑Sovereign Identity e credenciais verificáveis; avaliar o desempenho da taxonomia em ambientes de edge computing; estender as dimensões para incluir requisitos de privacidade e revogação de credenciais."
+  },
+  "evidencias": [
+    {
+      "citacao": "The intersection of blockchain (distributed ledger) and identity management lacks a comprehensive architectural framework for classifying distributed-ledger-based identity solutions.",
+      "afirmacao": "The intersection of blockchain (distributed ledger) and identity management lacks a comprehensive architectural framework for classifying distributed-ledger-based identity solutions."
+    },
+    {
+      "citacao": "The resulting artifact comprises 22 dimensions with 113 characteristics organized into three groups: trust anchor implementations, identity architectures (identifiers and credentials), and ledger specifications.",
+      "afirmacao": "The resulting artifact comprises 22 dimensions with 113 characteristics organized into three groups: trust anchor implementations, identity architectures (identifiers and credentials), and ledger specifications."
+    }
+  ],
+  "interpretacao": "A taxonomia proposta preenche uma lacuna crítica ao oferecer um framework estruturado que pode ser usado para comparar e projetar soluções de identidade baseadas em blockchain, facilitando a padronização e a comunicação entre pesquisadores e desenvolvedores.",
+  "duvidas": "Quais são os critérios de validação prática da taxonomia? Como a taxonomia lida com requisitos de privacidade específicos de setores como saúde ou mobilidade urbana? Existe suporte para avaliação de escalabilidade em ambientes de edge computing?",
+  "avisos": [],
+  "id": "315584a7579e15581c02",
+  "artigo": "Vaziry_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "limited standardization, interoperability, and poor user experience of current solutions continue to hinder the widespread adoption of secure ledger-based identity systems",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar a abordagem com Self‑Sovereign Identity e credenciais verificáveis; avaliar o desempenho da taxonomia em ambientes de edge computing; estender as dimensões para incluir requisitos de privacidade e revogação de credenciais.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

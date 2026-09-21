@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho apresenta uma série de referências (2021‑2024) que abordam propostas de identidade digital baseadas em blockchain para IoT, edge computing, smart grid, e outros contextos de cidades inteligentes, destacando frameworks, protocolos de autenticação e esquemas de controle de acesso.",
+  "perfil": {
+    "problema": "secure identity management",
+    "solucao": "blockchain-based framework",
+    "avaliacao": "highly reliable cross-domain identity authentication protocol",
+    "limites": "Não informado",
+    "possibilidades": "Aplicar a taxonomia proposta para mapear e comparar esses esquemas em cenários de IoT urbano, avaliando interoperabilidade entre blockchains públicos e permissionados, revogação dinâmica de credenciais e integração com SSI e credenciais verificáveis."
+  },
+  "evidencias": [
+    {
+      "citacao": "[115] S. Varshney, P. Vats, S. Choudhary, and D. Singh, “A blockchain-based framework for iot based secure identity management,” in ICIPTM. IEEE, 2022, pp. 227–234.",
+      "afirmacao": "A blockchain-based framework for iot based secure identity management"
+    }
+  ],
+  "interpretacao": "O conjunto de trabalhos indica que a comunidade tem focado em combinar blockchain com IoT para melhorar a segurança, autenticidade e controle de acesso, reforçando a relevância da taxonomia proposta para organizar esses esforços.",
+  "duvidas": "Quais são os critérios de avaliação de desempenho (latência, escalabilidade) desses esquemas? Como a revogação de credenciais é tratada em ambientes altamente dinâmicos de cidades inteligentes?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "c8c3fd3e35e7d16ab241",
+  "artigo": "Vaziry_2025",
+  "pagina": 15,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "secure identity management",
+    "solucao": "blockchain-based framework",
+    "avaliacao": "highly reliable cross-domain identity authentication protocol",
+    "limites": "Another limitation could be the rapid evolution of the research field",
+    "possibilidades": "Aplicar a taxonomia proposta para mapear e comparar esses esquemas em cenários de IoT urbano, avaliando interoperabilidade entre blockchains públicos e permissionados, revogação dinâmica de credenciais e integração com SSI e credenciais verificáveis.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

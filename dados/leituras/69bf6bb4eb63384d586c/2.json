@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho descreve como âncoras de confiança em sistemas de identidade baseados em ledger distribuído podem ser o próprio ledger, estruturas de governança ou chaves criptográficas. Explica as diferenças entre redes permissionadas e permissionless, destacando custos de transação. Aponta que DLT oferece registro imutável e compartilhamento seguro, mitigando falhas únicas, e argumenta que taxonomias existentes são insuficientes, motivando a criação de uma nova classificação abrangente.",
+  "perfil": {
+    "problema": "limited standardization, interoperability, and poor user experience of current solutions continue to hinder the widespread adoption of secure ledger-based identity systems",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar a abordagem com SSI e credenciais verificáveis em edge computing; avaliar desempenho e escalabilidade em cenários de IIoT distribuído; estender dimensões para incluir privacidade, revogação de credenciais e criptografia baseada em atributos."
+  },
+  "evidencias": [
+    {
+      "citacao": "DLT provides promising capabilities including immutable record-keeping and secure sharing of verification material, without a single point of failure.",
+      "afirmacao": "DLT provides promising capabilities including immutable record-keeping and secure sharing of verification material, without a single point of failure."
+    }
+  ],
+  "interpretacao": "O texto justifica a necessidade de uma taxonomia mais abrangente para sistemas de identidade baseados em DLT, apontando lacunas nas classificações atuais e enfatizando as vantagens técnicas da tecnologia.",
+  "duvidas": "Quais critérios específicos serão usados para validar a nova taxonomia? Como a taxonomia será adaptada a diferentes modelos de permissão e custos de transação em ambientes de IoT?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "3c0d20a12c6881d609bc",
+  "artigo": "Vaziry_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "limited standardization, interoperability, and poor user experience of current solutions continue to hinder the widespread adoption of secure ledger-based identity systems",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar a abordagem com SSI e credenciais verificáveis em edge computing; avaliar desempenho e escalabilidade em cenários de IIoT distribuído; estender dimensões para incluir privacidade, revogação de credenciais e criptografia baseada em atributos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

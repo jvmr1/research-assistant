@@ -1,0 +1,38 @@
+{
+  "etapa": "reaproveitar-leituras",
+  "inicio": "2026-09-20T22:08:51",
+  "revisao": "5f8412cc6e604fb9d78f",
+  "tarefa": "Reorganize o entendimento já extraído destes trechos. JSON com problema, solucao, avaliacao, limites, possibilidades. Nos primeiros QUATRO campos copie uma frase literal curta das fichas ou do perfil anterior (até 500 caracteres); quando ausente, escreva Não informado. Não transforme uma descrição de aplicação em avaliação experimental, nem foco do estudo em limitação declarada. Em possibilidades você pode sugerir livremente uma extensão pequena. Acumule o perfil anterior e não invente fatos.",
+  "entrada": {
+    "perfil_anterior": {},
+    "fichas": [
+      {
+        "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+        "pagina": 1
+      },
+      {
+        "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+        "pagina": 2
+      },
+      {
+        "resumo": "O trabalho de Danilo Isaque Sousa Maia (2025) propõe o uso de blockchain e identidades autosoberanas para autenticação e controle de acesso em cidades inteligentes, apresentando o tema, palavras‑chave e a orientação acadêmica.",
+        "pagina": 3
+      },
+      {
+        "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+        "pagina": 4
+      },
+      {
+        "resumo": "O trecho apresenta os agradecimentos do autor, reconhecendo o apoio dos pais, amigos e professores, em especial o professor Francisco, que contribuiu para seu desenvolvimento técnico e como pesquisador.",
+        "pagina": 5
+      },
+      {
+        "resumo": "O trabalho propõe um modelo de gestão de identidades baseado em blockchain para Cidades Inteligentes, utilizando Identidades Autosoberanas (SSI) para autenticação e controle de acesso. O modelo foi implementado com middleware InterSCity e Hyperledger, e experimentos mostram latência inferior a 500 ms por operação, indicando viabilidade prática.",
+        "pagina": 6
+      }
+    ]
+  },
+  "erro": "Ollama foi iniciado, mas não respondeu na porta 11434 em 20s.",
+  "resposta_bruta": null,
+  "fim": "2026-09-20T22:09:32"
+}

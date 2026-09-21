@@ -1,0 +1,36 @@
+{
+  "resumo": "O texto descreve como a gestão do conhecimento (KM) em cidades inteligentes depende de arquiteturas de computação que combinam nuvem e edge serverless para reduzir custos, latência e melhorar escalabilidade. Destaca o papel da IA, IoT e 5G na coleta e análise de dados, bem como a necessidade de frameworks interoperáveis. Aponta que provedores utilizam CDNs, que embora reduzam latência, permanecem centralizados, indicando uma limitação para a descentralização plena.",
+  "perfil": {
+    "problema": "they need a supporting computing architecture.",
+    "solucao": "Serverless edge computing ... reduces costs and simplifies development.",
+    "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+    "limites": "CDN servers remain centralized in specific geographic locations.",
+    "possibilidades": "Explorar a integração de identidade auto‑soberana (SSI) para autenticação de nós de borda; aplicar credenciais verificáveis para garantir a proveniência dos recursos de conhecimento; usar criptografia baseada em atributos (ABE) para proteger documentos sensíveis na borda; criar uma camada de auditoria baseada em blockchain para registro de acesso e revogação de credenciais; avaliar recomendações de conhecimento com aprendizado federado que preserve a privacidade dos usuários."
+  },
+  "evidencias": [
+    {
+      "citacao": "Serverless edge computing has gained significant attention recently for its potential to reduce costs and simplify development.",
+      "afirmacao": "Serverless edge computing reduces costs and simplifies development."
+    },
+    {
+      "citacao": "However, despite their improved latency, CDN servers remain centralized in specific geographic locations90.",
+      "afirmacao": "CDN servers remain centralized in specific geographic locations."
+    }
+  ],
+  "interpretacao": "O estudo reforça a tendência de mover funcionalidades de KM para a borda usando serverless, o que pode democratizar o acesso para PMEs e melhorar a responsividade urbana, mas ainda depende de infraestruturas centralizadas como CDNs, limitando a plena descentralização.",
+  "duvidas": "Como garantir a interoperabilidade entre diferentes provedores de edge serverless em ambientes de cidades inteligentes? Quais mecanismos de revogação de credenciais seriam adequados ao combinar SSI e blockchain nesse contexto?",
+  "avisos": [],
+  "id": "1363e6293a5ffbc1e61c",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "they need a supporting computing architecture.",
+    "solucao": "Serverless edge computing enables running code at edge locations without managing servers.",
+    "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+    "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+    "possibilidades": "Explorar a integração de identidade auto‑soberana (SSI) para autenticação de nós de borda; aplicar credenciais verificáveis para garantir a proveniência dos recursos de conhecimento; usar criptografia baseada em atributos (ABE) para proteger documentos sensíveis na borda; criar uma camada de auditoria baseada em blockchain para registro de acesso e revogação de credenciais; avaliar recomendações de conhecimento com aprendizado federado que preserve a privacidade dos usuários.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

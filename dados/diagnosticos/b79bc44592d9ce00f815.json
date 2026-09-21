@@ -1,0 +1,47 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T17:42:02",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "perfil_anterior": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "improving both model accuracy and computational efficiency",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "Avaliar o consumo energético e a latência do algoritmo HHO em dispositivos de borda de baixa potência.; Investigar a resistência do processo de seleção de características HHO a ataques de envenenamento de dados em ambientes federados.; Integrar identidade auto‑soberana (SSI) para validar a integridade dos parâmetros HHO trocados entre nós federados.; Explorar a combinação de HHO com técnicas de criptografia baseada em atributos (ABE) para reforçar a privacidade dos dados de treinamento."
+    },
+    "pagina": 6,
+    "texto": "If r ≥ 0.5 and |En|≥ 0.5, the prey’ s escaping feature is relatively large; hence, it attempts to escape from \nunsafe surroundings by jumping arbitrarily. The instruction in Eq. (4) imitates the behavioural model.\n X (t + 1) = ∆X (t) − En |Ju × Xprey (t) − X (t)|  (4)  \n ∆X (t)= Xprey (t) − X (t)  (5)  \nFig. 3. Steps involved in the HHO technique.\n \nScientific Reports |         (2025) 15:4470 6| https://doi.org/10.1038/s41598-025-88843-2\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve o comportamento de fuga do algoritmo Harris Hawks Optimization (HHO) quando r ≥ 0.5 e |En| ≥ 0.5, apresentando as equações (4) e (5) que modelam a atualização da posição do predador em relação à presa, e indica que a instrução imita o modelo comportamental, conforme ilustrado na Figura 3.",
+    "perfil": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "improving both model accuracy and computational efficiency",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": [
+        "Avaliar o impacto dos parâmetros r e |En| na eficácia da seleção de características HHO em ambientes de IoT de cidades inteligentes.",
+        "Desenvolver variantes do algoritmo HHO que reduzam a complexidade computacional para dispositivos de borda de baixa potência.",
+        "Investigar como a modelagem de fuga descrita nas equações (4) e (5) pode ser adaptada para melhorar a robustez contra ataques adversariais durante o treinamento federado."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "The prey's escaping feature is relatively large when r ≥ 0.5 and |En|≥ 0.5.",
+        "citacao": "If r ≥ 0.5 and |En|≥ 0.5, the prey’ s escaping feature is relatively large; hence, it attempts to escape from unsafe surroundings by jumping arbitrarily."
+      },
+      {
+        "afirmacao": "The instruction in Eq. (4) imitates the behavioural model.",
+        "citacao": "The instruction in Eq. (4) imitates the behavioural model."
+      }
+    ],
+    "interpretacao": "O texto detalha como o HHO modela a estratégia de fuga da presa, usando parâmetros que controlam a magnitude da atualização de posição, o que fundamenta a fase de seleção de características do modelo proposto.",
+    "duvidas": "Não está claro o significado exato dos símbolos En e Ju nas equações, nem como esses parâmetros são ajustados na prática durante a otimização."
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:42:23"
+}

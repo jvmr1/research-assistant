@@ -1,0 +1,28 @@
+{
+  "id": "ca2e3850585c09ac339d",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T19:02:06",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Alabdali_2025: Desenvolver e testar um esquema de revogação de credenciais baseado em SSI ou ABE adaptado",
+  "fontes": [
+    "Alabdali_2025"
+  ],
+  "problema": "Quantificação de custos operacionais e de manutenção da infraestrutura blockchain (públicas, privadas, híbridas) e análise de viabilidade econômica municipal.",
+  "hipotese_lacuna": "Quantificação de custos operacionais e de manutenção da infraestrutura blockchain (públicas, privadas, híbridas) e análise de viabilidade econômica municipal.",
+  "meu_trabalho": "Desenvolver e testar um esquema de revogação de credenciais baseado em SSI ou ABE adaptado a sensores de recursos limitados, com atualização automática de políticas.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver e testar um esquema de revogação de credenciais baseado em SSI ou ABE adaptado a sensores de recursos limitados, com atualização automática de políticas.",
+  "modo": "artigo",
+  "buscas": [
+    "Blockchain based solid waste classification with AI powered tracking and IoT integration limitations future work",
+    "Blockchain based solid waste classification with AI powered tracking and IoT integration smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "05ba93b0be94ff0a591c",
+    "9bc0da69557701dac1b1",
+    "023543cd48bdb399d7cf"
+  ],
+  "fatos": "IoT-connected bins transmit data to a central server, which uses blockchain to ensure secure, transparent data storage.; Algoritmos de IA otimizam rotas de coleta, reduzindo consumo de combustível e impacto ambiental.; AI-based waste classification software enhances the precision in identifying and categorizing different types of waste materials."
+}

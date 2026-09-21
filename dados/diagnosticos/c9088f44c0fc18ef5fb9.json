@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T14:07:15",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 1,
+        "resumo": "O artigo apresenta o YouGovern, um sistema SSI baseado em blockchain (Binance Smart Chain) que segue os padrões W3C DID, usando contratos inteligentes para controle de acesso e armazenamento descentralizado via IPFS e Web3.Storage. O sistema permite registro, compartilhamento e revogação de identidades com privacidade e auditabilidade, suportando permissões baseadas em papéis e rotação de chaves. Avaliações de desempenho mostram latência média de registro de 0,94 s e pico de 12,5 transações por segundo, destacando melhorias em revogação e custos operacionais em relação a soluções como Sovrin e uPort.",
+        "interpretacao": "O trabalho demonstra que uma arquitetura SSI baseada em BSC pode oferecer registro rápido e throughput adequado para aplicações de cidades inteligentes, ao mesmo tempo que melhora a revogação e reduz custos operacionais em comparação com soluções existentes.",
+        "duvidas": "Como o sistema se comporta em cenários de alta concorrência realista? Qual o impacto da dependência de serviços externos como Web3.Storage na disponibilidade e soberania dos dados?"
+      },
+      {
+        "pagina": 2,
+        "resumo": "O trecho discute os riscos da centralização da web, como censura e bloqueios governamentais, e destaca a crescente demanda por privacidade. Apresenta a Self‑Sovereign Identity (SSI) como identidade distribuída, independente de autoridade central, e descreve como a blockchain pode ampliar o controle do usuário sobre identificadores e dados. Também menciona a possibilidade de integrar SSI a sistemas oficiais como eID, eIDAS e ePassport, apontando desafios de adoção em soluções baseadas em blockchain.",
+        "interpretacao": "O texto reforça a necessidade de modelos descentralizados como SSI para mitigar riscos de censura e controle centralizado, apontando ainda para a integração com identidades oficiais.",
+        "duvidas": "Como o YouGovern lida com revogação de credenciais? Qual o impacto de usar a Binance Smart Chain em ambientes de cidades inteligentes com restrições de latência?"
+      },
+      {
+        "pagina": 3,
+        "resumo": "O trecho descreve que o problema central é a ausência de sistemas de identidade controlados pelo usuário, escaláveis, econômicos e compatíveis com infraestruturas descentralizadas, e propõe projetar, implementar e avaliar um SSI descentralizado que suporte credenciais verificáveis, controle de acesso com preservação de privacidade e interoperabilidade baseada em padrões.",
+        "interpretacao": "O autor enfatiza a evolução dos modelos de identidade, culminando em SSI baseado em blockchain como solução para eliminar autoridades centralizadas, melhorar privacidade e garantir integridade via criptografia de chave pública. O foco está em criar um sistema que seja ao mesmo tempo descentralizado, interoperável e capaz de suportar credenciais verificáveis, atendendo a requisitos de cidades inteligentes.",
+        "duvidas": "• Quais mecanismos de revogação de credenciais são propostos ou planejados?\n• Como a solução lida com a descoberta (discoverability) de DIDs em ambientes heterogêneos?\n• Há avaliação de custos operacionais (gas fees) na Binance Smart Chain?\n• O trabalho contempla testes de interoperabilidade com padrões governamentais (eIDAS, ePassport)?\n• Qual é a estratégia para garantir a escalabilidade em cená"
+      },
+      {
+        "pagina": 4,
+        "resumo": "O artigo apresenta o YouGovern, um protótipo de SSI baseado na Binance Smart Chain que integra DIDs, contratos inteligentes e armazenamento descentralizado (IPFS/Web3.Storage). O objetivo é demonstrar que um framework SSI totalmente descentralizado pode operar em uma blockchain semi‑descentralizada, mantendo custos baixos e aderindo às especificações W3C, sem introduzir novos algoritmos criptográficos.",
+        "interpretacao": "O trabalho demonstra a viabilidade prática de um SSI totalmente descentralizado usando BSC, priorizando interoperabilidade e usabilidade sem propor inovações criptográficas, o que o posiciona como um ponto de partida para aplicações governamentais e civis.",
+        "duvidas": "Quais são os impactos de usar BSC em termos de soberania de dados comparado a blockchains públicas mais descentralizadas? Como a solução lida com a revogação de credenciais em tempo real? Há avaliação de custos operacionais em cenários de grande escala (milhares de usuários)."
+      },
+      {
+        "pagina": 5,
+        "resumo": "O trecho descreve a abordagem distribuída baseada em blockchain para SSI, destacando que os dados não ficam em servidor central, mas são armazenados em um ledger público e distribuído entre nós que atuam como servidores. Cada nó verifica transações, garantindo integridade e imutabilidade, o que confere confiança ao registro de credenciais. O texto enfatiza que a blockchain funciona simultaneamente como rede e banco de dados, facilitando a construção de aplicações SSI descentralizadas, exemplificando com a Binance Smart Chain (BSC).",
+        "interpretacao": "O autor argumenta que a natureza distribuída e imutável da blockchain elimina a dependência de servidores centrais, aumentando a confiança e a segurança nas transações de identidade, o que é particularmente relevante para ambientes de cidades inteligentes onde a disponibilidade e a integridade dos dados são críticas.",
+        "duvidas": "Como a solução lida com a revogação de credenciais em um ledger imutável? Qual o custo energético da BSC comparado a outras plataformas em cenários de grande volume de transações IoT?"
+      },
+      {
+        "pagina": 6,
+        "resumo": "O trecho descreve o uso de contratos inteligentes na Binance Smart Chain (BSC) escritos em Solidity, que hospedam a lógica de negócios da aplicação YouGovern, permitindo a leitura/escrita de dados e a execução automática de acordos sem intermediários. São apresentados exemplos de aplicação em compra de carro, apostas e aluguel, ilustrando como os contratos garantem cumprimento de condições pré‑definidas, reduzindo custos e necessidade de terceiros.",
+        "interpretacao": "O texto enfatiza que a lógica de negócios da solução SSI YouGovern está encapsulada em contratos inteligentes na BSC, usando Solidity para automatizar acordos e controle de acesso, eliminando a necessidade de intermediários e reduzindo custos operacionais.",
+        "duvidas": "Como a latência dos contratos na BSC impacta aplicações de tempo‑crítico em IoT? Qual o custo de gas para operações frequentes de registro e revogação de credenciais? Existem mecanismos de fallback caso o contrato falhe ou seja comprometido?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta o YouGovern, um protótipo de identidade auto‑soberana (SSI) construído sobre a Binance Smart Chain (BSC) e que segue os padrões W3C DID. O sistema combina contratos inteligentes em Solidity, armazenamento descentralizado via IPFS/Web3.Storage e controle de acesso baseado em papéis, permitindo registro, compartilhamento, rotação de chaves e revogação de identidades com auditabilidade. Avaliações de desempenho relatam latência média de registro de 0,94 s e pico de 12,5 tps, indicando melhorias de custo e revogação em relação a soluções como Sovrin e uPort. Os autores interpretam que a arquitetura demonstra viabilidade prática para cidades inteligentes, ao reduzir dependência de autoridades centrais e manter interoperabilidade sem introduzir novos algoritmos criptográficos. Contudo, permanecem dúvidas sobre comportamento sob alta concorrência, impacto da dependência de serviços externos (Web3.Storage), mecanismos de revogação em tempo real, descoberta de DIDs em ambientes heterogêneos, custos de gas e soberania de dados na BSC.",
+    "lacunas_possiveis": [
+      "Comportamento do sistema em cenários de alta concorrência realista",
+      "Impacto da dependência de serviços externos como Web3.Storage na disponibilidade e soberania dos dados",
+      "Mecanismos detalhados de revogação de credenciais em tempo real em um ledger imutável",
+      "Estratégias de descoberta (discoverability) de DIDs em ambientes heterogêneos de cidades inteligentes",
+      "Avaliação de custos operacionais (gas fees) e energia da BSC em grande escala"
+    ],
+    "propostas_possiveis": [
+      "Realizar testes de carga simulando milhares de dispositivos IoT para medir latência e throughput",
+      "Comparar alternativas de armazenamento descentralizado (ex.: Filecoin, Arweave) quanto a disponibilidade e custos",
+      "Desenvolver e validar um protocolo de revogação instantânea usando eventos de contrato inteligente e off‑chain notifications",
+      "Implementar um serviço de descoberta de DIDs baseado em índices distribuídos e avaliar sua eficácia",
+      "Conduzir análise de custos de gas e consumo energético da BSC versus blockchains mais descentralizadas (ex.: Polygon, Ethereum) em cenários de uso intensivo"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:07:59"
+}

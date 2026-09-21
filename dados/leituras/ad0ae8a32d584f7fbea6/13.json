@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho descreve a implementação da interface do YouGovern, destacando o uso de React.js, integração com MetaMask e armazenamento descentralizado via IPFS. Detalha a implantação de smart contracts na BSC, com definição de papéis e permissões usando OpenZeppelin para controle de acesso baseado em funções, e otimizações para reduzir custos de gas. A UI visa ser intuitiva, permitindo que usuários gerenciem identidades sem depender de servidores terceiros, reforçando privacidade e controle de dados.",
+  "perfil": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": [
+      "Avaliar o impacto de armazenar documentos no IPFS sobre a latência de registro de DIDs;",
+      "Integrar controle de acesso baseado em atributos (ABE) nas políticas dos smart contracts já existentes;",
+      "Testar a interoperabilidade da solução com outras blockchains públicas além da BSC, como Polygon ou Avalanche;",
+      "Implementar revogação automática de permissões usando provas de conhecimento zero (ZKP);",
+      "Expandir o suporte a agentes/guardians para gestão delegada de identidades, permitindo recuperação de credenciais."
+    ]
+  },
+  "evidencias": [],
+  "interpretacao": "A implementação enfatiza a descentralização tanto na camada de identidade (via blockchain) quanto na de armazenamento (via IPFS), reforçando a privacidade do usuário e reduzindo dependência de infraestruturas centralizadas, ao mesmo tempo que adota boas práticas de segurança com OpenZeppelin e MetaMask.",
+  "duvidas": "Como a integração com IPFS afeta o tempo de resposta das operações de identidade? Qual o custo de gas ao escalar o número de papéis e permissões definidas nos contratos? Existe plano para suportar revogação automática de credenciais sem agentes externos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "19ac43dabd82bc557a83",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 14,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": "Avaliar o impacto de armazenar documentos no IPFS sobre a latência de registro de DIDs;; Integrar controle de acesso baseado em atributos (ABE) nas políticas dos smart contracts já existentes;; Testar a interoperabilidade da solução com outras blockchains públicas além da BSC, como Polygon ou Avalanche;; Implementar revogação automática de permissões usando provas de conhecimento zero (ZKP);; Expandir o suporte a agentes/guardians para gestão delegada de identidades, permitindo recuperação de credenciais.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  }
+}

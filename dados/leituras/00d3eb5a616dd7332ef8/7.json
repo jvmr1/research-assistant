@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho descreve como a camada de nós de borda, ao incorporar analytics locais, reduz riscos de privacidade, carga computacional e atrasos de comunicação, tornando o framework viável para implantação em larga escala. Análises estatísticas leves (Z‑score, PCA) e inferência rasa são usadas com custo O(M), adequado a dispositivos IoT limitados. Atualizações de modelo são protegidas por criptografia homomórfica, diferencial privacy e registradas na blockchain, garantindo integridade e auditabilidade.",
+  "perfil": {
+    "problema": "lack of comprehensive support for heterogeneous Electronic Health Record (EHR) data",
+    "solucao": "Efficient and Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+    "avaliacao": "Simulation results indicate that: (1) as a privacy-preserving strategy, BSDA achieves high throughput and low transaction latency",
+    "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+    "possibilidades": "Adaptar a camada de analytics de borda para sensores urbanos, integrando SSI e credenciais verificáveis para controle de acesso baseado em atributos (ABE); testar a escalabilidade da blockchain leve (PoA ou DAG) com milhares de nós de borda em ambientes de smart city; explorar aprendizado federado vertical entre diferentes departamentos municipais usando atributos complementares de cidadãos; projetar mecanismos de incentivo tokenizado que recompensem a contribuição de dados de alta qualidade em tempo real."
+  },
+  "evidencias": [
+    {
+      "citacao": "division of responsibilities among layers significantly minimizes privacy risks, computational burdens, and communication delays, making the framework suitable for large-scale deployment.",
+      "afirmacao": "A divisão de responsabilidades entre camadas minimiza significativamente riscos de privacidade, encargos computacionais e atrasos de comunicação."
+    },
+    {
+      "citacao": "These methods add negligible cost (O(M)) relative to deep model training, making edge analytics suitable even for resource-constrained IoT devices.",
+      "afirmacao": "Analytics de borda adiciona custo negligível (O(M)) em relação ao treinamento profundo, sendo adequado a dispositivos IoT com recursos limitados."
+    }
+  ],
+  "interpretacao": "A integração de analytics locais nos nós de borda, combinada com criptografia homomórfica, differential privacy e registro blockchain, fortalece a privacidade e a robustez do aprendizado federado, ao mesmo tempo que mantém a viabilidade em dispositivos IoT de baixa capacidade, aspecto crucial para aplicações em cidades inteligentes.",
+  "duvidas": "Como o mecanismo de incentivo proposto pode ser implementado em cenários reais de smart city? Qual o impacto da latência da blockchain leve sobre a sincronização de modelos em milhares de nós distribuídos?",
+  "avisos": [],
+  "id": "827ddef7997e4cf9af2e",
+  "artigo": "Munusamy_2025",
+  "pagina": 8,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "lack of comprehensive support for heterogeneous Electronic Health Record (EHR) data",
+    "solucao": "Efficient and Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+    "avaliacao": "Simulation results indicate that: (1) as a privacy-preserving strategy, BSDA achieves high throughput and low transaction latency",
+    "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+    "possibilidades": "Adaptar a camada de analytics de borda para sensores urbanos, integrando SSI e credenciais verificáveis para controle de acesso baseado em atributos (ABE); testar a escalabilidade da blockchain leve (PoA ou DAG) com milhares de nós de borda em ambientes de smart city; explorar aprendizado federado vertical entre diferentes departamentos municipais usando atributos complementares de cidadãos; projetar mecanismos de incentivo tokenizado que recompensem a contribuição de dados de alta qualidade em tempo real.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

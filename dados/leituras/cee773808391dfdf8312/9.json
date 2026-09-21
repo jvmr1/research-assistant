@@ -1,0 +1,35 @@
+{
+  "resumo": "O trecho descreve o framework Trust-Aware Blockchain-based Smart Authentication and Privacy Preservation (TAB‑SAPP) que usa contratos inteligentes, ECDSA, hash Keccak e assinaturas de múltiplas partes para registrar, autenticar e operar dispositivos IoT em ambientes industriais, garantindo confidencialidade, integridade e anonimato via ECC e ring signatures.",
+  "perfil": {
+    "problema": "require secure authentication and proper registration mechanisms",
+    "solucao": "The proposed Trust-Aware Blockchain-based Smart Authentication and Privacy Preservation (TAB‑SAPP) framework utilizes smart contracts to handle critical functions such as whitelisting, device registration, payment processing, key generation, and secure device operations",
+    "avaliacao": "Number of tests performed on single dataset: 6000",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Integrar ring signatures com Self‑Sovereign Identity (SSI) para suportar revogação de anonimato em cenários de cidades inteligentes.",
+      "Avaliar o overhead de latência introduzido pelos contratos de multi‑assinatura em ambientes de computação de borda.",
+      "Combinar ECC‑based key distribution com Attribute‑Based Encryption (ABE) para controle de acesso granular entre organizações públicas.",
+      "Estender o gerenciamento de whitelist para suportar políticas de interoperabilidade entre múltiplas jurisdições de smart cities."
+    ]
+  },
+  "evidencias": [],
+  "interpretacao": "O trabalho propõe uma arquitetura baseada em blockchain permissionada que centraliza funções críticas de segurança em contratos inteligentes, usando criptografia leve (ECC, ring signatures) para atender às restrições de recursos dos dispositivos IoT, ao mesmo tempo que introduz mecanismos de anonimato e verificação coletiva.",
+  "duvidas": "Como o custo de gas e o tempo de execução dos contratos escalam com o número crescente de dispositivos? Qual o impacto da manutenção dinâmica da whitelist em termos de latência e consistência distribuída? O uso de ring signatures compromete a rastreabilidade necessária para auditorias regulatórias?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "ed74cb77be163298e930",
+  "artigo": "Addula_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "require secure authentication and proper registration mechanisms",
+    "solucao": "Encrypt using homomorphic encryption scheme: EAi= HE_Encrypt (ai,PK)",
+    "avaliacao": "Number of tests performed on single dataset: 6000",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Integrar ring signatures com Self‑Sovereign Identity (SSI) para suportar revogação de anonimato em cenários de cidades inteligentes.; Avaliar o overhead de latência introduzido pelos contratos de multi‑assinatura em ambientes de computação de borda.; Combinar ECC‑based key distribution com Attribute‑Based Encryption (ABE) para controle de acesso granular entre organizações públicas.; Estender o gerenciamento de whitelist para suportar políticas de interoperabilidade entre múltiplas jurisdições de smart cities.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

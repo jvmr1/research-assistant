@@ -1,0 +1,33 @@
+{
+  "id": "753f34be958e0f6aa80c",
+  "revisao": "05e12be4f82748351512",
+  "gerado_em": "2026-09-20T23:33:17",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Exemplo_55b3b0969325cccbbb2c: Desenvolver esquema de recuperação de credenciais usando secret sharing ou múltiplas chave",
+  "fontes": [
+    "Exemplo_55b3b0969325cccbbb2c"
+  ],
+  "problema": "Ausência de mecanismo de revogação de credenciais e de protocolos de revogação adequados para IoT de alta latência",
+  "hipotese_lacuna": "Ausência de mecanismo de revogação de credenciais e de protocolos de revogação adequados para IoT de alta latência",
+  "meu_trabalho": "Desenvolver esquema de recuperação de credenciais usando secret sharing ou múltiplas chaves controladas pelo cidadão",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver esquema de recuperação de credenciais usando secret sharing ou múltiplas chaves controladas pelo cidadão",
+  "modo": "artigo",
+  "buscas": [
+    "Danilo_TCC_final limitations future work",
+    "Danilo_TCC_final smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "1. O escopo de secret sharing (n = 3, t = 2) é adequado para o perfil de dispositivos urbanos típicos ou devemos considerar valores maiores? 2. Qual seria a estratégia mais segura para armazenar fragmentos em entidades públicas (ex.: prefeitura) sem violar a premissa de soberania do cidadão? 3. Deveríamos priorizar a recuperação via dispositivos pessoais ou via delegação a provedores de identidade (IdP) já existentes? 4. Como alinhar a proposta com o padrão W3C Status List para revogação, evitando a necessidade de criar um novo mecanismo de revogação? 5. Quais métricas de usabilidade são mais relevantes para cidadãos não técnicos em ambientes de cidade inteligente? 6. Existe algum risco regulatório (LGPD, GDPR) ao distribuir fragmentos de chaves entre múltiplas partes que precisam ser mitigados antes de avançar?",
+  "validacao_estado_da_arte": "pendente: as buscas geradas a partir das tags desta proposta devem ser executadas e os trabalhos retornados precisam ser lidos antes de tratar a lacuna como novidade.",
+  "evidencias_usadas": [
+    "4d0d92e96ed42493301d",
+    "4af4e95bcf402163cf78",
+    "5cb5f57a5bb410182c9c"
+  ],
+  "fatos": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.; O estudo está inserido no contexto de cidades inteligentes.; O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.; O trabalho aborda Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes.; São listadas as palavras‑chave relacionadas ao tema.",
+  "experimento": "Problema específico: perda de acesso a credenciais verificáveis (VCs) por parte do cidadão em um cenário de cidades inteligentes, o que impede a utilização de serviços críticos como acesso a transporte público ou coleta de dados de IoT. Hipótese: a aplicação de um esquema de recuperação baseado em secret sharing (por exemplo, Shamir) ou em múltiplas chaves controladas pelo próprio cidadão permite restaurar a credencial sem expor atributos sensíveis e sem depender de autoridades centrais. Arquitetura/artefato: extensão de um wallet SSI (ex.: Hyperledger Aries) que, ao emitir a VC, divide a chave‑mestra em n fragmentos distribuídos entre dispositivos pessoais (smartphone, smartwatch) e/ou entidades de confiança (p. ex., prefeitura, provedor de identidade). Na perda, o cidadão reúne um limiar t ≥ 2 fragmentos para recompor a chave e re‑emitir a VC usando o DID associado. Etapas: (1) modelagem do ciclo de vida da credencial (emissão, apresentação, revogação, recuperação); (2) implementação do módulo de secret sharing no wallet; (3) integração com um protótipo de serviço IoT de cidade inteligente (ex.: estacionamento inteligente); (4) execução de testes de recuperação em ambientes simulados; (5) comparação com baseline que não oferece recuperação ou que usa recuperação social baseada em delegação. Cenário de avaliação: ambiente de teste com 500 usuários simulados, perda aleatória de chaves em 10 % dos casos, medindo taxa de sucesso de recuperação, latência e impacto na privacidade. Fonte factual: Danilo Isaque Sousa Maia (2025) demonstra que SSI e blockchain já são usados para autenticação e controle de acesso em cidades inteligentes, mas não aborda recuperação de credenciais, o que justifica a exploração proposta (fato extraído das fichas do TCC).",
+  "recursos": "Ferramentas: Hyperledger Indy/Aries para infraestrutura de identidade descentralizada; DIDKit (W3C DID/VC) para geração e verificação de credenciais; bibliotecas de secret sharing como \"sss\" (Python) ou \"shamir\" (Java); blockchain de camada de consenso leve (ex.: Hyperledger Fabric) para registro de DIDs e status lists. Dados/Simuladores: CityPulse ou OpenIoT para gerar tráfego de sensores urbanos; dataset sintético de usuários e dispositivos (gerado via scripts Python). Padrões: W3C Decentralized Identifiers (DID) Core, Verifiable Credentials Data Model, Status List Revocation (off‑chain). Bibliotecas adicionais: libp2p para comunicação P2P entre dispositivos, OAuth 2.0 para integração com serviços legados. Todas as ferramentas citadas são de código aberto e disponíveis publicamente; não foram inventadas fontes ou versões inexistentes.",
+  "metricas": "Desempenho: latência média (ms) da operação de recuperação (re‑composição de chave + re‑emissão de VC) comparada ao baseline sem recuperação; taxa de sucesso (%) de recuperação em cenários de perda parcial de fragmentos. Segurança: entropia efetiva da chave mestra após divisão (bits), resistência a ataque de coleta de fragmentos (probabilidade de comprometer t‑1 fragmentos). Privacidade: quantidade de atributos expostos durante o processo de recuperação (medido em número de claims revelados) e avaliação de anonimato segundo k‑anonymity entre dispositivos participantes. Usabilidade/Interoperabilidade: número de interações necessárias ao cidadão (toques na UI) e compatibilidade com wallets SSI existentes (ex.: Veramo, Trinsic). Cada métrica será coletada em múltiplas execuções (≥30) para garantir significância estatística.",
+  "detalhada": true
+}

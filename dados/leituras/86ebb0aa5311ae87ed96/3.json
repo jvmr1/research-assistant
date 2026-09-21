@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho descreve a seção de avaliação e resultados do trabalho, apresenta um panorama de trabalhos relacionados que utilizam IPFS, blockchain e técnicas de criptografia para melhorar a escalabilidade, confidencialidade e segurança em sistemas de saúde inteligentes. São citados diversos estudos que combinam armazenamento off‑chain, contratos inteligentes, edge‑IoT e criptografia baseada em atributos para superar limitações de desempenho e privacidade.",
+  "perfil": {
+    "problema": "prevent data from having a single point of failure",
+    "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+    "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde."
+  },
+  "evidencias": [
+    {
+      "citacao": "Zheng et al. [17] proposed an IPFS-based Blockchain system to reduce the data storage in Blockchain networks and increase processing speed.",
+      "afirmacao": "Zheng et al. proposed an IPFS-based Blockchain system to reduce the data storage in Blockchain networks and increase processing speed."
+    }
+  ],
+  "interpretacao": "O trabalho se alinha a uma tendência de combinar IPFS com blockchain para mitigar problemas de escalabilidade e ponto único de falha, reforçando a segurança e a eficiência na troca de dados de saúde, e posiciona-se dentro de um cenário de múltiplas propostas semelhantes que exploram off‑chain storage e criptografia avançada.",
+  "duvidas": "Quais métricas específicas de desempenho foram usadas na avaliação? Como o framework lida com a revogação de credenciais em ambientes multi‑organizacionais? Há detalhes sobre a implementação prática em edge devices de cidades inteligentes?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "071465af0b89fdcdb181",
+  "artigo": "Mallick_2025",
+  "pagina": 4,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "prevent data from having a single point of failure",
+    "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+    "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86ebb0aa5311ae87ed96"
+  }
+}

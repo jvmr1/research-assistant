@@ -1,0 +1,123 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-16T16:58:11",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. A ideia já está publicada; esta etapa só acrescenta um caminho possível.",
+  "entrada": {
+    "ideia": "Desenvolver um roadmap de maturidade tecnológica com métricas TRL específicas para identidade descentralizada em edge computing.",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Li_2025",
+          "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "9204f94425974d5dcd28",
+              "pagina": 1,
+              "resumo": "Revisão sistemática que analisa soluções baseadas em blockchain para preservação de privacidade no compartilhamento de dados de saúde, identificando que a maioria das propostas está em estágio de prova de conceito (TRL3) e que buscas e verificações privativas ainda são pouco exploradas.",
+              "evidencias": [
+                {
+                  "citacao": "privacy-preserving search and verification remain underexplored",
+                  "afirmacao": "privacy-preserving search and verification remain underexplored"
+                }
+              ]
+            },
+            {
+              "id": "a401c6bcf9ae3644122e",
+              "pagina": 4,
+              "resumo": "O trecho destaca a importância da integridade, verificação, autenticação e autorização dos dados de saúde em ambientes de blockchain, ressaltando requisitos regulatórios (HIPAA, GDPR) e a necessidade de mecanismos de busca eficientes para uso secundário, além de descrever as etapas do compartilhamento de dados em saúde.",
+              "evidencias": [
+                {
+                  "citacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage",
+                  "afirmacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage"
+                }
+              ]
+            },
+            {
+              "id": "a11b06389fc8def579c1",
+              "pagina": 6,
+              "resumo": "O trecho descreve os principais desafios de privacidade ao usar blockchain para compartilhamento de dados de saúde, como transparência, imutabilidade, inferência de identidade, vulnerabilidades em contratos inteligentes e a complexa gestão on/off‑chain. Também apresenta métodos de preservação, destacando mecanismos on/off‑chain, PoS e PBFT como opções mais adequadas para ambientes de saúde.",
+              "evidencias": [
+                {
+                  "citacao": "Blockchain’s transparency is beneficial for data integrity but creates risks when sensitive data is involved.",
+                  "afirmacao": "Blockchain’s transparency is beneficial for data integrity but creates risks when sensitive data is involved."
+                }
+              ]
+            },
+            {
+              "id": "cb8ef267426e5f148dfd",
+              "pagina": 8,
+              "resumo": "O artigo descreve a metodologia de uma revisão sistemática sobre privacidade em compartilhamento de dados de saúde baseado em blockchain, apresentando três perguntas de pesquisa, estratégia de busca (2008‑2024, IEEE, ACM, etc.) e critérios de inclusão. Destaca o uso de proxy re‑encryption para compartilhar dados sem expor privacidade e adota os Níveis de Maturidade Tecnológica (TRL) para avaliar a prontidão das soluções, indicando que a maioria está em estágio de prova de conceito (TRL3).",
+              "evidencias": [
+                {
+                  "citacao": "When a data requester applies for it, the proxy can transform the ciphertext of healthcare data into one that the requester can decode with their private key.",
+                  "afirmacao": "Proxy re‑encryption enables healthcare data to be shared without revealing individual privacy."
+                },
+                {
+                  "citacao": "First assessment of the feasibility of the concept and technologies with prototypes",
+                  "afirmacao": "The study classifies technology maturity using TRL levels, identifying most solutions at TRL3."
+                }
+              ]
+            }
+          ],
+          "problema": "Performance may degrade as the number of nodes increases due to communication overhead.",
+          "solucao": "Permissioned access: Only authorized participants can join the network, ensuring controlled and secure data sharing within the consortium.",
+          "avaliacao": "High performance: The consortium blockchain, in combination with the PBFT consensus algorithm, enables fast transaction throughput and efficient resource usage.",
+          "limites": "Relies on trust between consortium members, which may limit adoption in competitive environments.",
+          "possibilidades": "Avaliar a aplicação de blockchains permissionless com SSI em cidades inteligentes, medindo impactos na interoperabilidade de identidade auto‑soberana.; Comparar desempenho e privacidade entre padrões permissioned e permissionless em ambientes de edge computing para IoT industrial.; Desenvolver mecanismos de revogação de credenciais verificáveis adaptados a consórcios, reduzindo a dependência de confiança entre participantes.; Integrar criptografi",
+          "assinatura": "b8443972948d3ef5dd5c"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": "Implementar um protótipo de identidade descentralizada (SSI) baseado em Verifiable Credentials e Attribute‑Based Encryption em nós de edge computing (ex.: Raspberry Pi 4). O protótipo será avaliado contra o estado da arte descrito por Li_2025 (blockchain + privacy em healthcare) adaptando seu modelo de avaliação de TRL e métricas de desempenho para o domínio de cidades inteligentes.",
+    "recursos": {
+      "hardware": [
+        "Cluster de 4 Raspberry Pi 4 (4 GB RAM) ou equivalente com conectividade Ethernet/Wi‑Fi",
+        "Servidor de apoio (VM Linux) para orquestração e armazenamento de logs"
+      ],
+      "software": [
+        "Framework SSI: Hyperledger Aries/Indy (código aberto)",
+        "Plataforma blockchain permissionada: Hyperledger Fabric (testnet) ou Ethereum Goerli (testnet) para comparação",
+        "Biblioteca ABE: Charm‑Crypto (Python)",
+        "Ferramentas de monitoramento: Prometheus + Grafana",
+        "Dataset público de sensores urbanos (ex.: UCI Smart* ou City of Barcelona Open Data – tráfego, iluminação)"
+      ],
+      "dados": [
+        "Conjunto de credenciais simuladas (identidade de dispositivos, atributos de localização, permissões de acesso)",
+        "Logs de transações e métricas de rede coletados durante experimentos controlados"
+      ],
+      "documentação": [
+        "Artigo Li_2025 (para extração de critérios de avaliação de TRL e métricas de privacidade)",
+        "Especificações de TRL adaptadas ao contexto edge/SSI (definidas no plano de pesquisa)"
+      ]
+    },
+    "metricas": [
+      "Nível de maturidade (TRL) alcançado para cada componente (identidade, blockchain, ABE, edge)",
+      "Latência de autenticação (ms) entre dispositivo edge e verificador",
+      "Throughput de transações de credenciais (tps)",
+      "Tempo de revogação de credenciais (ms)",
+      "Consumo de CPU e memória por nó durante operação normal",
+      "Taxa de sucesso de interoperabilidade (número de padrões suportados / total esperado)",
+      "Índice de privacidade (ex.: risco de re‑identificação medido por k‑anonymity)",
+      "Escalabilidade (variação de latência/throughput com 2, 4, 8 nós)"
+    ],
+    "duvidas_orientador": [
+      "Como adaptar os critérios de TRL propostos por Li_2025 para o contexto de edge computing e identidade descentralizada?",
+      "Qual a melhor estratégia de revogação de credenciais verificáveis em ambientes com conectividade intermitente?",
+      "É mais adequado usar uma blockchain permissionada ou permissionless para garantir interoperabilidade entre diferentes administradoras de cidades inteligentes?",
+      "De que forma a criptografia baseada em atributos impacta a latência de autenticação em dispositivos de recursos limitados?",
+      "Quais métricas de privacidade são mais relevantes para validar a proteção de dados pessoais em cenários de smart city?"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T16:59:12"
+}

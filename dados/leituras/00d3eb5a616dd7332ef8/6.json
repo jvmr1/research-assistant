@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho descreve o fluxo hierárquico de dados e atualizações de modelo de nós de borda para o coordenador de FL e, finalmente, para a camada blockchain. A abordagem em camadas reforça privacidade, segurança e eficiência, combinando técnicas de preservação de privacidade, agregação adaptativa, consenso leve de blockchain e participação incentivada, configurando o EPP‑BCFL como solução otimizada para aprendizado federado baseado em blockchain.",
+  "perfil": {
+    "problema": "lack of comprehensive support for heterogeneous Electronic Health Record (EHR) data",
+    "solucao": "Efficient and Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+    "avaliacao": "Simulation results indicate that: (1) as a privacy-preserving strategy, BSDA achieves high throughput and low transaction latency",
+    "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+    "possibilidades": "Adaptar o fluxo hierárquico de dados para sensores urbanos em cidades inteligentes, integrando SSI e credenciais verificáveis para controle de acesso baseado em atributos (ABE); testar a escalabilidade da camada blockchain leve (PoA ou DAG) com milhares de nós de borda em ambientes de smart city; explorar aprendizado federado vertical entre diferentes departamentos municipais usando atributos complementares de cidadãos; projetar mecanismos de incentivo tokenizado que recompensem a contribuição de dados de alta qualidade em tempo real."
+  },
+  "evidencias": [
+    {
+      "citacao": "This layered approach enhances the privacy, security, and efficiency of federated learning",
+      "afirmacao": "This layered approach enhances the privacy, security, and efficiency of federated learning"
+    },
+    {
+      "citacao": "The integration of privacy-preserving techniques, adaptive aggregation, lightweight blockchain consensus, and incentive-driven participation makes EPP-BCFL an optimized solution",
+      "afirmacao": "The integration of privacy-preserving techniques, adaptive aggregation, lightweight blockchain consensus, and incentive-driven participation makes EPP-BCFL an optimized solution"
+    }
+  ],
+  "interpretacao": "O texto enfatiza a arquitetura em camadas e a combinação de técnicas de privacidade, agregação adaptativa e consenso leve como diferenciais do EPP‑BCFL, sugerindo que a participação incentivada é central para a eficácia do sistema.",
+  "duvidas": "Quais são os detalhes específicos do mecanismo de incentivo (ex.: tokenomics, recompensas)? Qual algoritmo de consenso leve foi adotado (PoA, DAG, outro) e como ele se comporta em larga escala? Há métricas de latência e throughput reais em ambientes de borda de smart city?",
+  "avisos": [],
+  "id": "a95c59f77a4eef2d3b24",
+  "artigo": "Munusamy_2025",
+  "pagina": 7,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "lack of comprehensive support for heterogeneous Electronic Health Record (EHR) data",
+    "solucao": "Efficient and Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+    "avaliacao": "Simulation results indicate that: (1) as a privacy-preserving strategy, BSDA achieves high throughput and low transaction latency",
+    "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+    "possibilidades": "Adaptar o fluxo hierárquico de dados para sensores urbanos em cidades inteligentes, integrando SSI e credenciais verificáveis para controle de acesso baseado em atributos (ABE); testar a escalabilidade da camada blockchain leve (PoA ou DAG) com milhares de nós de borda em ambientes de smart city; explorar aprendizado federado vertical entre diferentes departamentos municipais usando atributos complementares de cidadãos; projetar mecanismos de incentivo tokenizado que recompensem a contribuição de dados de alta qualidade em tempo real.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

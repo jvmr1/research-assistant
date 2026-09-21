@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T17:51:47",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "perfil_anterior": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "improving both model accuracy and computational efficiency",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "Utilizar a matriz de correlação para implementar seleção de recursos baseada em dependência, descartando atributos altamente correlacionados e reduzindo a carga computacional nos dispositivos de borda.; Estender o modelo incorporando aprendizado federado adaptativo que ajuste dinamicamente o número de recursos selecionados conforme a variabilidade da correlação observada em tempo real.; Integrar métricas de energia ao processo de otimização WOA, penalizando combinações de recursos que aumentem o consumo nos nós IoT restritos."
+    },
+    "pagina": 13,
+    "texto": "activity exhibit weak correlations with the other features in the matrix. The results identify that the AAIFLF-\nPPCD model has effectual prediction of all classes accurately.\nFigure 6 signifies the relationships between network parameters such as total_bytes, total_packet, anomaly_\nalert, byte_rate, Des_port, Scr_port, File_activity, and Process_activity. For instance, total_bytes and total_\npacket have a strong positive correlation of 0.75, illustrating that one growth is associated with an increase \nin the other. Anomaly_alert exhibits a weak correlation with the different parameters, with the highest being \n0.50 with Scr_port. A positive correlation of 0.50 between byte_rate and total_bytes suggests that as byte_rate \nincreases, total_bytes also tend to rise. File_activity and Process_activity exhibit a seamless positive correlation \nof 1.0, signifying a close relationship between these variables. Additionally, diverse attack types such as \nGeneric_scanning, scanning vulnerability, Exfiltration, and Insider_malicious are identified, reflecting various \ncybersecurity threats detected from the visualized data.\nFigure 7 presents the classifier outcomes of the AAIFLF-PPCD technique under 80%TRPH and 20%TSPH. \nFigure 7a and b illustrates the confusion matrices with correct identification and classification of all classes. \nFigure 7c demonstrates the PR analysis, implying higher performance through all classes. Eventually, Fig.  7d \nrepresents the ROC study, signifying proficient results with great ROC values for several classes.\nTable 2; Fig. 8 depict the classifier outcomes of the AAIFLF-PPCD approach under 80%TRPH and 20%TSPH. \nThe outcomes indicate that the AAIFLF-PPCD approach correctly identified the samples. With 80%TRPH, the \nAAIFLF-PPCD approach provides average accuy , precn, recal, F 1score , and AU Cscore of 99.47%, 97.20%, \n96.84%, 96.92%, and 98.28%, respectively. Moreover, with 20%TSPH, the AAIFLF-PPCD model provides average \naccuy , precn, recal, F 1score , and AU Cscore of 99.43%, 96.94%, 96.55%, 96.66%, and 98.12%, respectively.\nFigure 9 depicts the training (TRA) accuy  and validation (V AL) accuy  performances of the AAIFLF-PPCD \napproach under 80%TRPH and 20%TSPH. The accuy values are computed over a range of 0–25 epochs. The \nfigure emphasizes that the TRA and V AL accuy  values show growing tendencies, notifying the capabilities of \nthe AAIFLF-PPCD technique with enhanced performance through multiple iterations.\nFigure 10 shows the TRA loss (TRALOS) and V AL loss (V ALLOS) graph of the AAIFLF-PPCD approach \nunder 80%TRPH and 20%TSPH. The loss values are computed across a range of 0–25 epochs. The TRALOS and \nFig. 6. Visualization of pair plot on relevant data.\n \nScientific Reports |         (2025) 15:4470 13| https://doi.org/10.1038/s41598-025-88843-2\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve a análise de correlações entre variáveis de rede e demonstra que o modelo AAIFLF‑PPCD alcança alta precisão (≈99,5%) e AUC (~98%) na detecção de múltiplas classes de ameaças em cenários com 80%/20% de treinamento/validação, confirmando sua eficácia preditiva.",
+    "perfil": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "average accuracy of 99.47% and AUC of 98.28%",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "Aplicar quantização ou poda de modelo para reduzir carga computacional nos nós de borda; integrar identidade auto‑soberana (SSI) para controle de acesso aos dados de detecção; avaliar o desempenho contra ataques zero‑day usando geração sintética de tráfego; explorar seleção de recursos baseada em matriz de correlação para eliminar atributos redundantes em tempo real."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "total_bytes e total_packet apresentam correlação positiva forte de 0.75",
+        "citacao": "total_bytes and total_packet have a strong positive correlation of 0.75"
+      },
+      {
+        "afirmacao": "AAIFLF‑PPCD atinge acurácia média de 99.47% e AUC de 98.28% com 80% de treinamento",
+        "citacao": "average accuy , precn, recal, F 1score , and AU Cscore of 99.47%, ... and 98.28%"
+      }
+    ],
+    "interpretacao": "Os resultados indicam que o modelo possui excelente desempenho de classificação, embora a presença de correlações fortes sugira oportunidade de reduzir dimensionalidade para melhorar eficiência.",
+    "duvidas": "Qual é o impacto do custo computacional em dispositivos de borda limitados? Como o modelo se comporta em ambientes com recursos de rede variáveis? A avaliação cobre cenários de ataque emergentes ou apenas as classes listadas?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:52:21"
+}

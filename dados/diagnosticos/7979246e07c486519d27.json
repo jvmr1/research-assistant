@@ -1,0 +1,57 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T20:00:22",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 13,
+        "resumo": "O trabalho apresenta uma arquitetura de computação de borda assistida por blockchain para IIoT, que inclui coleta de dados de sensores e um processo de autorização em três etapas (submissão de transação, autenticação e concessão de acesso). Os tempos de execução são inferiores a 875 ms para a maioria dos grupos de registros e 1612 ms em média para o maior lote, indicando desempenho satisfatório.",
+        "interpretacao": "Os resultados indicam que a arquitetura proposta consegue atender aos requisitos de latência para coleta e acesso a dados de sensores em ambientes industriais, embora o tempo aumente para lotes maiores, sugerindo necessidade de otimizações para alta carga.",
+        "duvidas": "Como o mecanismo de autorização se comporta sob alta concorrência de solicitações? Qual o impacto da variabilidade de conectividade de borda nos tempos de autenticação e concessão de acesso?"
+      },
+      {
+        "pagina": 14,
+        "resumo": "O estudo implementou uma rede de teste com laptops, PCs e um servidor cloud usando Golang e Node.js para avaliar o consenso PoAh. Foram introduzidos atrasos de propagação de 35–55 ms. Os resultados mostraram que a taxa de transferência aumenta com a largura da arquitetura e o tamanho dos blocos, atingindo 225 tps, muito superior ao Bitcoin (7 tps) e Ethereum (27 tps).",
+        "interpretacao": "Os experimentos indicam que a arquitetura PoAh escala bem em largura e tamanho de bloco, proporcionando alta taxa de transações comparada a blockchains públicas.",
+        "duvidas": "Como a latência introduzida (35–55 ms) afeta a consistência e a segurança da cadeia? Qual o comportamento da arquitetura em cenários com conectividade intermitente? O mecanismo PoAh resiste a ataques de 51% em redes maiores?"
+      },
+      {
+        "pagina": 15,
+        "resumo": "O estudo apresenta uma arquitetura de computação de borda assistida por blockchain que atinge 1273 tps, reduz latência e protege contra ataques de replay e man‑in‑the‑middle. O desempenho é satisfatório até ~100 nós de borda, mas decai acima desse número devido ao consenso.",
+        "interpretacao": "Os resultados indicam que a combinação de blockchain privada leve (PoAh) com computação de borda pode melhorar significativamente a eficiência e a segurança de IIoT, porém a escalabilidade do consenso se torna um gargalo crítico quando o número de nós de borda ultrapassa cerca de 100.",
+        "duvidas": "Como a arquitetura se comportaria em cenários com milhares de nós distribuídos geograficamente? Qual seria o impacto de integrar SSI ou ABE sobre a latência e o consumo de recursos?"
+      },
+      {
+        "pagina": 16,
+        "resumo": "O trecho apresenta uma lista extensa de referências relacionadas a blockchain, edge computing e IoT industrial, incluindo trabalhos sobre mecanismos de consenso leves (Poah), frameworks como BlockEdge, e soluções de privacidade e controle de acesso, além das informações de autoria, financiamento e declaração de conflitos de interesse do artigo.",
+        "interpretacao": "A presença dessas referências indica que o trabalho se apoia em literatura recente sobre consenso leve, integração blockchain-edge e privacidade, reforçando a relevância da proposta no contexto de cidades inteligentes e IIoT.",
+        "duvidas": "Como a arquitetura proposta difere ou complementa o framework BlockEdge? Qual o papel específico do Poah na solução apresentada? Há detalhes sobre a implementação de credenciais verificáveis ou ABE que ainda não foram descritos?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo propõe uma arquitetura de computação de borda assistida por blockchain para o Industrial Internet of Things (IIoT), incorporando um processo de autorização em três etapas (submissão de transação, autenticação e concessão de acesso). Em testes com laptops, PCs e um servidor cloud, implementados em Golang e Node.js, a latência de coleta e acesso a dados de sensores ficou abaixo de 875 ms para a maioria dos lotes e em média 1612 ms para o maior lote, atendendo aos requisitos industriais. O consenso leve Proof‑of‑Authentication‑Handshake (PoAh) demonstrou taxa de transferência crescente com largura de arquitetura e tamanho de bloco, alcançando 225 tps em um cenário com atrasos de propagação de 35–55 ms, e até 1273 tps em avaliações posteriores, superando Bitcoin (7 tps) e Ethereum (27 tps). O desempenho manteve‑se satisfatório até cerca de 100 nós de borda, mas decai acima desse número, indicando um gargalo de consenso. A solução também protege contra ataques de replay e man‑in‑the‑middle, reforçando a segurança em ambientes de IIoT.",
+    "lacunas_possiveis": [
+      "Comportamento do mecanismo de autorização sob alta concorrência de solicitações.",
+      "Impacto da variabilidade e intermitência da conectividade de borda na latência de autenticação e concessão de acesso.",
+      "Efeito dos atrasos de propagação (35–55 ms) na consistência e segurança da cadeia PoAh.",
+      "Resistência do consenso PoAh a ataques de 51% em redes de maior escala.",
+      "Escalabilidade da arquitetura para milhares de nós distribuídos geograficamente.",
+      "Consequências da integração de SSI ou ABE sobre latência e consumo de recursos."
+    ],
+    "propostas_possiveis": [
+      "Realizar experimentos de carga com múltiplas solicitações simultâneas para avaliar a robustez do processo de autorização.",
+      "Simular cenários de conectividade intermitente e medir variações de latência e taxa de sucesso nas etapas de autenticação e concessão.",
+      "Investigar a consistência da cadeia sob diferentes valores de atraso de propagação e propor mecanismos de mitigação.",
+      "Testar a resistência do PoAh a ataques de 51% em topologias de rede ampliada, incluindo nós adicionais e maior largura de banda.",
+      "Expandir o testbed para incluir centenas a milhares de nós distribuídos em múltiplas regiões e analisar o ponto de ruptura do consenso.",
+      "Prototipar a incorporação de protocolos de Self‑Sovereign Identity (SSI) e esquemas de Attribute‑Based Encryption (ABE) na camada de autorização, medindo impacto de desempenho."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:01:39"
+}

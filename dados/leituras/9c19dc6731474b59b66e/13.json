@@ -1,0 +1,40 @@
+{
+  "resumo": "Os experimentos com diferentes tamanhos de dados (de 99,8 KB a 41,2 MB) comparam tempos de transmissão, processamento e total (PT) entre servidores cloud e edge. Em cargas leves, a nuvem tem PT menor que o edge, mas para funções de IA intensivas o tempo de computação no edge supera o benefício da latência reduzida. Linhas pontilhadas indicam tempos críticos que definem quando o PT da nuvem ultrapassa o do edge, evidenciando a sensibilidade dos resultados à variação de carga ao longo do tempo.",
+  "perfil": {
+    "problema": "Security is a major concern in all steps of knowledge management.",
+    "solucao": "decentralized identity mechanisms can be integrated to enhance user privacy and control over personal data",
+    "avaliacao": "The results show the difference in computing capabilities for both platforms.",
+    "limites": "components from different cloud providers lack standardization, making it difficult to manage resources from different providers and legacy applications",
+    "possibilidades": [
+      "Avaliar estratégias de offloading dinâmico que considerem os tempos críticos de computação identificados para decidir entre edge e cloud em tempo real.",
+      "Integrar mecanismos de identidade auto‑soberana (SSI) para controlar o acesso a recursos de computação edge, usando credenciais verificáveis que levem em conta a carga de trabalho atual.",
+      "Quantificar o consumo energético das diferentes alocações (edge vs cloud) sob os cenários de carga descritos.",
+      "Desenvolver algoritmos de agendamento adaptativo que ajustem a distribuição de tarefas com base nos limites críticos de PT observados.",
+      "Explorar técnicas de compressão ou pré‑processamento de dados para reduzir o tempo de transmissão em aplicações de alta resolução (4K, 8K, 16K)."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "In a scenario with low workloads on both the edge and cloud servers, the cloud server exhibits lower PT than the edge server.",
+      "afirmacao": "In a scenario with low workloads on both the edge and cloud servers, the cloud server exhibits lower PT than the edge server."
+    }
+  ],
+  "interpretacao": "Os resultados indicam que, embora o edge ofereça menor latência de transmissão, para tarefas de IA que demandam alto poder de cálculo o tempo de processamento pode tornar o edge menos vantajoso, estabelecendo limites críticos de carga que determinam quando a nuvem deve ser preferida.",
+  "duvidas": "Como a variação temporal da carga de trabalho influencia a decisão de offloading entre edge e cloud? Qual o impacto energético das diferentes alocações de tarefas? De que forma mecanismos de identidade descentralizada podem ser integrados ao gerenciamento de recursos considerando esses limites críticos de PT?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "66f3a4e4ee386b953301",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 14,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Security is a major concern in all steps of knowledge management.",
+    "solucao": "decentralized identity mechanisms can be integrated to enhance user privacy and control over personal data",
+    "avaliacao": "The results show the difference in computing capabilities for both platforms.",
+    "limites": "components from different cloud providers lack standardization, making it difficult to manage resources from different providers and legacy applications",
+    "possibilidades": "Avaliar estratégias de offloading dinâmico que considerem os tempos críticos de computação identificados para decidir entre edge e cloud em tempo real.; Integrar mecanismos de identidade auto‑soberana (SSI) para controlar o acesso a recursos de computação edge, usando credenciais verificáveis que levem em conta a carga de trabalho atual.; Quantificar o consumo energético das diferentes alocações (edge vs cloud) sob os cenários de carga descritos.; Desenvolver algoritmos de agendamento adaptativo que ajustem a distribuição de tarefas com base nos limites críticos de PT observados.; Explorar téc",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

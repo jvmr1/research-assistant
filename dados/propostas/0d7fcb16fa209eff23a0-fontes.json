@@ -1,0 +1,38 @@
+{
+  "fontes": [
+    {
+      "id": "Tian_2025",
+      "titulo": "A Lightweight IoT Data Security Sharing Scheme Based on Attribute-Based Encryption and Blockchain",
+      "escopo": {
+        "tipo": "html",
+        "feitos": 1,
+        "total": 1,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "ce7404b4e6a7debd45dd",
+          "pagina": null,
+          "resumo": "O artigo propõe um esquema leve de compartilhamento seguro de dados IoT que combina CP-ABE otimizado por curvas elípticas e blockchain, delegando parte do processamento a nós de borda e usando gerenciamento distribuído de chaves para evitar escrow e uso indevido, demonstrando maior eficiência e segurança.",
+          "evidencias": [
+            {
+              "citacao": "conventional centralized CP-ABE scheme is plagued by the issues of key misuse, key escrow, and large computation",
+              "afirmacao": "O esquema centralizado CP-ABE apresenta problemas de uso indevido de chaves, escrow e alto custo computacional."
+            },
+            {
+              "citacao": "security and performance analysis indicates that the proposed scheme is more efficient and secure",
+              "afirmacao": "A análise de segurança e desempenho indica que o esquema proposto é mais eficiente e seguro."
+            }
+          ]
+        }
+      ],
+      "problema": "issues of key misuse, key escrow, and large computation",
+      "solucao": "Não identificado nas fichas/trechos disponíveis.",
+      "avaliacao": "more efficient and secure",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Avaliar o esquema em ambientes de cidades inteligentes reais; integrar identidade auto-soberana (SSI) para gerenciamento de credenciais; testar a escalabilidade com milhares de dispositivos IoT; combinar com criptografia baseada em atributos para assinatura de dados; investigar mecanismos de revogação distribuída entre organizações.",
+      "assinatura": "7e7cbfa178efb1ff8ea0"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:10:20",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+    "perfil_anterior": {
+      "problema": "",
+      "solucao": "",
+      "avaliacao": "",
+      "limites": "",
+      "possibilidades": ""
+    },
+    "pagina": 1,
+    "texto": "ARTICLE IN PRESS\nArticle in Press\nPrivacy-preserving vaccine supply chain \nmanagement leveraging blockchain and self-\nsovereign identity\nScientific Reports\nReceived: 24 November 2025\nAccepted: 21 January 2026\nCite this article as: Chaurasia B.K., \nTiwari N. & Pateria N. Privacy-\npreserving vaccine supply chain \nmanagement leveraging blockchain \nand self-sovereign identity. Sci Rep \n(2026). https://doi.org/10.1038/\ns41598-026-37402-4\nBrijesh Kumar Chaurasia, Nikita Tiwari & Nikhil Pateria\nWe are providing an unedited version of this manuscript to give early access to its \nfindings. Before final publication, the manuscript will undergo further editing. Please \nnote there may be errors present which affect the content, and all legal disclaimers \napply.\nIf this paper is publishing under a Transparent Peer Review model then Peer \nReview reports will publish with the final article.\nhttps://doi.org/10.1038/s41598-026-37402-4\n© The Author(s) 2026. Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International \nLicense, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit \nto the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do \nnot have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this \narticle are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the \narticle’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain \npermission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo em pré‑publicação propõe um gerenciamento da cadeia de suprimentos de vacinas que preserva a privacidade, utilizando blockchain e identidade auto‑soberana (SSI). Foi recebido em 24 de novembro de 2025, aceito em 21 de janeiro de 2026 e está disponível em acesso aberto sob licença Creative Commons BY‑NC‑ND 4.0.",
+    "perfil": {
+      "problema": "Não informado",
+      "solucao": "Não informado",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "Explorar a aplicação da abordagem proposta a contextos de cidades inteligentes, integrando sensores IoT para rastreamento de vacinas; avaliar a escalabilidade e desempenho da solução em ambientes de edge computing; combinar a SSI com criptografia baseada em atributos (ABE) para controle de acesso granular; investigar mecanismos de revogação de credenciais e interoperabilidade entre diferentes organizações de saúde."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+        "citacao": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity"
+      },
+      {
+        "afirmacao": "Received: 24 November 2025",
+        "citacao": "Received: 24 November 2025"
+      }
+    ],
+    "interpretacao": "O trabalho indica que a combinação de blockchain com identidade auto‑soberana pode ser usada para proteger a privacidade na cadeia de suprimentos de vacinas, embora ainda não apresente detalhes de implementação ou resultados experimentais.",
+    "duvidas": "Quais são os protocolos específicos de autenticação e controle de acesso empregados? Como a solução lida com a revogação de credenciais em tempo real? Existe avaliação de desempenho em cenários de alta taxa de transações típicos de redes IoT de cidades inteligentes?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:11:20"
+}

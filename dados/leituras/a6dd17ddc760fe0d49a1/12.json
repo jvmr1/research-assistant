@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho apresenta o sumário do trabalho, indicando capítulos que abordam introdução, contexto, caracterização do problema, objetivos, fundamentos teóricos sobre identidade e blockchain, algoritmos de consenso, aplicações de blockchain em gestão de identidade e um levantamento de trabalhos relacionados, incluindo surveys e propostas leves para IoT.",
+  "perfil": {
+    "problema": "Caracterização do Problema",
+    "solucao": "Arquiteturas para Gestão de Identidade",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Explorar a integração de algoritmos de consenso (ex.: PBFT, PoA) com SSI para melhorar a disponibilidade de credenciais em ambientes IoT; mapear as siglas do sumário a uma ontologia que relacione DID, ABE e criptografia homomórfica, facilitando a interoperabilidade entre serviços de cidades inteligentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "2.2.3 Principais Algoritmos de Consenso",
+      "afirmacao": "Há um capítulo que revisa algoritmos de consenso de blockchain."
+    }
+  ],
+  "interpretacao": "O sumário indica que o trabalho pretende construir uma base teórica sólida sobre identidade digital e blockchain, analisando diferentes algoritmos de consenso e apresentando um panorama de soluções existentes para gestão de identidade em IoT.",
+  "duvidas": "Quais critérios foram usados para selecionar os trabalhos relacionados? Como a avaliação de desempenho (ex.: consumo de memória) será conduzida nas seções posteriores?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "53644a8083004bd8342c",
+  "artigo": "Exemplo_da24de257de987bc603b",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Caracterização do Problema",
+    "solucao": "Arquiteturas para Gestão de Identidade",
+    "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração de algoritmos de consenso (ex.: PBFT, PoA) com SSI para melhorar a disponibilidade de credenciais em ambientes IoT; mapear as siglas do sumário a uma ontologia que relacione DID, ABE e criptografia homomórfica, facilitando a interoperabilidade entre serviços de cidades inteligentes.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "a6dd17ddc760fe0d49a1"
+  }
+}

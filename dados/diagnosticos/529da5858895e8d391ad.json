@@ -1,0 +1,188 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-21T00:17:15",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. As sementes Cardoso, Maia e Fioreze são importantes, mas não limite as ideias a elas: quando houver trabalhos externos no conjunto, use-os para ampliar, contrastar ou validar as lacunas. Dê preferência a ideias sustentadas por combinações de fontes diferentes, inclusive artigos recentes, surveys ou padrões. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. Trate o processo como ciclo: as buscas de anterioridade podem trazer novos trabalhos, e esses trabalhos também podem revelar lacunas novas. Toda lacuna é provisória até passar por busca de anterioridade. Gere buscas com as tags centrais de cada ideia, combinando domínio, tecnologia e problema, para verificar se a proposta já foi tratada por trabalhos recentes. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para checar anterioridade e aprofundar as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "titulo": "Danilo_TCC_final",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "revisao_origem": "e7b8232d88fc37f0003b",
+        "fichas_amostradas": [
+          {
+            "id": "4d0d92e96ed42493301d",
+            "pagina": 1,
+            "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+            "evidencias": [
+              {
+                "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                "afirmacao": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+              },
+              {
+                "citacao": "Cidades Inteligentes",
+                "afirmacao": "O estudo está inserido no contexto de cidades inteligentes."
+              }
+            ]
+          },
+          {
+            "id": "4af4e95bcf402163cf78",
+            "pagina": 2,
+            "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+            "evidencias": [
+              {
+                "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+              }
+            ]
+          },
+          {
+            "id": "5cb5f57a5bb410182c9c",
+            "pagina": 3,
+            "resumo": "O trabalho de Danilo Isaque Sousa Maia (2025) propõe o uso de blockchain e identidades autosoberanas para autenticação e controle de acesso em cidades inteligentes, apresentando o tema, palavras‑chave e a orientação acadêmica.",
+            "evidencias": [
+              {
+                "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes / Danilo Isaque Sousa Maia. - 2025.",
+                "afirmacao": "O trabalho aborda Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes."
+              },
+              {
+                "citacao": "1. Cidades Inteligentes. 2. Blockchain. 3. Identidades Autosoberanas. 4. Controle de Acesso. 5. Autenticação.",
+                "afirmacao": "São listadas as palavras‑chave relacionadas ao tema."
+              }
+            ]
+          },
+          {
+            "id": "cb59efb152362ddd8ea7",
+            "pagina": 4,
+            "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+            "evidencias": [
+              {
+                "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+              }
+            ]
+          }
+        ],
+        "problema": "Não identificado nas fichas/trechos disponíveis.",
+        "solucao": "uso de identidades autosoberanas (SSI) baseadas em blockchain para dar controle aos cidadãos sobre suas credenciais digitais",
+        "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Explorar a integração de mecanismos de revogação de credenciais verificáveis, como listas de revogação distribuídas, ao middleware InterSCity para melhorar a gestão de identidade e a resiliência contra comprometimento de credenciais."
+      },
+      {
+        "id": "Gudipati_2025",
+        "titulo": "Verifiable Credentials: Transforming Digital Identity in the Real World",
+        "escopo": {
+          "tipo": "html",
+          "feitos": 1,
+          "total": 1,
+          "concluida": true
+        },
+        "revisao_origem": "e2cc560b062ae24c3531",
+        "fichas_amostradas": [
+          {
+            "id": "7696ef13aa4a2bd6c913",
+            "pagina": null,
+            "resumo": "O artigo apresenta as Verifiable Credentials (VCs) como tecnologia que transforma a gestão de identidade digital, proporcionando segurança, privacidade e descentralização. Descreve a arquitetura técnica, casos de uso reais e destaca a redução de custos administrativos e fraudes. Também discute desafios de adoção, integração empresarial e conformidade regulatória, além de apontar tendências como IA, segurança pós‑quântica e iniciativas governamentais.",
+            "evidencias": [
+              {
+                "citacao": "The article demonstrates that VCs offer a paradigm shift in how organizations approach identity verification, enabling secure, privacy-preserving, and decentralized credential management while significantly reducing administrative overhead and fraud risks.",
+                "afirmacao": "Verifiable Credentials (VCs) offer a paradigm shift in how organizations approach identity verification"
+              },
+              {
+                "citacao": "The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance.",
+                "afirmacao": "The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance"
+              }
+            ]
+          }
+        ],
+        "problema": "adoption challenges",
+        "solucao": "Não identificado nas fichas/trechos disponíveis.",
+        "avaliacao": "significantly reducing administrative overhead and fraud risks",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Explorar a aplicação de VCs para controle de acesso em IoT de cidades inteligentes; combinar VCs com criptografia baseada em atributos (ABE) para compartilhamento de dados sensíveis; avaliar desempenho e escalabilidade em ambientes de edge computing; analisar requisitos regulatórios para identidade digital no setor público; investigar a integração de segurança pós‑quântica em VCs para IIoT."
+      },
+      {
+        "id": "S_2026",
+        "titulo": "AI-Powered Smart Tourist Safety System with Geo-Fencing and Blockchain Identity",
+        "escopo": {
+          "tipo": "html",
+          "feitos": 1,
+          "total": 1,
+          "concluida": true
+        },
+        "revisao_origem": "e2cc560b062ae24c3531",
+        "fichas_amostradas": [
+          {
+            "id": "a72d2e3304525221eb41",
+            "pagina": null,
+            "resumo": "O trecho apresenta o artigo intitulado \"AI-Powered Smart Tourist Safety System with Geo-Fencing and Blockchain Identity\", publicado na revista open‑access International Journal of Scientific Research in Engineering and Management (IJSREM) em 2026, com licença CC BY 4.0. Não há detalhes sobre o conteúdo técnico, mas o título indica um sistema de segurança para turistas que combina IA, geo‑fencing e identidade baseada em blockchain.",
+            "evidencias": [
+              {
+                "citacao": "AI-Powered Smart Tourist Safety System with Geo-Fencing and Blockchain Identity",
+                "afirmacao": "O trabalho propõe um sistema de segurança para turistas baseado em IA, geo‑fencing e identidade blockchain."
+              }
+            ]
+          }
+        ],
+        "problema": "Não identificado nas fichas/trechos disponíveis.",
+        "solucao": "Não identificado nas fichas/trechos disponíveis.",
+        "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Explorar a integração de identidade auto‑soberana (SSI) para melhorar a privacidade dos turistas; avaliar a eficácia da IA na detecção de situações de risco em tempo real; comparar diferentes algoritmos de geo‑fencing para otimizar a cobertura em áreas urbanas; investigar a escalabilidade da solução em ambientes de cidades inteligentes com múltiplas partes interessadas."
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na proposta de usar blockchain e credenciais verificáveis (VCs) para autenticação e controle de acesso (Exemplo_55b3b0969325cccbbb2c). Os trabalhos de revisão apontam que VCs trazem privacidade, descentralização e redução de fraudes (Gudipati_2025). Há consenso de que a integração com IoT e serviços públicos requer mecanismos de revogação e recuperação de credenciais, ainda pouco explorados. Divergem quanto ao papel da IA e geo‑fencing: S_2026 propõe um sistema de segurança turística baseado em IA e identidade blockchain, enquanto outros focam apenas na camada de identidade. Os estudos chegam a protótipos de middleware ou casos de uso específicos, mas carecem de avaliações de escalabilidade, interoperabilidade entre diferentes órgãos e de combinações com criptografia baseada em atributos (ABE) ou homomórfica.",
+    "ideias": [
+      {
+        "titulo": "Mecanismo de revogação distribuída para VCs em ambientes IoT de cidades inteligentes",
+        "descricao": "Investigar a integração de listas de revogação distribuídas (LRDs) com credenciais verificáveis emitidas por SSI, avaliando desempenho e segurança em cenários de IoT. A ideia combina o modelo de autenticação baseado em blockchain de Maia (Exemplo_55b3b0969325cccbbb2c) com a análise de desafios de adoção de VCs de Gudipati_2025, identificando a lacuna de revogação prática em ambientes de borda.",
+        "fontes": [
+          "Exemplo_55b3b0969325cccbbb2c",
+          "Gudipati_2025"
+        ],
+        "lacuna": "Ausência de soluções de revogação escaláveis e interoperáveis para VCs em IoT urbano.",
+        "buscas": [
+          "self sovereign identity revocation blockchain smart city IoT",
+          "verifiable credentials revocation list distributed edge computing"
+        ]
+      },
+      {
+        "titulo": "Combinação de credenciais verificáveis com criptografia baseada em atributos para controle de acesso seletivo em serviços públicos",
+        "descricao": "Propor um framework que une VCs a ABE, permitindo que cidadãos divulguem apenas atributos necessários ao acessar serviços municipais. A proposta cruza a visão de VCs como facilitadoras de privacidade (Gudipati_2025) com o modelo de controle de acesso baseado em blockchain de Maia (Exemplo_55b3b0969325cccbbb2c), preenchendo a lacuna de seleção de atributos em ambientes de múltiplas autoridades.",
+        "fontes": [
+          "Gudipati_2025",
+          "Exemplo_55b3b0969325cccbbb2c"
+        ],
+        "lacuna": "Falta de mecanismos de divulgação seletiva de atributos em credenciais digitais para serviços públicos.",
+        "buscas": [
+          "attribute based encryption verifiable credentials smart city",
+          "selective disclosure SSI public sector"
+        ]
+      },
+      {
+        "titulo": "Arquitetura híbrida SSI‑IA para segurança de turistas em cidades inteligentes",
+        "descricao": "Desenvolver uma arquitetura que incorpora identidade autossoberana com módulos de IA para detecção de risco em tempo real, estendendo o sistema de turismo seguro de S_2026. A ideia combina a proposta de IA e geo‑fencing (S_2026) com a base de SSI para garantir privacidade dos dados de localização, abordando a lacuna de proteção de identidade em aplicações de segurança urbana.",
+        "fontes": [
+          "S_2026",
+          "Exemplo_55b3b0969325cccbbb2c"
+        ],
+        "lacuna": "Integração insuficiente entre SSI e IA para proteção de identidade em serviços de segurança urbana.",
+        "buscas": [
+          "self sovereign identity AI smart city safety",
+          "privacy preserving geo-fencing SSI"
+        ]
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:17:44"
+}

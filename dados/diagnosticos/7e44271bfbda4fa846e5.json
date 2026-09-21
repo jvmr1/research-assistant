@@ -1,0 +1,94 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T14:08:14",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo apresenta o YouGovern, um protótipo de identidade auto‑soberana (SSI) construído sobre a Binance Smart Chain (BSC) e que segue os padrões W3C DID. O sistema combina contratos inteligentes em Solidity, armazenamento descentralizado via IPFS/Web3.Storage e controle de acesso baseado em papéis, permitindo registro, compartilhamento, rotação de chaves e revogação de identidades com auditabilidade. Avaliações de desempenho relatam latência média de registro de 0,94 s e pico de 12,5 tps, indicando melhorias de custo e revogação em relação a soluções como Sovrin e uPort. Os autores interpretam que a arquitetura demonstra viabilidade prática para cidades inteligentes, ao reduzir dependência de autoridades centrais e manter interoperabilidade sem introduzir novos algoritmos criptográficos. Contudo, permanecem dúvidas sobre comportamento sob alta concorrência, impacto da dependência de serviços externos (Web3.Storage), mecanismos de revogação em tempo real, descoberta de DIDs em ambientes heterogêneos, custos de gas e soberania de dados na BSC.",
+        "lacunas_possiveis": [
+          "Comportamento do sistema em cenários de alta concorrência realista",
+          "Impacto da dependência de serviços externos como Web3.Storage na disponibilidade e soberania dos dados",
+          "Mecanismos detalhados de revogação de credenciais em tempo real em um ledger imutável",
+          "Estratégias de descoberta (discoverability) de DIDs em ambientes heterogêneos de cidades inteligentes",
+          "Avaliação de custos operacionais (gas fees) e energia da BSC em grande escala"
+        ],
+        "propostas_possiveis": [
+          "Realizar testes de carga simulando milhares de dispositivos IoT para medir latência e throughput",
+          "Comparar alternativas de armazenamento descentralizado (ex.: Filecoin, Arweave) quanto a disponibilidade e custos",
+          "Desenvolver e validar um protocolo de revogação instantânea usando eventos de contrato inteligente e off‑chain notifications",
+          "Implementar um serviço de descoberta de DIDs baseado em índices distribuídos e avaliar sua eficácia",
+          "Conduzir análise de custos de gas e consumo energético da BSC versus blockchains mais descentralizadas (ex.: Polygon, Ethereum) em cenários de uso intensivo"
+        ]
+      },
+      {
+        "resumo": "O artigo apresenta o YouGovern, um sistema de identidade auto‑soberana (SSI) baseado na Binance Smart Chain (BSC) que combina contratos inteligentes baseados em papéis, armazenamento híbrido (on‑chain + IPFS) e controle de acesso descentralizado. As fichas descrevem a arquitetura de contas da BSC (EOAs e Contract Accounts) e como dApps podem usar esses contratos para gerenciar identidades sem servidores centralizados. Comparações entre uPort (BSC) e Sovrin (Hyperledger Indy) revelam lacunas em mediação, revogação, escalabilidade (≈15 tps em blockchains públicas) e custos operacionais. O esquema DNS‑IdM é introduzido como alternativa que usa contratos inteligentes para gerenciar identidades de forma semelhante ao DNS. O caso de uso do YouGovern demonstra registro de endereços via MetaMask, upload de arquivos ao IPFS, solicitação e aprovação de acesso por transação, e verificação de credenciais por autoridades confiáveis. As dúvidas levantadas apontam questões de proteção de chaves privadas em dispositivos IoT, latência e throughput em edge computing, overhead de armazenamento híbrido, e necessidade de agentes mediadores leves.",
+        "lacunas_possiveis": [
+          "Proteção de chaves privadas de EOAs em dispositivos IoT de recursos limitados",
+          "Ausência de mediador/guardian para gerenciar identidade e consentimento em ambientes críticos",
+          "Escalabilidade limitada das blockchains públicas (≈15 tps) para milhares de dispositivos edge",
+          "Mecanismos de revogação de credenciais e controle de acesso granular ainda não detalhados",
+          "Impacto de armazenamento híbrido (on‑chain + IPFS) em latência e custo para edge devices"
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um módulo leve de gerenciamento de chaves privadas (ex.: hardware secure element ou TPM) integrado ao YouGovern para IoT",
+          "Projetar um agente mediador/guardian descentralizado que interaja entre EOAs e contratos inteligentes, facilitando consentimento e recuperação social",
+          "Implementar um registro de revogação off‑chain (ex.: Merkle‑tree) sincronizado com a BSC para revogar credenciais de forma eficiente",
+          "Realizar benchmark comparativo de DNS‑IdM versus uPort em cenários de edge computing, medindo latência e throughput",
+          "Otimizar o fluxo de armazenamento híbrido, avaliando compressão de dados e caching local para reduzir custos de IPFS"
+        ]
+      },
+      {
+        "resumo": "O YouGovern é uma solução de identidade auto-soberana (SSI) baseada em blockchain, implementada na Binance Smart Chain (BSC) com contratos inteligentes escritos em Solidity e geridos via Truffle Suite. A arquitetura combina registro de DIDs on‑chain, armazenamento descentralizado de dados de identidade em IPFS e Web3.Storage (Filecoin) e interface web desenvolvida em React.js que se integra ao MetaMask. As interações são expostas por APIs RESTful e o controle de acesso é implementado com OpenZeppelin, usando funções protegidas e ReentrancyGuard. O sistema inclui mecanismos de revogação de DIDs, rotação de chaves e auditorias de segurança, além de testes automatizados. Embora ofereça privacidade ao eliminar servidores centrais, ainda há questões abertas sobre desempenho (latência e custo de gas) ao escalar papéis, revogação frequente e integração com IPFS/Web3.Storage, bem como suporte a múltiplas cadeias e estratégias de recuperação de credenciais.",
+        "lacunas_possiveis": [
+          "Impacto da integração com IPFS/Web3.Storage na latência e custo de transação durante operações de identidade.",
+          "Escalabilidade e desempenho das funções de controle de acesso e revogação em cenários de alta concorrência.",
+          "Ausência de suporte a múltiplas blockchains além da BSC e avaliação de interoperabilidade.",
+          "Estratégias de recuperação de credenciais quando agentes/guardians ainda não estão implementados."
+        ],
+        "propostas_possiveis": [
+          "Realizar benchmarks comparando tempos de resposta e custos de gas ao usar IPFS versus armazenamento local em diferentes volumes de credenciais.",
+          "Desenvolver e testar mecanismos de revogação em lote e otimizações de contrato para reduzir gas em alta frequência de revogação.",
+          "Estender a implementação para outras EVM‑compatible chains (e.g., Polygon, Avalanche) e avaliar interoperabilidade de DIDs entre elas.",
+          "Projetar um módulo de recuperação de credenciais baseado em agentes de confiança ou multi‑signature, avaliando sua eficácia e impacto de segurança."
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo descreve o YouGovern, um protótipo de identidade auto‑soberana (SSI) implementado na Binance Smart Chain (BSC) e alinhado aos padrões W3C DID. A solução combina contratos inteligentes em Solidity, armazenamento descentralizado via IPFS/Web3.Storage e controle de acesso baseado em papéis, oferecendo registro, rotação de chaves, revogação e auditoria de identidades. Avaliações preliminares apontam latência média de registro de 0,94 s e pico de 12,5 tps, sugerindo vantagens de custo e revogação em relação a sistemas como Sovrin e uPort. Os autores interpretam que a arquitetura pode ser viável para cidades inteligentes ao reduzir a dependência de autoridades centrais e manter interoperabilidade, embora reconheçam limitações abertas: comportamento sob alta concorrência, dependência de serviços externos (Web3.Storage), mecanismos de revogação em tempo real, descoberta de DIDs em ambientes heterogêneos, custos de gas e energia da BSC, proteção de chaves privadas em dispositivos IoT, ausência de mediadores/guardians, escalabilidade limitada para milhares de dispositivos edge, impacto do armazenamento híbrido (on‑chain + IPFS) e falta de suporte a múltiplas blockchains. O documento é um PDF parcial.",
+    "lacunas_possiveis": [
+      "Comportamento do sistema em cenários de alta concorrência realista",
+      "Impacto da dependência de serviços externos (ex.: Web3.Storage) na disponibilidade e soberania dos dados",
+      "Mecanismos detalhados de revogação de credenciais em tempo real em um ledger imutável",
+      "Estratégias de descoberta (discoverability) de DIDs em ambientes heterogêneos de cidades inteligentes",
+      "Avaliação de custos operacionais (gas fees) e consumo energético da BSC em grande escala",
+      "Proteção de chaves privadas de EOAs em dispositivos IoT de recursos limitados",
+      "Ausência de mediador/guardian para gerenciamento de identidade e consentimento em contextos críticos",
+      "Escalabilidade limitada das blockchains públicas (~15 tps) para milhares de dispositivos edge",
+      "Detalhamento de controle de acesso granular e revogação de credenciais",
+      "Impacto do armazenamento híbrido (on‑chain + IPFS) na latência e custo para dispositivos de borda",
+      "Suporte a múltiplas blockchains além da BSC e avaliação de interoperabilidade",
+      "Estratégias de recuperação de credenciais sem agentes/guardians implementados"
+    ],
+    "propostas_possiveis": [
+      "Realizar testes de carga simulando milhares de dispositivos IoT para medir latência, throughput e comportamento sob alta concorrência",
+      "Comparar alternativas de armazenamento descentralizado (ex.: Filecoin, Arweave) quanto à disponibilidade, latência e custos",
+      "Desenvolver e validar um protocolo de revogação instantânea usando eventos de contrato inteligente e notificações off‑chain",
+      "Implementar um serviço de descoberta de DIDs baseado em índices distribuídos e avaliar sua eficácia em ambientes heterogêneos",
+      "Conduzir análise comparativa de custos de gas e consumo energético da BSC versus outras blockchains (ex.: Polygon, Ethereum, Avalanche)",
+      "Criar um módulo leve de gerenciamento de chaves privadas (ex.: secure element, TPM) integrado ao YouGovern para dispositivos IoT",
+      "Projetar um agente mediador/guardian descentralizado que facilite consentimento, recuperação social e gestão de credenciais",
+      "Implementar um registro de revogação off‑chain (ex.: Merkle‑tree) sincronizado com a BSC para revogação eficiente em lote",
+      "Benchmarkar DNS‑IdM versus uPort em cenários de edge computing, medindo latência e throughput",
+      "Otimizar o fluxo de armazenamento híbrido com compressão de dados e caching local para reduzir custos de IPFS",
+      "Estender a implementação para outras cadeias compatíveis com EVM e avaliar interoperabilidade de DIDs entre elas",
+      "Desenvolver um módulo de recuperação de credenciais baseado em agentes de confiança ou multi‑signature e avaliar seu impacto de segurança"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:08:42"
+}

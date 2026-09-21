@@ -1,0 +1,30 @@
+{
+  "resumo": "O trabalho propõe um método de autenticação IoT que combina verificação de atributos contra políticas de acesso, criptografia homomórfica dos atributos armazenados em blockchain e seleção de cluster head baseada na energia da bateria. Também descreve a criptografia de registros médicos usando FHE, visando privacidade e eficiência energética.",
+  "perfil": {
+    "problema": "ensuring that sensitive health information remains secure and private throughout the data processing lifecycle.",
+    "solucao": "Encrypt using homomorphic encryption scheme: EAi= HE_Encrypt (ai,PK)",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "• Avaliar o impacto de combinar criptografia homomórfica com atributos baseados em políticas de acesso (ABE) para controle de acesso granular em cidades inteligentes.\n• Medir o overhead de comunicação e latência introduzidos pela seleção dinâmica de cluster head em ambientes de borda.\n• Testar a escalabilidade da armazenagem de atributos criptografados em blockchain sob alta taxa de dispositivos IoT.\n• Explorar a integração de credenciais verificáveis (VCs) com o esquema de criptografia homomórfica para suportar revogação segura."
+  },
+  "evidencias": [],
+  "interpretacao": "A inclusão de criptografia homomórfica permite que atributos sensíveis sejam processados sem descriptografia, reforçando a privacidade. A escolha do cluster head por energia prolonga a vida útil da rede, mas pode introduzir variabilidade no caminho de comunicação. O uso de FHE para EMR demonstra viabilidade em cenários de saúde, sugerindo aplicação similar em outros domínios de IoT.",
+  "duvidas": "Como o esquema de criptografia homomórfica afeta o tempo de verificação de atributos em tempo real? Qual o custo de armazenamento dos atributos criptografados na blockchain para grandes escalas de dispositivos? O algoritmo de seleção de cluster head considera mobilidade ou falhas de nós? Há avaliação de resistência a ataques de replay ou falsificação de atributos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "2dbba22f4a1d8872543c",
+  "artigo": "Addula_2025",
+  "pagina": 8,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+    "solucao": "Encrypt using homomorphic encryption scheme: EAi= HE_Encrypt (ai,PK)",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Avaliar o impacto de combinar criptografia homomórfica com atributos baseados em políticas de acesso (ABE) para controle de acesso granular em cidades inteligentes.\n• Medir o overhead de comunicação e latência introduzidos pela seleção dinâmica de cluster head em ambientes de borda.\n• Testar a escalabilidade da armazenagem de atributos criptografados em blockchain sob alta taxa de dispositivos IoT.\n• Explorar a integração de credenciais verificáveis (VCs) com o esquema de criptografia homomórfica para suportar revogação segura.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

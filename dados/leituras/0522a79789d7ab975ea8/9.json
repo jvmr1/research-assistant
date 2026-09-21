@@ -1,0 +1,37 @@
+{
+  "resumo": "A página apresenta a lista de abreviaturas e siglas adotadas no trabalho, incluindo termos centrais como SSI (Self‑Sovereign Identity), DID (Decentralized Identifier) e DIDComm, além de conceitos de IoT, CI, PoW, PoS, JWT, entre outros, que estruturam a terminologia usada na pesquisa sobre identidade autossoberana em cidades inteligentes.",
+  "perfil": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+    "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar o uso de DIDComm para comunicação segura entre agentes SSI; explorar integração de SSI com protocolos PoW/PoS para governança descentralizada; avaliar como as abreviaturas definidas podem orientar a modelagem de políticas de privacidade e controle de acesso em ambientes IoT de cidades inteligentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "SSI Self-Sovereign Identity(Identidade Autossoberana)",
+      "afirmacao": "SSI refere‑se a Self‑Sovereign Identity."
+    },
+    {
+      "citacao": "DID Decentralized Identifier(Identificador Descentralizado)",
+      "afirmacao": "DID refere‑se a Decentralized Identifier."
+    }
+  ],
+  "interpretacao": "O trecho demonstra que o estudo adota uma terminologia padronizada da área de identidade digital descentralizada, indicando que conceitos como SSI, DID e DIDComm são fundamentais para a arquitetura proposta.",
+  "duvidas": "O documento não esclarece como essas siglas são operacionalizadas nas fases do ciclo de vida da credencial nem quais protocolos específicos são empregados para garantir segurança e privacidade.",
+  "avisos": [],
+  "id": "0d8328d0e62cbb14e8eb",
+  "artigo": "Exemplo_55b3b0969325cccbbb2c",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+    "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar o uso de DIDComm para comunicação segura entre agentes SSI; explorar integração de SSI com protocolos PoW/PoS para governança descentralizada; avaliar como as abreviaturas definidas podem orientar a modelagem de políticas de privacidade e controle de acesso em ambientes IoT de cidades inteligentes.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "aa6f199c752f47517c1c"
+  },
+  "reaproveitada_de": "aa6f199c752f47517c1c"
+}

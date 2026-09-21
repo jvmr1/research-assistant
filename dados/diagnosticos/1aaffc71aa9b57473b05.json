@@ -1,0 +1,65 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T14:27:07",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 1,
+        "resumo": "O artigo apresenta o modelo Verifiable and Searchable Decentralized Identity (VS-DID) para IIoT, focado na verificação de documentos DID e em consultas eficientes em grande escala. Utiliza um registro verificável e estratégia on‑chain/off‑chain com acumulador de janela deslizante, reduzindo o tempo de prova agregada em 93,5% e o tempo de compromisso em 96,5% frente ao esquema Merkle‑SNARK, mantendo tempo de verificação razoável.",
+        "interpretacao": "O trabalho avança o estado da arte ao combinar verificação de documentos DID com mecanismos de consulta eficientes, abordando a vulnerabilidade de terceiros que mantêm ligações entre IDs e chaves públicas. A estratégia on‑chain/off‑chain com acumulador de janela deslizante parece ser a principal inovação de desempenho.",
+        "duvidas": "Como o VS‑DID lida com revogação de credenciais em tempo real? Qual o impacto da solução em dispositivos IoT com recursos limitados? Existem avaliações de privacidade frente a possíveis vazamentos de metadados nas consultas on‑chain/off‑chain?"
+      },
+      {
+        "pagina": 2,
+        "resumo": "O artigo apresenta o modelo VS‑DID para meta‑computação em IIoT, combinando armazenamento on‑chain e off‑chain e introduzindo um registro verificável baseado em compromissos chave‑valor para vincular chaves públicas a DIDs. Para reduzir custos de manutenção, propõe‑se um mecanismo de armazenamento com acumulador de janela deslizante que otimiza consultas e verificações, atendendo a metas de eficiência, economia de espaço e atualizações em tempo real.",
+        "interpretacao": "O trabalho foca na redução da carga de armazenamento on‑chain e na garantia de integridade dos DIDs, usando técnicas criptográficas avançadas (compromissos bilineares e acumuladores) que podem ser relevantes para ambientes de IIoT com recursos limitados.",
+        "duvidas": "Não há detalhes sobre experimentos, métricas de desempenho ou avaliação em cenários reais de cidades inteligentes; também falta informação sobre como o modelo lida com revogação de credenciais ou interoperabilidade com outros padrões SSI."
+      },
+      {
+        "pagina": 3,
+        "resumo": "O trabalho propõe um acumulador de janela deslizante para identidade descentralizada verificável em IIoT, suportando meta‑computação e grande volume de dados, com análise teórica e experimentos que mostram maior segurança e eficiência em comparação a métodos existentes.",
+        "interpretacao": "O acumulador de janela deslizante permite atualizar identidades de forma incremental, reduzindo a carga computacional e mantendo a verificabilidade, o que é crucial para ambientes IIoT de alta escala e recursos limitados.",
+        "duvidas": "Como o acumulador se comporta em cenários de alta churn de dispositivos? Qual o impacto da estratégia on‑chain/off‑chain na latência de autenticação em edge nodes? Existem custos de armazenamento adicionais ao usar o acumulador em larga escala?"
+      },
+      {
+        "pagina": 4,
+        "resumo": "O texto apresenta o conceito de meta‑computação aplicada ao IIoT, destacando a necessidade de verificação de identidade cruzada entre domínios. Identifica limitações de soluções centralizadas (PKI, identidade federada) e de abordagens descentralizadas (sobrecarga computacional, interoperabilidade limitada). Propõe um esquema DID híbrido on‑chain/off‑chain com acumulador de janela deslizante para melhorar escalabilidade e eficiência de verificação, integrando identidade de usuários e dispositivos em ambientes de meta‑computação.",
+        "interpretacao": "O trabalho reforça a importância de identidades verificáveis em ambientes de meta‑computação IIoT, propondo um modelo DID híbrido que combina on‑chain e off‑chain com um acumulador de janela deslizante para reduzir a sobrecarga computacional e melhorar a interoperabilidade entre domínios.",
+        "duvidas": "Quais são os custos de armazenamento e comunicação associados ao modelo híbrido on‑chain/off‑chain em larga escala? Como o acumulador de janela deslizante lida com revogação de credenciais em tempo real?"
+      },
+      {
+        "pagina": 5,
+        "resumo": "O artigo propõe o modelo VS‑DID para IIoT meta‑computacional, combinando um registro verificável baseado em compromissos de pares chave‑valor, armazenamento híbrido on‑chain/off‑chain e um acumulador de janela deslizante para representar de forma compacta os hashes dos objetos de dados. Os objetivos de design incluem consultas de identidade eficientes, armazenamento seguro e escalável, e atualizações verificáveis em tempo real.",
+        "interpretacao": "O texto detalha como o VS‑DID usa compromissos de pares chave‑valor e um acumulador de janela deslizante para oferecer verificabilidade de identidade com baixo custo de armazenamento na blockchain, atendendo a requisitos de rapidez e escalabilidade típicos de IIoT meta‑computacional.",
+        "duvidas": "Como o modelo lida com a revogação de credenciais em tempo real? Qual o impacto de falhas de rede nos processos de atualização verificável? Existem métricas de desempenho (latência, throughput) comparando o acumulador de janela deslizante com outras soluções de armazenamento distribuído?"
+      },
+      {
+        "pagina": 6,
+        "resumo": "O artigo apresenta um esquema de registro verificável baseado em identidade descentralizada (VS‑DID) que utiliza compromissos vetoriais, provas geradas via Hyperproof e polynomial commitments, e agrega provas por meio de Non‑interactive Inner Product Arguments (IPA) em uma árvore linear binária, permitindo geração, agregação, verificação e atualização de provas para vetores de identidade em IIoT.",
+        "interpretacao": "O uso de árvore linear binária e IPA permite agregar provas de forma não interativa, reduzindo o tamanho dos dados enviados ao verificador e facilitando atualizações quando elementos do vetor mudam de posição.",
+        "duvidas": "Como o esquema lida com a revogação de identidades já registradas? Qual o impacto de mudanças frequentes no vetor W sobre o custo de atualização em ambientes com recursos limitados?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo propõe o modelo Verifiable and Searchable Decentralized Identity (VS‑DID) para meta‑computação no IIoT, combinando armazenamento híbrido on‑chain/off‑chain com um registro verificável baseado em compromissos chave‑valor. A inovação central é o acumulador de janela deslizante, que permite atualizações incrementais e consultas eficientes, reduzindo o tempo de prova agregada em 93,5 % e o tempo de compromisso em 96,5 % em relação a esquemas Merkle‑SNARK, mantendo verificação prática. O esquema utiliza compromissos vetoriais, provas geradas via Hyperproof e agregação por Non‑interactive Inner Product Arguments em uma árvore binária, visando baixo custo de armazenamento e escalabilidade para grandes volumes de dados e dispositivos IIoT. As fichas destacam a necessidade de verificação cruzada de identidades, redução da sobrecarga computacional e suporte a atualizações em tempo real, mas apontam lacunas em revogação, avaliação prática e interoperabilidade.",
+    "lacunas_possiveis": [
+      "Mecanismo de revogação de credenciais em tempo real não detalhado",
+      "Ausência de experimentos em dispositivos IoT com recursos limitados",
+      "Falta de métricas de latência, throughput e custos de armazenamento/comunicação em cenários reais de cidades inteligentes",
+      "Interoperabilidade limitada com padrões SSI existentes"
+    ],
+    "propostas_possiveis": [
+      "Desenvolver e validar um protocolo de revogação incremental integrado ao acumulador de janela deslizante",
+      "Realizar testes de desempenho em hardware IoT de baixa potência, medindo latência e consumo de energia",
+      "Comparar o VS‑DID com outras soluções (Merkle‑SNARK, IPFS, etc.) em ambientes de edge computing, quantificando custos de armazenamento e comunicação",
+      "Estender o modelo para suportar interoperabilidade com padrões SSI como DID‑Core e Verifiable Credentials da W3C"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:27:30"
+}

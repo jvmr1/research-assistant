@@ -1,0 +1,167 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-16T20:20:34",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para aprofundar ou esclarecer as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Asaithambi_2025",
+        "titulo": "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "458e1cc4f946bb50f100",
+            "pagina": 1,
+            "resumo": "O artigo propõe uma arquitetura de computação de borda assistida por blockchain para IIoT, introduzindo um mecanismo seguro de compartilhamento de dados e autenticação de ponta a ponta baseada na reputação da blockchain e contratos inteligentes. Um consenso de Prova de Autenticação (PoAh) é usado para validar nós e rastrear atividades, reduzindo o tempo de autenticação e aumentando a taxa de resposta, conforme estudo experimental.",
+            "evidencias": [
+              {
+                "citacao": "End-to-end authentication is developed based on the blockchain’s reputation",
+                "afirmacao": "End-to-end authentication is developed based on the blockchain’s reputation"
+              },
+              {
+                "citacao": "the proposed architecture lowers the authentication time and obtains a high response rate",
+                "afirmacao": "the proposed architecture lowers the authentication time and obtains a high response rate"
+              }
+            ]
+          },
+          {
+            "id": "7a9f5dac96afa43d0dc9",
+            "pagina": 2,
+            "resumo": "O trecho descreve que o armazenamento centralizado de dados em IoT representa um grande obstáculo de segurança, favorecendo ataques. Propõe‑se usar edge computing para processar dados próximo à fonte, reduzindo latência e consumo de banda, e blockchain como ledger distribuído que garante integridade e transparência. Destaca‑se que edge computing melhora a resposta em tempo real e que blockchain oferece resistência a adulterações, sendo adequado a múltiplos setores, inclusive industrial.",
+            "evidencias": [
+              {
+                "citacao": "Centralized data storage is a big obstacle.",
+                "afirmacao": "Centralized data storage is a big obstacle."
+              }
+            ]
+          },
+          {
+            "id": "4641a8464bde80281737",
+            "pagina": 3,
+            "resumo": "O trecho descreve como algoritmos de consenso (Proof of Capacity, Proof of Stake, Proof of Burn, PBFT) garantem a confiabilidade da blockchain, destacando o papel dos smart contracts na automação e segurança das transações. São ressaltados os atributos de descentralização, imutabilidade e transparência, bem como os desafios de latência, consumo energético e baixa taxa de transferência ao aplicar blockchain em IoT. Também são apresentados requisitos de confiança para sistemas IoT de borda, como precisão, segurança e acessibilidade.",
+            "evidencias": [
+              {
+                "citacao": "consensus algorithms play a crucial role in establishing the trustworthiness of every node in the blockchain",
+                "afirmacao": "Consensus algorithms play a crucial role in establishing the trustworthiness of every node in the blockchain."
+              }
+            ]
+          },
+          {
+            "id": "6f92d6b0e0fd3e875838",
+            "pagina": 4,
+            "resumo": "O artigo propõe uma arquitetura privada baseada em blockchain para IIoT com computação de borda, enfatizando leveza, escalabilidade e extensibilidade. Destaca requisitos de confiabilidade, diversidade, recursos limitados e flexibilidade. Introduz nós pequenos com máquinas virtuais para criptografia assimétrica e um mecanismo PoAh para autenticação de dispositivos, abordando gestão de confiança, compartilhamento seguro de dados e registro de dispositivos.",
+            "evidencias": [
+              {
+                "citacao": "first step is implementing small nodes that use virtual machines to conduct asymmetric cryptography in real time.",
+                "afirmacao": "A arquitetura utiliza nós pequenos com máquinas virtuais para criptografia assimétrica em tempo real."
+              }
+            ]
+          }
+        ],
+        "problema": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+        "solucao": "edge-level implementation of authentication that lowers the computational burden and improves the industry platform’s security",
+        "avaliacao": "maximum throughput of 1273 tps",
+        "limites": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+        "possibilidades": "Explorar a integração do algoritmo Poah citado (Puthal et al., 2020) na arquitetura proposta para melhorar a escalabilidade; comparar o framework BlockEdge (Kumar et al., 2020) com a solução atual em termos de latência e taxa de transação; avaliar a adoção de credenciais verificáveis e SSI conforme a tendência das referências; investigar a aplicação de criptografia baseada em atributos (ABE) inspirada em trabalhos citados para controle de acesso "
+      },
+      {
+        "id": "Munusamy_2025",
+        "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "9c572813c3334a9c02c0",
+            "pagina": 1,
+            "resumo": "O artigo propõe o framework EPP-BCFL, que combina blockchain, aprendizado federado, SMPC e diferencial privacidade para reduzir custos computacionais e de comunicação, melhorar a precisão e proteger contra ataques de envenenamento em gestão de registros eletrônicos de saúde.",
+            "evidencias": [
+              {
+                "citacao": "Experimental evaluation on CIFAR-10 demonstrates 95.2% accuracy, a 43% reduction in communication latency, a 37% decrease in computational cost",
+                "afirmacao": "O EPP-BCFL alcança alta acurácia e reduz latência e custo computacional."
+              }
+            ]
+          },
+          {
+            "id": "1f03669b04ec41d70341",
+            "pagina": 2,
+            "resumo": "O trabalho apresenta o framework Enhanced Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) para gestão segura e eficiente de registros eletrônicos de saúde (EHR). Combina aprendizado federado, analytics na borda e blockchain, usando mecanismos híbridos de privacidade (SMPC e Differential Privacy), consenso PoS+BFT leve e agregação adaptativa que considera qualidade dos dados, confiança dos nós e detecção de anomalias, visando reduzir sobrecarga computacional, latência e vulnerabilidades a ataques.",
+            "evidencias": [
+              {
+                "citacao": "Federated Learning (FL) facilitates collaborative model training across multiple healthcare organizations without sharing raw patient data.",
+                "afirmacao": "FL facilitates collaborative model training across multiple healthcare organizations without sharing raw patient data."
+              }
+            ]
+          },
+          {
+            "id": "cc73fc3dc8e665986b0d",
+            "pagina": 3,
+            "resumo": "O trabalho apresenta o framework EPP-BCFL, que combina aprendizado federado, blockchain e técnicas de privacidade (SMPC, Differential Privacy, ZKP) para gerir registros eletrônicos de saúde. Destaca-se um consenso energeticamente eficiente que reduz latência em 43% e custo computacional em 37%, além de estratégias dinâmicas de agregação que dobram a velocidade de convergência. O sistema mantém alta acurácia (≈98,7%) e detecta anomalias em tempo real (~2,3 s).",
+            "evidencias": [
+              {
+                "citacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks.",
+                "afirmacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks."
+              }
+            ]
+          },
+          {
+            "id": "862bec4e31919ba54052",
+            "pagina": 4,
+            "resumo": "O trecho revisa literatura sobre aprendizado federado baseado em blockchain (BCFL), destacando contribuições como segurança aprimorada via criptografia homomórfica e provas de conhecimento zero, mas apontando limitações recorrentes de sobrecarga computacional/comunicação, desafios de escalabilidade e ausência de mecanismos de incentivo, especialmente em ambientes de recursos limitados como IoT, saúde e cidades inteligentes.",
+            "evidencias": [
+              {
+                "citacao": "Several frameworks extended this idea by implementing federated learning in UAV ecosystems, emphasizing both data protection and scalability.",
+                "afirmacao": "Several frameworks extended this idea by implementing federated learning in UAV ecosystems, emphasizing both data protection and scalability."
+              }
+            ]
+          }
+        ],
+        "problema": "introduce significant computational overhead",
+        "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+        "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+        "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+        "possibilidades": "Aplicar o mecanismo de Agregação Adaptativa (AMA) em cenários de cidades inteligentes com dispositivos IoT heterogêneos.; Incluir métricas de consumo energético e latência para otimizar o trade‑off entre compressão, privacidade e eficiência energética em bordas municipais.; Testar a resistência do EPP-BCFL a ataques de envenenamento em redes de sensores urbanos distribuídos.; Integrar criptografia baseada em atributos (ABE) como camada adicional "
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "Os trabalhos analisados abordam a convergência de blockchain, edge computing e IoT/IIoT para melhorar segurança e desempenho. Asaithambi (2025) apresenta uma arquitetura de borda privada que usa um consenso Proof‑of‑Authentication (PoAh) para autenticação de dispositivos, relatando redução de tempo de autenticação e taxa máxima de 1.273 tps, mas observa degradação quando o número de nós ultrapassa 100. Munusamy (2025) propõe o framework EPP‑BCFL, combinando aprendizado federado, blockchain e mecanismos híbridos de privacidade (SMPC + DP), alcançando alta acurácia (≈95‑98 %) e redução de latência, embora reconheça sobrecarga computacional e falta de métricas energéticas. Ambos concordam que a descentralização via blockchain aumenta integridade e transparência, porém diferem nas métricas de avaliação: o primeiro foca em taxa de transação e autenticação, o segundo em precisão de modelo e privacidade de dados. A lacuna comum reside na avaliação integrada de desempenho (latência, throughput, consumo energético) e controle de acesso baseado em atributos (ABE) em cenários de cidades inteligentes com dispositivos heterogêneos.",
+    "ideias": [
+      {
+        "descricao": "Avaliar a integração do mecanismo PoAh de Asaithambi com o framework EPP‑BCFL de Munusamy, medindo simultaneamente taxa de transação, latência de agregação federada e consumo energético em um protótipo de cidade inteligente. A hipótese é que a autenticação leve na borda reduz a sobrecarga de comunicação do FL, melhorando a escalabilidade sem sacrificar a acurácia.",
+        "fontes": [
+          "Asaithambi_2025",
+          "Munusamy_2025"
+        ],
+        "lacuna": "Ausência de estudo que combine autenticação baseada em PoAh com aprendizado federado em ambientes de borda, avaliando trade‑offs de desempenho e energia."
+      },
+      {
+        "descricao": "Implementar criptografia baseada em atributos (ABE) como camada de controle de acesso sobre a arquitetura privada de blockchain de Asaithambi, e comparar seu impacto na privacidade e na taxa de transação contra o modelo atual sem ABE. A comparação com o EPP‑BCFL, que já usa SMPC/DP, permite analisar diferentes abordagens de criptografia para controle de acesso em IIoT.",
+        "fontes": [
+          "Asaithambi_2025",
+          "Munusamy_2025"
+        ],
+        "lacuna": "Nenhum dos trabalhos incorpora ABE; falta de evidência sobre como ABE afeta throughput e latência em redes de borda."
+      },
+      {
+        "descricao": "Estender o EPP‑BCFL de Munusamy para incluir métricas de consumo energético e latência específicas de dispositivos IoT de borda, usando a arquitetura leve de nós virtuais proposta por Asaithambi. O objetivo é criar um benchmark unificado que quantifique o custo energético de privacidade (SMPC+DP) versus autenticação PoAh em cenários de cidades inteligentes.",
+        "fontes": [
+          "Asaithambi_2025",
+          "Munusamy_2025"
+        ],
+        "lacuna": "Falta de avaliação energética conjunta de mecanismos de privacidade avançada e autenticação baseada em blockchain em ambientes de borda."
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:20:40"
+}

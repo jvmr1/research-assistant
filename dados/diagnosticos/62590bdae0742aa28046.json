@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:15:23",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey",
+    "perfil_anterior": {
+      "problema": "limited scalability and reliance on consortium-based validation.",
+      "solucao": "PoS provides a fast block creation time, high throughput, independence from specialized hardware, and energy efficiency.",
+      "avaliacao": "PoAh has the benefits of low power consumption and suitability for IoT but poses centralization risks due to reliance on trusted nodes.",
+      "limites": "centralization risks due to reliance on trusted nodes.",
+      "possibilidades": "Avaliar o desempenho do PoAh em cenários de edge computing de cidades inteligentes, combinando-o com criptografia baseada em atributos (ABE) para privacidade granular; comparar PoAh com outros protocolos leves (PoA, PoET) quanto a throughput e consumo energético; investigar mecanismos híbridos que mitigam a centralização ao distribuir a validação entre nós semi‑confiáveis."
+    },
+    "pagina": 14,
+    "texto": "Table 3 A comparison of consensus protocols\nConsensus\nprotocol\nYear Appropriate\nblockchain\nMining technique Blockchain\nplatform\nDecentr-\nalization\nEstimated\nthroughput\nEstimated\nlatency\nEnergy\nusage\nAdvantages Disadvantages\nProof of work\n(PoW) [ 29]\n2008 Public\nblockchain\nNode solves hash\npuzzle. Based on\npower consumption\nBitcoin,\nLitecoin,\nEthereum\nHigh 7 TPS 10 min Very\nHigh\nHigh security. High\ndecentralization\nHigh power consumption.\nVulnerable to 51% attack\nand Sybil attack\nProof of stake\n(PoS) [ 43]\n2012 Public\nblockchain\nNode with most\nstakes. Based on\nvalidation\nEthereum,\nQtum,\nWanchain,\nStratis, NXT\nMedium 30–100\nTPS\n10–60 sec Medium High throughput. Energy\nefﬁciency. Fast block\ncreation time.\nIndependence to the\nspecial hardware\nHighly dependent on nodes\nwith the most stakes,\nwhich makes the\nblockchain somewhat\ncentralized. Vulnerable to\nDOS attack and Sybil\nattack. Problem called\n‘ ‘nothing at stake’ ’\nDelegated\nproof of\nstake\n(DPoS) [ 59]\n2013 Public\nblockchain\nNodes vote to choose\ndelegates to validate\nblocks. Provide a\ndemocratic and fair\nway through the\nvoting procedure\nBitshares,\nLSK, ARK,\nEOS, Nano,\nCardano,\nTezos\nMedium [1000\nTPS\n1–10 sec Low High scalability. Energy\nefﬁciency. Low-cost\ntransactions. Solving the\nproblem of double-\nspending\nLimitation on the number of\ndelegated stakeholders\nmakes the network semi-\ncentralized\nProof of\nactivity\n(PoAc) [ 60]\n2014 Public\nblockchain,\nConsortium\nblockchain\nSolve a hash puzzle,\nthen the node with\nthe most stakes adds\nthe block. Based on\nPow and PoS\nBitcoin High 15 TPS 10 min High Protecting the network\nfrom some potential\nattacks, such as the 51%\nattack\nConsuming a lot of\nresources. Energy\nconsumption. High\nlatency. Vulnerable to\ndouble-spending attacks\nPractical\nbyzantine\nfault\ntolerance\n(PBFT) [ 61]\n1999 Private\nblockchain,\nConsortium\nblockchain\nThe block will be\nrecorded to the chain\nif it has at least 2/3\nof the nodes\nagreeing upon it.\nBased on voting\nHyperledger\nFabric,\nHyperledger\nSawtooth\nMedium 10,000\nTPS\n1–5 sec Low High throughput. Low\npower consumption.\nDetection of malicious\nnodes\nLack of scalability\nparameters. Unscalable for\nlarge networks. High\nnetwork overhead and\npotential delays.\nVulnerable to Sybil attack\nDelegated\nbyzantine\nfault\ntolerance\n(DBFT) [ 58]\n2017 Public\nblockchain\nSome nodes are\nselected as delegates\nof the others to add\nblocks. Based on\nPBFT\nNEO Medium 1,000 TPS 15 sec Low Low latency than PBFT.\nMore scalable than\nPBFT\nLimiting the number of\nvoters may compromise\nthe network’s\ndecentralization\nProof of\nauthority\n(PoA) [ 63]\n2017 Public\nblockchain,\nPrivate\nblockchain\nTime is split into\nseveral slots, and an\nauthority mining\nleader is chosen for\neach slot. Based on\nBFT\nEthereum,\nApla\nMedium 1,000 TPS 5 sec Low Less computational power.\nHigh throughput and\nscalable due to\nauthorized nodes\ngenerating blocks at\nspeciﬁc time intervals\nRelies on a set of\nauthorities, which may\naffect the blockchain\ndecentralization feature.\nBy identifying the\nauthorities, it is a\ncentralized system\n529 Page 14 of 45 Cluster Computing (2025) 28:529\n123",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "A Tabela 3 apresenta uma comparação de protocolos de consenso (PoW, PoS, DPoS, PoAc, PBFT, DBFT, PoA), indicando ano, tipo de blockchain, técnica de mineração, plataforma, grau de descentralização, throughput estimado, latência, consumo de energia, vantagens e desvantagens. Evidencia-se a variedade de trade‑offs entre segurança, desempenho e consumo energético, destacando limitações como alta energia ou risco de centralização.",
+    "perfil": {
+      "problema": "High power consumption.",
+      "solucao": "Energy efficiency.",
+      "avaliacao": "High throughput.",
+      "limites": "Highly dependent on nodes with the most stakes, which makes the blockchain somewhat centralized.",
+      "possibilidades": "Investigar combinações híbridas de PoS e PBFT para melhorar a escalabilidade e privacidade em ambientes de edge computing de cidades inteligentes; integrar criptografia baseada em atributos (ABE) para controle de acesso granular nos blocos; comparar o desempenho de PoS com protocolos leves como PoA e PoET em cenários de IoT industrial."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "PoW tem alto consumo de energia.",
+        "citacao": "High power consumption."
+      },
+      {
+        "afirmacao": "PoS oferece alta taxa de transferência e eficiência energética.",
+        "citacao": "High throughput. Energy efﬁciency."
+      }
+    ],
+    "interpretacao": "O trecho evidencia que protocolos mais antigos como PoW sacrificam eficiência energética, enquanto protocolos mais recentes como PoS melhoram throughput e consumo, porém introduzem riscos de centralização.",
+    "duvidas": "Como balancear a descentralização e a eficiência energética em redes de cidades inteligentes? Qual o impacto da latência reduzida de PBFT em aplicações de tempo‑crítico?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:16:14"
+}

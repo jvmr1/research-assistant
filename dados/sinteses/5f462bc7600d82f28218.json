@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta uma taxonomia abrangente para gestão de identidade baseada em ledger distribuído (DLT), estruturada em três grupos principais – âncora de confiança, identidade e ledger – e composta por 22 dimensões e 113 características, conforme a Tabela II. A taxonomia foi validada por especialistas e aplicada a duas arquiteturas de IDM, revelando lacunas recorrentes como ausência de mecanismos de revogação e controle de divulgação, bem como desafios de interoperabilidade entre diferentes padrões de identidade (DIDs, SAML, X.509) e blockchains. O estudo destaca a utilidade da taxonomia para comparar soluções, orientar o design de sistemas e apoiar a padronização, especialmente em contextos de cidades inteligentes, IoT e computação de borda, embora reconheça a necessidade de atualização contínua diante da rápida evolução tecnológica.",
+  "lacunas_possiveis": [
+    "Interoperabilidade entre diferentes DLTs e padrões de identidade (DIDs, SAML, X.509).",
+    "Métricas e avaliação de overhead de uso em dispositivos IoT de baixa potência e edge computing.",
+    "Critérios claros para classificação de revogação (on‑chain vs ausente) e revogação descentralizada em tempo real.",
+    "Abordagem de cenários híbridos de permissão (public permissionless vs private permissioned).",
+    "Medição da adaptabilidade da taxonomia a tecnologias emergentes e integração com padrões existentes."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um framework de interoperabilidade que estenda a taxonomia para avaliar compatibilidade entre múltiplas blockchains e padrões de identidade.",
+    "Definir e validar métricas de overhead específicas para dispositivos IoT de baixa potência e ambientes de borda, usando a taxonomia como guia de requisitos.",
+    "Ampliar a taxonomia com sub‑dimensões que detalhem mecanismos de revogação descentralizada e critérios de permissão híbrida.",
+    "Criar uma ferramenta interativa de preenchimento automático da taxonomia para facilitar sua aplicação prática em projetos de cidades inteligentes.",
+    "Conduzir um estudo piloto que aplique a taxonomia a um caso de uso real de SSI em serviços públicos de smart city, avaliando governança, privacidade e custos de implementação."
+  ]
+}

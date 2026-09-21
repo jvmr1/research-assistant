@@ -1,0 +1,15 @@
+{
+  "resumo": "O artigo propõe um modelo de identidade descentralizada verificável para IIoT que combina registros DID baseados em compromissos vetoriais, acumuladores de janela deslizante (SWAT) e um dicionário autenticado RSA estendido. São descritos algoritmos de atualização de provas, consultas verificáveis usando provas Merkle e suporte a versões históricas, permitindo auditoria e rastreabilidade. Avaliações experimentais com BLS12‑381, IPA e SNARK Groth16 mostram tempos de verificação muito baixos (≈0,003 s) e provas agregadas mais rápidas que o Merkle SNARK tradicional, embora a geração de parâmetros SNARK seja pesada (≈50 GB, >30 h). Os resultados indicam boa escalabilidade e eficiência para ambientes IIoT de cidades inteligentes, mas apontam desafios de consumo de recursos, latência de atualização e revogação em dispositivos com recursos limitados.",
+  "lacunas_possiveis": [
+    "Impacto de latência e consumo de energia da operação Update(C,i′,Δ) em dispositivos edge.",
+    "Escalabilidade do acumulador de janela deslizante com alta taxa de geração de blocos e grandes valores de K.",
+    "Custo computacional e memória do RSA autenticado e dos parâmetros SNARK em larga escala.",
+    "Mecanismos de revogação eficiente sem reprocessar todo o dicionário ou acumulador."
+  ],
+  "propostas_possiveis": [
+    "Avaliar protocolos de prova mais leves (ex.: PLONK ou Bulletproofs) para reduzir tamanho e tempo de geração de parâmetros.",
+    "Implementar versões otimizadas do algoritmo Update usando técnicas de computação aproximada ou offloading para fog/edge.",
+    "Projetar estratégias de gerenciamento de janela dinâmica que ajustem K conforme a taxa de blocos, mitigando sobrecarga de consultas.",
+    "Desenvolver um mecanismo de revogação incremental baseado em provas de não‑inclusão ou atributos revogáveis dentro do acumulador."
+  ]
+}

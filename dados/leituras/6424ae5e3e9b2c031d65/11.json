@@ -1,0 +1,43 @@
+{
+  "resumo": "O trecho descreve os casos de uso essenciais do YouGovern, onde usuários se cadastram via MetaMask, armazenam dados na blockchain e no IPFS, e podem conceder ou revogar acesso a outros usuários por meio de contratos inteligentes. Autoridades verificam credenciais consultando o registro DID e o hash de conteúdo no IPFS. O fluxo inclui solicitação, aprovação/rejeição e download de arquivos, com papéis de autoridade definidos por endereços confiáveis.",
+  "perfil": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "addressed by YouGovern through its use of BSC, role-based smart contracts, and hybrid storage",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": [
+      "Avaliar a usabilidade e segurança do fluxo de consentimento baseado em solicitações de acesso via smart contracts em ambientes de cidades inteligentes;",
+      "Integrar controle de acesso baseado em atributos (ABE) ao modelo de solicitação de dados armazenados no IPFS;",
+      "Testar a escalabilidade do armazenamento híbrido (on‑chain + IPFS) com múltiplos usuários simultâneos;",
+      "Explorar revogação automática de permissões usando ZKP quando o usuário altera seu endereço MetaMask;",
+      "Investigar a interoperabilidade do modelo de autoridade (endereços verificados) entre diferentes organizações públicas."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Users can request to see another user data",
+      "afirmacao": "Usuários podem solicitar ver os dados de outro usuário"
+    },
+    {
+      "citacao": "he can accept or reject that request",
+      "afirmacao": "O proprietário dos dados pode aceitar ou rejeitar a solicitação"
+    }
+  ],
+  "interpretacao": "O sistema YouGovern combina identidade auto-soberana com controle de acesso granular, permitindo que usuários gerenciem quem pode visualizar ou baixar seus dados armazenados de forma descentralizada, enquanto autoridades confiáveis validam credenciais via DID e IPFS.",
+  "duvidas": "Como o modelo de autoridade baseado em endereços verificados lida com a delegação de confiança entre diferentes entidades governamentais? Qual o impacto de múltiplas solicitações concorrentes no desempenho do armazenamento híbrido?",
+  "avisos": [],
+  "id": "1030c744b85cd2c56cec",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "addressed by YouGovern through its use of BSC, role-based smart contracts, and hybrid storage",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": "Avaliar a usabilidade e segurança do fluxo de consentimento baseado em solicitações de acesso via smart contracts em ambientes de cidades inteligentes;; Integrar controle de acesso baseado em atributos (ABE) ao modelo de solicitação de dados armazenados no IPFS;; Testar a escalabilidade do armazenamento híbrido (on‑chain + IPFS) com múltiplos usuários simultâneos;; Explorar revogação automática de permissões usando ZKP quando o usuário altera seu endereço MetaMask;; Investigar a interoperabilidade do modelo de autoridade (endereços verificados) entre diferentes organizações públicas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  },
+  "reaproveitada_de": "ad0ae8a32d584f7fbea6"
+}

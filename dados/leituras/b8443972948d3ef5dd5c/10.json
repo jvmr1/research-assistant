@@ -1,0 +1,41 @@
+{
+  "resumo": "O estudo descreve como, diante da falta de detalhes técnicos em artigos sobre blockchain na saúde, os autores inferem informações ausentes (ex.: atribuem PBFT ao Hyperledger Fabric) e documentam essas deduções. Avaliam a maturidade das soluções via TRLs e realizam análise de sensibilidade, constatando que a exclusão dos dados inferidos não altera os resultados principais, embora reconheçam risco de viés.",
+  "perfil": {
+    "problema": "some solutions did not provide enough information",
+    "solucao": "assigning PBFT to Hyperledger Fabric aligns with official documentation",
+    "avaliacao": "excluding inferred data does not materially alter the main findings",
+    "limites": "We recognize that such inference may introduce bias",
+    "possibilidades": [
+      "Aplicar a estratégia de inferência de dados ausentes a revisões sobre cidades inteligentes e IoT, avaliando seu impacto nas métricas de interoperabilidade.",
+      "Desenvolver um método automatizado para identificar e classificar tipos de blockchain e protocolos de consenso em artigos de smart cities.",
+      "Estender a análise de sensibilidade para incluir métricas de privacidade (ABE, ZKP) e comparar resultados com e sem inferência.",
+      "Criar um repositório de configurações padrão documentadas (ex.: PBFT, Ethereum público) para uso em revisões sistemáticas de domínios emergentes."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "34.4% for consensus protocol",
+      "afirmacao": "34.4% of studies lacked consensus protocol information"
+    },
+    {
+      "citacao": "Table 10 The evaluation framework for TRL Assessment",
+      "afirmacao": "The evaluation framework maps observable evidence to TRL levels"
+    }
+  ],
+  "interpretacao": "A inferência de detalhes técnicos permite completar a análise sistemática, mas introduz viés que deve ser monitorado; a abordagem de TRL oferece um panorama claro da maturidade das soluções, embora a maioria ainda esteja em estágios iniciais.",
+  "duvidas": "Qual a robustez da inferência quando aplicada a domínios com maior heterogeneidade tecnológica, como smart cities? Como quantificar o viés introduzido por suposições padrão em métricas de interoperabilidade?",
+  "avisos": [],
+  "id": "19e31d1af596766573c8",
+  "artigo": "Li_2025",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "some solutions did not provide enough information",
+    "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+    "avaliacao": "excluding inferred data does not materially alter the main findings",
+    "limites": "We recognize that such inference may introduce bias",
+    "possibilidades": "Aplicar a estratégia de inferência de dados ausentes a revisões sobre cidades inteligentes e IoT, avaliando seu impacto nas métricas de interoperabilidade.; Desenvolver um método automatizado para identificar e classificar tipos de blockchain e protocolos de consenso em artigos de smart cities.; Estender a análise de sensibilidade para incluir métricas de privacidade (ABE, ZKP) e comparar resultados com e sem inferência.; Criar um repositório de configurações padrão documentadas (ex.: PBFT, Ethereum público) para uso em revisões sistemáticas de domínios emergentes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "b8443972948d3ef5dd5c"
+  }
+}

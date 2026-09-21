@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-20T18:57:17",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
+    "perfil_anterior": {
+      "problema": "interoperability becomes a central concern",
+      "solucao": "smart contracts on the Hyperledger Besu blockchain",
+      "avaliacao": "The developed architecture reduces the dependence on unilateral control over access rules",
+      "limites": "Traditional solutions tend to depend on centralized intermediaries",
+      "possibilidades": "Explorar como identidades auto‑soberanas (SSI/DIDs) podem ser integradas ao modelo publish/subscribe para garantir interoperabilidade técnica em ambientes IIoT; investigar o uso de credenciais verificáveis para validar dispositivos IoT dentro das camadas semântica e organizacional do EIF; propor extensões que combinam ABE com políticas de acesso técnico para controlar a troca de dados entre sistemas industriais; avaliar mecanismos de revogação distribuída de credenciais em redes IIoT baseadas em blockchain."
+    },
+    "pagina": 15,
+    "texto": "1.1 Motivation 14\nMQTT, and, primarily, on governance- and security-oriented interoperability, aimed at enabling\ndata exchange between independent administrative domains without presupposing a prior trust\nrelationship. Semantic interoperability, including the harmonization of sensor data models and\nthe interpretation of heterogeneous measurements and distinct physical phenomena, is outside\nthe scope of this research.\nRecent forecasts indicate that the global number of IoT-connected devices will reach 29\nbillion by 2030 (ABUSERRIEH; ALALFI, 2024). However, the rapid expansion of industrial\nsystems also intensifies challenges related to secure cross-organizational data sharing, inclu-\nding technical connectivity, access governance, privacy, and auditability (HAZRA et al., 2021).\nIn these scenarios, there is generally a need for real-time data exchange to support decision-\nmaking, while each organization maintains its own governance structures, information mana-\ngement flows, and confidentiality requirements. These factors can restrict inter-organizational\ncollaboration, especially when sensitive operational information must be shared without com-\npromising confidentiality and integrity.\nThe strategic sharing of information may enable new business models, but it also contrasts\nwith the risk of undue data exposure. Therefore, these conditions require mechanisms capa-\nble of enforcing secure and manageable data sharing between different organizations, while\npreserving the ability of each party to define, enforce, and audit its own access rules.\nTo illustrate this situation, consider a supply-chain scenario involving a sensor manufactu-\nrer, an automobile manufacturer, and a maintenance service provider. The maintenance provider\nmay require access to operational data to perform predictive maintenance services. At the same\ntime, the automobile manufacturer may need to restrict production metrics, while the sensor\nsupplier may protect proprietary device configurations. This scenario shows that organizations\nmay need to share data selectively while remaining administratively independent and without\nrelying on a single trusted intermediary.\nThis need for data sharing between organizations can be supported by mechanisms that\nensure granular access control over shared data, without requiring all parties to depend on a\nsingle centralized authority.\n1.1 Motivation\nAs highlighted by Mahendran et al. (2025), the lack of mechanisms for secure cross-\norganizational IIoT data sharing, coupled with the need for access governance and auditabi-\nlity, remains a significant challenge in Industry 4.0, especially among segregated organizations.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho destaca a necessidade de interoperabilidade orientada à governança e segurança para troca de dados entre domínios administrativos independentes, sem confiança prévia. Embora a interoperabilidade semântica esteja fora do escopo, a expansão dos dispositivos IoT (prevista em 29 bi até 2030) intensifica desafios de compartilhamento seguro, governança de acesso, privacidade e auditoria. Um cenário de cadeia de suprimentos ilustra a necessidade de controle de acesso granular, permitindo que organizações mantenham autonomia e evitem dependência de um intermediário centralizado.",
+    "perfil": {
+      "problema": "governance- and security-oriented interoperability",
+      "solucao": "mechanisms that ensure granular access control over shared data",
+      "avaliacao": "Não informado",
+      "limites": "Semantic interoperability ... is outside the scope of this research.",
+      "possibilidades": "Investigar a integração de identidades auto‑soberanas (SSI/DIDs) com políticas de controle de acesso baseadas em ABE para ambientes IIoT; explorar credenciais verificáveis como mecanismo de autenticação de dispositivos IoT em cadeias de suprimentos; propor extensões que combinam criptografia homomórfica com smart contracts para auditoria de acesso sem revelar dados sensíveis; avaliar estratégias de revogação distribuída de credenciais em redes industriais sem intermediário central."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "A necessidade de compartilhamento seguro de dados entre organizações requer controle de acesso granular.",
+        "citacao": "This need for data sharing between organizations can be supported by mechanisms that ensure granular access control over shared data, without requiring all parties to depend on a single centralized authority."
+      },
+      {
+        "afirmacao": "Previsões indicam 29 bilhões de dispositivos IoT conectados até 2030.",
+        "citacao": "Recent forecasts indicate that the global number of IoT-connected devices will reach 29 billion by 2030 (ABUSERRIEH; ALALFI, 2024)."
+      }
+    ],
+    "interpretacao": "O autor enfatiza que, apesar do crescimento explosivo de dispositivos IoT, a falta de mecanismos de governança e controle de acesso granular impede a colaboração interorganizacional segura, exigindo soluções que preservem a autonomia de cada entidade sem depender de autoridades centrais.",
+    "duvidas": "Quais são os requisitos específicos de desempenho para os mecanismos de controle de acesso granular em ambientes IIoT de alta frequência? Como a exclusão da interoperabilidade semântica afeta a aplicabilidade prática das propostas de controle de acesso?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:57:44"
+}

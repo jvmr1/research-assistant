@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo propõe um framework de autenticação IoT baseado em blockchain permissionada, combinando armazenamento otimizado, mecanismo de autenticação leve e criptografia homomórfica para proteger dados antes da nuvem. Visa melhorar a escalabilidade e reduzir a sobrecarga de armazenamento, oferecendo maior privacidade e confiança em ambientes IoT de grande escala, avaliado por simulações comparativas.",
+  "perfil": {
+    "problema": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+    "solucao": "we propose a novel solution tailored for large-scale IoT environments using a permissioned blockchain... integration of homomorphic encryption to secure IoT data at the user end before uploading it to the cloud.",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não informado",
+    "possibilidades": "Aplicar o modelo a cenários de cidades inteligentes com computação de borda; integrar identidade auto‑soberana (SSI) e credenciais verificáveis; explorar criptografia baseada em atributos (ABE) para controle de acesso granular; validar em implantação real com múltiplas organizações e analisar mecanismos de revogação."
+  },
+  "evidencias": [
+    {
+      "citacao": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+      "afirmacao": "A maioria das pesquisas existentes foca vulnerabilidades específicas, deixando de lado privacidade e confiança."
+    },
+    {
+      "citacao": "we introduce, for the first time, the integration of homomorphic encryption to secure IoT data at the user end before uploading it to the cloud.",
+      "afirmacao": "O estudo introduz criptografia homomórfica para proteger dados IoT antes da nuvem."
+    }
+  ],
+  "interpretacao": "O trabalho combina blockchain permissionada e criptografia avançada para superar limitações de escalabilidade e privacidade típicas de soluções IoT descentralizadas, sugerindo que a abordagem pode ser adaptada a infraestruturas de cidades inteligentes onde o volume de dispositivos e a sensibilidade dos dados são críticos.",
+  "duvidas": "Como o modelo lida com a revogação de credenciais de dispositivos comprometidos? Qual é o impacto de usar criptografia homomórfica na latência de comunicação em tempo real?",
+  "avisos": [],
+  "id": "df6bffac640d82c70f15",
+  "artigo": "Addula_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o modelo a cenários de cidades inteligentes com computação de borda; integrar identidade auto‑soberana (SSI) e credenciais verificáveis; explorar criptografia baseada em atributos (ABE) para controle de acesso granular; validar em implantação real com múltiplas organizações e analisar mecanismos de revogação.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

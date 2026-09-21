@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho apresenta um levantamento de referências recentes (2020‑2024) que abordam métodos baseados em blockchain para autenticação e gerenciamento de identidade em ambientes IoT, 5G, fog computing, smart grids e setores públicos. As obras incluem propostas de verificação de identidade de dispositivos, esquemas de credenciais não transferíveis, uso de criptografia baseada em identidade e integração com sistemas de controle de acesso.",
+  "perfil": {
+    "problema": "device identity verification",
+    "solucao": "blockchain-based identity authentication system",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Mapear os esquemas citados usando a taxonomia proposta para identificar lacunas de interoperabilidade entre blockchains públicos e permissionados em cenários de IoT urbano; avaliar desempenho de revogação dinâmica de credenciais em edge/fog computing; integrar atributos de criptografia baseada em atributos (ABE) para controle de acesso granular; explorar a combinação com SSI e credenciais verificáveis para melhorar a privacidade dos cidadãos em serviços públicos de cidades inteligentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "[142] C. Laroiya, M. K. Bhatia, S. Madan, and C. Komalavalli, “Iot and blockchain-based method for device identity verification,”",
+      "afirmacao": "IoT and blockchain-based method for device identity verification"
+    },
+    {
+      "citacao": "[143] Z. Tu, H. Zhou, K. Li, H. Song, and W. Wang, “A blockchain-based user identity authentication method for 5g,”",
+      "afirmacao": "A blockchain-based user identity authentication method for 5g"
+    }
+  ],
+  "interpretacao": "O conjunto de trabalhos indica um crescente interesse em aplicar blockchain para resolver desafios de autenticação e gerenciamento de identidade em dispositivos IoT e redes emergentes, destacando a diversidade de abordagens (credenciais não transferíveis, criptografia baseada em identidade, integração com fog computing) mas sem evidências claras de avaliações comparativas ou de limites de escalabilidade.",
+  "duvidas": "Quais são os critérios de desempenho (latência, consumo energético) adotados nas propostas? Como cada esquema lida com revogação de credenciais em ambientes altamente dinâmicos? Há estudos de interoperabilidade entre blockchains permissionados e públicos especificamente para cidades inteligentes?",
+  "avisos": [],
+  "id": "80dd99008e219a881934",
+  "artigo": "Vaziry_2025",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "device identity verification",
+    "solucao": "blockchain-based framework",
+    "avaliacao": "highly reliable cross-domain identity authentication protocol",
+    "limites": "Another limitation could be the rapid evolution of the research field",
+    "possibilidades": "Mapear os esquemas citados usando a taxonomia proposta para identificar lacunas de interoperabilidade entre blockchains públicos e permissionados em cenários de IoT urbano; avaliar desempenho de revogação dinâmica de credenciais em edge/fog computing; integrar atributos de criptografia baseada em atributos (ABE) para controle de acesso granular; explorar a combinação com SSI e credenciais verificáveis para melhorar a privacidade dos cidadãos em serviços públicos de cidades inteligentes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

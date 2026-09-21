@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta o YouGovern, um sistema SSI baseado em blockchain (Binance Smart Chain) que segue os padrões W3C DID, usando contratos inteligentes para controle de acesso e armazenamento descentralizado via IPFS e Web3.Storage. O sistema permite registro, compartilhamento e revogação de identidades com privacidade e auditabilidade, suportando permissões baseadas em papéis e rotação de chaves. Avaliações de desempenho mostram latência média de registro de 0,94 s e pico de 12,5 transações por segundo, destacando melhorias em revogação e custos operacionais em relação a soluções como Sovrin e uPort.",
+  "perfil": {
+    "problema": "centralized control also means that these entities have the power to modify, revoke, or misuse identity privileges, often without the user’s consent",
+    "solucao": "YouGovern, a blockchain-based SSI system deployed on Binance Smart Chain (BSC) and compliant with W3C Decentralized Identifier (DID) standards",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Não informado",
+    "possibilidades": "Explorar a integração de criptografia baseada em atributos (ABE) para controle de acesso mais granular; testar a implantação em ambientes reais de cidades inteligentes com edge computing; comparar desempenho em outras blockchains públicas; avaliar a interoperabilidade com sistemas de identidade governamentais existentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "centralized control also means that these entities have the power to modify, revoke, or misuse identity privileges, often without the user’s consent or knowledge, posing significant risks to privacy and autonomy",
+      "afirmacao": "O controle centralizado permite que entidades modifiquem ou revoguem privilégios de identidade sem consentimento, gerando riscos de privacidade."
+    },
+    {
+      "citacao": "Results indicate an average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second.",
+      "afirmacao": "YouGovern apresenta latência de registro de DID de 0,94 s e taxa máxima de 12,5 transações por segundo."
+    }
+  ],
+  "interpretacao": "O trabalho demonstra que uma arquitetura SSI baseada em BSC pode oferecer registro rápido e throughput adequado para aplicações de cidades inteligentes, ao mesmo tempo que melhora a revogação e reduz custos operacionais em comparação com soluções existentes.",
+  "duvidas": "Como o sistema se comporta em cenários de alta concorrência realista? Qual o impacto da dependência de serviços externos como Web3.Storage na disponibilidade e soberania dos dados?",
+  "avisos": [],
+  "id": "a539adb6247c318d5314",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "centralized control also means that these entities have the power to modify, revoke, or misuse identity privileges, often without the user’s consent",
+    "solucao": "YouGovern, a blockchain-based SSI system deployed on Binance Smart Chain (BSC) and compliant with W3C Decentralized Identifier (DID) standards",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração de criptografia baseada em atributos (ABE) para controle de acesso mais granular; testar a implantação em ambientes reais de cidades inteligentes com edge computing; comparar desempenho em outras blockchains públicas; avaliar a interoperabilidade com sistemas de identidade governamentais existentes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  }
+}

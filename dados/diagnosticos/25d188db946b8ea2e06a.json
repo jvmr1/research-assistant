@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-21T00:52:04",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "André Luiz Almeida Cardoso",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 7,
+        "resumo": "O artigo propõe um modelo de identidade descentralizada baseado em blockchain (Hyperledger Fabric) para cidades inteligentes, destacando a importância da segurança da informação e apresentando experimentos que medem custo de adoção.",
+        "interpretacao": "O trabalho demonstra que a gestão de identidade descentralizada via blockchain pode viabilizar a segurança necessária para aplicações de cidades inteligentes, medindo seu custo computacional.",
+        "duvidas": "Como o modelo lida com escalabilidade em grandes cidades? Qual o impacto na privacidade dos cidadãos? Como são tratadas revogação e recuperação de credenciais em caso de perda de chaves?"
+      },
+      {
+        "pagina": 8,
+        "resumo": "O trecho lista as ilustrações do trabalho, destacando arquiteturas, diagramas de sequência e avaliações de latência e consumo de processamento da solução proposta para gestão de identidades em ambientes IoT de cidades inteligentes.",
+        "interpretacao": "O material demonstra que o estudo inclui uma arquitetura detalhada, diagramas de classe e sequência, além de experimentos de desempenho (latência e consumo) que sustentam a viabilidade da solução de identidade proposta para cidades inteligentes.",
+        "duvidas": "O trecho não fornece descrições textuais que relacionem as figuras ao problema de segurança ou às limitações da abordagem; faltam detalhes sobre como as métricas de latência se traduzem em benefícios de privacidade ou interoperabilidade."
+      },
+      {
+        "pagina": 9,
+        "resumo": "O trecho apresenta a legenda da Figura 27, que ilustra o consumo de memória ao longo do tempo ao comparar a utilização do modelo proposto com a sua ausência.",
+        "interpretacao": "A figura sugere que a adoção do modelo proposto tem impacto mensurável no uso de memória, permitindo comparar sua eficiência em relação a uma abordagem sem o modelo.",
+        "duvidas": "Não há detalhes sobre a magnitude da diferença de memória, a configuração experimental ou o número de dispositivos testados."
+      },
+      {
+        "pagina": 10,
+        "resumo": "O trecho apresenta a lista de tabelas do documento, incluindo comparações de algoritmos de consenso, trabalhos relacionados, métricas de latência de autenticação de dispositivos na plataforma InterSCity, formas de inserção de dados, e medições de consumo de memória RAM e processamento com e sem o modelo proposto.",
+        "interpretacao": "As tabelas indicam que o documento mede o desempenho (latência, memória e processamento) de sistemas de identidade autossoberana em cenários de cidades inteligentes, comparando a situação com e sem a solução proposta.",
+        "duvidas": "Quais são os valores numéricos específicos das medições de memória e processamento? Como os algoritmos de consenso influenciam esses resultados? O documento detalha os métodos de revogação e recuperação de credenciais?"
+      },
+      {
+        "pagina": 11,
+        "resumo": "O trecho apresenta a lista de siglas utilizadas no trabalho, abrangendo termos de computação, segurança, IoT e identidade digital relevantes para cidades inteligentes.",
+        "interpretacao": "A presença de um glossário de siglas indica que o documento estabelece um vocabulário padronizado, facilitando a compreensão de conceitos técnicos como SSI, DLT, IoT e controle de acesso, essenciais para a análise de segurança e interoperabilidade em cidades inteligentes.",
+        "duvidas": "Não há informações sobre como essas siglas são operacionalizadas no modelo proposto nem sobre a existência de um mapeamento formal entre elas e os componentes da arquitetura de identidade autossoberana."
+      },
+      {
+        "pagina": 12,
+        "resumo": "O trecho apresenta um conjunto de siglas e definições (PBFT, PoA, PoB, PoC, PoS, PoW, RAM, RSA, SBSEG, SSI, TIC, TLS, UUID, WSN) que abrangem mecanismos de consenso, criptografia, redes sem fio e identidade autossoberana, servindo como referência terminológica para a modelagem de soluções de identidade descentralizada em cidades inteligentes.",
+        "interpretacao": "O conjunto de siglas fornece um vocabulário essencial para integrar diferentes camadas de segurança e consenso ao projeto de identidade autossoberana em cidades inteligentes, permitindo alinhar protocolos de blockchain, criptografia e comunicação de rede.",
+        "duvidas": "Como cada mecanismo de consenso (ex.: PBFT vs PoA) impacta a escalabilidade e a latência na verificação de credenciais SSI em cenários de alta densidade de dispositivos IoT?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo de Cardoso propõe um modelo de identidade descentralizada para cidades inteligentes, implementado sobre a plataforma blockchain Hyperledger Fabric. A solução enfatiza a segurança da informação e apresenta uma arquitetura detalhada, complementada por diagramas de classe e sequência, bem como experimentos que medem latência, consumo de processamento e uso de memória em ambientes IoT. As avaliações comparam o desempenho da solução proposta frente a cenários sem o modelo, destacando diferenças mensuráveis em memória RAM e tempo de autenticação de dispositivos na plataforma InterSCity. O documento inclui ainda um glossário de siglas que abrange mecanismos de consenso (PBFT, PoA, etc.), criptografia (RSA, TLS) e conceitos de identidade autossoberana (SSI, DLT). Embora forneça métricas de custo computacional, carece de detalhes sobre a magnitude das diferenças observadas, a configuração experimental e a forma como questões como revogação, recuperação de credenciais e privacidade dos cidadãos são tratadas.",
+    "lacunas_possiveis": [
+      "Escalabilidade do modelo em cidades de grande porte",
+      "Impacto da solução na privacidade dos cidadãos",
+      "Mecanismos de revogação e recuperação de credenciais perdidas",
+      "Detalhamento quantitativo das métricas de memória, latência e processamento",
+      "Influência dos diferentes algoritmos de consenso (ex.: PBFT vs PoA) sobre desempenho e escalabilidade"
+    ],
+    "propostas_possiveis": [
+      "Realizar simulações de larga escala para avaliar a escalabilidade do modelo em ambientes urbanos com milhares de dispositivos IoT",
+      "Integrar técnicas de privacidade, como provas de conhecimento zero, e medir seu efeito sobre a latência e o consumo de recursos",
+      "Desenvolver um protocolo de revogação e recuperação de credenciais baseado em secret sharing ou atributos verificáveis",
+      "Conduzir estudo comparativo entre algoritmos de consenso (PBFT, PoA, PoS) focando em latência de autenticação e uso de memória em cenários de alta densidade de dispositivos",
+      "Mapear formalmente as siglas e definições apresentadas para os componentes da arquitetura proposta, criando um modelo de referência que relacione termos de consenso, criptografia e SSI"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:52:22"
+}

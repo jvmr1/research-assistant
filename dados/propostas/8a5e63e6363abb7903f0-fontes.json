@@ -1,0 +1,79 @@
+{
+  "fontes": [
+    {
+      "id": "Tawfik_2025",
+      "titulo": "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "178303345bbd3bb29308",
+          "pagina": 2,
+          "resumo": "O texto descreve a transição dos sistemas de saúde tradicionais para e‑health, destacando a importância dos registros eletrônicos (EHR) e os desafios de interoperabilidade e privacidade. Aponta incidentes de vazamento de dados e apresenta o blockchain como solução potencial para controle de acesso, oferecendo transparência, descentralização e resistência a adulterações, especialmente em ambientes permissioned.",
+          "evidencias": [
+            {
+              "citacao": "Privacy is a major concern in shared environments and must be carefully considered.",
+              "afirmacao": "privacy is a major concern in shared environments"
+            },
+            {
+              "citacao": "Blockchain technology can play a key role in access control by recording and verifying access-related information through a decentralized ledger.",
+              "afirmacao": "blockchain can play a key role in access control"
+            }
+          ]
+        },
+        {
+          "id": "15878b05c8879d1ac8ee",
+          "pagina": 3,
+          "resumo": "O trecho descreve a importância de contabilizar atividades de usuários em sistemas de saúde para auditoria e conformidade, destacando que autenticação, autorização e accounting são essenciais para controle de acesso a prontuários eletrônicos. A pesquisa classifica métodos de controle de acesso baseados em blockchain em permissivos e permissionados, analisa técnicas de privacidade, plataformas, protocolos de consenso e contratos inteligentes, e aponta desafios de privacidade e direções futuras.",
+          "evidencias": [
+            {
+              "citacao": "Accounting: Accounting involves tracking and logging user activity within the healthcare system, including who accessed patient data, when it was accessed, and what actions were taken.",
+              "afirmacao": "Accounting involves tracking and logging user activity within the healthcare system, including who accessed patient data, when it was accessed, and what actions were taken."
+            },
+            {
+              "citacao": "The survey’s main contributions are: 1. The categorization of recent EHR access control methods based on blockchain into two categories: permissionless and permissioned.",
+              "afirmacao": "The survey categorizes recent EHR access control methods based on blockchain into two categories: permissionless and permissioned."
+            }
+          ]
+        },
+        {
+          "id": "d62d99f39b030d90c814",
+          "pagina": 5,
+          "resumo": "O artigo apresenta uma revisão sistemática de trabalhos que utilizam blockchain para controle de acesso e preservação de privacidade em saúde, categorizando métodos em blockchains permissionless e permissioned, avaliando fatores críticos de privacidade e segurança, e apontando a falta de comparações holísticas como lacuna que preenchem.",
+          "evidencias": [
+            {
+              "citacao": "we systematically categorize access control methods into permissionless and permissioned blockchains",
+              "afirmacao": "O estudo categoriza métodos de controle de acesso em blockchains permissionless e permissioned."
+            }
+          ]
+        },
+        {
+          "id": "993a27f7c6b13a9cfd37",
+          "pagina": 6,
+          "resumo": "A Tabela 1 apresenta uma comparação entre o presente levantamento e demais surveys na área de saúde, listando autores, ano de publicação, principais contribuições (frameworks EHR, tipos de blockchain, protocolos de consenso, técnicas de privacidade, controle de acesso) e o período coberto por cada estudo, evidenciando a abrangência e as lacunas abordadas pelo trabalho em relação a revisões anteriores de 2019 a 2024.",
+          "evidencias": [
+            {
+              "citacao": "Table 1 A comparison between this survey and other surveys in the healthcare domain",
+              "afirmacao": "Table 1 A comparison between this survey and other surveys in the healthcare domain"
+            },
+            {
+              "citacao": "Review blockchain applications in healthcare, focusing on blockchain interoperability and security solutions",
+              "afirmacao": "Review of blockchain applications in healthcare, focusing on blockchain interoperability and security solutions"
+            }
+          ]
+        }
+      ],
+      "problema": "Ensuring privacy in blockchain-based healthcare systems is critical due to the sensitive nature of EHRs.",
+      "solucao": "advanced cryptographic techniques have been integrated with blockchain technology to enhance security and privacy.",
+      "avaliacao": "Low latency. High throughput",
+      "limites": "A limited number of voters may affect the network’s decentralization.",
+      "possibilidades": "Investigar a aplicação de SMPC e criptografia homomórfica em IoT de cidades inteligentes, combinando-as com ABE para controle de acesso granular; avaliar o trade‑off entre privacidade e latência em edge computing; criar protótipos de smart contracts que utilizem SMPC para análises de dados de sensores sem revelar informações sensíveis.",
+      "assinatura": "36f23c87078e4a5a079a"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

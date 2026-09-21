@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo de Cardoso propõe um modelo de identidade descentralizada para cidades inteligentes, implementado sobre a plataforma blockchain Hyperledger Fabric. A solução enfatiza a segurança da informação e apresenta uma arquitetura detalhada, complementada por diagramas de classe e sequência, bem como experimentos que medem latência, consumo de processamento e uso de memória em ambientes IoT. As avaliações comparam o desempenho da solução proposta frente a cenários sem o modelo, destacando diferenças mensuráveis em memória RAM e tempo de autenticação de dispositivos na plataforma InterSCity. O documento inclui ainda um glossário de siglas que abrange mecanismos de consenso (PBFT, PoA, etc.), criptografia (RSA, TLS) e conceitos de identidade autossoberana (SSI, DLT). Embora forneça métricas de custo computacional, carece de detalhes sobre a magnitude das diferenças observadas, a configuração experimental e a forma como questões como revogação, recuperação de credenciais e privacidade dos cidadãos são tratadas.",
+  "lacunas_possiveis": [
+    "Escalabilidade do modelo em cidades de grande porte",
+    "Impacto da solução na privacidade dos cidadãos",
+    "Mecanismos de revogação e recuperação de credenciais perdidas",
+    "Detalhamento quantitativo das métricas de memória, latência e processamento",
+    "Influência dos diferentes algoritmos de consenso (ex.: PBFT vs PoA) sobre desempenho e escalabilidade"
+  ],
+  "propostas_possiveis": [
+    "Realizar simulações de larga escala para avaliar a escalabilidade do modelo em ambientes urbanos com milhares de dispositivos IoT",
+    "Integrar técnicas de privacidade, como provas de conhecimento zero, e medir seu efeito sobre a latência e o consumo de recursos",
+    "Desenvolver um protocolo de revogação e recuperação de credenciais baseado em secret sharing ou atributos verificáveis",
+    "Conduzir estudo comparativo entre algoritmos de consenso (PBFT, PoA, PoS) focando em latência de autenticação e uso de memória em cenários de alta densidade de dispositivos",
+    "Mapear formalmente as siglas e definições apresentadas para os componentes da arquitetura proposta, criando um modelo de referência que relacione termos de consenso, criptografia e SSI"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T17:34:00",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 7,
+        "resumo": "O artigo propõe um módulo de Detecção de Anomalias baseado em DNN que analisa logs de tráfego IoT e classifica ameaças, enviando os resultados para uma rede blockchain para registro permanente e transparência. Contudo, o fluxo de dados que descreve armazenamento, verificação e uso das anomalias na blockchain não está detalhado, assim como a automação via contratos inteligentes. A combinação de IA preditiva com blockchain visa melhorar a segurança cibernética em IoT, reduzindo ataques e preservando a integridade dos dados.",
+        "interpretacao": "O trabalho enfatiza a integração de DNNs para detecção de ameaças com registro imutável em blockchain, mas deixa em aberto como os logs são efetivamente armazenados, verificados e como contratos inteligentes respondem às anomalias, indicando uma lacuna de implementação prática.",
+        "duvidas": "Como os resultados da detecção são codificados e inseridos na blockchain? Qual é a lógica dos contratos inteligentes para mitigação automática? Qual o impacto de latência e consumo de energia ao combinar DNNs em tempo real com operações de blockchain em dispositivos IoT de recursos limitados?"
+      },
+      {
+        "pagina": 8,
+        "resumo": "O artigo propõe integrar redes neurais profundas (DNN) com blockchain para detectar e mitigar anomalias em dispositivos IoT em tempo real. As equações mostram a transição de dados processados para um sistema de redução de ameaças assegurado por blockchain, enquanto o DNN categoriza riscos. O blockchain fornece registro descentralizado, imutável e remediação automática. A arquitetura utiliza Hyperledger Fabric ou blockchains permissionados, aproveitando seu consenso de baixa latência (PBFT) para suportar ambientes de cidades inteligentes.",
+        "interpretacao": "A combinação de DNN e blockchain visa criar um mecanismo de defesa em tempo real, onde a inteligência artificial identifica padrões anômalos e o ledger distribuído assegura a integridade e a ação corretiva automática, reduzindo a superfície de ataque em ambientes IoT de cidades inteligentes.",
+        "duvidas": "Como o modelo lida com a sobrecarga computacional em dispositivos de borda? Qual o impacto do consenso PBFT na latência de resposta a anomalias? Há avaliação de escalabilidade em cenários multi‑organização?"
+      },
+      {
+        "pagina": 9,
+        "resumo": "O texto destaca o uso de Hyperledger Fabric como alternativa ao Ethereum PoW para IoT, recomendando blockchains leves com consenso PoA ou DAGs para reduzir custo computacional e energia. Apresenta equações que ilustram a integração de alertas de segurança com IA e blockchain, e relata que a solução alcança mais de 98% de acurácia na detecção de ameaças, incluindo DDoS e malware.",
+        "interpretacao": "O trecho enfatiza a escolha de blockchains leves como Hyperledger Fabric com consenso PoA ou DAGs para reduzir custos computacionais em IoT, e destaca a alta precisão (≥98%) da detecção de ameaças usando DNNs, reforçando a proposta de combinar IA e blockchain para segurança autônoma e em tempo real.",
+        "duvidas": "Como será realizada a análise de custo computacional para treinamento DNN e operações blockchain? Qual o impacto da latência dos consensos PoA/DAGs nas respostas em tempo real? Como a solução se comporta em dispositivos de borda com recursos limitados?"
+      },
+      {
+        "pagina": 10,
+        "resumo": "O texto descreve o framework DNNs‑BCT que combina redes neurais profundas com blockchain para detectar anomalias em IoT. Utiliza funções de ativação avançadas, dropout e batch‑normalization, além de seleção de características (RFE, PCA, MI) extraídas de eventos de segurança blockchain, logs de dispositivos e tráfego de rede. Detecta exfiltração, DDoS, ataques Sybil e brute‑force. O pipeline inclui coleta e pré‑processamento de dados (75 % treino, 25 % teste) e treinamento de DNN para classificar o comportamento da rede como normal, benigno ou perigoso, gerando alertas em tempo real.",
+        "interpretacao": "O trecho evidencia que a proposta combina técnicas avançadas de deep learning e blockchain para criar um sistema de detecção de anomalias que prioriza eficiência computacional e capacidade de identificar múltiplas ameaças, reforçando a ideia de segurança descentralizada e auto‑aprendente para ambientes IoT.",
+        "duvidas": "Não há detalhes sobre a avaliação empírica (métricas, benchmarks) nem sobre o impacto do custo computacional real em dispositivos de borda; também falta informação sobre como as credenciais verificáveis seriam integradas ao fluxo de detecção."
+      },
+      {
+        "pagina": 11,
+        "resumo": "O trecho descreve como vulnerabilidades e falhas de segurança não descobertas em redes IoT podem ser transformadas em um framework de autenticação protegido por blockchain, combinando camadas de segurança Ba e mecanismos defensivos adaptativos Ka alimentados por IA. Destaca ainda o uso de smart contracts para mitigação automática de ameaças em tempo real, garantindo integridade dos dados e registro imutável.",
+        "interpretacao": "O autor propõe uma arquitetura que une IA para detecção de anomalias e blockchain para registro imutável e resposta automática via smart contracts, reforçando a segurança e a confiança em redes IoT.",
+        "duvidas": "Como a solução lida com a sobrecarga computacional em dispositivos de borda? Qual o impacto do uso de smart contracts na latência de mitigação de ameaças?"
+      },
+      {
+        "pagina": 12,
+        "resumo": "O trecho apresenta um método que converte vulnerabilidades de redes IoT, inclusive em monitoramento de tráfego marítimo, em camadas de autenticação protegidas por blockchain e controle de acesso descentralizado, combinados com modelos de IA para detecção de anomalias em tempo real. Equações demonstram a transição de falhas de segurança para um sistema multi‑nível que integra verificação comportamental, análise adaptativa e medidas híbridas, reforçando a proteção descentralizada dos dispositivos IoT.",
+        "interpretacao": "Os autores propõem que, ao integrar blockchain e IA, vulnerabilidades de exposição de dados e falhas de segurança em redes IoT podem ser mitigadas por meio de autenticação descentralizada e detecção contínua de anomalias, criando um mecanismo de defesa em camadas que combina verificação comportamental e análises adaptativas.",
+        "duvidas": "Como o modelo lida com a sobrecarga computacional em dispositivos de borda? Qual o impacto da latência introduzida pelos contratos inteligentes nas respostas em tempo real? Existem avaliações empíricas que quantifiquem a melhoria de segurança versus o custo de implementação?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta um framework que combina redes neurais profundas (DNN) com blockchain para detectar e mitigar anomalias em ambientes IoT, especialmente em cidades inteligentes. Os DNN analisam logs de tráfego e classificam ameaças, enviando os resultados a um ledger distribuído (Hyperledger Fabric ou outras blockchains permissionadas) para registro imutável e transparência. O consenso de baixa latência (PBFT, PoA ou DAG) é usado para suportar respostas em tempo real, e smart contracts são propostos para remediação automática. A solução inclui técnicas avançadas de deep learning (ativação, dropout, batch‑normalization) e seleção de características (RFE, PCA, MI), alcançando acurácia acima de 98 % na detecção de DDoS, malware, Sybil e brute‑force. Contudo, o artigo não detalha como os resultados são codificados na blockchain, a lógica dos contratos inteligentes, nem avalia latência, consumo de energia, custo computacional ou escalabilidade em dispositivos de borda e cenários multi‑organização.",
+    "lacunas_possiveis": [
+      "Codificação e inserção dos resultados de detecção na blockchain",
+      "Lógica e políticas dos smart contracts para mitigação automática",
+      "Impacto de latência e consumo de energia ao combinar DNN em tempo real com operações blockchain em dispositivos de borda",
+      "Análise de custo computacional e escalabilidade em ambientes multi‑organização",
+      "Integração de credenciais verificáveis ou SSI no fluxo de detecção"
+    ],
+    "propostas_possiveis": [
+      "Desenvolver um esquema de payload e assinatura digital para registrar anomalias na blockchain",
+      "Implementar e testar smart contracts que executem ações de mitigação baseadas em categorias de ameaça",
+      "Realizar benchmarks de latência, energia e uso de CPU/GPU em nós de borda com diferentes consensos (PBFT, PoA, DAG)",
+      "Comparar custos de treinamento DNN e operação blockchain em cenários de cidades inteligentes com múltiplas organizações",
+      "Incorporar verifiable credentials/SSI para autenticação descentralizada dos dispositivos antes da análise de anomalias"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:34:29"
+}

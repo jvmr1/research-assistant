@@ -1,0 +1,17 @@
+{
+  "resumo": "A dissertação de mestrado profissional de Wesley Novaes Fioreze Costa (UFSP, 2023‑06‑2026) propõe um framework que combina contratos inteligentes na blockchain Hyperledger Besu com criptografia baseada em atributos (ABE) para viabilizar o compartilhamento seguro, auditável e privado de dados IIoT entre organizações sem confiança prévia. O objetivo é substituir intermediários centralizados, oferecendo controle granular de acesso, privacidade, auditabilidade e interoperabilidade em ambientes industriais distribuídos. O trabalho destaca a imutabilidade e consenso da blockchain como suporte à governança descentralizada e a flexibilidade da ABE para políticas de acesso baseadas em atributos.",
+  "lacunas_possiveis": [
+    "Requisitos de interoperabilidade entre organizações não detalhados.",
+    "Mecanismos de revogação de credenciais e recuperação de acesso perdido não especificados.",
+    "Métricas de desempenho e escalabilidade dos contratos inteligentes em cenários de alta frequência de dados ausentes.",
+    "Custos operacionais e de manutenção da blockchain Hyperledger Besu não avaliados.",
+    "Impacto da latência introduzida pelos smart contracts nas aplicações de tempo real não analisado."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um registro de revogação baseado em blockchain para suportar revogação e recuperação de credenciais em ambientes SSI.",
+    "Integrar carteiras digitais de identidade autossoberana (SSI) para gerenciar credenciais de dispositivos e cidadãos.",
+    "Avaliar a escalabilidade da verificação de políticas ABE com benchmarks de grande volume de dispositivos IIoT.",
+    "Explorar otimizações de custos e desempenho em configurações permissionadas da Hyperledger Besu para ambientes industriais.",
+    "Combinar ABE com criptografia homomórfica para permitir processamento de dados criptografados sem revelar atributos sensíveis."
+  ]
+}

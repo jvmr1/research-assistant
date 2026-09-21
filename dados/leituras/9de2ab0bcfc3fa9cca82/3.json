@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta uma comparação de suas contribuições com outras revisões sobre vulnerabilidades e mecanismos de defesa em IIoT, inclui uma tabela detalhada e discute guias de segurança como o NIST IR 8259A e as recomendações da ENISA, apontando a ausência de procedimentos de implementação prática e a necessidade de recursos operacionais para fortalecer a segurança em ambientes de manufatura inteligente.",
+  "perfil": {
+    "problema": "cybersecurity concerns pose a significant obstacle to the adoption of IIoT",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "the guide fails to provide implementation procedures for these guidelines.",
+    "possibilidades": "Desenvolver procedimentos operacionais detalhados para as recomendações do NIST IR 8259A; integrar as diretrizes da ENISA com mecanismos de identidade auto‑soberana e blockchain para controle de acesso descentralizado; criar ferramentas automatizadas que traduzam as boas‑práticas em scripts de configuração para dispositivos IIoT; validar as recomendações em linhas de produção reais, medindo impactos em segurança e produtividade; explorar extensões do framework NIST CSF‑2.0 para ambientes de edge computing em cidades inteligentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "the guide fails to provide implementation procedures for these guidelines.",
+      "afirmacao": "the guide fails to provide implementation procedures for these guidelines."
+    },
+    {
+      "citacao": "The framework proposed in the guide has been widely used to reduce cybersecurity threats in different manufacturing use cases.",
+      "afirmacao": "The framework proposed in the guide has been widely used to reduce cybersecurity threats in different manufacturing use cases."
+    }
+  ],
+  "interpretacao": "O trecho evidencia que, embora existam guias reconhecidos (NIST, ENISA) que listam capacidades e recomendações de segurança para IIoT, ainda falta orientação prática para sua implementação, o que representa uma lacuna que pode ser preenchida por pesquisas focadas em procedimentos operacionais, automação e integração com tecnologias emergentes como blockchain e SSI.",
+  "duvidas": "Como os autores propõem operacionalizar as recomendações do NIST IR 8259A? Quais são os passos concretos sugeridos para superar a ausência de procedimentos de implementação? Há planos de validar as diretrizes em ambientes industriais reais? Como as recomendações da ENISA são alinhadas com padrões como ISO/IEC no contexto de cidades inteligentes?",
+  "avisos": [],
+  "id": "2ee88b18acabfedb3234",
+  "artigo": "Abdullahi_2025",
+  "pagina": 4,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "cybersecurity concerns pose a significant obstacle to the adoption of IIoT",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "the guide fails to provide implementation procedures for these guidelines.",
+    "possibilidades": "Desenvolver procedimentos operacionais detalhados para as recomendações do NIST IR 8259A; integrar as diretrizes da ENISA com mecanismos de identidade auto‑soberana e blockchain para controle de acesso descentralizado; criar ferramentas automatizadas que traduzam as boas‑práticas em scripts de configuração para dispositivos IIoT; validar as recomendações em linhas de produção reais, medindo impactos em segurança e produtividade; explorar extensões do framework NIST CSF‑2.0 para ambientes de edge computing em cidades inteligentes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9de2ab0bcfc3fa9cca82"
+  }
+}

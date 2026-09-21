@@ -1,0 +1,34 @@
+{
+  "resumo": "O estudo propõe um sistema de gestão de resíduos sólidos que combina monitoramento em tempo real via sensores ultrassônicos IoT, classificação de resíduos por IA e armazenamento de dados em blockchain. A blockchain garante integridade e acesso rápido aos dados, enquanto algoritmos de IA otimizam rotas de coleta, reduzindo consumo de combustível e impactos ambientais. O modelo híbrido de IA aprende continuamente, melhorando a eficiência e a escalabilidade da solução.",
+  "perfil": {
+    "problema": "Smart waste management is vital for reducing environmental impact and improving quality of life in smart cities.",
+    "solucao": "The novelty of this system lies not only in the use of AI for waste classification but also in its integration with IoT and Blockchain technologies.",
+    "avaliacao": "Performance will be assessed using retrieval metrics and visualization tools to evaluate the impact of hybrid ML and DL models on waste detection and classification.",
+    "limites": "Não informado",
+    "possibilidades": "Investigar a aplicação de identidade auto‑soberana (SSI) para controle de acesso aos dados dos contêineres; incorporar criptografia baseada em atributos (ABE) para privacidade na troca de informações entre municípios; avaliar a escalabilidade da solução em arquiteturas de borda (edge computing); testar interoperabilidade com plataformas de gestão de resíduos de diferentes fornecedores; analisar o impacto econômico de contratos inteligentes para pagamento automático de serviços de coleta."
+  },
+  "evidencias": [
+    {
+      "citacao": "Optimization of waste collection routes using AI algorithms, reducing fuel consumption, labor, and environmental impact.",
+      "afirmacao": "Algoritmos de IA otimizam rotas de coleta, reduzindo consumo de combustível e impacto ambiental."
+    }
+  ],
+  "interpretacao": "A integração de IA, IoT e blockchain cria um ciclo virtuoso onde dados confiáveis alimentam modelos preditivos que, por sua vez, aprimoram a operação logística, resultando em menor desperdício energético e maior sustentabilidade urbana.",
+  "duvidas": "Como a solução lida com a revogação de credenciais de dispositivos IoT comprometidos? Qual é o overhead de latência introduzido pela escrita em blockchain em ambientes de borda? Existem métricas de privacidade avaliadas para os dados compartilhados entre diferentes autoridades municipais?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "9bc0da69557701dac1b1",
+  "artigo": "Alabdali_2025",
+  "pagina": 2,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Smart waste management is vital for reducing environmental impact and improving quality of life in smart cities.",
+    "solucao": "The novelty of this system lies not only in the use of AI for waste classification but also in its integration with IoT and Blockchain technologies.",
+    "avaliacao": "Performance will be assessed using retrieval metrics and visualization tools to evaluate the impact of hybrid ML and DL models on waste detection and classification.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar a aplicação de identidade auto‑soberana (SSI) para controle de acesso aos dados dos contêineres; incorporar criptografia baseada em atributos (ABE) para privacidade na troca de informações entre municípios; avaliar a escalabilidade da solução em arquiteturas de borda (edge computing); testar interoperabilidade com plataformas de gestão de resíduos de diferentes fornecedores; analisar o impacto econômico de contratos inteligentes para pagamento automático de serviços de coleta.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "5479cebb906bec948c91"
+  }
+}

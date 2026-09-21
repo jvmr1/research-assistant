@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T16:50:03",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+    "perfil_anterior": {
+      "problema": "unauthorized access, malware assaults, and data breaches",
+      "solucao": "blockchain-based architecture and integrated DNN to ensure data integrity, enhance anomaly detection, and offer IoT networks autonomous, distributed threat-mitigating properties",
+      "avaliacao": "Showing a 95.25% efficiency in reaction time",
+      "limites": "weaknesses in smart contracts, Sybil attacks, and 51% assaults may still penetrate blockchain-based security procedures",
+      "possibilidades": "Investigar consenso leve (PoA, DAG) para reduzir latência em bordas de cidades inteligentes; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar quantização e poda de modelos DNN para diminuir carga computacional; explorar aprendizado federado para treinamento distribuído sem expor dados sensíveis; avaliar robustez contra ataques adversariais usando técnicas de defesa avançadas."
+    },
+    "pagina": 15,
+    "texto": "Combining input from users’ delay ( [ui − ew′′]), Bayesian-based planning ( Ba [s − t′′]), and an AI-driven \nenrichment mechanism (Ya [enk − ny′′]) into the analysis of response time ( RT ) is what Eq.  23 represents. \nThis method keeps cybersecurity threat mitigation very accurate while minimizing system latency.Distributed \nstorage alternatives like IPFS or cloud-based systems may be used off-chain to store less sensitive data, reducing \ntransaction overhead. The blockchain should only record key security events, including identified abnormalities \nor authentication failures. Further ways to improve performance and decrease blockchain bloat include batching \ntransactions and compressing logs. T o minimize delays caused by latency, the system should optimize the \nexecution of smart contracts so that automatic answers and real-time verification are possible. Edge computing \nmay preprocess IoT data before blockchain integration to further reduce network congestion.\nGuaranteeing perfect interaction with the huge IoT systems shown in Fig.  9, the framework ensures a \n94.96% scalability. Unlike centralized security solutions, which struggle with growing network size and data \nFig. 9. Analysis of scalability.\n \nFig. 8. Analysis of response time.\n \nScientific Reports |        (2025) 15:22369 15| https://doi.org/10.1038/s41598-025-04164-4\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve a integração de armazenamento off‑chain (IPFS ou nuvem) e otimização de contratos inteligentes para reduzir latência, além de usar edge computing para pré‑processar dados IoT. O método mantém alta precisão na mitigação de ameaças, alcançando 94,96% de escalabilidade, e propõe técnicas como batch de transações e compressão de logs para evitar o inchaço da blockchain.",
+    "perfil": {
+      "problema": "unauthorized access, malware assaults, and data breaches",
+      "solucao": "blockchain-based architecture and integrated DNN to ensure data integrity, enhance anomaly detection, and offer IoT networks autonomous, distributed threat-mitigating properties",
+      "avaliacao": "94.96% scalability",
+      "limites": "weaknesses in smart contracts, Sybil attacks, and 51% assaults may still penetrate blockchain-based security procedures",
+      "possibilidades": "Explorar consenso leve (PoA, DAG) em ambientes de borda para reduzir ainda mais a latência; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar quantização e poda de modelos DNN para diminuição da carga computacional nos nós de borda; investigar aprendizado federado para treinamento distribuído sem exposição de dados sensíveis; avaliar a robustez contra ataques adversariais usando técnicas de defesa avançadas; testar estratégias de batch e compressão de logs para minimizar o crescimento da blockchain em cenários de cidades inteligentes."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "The framework ensures a 94.96% scalability.",
+        "citacao": "94.96% scalability"
+      },
+      {
+        "afirmacao": "Distributed storage alternatives like IPFS or cloud-based systems may be used off-chain to store less sensitive data, reducing transaction overhead.",
+        "citacao": "Distributed storage alternatives like IPFS or cloud-based systems may be used off-chain to store less sensitive data, reducing transaction overhead"
+      }
+    ],
+    "interpretacao": "A proposta reforça a importância de combinar blockchain com computação de borda e armazenamento off‑chain para manter alta precisão de segurança ao mesmo tempo em que controla a latência e o tamanho da cadeia.",
+    "duvidas": "Como a otimização dos contratos inteligentes será implementada na prática? Qual o impacto real da compressão de logs na detecção de anomalias? Existem métricas de comparação com soluções centralizadas para validar a melhoria de latência?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T16:50:18"
+}

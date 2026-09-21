@@ -1,0 +1,84 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-20T23:35:16",
+  "revisao": "05e12be4f82748351512",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "A dissertação de mestrado profissional de Wesley Novaes Fioreze Costa (UFSP, junho 2026) propõe um framework que combina contratos inteligentes na blockchain Hyperledger Besu com criptografia baseada em atributos (ABE) para viabilizar o compartilhamento seguro, auditável e privado de dados IIoT entre organizações sem confiança prévia. O objetivo é superar a dependência de intermediários centralizados, oferecendo controle granular de acesso, privacidade, auditabilidade e interoperabilidade. As fichas apontam questões abertas sobre requisitos de interoperabilidade, mecanismos de revogação e recuperação de credenciais, métricas de desempenho, escalabilidade dos contratos inteligentes e custos operacionais da blockchain.",
+        "lacunas_possiveis": [
+          "Detalhamento dos requisitos de interoperabilidade entre organizações distintas",
+          "Mecanismos concretos de revogação de credenciais e recuperação de acesso perdido",
+          "Métricas de desempenho e avaliação de escalabilidade para alta frequência de dados IIoT",
+          "Análise de custos operacionais e de manutenção da blockchain Hyperledger Besu em ambientes industriais"
+        ],
+        "propostas_possiveis": [
+          "Explorar a integração de identidade autossoberana (SSI) com DIDs para suportar revogação e recuperação de credenciais em cenários IIoT",
+          "Desenvolver listas de revogação distribuídas (CRL) ou esquemas de revogação baseados em atributos para ABE dentro da blockchain",
+          "Implementar técnicas de off‑chain storage ou sidechains para melhorar a escalabilidade e reduzir latência dos smart contracts",
+          "Criar um benchmark de desempenho que mensure latência, throughput e consumo de recursos ao combinar ABE e contratos inteligentes em fluxos de dados de alta frequência"
+        ]
+      },
+      {
+        "resumo": "A dissertação de Wesley Fioreze (23/06/2026) investiga a combinação de criptografia baseada em atributos (ABE/CP‑ABE/KP‑ABE) e blockchain (Hyperledger Besu) para garantir segurança, privacidade e interoperabilidade de dados em ambientes IIoT de cidades inteligentes. O trabalho segue uma metodologia estruturada, com revisão sistemática da literatura, definição de questões de pesquisa, critérios de inclusão/exclusão e avaliação de desempenho criptográfico, incluindo sobrecarga de payload e complexidade de políticas de acesso. O índice apresenta fluxos de ABE, contratos inteligentes, diagramas de arquitetura, métricas de desempenho e um glossário que inclui DID, SSI, VC e KP‑ABE, indicando que a solução proposta pretende integrar identidade autossoberana, credenciais verificáveis e controle de acesso baseado em atributos. Contudo, detalhes sobre a integração prática de SSI/DIDs, mecanismos de revogação, recuperação de credenciais e o papel do IPFS permanecem ausentes.",
+        "lacunas_possiveis": [
+          "Integração concreta entre DIDs/SSI e ABE/CP‑ABE nas fases de revogação e recuperação de credenciais.",
+          "Definição e avaliação de critérios específicos de desempenho (latência, overhead) para políticas de acesso complexas.",
+          "Descrição dos mecanismos de recuperação de credenciais perdidas dentro dos fluxos de contratos inteligentes.",
+          "Papel e implementação do IPFS no gerenciamento e armazenamento de credenciais."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um fluxo que combine SSI/DIDs com KP‑ABE para controle de acesso seletivo e revogação distribuída.",
+          "Implementar um módulo de recuperação de credenciais baseado em secret sharing integrado a smart contracts.",
+          "Avaliar o impacto de diferentes complexidades de políticas ABE na latência de transações blockchain em cenários IIoT.",
+          "Utilizar IPFS como camada de armazenamento off‑chain para credenciais verificáveis, garantindo disponibilidade e integridade."
+        ]
+      },
+      {
+        "resumo": "A dissertação apresenta, nos capítulos finais, discussões sobre privacidade, controle de acesso e escalabilidade criptográfica, apontando a revogação de atributos como desafio e reconhecendo a necessidade de ampliar a avaliação de escalabilidade. Contextualiza a evolução da Indústria 4.0 e o IIoT, enfatizando a importância da interoperabilidade técnica, semântica, organizacional e legal, mas delimita seu foco à camada técnica baseada em publish/subscribe, sugerindo oportunidade de incluir identidade descentralizada. Destaca ainda a necessidade de interoperabilidade orientada à governança e segurança para troca de dados entre domínios administrativos independentes, sem confiança prévia, ressaltando que o crescimento exponencial de dispositivos IoT (previsto em 29 bi até 2030) eleva os desafios de compartilhamento seguro, controle de acesso granular, privacidade e auditoria, enquanto a interoperabilidade semântica permanece fora do escopo.",
+        "lacunas_possiveis": [
+          "Ausência de métricas específicas para avaliar a escalabilidade criptográfica.",
+          "Escopo limitado à interoperabilidade técnica, sem considerar camadas semântica e organizacional.",
+          "Falta de integração de SSI/DIDs nos protocolos publish/subscribe.",
+          "Revogação de atributos ainda não totalmente resolvida.",
+          "Requisitos de desempenho não definidos para controle de acesso granular em ambientes IIoT de alta frequência."
+        ],
+        "propostas_possiveis": [
+          "Estender a avaliação de escalabilidade criptográfica com métricas detalhadas e cenários de cidades inteligentes.",
+          "Integrar mecanismos de identidade autossoberana (SSI/DIDs) e credenciais verificáveis ao modelo publish/subscribe.",
+          "Desenvolver extensões que abordem interoperabilidade semântica e organizacional, complementando a camada técnica.",
+          "Propor soluções de revogação de atributos baseadas em blockchain ou criptografia baseada em atributos (ABE).",
+          "Criar um esquema de controle de acesso granular de alto desempenho usando ABE para fluxos de dados IoT."
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "A dissertação de mestrado profissional de Wesley Novaes Fioreze Costa (UFSP, junho 2026) propõe um framework que combina contratos inteligentes na blockchain Hyperledger Besu com criptografia baseada em atributos (ABE/CP‑ABE/KP‑ABE) para viabilizar o compartilhamento seguro, auditável e privado de dados IIoT em cidades inteligentes. O objetivo é eliminar a dependência de intermediários centralizados, oferecendo controle granular de acesso, privacidade, auditabilidade e interoperabilidade entre organizações sem confiança prévia. O trabalho inclui revisão sistemática da literatura, definição de questões de pesquisa, avaliação de desempenho criptográfico (sobrecarga de payload e complexidade de políticas) e apresenta diagramas de arquitetura que incorporam conceitos de identidade autossoberana (SSI), identificadores descentralizados (DIDs) e credenciais verificáveis (VC). Contudo, a dissertação deixa em aberto detalhes sobre requisitos de interoperabilidade (técnica, semântica e organizacional), mecanismos concretos de revogação e recuperação de credenciais, métricas específicas de desempenho e escalabilidade, custos operacionais da blockchain e o papel de soluções off‑chain como IPFS. (fonte: PDF parcial)",
+    "lacunas_possiveis": [
+      "Detalhamento dos requisitos de interoperabilidade entre organizações distintas, abrangendo aspectos técnicos, semânticos e organizacionais.",
+      "Integração concreta de SSI/DIDs com ABE/CP‑ABE/KP‑ABE nas fases de emissão, revogação e recuperação de credenciais.",
+      "Definição e avaliação de métricas de desempenho e escalabilidade (latência, throughput, overhead) para políticas de acesso complexas em fluxos de dados IIoT de alta frequência.",
+      "Mecanismos concretos de revogação de credenciais e recuperação de acesso perdido, incluindo listas de revogação distribuídas ou esquemas baseados em secret sharing.",
+      "Análise de custos operacionais e de manutenção da blockchain Hyperledger Besu (ou alternativas) em ambientes industriais.",
+      "Papel e implementação de IPFS ou outras soluções off‑chain no gerenciamento, armazenamento e disponibilidade de credenciais verificáveis.",
+      "Integração de SSI/DIDs nos protocolos publish/subscribe de IIoT.",
+      "Requisitos de desempenho não definidos para controle de acesso granular em ambientes IIoT de alta frequência."
+    ],
+    "propostas_possiveis": [
+      "Integrar SSI/DIDs com criptografia baseada em atributos (ABE/CP‑ABE/KP‑ABE) para controle de acesso seletivo, revogação distribuída e recuperação de credenciais em cenários IIoT.",
+      "Desenvolver e avaliar listas de revogação distribuídas (CRL) ou esquemas de revogação baseados em atributos dentro da blockchain.",
+      "Implementar módulos de recuperação de credenciais baseados em secret sharing integrados a smart contracts.",
+      "Utilizar armazenamento off‑chain (IPFS ou sidechains) para credenciais verificáveis, melhorando disponibilidade, integridade e escalabilidade.",
+      "Criar benchmarks e métricas detalhadas (latência, throughput, overhead, consumo de recursos) para avaliar o desempenho e a escalabilidade da combinação ABE + smart contracts em fluxos de dados de alta frequência.",
+      "Estender o modelo publish/subscribe de IIoT para incorporar SSI/DIDs e credenciais verificáveis, suportando controle de acesso granular.",
+      "Desenvolver extensões que abordem interoperabilidade semântica e organizacional entre domínios administrativos, complementando a camada técnica.",
+      "Avaliar o impacto de diferentes complexidades de políticas ABE na performance da blockchain."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-20T23:36:01"
+}

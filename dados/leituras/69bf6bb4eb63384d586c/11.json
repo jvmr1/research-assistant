@@ -1,0 +1,30 @@
+{
+  "resumo": "O trecho apresenta um amplo conjunto de trabalhos recentes (2018‑2024) que exploram a integração de blockchain e identidade auto‑soberana (SSI) em múltiplos domínios, como plataformas digitais de identidade, delegação de direitos veiculares, compartilhamento de informações de ameaças, entrega de UAVs, identidade nacional, educação, saúde, mercados de energia e sistemas ciber‑físicos. Essa variedade evidencia o crescente interesse em soluções de identidade distribuída para cidades inteligentes e IoT.",
+  "perfil": {
+    "problema": "Trust emerged as the central concern across various layers of DLT-based IDM architectures",
+    "solucao": "provides conceptual clarity about fundamental components while remaining adaptable to emerging technologies and implementation patterns",
+    "avaliacao": "the taxonomy supports both theoretical advancement and practical implementation in this critical domain",
+    "limites": "Another limitation could be the rapid evolution of the research field",
+    "possibilidades": "Aplicar a taxonomia para avaliar soluções SSI em cidades inteligentes com computação de borda; Incorporar métricas de consumo energético de DLT ao avaliar dispositivos IoT; Estender a taxonomia para incluir modelos de governança transjurisdicional em compartilhamento de dados públicos; Desenvolver um framework de interoperabilidade que alinhe a taxonomia com padrões W3C DID e Verifiable Credentials."
+  },
+  "evidencias": [],
+  "interpretacao": "A extensa lista de referências demonstra que a combinação de blockchain e SSI está sendo amplamente investigada para atender demandas de autenticação, controle de acesso e privacidade em ambientes distribuídos, reforçando a pertinência da taxonomia proposta para orientar pesquisas em cidades inteligentes e IoT.",
+  "duvidas": "Quais critérios específicos a taxonomia utiliza para avaliar interoperabilidade entre diferentes blockchains? Como a taxonomia trata a revogação de credenciais em cenários de computação de borda?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "410159a3c8bde585ba5c",
+  "artigo": "Vaziry_2025",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Trust emerged as the central concern across various layers of DLT-based IDM architectures",
+    "solucao": "provides conceptual clarity about fundamental components while remaining adaptable to emerging technologies and implementation patterns",
+    "avaliacao": "the taxonomy supports both theoretical advancement and practical implementation in this critical domain",
+    "limites": "Another limitation could be the rapid evolution of the research field",
+    "possibilidades": "Aplicar a taxonomia para avaliar soluções SSI em cidades inteligentes com computação de borda; Incorporar métricas de consumo energético de DLT ao avaliar dispositivos IoT; Estender a taxonomia para incluir modelos de governança transjurisdicional em compartilhamento de dados públicos; Desenvolver um framework de interoperabilidade que alinhe a taxonomia com padrões W3C DID e Verifiable Credentials.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

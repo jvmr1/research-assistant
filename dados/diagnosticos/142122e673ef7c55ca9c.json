@@ -1,0 +1,101 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T18:20:46",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo em pré‑publicação, recebido em 24/11/2025 e aceito em 21/01/2026, propõe um gerenciamento da cadeia de suprimentos de vacinas que preserva a privacidade ao combinar blockchain e identidade auto‑soberana (SSI). Os autores argumentam que a integração de SSI ao blockchain reduz a exposição de dados on‑chain, permite verificação descentralizada de credenciais e oferece controle de acesso baseado em papéis, melhorando rastreabilidade, transparência e interoperabilidade em ambientes multi‑jurisdicionais. Estudos empíricos apresentados indicam eficácia da solução, embora reconheçam desafios de escalabilidade, interoperabilidade e privacidade. As fichas apontam que soluções anteriores baseadas apenas em blockchain dependiam de identidades centralizadas, limitando o controle de acesso fino. O trabalho destaca ainda a necessidade de mecanismos de revogação de credenciais em tempo real e de avaliação de desempenho em cenários de alta taxa de transações e edge computing.",
+        "lacunas_possiveis": [
+          "Protocolos específicos de autenticação e controle de acesso não descritos.",
+          "Mecanismos de revogação de credenciais SSI em tempo real ainda não detalhados.",
+          "Avaliação de desempenho e latência em ambientes de alta frequência de transações e edge computing ausente.",
+          "Impacto de diferentes topologias de rede edge na escalabilidade não investigado.",
+          "Falta de métricas claras para validar a eficácia da solução proposta."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver e testar protocolos de autenticação e controle de acesso baseados em SSI para IoT de cidades inteligentes.",
+          "Implementar e comparar mecanismos de revogação distribuída de credenciais, medindo consistência e tempo de propagação.",
+          "Realizar experimentos de desempenho em cenários de alta taxa de transações, incluindo medição de latência e overhead em dispositivos de baixa potência.",
+          "Avaliar a escalabilidade da arquitetura sob diferentes topologias de rede edge (e.g., fog, cloud‑edge híbrido).",
+          "Definir e aplicar métricas quantitativas (ex.: taxa de falsificação detectada, tempo de verificação) para validar a eficácia da solução."
+        ]
+      },
+      {
+        "resumo": "O artigo revisa extensivamente sistemas de rastreabilidade de medicamentos, focando na integração de blockchain e identidade auto‑soberana (SSI) para a cadeia de suprimentos de vacinas. Propõe um framework que combina SSI, contratos inteligentes, IoT, IPFS e credenciais verificáveis armazenadas em carteiras controladas pelos pacientes, visando melhorar privacidade, interoperabilidade e controle de acesso. A revisão de trabalhos relacionados destaca avanços, mas aponta lacunas na generalização desses modelos para domínios como energia descentralizada, edge computing e cidades inteligentes, bem como a ausência de mecanismos robustos de revogação de credenciais e padrões SSI adequados. As fichas apontam dúvidas sobre métricas de desempenho, escalabilidade em ambientes de alta densidade de dispositivos IoT, custos operacionais da integração ABE‑IoT e validação organizacional em contextos transfronteiriços.",
+        "lacunas_possiveis": [
+          "Ausência de métricas de desempenho e escalabilidade específicas para o framework proposto.",
+          "Escalabilidade das carteiras de pacientes em ambientes de alta demanda IoT.",
+          "Mecanismos de revogação de credenciais compatíveis com requisitos regulatórios transfronteiriços.",
+          "Padronização de SSI para integração com sistemas de saúde pública e cidades inteligentes.",
+          "Custos operacionais da combinação de ABE e IoT em rastreamento de vacinas."
+        ],
+        "propostas_possiveis": [
+          "Definir e avaliar métricas de desempenho (latência, throughput) em cenários de alta densidade IoT.",
+          "Desenvolver um protótipo de carteira paciente escalável usando arquitetura edge‑cloud.",
+          "Projetar e testar mecanismos de revogação de credenciais baseados em blockchain para ambientes distribuídos.",
+          "Estabelecer um conjunto de padrões SSI (ex.: W3C DID, Verifiable Credentials) adaptados ao setor de saúde pública.",
+          "Realizar estudo de custo‑benefício da integração de ABE com IoT para rastreamento de vacinas em cidades inteligentes."
+        ]
+      },
+      {
+        "resumo": "O artigo propõe um gerenciamento da cadeia de suprimentos de vacinas que preserve a privacidade ao combinar blockchain e identidade auto‑soberana (SSI). Destaca a necessidade de rastrear dados críticos (imunização, temperatura, lote, validade) e apresenta uma identidade digital universal para atender a esse requisito. As fichas revelam que estudos recentes (2021‑2025) melhoraram transparência e rastreabilidade usando blockchain, IoT e criptografia, porém ainda carecem de SSI, controle de acesso robusto, governança eficaz, interoperabilidade com sistemas de saúde e escalabilidade de consenso. A blockchain fornece descentralização, ledger imutável e mecanismos de consenso que mitigam ameaças internas, mas sua camada de identidade permanece centralizada, gerando custos operacionais elevados e riscos de privacidade. As dúvidas apontam lacunas na integração SSI‑sensores, alinhamento regulatório transfronteiriço, escolha de algoritmos de consenso para dispositivos de borda e adoção de padrões de interoperabilidade como HL7 FHIR.",
+        "lacunas_possiveis": [
+          "Integração prática entre a camada de identidade SSI e sensores físicos de temperatura na cadeia de frio.",
+          "Modelo de governança descentralizada que incorpore requisitos regulatórios internacionais para vacinas.",
+          "Algoritmos de consenso escaláveis e de baixo custo adequados a dispositivos de borda em redes edge.",
+          "Mecanismos de interoperabilidade entre SSI e padrões de saúde (ex.: HL7 FHIR).",
+          "Estratégias de revogação dinâmica de credenciais e controle de acesso baseado em atributos."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um middleware que vincule credenciais SSI a fluxos de dados de sensores IoT, garantindo autenticidade e privacidade.",
+          "Criar um framework de governança que mapeie normas regulatórias de vacinação a políticas descentralizadas em blockchain.",
+          "Avaliar consensos leves (ex.: Proof‑of‑Authority, BFT) para redes permissionadas de saúde em ambientes de borda.",
+          "Projetar adaptadores que traduzam credenciais SSI para recursos HL7 FHIR, facilitando a integração com sistemas hospitalares.",
+          "Implementar revogação de credenciais usando criptografia baseada em atributos (ABE) integrada a contratos inteligentes."
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo em pré‑publicação (recebido em 24/11/2025 e aceito em 21/01/2026) propõe um gerenciamento da cadeia de suprimentos de vacinas que preserva a privacidade ao combinar blockchain, identidade auto‑soberana (SSI) e tecnologias de IoT. A solução integra credenciais verificáveis armazenadas em carteiras controladas pelos pacientes, contratos inteligentes, IPFS e mecanismos de controle de acesso baseado em papéis, buscando melhorar rastreabilidade, transparência e interoperabilidade em ambientes multi‑jurisdicionais. Os autores apontam que abordagens anteriores baseadas apenas em blockchain dependiam de identidades centralizadas, limitando o controle de acesso fino e gerando custos operacionais elevados. O trabalho destaca a necessidade de revogação em tempo real de credenciais SSI, avaliação de desempenho em cenários de alta taxa de transações e edge computing, e alinhamento com padrões de saúde (ex.: HL7 FHIR) e regulamentos transfronteiriços. Embora apresentem evidências preliminares de eficácia, reconhecem lacunas em protocolos de autenticação, métricas de validação, escalabilidade de carteiras e consenso adequado para dispositivos de borda. O documento está disponível como PDF parcial.",
+    "lacunas_possiveis": [
+      "Protocolos específicos de autenticação e controle de acesso não descritos.",
+      "Mecanismos de revogação de credenciais SSI em tempo real ainda não detalhados.",
+      "Avaliação de desempenho e latência em ambientes de alta frequência de transações e edge computing ausente.",
+      "Impacto de diferentes topologias de rede edge na escalabilidade não investigado.",
+      "Falta de métricas claras para validar a eficácia da solução proposta.",
+      "Escalabilidade das carteiras de pacientes em ambientes de alta demanda IoT.",
+      "Mecanismos de revogação de credenciais compatíveis com requisitos regulatórios transfronteiriços.",
+      "Padronização de SSI para integração com sistemas de saúde pública e cidades inteligentes.",
+      "Custos operacionais da combinação de ABE e IoT em rastreamento de vacinas.",
+      "Integração prática entre a camada de identidade SSI e sensores físicos de temperatura na cadeia de frio.",
+      "Modelo de governança descentralizada que incorpore requisitos regulatórios internacionais para vacinas.",
+      "Algoritmos de consenso escaláveis e de baixo custo adequados a dispositivos de borda em redes edge.",
+      "Mecanismos de interoperabilidade entre SSI e padrões de saúde (ex.: HL7 FHIR).",
+      "Estratégias de revogação dinâmica de credenciais e controle de acesso baseado em atributos."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver e testar protocolos de autenticação e controle de acesso baseados em SSI para IoT de cidades inteligentes.",
+      "Implementar e comparar mecanismos de revogação distribuída de credenciais, medindo consistência e tempo de propagação.",
+      "Realizar experimentos de desempenho em cenários de alta taxa de transações, incluindo medição de latência e overhead em dispositivos de baixa potência.",
+      "Avaliar a escalabilidade da arquitetura sob diferentes topologias de rede edge (e.g., fog, cloud‑edge híbrido).",
+      "Definir e aplicar métricas quantitativas (ex.: taxa de falsificação detectada, tempo de verificação) para validar a eficácia da solução.",
+      "Desenvolver um protótipo de carteira paciente escalável usando arquitetura edge‑cloud.",
+      "Projetar e testar mecanismos de revogação de credenciais baseados em blockchain para ambientes distribuídos.",
+      "Estabelecer um conjunto de padrões SSI (ex.: W3C DID, Verifiable Credentials) adaptados ao setor de saúde pública.",
+      "Realizar estudo de custo‑benefício da integração de ABE com IoT para rastreamento de vacinas em cidades inteligentes.",
+      "Desenvolver um middleware que vincule credenciais SSI a fluxos de dados de sensores IoT, garantindo autenticidade e privacidade.",
+      "Criar um framework de governança que mapeie normas regulatórias de vacinação a políticas descentralizadas em blockchain.",
+      "Avaliar consensos leves (ex.: Proof‑of‑Authority, BFT) para redes permissionadas de saúde em ambientes de borda.",
+      "Projetar adaptadores que traduzam credenciais SSI para recursos HL7 FHIR, facilitando a integração com sistemas hospitalares.",
+      "Implementar revogação de credenciais usando criptografia baseada em atributos (ABE) integrada a contratos inteligentes."
+    ],
+    "fonte": "PDF (parcial)"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:21:27"
+}

@@ -1,0 +1,91 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T19:40:32",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo apresenta uma arquitetura para sistemas de saúde inteligentes que integra blockchain, contratos inteligentes e IPFS, armazenando registros médicos de forma descentralizada e segura. Um dispositivo proxy protege sensores IoT vulneráveis por meio de criptografia, enquanto os dados são fragmentados e referenciados por identificadores criptográficos (CID) na rede P2P. Avaliações experimentais medem tempos de upload, download, acesso e mineração, indicando ganhos de eficiência e desempenho ao reduzir a sobrecarga da blockchain e utilizar cache local. A proposta visa superar falhas de sistemas centralizados, melhorar privacidade, interoperabilidade e escalabilidade, embora reconheça limitações de desempenho da blockchain, ausência de métricas detalhadas e falta de mecanismos de revogação de credenciais ou avaliação em larga escala.",
+        "lacunas_possiveis": [
+          "Mecanismo de revogação de credenciais ou dispositivos comprometidos em tempo real",
+          "Métricas detalhadas de desempenho (latência, throughput) especialmente para consultas em tempo real",
+          "Escalabilidade do proxy criptográfico para milhares de sensores simultâneos",
+          "Custos operacionais e viabilidade de manutenção de nós IPFS em larga escala",
+          "Interoperabilidade entre diferentes provedores de saúde e ambientes de cidades inteligentes"
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um esquema de revogação descentralizado, possivelmente baseado em identidade auto‑soberana (SSI) ou criptografia baseada em atributos",
+          "Realizar experimentos de latência e throughput em cenários de edge computing e redes 5G típicas de cidades inteligentes",
+          "Projetar e testar um proxy escalável com balanceamento de carga para suportar milhares de dispositivos IoT simultâneos",
+          "Analisar economicamente a operação de nós IPFS distribuídos, propondo otimizações de armazenamento e replicação",
+          "Criar um framework de interoperabilidade que adote padrões de saúde e identidade digital para integração multi‑organizacional"
+        ]
+      },
+      {
+        "resumo": "O artigo apresenta um framework para compartilhamento seguro de dados de saúde em ambientes de smart healthcare que combina IoT, blockchain e IPFS. Ao armazenar apenas os hashes dos arquivos no blockchain, reduz o tamanho dos blocos, o que pode acelerar transações e diminuir o consumo de armazenamento. O fluxo inclui um device proxy que registra dispositivos mediante prova de identidade, uma dApp baseada em smart contracts que conecta usuários e pacientes, e algoritmos que descrevem registro/upload (Algoritmo 1), acesso ao IPFS (Algoritmo 2) e criptografia/descriptografia (Algoritmo 3). O protótipo foi implementado em laboratório (Intel i7, SSD) e testado com arquivos de 20 MB a 140 MB, medindo número de transações por bloco e tempo de execução. As figuras ilustram processos de criptografia e acesso, embora não detalhem algoritmos ou políticas de controle de acesso, nem estratégias de revogação ou auditoria.",
+        "lacunas_possiveis": [
+          "Impacto da redução do tamanho dos blocos na resistência a ataques de negação de serviço.",
+          "Latência e disponibilidade dos dados armazenados no IPFS em cenários de edge computing.",
+          "Algoritmos de criptografia efetivamente empregados nas Figuras 3 e 4.",
+          "Mecanismos de controle de acesso, revogação e auditoria associados ao framework.",
+          "Escalabilidade do modelo em redes públicas e com grande número de dispositivos simultâneos."
+        ],
+        "propostas_possiveis": [
+          "Realizar experimentos de resistência a DoS comparando blocos com e sem uso de IPFS.",
+          "Medir latência de recuperação de arquivos no IPFS em diferentes topologias de edge computing.",
+          "Especificar e avaliar algoritmos de criptografia (ex.: AES‑GCM, RSA‑OAEP) dentro do Algoritmo 3.",
+          "Desenvolver um esquema de controle de acesso baseado em atributos ou SSI para gerenciar direitos após a verificação do hash.",
+          "Simular o framework em ambiente de rede pública com milhares de dispositivos IoT para analisar escalabilidade."
+        ]
+      },
+      {
+        "resumo": "O artigo propõe um framework que combina blockchain e IPFS para armazenamento, controle de acesso e compartilhamento seguro de dados de saúde em cidades inteligentes, utilizando tokens de identidade não transferíveis e smart contracts. Os experimentos, realizados em uma rede híbrida, mostram que o IPFS apresenta tempos de upload, download e acesso significativamente menores que a blockchain, independentemente do tamanho dos arquivos ou da estação de trabalho, enquanto o tempo de mineração da blockchain aumenta com o volume de dados. Assim, o IPFS melhora a latência e a eficiência de armazenamento, mas a camada blockchain permanece necessária para garantir integridade e consenso, evidenciando um trade‑off entre desempenho e segurança.",
+        "lacunas_possiveis": [
+          "Comportamento do modelo em redes de borda heterogêneas e com alta perda de pacotes",
+          "Impacto da latência de mineração em aplicações de tempo real",
+          "Riscos de privacidade associados aos metadados armazenados no IPFS",
+          "Efeito da integração de Self‑Sovereign Identity (SSI) nos tempos de acesso e na privacidade"
+        ],
+        "propostas_possiveis": [
+          "Avaliar o desempenho do IPFS e da blockchain em cenários de conectividade intermitente e dispositivos de borda com recursos limitados",
+          "Investigar mecanismos de consenso mais leves ou híbridos para reduzir a latência de mineração em aplicações críticas",
+          "Analisar a exposição de metadados no IPFS e propor técnicas de anonimização ou criptografia adicional",
+          "Integrar SSI ao fluxo de dados entre IPFS e blockchain e medir seu impacto nos tempos de acesso e na gestão de identidade"
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta uma arquitetura e um framework para compartilhamento seguro de dados de saúde em ambientes de cidades inteligentes, combinando IoT, blockchain, contratos inteligentes e IPFS. Dispositivos IoT vulneráveis são protegidos por um proxy criptográfico que registra sensores mediante prova de identidade; os registros médicos são armazenados de forma descentralizada, com apenas os hashes (CIDs) gravados na blockchain e os arquivos reais mantidos no IPFS. Tokens de identidade não transferíveis e smart contracts gerenciam o acesso, enquanto a rede híbrida testada (laboratório Intel i7, SSD) avaliou arquivos de 20 MB a 140 MB, medindo número de transações por bloco, tempos de upload, download, acesso e mineração. Os resultados indicam que o uso do IPFS reduz significativamente a latência e o consumo de armazenamento em comparação ao armazenamento direto na blockchain, embora o tempo de mineração aumente com o volume de dados, evidenciando um trade‑off entre desempenho e segurança. Os autores reconhecem limitações relacionadas à ausência de métricas detalhadas de latência e throughput, falta de mecanismos de revogação de credenciais ou dispositivos comprometidos, e a necessidade de avaliação em larga escala, bem como questões de custos operacionais, interoperabilidade e privacidade de metadados.",
+    "lacunas_possiveis": [
+      "Ausência de mecanismo de revogação em tempo real para credenciais ou dispositivos comprometidos",
+      "Falta de métricas detalhadas de latência e throughput, especialmente para consultas em tempo real",
+      "Escalabilidade do proxy criptográfico para milhares de sensores simultâneos",
+      "Custos operacionais e viabilidade de manutenção de nós IPFS em larga escala",
+      "Interoperabilidade entre diferentes provedores de saúde e ambientes de cidades inteligentes",
+      "Impacto da redução do tamanho dos blocos na resistência a ataques de negação de serviço (DoS)",
+      "Latência e disponibilidade dos dados armazenados no IPFS em cenários de edge computing e conectividade intermitente",
+      "Privacidade dos metadados armazenados no IPFS",
+      "Efeito da integração de Self‑Sovereign Identity (SSI) nos tempos de acesso e na gestão de identidade",
+      "Desempenho de consenso blockchain em aplicações de tempo real e possíveis alternativas mais leves"
+    ],
+    "propostas_possiveis": [
+      "Desenvolver um esquema descentralizado de revogação baseado em SSI ou criptografia baseada em atributos",
+      "Realizar experimentos de latência e throughput em ambientes de edge computing e redes 5G típicas de cidades inteligentes",
+      "Projetar e testar um proxy escalável com balanceamento de carga para suportar milhares de dispositivos IoT simultâneos",
+      "Analisar economicamente a operação de nós IPFS distribuídos, propondo otimizações de armazenamento e replicação",
+      "Criar um framework de interoperabilidade que adote padrões de saúde e identidade digital para integração multi‑organizacional",
+      "Avaliar a resistência a ataques DoS comparando blocos com e sem uso de IPFS",
+      "Medir a latência de recuperação de arquivos no IPFS em diferentes topologias de borda e sob perda de pacotes",
+      "Especificar e validar algoritmos de criptografia (ex.: AES‑GCM, RSA‑OAEP) dentro do fluxo de criptografia/descriptografia",
+      "Desenvolver um esquema de controle de acesso baseado em atributos ou SSI para gerenciar direitos após verificação de hash",
+      "Simular o framework em rede pública com milhares de dispositivos IoT para analisar escalabilidade e custos operacionais"
+    ],
+    "fonte": "pdf (parcial)"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:41:11"
+}

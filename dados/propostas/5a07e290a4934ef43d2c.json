@@ -1,0 +1,30 @@
+{
+  "id": "5a07e290a4934ef43d2c",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T14:32:19",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Gudipati_2025: Realizar experimentos de benchmark de VCs em hardware de borda (raspberry pi, microcontrol",
+  "fontes": [
+    "Gudipati_2025"
+  ],
+  "problema": "Ausência de especificação detalhada sobre como as VCs interoperam com protocolos IoT (e.g., MQTT, CoAP) em ambientes de cidades inteligentes.",
+  "hipotese_lacuna": "Ausência de especificação detalhada sobre como as VCs interoperam com protocolos IoT (e.g., MQTT, CoAP) em ambientes de cidades inteligentes.",
+  "meu_trabalho": "Realizar experimentos de benchmark de VCs em hardware de borda (raspberry pi, microcontroladores) para medir latência, throughput e consumo energético.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Realizar experimentos de benchmark de VCs em hardware de borda (raspberry pi, microcontroladores) para medir latência, throughput e consumo energético.",
+  "modo": "artigo",
+  "buscas": [
+    "Verifiable Credentials: Transforming Digital Identity in the Real World limitations future work",
+    "Verifiable Credentials: Transforming Digital Identity in the Real World smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual modelo de credencial (W3C VC, JWT‑VC, etc.) será adotado para garantir compatibilidade com as bibliotecas disponíveis?; Como definir cenários realistas de carga de trabalho que reflitam o uso de sensores em serviços públicos de cidades inteligentes?; Qual estratégia de medição de energia será mais precisa para microcontroladores de baixa potência como o ESP32?; De que forma a comparação com o método tradicional (JWT/PKI) deve ser normalizada para evitar viés de hardware ou software?; Quais requisitos regulatórios ou de privacidade (ex.: GDPR, LGPD) precisam ser considerados ao armazenar ou transmitir VCs nos testes?",
+  "evidencias_usadas": [
+    "7696ef13aa4a2bd6c913"
+  ],
+  "fatos": "Verifiable Credentials (VCs) offer a paradigm shift in how organizations approach identity verification; The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance",
+  "experimento": "descricao: Implementar um protótipo de emissão e verificação de Verifiable Credentials (VCs) em dispositivos de borda (Raspberry Pi 4 e ESP32) usando bibliotecas open‑source (ex.: Hyperledger Aries/Indy ou Veramo). O desempenho será comparado com um mecanismo tradicional de controle de acesso baseado em tokens JWT/PKI descrito em literatura de IoT, medindo latência, throughput e consumo energético em cenários de acesso a sensores de cidades inteligentes.; trabalho_comparativo: Mecanismo tradicional de controle de acesso baseado em tokens JWT/PKI (referência genérica da literatura de IoT).",
+  "recursos": "hardware: Raspberry Pi 4 (4 GB RAM); ESP32 (microcontrolador com Wi‑Fi/BLE); Multímetro ou medidor de energia (ex.: INA219) para consumo energético; software: Sistema operacional Linux (Raspberry Pi OS); Framework de VCs: Hyperledger Aries/Indy ou Veramo (código aberto); Biblioteca de medição de tempo e energia (ex.: python‑time, py‑ina219); Ferramentas de orquestração: Docker (opcional) para replicar ambientes; dados: Conjunto de dados públicos de sensores urbanos (ex.: CityPulse, Open Data Portal de cidades que disponibilizam fluxos de tráfego e qualidade do ar); Cargas de trabalho sintéticas para simular requisições de acesso a recursos IoT; documentação: Artigo de Gudipati_2025 (fonte fornecida) para embasar a relevância das VCs em identidade digital; Manuais das bibliotecas de VCs e das placas de hardware",
+  "metricas": "Latência de verificação da VC (ms); Throughput de operações de emissão/verificação (ops/s); Consumo energético por operação (Joules); Taxa de sucesso de autenticação (%); Escalabilidade: variação de latência/throughput ao aumentar número de dispositivos simultâneos",
+  "detalhada": true
+}

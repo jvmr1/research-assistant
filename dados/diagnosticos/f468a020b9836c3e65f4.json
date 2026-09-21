@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T19:38:41",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 1,
+        "resumo": "O artigo apresenta uma arquitetura de saúde inteligente que combina blockchain, contratos inteligentes e IPFS para armazenar registros médicos de forma segura e descentralizada. Um dispositivo proxy protege sensores IoT vulneráveis usando criptografia. Avaliações experimentais medem tempos de upload, download, acesso e mineração, indicando ganhos de eficiência e desempenho ao integrar IPFS. O objetivo é superar falhas de sistemas centralizados, melhorar privacidade, interoperabilidade e escalabilidade em ambientes de saúde conectados.",
+        "interpretacao": "O trabalho demonstra que combinar blockchain com IPFS pode mitigar vulnerabilidades de armazenamento centralizado em sistemas de saúde IoT, oferecendo maior privacidade e interoperabilidade, embora ainda não explore controle de identidade descentralizado ou criptografia fina.",
+        "duvidas": "Como a solução lida com a revogação de credenciais de dispositivos comprometidos? Qual o impacto do uso de IPFS em termos de latência para consultas em tempo real? O modelo de proxy criptográfico escala para milhares de sensores simultâneos?"
+      },
+      {
+        "pagina": 2,
+        "resumo": "O trecho destaca que a privacidade e a segurança das informações de saúde em sistemas IoT são pouco protegidas, que dispositivos baratos são alvos fáceis e que a arquitetura centralizada gera gargalos de rede. Propõe blockchain integrado ao IoT e ao IPFS para eliminar ponto único de falha, melhorar escalabilidade e garantir integridade dos dados, mas reconhece limitações de desempenho e escalabilidade da própria rede blockchain.",
+        "interpretacao": "O texto reforça que as vulnerabilidades atuais dos sistemas de saúde IoT são principalmente de natureza de privacidade, segurança e dependência de infraestruturas centralizadas, e que a combinação de blockchain e IPFS é vista como caminho para descentralizar, garantir integridade e melhorar a escalabilidade, embora a própria blockchain ainda enfrente desafios de desempenho em grande escala.",
+        "duvidas": "Quais métricas específicas de desempenho (latência, throughput) foram observadas ao integrar IPFS? Como a solução lida com a revogação de credenciais ou dispositivos comprometidos em tempo real?"
+      },
+      {
+        "pagina": 3,
+        "resumo": "O artigo propõe uma arquitetura que combina blockchain e IPFS para superar limitações de privacidade, escalabilidade, segurança e eficiência em sistemas de saúde IoT. Os dados são fragmentados, armazenados com identificadores criptográficos (CID) e distribuídos via rede P2P, evitando ponto único de falha. A integração reduz a sobrecarga da blockchain, melhora a capacidade de armazenamento e permite acesso rápido a arquivos frequentes, enquanto um proxy de dispositivos e autenticação criptográfica protegem a confidencialidade dos dados.",
+        "interpretacao": "O texto descreve como a combinação de blockchain e IPFS pode eliminar o ponto único de falha ao distribuir dados de saúde, melhorar a escalabilidade ao armazenar apenas endereços na blockchain e acelerar o acesso via cache local, ao mesmo tempo que introduz mecanismos de autenticação para proteger a confidencialidade.",
+        "duvidas": "Não há detalhes sobre métricas de desempenho, custos de implementação ou avaliação prática em larga escala; também falta informação sobre como a solução lida com a revogação de credenciais ou a interoperabilidade entre diferentes provedores de saúde."
+      },
+      {
+        "pagina": 4,
+        "resumo": "O trecho descreve a seção de avaliação e resultados do trabalho, apresenta um panorama de trabalhos relacionados que utilizam IPFS, blockchain e técnicas de criptografia para melhorar a escalabilidade, confidencialidade e segurança em sistemas de saúde inteligentes. São citados diversos estudos que combinam armazenamento off‑chain, contratos inteligentes, edge‑IoT e criptografia baseada em atributos para superar limitações de desempenho e privacidade.",
+        "interpretacao": "O trabalho se alinha a uma tendência de combinar IPFS com blockchain para mitigar problemas de escalabilidade e ponto único de falha, reforçando a segurança e a eficiência na troca de dados de saúde, e posiciona-se dentro de um cenário de múltiplas propostas semelhantes que exploram off‑chain storage e criptografia avançada.",
+        "duvidas": "Quais métricas específicas de desempenho foram usadas na avaliação? Como o framework lida com a revogação de credenciais em ambientes multi‑organizacionais? Há detalhes sobre a implementação prática em edge devices de cidades inteligentes?"
+      },
+      {
+        "pagina": 5,
+        "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+        "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+        "duvidas": "Conferir manualmente este trecho se ele for importante."
+      },
+      {
+        "pagina": 6,
+        "resumo": "O estudo propõe armazenar registros de saúde em IPFS, mantendo apenas o hash na blockchain, para reduzir latência, custos de armazenamento e eliminar ponto único de falha; descreve um processo de criptografia de duas etapas e apresenta análise quantitativa que indica menor tempo de transação e tamanho reduzido da cadeia.",
+        "interpretacao": "A proposta combina IPFS e blockchain para melhorar a resiliência e eficiência do compartilhamento de dados de saúde, usando criptografia de duas etapas para garantir integridade e confidencialidade.",
+        "duvidas": "Quais são os custos operacionais de manter nós IPFS em larga escala? Como a solução lida com a revogação de credenciais em tempo real? Há avaliação de desempenho em redes 5G/edge típicas de cidades inteligentes?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta uma arquitetura para sistemas de saúde inteligentes que integra blockchain, contratos inteligentes e IPFS, armazenando registros médicos de forma descentralizada e segura. Um dispositivo proxy protege sensores IoT vulneráveis por meio de criptografia, enquanto os dados são fragmentados e referenciados por identificadores criptográficos (CID) na rede P2P. Avaliações experimentais medem tempos de upload, download, acesso e mineração, indicando ganhos de eficiência e desempenho ao reduzir a sobrecarga da blockchain e utilizar cache local. A proposta visa superar falhas de sistemas centralizados, melhorar privacidade, interoperabilidade e escalabilidade, embora reconheça limitações de desempenho da blockchain, ausência de métricas detalhadas e falta de mecanismos de revogação de credenciais ou avaliação em larga escala.",
+    "lacunas_possiveis": [
+      "Mecanismo de revogação de credenciais ou dispositivos comprometidos em tempo real",
+      "Métricas detalhadas de desempenho (latência, throughput) especialmente para consultas em tempo real",
+      "Escalabilidade do proxy criptográfico para milhares de sensores simultâneos",
+      "Custos operacionais e viabilidade de manutenção de nós IPFS em larga escala",
+      "Interoperabilidade entre diferentes provedores de saúde e ambientes de cidades inteligentes"
+    ],
+    "propostas_possiveis": [
+      "Desenvolver um esquema de revogação descentralizado, possivelmente baseado em identidade auto‑soberana (SSI) ou criptografia baseada em atributos",
+      "Realizar experimentos de latência e throughput em cenários de edge computing e redes 5G típicas de cidades inteligentes",
+      "Projetar e testar um proxy escalável com balanceamento de carga para suportar milhares de dispositivos IoT simultâneos",
+      "Analisar economicamente a operação de nós IPFS distribuídos, propondo otimizações de armazenamento e replicação",
+      "Criar um framework de interoperabilidade que adote padrões de saúde e identidade digital para integração multi‑organizacional"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:39:39"
+}

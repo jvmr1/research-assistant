@@ -1,0 +1,50 @@
+{
+  "etapa": "reaproveitar-leituras",
+  "inicio": "2026-09-20T23:34:33",
+  "revisao": "05e12be4f82748351512",
+  "tarefa": "Reorganize o entendimento já extraído destes trechos. JSON com problema, solucao, avaliacao, limites, possibilidades. Nos primeiros QUATRO campos copie uma frase literal curta das fichas ou do perfil anterior (até 500 caracteres); quando ausente, escreva Não informado. Não transforme uma descrição de aplicação em avaliação experimental, nem foco do estudo em limitação declarada. Em possibilidades você pode sugerir livremente uma extensão pequena. Acumule o perfil anterior e não invente fatos.",
+  "entrada": {
+    "perfil_anterior": {
+      "problema": "viabilizar troca segura, auditável e privada de dados IIoT entre organizações sem confiança prévia, reduzindo a dependência de intermediários centralizados.",
+      "solucao": "combinar contratos inteligentes na blockchain Hyperledger Besu com criptografia baseada em atributos (ABE)",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Incorporar credenciais verificáveis (VC) baseadas em DID para gerenciar políticas de acesso dinâmicas e permitir revogação descentralizada dos direitos de acesso aos dados IIoT."
+    },
+    "fichas": [
+      {
+        "resumo": "O trecho apresenta o índice de figuras da dissertação, destacando fluxos de ABE, contratos inteligentes, etapas da revisão de literatura, diagramas de componentes e métricas de desempenho, indicando foco em arquitetura baseada em criptografia e blockchain para ambientes IIoT.",
+        "pagina": 7
+      },
+      {
+        "resumo": "O trecho apresenta a lista de tabelas da dissertação, destacando métodos OpenABE, associação de estágios DSR, questões de pesquisa, critérios de inclusão e exclusão, resultados de revisão sistemática sobre blockchain e ABE em IoT e privacidade de dados, representações de dados avaliadas e métricas de overhead de criptografia.",
+        "pagina": 8
+      },
+      {
+        "resumo": "O trecho apresenta a lista de acrônimos utilizados na dissertação, incluindo termos‑chave como DID (Decentralized Identifier), ABE (Attribute‑Based Encryption) e CP‑ABE, que são relevantes para identidade autossoberana e controle de acesso em ambientes de IIoT e cidades inteligentes.",
+        "pagina": 9
+      },
+      {
+        "resumo": "O trecho apresenta um glossário de siglas usadas no trabalho, incluindo termos de identidade autossoberana (SSI), credenciais verificáveis (VC) e criptografia baseada em atributos (KP-ABE).",
+        "pagina": 10
+      },
+      {
+        "resumo": "O trecho apresenta o sumário da dissertação, indicando que o trabalho aborda interoperabilidade organizacional para compartilhamento seguro de dados, utilizando Criptografia Baseada em Atributos (ABE) e blockchain (Hyperledger Besu) com contratos inteligentes, dentro de um contexto de IIoT distribuído.",
+        "pagina": 11
+      },
+      {
+        "resumo": "O trecho apresenta a estrutura da dissertação, destacando capítulos de revisão sistemática da literatura, arquitetura proposta, tecnologias‑chave, ambiente experimental e resultados de desempenho criptográfico, incluindo avaliação de sobrecarga por tamanho de payload e complexidade de políticas de acesso.",
+        "pagina": 12
+      }
+    ]
+  },
+  "resposta": {
+    "problema": "viabilizar troca segura, auditável e privada de dados IIoT entre organizações sem confiança prévia, reduzindo a dependência de intermediários centralizados.",
+    "solucao": "combinar contratos inteligentes na blockchain Hyperledger Besu com criptografia baseada em atributos (ABE)",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Incorporar credenciais verificáveis (VC) baseadas em DID para gerenciar políticas de acesso dinâmicas e permitir revogação descentralizada dos direitos de acesso aos dados IIoT."
+  },
+  "ia": null,
+  "fim": "2026-09-20T23:34:43"
+}

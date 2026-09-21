@@ -1,0 +1,28 @@
+{
+  "id": "b2a74685a37cd16bcd9f",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T18:49:27",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Alar_2026: Criar framework de avaliação que inclua métricas de escalabilidade, latência e consumo ene",
+  "fontes": [
+    "Alar_2026"
+  ],
+  "problema": "Integração conjunta de blockchain e SSI ainda não estudada em cadeias agrícolas.",
+  "hipotese_lacuna": "Integração conjunta de blockchain e SSI ainda não estudada em cadeias agrícolas.",
+  "meu_trabalho": "Criar framework de avaliação que inclua métricas de escalabilidade, latência e consumo energético para SSI‑ABE em edge devices.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Criar framework de avaliação que inclua métricas de escalabilidade, latência e consumo energético para SSI‑ABE em edge devices.",
+  "modo": "artigo",
+  "buscas": [
+    "Evaluating self-sovereign identity solutions for agricultural supply chains: a systematic review limitations future work",
+    "Evaluating self-sovereign identity solutions for agricultural supply chains: a systematic review smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "fb7504b1c48c53a1ba82",
+    "f157611da758320fcd3b",
+    "faa94b1a5337c8f64d03"
+  ],
+  "fatos": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection.; identity verification remains a major challenge; self-sovereign identity is very promising for creating decentralized identity management systems; Falta de mecanismos confiáveis para verificação de identidade dos stakeholders."
+}

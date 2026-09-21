@@ -1,0 +1,171 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-16T16:52:49",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para aprofundar ou esclarecer as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Li_2025",
+        "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "9204f94425974d5dcd28",
+            "pagina": 1,
+            "resumo": "Revisão sistemática que analisa soluções baseadas em blockchain para preservação de privacidade no compartilhamento de dados de saúde, identificando que a maioria das propostas está em estágio de prova de conceito (TRL3) e que buscas e verificações privativas ainda são pouco exploradas.",
+            "evidencias": [
+              {
+                "citacao": "privacy-preserving search and verification remain underexplored",
+                "afirmacao": "privacy-preserving search and verification remain underexplored"
+              }
+            ]
+          },
+          {
+            "id": "a401c6bcf9ae3644122e",
+            "pagina": 4,
+            "resumo": "O trecho destaca a importância da integridade, verificação, autenticação e autorização dos dados de saúde em ambientes de blockchain, ressaltando requisitos regulatórios (HIPAA, GDPR) e a necessidade de mecanismos de busca eficientes para uso secundário, além de descrever as etapas do compartilhamento de dados em saúde.",
+            "evidencias": [
+              {
+                "citacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage",
+                "afirmacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage"
+              }
+            ]
+          },
+          {
+            "id": "a11b06389fc8def579c1",
+            "pagina": 6,
+            "resumo": "O trecho descreve os principais desafios de privacidade ao usar blockchain para compartilhamento de dados de saúde, como transparência, imutabilidade, inferência de identidade, vulnerabilidades em contratos inteligentes e a complexa gestão on/off‑chain. Também apresenta métodos de preservação, destacando mecanismos on/off‑chain, PoS e PBFT como opções mais adequadas para ambientes de saúde.",
+            "evidencias": [
+              {
+                "citacao": "Blockchain’s transparency is beneficial for data integrity but creates risks when sensitive data is involved.",
+                "afirmacao": "Blockchain’s transparency is beneficial for data integrity but creates risks when sensitive data is involved."
+              }
+            ]
+          },
+          {
+            "id": "cb8ef267426e5f148dfd",
+            "pagina": 8,
+            "resumo": "O artigo descreve a metodologia de uma revisão sistemática sobre privacidade em compartilhamento de dados de saúde baseado em blockchain, apresentando três perguntas de pesquisa, estratégia de busca (2008‑2024, IEEE, ACM, etc.) e critérios de inclusão. Destaca o uso de proxy re‑encryption para compartilhar dados sem expor privacidade e adota os Níveis de Maturidade Tecnológica (TRL) para avaliar a prontidão das soluções, indicando que a maioria está em estágio de prova de conceito (TRL3).",
+            "evidencias": [
+              {
+                "citacao": "When a data requester applies for it, the proxy can transform the ciphertext of healthcare data into one that the requester can decode with their private key.",
+                "afirmacao": "Proxy re‑encryption enables healthcare data to be shared without revealing individual privacy."
+              },
+              {
+                "citacao": "First assessment of the feasibility of the concept and technologies with prototypes",
+                "afirmacao": "The study classifies technology maturity using TRL levels, identifying most solutions at TRL3."
+              }
+            ]
+          }
+        ],
+        "problema": "Performance may degrade as the number of nodes increases due to communication overhead.",
+        "solucao": "Permissioned access: Only authorized participants can join the network, ensuring controlled and secure data sharing within the consortium.",
+        "avaliacao": "High performance: The consortium blockchain, in combination with the PBFT consensus algorithm, enables fast transaction throughput and efficient resource usage.",
+        "limites": "Relies on trust between consortium members, which may limit adoption in competitive environments.",
+        "possibilidades": "Avaliar a aplicação de blockchains permissionless com SSI em cidades inteligentes, medindo impactos na interoperabilidade de identidade auto‑soberana.; Comparar desempenho e privacidade entre padrões permissioned e permissionless em ambientes de edge computing para IoT industrial.; Desenvolver mecanismos de revogação de credenciais verificáveis adaptados a consórcios, reduzindo a dependência de confiança entre participantes.; Integrar criptografi"
+      },
+      {
+        "id": "Sathyabama_2025",
+        "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 14,
+          "total": 16,
+          "concluida": false
+        },
+        "fichas_amostradas": [
+          {
+            "id": "6a8f0b952a23d59feaeb",
+            "pagina": 1,
+            "resumo": "O artigo propõe um framework que combina Deep Neural Networks para detecção de anomalias e blockchain privado com smart contracts para garantir integridade, transparência e respostas automáticas a ameaças em ambientes IoT, alcançando 99,18% de acurácia e 15,42% de falsos positivos.",
+            "evidencias": [
+              {
+                "citacao": "With a low false-positive rate of 15.42% and a strong detection accuracy of 99.18%",
+                "afirmacao": "O modelo DNN atinge taxa de falsos positivos de 15,42% e precisão de detecção de 99,18%."
+              }
+            ]
+          },
+          {
+            "id": "b9c2f52d3610c303cb17",
+            "pagina": 2,
+            "resumo": "O artigo propõe a arquitetura DNNs‑BCT, que combina redes neurais profundas com blockchain privado para detectar anomalias em redes IoT em tempo real, reduzindo falsos positivos e aumentando a precisão. O blockchain garante integridade e resposta automática via contratos inteligentes, enquanto o DNN aprende padrões de ataque, inclusive zero‑day. Avaliações com datasets de benchmark mostram desempenho superior a IDS tradicionais. Futuras linhas incluem DNNs leves e aprendizado federado para dispositivos com recursos limitados.",
+            "evidencias": [
+              {
+                "citacao": "Every IoT device logs activities on a private blockchain network, ensuring secure communication and preventing unlawful access",
+                "afirmacao": "Every IoT device logs activities on a private blockchain network, ensuring secure communication and preventing unlawful access"
+              }
+            ]
+          },
+          {
+            "id": "eda521031516b8b36a16",
+            "pagina": 3,
+            "resumo": "O artigo propõe DNNs-BCT, que combina redes neurais profundas com blockchain para detecção de anomalias em IoT, usando edge computing para pré‑processamento, reduzindo custos computacionais, consumo de energia e latência em relação a soluções baseadas em Ethereum ou Bitcoin.",
+            "evidencias": [
+              {
+                "citacao": "processing, reduced storage overhead, and efficient energy use for IoT environments, in contrast to traditional blockchain-based security solutions that depend on Ethereum or Bitcoin, which have high computational costs, energy consumption, and latency.",
+                "afirmacao": "DNNs-BCT reduces computational costs and latency compared to traditional blockchain solutions."
+              },
+              {
+                "citacao": "DNNs-BCT uses edge computing to preprocess data before DNN inference and blockchain logging, greatly reducing bandwidth load and allowing for real-time anomaly detection.",
+                "afirmacao": "Edge computing preprocesses data before DNN inference and blockchain logging, enabling real‑time anomaly detection."
+              }
+            ]
+          },
+          {
+            "id": "c3afa76dff606b4ad5e4",
+            "pagina": 4,
+            "resumo": "O trecho apresenta uma revisão de literatura que destaca a superação de obstáculos ao uso de deep learning em áreas como saúde e bioinformática, e descreve múltiplos estudos que combinam algoritmos bio‑inspirados, blockchain e redes neurais para otimizar coleta de dados, detecção de intrusões, confiabilidade de sensores e desempenho de IIoT. São citados critérios de avaliação (escalabilidade, flexibilidade, latência, métricas de classificação) e diversas propostas que melhoram confiabilidade, eficiência e segurança em ambientes distribuídos.",
+            "evidencias": [
+              {
+                "citacao": "most articles are assessed based on scalability, flexibility, latency, Fscore, specificity, sensitivity, and accuracy.",
+                "afirmacao": "Most articles are assessed based on scalability, flexibility, latency, Fscore, specificity, sensitivity, and accuracy."
+              }
+            ]
+          }
+        ],
+        "problema": "single points of failure",
+        "solucao": "hybrid DNN-Blockchain architecture for IoT network security",
+        "avaliacao": "scalability—94.96%",
+        "limites": "computational cost analysis for DNN training and blockchain operations is necessary",
+        "possibilidades": "Explorar consenso leve (PoA, DAG) para reduzir latência; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar aprendizado federado para treinamento distribuído sem exposição de dados sensíveis; avaliar robustez contra ataques adversariais usando técnicas de defesa avançadas; otimizar modelos DNN com poda, quantização ou destilação para dispositivos de borda."
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "As abordagens analisadas convergem no uso de blockchains permissionados para garantir integridade, autenticação e controle de acesso em ambientes distribuídos. Li_2025 revisa soluções de blockchain na saúde, destacando a necessidade de mecanismos de busca e verificação privativos, uso de proxy re‑encryption e maturidade tecnológica em torno de TRL3. Sathyabama_2025 propõe uma arquitetura híbrida DNN‑Blockchain para detecção de anomalias em IoT, enfatizando alta acurácia, uso de smart contracts e edge computing para reduzir latência. Enquanto Li foca na privacidade e conformidade regulatória, Sathyabama prioriza desempenho e detecção em tempo real. Ambos permanecem em estágios de prova de conceito, carecem de avaliações de escalabilidade em larga escala, de gestão de identidade auto‑soberana e de mecanismos de revogação interoperáveis.",
+    "ideias": [
+      {
+        "descricao": "Integrar credenciais verificáveis (SSI) ao framework DNN‑Blockchain de Sathyabama_2025, permitindo registro e revogação de identidades de dispositivos IoT. Li_2025 evidencia a carência de mecanismos de identidade auto‑soberana e revogação em soluções de saúde; ao combinar essas ideias, pode‑se avaliar impacto na privacidade e na sobrecarga de comunicação em cenários de cidades inteligentes.",
+        "fontes": [
+          "Li_2025",
+          "Sathyabama_2025"
+        ],
+        "lacuna": "Ausência de camada de identidade descentralizada e revogação de credenciais nos sistemas de detecção de anomalias baseados em blockchain."
+      },
+      {
+        "descricao": "Comparar o consenso PBFT usado em Li_2025 (consórcio permissionado) com consensos leves como PoA ou DAG sugeridos por Sathyabama_2025 para ambientes de edge computing. O objetivo é quantificar diferenças de latência, throughput e exposição de dados sensíveis, preenchendo a lacuna de estudos empíricos sobre trade‑offs de consenso em IoT industrial.",
+        "fontes": [
+          "Li_2025",
+          "Sathyabama_2025"
+        ],
+        "lacuna": "Falta de avaliação direta de como diferentes algoritmos de consenso afetam desempenho e privacidade em redes IoT distribuídas."
+      },
+      {
+        "descricao": "Aplicar proxy re‑encryption (Li_2025) ao fluxo de dados pré‑processados por edge computing em DNN‑Blockchain (Sathyabama_2025), permitindo que sensores enviem dados criptografados que podem ser re‑criptografados para múltiplos analisadores sem revelar conteúdo. Essa combinação aborda a necessidade de compartilhamento seguro de dados para treinamento colaborativo de modelos de detecção de anomalias.",
+        "fontes": [
+          "Li_2025",
+          "Sathyabama_2025"
+        ],
+        "lacuna": "Nenhum dos trabalhos propõe um mecanismo de re‑criptografia que suporte aprendizado federado ou análise conjunta de dados sensíveis em tempo real."
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T16:53:38"
+}

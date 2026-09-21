@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:39:20",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication",
+    "perfil_anterior": {
+      "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+      "solucao": "programming smart contracts to verify the data's authenticity before it is committed to the blockchain ledger",
+      "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Investigar a combinação de contratos inteligentes com credenciais verificáveis baseadas em SSI para controle de acesso em cidades inteligentes; avaliar o impacto de homomorphic encryption em cenários de borda com recursos limitados; propor mecanismos de revogação de credenciais criptografadas em blockchains permissionadas; explorar a integração de ABE para políticas de compartilhamento de dados entre organizações públicas."
+    },
+    "pagina": 6,
+    "texto": " \n \n  \n \n227 \n \n \n \nJournal of Cyber Security and Risk Auditing Vol.2025, No.4                                         ISSN: 3079-5354 \nusers and their corresponding data based on extracted features and system interaction. Finally, the output is verified and \nvalidated using a dedicated validation model to ensure accuracy and reliability. \n \n3.1. Proposed Algorithm \n \nTo implement the proposed framework, a novel algorithm has been developed to manage core system functions. This \nalgorithm is presented in Algorithm 1, which outlines the procedures for creating, updating, and revoking access to Personal \nHealth Records (PHRs). Initially, the algorithm creates a new PHR upon receiving a user request. It then allows for the \nupdate of existing records, and if any access control p olicies are violated, it proceeds to revoke access. Algorithm 1 also \ndefines the specific attributes assigned to both patients and clinicians to facilitate secure and role -based access control \nwithin the system. \nAlgorithm 1 presented for creating, updating , and revoking records in a blockchain network ensures secure and tamper -\nproof management of data throughout its lifecycle. It begins by authenticating the user's identity using a public -key-based \ndigital signature to verify that only authorized entities c an perform operations. For creating a new record, the algorithm \nfirst checks if the record already exists to avoid duplication. If the record is unique, it is written to the blockchain alon g \nwith its data, a timestamp, and a cryptographic signature, ensuring immutability and traceability. When updating an existing \nrecord, the algorithm does not alter the original data. Instead, it creates a new block that references the previous block's \nhash, preserving the full history of changes. This approach provides transparency and enables auditability, which is \nparticularly important in domains like healthcare or financial services.  To revoke a record, the algorithm appends a new \nblock with a \"REVOKED\" status, thereby maintaining the original data while indicating t hat it is no longer valid. This \nmethod supports data deactivation without deletion, preserving the integrity  \nand consistency of the blockchain ledger.  The algorithm is lightweight and suitable for IoT environments where devices \nmay have limited computational resources. Its design also facilitates integration with smart contracts to automate validation, \nenforce policies, and enhance security. Overall, this approach addresses key concerns in IoT security by providing a \ndecentralized, transparent, and efficient framework for managing digital records. \n \n \n \nAlgorithm 1. Create, Update and Revoke Records in blockchain \n \n1. Authenticate User (UserKey) \n   a. IF User Key is not authorized THEN \n         RETURN \"Access Denied\" \n   b. ELSE \n         CONTINUE \n2. SWITCH(Action) \n      CASE 'CREATE': \n       a. IF Record ID already exists in Blockchain THEN \n             RETURN \"Error: Record already exists\" \n       b. ELSE \n             Create Record Block with: \n                 - RecordID \n                 - Data = New Data \n                 - Timestamp = Current Time() \n                 - Action = \"CREATE\" \n                 - Status = \"ACTIVE\" \n                 - Signature = Sign(Data, User Key) \n             Append Record Block to Blockchain \n             RETURN \"Record successfully created\" \n   CASE 'UPDATE': \n       a. IF RecordID not found OR Status ≠ \"ACTIVE\" THEN \n             RETURN \"Error: Record not found or inactive\" \n       b. ELSE ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta um algoritmo para criar, atualizar e revogar registros de saúde pessoal em uma blockchain permissionada. O processo inicia com a autenticação via assinatura digital de chave pública, verifica duplicidade, registra operações como blocos imutáveis e utiliza um bloco de status \"REVOKED\" para revogação, preservando o histórico. O algoritmo é descrito como leve, adequado a dispositivos IoT com recursos limitados e integrável a contratos inteligentes para validação automática e políticas de segurança.",
+    "perfil": {
+      "problema": "if any access control policies are violated, it proceeds to revoke access",
+      "solucao": "authenticating the user's identity using a public-key-based digital signature",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": [
+        "Integrar credenciais verificáveis baseadas em SSI ao algoritmo para controle de acesso descentralizado em cidades inteligentes.",
+        "Avaliar o impacto de técnicas de Attribute-Based Encryption (ABE) na revogação de registros em ambientes de borda com recursos restritos.",
+        "Incorporar provas de conhecimento zero‑knowledge para melhorar a privacidade dos dados de saúde sem revelar informações sensíveis.",
+        "Testar a escalabilidade do algoritmo em cenários de IoT massivo, medindo latência e consumo de energia em dispositivos heterogêneos."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O algoritmo garante gerenciamento seguro e à prova de violação dos dados ao longo de seu ciclo de vida.",
+        "citacao": "Algorithm 1 presented for creating, updating , and revoking records in a blockchain network ensures secure and tamper‑proof management of data throughout its lifecycle."
+      },
+      {
+        "afirmacao": "A revogação é realizada adicionando um bloco com status \"REVOKED\", mantendo os dados originais.",
+        "citacao": "To revoke a record, the algorithm appends a new block with a \"REVOKED\" status, thereby maintaining the original data while indicating that it is no longer valid."
+      }
+    ],
+    "interpretacao": "O trabalho propõe um mecanismo de controle de acesso baseado em blockchain que combina autenticação forte e registro imutável, atendendo às restrições de recursos típicas de dispositivos IoT, ao mesmo tempo que preserva a auditabilidade e a integridade dos dados sensíveis.",
+    "duvidas": "Como o algoritmo lida com a escalabilidade em redes IoT de grande porte? Qual o overhead de comunicação e armazenamento ao adicionar blocos de revogação em dispositivos com memória limitada?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:39:35"
+}

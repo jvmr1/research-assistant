@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:09:44",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey",
+    "perfil_anterior": {
+      "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+      "solucao": "we systematically categorize access control methods into permissionless and permissioned blockchains, evaluate critical privacy and security factors, and analyze widely used blockchain platforms.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "scalability, energy consumption, interoperability, and security",
+      "possibilidades": "Adaptar a comparação de surveys para o domínio de IoT em cidades inteligentes, incluindo métricas de desempenho em edge computing; integrar identidade auto‑soberana (SSI) e credenciais verificáveis ao framework de controle de acesso para serviços públicos urbanos; avaliar a eficácia de técnicas de privacidade baseadas em ABE em ambientes distribuídos de smart cities; propor um benchmark de interoperabilidade entre blockchains permissioned e permissionless para aplicações de saúde e infraestrutura urbana."
+    },
+    "pagina": 7,
+    "texto": "These properties are critical for ensuring data integrity and\nsecurity in blockchain systems.\n3.2 Structure of a block\nEach block in a blockchain is secured through hash func-\ntions, which ensure data integrity and block chaining, and\ndigital signatures [ 30], which prevent unauthorized modi-\nﬁcations. When a block is generated, a unique hash value is\nproduced based on its content, including transaction data.\nThe block is then added to the blockchain, where its hash\nvalue is referenced by the subsequent block to ensure the\nintegrity of the chain. The Genesis block is the ﬁrst block\nin the chain and, as it has no previous hash, it is considered\nthe foundational block of the blockchain. Transactions in\nsubsequent blocks are validated using a combination of\ncryptographic methods, ensuring the security and consis-\ntency of the blockchain network. Modifying a block’s\ncontent is extremely difﬁcult because it would require re-\nvalidating the affected block and potentially the hash val-\nues of connected blocks, depending on the consensus\nmechanism employed by the network. Hash functions\nenhance the security of blockchain systems in several\nways:\n• Data Integrity: Any modiﬁcation to the data within a\nblock results in a different hash value, immediately\nsignaling tampering.\n• Linking Blocks: Each block contains the hash of the\nprevious block. This chaining ensures that altering one\nblock would require recalculating and updating the\nhashes of all subsequent blocks, a process that is\ncomputationally prohibitive.\n• Resistance to Attacks: The pre-image, second pre-\nimage, and collision resistance properties make it\npractically impossible for an adversary to forge a block\nor alter transaction data without detection.\nBlock sizes and the number of transactions per block can\nvary signiﬁcantly depending on the speciﬁc blockchain\nimplementation. For example, Bitcoin limits block sizes to\n1 MB, while other systems, such as Bitcoin Cash, allow\nlarger blocks of up to 8 MB or more [ 31]. Larger blocks\ncan process more transactions at once, but different\nblockchain systems impose their own limits on block size\nand transaction capacity.\nFigure 3 represents the structure of a typical block,\nwhich includes ﬁelds such as the previous hash (the hash\nvalue of the preceding block), timestamp (the date and time\nTable 1 (continued)\nSurvey\nauthors\nPublication\nyear\nMain contributions EHR\nframeworks\nBlockchain\ntypes\nConsensus\nprotocols\nPrivacy\ntechniques\nAccess\ncontrol\nCovered\nyears\nReshi and\nSholla [ 28]\n2024 Review blockchain applications\nin healthcare, focusing on\nblockchain energy consumption,\ninteroperability and security\nsolutions\nUU U U x 2016–2023\nOur Survey 2025 A review of EHR access control\nmethods, privacy preservation\ntech- niques and challenges,\nopen research issues, and future\ndirections\nUU U U U 2016–2024\nFig. 2 A ﬂow diagram of the study selection process\nCluster Computing (2025) 28:529 Page 7 of 45 529\n123",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve como funções de hash e assinaturas digitais garantem a integridade e a segurança dos blocos em uma blockchain, destacando a dificuldade de modificar blocos devido ao encadeamento de hashes e às propriedades de resistência a ataques, além de mencionar variações de tamanho de bloco entre diferentes implementações.",
+    "perfil": {
+      "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+      "solucao": "we systematically categorize access control methods into permissionless and permissioned blockchains, evaluate critical privacy and security factors, and analyze widely used blockchain platforms.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Block sizes and the number of transactions per block can vary significantly depending on the specific blockchain implementation.",
+      "possibilidades": "Investigar como o tamanho de bloco e o encadeamento de hashes afetam a latência e o consumo de recursos em dispositivos IoT de borda nas cidades inteligentes; integrar identidade auto‑soberana (SSI) com verificações de hash para reforçar a autenticidade de credenciais em serviços públicos; avaliar a aplicação de técnicas de criptografia baseada em atributos (ABE) combinadas com a estrutura de blocos para controle de acesso granular em ambientes distribuídos; criar um benchmark comparativo de blockchains permissioned vs. permissionless focado em requisitos de privacidade e interoperabilidade para infraestruturas urbanas."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Funções de hash garantem a integridade dos dados no bloco.",
+        "citacao": "Any modification to the data within a block results in a different hash value, immediately signaling tampering."
+      },
+      {
+        "afirmacao": "Alterar um bloco requer recalcular hashes de blocos subsequentes, o que é computacionalmente proibitivo.",
+        "citacao": "Each block contains the hash of the previous block... altering one block would require recalculating and updating the hashes of all subsequent blocks, a process that is computationally prohibitive."
+      }
+    ],
+    "interpretacao": "O trecho reforça que a segurança de blockchains depende fortemente de mecanismos criptográficos como hash e assinaturas digitais, o que é crucial para garantir a integridade e a resistência a ataques em sistemas de controle de acesso distribuídos.",
+    "duvidas": "Como as limitações de tamanho de bloco impactam a performance de redes IoT de borda em cidades inteligentes? De que forma diferentes protocolos de consenso influenciam a privacidade dos dados compartilhados?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:10:44"
+}

@@ -1,0 +1,41 @@
+{
+  "resumo": "O trecho descreve o processamento de consultas verificáveis em DIDs usando um acumulador de janela deslizante (SWAT). O método divide consultas em subconsultas, indexa palavras‑chave em blocos recentes e usa interseções de conjuntos para validar consultas, melhorando a eficiência em relação à agregação inter‑blocos tradicional. Algoritmos para consultas booleanas e de intervalo são apresentados, destacando a construção de provas Merkle e a capacidade de lidar com janelas de tempo maiores que K.",
+  "perfil": {
+    "problema": "Security of DID Registry.DID Register scheme meets the correctness and soundness of the classic commitment scheme.",
+    "solucao": "sliding window accumulator structure",
+    "avaliacao": "Our evaluation results have demonstrated that our approach has an advantage in offering secure verifiability and high efficiency, comparing to other existing methods",
+    "limites": "high computational overhead and limited interoperability",
+    "possibilidades": [
+      "Avaliar o desempenho do acumulador de janela deslizante em ambientes edge/fog com milhares de dispositivos IIoT.",
+      "Integrar provas de conhecimento zero‑knowledge ao processo de verificação de consultas para suportar revogação distribuída.",
+      "Adaptar o tamanho da janela K dinamicamente conforme a carga de consultas em serviços de cidades inteligentes.",
+      "Estender o modelo para interoperar com padrões SSI de órgãos públicos, incluindo suporte a atributos de controle de acesso (ABE)."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "If the result of the intersection operation is an empty set, the query is deemed invalid",
+      "afirmacao": "If the result of the intersection operation is an empty set, the query is deemed invalid"
+    },
+    {
+      "citacao": "The sliding window accumulator is similar to a Merkle tree",
+      "afirmacao": "The sliding window accumulator is similar to a Merkle tree"
+    }
+  ],
+  "interpretacao": "O uso do acumulador de janela deslizante permite indexar palavras‑chave de forma eficiente nos últimos K blocos, reduzindo a complexidade de consultas de verificação de DIDs de linear para quase constante, ao mesmo tempo que fornece provas de integridade via Merkle.",
+  "duvidas": "Como o tamanho da janela K afeta a escalabilidade em cenários com alta taxa de geração de blocos? Qual o custo adicional de gerar e verificar as provas Merkle para cada subconsulta em dispositivos com recursos limitados?",
+  "avisos": [],
+  "id": "d686b6b10ffd7d0e021c",
+  "artigo": "Ding_2025",
+  "pagina": 8,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Security of DID Registry.DID Register scheme meets the correctness and soundness of the classic commitment scheme.",
+    "solucao": "sliding window accumulator structure",
+    "avaliacao": "Our evaluation results have demonstrated that our approach has an advantage in offering secure verifiability and high efficiency, comparing to other existing methods",
+    "limites": "high computational overhead and limited interoperability",
+    "possibilidades": "Avaliar o desempenho do acumulador de janela deslizante em ambientes edge/fog com milhares de dispositivos IIoT.; Integrar provas de conhecimento zero‑knowledge ao processo de verificação de consultas para suportar revogação distribuída.; Adaptar o tamanho da janela K dinamicamente conforme a carga de consultas em serviços de cidades inteligentes.; Estender o modelo para interoperar com padrões SSI de órgãos públicos, incluindo suporte a atributos de controle de acesso (ABE).",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "88b0facc537cd8e26acd"
+  }
+}

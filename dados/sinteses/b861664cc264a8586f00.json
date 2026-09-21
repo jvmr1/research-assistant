@@ -1,0 +1,17 @@
+{
+  "resumo": "A dissertação de Wesley Fioreze (23/06/2026) investiga a combinação de identidade autossoberana (SSI), credenciais verificáveis (VC) e criptografia baseada em atributos (ABE, CP‑ABE, KP‑ABE) com blockchain (Hyperledger Besu) e contratos inteligentes para garantir segurança, privacidade e interoperabilidade em ambientes IIoT de cidades inteligentes. O trabalho segue uma metodologia estruturada, iniciando com revisão sistemática da literatura, definição de questões de pesquisa, critérios de inclusão/exclusão e avaliação de overhead criptográfico relativo ao tamanho de payload e à complexidade de políticas de acesso. A arquitetura proposta inclui fluxos de ABE, uso de DIDs, e métricas de desempenho, mas ainda não detalha a integração prática de SSI/DIDs, mecanismos de revogação e recuperação de credenciais, nem critérios específicos para escolha de políticas de acesso. O estudo também menciona o uso potencial de IPFS para gerenciamento de credenciais, embora não descreva sua implementação.",
+  "lacunas_possiveis": [
+    "Conexão explícita entre fluxos de ABE e o modelo SSI/DID proposto.",
+    "Mecanismos de recuperação de credenciais perdidas via smart contracts.",
+    "Critérios claros para seleção da complexidade das políticas de acesso e seu impacto de latência.",
+    "Detalhamento do papel do IPFS no armazenamento e distribuição de credenciais.",
+    "Procedimentos de revogação de credenciais em ambientes distribuídos e interoperáveis."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um protocolo de integração ABE‑SSI que associe DIDs a chaves de atributo e permita revogação descentralizada via eventos blockchain.",
+    "Implementar um mecanismo de recuperação de credenciais baseado em contratos inteligentes que reemita VC criptografadas após verificação de identidade multifatorial.",
+    "Estabelecer benchmarks de complexidade de políticas (número de atributos, operadores lógicos) e medir seu efeito sobre latência e overhead em cenários IIoT.",
+    "Utilizar IPFS para armazenar VC criptografadas, referenciando-as por hashes imutáveis nos smart contracts, garantindo disponibilidade e integridade.",
+    "Criar um esquema de revogação incremental que combine listas de revogação na blockchain com re‑encriptação seletiva usando KP‑ABE."
+  ]
+}

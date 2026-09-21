@@ -1,0 +1,93 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-20T19:02:30",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Desenvolva esta sugestão em nível de reunião com orientador, como brainstorm profundo e útil. Não escreva só uma frase. JSON com strings: experimento, recursos, metricas, riscos e duvidas_orientador. Em experimento, detalhe: problema específico, hipótese, arquitetura/artefato a implementar, etapas, baseline ou trabalhos de comparação, e cenário de avaliação. Em recursos, liste ferramentas, dados/simuladores, padrões e bibliotecas possíveis, sem inventar disponibilidade. Em métricas, inclua desempenho, segurança, privacidade, usabilidade/interoperabilidade quando couber. Em riscos, explique o que pode inviabilizar ou reduzir a novidade. Em dúvidas, escreva perguntas concretas para levar à reunião. Use as fontes fornecidas e deixe claro quando for inferência exploratória. Cada campo deve ter entre 120 e 250 palavras quando houver informação suficiente.",
+  "entrada": {
+    "ideia": "Desenvolver protocolos de recuperação de credenciais usando secret sharing, agentes de confiança ou chaves distribuídas",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Exemplo_55b3b0969325cccbbb2c",
+          "titulo": "Danilo_TCC_final",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "4d0d92e96ed42493301d",
+              "pagina": 1,
+              "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                },
+                {
+                  "citacao": "Cidades Inteligentes",
+                  "afirmacao": "O estudo está inserido no contexto de cidades inteligentes."
+                }
+              ]
+            },
+            {
+              "id": "4af4e95bcf402163cf78",
+              "pagina": 2,
+              "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                }
+              ]
+            },
+            {
+              "id": "5cb5f57a5bb410182c9c",
+              "pagina": 3,
+              "resumo": "O trabalho de Danilo Isaque Sousa Maia (2025) propõe o uso de blockchain e identidades autosoberanas para autenticação e controle de acesso em cidades inteligentes, apresentando o tema, palavras‑chave e a orientação acadêmica.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes / Danilo Isaque Sousa Maia. - 2025.",
+                  "afirmacao": "O trabalho aborda Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes."
+                },
+                {
+                  "citacao": "1. Cidades Inteligentes. 2. Blockchain. 3. Identidades Autosoberanas. 4. Controle de Acesso. 5. Autenticação.",
+                  "afirmacao": "São listadas as palavras‑chave relacionadas ao tema."
+                }
+              ]
+            },
+            {
+              "id": "cb59efb152362ddd8ea7",
+              "pagina": 4,
+              "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                }
+              ]
+            }
+          ],
+          "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+          "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+          "avaliacao": "Latência em cada iteração de operações de emissão e armazenamento de credenciais",
+          "limites": "o modelo atual não aborda a gestão de identidades dos cidadãos",
+          "possibilidades": "Integrar módulos SSI ao InterSCity, usando o Resource Adaptor para conectar carteiras digitais de cidadãos e sensores IoT; explorar contratos inteligentes para revogação de credenciais dentro da arquitetura de microsserviços; aplicar ABE e criptografia homomórfica nos fluxos de dados do middleware para controle de acesso e processamento privativo.",
+          "assinatura": "aa6f199c752f47517c1c"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": "Problema específico: cidadãos de cidades inteligentes perdem o acesso às suas credenciais digitais (verifiable credentials) e não há mecanismo confiável de recuperação que preserve a soberania da identidade e a privacidade dos atributos. Hipótese: a combinação de Self‑Sovereign Identity (SSI) com esquemas de secret sharing (ex.: Shamir) e agentes de confiança distribuídos permite a recuperação segura de credenciais sem revelar atributos sensíveis e sem depender de um provedor central. Arquitetura/artefato: um protótipo de wallet SSI baseado em Hyperledger Aries que incorpora um módulo de recuperação. O módulo divide a chave‑mestra da wallet em n fragmentos, distribuídos entre agentes de confiança (ex.: prefeitura, provedor de serviços IoT, e um nó de blockchain). Em caso de perda, o cidadão solicita a recomposição mediante prova de posse de atributos (zero‑knowledge). Etapas: (1) modelagem do ciclo de vida da credencial (emissão, apresentação, verificação, transmissão, processamento, armazenamento, revogação, recuperação); (2) implementação do módulo de secret sharing e protocolos de consenso para recomposição; (3) integração com o modelo de controle de acesso proposto por Danilo Maia (2025), que já usa blockchain e SSI para autenticação; (4) definição de cenários de teste (emissão de credencial para acesso a sensores de trânsito, revogação por violação de política, recuperação após perda de dispositivo). Baseline: solução de recuperação baseada em recuperação de senha tradicional (centralizada) e a abordagem de Danilo (2025) que não contempla recuperação. Cenário de avaliação: ambiente de simulação InterSCity com 1 000 cidadãos virtuais, 200 sensores IoT e 5 agentes de confiança, medindo latência de recomposição, taxa de sucesso e vazamento de atributos. Esta proposta é uma inferência exploratória a partir do trabalho de Danilo, que não trata recuperação de credenciais.",
+    "recursos": "Ferramentas: Hyperledger Aries/Indy para wallet SSI, Hyperledger Fabric ou Ethereum para contratos inteligentes de revogação, biblioteca de secret sharing (ex.: sss-js ou Shamir‑Secret‑Sharing em Go), framework de simulação InterSCity (disponível no repositório da comunidade). Dados/simuladores: datasets de tráfego urbano públicos (ex.: Open Data São Paulo) para gerar atributos de credenciais, e geradores de carga (Locust) para simular 1 000 usuários. Padrões: W3C Verifiable Credentials, Decentralized Identifiers (DID), OAuth 2.0‑DID‑Auth, e ISO/IEC 24760‑2 (identidade digital). Bibliotecas: Aries Cloud Agent‑Python, DID‑Comm, libp2p para comunicação P2P entre agentes de confiança, e libs de criptografia homomórfica (Microsoft SEAL) caso se deseje processamento privativo de atributos. Todas as ferramentas citadas são de código aberto e já disponíveis em repositórios públicos; não foram criadas novas ferramentas.",
+    "metricas": "Desempenho: latência média (ms) da recomposição da chave‑mestra, throughput (recomposições/s) sob carga de 100 solicitações simultâneas, consumo de recursos (CPU/memória) nos agentes de confiança. Segurança: taxa de sucesso de ataques de reconstrução por adversário com menos de n‑1 fragmentos, resistência a replay e DoS medidos por número de solicitações rejeitadas. Privacidade: quantidade de atributos expostos durante o protocolo de recuperação (medido em bits), avaliação de vazamento usando métricas de informação mutua. Usabilidade/Interoperabilidade: tempo de configuração da wallet pelo cidadão, número de passos necessários para iniciar a recuperação, compatibilidade com wallets existentes (ex.: Trinsic, Veramo) testada via DID‑Comm. Cada métrica será comparada entre o protótipo proposto e o baseline centralizado, permitindo quantificar ganhos e trade‑offs.",
+    "riscos": "Risco técnico: a necessidade de agentes de confiança distribuídos pode introduzir pontos de falha ou exigir acordos de governança complexos; se menos de n‑1 agentes colaborarem, a recuperação falha, reduzindo a utilidade. Risco de novidade: a combinação de SSI com secret sharing ainda tem pouca literatura, o que pode dificultar a validação formal de segurança e levar a vulnerabilidades não detectadas. Risco de desempenho: a recomposição de chaves pode gerar latência incompatível com serviços de tempo real (ex.: controle de semáforos). Risco regulatório: a legislação de proteção de dados pode exigir auditoria de quem detém fragmentos, conflitando com a soberania do cidadão. Risco de adoção: provedores de serviços urbanos podem hesitar em integrar agentes de confiança adicionais, limitando a escalabilidade da solução.",
+    "duvidas_orientador": "1. Qual o número ideal de fragmentos (n) e o limiar (k) para equilibrar segurança e usabilidade no contexto de cidades inteligentes? 2. Como garantir que os agentes de confiança cumpram políticas de retenção e destruição de fragmentos conforme LGPD/ GDPR? 3. Existe algum padrão emergente para recuperação de credenciais SSI que deveríamos alinhar, ou devemos propor um novo? 4. Qual baseline de recuperação centralizada seria mais adequado para comparação (ex.: recuperação por e‑mail, por suporte técnico)? 5. Como integrar o módulo de recuperação ao fluxo de revogação já implementado no TCC de Danilo (2025) sem introduzir vulnerabilidades de replay? 6. Quais métricas de usabilidade são mais relevantes para cidadãos não técnicos em ambientes urbanos? 7. Há disponibilidade de datasets de incidentes de perda de credenciais que possamos usar para validar cenários realistas?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T19:02:54"
+}

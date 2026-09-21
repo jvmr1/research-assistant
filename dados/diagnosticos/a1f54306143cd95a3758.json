@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:49:35",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things",
+    "perfil_anterior": {
+      "problema": "the network’s 51% attack and erratic network connection",
+      "solucao": "PoAh offers adequate security when combined with ECDSA in decentralized IIoT networks",
+      "avaliacao": "the total execution time was less than 875 ms",
+      "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+      "possibilidades": "Avaliar a escalabilidade do mecanismo de autorização (três etapas) em cenários com milhares de dispositivos IoT.; Integrar credenciais verificáveis (verifiable credentials) ao processo de concessão de acesso para suportar identidade auto‑soberana (SSI).; Comparar o desempenho de PoAh com outros consensos leves (Proof of Authority, Proof of Stake) considerando latência de autorização.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados armazenados na blockchain.; Testar a arquitetura em ambientes de borda heterogêneos com conectividade intermitente para v"
+    },
+    "pagina": 14,
+    "texto": "Our assessment of blockchain’s effectiveness in a real-world setting is facilitated by Golang, a key tool in \ncreating the consensus mechanism. This involves the setup of a complex network of three Linux laptops, six PCs, \nand a cloud server, all intricately interconnected via a local network. Each device functions as a miner, solving \ncomplex mathematical puzzles. The Node.js script, a crucial component, generates interactions with randomized \nlocations and amounts. The script is executed by the trigger node, leading to the creation of new transactions \nthat are then deposited in matching pools based on their addresses, awaiting bundling by miners. To simulate a \nW AN scenario, we manually introduce a propagation delay, with a mean value of 35–55 ms, subject to the typical \ndistribution.\nThe blockchain’s performance is displayed in Figs. 8 and 9 for various block sizes and widths. As the width of \nthe PoAh architecture grows, throughput rises with a fixed block size, as seen in Fig. 8. Meanwhile, throughput \nincreases proportionally to block size growth, assuming a fixed width. Our blockchain achieves 225 tps, a \nsignificant improvement over Bitcoin and Ethereum, which achieves 7 tps and 27 tps respectively. The link \nbetween throughput in various block sizes and widths is also shown on Fig.  9. It is evident that the greater \nwidth and block size values of the proposed blockchain behave better than the more compact one. It reaches its \nFig. 9. The proposed architecture width comparison with baseline model.\n \nFig. 8. The proposed architecture block size comparison with baseline model.\n \nScientific Reports |        (2025) 15:15410 14| https://doi.org/10.1038/s41598-025-00337-3\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O estudo implementou uma rede de teste com laptops, PCs e um servidor cloud usando Golang e Node.js para avaliar o consenso PoAh. Foram introduzidos atrasos de propagação de 35–55 ms. Os resultados mostraram que a taxa de transferência aumenta com a largura da arquitetura e o tamanho dos blocos, atingindo 225 tps, muito superior ao Bitcoin (7 tps) e Ethereum (27 tps).",
+    "perfil": {
+      "problema": "the network’s 51% attack and erratic network connection",
+      "solucao": "PoAh offers adequate security when combined with ECDSA in decentralized IIoT networks",
+      "avaliacao": "the total execution time was less than 875 ms",
+      "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+      "possibilidades": [
+        "Avaliar o impacto de diferentes atrasos de propagação (35–55 ms) na taxa de transações e na consistência da cadeia.",
+        "Testar a escalabilidade da arquitetura PoAh com milhares de dispositivos IoT em ambientes de borda heterogêneos.",
+        "Integrar credenciais verificáveis (verifiable credentials) ao processo de concessão de acesso para suportar identidade auto‑soberana (SSI).",
+        "Comparar o desempenho de PoAh com outros consensos leves (Proof of Authority, Proof of Stake) considerando variações de largura e tamanho de bloco.",
+        "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados armazenados na blockchain."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Our blockchain achieves 225 tps, a significant improvement over Bitcoin and Ethereum",
+        "citacao": "Our blockchain achieves 225 tps, a significant improvement over Bitcoin and Ethereum, which achieves 7 tps and 27 tps respectively."
+      },
+      {
+        "afirmacao": "As the width of the PoAh architecture grows, throughput rises with a fixed block size",
+        "citacao": "As the width of the PoAh architecture grows, throughput rises with a fixed block size, as seen in Fig. 8."
+      }
+    ],
+    "interpretacao": "Os experimentos indicam que a arquitetura PoAh escala bem em largura e tamanho de bloco, proporcionando alta taxa de transações comparada a blockchains públicas.",
+    "duvidas": "Como a latência introduzida (35–55 ms) afeta a consistência e a segurança da cadeia? Qual o comportamento da arquitetura em cenários com conectividade intermitente? O mecanismo PoAh resiste a ataques de 51% em redes maiores?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:59:39"
+}

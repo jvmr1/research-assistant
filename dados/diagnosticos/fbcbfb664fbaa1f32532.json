@@ -1,0 +1,42 @@
+{
+  "etapa": "reaproveitar-leituras",
+  "inicio": "2026-09-21T00:51:36",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Reorganize o entendimento já extraído destes trechos. JSON com problema, solucao, avaliacao, limites, possibilidades. Nos primeiros QUATRO campos copie uma frase literal curta das fichas ou do perfil anterior (até 500 caracteres); quando ausente, escreva Não informado. Não transforme uma descrição de aplicação em avaliação experimental, nem foco do estudo em limitação declarada. Em possibilidades você pode sugerir livremente uma extensão pequena. Acumule o perfil anterior e não invente fatos.",
+  "entrada": {
+    "perfil_anterior": {
+      "problema": "foco em identidade digital para cidades inteligentes usando blockchain.",
+      "solucao": "propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
+      "avaliacao": "destacando a importância da segurança da informação e avaliando o custo computacional da solução.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Adicionar suporte a criptografia homomórfica para processamento de dados de sensores sem revelar informações sensíveis, integrando-a ao fluxo de verificação de credenciais."
+    },
+    "fichas": [
+      {
+        "resumo": "O trecho apresenta o sumário do trabalho, indicando capítulos que abordam introdução, contexto, caracterização do problema, objetivos, fundamentos teóricos sobre identidade e blockchain, algoritmos de consenso, aplicações de blockchain em gestão de identidade e um levantamento de trabalhos relacionados, incluindo surveys e propostas leves para IoT.",
+        "pagina": 13
+      },
+      {
+        "resumo": "O trecho apresenta a estrutura da solução proposta, detalhando um Modelo de Gestão de Identidades suportado por contratos inteligentes para registro, autenticação e revogação. Descreve os relacionamentos entre atores, processos de instalação, deployment, coleta, envio e manutenção de dispositivos IoT, e a implementação de componentes como Entity Manager, IoT Cataloguer e Secure Resource Adaptor. Inclui ainda a comparação com trabalhos relacionados, avaliação experimental (latência, consumo de memória e processamento) e discussões sobre limitações e trabalhos futuros.",
+        "pagina": 14
+      },
+      {
+        "resumo": "O trecho define Cidade Inteligente como uso de TIC para reduzir problemas de urbanização, destaca a IoT como tecnologia‑chave para sensoriamento e atuação em tempo real, exemplifica aplicações como ambulâncias e viaturas policiais, e aponta a segurança da informação como grande desafio nas CIs.",
+        "pagina": 15
+      },
+      {
+        "resumo": "O trecho destaca que as cidades inteligentes (CIs) enfrentam ameaças de segurança como negação de serviço e acesso não autorizado, o que pode causar prejuízos graves e perda de confiança pública. Enfatiza que a gestão de identidades é essencial para garantir confidencialidade, integridade e controle de acesso em ambientes IoT, permitindo canais seguros, autenticação auditável e proteção dos dados sensoriais.",
+        "pagina": 16
+      }
+    ]
+  },
+  "resposta": {
+    "problema": "foco em identidade digital para cidades inteligentes usando blockchain.",
+    "solucao": "propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
+    "avaliacao": "destacando a importância da segurança da informação e avaliando o custo computacional da solução.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Integrar criptografia baseada em atributos (ABE) ao modelo de credenciais verificáveis, permitindo controle de acesso seletivo a dados de sensores IoT sem expor informações sensíveis."
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:51:51"
+}

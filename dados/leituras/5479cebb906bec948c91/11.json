@@ -1,0 +1,43 @@
+{
+  "resumo": "O trabalho apresenta um sistema de classificação de resíduos baseado em CNNs com transfer learning, alcançando 95% de acurácia, e integra blockchain PoS para garantir integridade dos dados, embora aumente a complexidade computacional e exija latência de 1,2 s por imagem, sendo adequado para gestão de resíduos em cidades inteligentes.",
+  "perfil": {
+    "problema": "requires greater computational resources",
+    "solucao": "incorporation of blockchain with PoS",
+    "avaliacao": "classification accuracy of 95%",
+    "limites": "higher computational complexity",
+    "possibilidades": [
+      "Integrar identidade auto‑soberana (SSI) para autenticação e controle de acesso aos sensores de resíduos.",
+      "Utilizar credenciais verificáveis registradas em blockchain para compartilhamento seguro de classificações entre municípios.",
+      "Aplicar criptografia baseada em atributos (ABE) para proteger informações sensíveis de peso e tipo dos resíduos.",
+      "Avaliar a escalabilidade do modelo em arquiteturas de borda (edge computing) com inferência distribuída.",
+      "Explorar aprendizado federado para preservar a privacidade das imagens de resíduos.",
+      "Incorporar provas de conhecimento zero‑knowledge para validar classificações sem revelar dados brutos."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "we achieved a classification accuracy of 95%",
+      "afirmacao": "A acurácia de classificação alcançou 95%"
+    },
+    {
+      "citacao": "maintain a low latency of 1.2 s per image",
+      "afirmacao": "A latência de processamento por imagem foi de 1.2 s"
+    }
+  ],
+  "interpretacao": "A combinação de CNN avançada e blockchain melhora a precisão e a integridade dos dados, mas impõe custos computacionais que precisam ser mitigados em ambientes de borda.",
+  "duvidas": "Como a sobrecarga da blockchain afeta a energia consumida pelos nós de borda? Qual seria o impacto de substituir PoS por um consenso mais leve? Como garantir a privacidade das imagens ao usar aprendizado federado?",
+  "avisos": [],
+  "id": "a35089711df423ef93c4",
+  "artigo": "Alabdali_2025",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "traditional machine learning approaches, such as SVM and decision trees, which lacked deep feature extraction capabilities",
+    "solucao": "proposed AI-driven waste classification system",
+    "avaliacao": "classification accuracy of 95%",
+    "limites": "higher computational complexity",
+    "possibilidades": "Integrar identidade auto‑soberana (SSI) para autenticação e controle de acesso aos sensores de resíduos.; Utilizar credenciais verificáveis registradas em blockchain para compartilhamento seguro de classificações entre municípios.; Aplicar criptografia baseada em atributos (ABE) para proteger informações sensíveis de peso e tipo dos resíduos.; Avaliar a escalabilidade do modelo em arquiteturas de borda (edge computing) com inferência distribuída.; Explorar aprendizado federado para preservar a privacidade das imagens de resíduos.; Incorporar provas de conhecimento zero‑knowledge para validar c",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "5479cebb906bec948c91"
+  }
+}

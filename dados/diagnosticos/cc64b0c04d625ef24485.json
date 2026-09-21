@@ -1,0 +1,94 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-21T00:11:56",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "Danilo_TCC_final",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "A monografia de Danilo Isaque Sousa Maia (UFMA, 2025) propõe um modelo de autenticação e controle de acesso para cidades inteligentes que combina blockchain e identidades autosoberanas (SSI). O modelo foi implementado com o middleware InterSCity e a plataforma Hyperledger, e experimentos preliminares demonstram latência inferior a 500 ms por operação, indicando viabilidade prática. O trabalho descreve o contexto, objetivo e palavras‑chave, mas não detalha requisitos funcionais e não‑funcionais, mecanismos de revogação ou recuperação de credenciais, proteções de privacidade além da autenticação, avaliação de escalabilidade em grande volume de dispositivos IoT, nem interoperabilidade entre diferentes cidades ou blockchains.",
+        "lacunas_possiveis": [
+          "Ausência de descrição de requisitos de segurança, privacidade e desempenho detalhados",
+          "Falta de mecanismo de revogação de credenciais e de recuperação de acesso perdido",
+          "Escalabilidade limitada: não há avaliação sob carga de milhares de dispositivos IoT",
+          "Interoperabilidade entre diferentes plataformas de blockchain ou cidades inteligentes não abordada"
+        ],
+        "propostas_possiveis": [
+          "Incorporar listas de revogação (CRL ou status list) ou protocolos de revogação descentralizada para SSI",
+          "Aplicar criptografia baseada em atributos (ABE) ou criptografia homomórfica para controle de acesso seletivo e preservação de privacidade",
+          "Realizar testes de carga massiva simulando milhares de dispositivos IoT para validar escalabilidade e latência",
+          "Desenvolver um módulo de interoperabilidade que traduza identidades e credenciais entre diferentes redes blockchain usadas em cidades inteligentes"
+        ]
+      },
+      {
+        "resumo": "O trabalho apresenta um modelo de gestão de identidade baseado em Self‑Sovereign Identity (SSI) e blockchain, implementado no middleware InterSCity com Hyperledger, visando proteger serviços de cidades inteligentes contra acessos não autorizados, fraudes e ataques DDoS. O modelo, que expande a proposta de Cardoso (2024) para incluir o cidadão, utiliza DID, DIDComm, JWT e o framework ACA‑Py, e foi avaliado quanto à latência (< 500 ms) nas fases de conexão, emissão, armazenamento, envio e verificação de credenciais. As fichas descrevem a arquitetura detalhada, fluxos de mensagens, métricas de desempenho e a adoção de terminologia padronizada. Contudo, o estudo não detalha mecanismos de revogação ou recuperação de credenciais, nem apresenta condições experimentais, comparações com abordagens alternativas, interoperabilidade com outros padrões de credenciais verificáveis ou o impacto de técnicas avançadas como ABE ou criptografia homomórfica.",
+        "lacunas_possiveis": [
+          "Ausência de mecanismo de revogação de credenciais e de recuperação de identidade em caso de perda de chave.",
+          "Escalabilidade não avaliada para ambientes com milhares de dispositivos IoT.",
+          "Interoperabilidade limitada ao uso de JWT, sem exploração de outros padrões de credenciais verificáveis.",
+          "Falta de descrição das condições experimentais (hardware, rede, número de credenciais) e comparação com abordagens alternativas.",
+          "Impacto de técnicas avançadas de criptografia (ABE, homomorphic encryption) sobre a latência não investigado."
+        ],
+        "propostas_possiveis": [
+          "Integrar um mecanismo de revogação baseado em VC Status List ou Merkle Tree no blockchain para permitir revogação eficiente em larga escala.",
+          "Desenvolver um esquema de recuperação de identidade usando secret sharing (Shamir) ou recuperação baseada em múltiplas chaves descentralizadas.",
+          "Realizar experimentos de escalabilidade com milhares de dispositivos IoT, medindo latência e throughput para validar o modelo em cenários reais.",
+          "Estender o suporte a padrões W3C Verifiable Credentials além de JWT e avaliar a interoperabilidade entre diferentes plataformas de smart city.",
+          "Incorporar Attribute‑Based Encryption (ABE) nos fluxos de emissão e verificação de credenciais e medir seu efeito na latência e na privacidade dos atributos sensíveis."
+        ]
+      },
+      {
+        "resumo": "O documento analisa a dependência das cidades inteligentes de IoT e de middleware como o InterSCity para integrar dispositivos heterogêneos, apontando sérios desafios de segurança da informação, como acessos não autorizados, fraudes, ataques man‑in‑the‑middle e negação de serviço. Propõe a adoção de identidades autosoberanas (SSI) baseadas em blockchain para que cidadãos controlem suas credenciais digitais, complementando modelos de gestão de identidade que ainda não contemplam o usuário final. O objetivo geral é criar um modelo de gestão de identidades e uma arquitetura de segurança que cubra a comunicação entre componentes do middleware e o controle de acesso centrado nos dados, suportando múltiplos atores (entidades públicas, privadas, cidadãos e sensores IoT). A plataforma InterSCity, composta por microsserviços modulares, oferece um ponto de integração potencial para emissão, verificação e revogação de credenciais SSI, embora permaneçam dúvidas sobre escalabilidade da blockchain, protocolos de revogação, recuperação de credenciais e impactos de desempenho ao inserir criptografia homomórfica ou ABE nos fluxos de dados.",
+        "lacunas_possiveis": [
+          "Integração prática de identidades autosoberanas ao middleware InterSCity, especialmente nos microsserviços existentes.",
+          "Seleção e adaptação de protocolos de revogação adequados a ambientes IoT de alta latência.",
+          "Avaliação do impacto de desempenho da criptografia homomórfica e de ABE nos fluxos de dados de sensores em tempo real.",
+          "Medição da latência introduzida pela SSI nas operações de coleta e processamento de dados urbanos.",
+          "Escalabilidade da solução blockchain em cenários com alta densidade de dispositivos IoT."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um módulo de extensão SSI para o Resource Adaptor do InterSCity, permitindo emissão, verificação e revogação de credenciais verificáveis.",
+          "Implementar e testar um esquema de revogação leve (por exemplo, listas de status) otimizado para redes IoT com alta latência.",
+          "Prototipar o uso de criptografia baseada em atributos (ABE) para controle de acesso granular aos dados coletados pelos sensores dentro do middleware.",
+          "Realizar benchmarks de algoritmos de criptografia homomórfica aplicados ao processamento de fluxos de dados de sensores, medindo impacto de desempenho.",
+          "Arquitetar uma blockchain permissionada híbrida que combine consenso rápido com suporte a alta taxa de transações para melhorar a escalabilidade."
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "A monografia de Danilo Isaque Sousa Maia (UFMA, 2025) propõe um modelo de autenticação e controle de acesso para cidades inteligentes que combina blockchain e identidades autosoberanas (SSI). O modelo foi implementado no middleware InterSCity usando a plataforma Hyperledger e demonstra latência inferior a 500 ms nas fases de conexão, emissão, armazenamento, envio e verificação de credenciais, indicando viabilidade prática. A arquitetura utiliza DID, DIDComm, JWT e o framework ACA‑Py, e descreve fluxos de mensagens e métricas de desempenho. Contudo, o trabalho não detalha requisitos de segurança, privacidade e desempenho, nem apresenta mecanismos de revogação ou recuperação de credenciais, avaliação de escalabilidade com milhares de dispositivos IoT, ou interoperabilidade entre diferentes blockchains ou padrões de credenciais verificáveis. Também não explora o impacto de técnicas avançadas como criptografia baseada em atributos (ABE) ou criptografia homomórfica nos fluxos de dados. (fonte: PDF parcial)",
+    "lacunas_possiveis": [
+      "Ausência de descrição de requisitos de segurança, privacidade e desempenho detalhados",
+      "Falta de mecanismo de revocação de credenciais e de recuperação de acesso perdido",
+      "Escalabilidade limitada: não há avaliação sob carga de milhares de dispositivos IoT",
+      "Interoperabilidade entre diferentes plataformas de blockchain ou cidades inteligentes não abordada",
+      "Falta de condições experimentais detalhadas (hardware, rede, número de credenciais) e comparações com abordagens alternativas",
+      "Interoperabilidade limitada ao uso de JWT, sem exploração de outros padrões de credenciais verificáveis",
+      "Integração prática de identidades autosoberanas ao middleware InterSCity, especialmente nos microsserviços existentes",
+      "Seleção e adaptação de protocolos de revogação adequados a ambientes IoT de alta latência",
+      "Avaliação do impacto de desempenho da criptografia homomórfica e de ABE nos fluxos de dados de sensores em tempo real",
+      "Medição da latência introduzida pela SSI nas operações de coleta e processamento de dados urbanos",
+      "Escalabilidade da solução blockchain em cenários com alta densidade de dispositivos IoT"
+    ],
+    "propostas_possiveis": [
+      "Incorporar listas de revogação (CRL ou status list) ou protocolos de revogação descentralizada para SSI",
+      "Aplicar criptografia baseada em atributos (ABE) ou criptografia homomórfica para controle de acesso seletivo e preservação de privacidade",
+      "Realizar testes de carga massiva simulando milhares de dispositivos IoT para validar escalabilidade e latência",
+      "Desenvolver um módulo de interoperabilidade que traduza identidades e credenciais entre diferentes redes blockchain usadas em cidades inteligentes",
+      "Integrar um mecanismo de revogação baseado em VC Status List ou Merkle Tree no blockchain para revogação eficiente em larga escala",
+      "Desenvolver um esquema de recuperação de identidade usando secret sharing (Shamir) ou múltiplas chaves descentralizadas",
+      "Estender o suporte a padrões W3C Verifiable Credentials além de JWT e avaliar interoperabilidade entre diferentes plataformas de smart city",
+      "Incorporar Attribute‑Based Encryption (ABE) nos fluxos de emissão e verificação de credenciais e medir seu efeito na latência e privacidade",
+      "Desenvolver um módulo de extensão SSI para o Resource Adaptor do InterSCity, permitindo emissão, verificação e revogação de credenciais verificáveis",
+      "Implementar e testar um esquema de revogação leve (por exemplo, listas de status) otimizado para redes IoT com alta latência",
+      "Prototipar o uso de ABE para controle de acesso granular aos dados coletados pelos sensores dentro do middleware",
+      "Realizar benchmarks de algoritmos de criptografia homomórfica aplicados ao processamento de fluxos de dados de sensores, medindo impacto de desempenho",
+      "Arquitetar uma blockchain permissionada híbrida que combine consenso rápido com suporte a alta taxa de transações para melhorar a escalabilidade"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:12:30"
+}

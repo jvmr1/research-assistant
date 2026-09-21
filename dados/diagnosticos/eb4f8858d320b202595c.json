@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:07:21",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey",
+    "perfil_anterior": {
+      "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+      "solucao": "Blockchain technology has been proposed as a potential solution to mitigate these issues",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "scalability, energy consumption, interoperability, and security",
+      "possibilidades": "Aplicar os mecanismos de controle de acesso baseados em blockchain estudados para IoT em cidades inteligentes; integrar identidade auto‑soberana (SSI) e credenciais verificáveis para acesso cross‑organizacional em serviços públicos urbanos; avaliar o desempenho de criptografia baseada em atributos (ABE) em edge computing de smart cities; criar métricas de privacidade e escalabilidade específicas para ambientes de saúde distribuídos em contextos urbanos."
+    },
+    "pagina": 5,
+    "texto": "works, we systematically categorize access control meth-\nods into permissionless and permissioned blockchains,\nevaluate critical privacy and security factors, and analyze\nwidely used blockchain platforms. Furthermore, we\naddress open research issues, propose potential solutions,\nand outline future directions up to 2024. While recent\nstudies offer valuable insights, they often lack a holistic\ncomparison of blockchain-based access control frame-\nworks from both privacy and security perspectives-a gap\nour work thoroughly addresses. As a result, our survey\nserves as a more comprehensive and actionable resource\nfor researchers and practitioners seeking a well-rounded\nunderstanding of blockchain-based EHR access control.\n2.1 Search strategy\nThis study reviews blockchain-based research papers\nrelated to healthcare, privacy, and access control that were\npublished between 2016 and 2024. We deﬁned the search\nspace for this study by utilizing multiple scientiﬁc data-\nbases, including Google Scholar, ResearchGate, IEEE,\nScience Direct, Elsevier, Springer, ACM, MDPI, Wiley,\nand Hindawi.\n2.2 Search criteria\nTo obtain a comprehensive understanding of the topic and\nanswer our research questions, we used specialized search\nkeywords to conduct our search. The selected papers were\nobtained using the search keywords (‘ ‘EHR’ ’ OR\n‘ ‘Healthcare’ ’ OR ‘ ‘EMR’ ’ OR ‘ ‘Electronic Health Record’ ’\nOR ‘ ‘Electronic Medical Record’ ’) AND (‘ ‘Privacy’ ’ OR\n‘ ‘Access Control’ ’) AND ‘ ‘Blockchain’ ’.\n2.3 Paper selection process\nFollowing the established search strategy and criteria, we\nqueried papers using the selected search keywords, as\nillustrated in Fig. 2, and as outlined below:\n• Step 1: In the ﬁrst step, we collected papers based on\nthe selected search keywords, resulting in 296 papers\nbeing collected.\n• Step 2: In the second step, we continued the paper\nselection process by removing duplicates and focusing\non the titles and abstracts. At the end of this step, 164\npapers remained.\n• Step 3: In the third phase, we thoroughly studied the\nentire contents of the papers and removed any unsuit-\nable ones. This led to a selection of 129 papers related\nto blockchain technology in the healthcare domain.\n• Step 4: Lastly, we analyzed and examined the papers\nremaining from the third phase. This resulted in a ﬁnal\nselection of 45 papers related to the use of blockchain in\nhealthcare, speciﬁcally focusing on providing privacy-\npreservation and access control methods for inclusion in\nthis review.\nIn this survey, our main focus is on privacy-preserving\ntechniques based on blockchain for implementing access\ncontrol methods in the healthcare sector. To ensure a\ncomprehensive understanding, we will begin by presenting\nan overview of blockchain technology in the following\nsection, prior to diving into the access control techniques\nbeing discussed.\n3 Blockchain technology overview\nBlockchain is a technology introduced by the pseudony-\nmous entity known as Satoshi Nakamoto [ 29]. It has\nbecome one of the most popular research areas and has the\npotential to revolutionize applications across various ﬁelds.\nTransactions on the blockchain are publicly visible yet\nbecome immutable once recorded. Any attempt to modify a\ntransaction would require updating the hash values of all\nsubsequent blocks. The blockchain stores data indeﬁnitely\nthrough a network of decentralized and distributed nodes.\nEach node maintains an instance of the blockchain, which\nis continuously updated to ensure consistency across all\nnodes. The blockchain consists of a series of interlinked\nblocks, with each block pointing to its predecessor. Every\nvalid transaction is recorded within a block on the\nblockchain.\n3.1 Hash function\nA hash function [30] is a deterministic mathematical\nalgorithm that maps data of arbitrary size to a ﬁxed-size bit\nstring, known as the hash value. Formally, let H be a hash\nfunction deﬁned as:\nH : f0; 1g/C3 !f 0; 1gn; ð1Þ\nwhere f0; 1g/C3 denotes the set of all binary strings of arbi-\ntrary ﬁnite length and f0; 1gn represents the set of binary\nstrings of ﬁxed length n. Hash functions are designed to\nsatisfy the following essential properties:\n• Pre-image resistance: Given a hash value h,i ti s\ncomputationally infeasible to ﬁnd any input x such that\nHðxÞ¼ h.\n• Second pre-image resistance: Given an input x,i ti s\ncomputationally infeasible to ﬁnd a different input x0\nsuch that HðxÞ¼ Hðx0Þ.\n• Collision resistance: It is computationally infeasible to\nﬁnd any two distinct inputs x and x0 such that\nHðxÞ¼ Hðx0Þ.\nCluster Computing (2025) 28:529 Page 5 of 45 529\n123",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta uma revisão sistemática de trabalhos que utilizam blockchain para controle de acesso e preservação de privacidade em saúde, categorizando métodos em blockchains permissionless e permissioned, avaliando fatores críticos de privacidade e segurança, e apontando a falta de comparações holísticas como lacuna que preenchem.",
+    "perfil": {
+      "problema": "While recent studies offer valuable insights, they often lack a holistic comparison of blockchain-based access control frameworks from both privacy and security perspectives—a gap our work thoroughly addresses.",
+      "solucao": "we systematically categorize access control methods into permissionless and permissioned blockchains, evaluate critical privacy and security factors, and analyze widely used blockchain platforms.",
+      "avaliacao": "Não informado.",
+      "limites": "Não informado.",
+      "possibilidades": [
+        "Aplicar a categorização de blockchains permissioned e permissionless a ambientes IoT de cidades inteligentes, avaliando desempenho e requisitos de privacidade.",
+        "Integrar identidade auto‑soberana (SSI) e credenciais verificáveis ao framework de controle de acesso para serviços públicos urbanos cross‑organizacionais.",
+        "Estender a análise de fatores de privacidade e segurança para incluir criptografia baseada em atributos (ABE) em edge computing de smart cities.",
+        "Desenvolver métricas específicas de privacidade e escalabilidade para sistemas de saúde distribuídos em contextos urbanos, comparando diferentes plataformas blockchain."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O estudo categoriza métodos de controle de acesso em blockchains permissionless e permissioned.",
+        "citacao": "we systematically categorize access control methods into permissionless and permissioned blockchains"
+      },
+      {
+        "afirmacao": "Identifica a falta de comparações holísticas como lacuna da literatura.",
+        "citacao": "they often lack a holistic comparison of blockchain-based access control frameworks from both privacy and security perspectives—a gap our work thoroughly addresses"
+      }
+    ],
+    "interpretacao": "O trabalho destaca que, apesar do crescente interesse em blockchain para saúde, ainda há ausência de análises comparativas abrangentes que considerem simultaneamente privacidade e segurança, e preenche essa lacuna ao oferecer uma taxonomia detalhada dos métodos de controle de acesso.",
+    "duvidas": "Quais critérios específicos foram usados para avaliar os fatores críticos de privacidade e segurança? Como a revisão trata a escalabilidade e consumo de energia dos diferentes tipos de blockchain? Há evidências empíricas que sustentem a eficácia das soluções propostas?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:09:10"
+}

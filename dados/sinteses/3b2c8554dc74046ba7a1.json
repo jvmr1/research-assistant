@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta o framework EPP-BCFL, que integra blockchain, aprendizado federado, analytics na borda e técnicas avançadas de privacidade (SMPC, Differential Privacy, ZKP, criptografia homomórfica). Utiliza um consenso leve PoS+BFT e agregação adaptativa que considera qualidade dos dados, confiança dos nós e detecção de anomalias. Os autores relatam redução de latência em 43%, diminuição de custo computacional em 37%, dobramento da velocidade de convergência e acurácia de aproximadamente 98,7%, com detecção de anomalias em cerca de 2,3 s. A validação, porém, está restrita a um benchmark de visão computacional, não abrangendo dados reais de registros eletrônicos de saúde (EHR) de alta dimensionalidade nem cenários de dispositivos IoT altamente heterogêneos. As fichas apontam dúvidas sobre desempenho em dados não‑IID, overhead energético do consenso e ZKP, interoperabilidade com identidade descentralizada (SSI) e ausência de mecanismos de incentivo para participação em ambientes de cidades inteligentes.",
+  "lacunas_possiveis": [
+    "Desempenho e escalabilidade do EPP-BCFL em dados reais de EHR de alta dimensionalidade e não‑IID.",
+    "Overhead energético e de comunicação do consenso PoS+BFT e das provas de conhecimento zero em dispositivos IoT de borda.",
+    "Integração e interoperabilidade com padrões de identidade descentralizada (SSI) em contextos de cidades inteligentes.",
+    "Ausência de mecanismos de incentivo para participação de nós IoT e instituições de saúde.",
+    "Suporte a aprendizado federado vertical e coordenação interinstitucional para dados heterogêneos."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um protótipo piloto em ambiente de saúde municipal, medindo energia, latência e acurácia com EHR reais.",
+    "Adaptar o consenso leve incorporando recompensas tokenizadas para incentivar a contribuição de dispositivos IoT.",
+    "Criar uma camada de interoperabilidade baseada em verifiable credentials que conecte o EPP-BCFL a sistemas SSI já adotados por órgãos públicos.",
+    "Estender a agregação adaptativa com técnicas de clustering para lidar com dados não‑IID e heterogêneos.",
+    "Incorporar aprendizado federado vertical para combinar dados clínicos e administrativos, facilitando a coordenação interinstitucional."
+  ]
+}

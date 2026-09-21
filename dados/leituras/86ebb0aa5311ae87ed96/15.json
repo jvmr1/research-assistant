@@ -1,0 +1,36 @@
+{
+  "resumo": "O estudo compara desempenho de Blockchain e IPFS para compartilhamento de dados em saúde IoT. Observa que o tempo de mineração da Blockchain cresce com o tamanho dos arquivos, enquanto o IPFS mantém tempos de upload/download menores. Dados experimentais mostram que o armazenamento IPFS aumenta proporcionalmente ao volume de arquivos, ao passo que o ledger da Blockchain cresce de forma constante, independentemente do tamanho.",
+  "perfil": {
+    "problema": "IPFS network has much faster upload and download speeds than the Blockchain network.",
+    "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+    "avaliacao": "upload, download, access, and mining times",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": [
+      "Avaliar o impacto de diferentes tamanhos de arquivos no tempo de mineração da Blockchain em cenários de borda.",
+      "Comparar o desempenho de IPFS e Blockchain em redes 5G vs LoRaWAN para aplicações de saúde.",
+      "Integrar identidade auto‑soberana (SSI) para autenticação de dispositivos IoT no fluxo de dados.",
+      "Investigar o uso de credenciais verificáveis (VCs) para controle de acesso granular aos registros de saúde armazenados em IPFS.",
+      "Estudar a escalabilidade da solução em múltiplas cidades inteligentes com milhares de peers."
+    ]
+  },
+  "evidencias": [],
+  "interpretacao": "Os resultados indicam que, para grandes volumes de dados de saúde, IPFS oferece melhor eficiência de armazenamento e tempos de transferência, enquanto a sobrecarga de mineração da Blockchain pode limitar sua escalabilidade em cenários de arquivos volumosos.",
+  "duvidas": "Como a latência de mineração afeta a consistência dos registros em tempo real? Qual seria o impacto de combinar IPFS com mecanismos de consenso mais leves ou híbridos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "88e47d80dfcf6fec0377",
+  "artigo": "Mallick_2025",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "IPFS network has much faster upload and download speeds than the Blockchain network.",
+    "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+    "avaliacao": "upload, download, access, and mining times",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Avaliar o impacto de diferentes tamanhos de arquivos no tempo de mineração da Blockchain em cenários de borda.; Comparar o desempenho de IPFS e Blockchain em redes 5G vs LoRaWAN para aplicações de saúde.; Integrar identidade auto‑soberana (SSI) para autenticação de dispositivos IoT no fluxo de dados.; Investigar o uso de credenciais verificáveis (VCs) para controle de acesso granular aos registros de saúde armazenados em IPFS.; Estudar a escalabilidade da solução em múltiplas cidades inteligentes com milhares de peers.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86ebb0aa5311ae87ed96"
+  }
+}

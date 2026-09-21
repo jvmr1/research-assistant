@@ -1,0 +1,36 @@
+{
+  "resumo": "O texto descreve a transição dos sistemas de saúde tradicionais para e‑health, destacando a importância dos registros eletrônicos (EHR) e os desafios de interoperabilidade e privacidade. Aponta incidentes de vazamento de dados e apresenta o blockchain como solução potencial para controle de acesso, oferecendo transparência, descentralização e resistência a adulterações, especialmente em ambientes permissioned.",
+  "perfil": {
+    "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+    "solucao": "Blockchain technology has been proposed as a potential solution to mitigate these issues",
+    "avaliacao": "Não informado.",
+    "limites": "Não informado.",
+    "possibilidades": "Explorar a aplicação de controle de acesso baseado em blockchain em IoT de cidades inteligentes; integrar identidade auto‑soberana (SSI) e credenciais verificáveis para interoperabilidade entre organizações de saúde e serviços públicos; avaliar o desempenho de criptografia baseada em atributos (ABE) em cenários de edge computing; definir métricas de privacidade e escalabilidade específicas para sistemas de saúde distribuídos em ambientes de smart city."
+  },
+  "evidencias": [
+    {
+      "citacao": "Privacy is a major concern in shared environments and must be carefully considered.",
+      "afirmacao": "privacy is a major concern in shared environments"
+    },
+    {
+      "citacao": "Blockchain technology can play a key role in access control by recording and verifying access-related information through a decentralized ledger.",
+      "afirmacao": "blockchain can play a key role in access control"
+    }
+  ],
+  "interpretacao": "O trecho reforça que, apesar dos benefícios dos EHRs, a falta de padrões comuns e as ameaças à privacidade limitam sua adoção, e que o blockchain surge como infraestrutura promissora para garantir controle de acesso auditável e resistente a falhas centralizadas.",
+  "duvidas": "Quais são os custos de desempenho e consumo de energia ao empregar blockchains permissioned em ambientes de edge computing? Como garantir a escalabilidade do registro de auditoria de acesso em redes de grande porte?",
+  "avisos": [],
+  "id": "178303345bbd3bb29308",
+  "artigo": "Tawfik_2025",
+  "pagina": 2,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "the lack of interoperability between different medical organizations’ data standards presents a significant challenge",
+    "solucao": "Blockchain technology has been proposed as a potential solution to mitigate these issues",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a aplicação de controle de acesso baseado em blockchain em IoT de cidades inteligentes; integrar identidade auto‑soberana (SSI) e credenciais verificáveis para interoperabilidade entre organizações de saúde e serviços públicos; avaliar o desempenho de criptografia baseada em atributos (ABE) em cenários de edge computing; definir métricas de privacidade e escalabilidade específicas para sistemas de saúde distribuídos em ambientes de smart city.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "36f23c87078e4a5a079a"
+  }
+}

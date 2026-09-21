@@ -1,0 +1,41 @@
+{
+  "resumo": "O artigo propõe um módulo de Detecção de Anomalias baseado em DNN que analisa logs de tráfego IoT e classifica ameaças, enviando os resultados para uma rede blockchain para registro permanente e transparência. Contudo, o fluxo de dados que descreve armazenamento, verificação e uso das anomalias na blockchain não está detalhado, assim como a automação via contratos inteligentes. A combinação de IA preditiva com blockchain visa melhorar a segurança cibernética em IoT, reduzindo ataques e preservando a integridade dos dados.",
+  "perfil": {
+    "problema": "the data flow that explains the storage, verification, and use of discovered abnormalities inside the blockchain network is lacking",
+    "solucao": "Integrating DL-based threat categorization with blockchain-based security and automated mitigation",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Incorporar identidade auto‑soberana (SSI) para autenticação descentralizada dos dispositivos IoT em cidades inteligentes.",
+      "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos registros blockchain.",
+      "Utilizar aprendizado federado para treinar os DNNs de detecção de anomalias preservando a privacidade dos dados nas bordas (edge computing).",
+      "Avaliar a abordagem em ambientes multi‑organização de cidades inteligentes, medindo interoperabilidade, latência e consumo energético."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "the Anomaly Detection module, which is based on DNN, scans IoT traffic logs and categorizes threats as normal or abnormal",
+      "afirmacao": "The Anomaly Detection module, which is based on DNN, scans IoT traffic logs and categorizes threats as normal or abnormal."
+    },
+    {
+      "citacao": "Combining the predictive capabilities of artificial intelligence with the trustless environment of blockchain enhances cybersecurity in IoT systems, thereby lowering probable attacks and maintaining data integrity",
+      "afirmacao": "Combining the predictive capabilities of artificial intelligence with the trustless environment of blockchain enhances cybersecurity in IoT systems, thereby lowering probable attacks and maintaining data integrity."
+    }
+  ],
+  "interpretacao": "O trabalho enfatiza a integração de DNNs para detecção de ameaças com registro imutável em blockchain, mas deixa em aberto como os logs são efetivamente armazenados, verificados e como contratos inteligentes respondem às anomalias, indicando uma lacuna de implementação prática.",
+  "duvidas": "Como os resultados da detecção são codificados e inseridos na blockchain? Qual é a lógica dos contratos inteligentes para mitigação automática? Qual o impacto de latência e consumo de energia ao combinar DNNs em tempo real com operações de blockchain em dispositivos IoT de recursos limitados?",
+  "avisos": [],
+  "id": "f38e05006f7eed13c08c",
+  "artigo": "Sathyabama_2025",
+  "pagina": 7,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "the data flow that explains the storage, verification, and use of discovered abnormalities inside the blockchain network is lacking",
+    "solucao": "Integrating DL-based threat categorization with blockchain-based security and automated mitigation",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "significant computational overhead and delay, restricting their practical use in resource-limited IoT settings",
+    "possibilidades": "Incorporar identidade auto‑soberana (SSI) para autenticação descentralizada dos dispositivos IoT em cidades inteligentes.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos registros blockchain.; Utilizar aprendizado federado para treinar os DNNs de detecção de anomalias preservando a privacidade dos dados nas bordas (edge computing).; Avaliar a abordagem em ambientes multi‑organização de cidades inteligentes, medindo interoperabilidade, latência e consumo energético.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "40196a11e46ff300b5bb"
+  }
+}

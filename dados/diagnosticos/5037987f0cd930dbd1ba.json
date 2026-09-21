@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-20T18:18:02",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "André Luiz Almeida Cardoso",
+    "perfil_anterior": {
+      "problema": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+      "solucao": "Arquiteturas para Gestão de Identidade",
+      "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Investigar integração de SSI com ABE para controle de acesso seletivo a dados de sensores IoT em CIs.; Explorar uso de criptografia homomórfica para análise de dados de mobilidade urbana preservando a privacidade dos cidadãos.; Desenvolver protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade e conectividade intermitente.; Criar ontologia unificada que relacione DID, ABE e criptografia homomórfica para melhorar a interoperabilidade entre serviços urbanos."
+    },
+    "pagina": 16,
+    "texto": "Capítulo 1. Introdução 16\nque aborda desde problemas relacionados à proteção de dados, assim como do software\ne também da infraestrutura utilizada para processar e armazenar os dados (ALAMER;\nALMAIAH, 2021). As CIs também estão susceptíveis a ameaças de segurança tais como:\nnegação de serviço, invenção e modificação de dados, acesso não autorizado a serviços\ne dados. Estas ameaças tem potencial para causar grandes prejuízos em uma cidade\ninteligente, de forma que a segurança computacional desempenha um papel crucial na\nproteção dos sistemas de informação e comunicação que sustentam as infraestruturas\ne serviços urbanos da cidade. Requisitos básicos de segurança como confidencialidade,\nintegridade, irretratabilidade, disponibilidade, controle de acesso e privacidade também\nse aplicam às CIs e devem estar presentes no mundo físico (i.e., no sensoriamento), na\ncomunicação e nas informações (ZHANGet al., 2017).\nNegligenciar a segurança no contexto de CIs pode resultar em consequências\nindesejadas, tais como: exposição de dados pessoais e sensíveis dos cidadãos; e interrupções\nsignificativas nos serviços essenciais, como transporte público, fornecimento de água, energia\ne serviços de emergência. Tais consequências também podem gerar falta de confiança do\npúblico em relação às tecnologias e serviços oferecidos pelas cidades, agravando ainda\nmais os problemas. O ambiente complexo e heterogêneo de uma CI, com diferentes atores,\nprotocolos de comunicação e interações diversas dificulta a implementação de mecanismos\nde segurança. Portanto, é necessário que a segurança da informação seja uma prioridade\nem todas as etapas do desenvolvimento de soluções para CIs, desde especificação até a\nimplantação.\nNeste sentido, a Gestão de Identidades pode desempenhar um papel fundamental\nna garantia da segurança em ambientes de IoT e CI. Através da identificação de todos\nos atores existentes em uma CI torna-se possível implementar mecanismos de segurança\ncapazes de assegurar a procedência dos dados provenientes do sensoriamento, controlar\nacesso aos dispositivos, serviços, aplicações e recursos da cidade, assim como garantir a\nintegridade e confidencialidade de dados trafegados. Ao considerar a gestão de identidades\naplicadas a uma CI, espera-se que seja possível desenvolver um ambiente propício para\na identificação e gestão transparente e segura dos recursos da cidade, assim como dos\natores que ali existem e que podem se comunicar, produzir e consumir dados. Como\nexemplo prático de atores existentes em uma CI, podemos citar órgãos públicos tais como\nprefeituras, sub-prefeituras, secretarias ou similares, pessoas, dispositivos IoT (i.e., sensores\ne atuadores), serviços, sistemas e aplicações. Um sistema de Gestão de Identidades voltado\npara CI, portanto, deve oferecer os meios para que sejam desenvolvidos mecanismos para\nestabelecimento de canais seguros de comunicação, autenticação e controle de acesso entre\nestes participantes, de forma transparente e auditável.\nA tecnologiablockchain oferece uma forma inovadora de promover a confiança em\nsistemas digitais, eliminando a necessidade de confiança mútua entre os participantes. Com",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho destaca que as cidades inteligentes (CIs) enfrentam ameaças de segurança como negação de serviço e acesso não autorizado, o que pode causar prejuízos graves e perda de confiança pública. Enfatiza que a gestão de identidades é essencial para garantir confidencialidade, integridade e controle de acesso em ambientes IoT, permitindo canais seguros, autenticação auditável e proteção dos dados sensoriais.",
+    "perfil": {
+      "problema": "as CIs também estão susceptíveis a ameaças de segurança tais como: negação de serviço, invenção e modificação de dados, acesso não autorizado a serviços e dados.",
+      "solucao": "Gestão de Identidades pode desempenhar um papel fundamental",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "Explorar integração de SSI com blockchain para canais seguros de comunicação em CIs; Aplicar ABE para controle de acesso seletivo a sensores IoT; Investigar protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade; Avaliar uso de criptografia homomórfica para análise de dados de mobilidade preservando privacidade."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "as CIs também estão susceptíveis a ameaças de segurança tais como: negação de serviço, invenção e modificação de dados, acesso não autorizado a serviços e dados.",
+        "citacao": "as CIs também estão susceptíveis a ameaças de segurança tais como:\nnegação de serviço, invenção e modificação de dados, acesso não autorizado a serviços\ne dados."
+      },
+      {
+        "afirmacao": "Gestão de Identidades pode desempenhar um papel fundamental na garantia da segurança em ambientes de IoT e CI.",
+        "citacao": "Neste sentido, a Gestão de Identidades pode desempenhar um papel fundamental\nna garantia da segurança em ambientes de IoT e CI."
+      }
+    ],
+    "interpretacao": "O texto reforça que a segurança da informação é crítica nas CIs e que a gestão de identidades, possivelmente suportada por SSI e blockchain, pode mitigar ameaças ao prover autenticação, controle de acesso e auditoria em todo o ciclo de vida dos dados.",
+    "duvidas": "Quais são os requisitos específicos para implementar SSI em dispositivos IoT de baixa potência? Como garantir a revogação eficiente de credenciais em ambientes com conectividade intermitente? Existem métricas práticas para avaliar a sobrecarga de memória introduzida por soluções baseadas em blockchain em CIs?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:18:06"
+}

@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T17:53:58",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 7,
+        "resumo": "O trecho descreve as táticas de otimização do algoritmo HHO (hard siege, soft besiege, etc.) e a formulação da função de fitness que combina erro do classificador e taxa de redução de atributos. Em seguida, apresenta o classificador SSAE, destacando sua capacidade de aprender representações hierárquicas esparsas, maior precisão e resistência a ruído, sendo indicado para detecção de ameaças cibernéticas em tempo real em cidades inteligentes.",
+        "interpretacao": "O trecho detalha as táticas de otimização HHO e a formulação da função de fitness, além de justificar a escolha do SSAE por sua capacidade de aprender representações hierárquicas esparsas, o que reforça a proposta de detecção de ameaças em tempo real.",
+        "duvidas": "Como os parâmetros r e |En| são ajustados dinamicamente durante a execução do HHO? Qual o custo computacional adicional introduzido pelas táticas de hard/soft besiege em dispositivos de borda?"
+      },
+      {
+        "pagina": 8,
+        "resumo": "O trecho descreve a arquitetura de um auto‑codificador (AE) e sua variante esparsa (SAE). O encoder mapeia os dados de entrada X para uma representação oculta h usando pesos W1 e viés b1, enquanto o decoder reconstrói a saída z a partir de h com pesos W2 e viés b2. A função de perda J mede o erro de reconstrução. A SAE introduz uma penalidade de esparsidade Jsparse, baseada na divergência KL entre a taxa de ativação desejada ρ e a média observada ˆρ, incentivando que a maioria dos neurônios ocultos permaneça inativa.",
+        "interpretacao": "O texto detalha como a camada codificadora/decodificadora e a função de perda são estendidas por uma penalidade de esparsidade, tornando a representação latente mais compacta e potencialmente mais robusta contra overfitting, o que pode ser benéfico para a detecção de ameaças em ambientes IoT distribuídos.",
+        "duvidas": "Como a escolha do parâmetro β influencia o trade‑off entre precisão da detecção e consumo de recursos nos nós de borda? Qual o impacto da penalidade de esparsidade na privacidade dos dados quando o modelo é treinado de forma federada?"
+      },
+      {
+        "pagina": 9,
+        "resumo": "O trecho detalha a formulação da função de perda do SSAE, incluindo o termo de penalidade de esparsidade β e a divergência KL, e descreve o uso do algoritmo de otimização Walrus (WO/WOA) para ajuste de hiperparâmetros, destacando sua eficiência em convergência e menor custo computacional comparado a buscas convencionais.",
+        "interpretacao": "O uso do WO como otimizador de hiperparâmetros reforça a proposta de melhorar a eficiência computacional, alinhado ao objetivo de reduzir custos em ambientes de borda.",
+        "duvidas": "Como a escolha de β impacta a convergência do SSAE em cenários de dados heterogêneos? Qual o overhead real de implementar WO em dispositivos com recursos limitados?"
+      },
+      {
+        "pagina": 10,
+        "resumo": "O trecho descreve os mecanismos de migração e reprodução do algoritmo Whale Optimization (WO) usados para ajustar a posição dos vetores solução, incluindo sinais de perigo, coeficiente β, passos de migração, e comportamentos de roosting e juvenis baseados em sequências de Halton e voos de Lévy.",
+        "interpretacao": "Os detalhes do WO apresentados (sinais de perigo, coeficiente β, passos de migração e estratégias de roosting) sugerem um controle fino entre exploração global e exploração local, o que pode ser aproveitado para melhorar a busca de hiperparâmetros e a robustez do modelo federado em cenários de cidades inteligentes.",
+        "duvidas": "Como o coeficiente β evolui ao longo das iterações em ambientes reais de IoT? Qual o impacto da migração baseada em danger_signal sobre o consumo energético dos nós de borda? Como integrar as estratégias de roosting (Halton, Lévy) ao processo de agregação federada sem comprometer a privacidade?"
+      },
+      {
+        "pagina": 11,
+        "resumo": "O trecho descreve o comportamento de forrageamento inspirado no algoritmo Whale Optimization (WOA), apresentando equações para atualização de posições, coeficientes de coleta e seleção de fitness baseada em precisão, além de detalhar o conjunto de dados usado (30.000 instâncias, 12 classes).",
+        "interpretacao": "O texto detalha a formulação matemática do WOA e seu uso na seleção de soluções ótimas, bem como apresenta o conjunto de dados empregado para validar o modelo de detecção de ameaças em IoT.",
+        "duvidas": "Como o algoritmo WOA se integra ao framework federado proposto? Qual o impacto dos parâmetros a e b na convergência em ambientes de borda? Há avaliação de consumo de energia durante a otimização?"
+      },
+      {
+        "pagina": 12,
+        "resumo": "A análise dos resultados do modelo AAIFLF-PPCD, testado no conjunto de dados Kaggle com 30.000 instâncias e 12 classes, mostrou que apenas 32 das 65 características foram selecionadas. A matriz de correlação revelou relações variadas entre parâmetros de rede, destacando uma forte correlação positiva (0,93) entre File_activity e Process_activity e correlações fracas ou negativas entre outras variáveis, como Scr_port e Des_port (‑0,04).",
+        "interpretacao": "A correlação forte entre atividades de arquivos e processos indica que esses atributos são críticos para a detecção de ameaças, enquanto correlações fracas sugerem que alguns atributos podem ser descartados sem perda significativa de informação, potencialmente aliviando a carga computacional.",
+        "duvidas": "Como a seleção de apenas 32 atributos impacta a capacidade de generalização do modelo em cenários reais de cidades inteligentes? Qual seria o efeito de incorporar a energia consumida pelos nós IoT na função de fitness do algoritmo WOA?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo propõe um framework federado de aprendizado de máquina para detecção de ameaças cibernéticas em cidades inteligentes assistidas por IoT, combinando técnicas de otimização avançadas e preservação de privacidade. Na camada de modelagem, utiliza‑se um auto‑codificador esparso (SAE) que incorpora penalidade de esparsidade β baseada na divergência KL, e um classificador SSAE capaz de aprender representações hierárquicas esparsas. A otimização dos hiperparâmetros é conduzida por algoritmos inspirados em comportamentos de baleias (Whale Optimization – WO/WOA) e por um otimizador Walrus (WO), que ajustam parâmetros como β, coeficientes de migração e sinais de perigo, buscando equilibrar exploração global e local. O modelo foi avaliado em um conjunto de dados Kaggle contendo 30 000 instâncias e 12 classes, resultando na seleção de 32 de 65 atributos, com forte correlação entre atividades de arquivos e processos. As fichas destacam dúvidas sobre o ajuste dinâmico de parâmetros, custos computacionais em nós de borda, impactos de β na precisão versus consumo de recursos, e a influência da penalidade de esparsidade na privacidade durante o treinamento federado.",
+    "lacunas_possiveis": [
+      "Método de ajuste dinâmico dos parâmetros r e |En| do algoritmo HHO em dispositivos de borda.",
+      "Custo computacional e consumo energético introduzidos pelas táticas hard/soft besiege do HHO e pelos mecanismos de migração do WO em hardware IoT limitado.",
+      "Influência do parâmetro β na convergência do SSAE e no trade‑off entre precisão de detecção e recursos nos nós federados.",
+      "Impacto da penalidade de esparsidade (β, KL) sobre a privacidade dos dados durante o treinamento federado.",
+      "Efeito da redução de atributos (de 65 para 32) na capacidade de generalização do modelo em cenários reais de cidades inteligentes."
+    ],
+    "propostas_possiveis": [
+      "Realizar experimentos controlados para avaliar estratégias de ajuste adaptativo de r e |En| no HHO, medindo latência e uso de memória nos nós de borda.",
+      "Implementar versões simplificadas das táticas hard/soft besiege e dos processos de migração do WO, comparando overhead energético contra versões padrão.",
+      "Conduzir estudo de sensibilidade de β, variando seu valor em ambientes federados heterogêneos para quantificar impactos na acurácia e no consumo de CPU/GPU.",
+      "Analisar possíveis vazamentos de informação decorrentes da penalidade de esparsidade, aplicando métricas de privacidade diferencial ao treinamento federado do SAE.",
+      "Testar a robustez do modelo usando o conjunto completo de 65 atributos versus o subconjunto de 32, avaliando desempenho e consumo de recursos em implantações piloto de smart city."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:54:33"
+}

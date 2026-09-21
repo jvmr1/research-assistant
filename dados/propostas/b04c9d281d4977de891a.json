@@ -1,0 +1,32 @@
+{
+  "id": "b04c9d281d4977de891a",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T16:51:13",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Sathyabama_2025: Explorar consenso leve (PoA, DAG) para reduzir latência; integrar verifiable credentials p",
+  "fontes": [
+    "Sathyabama_2025"
+  ],
+  "problema": "computational cost analysis for DNN training and blockchain operations is necessary",
+  "hipotese_lacuna": "computational cost analysis for DNN training and blockchain operations is necessary",
+  "meu_trabalho": "Explorar consenso leve (PoA, DAG) para reduzir latência; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar aprendizado federado para treinamento distribuído sem exposição de dados sensíveis; avaliar robustez contra ataques adversariais usando técnicas de defesa avançadas; otimizar modelos DNN com poda, quantização ou destilação para dispositivos de borda.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Explorar consenso leve (PoA, DAG) para reduzir latência; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar aprendizado federado para treinamento distribuído sem exposição de dados sensíveis; avaliar robustez contra ataques adversariais usando técnicas de defesa avançadas; otimizar modelos DNN com poda, quantização ou destilação para dispositivos de borda.",
+  "modo": "artigo",
+  "buscas": [
+    "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security limitations future work",
+    "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual mecanismo leve de consenso (PoA ou DAG) oferece melhor trade‑off entre latência e segurança para redes IoT heterogêneas?; Como garantir a interoperabilidade das verifiable credentials entre diferentes provedores de identidade no contexto de cidades inteligentes?; Qual estratégia de federated learning (centralizada vs. hierárquica) reduz mais a exposição de dados sensíveis sem degradar a acurácia?; Qual nível de poda ou quantização mantém a detecção de anomalias acima de 95 % de acurácia em dispositivos de borda limitados?; Como medir e comparar a robustez contra ataques adversariais (e.g., model poisoning) entre a solução proposta e o baseline DNNs‑BCT?",
+  "evidencias_usadas": [
+    "6a8f0b952a23d59feaeb",
+    "b9c2f52d3610c303cb17",
+    "eda521031516b8b36a16"
+  ],
+  "fatos": "O modelo DNN atinge taxa de falsos positivos de 15,42% e precisão de detecção de 99,18%.; Every IoT device logs activities on a private blockchain network, ensuring secure communication and preventing unlawful access; DNNs-BCT reduces computational costs and latency compared to traditional blockchain solutions.; Edge computing preprocesses data before DNN inference and blockchain logging, enabling real‑time anomaly detection.",
+  "experimento": "Implementar uma arquitetura híbrida que substitui o consenso tradicional da blockchain privada usada em Sathyabama_2025 por um mecanismo leve (Proof‑of‑Authority ou DAG). Integrar verifiable credentials via Hyperledger Aries para identidade e revogação de dispositivos IoT. Aplicar aprendizado federado (ex.: Flower) para treinar DNNs de detecção de anomalias nas bordas, usando poda/quantização para otimização. Comparar desempenho com o modelo DNNs‑BCT descrito no artigo Sathyabama_2025 (2025).",
+  "recursos": "Datasets públicos de IoT (IoT‑23, UNSW‑NB15, CICIDS2017); dispositivos de borda (Raspberry Pi 4, Jetson Nano); plataforma blockchain open‑source configurável (Hyperledger Fabric com PoA ou IOTA Tangle); framework SSI (Hyperledger Aries/Indy); biblioteca de aprendizado federado (Flower ou TensorFlow Federated); ferramentas de otimização de modelos (TensorRT, ONNX Runtime); ambiente de desenvolvimento (Docker, Kubernetes).",
+  "metricas": "Latência de consenso (ms), taxa de transação (TPS), tempo de revogação de credenciais (ms), acurácia e taxa de falsos positivos da detecção de anomalias, overhead de comunicação (KB/s), consumo energético dos nós de borda (Joules), tamanho do modelo pós‑poda (MB) e tempo de inferência (ms).",
+  "detalhada": true
+}

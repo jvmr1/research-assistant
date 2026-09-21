@@ -1,0 +1,30 @@
+{
+  "resumo": "O trabalho apresenta uma comparação de guias e surveys de segurança e privacidade para IIoT, destacando que seu próprio guia cobre todas as áreas (autenticação, controle de acesso, etc.). Define uma arquitetura de quatro camadas (percepção, gateway, aplicação/gerenciamento de dados e nuvem) e descreve desafios de fluxo contínuo de dados que supera a capacidade de transmissão direta ao cloud, exigindo conversão analógica‑digital nos gateways e processamento de borda para reduzir a carga na nuvem.",
+  "perfil": {
+    "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "system is not readily available as a commercial product",
+    "possibilidades": "• Avaliar a integração de SSI baseada em blockchain para autenticação descentralizada nos dispositivos da camada de percepção. • Propor um modelo de política automática que traduza as diretrizes NIST/ENISA em regras de segmentação de rede para gateways. • Investigar o uso de ABE para controle de acesso granular nos dados armazenados na camada de nuvem, considerando a latência introduzida pelo processamento de borda. • Desenvolver um protótipo de orquestração que combine edge computing e criptografia homomórfica para preservar privacidade durante a agregação de dados."
+  },
+  "evidencias": [],
+  "interpretacao": "O texto enfatiza a necessidade de camadas de gateway e edge computing para lidar com alta taxa de geração de dados em IIoT, apontando que diretrizes de segurança devem ser aplicadas em cada camada da arquitetura de quatro níveis.",
+  "duvidas": "Como as diretrizes propostas pelo guia são traduzidas em políticas operacionais específicas para cada camada? Existe avaliação prática de desempenho (latência, overhead) ao aplicar as recomendações de segurança nas camadas de gateway e edge?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "c6d2e5b4154843c47912",
+  "artigo": "Abdullahi_2025",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "system is not readily available as a commercial product",
+    "possibilidades": "• Avaliar a integração de SSI baseada em blockchain para autenticação descentralizada nos dispositivos da camada de percepção. • Propor um modelo de política automática que traduza as diretrizes NIST/ENISA em regras de segmentação de rede para gateways. • Investigar o uso de ABE para controle de acesso granular nos dados armazenados na camada de nuvem, considerando a latência introduzida pelo processamento de borda. • Desenvolver um protótipo de orquestração que combine edge computing e criptografia homomórfica para preservar privacidade durante a agregação de dados.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9de2ab0bcfc3fa9cca82"
+  }
+}

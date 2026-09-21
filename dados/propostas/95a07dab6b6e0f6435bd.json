@@ -1,0 +1,32 @@
+{
+  "id": "95a07dab6b6e0f6435bd",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T14:29:15",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Ding_2025: Desenvolver e validar um protocolo de revogação incremental integrado ao acumulador de jan",
+  "fontes": [
+    "Ding_2025"
+  ],
+  "problema": "Mecanismo de revogação de credenciais em tempo real não detalhado",
+  "hipotese_lacuna": "Mecanismo de revogação de credenciais em tempo real não detalhado",
+  "meu_trabalho": "Desenvolver e validar um protocolo de revogação incremental integrado ao acumulador de janela deslizante",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver e validar um protocolo de revogação incremental integrado ao acumulador de janela deslizante",
+  "modo": "artigo",
+  "buscas": [
+    "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT) limitations future work",
+    "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT) smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual a complexidade teórica esperada para a atualização incremental do SWAT e como ela se compara ao recomputo completo descrito por Ding 2025?; Como garantir a consistência entre nós off‑chain que mantêm cópias do acumulador e a cadeia on‑chain que registra as provas de revogação?; Qual o impacto da escolha da blockchain (Ethereum vs. Hyperledger) sobre o custo de transação e a latência de revogação?; É necessário adaptar o esquema de compromissos vetoriais para suportar provas de não‑pertencimento sem inflar o tamanho dos parâmetros públicos?; Quais limites práticos de tamanho de janela (K) são aceitáveis em cenários de cidades inteligentes com milhares de dispositivos?",
+  "evidencias_usadas": [
+    "aca07f96824f175c2454",
+    "c1096371d2c7a5ba19a1",
+    "af2b3bb0ebc4c645e2c7"
+  ],
+  "fatos": "O modelo propõe um registro verificável baseado em compromissos chave‑valor para documentos DID.; Um mecanismo de armazenamento baseado em acumulador de janela deslizante melhora o desempenho das consultas de identidade.; Existing identity management solutions in IIoT ... face challenges in scalability and trustworthiness.; O esquema inclui quatro fases: geração de prova, agregação de prova, verificação de prova e atualização de prova.",
+  "experimento": "Implementar um protocolo de revogação incremental que se apoie no acumulador de janela deslizante (SWAT) descrito por Ding et al. 2025 (VS‑DID). O protocolo deve permitir a remoção de DIDs comprometidos sem recomputar todo o acumulador, usando provas de não‑pertencimento atualizadas. Avaliar o desempenho comparando três cenários: (1) VS‑DID original sem revogação (fato do artigo); (2) VS‑DID com revogação baseada em acumulador estático (interpretação de soluções existentes); (3) VS‑DID com o novo protocolo incremental (hipótese de melhoria de latência e consumo de memória).",
+  "recursos": "Dados de identidade IoT públicos (ex.: dataset IoT‑23, sensores de cidades inteligentes disponíveis em portais de dados abertos); rede blockchain de teste (Ethereum Goerli ou Hyperledger Besu); bibliotecas de provas zk‑SNARK (libsnark, arkworks) e de acumuladores (implementação em Rust ou Go); ambiente de desenvolvimento Docker/Kubernetes; ferramentas de medição de desempenho (Prometheus, Grafana). Nenhum recurso foi inventado; todos são acessíveis publicamente.",
+  "metricas": "Tempo de verificação de prova de revogação (ms); latência de atualização do acumulador após revogação (ms); overhead de armazenamento adicional por revogação (KB/DID); taxa de tráfego de rede gerada pelas transações de revogação (KB/s); escalabilidade medida pelo número máximo de DIDs revogados simultaneamente mantendo tempo de verificação ≤ 5 ms; consumo de CPU/memória durante atualizações em lote.",
+  "detalhada": true
+}

@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:48:32",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+    "perfil_anterior": {
+      "problema": "patients’ limited control over their healthcare data",
+      "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+      "avaliacao": "most solutions remain at the proof-of-concept stage (TRL3)",
+      "limites": "privacy-preserving search and verification remain underexplored",
+      "possibilidades": "Adaptar os mecanismos de verificação baseados em assinaturas digitais e provas de conhecimento zero para garantir integridade e autenticidade de dados de IoT em cidades inteligentes.; Integrar controle de acesso baseado em atributos (ABE) ao fluxo de autenticação/autorizaçã​o descrito, permitindo políticas granulares para dispositivos edge.; Desenvolver um módulo de busca criptograficamente segura que suporte consultas sobre dados de saúde compartilhados em blockchains, aplicável a cenários de smart cities.; Criar protocolos de revogação de credenciais que combinam SSI com as etapas de autoriz"
+    },
+    "pagina": 5,
+    "texto": "Peer-to-Peer Networking and Applications (2025) 18:302\n2.2.1 Blockchain types\nBlockchains are commonly categorized into public, private, \nconsortium, and hybrid types. Each offers distinct trade-offs \nin decentralization, performance, and access control. Table \n3 summarizes their key characteristics and suitability for \nsensitive data sharing scenarios.\nAs shown in Table 3, public blockchains prioritize decen-\ntralization and transparency but suffer from scalability \nissues. In contrast, private and consortium blockchains offer \nbetter performance and privacy but at the cost of decentral-\nization. Hybrid blockchains attempt to balance these trade-\noffs, though their implementation remains complex.\n2.2.2 Consensus protocol\nConsensus protocols determine how blockchain networks \nachieve agreement on the next block. While various mecha-\nnisms exist, Proof of Work (PoW), Proof of Stake (PoS), \nand Practical Byzantine Fault Tolerance (PBFT) are among \nthe most widely used. Table 4 compares their key character-\nistics, strengths, and limitations.\nAs shown in Table 4, each consensus mechanism pres -\nents unique trade-offs relevant to healthcare data sharing. \nhandling both unstructured data (e.g., clinical notes, images) \nand structured data (e.g., lab results, diagnoses) in ways that \nmaintain patient privacy and comply with regulatory stan -\ndards [71].\nData transfer refers to the secure transmission of health-\ncare data between different systems, institutions, or stake -\nholders, such as research institutions, regulatory agencies, \nand healthcare providers [ 72]. Since these systems may \nadhere to various standards and protocols, robust security \nmeasures are essential to protect sensitive data during tran -\nsit [ 73]. Techniques such as Proxy Re-Encryption (PRE) \nand Transport Layer Security (TLS) help ensure that data is \nnot intercepted, tampered with, or exposed during transmis-\nsion, thereby upholding privacy standards and compliance \nwith regulatory frameworks [57].\n2.2 Blockchain\nBlockchain is a decentralized ledger that ensures secure, \ntransparent, and immutable transactions across distributed \nnetworks. Its key features–decentralization, immutability, \nand cryptographic security–make it particularly appealing \nfor healthcare data sharing, where patient privacy and data \nintegrity are paramount.\nTable 3 Comparison of different blockchain types\nType Access Model Governance Pros Cons\nPublic \n(Permissionless)\nOpen to anyone (read, write, \nvalidate)\nCommunity-driven \n(open-source)\nTransparency, censorship-resistant Scalability, privacy con-\ncerns, slower consensus\nPrivate \n(Permissioned)\nRestricted, single-entity control Central admin(s) High speed, privacy, compliance Centralized trust, less \ntransparency\nConsortium Restricted, multi-entity control Collaborative among \norganizations\nShared trust, more efficient than \npublic\nCoordination overhead, \npartial transparency\nHybrid Mix of public and private \ncomponents\nVaries; can be partially \nopen\nFlexible data access and privacy \ncontrols\nComplex to implement \nand govern\nTable 4 Comparison of PoW, PoS, and PBFT\nFeature PoW PoS PBFT\nConsensus \nMechanism\nComputational puzzle solving (mining) Stake-based validator selection Message-based agreement among \nnodes\nNode \nSelection\nMiners compete by solving crypto-\ngraphic puzzles\nValidators are chosen based on the amount of \ncryptocurrency staked\nA predefined set of validators \nexchange messages to reach consensus\nEnergy \nEfficiency\nLow (requires extensive computational \npower)\nHigh (minimal computational work required) High (no mining, relies on message \npassing)\nSecurity Secure against Sybil attacks [74] but \nvulnerable to 51% attacks [75]\nSecure against Sybil attacks but may face \ncentralization risks if few stakeholders \ndominate\nTolerates up to 1/3 of Byzantine nodes \nbut requires honest majority\nScalability Low (slow transaction processing, high \nenergy cost)\nHigher than PoW, but may depend on net-\nwork design\nLimited scalability due to communica-\ntion overhead\nFinality Probabilistic (confirmations reduce risk \nof reversion)\nFaster than PoW, but may require checkpoints Immediate (deterministic finality, no \nforks)\nCommon \nUsage\nPublic blockchains (e.g., Bitcoin, Ethe-\nreum 1.0)\nPublic and private blockchains (e.g., Ethe-\nreum 2.0)\nPermissioned blockchains (e.g., \nHyperledger Fabric)\n1 3\nPage 5 of 53 302",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho classifica blockchains em públicos, privados, consórcios e híbridos, apontando trade‑offs entre descentralização, desempenho e controle de acesso. Descreve ainda os principais protocolos de consenso (PoW, PoS, PBFT) e suas implicações para privacidade e escalabilidade em compartilhamento de dados de saúde. Menciona técnicas de transferência segura, como Proxy Re‑Encryption (PRE) e TLS, essenciais para proteger dados sensíveis em ambientes distribuídos.",
+    "perfil": {
+      "problema": "patients’ limited control over their healthcare data",
+      "solucao": "Blockchain technology promises enhanced data ownership, control, and interoperability",
+      "avaliacao": "most solutions remain at the proof-of-concept stage (TRL3)",
+      "limites": "privacy-preserving search and verification remain underexplored",
+      "possibilidades": [
+        "Avaliar blockchains híbridos como camada de integração entre dispositivos IoT edge e back‑ends de saúde em smart cities, mitigando a complexidade de implementação.",
+        "Projetar um mecanismo de consenso leve (ex.: PBFT adaptado) para redes de sensores urbanos, equilibrando latência e resistência a falhas bizantinas.",
+        "Desenvolver um módulo de busca criptograficamente segura usando Proxy Re‑Encryption (PRE) para consultas sobre dados de saúde armazenados em blockchains.",
+        "Criar políticas de controle de acesso baseadas em atributos (ABE) acopladas a credenciais verificáveis (SSI) para autorizar dispositivos edge em cenários de interoperabilidade inter‑organizacional."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Public blockchains prioritize decentralization and transparency but suffer from scalability issues.",
+        "citacao": "Public blockchains prioritize decentralization and transparency but suffer from scalability issues."
+      },
+      {
+        "afirmacao": "Hybrid blockchains attempt to balance these trade‑offs, though their implementation remains complex.",
+        "citacao": "Hybrid blockchains attempt to balance these trade‑offs, though their implementation remains complex."
+      }
+    ],
+    "interpretacao": "O texto evidencia que a escolha do tipo de blockchain e do protocolo de consenso impacta diretamente a viabilidade de compartilhamento seguro de dados sensíveis, sugerindo que soluções híbridas e mecanismos de criptografia avançada podem ser cruciais para aplicações em cidades inteligentes.",
+    "duvidas": "Qual tipo de blockchain (público, privado, consórcio ou híbrido) oferece o melhor equilíbrio entre privacidade e desempenho para dispositivos IoT em smart cities? Como adaptar protocolos como PBFT para ambientes com recursos limitados sem comprometer a segurança?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:48:44"
+}

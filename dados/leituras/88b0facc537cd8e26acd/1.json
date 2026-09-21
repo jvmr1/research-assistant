@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta o modelo VS‑DID para meta‑computação em IIoT, combinando armazenamento on‑chain e off‑chain e introduzindo um registro verificável baseado em compromissos chave‑valor para vincular chaves públicas a DIDs. Para reduzir custos de manutenção, propõe‑se um mecanismo de armazenamento com acumulador de janela deslizante que otimiza consultas e verificações, atendendo a metas de eficiência, economia de espaço e atualizações em tempo real.",
+  "perfil": {
+    "problema": "high maintenance cost issue",
+    "solucao": "slide-window accumulator-based storage mechanism",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Aplicar o VS‑DID a serviços de cidades inteligentes; integrar criptografia baseada em atributos (ABE) para controle de acesso granular; avaliar a escalabilidade em ambientes de edge computing; explorar interoperabilidade com padrões SSI de setores públicos."
+  },
+  "evidencias": [
+    {
+      "citacao": "We have proposed a novel verifiable registry scheme that is specifically tailored for DID documents.",
+      "afirmacao": "O modelo propõe um registro verificável baseado em compromissos chave‑valor para documentos DID."
+    },
+    {
+      "citacao": "we propose a slide-window accumulator-based storage mechanism",
+      "afirmacao": "Um mecanismo de armazenamento baseado em acumulador de janela deslizante melhora o desempenho das consultas de identidade."
+    }
+  ],
+  "interpretacao": "O trabalho foca na redução da carga de armazenamento on‑chain e na garantia de integridade dos DIDs, usando técnicas criptográficas avançadas (compromissos bilineares e acumuladores) que podem ser relevantes para ambientes de IIoT com recursos limitados.",
+  "duvidas": "Não há detalhes sobre experimentos, métricas de desempenho ou avaliação em cenários reais de cidades inteligentes; também falta informação sobre como o modelo lida com revogação de credenciais ou interoperabilidade com outros padrões SSI.",
+  "avisos": [],
+  "id": "aca07f96824f175c2454",
+  "artigo": "Ding_2025",
+  "pagina": 2,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "high maintenance cost issue",
+    "solucao": "slide-window accumulator-based storage mechanism",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o VS‑DID a serviços de cidades inteligentes; integrar criptografia baseada em atributos (ABE) para controle de acesso granular; avaliar a escalabilidade em ambientes de edge computing; explorar interoperabilidade com padrões SSI de setores públicos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "88b0facc537cd8e26acd"
+  }
+}

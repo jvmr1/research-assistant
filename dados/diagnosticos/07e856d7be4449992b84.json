@@ -1,0 +1,50 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:58:51",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain based solid waste classification with AI powered tracking and IoT integration",
+    "perfil_anterior": {
+      "problema": "traditional machine learning approaches, such as SVM and decision trees, which lacked deep feature extraction capabilities",
+      "solucao": "proposed AI-driven waste classification system",
+      "avaliacao": "precision of 93%",
+      "limites": "none have explored structural designs using deep learning",
+      "possibilidades": "Investigar a integração de identidade auto‑soberana (SSI) para controle de acesso aos dados dos sensores; aplicar credenciais verificáveis para autorizar leituras entre diferentes municípios; usar criptografia baseada em atributos (ABE) para proteger informações sensíveis de peso e nível dos resíduos; avaliar a escalabilidade do modelo em arquiteturas de borda (edge computing) com inferência local; explorar aprendizado federado para preservar a privacidade das imagens de resíduos; incorporar provas de conhecimento zero‑knowledge para verificação de classificação sem revelar dados brutos."
+    },
+    "pagina": 11,
+    "texto": "a higher recall ensures that most recyclable materials are accurately identified and categorized, minimizing the \nrisk of recyclable items being discarded as waste. The proposed method achieves a recall of 91%, surpassing the \n2021 method (78%) and the 2022 method (83%). This improvement is primarily due to the fine-tuning of pre-\ntrained deep learning models through transfer learning, which allows the system to better recognize and classify \na wider range of waste materials, reducing the number of false negatives. This enhancement in recall plays a vital \nrole in ensuring that recycling systems are more efficient and reliable, ultimately contributing to the reduction of \ncontamination in recycling streams and supporting the goals of sustainable waste management in smart cities.\nFigure 10 presents the F1-score performance of the proposed AI-driven waste classification system, achieving \na significant improvement over the 2021 (0.89) and 2022 (0.92) methods with an F1-score of 0.94. The F1-score is \nthe harmonic mean of precision and recall, providing a balanced measure of a model’s ability to correctly classify \nrecyclable waste while minimizing both false positives and false negatives. The improvement in the F1-score can \nbe attributed to the optimized CNN model, which leverages transfer learning to enhance both precision and \nrecall. A higher F1-score indicates that the proposed system not only accurately classifies recyclable materials \nbut also reduces misclassification, leading to more reliable waste sorting and better overall waste management \nefficiency.\nFigure 11 presents the latency comparison among three systems: the proposed method, the 2021 Method, \nand the 2022 Method. Latency, defined as the time delay between data input and system response, is a critical \nfactor in real-time waste management. The proposed method achieves the lowest latency at 1.2 s per image, \ncompared to 2.5 s for the 2021 model and 1.8 s for the 2022 model. This improvement is primarily due to the \nuse of lightweight deep learning architectures and the integration of edge computing, which allows for faster \ndata processing closer to the data source. Despite the high classification accuracy of 95%, the proposed method \nsuccessfully balances accuracy and speed, maintaining real-time processing capabilities essential for smart city \nwaste management operations. However, it is important to note that as model complexity increases (e.g., deeper \nCNNs or hybrid DL models), processing speed may be impacted if not optimized, highlighting the need for \nefficient model design and hardware acceleration.\nFigure 12 illustrates the computational complexity analysis of the proposed AI-driven waste management \nsystem compared to the 2021 and 2022 methods. The proposed system demonstrates higher computational \ncomplexity, primarily due to the integration of deep learning models, real-time processing requirements, and \nFig. 11. Latency.\n \nFig. 10. F1-score.\n \nScientific Reports |        (2025) 15:15197 11| https://doi.org/10.1038/s41598-025-97030-2\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O método proposto usa transferência de aprendizado em CNNs leves integradas ao edge computing, alcançando recall de 91%, F1‑score de 0,94, precisão de 95% e latência de 1,2 s por imagem, embora apresente maior complexidade computacional.",
+    "perfil": {
+      "problema": "traditional machine learning approaches, such as SVM and decision trees, which lacked deep feature extraction capabilities",
+      "solucao": "proposed AI-driven waste classification system",
+      "avaliacao": "recall of 91% and F1-score of 0.94",
+      "limites": "higher computational complexity",
+      "possibilidades": [
+        "Integrar identidade auto‑soberana (SSI) para controle de acesso aos dados dos sensores de resíduos.",
+        "Usar credenciais verificáveis e blockchain para registro imutável das classificações entre municípios.",
+        "Aplicar criptografia baseada em atributos (ABE) para proteger informações sensíveis de peso e tipo dos resíduos.",
+        "Avaliar a escalabilidade do modelo em arquiteturas de borda (edge computing) com inferência distribuída.",
+        "Explorar aprendizado federado para preservar a privacidade das imagens de resíduos.",
+        "Incorporar provas de conhecimento zero‑knowledge para validar classificações sem revelar dados brutos."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "The proposed method achieves a recall of 91%, surpassing the 2021 method (78%) and the 2022 method (83%).",
+        "citacao": "recall of 91%, surpassing the 2021 method (78%) and the 2022 method (83%)"
+      },
+      {
+        "afirmacao": "Latency is reduced to 1.2 s per image, compared to 2.5 s and 1.8 s for previous methods.",
+        "citacao": "latency at 1.2 s per image, compared to 2.5 s for the 2021 model and 1.8 s for the 2022 model"
+      }
+    ],
+    "interpretacao": "A combinação de transfer learning e arquiteturas leves permite melhorar significativamente recall, precisão e velocidade, tornando o sistema viável para aplicações em tempo real em cidades inteligentes, embora a maior complexidade exija otimizações de hardware.",
+    "duvidas": "Como a complexidade computacional impacta a energia consumida nos nós de borda? Qual seria o overhead de integrar blockchain e SSI ao fluxo de classificação em tempo real?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:59:06"
+}

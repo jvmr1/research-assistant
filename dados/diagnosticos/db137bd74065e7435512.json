@@ -1,0 +1,128 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-21T00:17:45",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Desenvolva esta sugestão em nível de reunião com orientador, como brainstorm profundo e útil. Não escreva só uma frase. JSON com strings: experimento, recursos, metricas, riscos e duvidas_orientador. Em experimento, detalhe: problema específico, hipótese, arquitetura/artefato a implementar, etapas, baseline ou trabalhos de comparação, e cenário de avaliação. Em recursos, liste ferramentas, dados/simuladores, padrões e bibliotecas possíveis, sem inventar disponibilidade. Em métricas, inclua desempenho, segurança, privacidade, usabilidade/interoperabilidade quando couber. Em riscos, explique o que pode inviabilizar ou reduzir a novidade, incluindo o risco de a proposta já ter sido tratada e quais buscas/tags precisam ser lidas para checar anterioridade. Em dúvidas, escreva perguntas concretas para levar à reunião. Use as fontes fornecidas e deixe claro quando for inferência exploratória. Cada campo deve ter entre 120 e 250 palavras quando houver informação suficiente.",
+  "entrada": {
+    "ideia": "Investigar a integração de listas de revogação distribuídas (LRDs) com credenciais verificáveis emitidas por SSI, avaliando desempenho e segurança em cenários de IoT. A ideia combina o modelo de autenticação baseado em blockchain de Maia (Exemplo_55b3b0969325cccbbb2c) com a análise de desafios de adoção de VCs de Gudipati_2025, identificando a lacuna de revogação prática em ambientes de borda.",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Exemplo_55b3b0969325cccbbb2c",
+          "titulo": "Danilo_TCC_final",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "revisao_origem": "e7b8232d88fc37f0003b",
+          "fichas_amostradas": [
+            {
+              "id": "4d0d92e96ed42493301d",
+              "pagina": 1,
+              "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                },
+                {
+                  "citacao": "Cidades Inteligentes",
+                  "afirmacao": "O estudo está inserido no contexto de cidades inteligentes."
+                }
+              ]
+            },
+            {
+              "id": "4af4e95bcf402163cf78",
+              "pagina": 2,
+              "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                }
+              ]
+            },
+            {
+              "id": "5cb5f57a5bb410182c9c",
+              "pagina": 3,
+              "resumo": "O trabalho de Danilo Isaque Sousa Maia (2025) propõe o uso de blockchain e identidades autosoberanas para autenticação e controle de acesso em cidades inteligentes, apresentando o tema, palavras‑chave e a orientação acadêmica.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes / Danilo Isaque Sousa Maia. - 2025.",
+                  "afirmacao": "O trabalho aborda Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes."
+                },
+                {
+                  "citacao": "1. Cidades Inteligentes. 2. Blockchain. 3. Identidades Autosoberanas. 4. Controle de Acesso. 5. Autenticação.",
+                  "afirmacao": "São listadas as palavras‑chave relacionadas ao tema."
+                }
+              ]
+            },
+            {
+              "id": "cb59efb152362ddd8ea7",
+              "pagina": 4,
+              "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+              "evidencias": [
+                {
+                  "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes",
+                  "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes."
+                }
+              ]
+            }
+          ],
+          "problema": "Não identificado nas fichas/trechos disponíveis.",
+          "solucao": "uso de identidades autosoberanas (SSI) baseadas em blockchain para dar controle aos cidadãos sobre suas credenciais digitais",
+          "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+          "limites": "Não identificado nas fichas/trechos disponíveis.",
+          "possibilidades": "Explorar a integração de mecanismos de revogação de credenciais verificáveis, como listas de revogação distribuídas, ao middleware InterSCity para melhorar a gestão de identidade e a resiliência contra comprometimento de credenciais.",
+          "assinatura": "48c9e3fceeab0d41daf3"
+        },
+        {
+          "id": "Gudipati_2025",
+          "titulo": "Verifiable Credentials: Transforming Digital Identity in the Real World",
+          "escopo": {
+            "tipo": "html",
+            "feitos": 1,
+            "total": 1,
+            "concluida": true
+          },
+          "revisao_origem": "e2cc560b062ae24c3531",
+          "fichas_amostradas": [
+            {
+              "id": "7696ef13aa4a2bd6c913",
+              "pagina": null,
+              "resumo": "O artigo apresenta as Verifiable Credentials (VCs) como tecnologia que transforma a gestão de identidade digital, proporcionando segurança, privacidade e descentralização. Descreve a arquitetura técnica, casos de uso reais e destaca a redução de custos administrativos e fraudes. Também discute desafios de adoção, integração empresarial e conformidade regulatória, além de apontar tendências como IA, segurança pós‑quântica e iniciativas governamentais.",
+              "evidencias": [
+                {
+                  "citacao": "The article demonstrates that VCs offer a paradigm shift in how organizations approach identity verification, enabling secure, privacy-preserving, and decentralized credential management while significantly reducing administrative overhead and fraud risks.",
+                  "afirmacao": "Verifiable Credentials (VCs) offer a paradigm shift in how organizations approach identity verification"
+                },
+                {
+                  "citacao": "The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance.",
+                  "afirmacao": "The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance"
+                }
+              ]
+            }
+          ],
+          "problema": "adoption challenges",
+          "solucao": "Não identificado nas fichas/trechos disponíveis.",
+          "avaliacao": "significantly reducing administrative overhead and fraud risks",
+          "limites": "Não identificado nas fichas/trechos disponíveis.",
+          "possibilidades": "Explorar a aplicação de VCs para controle de acesso em IoT de cidades inteligentes; combinar VCs com criptografia baseada em atributos (ABE) para compartilhamento de dados sensíveis; avaliar desempenho e escalabilidade em ambientes de edge computing; analisar requisitos regulatórios para identidade digital no setor público; investigar a integração de segurança pós‑quântica em VCs para IIoT.",
+          "assinatura": "71fe7feb5ad1a2870f19"
+        }
+      ],
+      "metodo": "perfis acumulados"
+    }
+  },
+  "resposta": {
+    "experimento": "Problema específico: a revogação de credenciais verificáveis (VCs) ainda é um ponto crítico em ambientes de borda de cidades inteligentes, onde dispositivos IoT precisam validar rapidamente a validade de identidades autossoberanas (SSI) sem depender de servidores centrais. Hipótese: a integração de Listas de Revogação Distribuídas (LRDs) baseadas em blockchain, combinada com o modelo de autenticação proposto por Maia (2025) – que já utiliza blockchain e SSI para controle de acesso – reduz o tempo de verificação e aumenta a resistência a ataques de replay, mantendo a privacidade do cidadão. Arquitetura/artefato: um middleware que expõe APIs de consulta a LRDs via smart contracts (Ethereum‑compatible) e que, ao receber uma VC, consulta a LRD antes de validar a assinatura DID; o middleware será inserido no stack InterSCity, conforme sugerido nas possibilidades de Cardoso et al. Etapas: (1) implementação do smart contract LRD; (2) extensão do verificador de VCs para consultar a LRD; (3) implantação em um testbed de IoT (simulador CityPulse); (4) execução de cenários de emissão, revogação e apresentação de VCs; (5) coleta de métricas. Baseline: solução de revogação centralizada descrita por Gudipati (2025) e abordagens de CRL tradicionais. Cenário de avaliação: rede de sensores de tráfego e iluminação pública, com 500 dispositivos simulados, medindo latência de verificação e taxa de falsos positivos/negativos.",
+    "recursos": "Ferramentas: Truffle/Hardhat para desenvolvimento de smart contracts, Ganache como blockchain privada, biblioteca DID‑JVM (ou DID‑JS) para manipulação de DIDs, Veramo para gerenciamento de VCs, e InterSCity SDK para integração com o middleware. Dados/Simuladores: CityPulse (simulador de cidades inteligentes) para gerar carga de mensagens IoT, e conjuntos de VCs sintéticos baseados nos perfis de cidadão descritos por Gudipati (2025). Padrões: W3C Decentralized Identifiers (DID) Core, W3C Verifiable Credentials Data Model, e W3C Verifiable Credentials Revocation List (VC‑RL) specification. Bibliotecas criptográficas: Hyperledger Aries para protocolos SSI, e libs de criptografia homomórfica (Microsoft SEAL) caso se deseje avaliar extensões futuras. Todas as ferramentas citadas são de código aberto e disponíveis em repositórios públicos, sem necessidade de licenças proprietárias.",
+    "metricas": "Desempenho: latência média de verificação de VC (ms) e throughput (verificações/s) comparando LRD distribuída vs. CRL centralizada. Segurança: taxa de detecção de credenciais revogadas (verdadeiros positivos) e taxa de aceitação de credenciais comprometidas (falsos negativos). Privacidade: tamanho do payload de revogação transmitido (bytes) e análise de vazamento de atributos sensíveis usando métricas de entropia, conforme recomendações de Gudipati (2025). Usabilidade/Interoperabilidade: tempo de integração (horas) do middleware com InterSCity, número de padrões suportados (DID, VC, VC‑RL) e feedback de desenvolvedores via SUS (System Usability Scale). Cada métrica será acompanhada de intervalo de confiança de 95 % e comparada com os valores de baseline reportados por Maia (2025) e Gudipati (2025).",
+    "riscos": "Risco de novidade: trabalhos recentes podem já propor LRDs para VCs em IoT; para validar, será necessária busca com tags \"self‑sovereign identity revocation blockchain\", \"distributed revocation list verifiable credentials\" e \"edge computing SSI\" nas bases OpenAlex, Crossref e Semantic Scholar. Risco técnico: a latência da blockchain privada pode superar os requisitos de tempo real de dispositivos de borda, reduzindo a relevância prática da proposta. Risco de adoção: se a comunidade de cidades inteligentes ainda não adotar padrões VC‑RL, a solução pode ter baixa interoperabilidade. Risco de segurança: vulnerabilidades nos smart contracts (re‑entrancy) podem comprometer a integridade da LRD; será necessário auditoria formal. Caso as buscas revelem implementações equivalentes, a proposta deverá ser refinada para focar, por exemplo, em mecanismos de compressão de LRD ou em combinações com ABE.",
+    "duvidas_orientador": "1. O senhor considera adequado usar uma blockchain privada (Ganache) para simular a LRD ou seria preferível testar em uma rede pública de teste (e.g., Sepolia) para maior realismo? 2. Qual baseline o orientador recomenda como referência mais robusta: a abordagem de revogação centralizada de Gudipati (2025) ou algum estudo de CRL em ambientes IoT que ainda não revisamos? 3. A integração com InterSCity deve ser feita via APIs REST ou via mensagens MQTT; qual estratégia tem maior aceitação na comunidade? 4. Deveríamos incluir um componente de auditoria baseada em provas de conhecimento (ZKP) para validar a revogação sem revelar identidade, ou isso complica excessivamente o escopo inicial? 5. Quais critérios de sucesso (por exemplo, latência < 50 ms) o orientador julga suficientes para considerar a proposta inovadora frente ao estado da arte?"
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:18:35"
+}

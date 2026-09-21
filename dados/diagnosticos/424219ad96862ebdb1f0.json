@@ -1,0 +1,65 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T14:27:30",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 7,
+        "resumo": "O trecho apresenta o mecanismo de atualização de provas e compromissos em um registro DID baseado em acumuladores de janela deslizante, detalhando as funções de atualização e provendo demonstrações formais de correção e solidez (soundness) do esquema de compromisso clássico, garantindo que documentos DID sejam à prova de adulteração.",
+        "interpretacao": "Os autores formalizam a segurança do registro DID ao provar que o esquema de compromisso utilizado satisfaz as propriedades de correção (todos os documentos legítimos são aceitos) e solidez (é impraticável forjar provas para documentos adulterados). Além disso, descrevem explicitamente o algoritmo de atualização de provas, permitindo a manutenção eficiente de registros em cenários dinâmicos.",
+        "duvidas": "Qual é o impacto de latência e consumo de recursos da operação Update(C,i′,Δ) em dispositivos com recursos limitados? Como o modelo se comporta em termos de escalabilidade quando o número de dispositivos e atualizações simultâneas cresce exponencialmente? Existe avaliação prática da integração de provas zero‑knowledge para revogação distribuída?"
+      },
+      {
+        "pagina": 8,
+        "resumo": "O trecho descreve o processamento de consultas verificáveis em DIDs usando um acumulador de janela deslizante (SWAT). O método divide consultas em subconsultas, indexa palavras‑chave em blocos recentes e usa interseções de conjuntos para validar consultas, melhorando a eficiência em relação à agregação inter‑blocos tradicional. Algoritmos para consultas booleanas e de intervalo são apresentados, destacando a construção de provas Merkle e a capacidade de lidar com janelas de tempo maiores que K.",
+        "interpretacao": "O uso do acumulador de janela deslizante permite indexar palavras‑chave de forma eficiente nos últimos K blocos, reduzindo a complexidade de consultas de verificação de DIDs de linear para quase constante, ao mesmo tempo que fornece provas de integridade via Merkle.",
+        "duvidas": "Como o tamanho da janela K afeta a escalabilidade em cenários com alta taxa de geração de blocos? Qual o custo adicional de gerar e verificar as provas Merkle para cada subconsulta em dispositivos com recursos limitados?"
+      },
+      {
+        "pagina": 9,
+        "resumo": "O artigo propõe um modelo de identidade descentralizada verificável para IIoT, baseado em um dicionário autenticado RSA estendido do KVaC, onde pares chave‑valor são vinculados a compromissos que garantem imutabilidade e integridade. Algoritmo 3 descreve a atualização verificada desses pares, exigindo verificação de consistência e geração de resumos de versão, permitindo rastreabilidade histórica e suporte a novos usuários e mudanças de chaves.",
+        "interpretacao": "O trabalho reforça a segurança de identidades digitais em IIoT ao combinar compromissos criptográficos com um dicionário autenticado que registra historicamente todas as versões, mitigando adulterações e facilitando auditorias.",
+        "duvidas": "Como o custo computacional do RSA autenticado escala com o número de dispositivos? O modelo suporta revogação eficiente de DIDs sem reprocessar todo o dicionário?"
+      },
+      {
+        "pagina": 10,
+        "resumo": "O trecho apresenta a avaliação experimental do registro DID baseado em compromissos vetoriais e acumulador de janela deslizante, medindo tempos de agregação, verificação e atualização para diferentes tamanhos de vetor (w) e alturas de árvore Merkle (n). Implementações utilizam a biblioteca mcl (BLS12‑381) e o esquema IPA de agregação, além de acumuladores Merkle via Bellman‑Bignat e provas SNARK Groth16. Destaca‑se o alto custo de parâmetros SNARK (≈50 GB) e geração (>30 h), indicando desafios de escalabilidade.",
+        "interpretacao": "Os resultados mostram que, embora o esquema ofereça verificabilidade segura e alta eficiência para provas agregadas, o custo de parâmetros SNARK pode inviabilizar sua adoção em cenários com recursos limitados, sugerindo a necessidade de otimizações ou alternativas mais leves.",
+        "duvidas": "Qual seria o impacto de substituir o esquema SNARK por um protocolo de prova mais compacto (ex.: PLONK) na geração de parâmetros? Como o acumulador de janela deslizante se comporta em dispositivos com memória restrita ao atualizar grandes vetores?"
+      },
+      {
+        "pagina": 11,
+        "resumo": "O estudo compara o esquema Merkle SNARK com o método proposto (Ours) para registro DID em IIoT, apresentando tabelas de tempos de agregação, verificação, compromisso e geração de parâmetros. Os resultados mostram que o método Ours tem tempos de prova agregada significativamente menores e que o tempo de verificação permanece constante (0.003 s) independentemente da altura da árvore Merkle. Também são detalhados os custos de geração de parâmetros e prova conforme o tamanho do vetor e a altura da árvore, evidenciando escalabilidade e eficiência.",
+        "interpretacao": "Os dados indicam que a estrutura de acumulador proposta oferece melhor desempenho em geração e verificação de provas, mantendo a verificação extremamente rápida mesmo com árvores de maior profundidade, o que é favorável para aplicações IIoT em cidades inteligentes onde a latência é crítica.",
+        "duvidas": "Não há informações sobre o consumo de energia dos dispositivos ao executar o algoritmo proposto nem sobre a robustez frente a falhas de rede em ambientes distribuídos."
+      },
+      {
+        "pagina": 12,
+        "resumo": "O artigo apresenta um esquema de DID baseado em computação verificável para IIoT, usando um acumulador de janela deslizante que reduz significativamente os tempos de geração de parâmetros, compromisso e provas, mantendo verificação em torno de 0,003 s, demonstrando escalabilidade e eficiência frente ao Merkle SNARK.",
+        "interpretacao": "Os resultados indicam que o esquema proposto supera o Merkle SNARK em tempos de prova agregada e de compromisso, enquanto mantém tempos de verificação muito baixos, o que o torna adequado para ambientes IIoT de grande escala que exigem autenticação rápida e segura.",
+        "duvidas": "Como o esquema se comporta em dispositivos edge com recursos limitados? Qual o impacto de tamanhos de vetor maiores que w=64? De que forma o acumulador de janela deslizante lida com revogação de credenciais? Qual o overhead adicional ao integrar blockchain para auditoria?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo propõe um modelo de identidade descentralizada verificável para IIoT que combina registros DID baseados em compromissos vetoriais, acumuladores de janela deslizante (SWAT) e um dicionário autenticado RSA estendido. São descritos algoritmos de atualização de provas, consultas verificáveis usando provas Merkle e suporte a versões históricas, permitindo auditoria e rastreabilidade. Avaliações experimentais com BLS12‑381, IPA e SNARK Groth16 mostram tempos de verificação muito baixos (≈0,003 s) e provas agregadas mais rápidas que o Merkle SNARK tradicional, embora a geração de parâmetros SNARK seja pesada (≈50 GB, >30 h). Os resultados indicam boa escalabilidade e eficiência para ambientes IIoT de cidades inteligentes, mas apontam desafios de consumo de recursos, latência de atualização e revogação em dispositivos com recursos limitados.",
+    "lacunas_possiveis": [
+      "Impacto de latência e consumo de energia da operação Update(C,i′,Δ) em dispositivos edge.",
+      "Escalabilidade do acumulador de janela deslizante com alta taxa de geração de blocos e grandes valores de K.",
+      "Custo computacional e memória do RSA autenticado e dos parâmetros SNARK em larga escala.",
+      "Mecanismos de revogação eficiente sem reprocessar todo o dicionário ou acumulador."
+    ],
+    "propostas_possiveis": [
+      "Avaliar protocolos de prova mais leves (ex.: PLONK ou Bulletproofs) para reduzir tamanho e tempo de geração de parâmetros.",
+      "Implementar versões otimizadas do algoritmo Update usando técnicas de computação aproximada ou offloading para fog/edge.",
+      "Projetar estratégias de gerenciamento de janela dinâmica que ajustem K conforme a taxa de blocos, mitigando sobrecarga de consultas.",
+      "Desenvolver um mecanismo de revogação incremental baseado em provas de não‑inclusão ou atributos revogáveis dentro do acumulador."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:27:37"
+}

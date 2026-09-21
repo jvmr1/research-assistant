@@ -1,0 +1,41 @@
+{
+  "resumo": "O trecho descreve o mecanismo híbrido PoS+BFT que usa pontuação de confiança composta para selecionar validadores, limitando stake para evitar centralização e incluindo fallback se mais de 1/3 dos nós forem maliciosos. O framework EPP-BCFL integra blockchain ao aprendizado federado, usando hash, criptografia, PoS e BFT, com DP aplicado antes de HE, e suporta treinamento assíncrono em dispositivos heterogêneos, mantendo complexidade computacional gerenciável.",
+  "perfil": {
+    "problema": "To mitigate the risk of centralization, we introduce a cap on the maximum allowable stake contribution from any single entity.",
+    "solucao": "In the proposed PoS + BFT hybrid consensus mechanism, the stake of each validator node is quantified based on a composite trust score...",
+    "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+    "limites": "if the proportion of malicious nodes exceeds 1/3, the system initiates a fallback mechanism.",
+    "possibilidades": [
+      "Aplicar o consenso híbrido PoS‑BFT a redes de sensores IoT em smart cities, avaliando desempenho com milhares de nós.",
+      "Integrar Self‑Sovereign Identity (SSI) e credenciais verificáveis ao processo de seleção de validadores para controle de acesso granular em serviços municipais.",
+      "Estender o framework para aprendizado federado vertical entre diferentes departamentos municipais, usando atributos de cidadãos como chaves de acesso.",
+      "Investigar a combinação de Differential Privacy e Homomorphic Encryption com credenciais verificáveis para auditoria de privacidade em ambientes de edge computing."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "verification complexity remains O(1) per update, while overall consensus complexity is reduced to O(k²)",
+      "afirmacao": "verification complexity remains O(1) per update"
+    },
+    {
+      "citacao": "Differential Privacy (DP) is applied prior to Homomorphic Encryption (HE) at the edge nodes.",
+      "afirmacao": "Differential Privacy is applied prior to Homomorphic Encryption at the edge nodes"
+    }
+  ],
+  "interpretacao": "O texto apresenta um modelo de consenso híbrido que combina PoS e BFT para garantir eficiência (O(1) na verificação) e segurança (tolerância a falhas bizantinas). A inclusão de um limite de stake e de mecanismos de fallback busca prevenir a centralização e mitigar ataques quando a proporção de nós maliciosos ultrapassa 1/3. O framework EPP-BCFL incorpora privacidade diferencial antes da criptografia homomórfica, permitindo que dispositivos heterogêneos participem de aprendizado federado de forma assíncrona, mantendo a escalabilidade linear em relação ao número de nós.",
+  "duvidas": "Como o limite de stake será definido e ajustado dinamicamente em ambientes de smart city? Qual o impacto prático da fase de fallback na latência do consenso? Como a combinação DP+HE afeta a precisão do modelo federado em cenários com dados altamente não‑IID?",
+  "avisos": [],
+  "id": "5f944c450563aa6f5f34",
+  "artigo": "Munusamy_2025",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "To mitigate the risk of centralization, we introduce a cap on the maximum allowable stake contribution from any single entity.",
+    "solucao": "decentralized model update storage",
+    "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+    "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+    "possibilidades": "Aplicar o consenso híbrido PoS‑BFT a redes de sensores IoT em smart cities, avaliando desempenho com milhares de nós.; Integrar Self‑Sovereign Identity (SSI) e credenciais verificáveis ao processo de seleção de validadores para controle de acesso granular em serviços municipais.; Estender o framework para aprendizado federado vertical entre diferentes departamentos municipais, usando atributos de cidadãos como chaves de acesso.; Investigar a combinação de Differential Privacy e Homomorphic Encryption com credenciais verificáveis para auditoria de privacidade em ambientes de edge computing.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

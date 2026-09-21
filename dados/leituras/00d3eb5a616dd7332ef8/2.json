@@ -1,0 +1,40 @@
+{
+  "resumo": "O trabalho apresenta o framework EPP-BCFL, que combina aprendizado federado, blockchain e técnicas de privacidade (SMPC, Differential Privacy, ZKP) para gerir registros eletrônicos de saúde. Destaca-se um consenso energeticamente eficiente que reduz latência em 43% e custo computacional em 37%, além de estratégias dinâmicas de agregação que dobram a velocidade de convergência. O sistema mantém alta acurácia (≈98,7%) e detecta anomalias em tempo real (~2,3 s).",
+  "perfil": {
+    "problema": "high computational overhead, communication latency, and susceptibility to data and model poisoning attacks",
+    "solucao": "Integration of Secure Multi-Party Computation (SMPC) and Differential Privacy to balance strong privacy protection with computational efficiency",
+    "avaliacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Aplicar o EPP-BCFL a serviços de smart cities IoT, integrando SSI e credenciais verificáveis.",
+      "Testar a escalabilidade do framework com milhares de nós de borda em ambientes urbanos.",
+      "Avaliar o impacto de diferentes mecanismos de consenso (PoS, BFT, PoA) em dispositivos de recursos limitados.",
+      "Incorporar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de saúde em cidades inteligentes.",
+      "Explorar a integração de Vertical Federated Learning (VFL) para análise cruzada de dados heterogêneos entre instituições públicas."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks.",
+      "afirmacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks."
+    }
+  ],
+  "interpretacao": "O EPP-BCFL demonstra que a combinação de blockchain, provas de conhecimento zero e privacidade diferencial pode melhorar significativamente a precisão, reduzir latência e custo computacional, ao mesmo tempo em que reforça a segurança e a privacidade em ambientes de aprendizado federado distribuído.",
+  "duvidas": "Como o framework se comporta em cenários de alta heterogeneidade de dispositivos IoT típicos de cidades inteligentes? Qual o overhead adicional introduzido pelos ZKP em dispositivos extremamente limitados? Como garantir a interoperabilidade com padrões de identidade descentralizada (SSI) já adotados por órgãos públicos?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "cc73fc3dc8e665986b0d",
+  "artigo": "Munusamy_2025",
+  "pagina": 3,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "high computational overhead, communication latency, and susceptibility to data and model poisoning attacks",
+    "solucao": "Integration of Secure Multi-Party Computation (SMPC) and Differential Privacy to balance strong privacy protection with computational efficiency",
+    "avaliacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o EPP-BCFL a serviços de smart cities IoT, integrando SSI e credenciais verificáveis.; Testar a escalabilidade do framework com milhares de nós de borda em ambientes urbanos.; Avaliar o impacto de diferentes mecanismos de consenso (PoS, BFT, PoA) em dispositivos de recursos limitados.; Incorporar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados de saúde em cidades inteligentes.; Explorar a integração de Vertical Federated Learning (VFL) para análise cruzada de dados heterogêneos entre instituições públicas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

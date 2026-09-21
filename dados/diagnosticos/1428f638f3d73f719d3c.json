@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T17:39:28",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "perfil_anterior": {
+      "problema": "",
+      "solucao": "",
+      "avaliacao": "",
+      "limites": "",
+      "possibilidades": ""
+    },
+    "pagina": 1,
+    "texto": "Advanced artificial intelligence \nwith federated learning framework \nfor privacy-preserving cyberthreat \ndetection in IoT-assisted \nsustainable smart cities\nMahmoud Ragab1, Ehab Bahaudien Ashary2, Bandar M. Alghamdi1, Rania Aboalela3, \nNaif Alsaadi4, Louai A. Maghrabi5 & Khalid H. Allehaibi6\nWith the fast growth of artificial intelligence (AI) and a novel generation of network technology, \nthe Internet of Things (IoT) has become global. Malicious agents regularly utilize novel technical \nvulnerabilities to use IoT networks in essential industries, the military, defence systems, and medical \ndiagnosis. The IoT has enabled well-known connectivity by connecting many services and objects. \nHowever, it has additionally made cloud and IoT frameworks vulnerable to cyberattacks, production \ncybersecurity major concerns, mainly for the growth of trustworthy IoT networks, particularly \nthose empowering smart city systems. Federated Learning (FL) offers an encouraging solution to \naddress these challenges by providing a privacy-preserving solution for investigating and detecting \ncyberattacks in IoT systems without negotiating data privacy. Nevertheless, the possibility of FL \nregarding IoT forensics remains mostly unexplored. Deep learning (DL) focused cyberthreat detection \nhas developed as a powerful and effective approach to identifying abnormal patterns or behaviours in \nthe data field. This manuscript presents an Advanced Artificial Intelligence with a Federated Learning \nFramework for Privacy-Preserving Cyberthreat Detection (AAIFLF-PPCD) approach in IoT-assisted \nsustainable smart cities. The AAIFLF-PPCD approach aims to ensure robust and scalable cyberthreat \ndetection while preserving the privacy of IoT users in smart cities. Initially, the AAIFLF-PPCD model \nutilizes Harris Hawk optimization (HHO)-based feature selection to identify the most related features \nfrom the IoT data. Next, the stacked sparse auto-encoder (SSAE) classifier is employed for detecting \ncyberthreats. Eventually, the walrus optimization algorithm (WOA) is used for hyperparameter tuning \nto improve the parameters of the SSAE approach and achieve optimal performance. The simulated \noutcome of the AAIFLF-PPCD technique is evaluated using a benchmark dataset. The performance \nvalidation of the AAIFLF-PPCD technique exhibited a superior accuracy value of 99.47% over existing \nmodels under diverse measures.\nKeywords Federated Learning, Privacy preserving, Artificial Intelligence, Cyberthreat, Smart cities, IoT, \nWalrus optimization Algorithm\nA maintainable smart city is a standard shift in urban improvement that controls communication technologies \n(ICTs) and the power of information to make a liveable, more efficient, and urban environment-friendly 1. \nBy incorporating several technological developments, like data analytics, renewable energy solutions, and \nIoT devices, smart, maintainable cities intend to improve the living standard for residents while reducing the \n1Information Technology Department, Faculty of Computing and Information Technology, King Abdulaziz \nUniversity, Jeddah 21589, Saudi Arabia. 2Electrical and Computer Engineering Department, Faculty of Engineering, \nKing Abdulaziz University, Jeddah 21589, Saudi Arabia. 3Information Systems Department, Faculty of Computing \nand Information Technology at Rabigh, King Abdulaziz University, Jeddah 21589, Saudi Arabia. 4Department of \nIndustrial Engineering, Faculty of Engineering at Rabigh, King Abdulaziz University, Jeddah 21589, Saudi Arabia. \n5Department of Software Engineering, College of Engineering, University of Business and Technology, Jeddah, \nSaudi Arabia. 6Computer Science Department, Faculty of Computing and Information Technology, King Abdulaziz \nUniversity, Jeddah 21589, Saudi Arabia. email: mragab@kau.edu.sa\nOPEN\nScientific Reports |         (2025) 15:4470 1| https://doi.org/10.1038/s41598-025-88843-2\nwww.nature.com/scientificreports\n",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo propõe o AAIFLF-PPCD, um framework que combina inteligência artificial avançada, aprendizado federado e otimizações meta-heurísticas para detectar ciberameaças em IoT de cidades inteligentes, preservando a privacidade dos usuários e alcançando 99,47% de acurácia em dataset de referência.",
+    "perfil": {
+      "problema": "cloud and IoT frameworks vulnerable to cyberattacks",
+      "solucao": "Advanced Artificial Intelligence with a Federated Learning Framework for Privacy-Preserving Cyberthreat Detection (AAIFLF-PPCD)",
+      "avaliacao": "superior accuracy value of 99.47% over existing models",
+      "limites": "Não informado",
+      "possibilidades": "Explorar a integração de identidade auto-soberana (SSI) para autenticação descentralizada nas trocas de modelo FL; avaliar o framework em ambientes reais de cidades inteligentes com múltiplas organizações; investigar o uso de blockchain para garantir a integridade e rastreabilidade das atualizações de modelo; analisar o consumo de recursos em dispositivos de borda e otimizar para ambientes de baixa potência."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Federated Learning offers a privacy-preserving solution for detecting cyberattacks in IoT systems",
+        "citacao": "Federated Learning (FL) offers an encouraging solution to address these challenges by providing a privacy-preserving solution for investigating and detecting cyberattacks in IoT systems"
+      },
+      {
+        "afirmacao": "The AAIFLF-PPCD technique achieved 99.47% accuracy",
+        "citacao": "The performance validation of the AAIFLF-PPCD technique exhibited a superior accuracy value of 99.47% over existing models"
+      }
+    ],
+    "interpretacao": "O trabalho demonstra que a combinação de aprendizado federado, seleção de atributos via Harris Hawk Optimization e classificação por autoencoders esparsos pode melhorar significativamente a detecção de ameaças em IoT de cidades sustentáveis, ao mesmo tempo em que preserva a privacidade dos dados locais.",
+    "duvidas": "Como o modelo lida com dados heterogêneos provenientes de diferentes organizações? Qual é o overhead computacional e de comunicação nas bordas de rede? O framework foi testado contra ataques adversariais ao modelo federado? Como garantir a escalabilidade e a interoperabilidade em ambientes multi‑administradores?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:39:48"
+}

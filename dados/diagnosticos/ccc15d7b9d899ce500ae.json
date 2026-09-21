@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T17:41:19",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "perfil_anterior": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "improving both model accuracy and computational efficiency",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "Investigar a resistência do modelo a ataques de envenenamento de dados (model poisoning) em ambientes federados.; Integrar identidade auto‑soberana (SSI) para autenticação descentralizada das atualizações de modelo.; Aplicar blockchain para garantir a integridade e rastreabilidade dos parâmetros federados.; Mensurar o consumo de energia e recursos computacionais nos dispositivos de borda e otimizar o pipeline para cenários de baixa potência.; Realizar testes piloto em cenários reais envolvendo múltiplas organizações e serviços urbanos de cidades inteligentes."
+    },
+    "pagina": 5,
+    "texto": "Meanwhile, q means randomly generated numbers among (0,1) and defines the dual tracking approaches of \nHH. If q ≥ 0.5, HHs lay on an arbitrary tree; if q< 0.5, HHs perch follow the location of another prey and \nhawk.\nThe location vectors of the HH in the tth and the t +1  iteration are X (t) and (t + 1), correspondingly. \nThe arbitrary location vector is Xrand (t), and the average location vector of every HH is X (t). UB  and LB \nsignify the upper and lower limitations of the search space. r1,r 2,r 3, and r4 are randomly generated values \nisolated in the range (0,1). N can mean the entire hawk count\nTransition between exploitation and exploration\nAn HH can transition between positions according to its prey’s escaping feature (signified by En). Notably, En \nis reduced in the escaping process.\n En =2 E0\n(\n1 − t\nT\n)\n (3)  \nWhereas En refers to the prey’ s escape feature, and E0 means the emerging escape feature of the prey. If the \ntarget needs to seepage from the HH, using the consumption of bodily strength, the escaping feature will be \nreleased slowly. According to the value of En, when |En|≥ 1, it arrives at the exploration stage, and the HH \ndefines the prey location by searching several regions in the search interval. When |En| < 1, it arrives at the \nexploitation stage, and the HH assaults the prey discovered during the exploration stage.\nExploitation stage\nDuring this stage, the HH finds its prey and strikes it. This HHO model provides four attack methods according \nto how that victim escaped and the HH’s tactic to hunt its prey. Based on the dimensions of En, the HH \naccepts dual tactics: hard and soft siege. If |En|≥ 0.5 and |En| < 0.5, the HH accepts soft and hard siege. \nThe randomly formed number r characterizes the likelihood that the prey would escape from the unsafe \nsurroundings once the HH presents an unexpected attack. r is isolated equally in the range (0,1). If r< 0.5, it \nsuccessfully escapes the prey. Otherwise, it fails to take flight.\n• Tactic 1: Soft Siege.\nFig. 2. Workflow of AAIFLF-PPCD approach.\n \nScientific Reports |         (2025) 15:4470 5| https://doi.org/10.1038/s41598-025-88843-2\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve detalhes do algoritmo de otimização Hawk‑Hawk (HH) usado na fase de seleção de características do modelo AAIFLF‑PPCD, explicando como números aleatórios (q, r) definem estratégias de exploração e exploração, e como o parâmetro En controla a transição entre esses estágios, incluindo táticas de cerco duro e suave.",
+    "perfil": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "improving both model accuracy and computational efficiency",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": [
+        "Avaliar o consumo energético e a latência do algoritmo HHO em dispositivos de borda de baixa potência.",
+        "Investigar a resistência do processo de seleção de características HHO a ataques de envenenamento de dados em ambientes federados.",
+        "Integrar identidade auto‑soberana (SSI) para validar a integridade dos parâmetros HHO trocados entre nós federados.",
+        "Explorar a combinação de HHO com técnicas de criptografia baseada em atributos (ABE) para reforçar a privacidade dos dados de treinamento."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "When |En|≥ 1, it arrives at the exploration stage",
+        "citacao": "When |En|≥ 1, it arrives at the exploration stage, and the HH defines the prey location by searching several regions in the search interval."
+      },
+      {
+        "afirmacao": "The randomly formed number r characterizes the likelihood that the prey would escape",
+        "citacao": "The randomly formed number r characterizes the likelihood that the prey would escape from the unsafe surroundings once the HH presents an unexpected attack."
+      }
+    ],
+    "interpretacao": "O algoritmo HHO serve como mecanismo de busca meta‑heurística para selecionar características relevantes, alternando entre exploração e exploração guiada por parâmetros aleatórios e pela métrica En, o que pode influenciar a eficácia e o custo computacional da fase de pré‑processamento do modelo.",
+    "duvidas": "Como a escolha dos limites UB e LB e dos parâmetros aleatórios (q, r) afeta a convergência e a robustez da seleção de características em cenários de IoT com recursos limitados?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:42:02"
+}

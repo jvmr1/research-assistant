@@ -1,0 +1,94 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-16T16:51:13",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. A ideia já está publicada; esta etapa só acrescenta um caminho possível.",
+  "entrada": {
+    "ideia": "Desenvolver um framework de interoperabilidade que mapeie os modelos de dados das VCs para padrões IoT (e.g., W3C Web of Things, oneM2M).",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Gudipati_2025",
+          "titulo": "Verifiable Credentials: Transforming Digital Identity in the Real World",
+          "escopo": {
+            "tipo": "html",
+            "feitos": 1,
+            "total": 1,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "7696ef13aa4a2bd6c913",
+              "pagina": null,
+              "resumo": "O artigo apresenta as Verifiable Credentials (VCs) como tecnologia que transforma a gestão de identidade digital, proporcionando segurança, privacidade e descentralização. Descreve a arquitetura técnica, casos de uso reais e destaca a redução de custos administrativos e fraudes. Também discute desafios de adoção, integração empresarial e conformidade regulatória, além de apontar tendências como IA, segurança pós‑quântica e iniciativas governamentais.",
+              "evidencias": [
+                {
+                  "citacao": "The article demonstrates that VCs offer a paradigm shift in how organizations approach identity verification, enabling secure, privacy-preserving, and decentralized credential management while significantly reducing administrative overhead and fraud risks.",
+                  "afirmacao": "Verifiable Credentials (VCs) offer a paradigm shift in how organizations approach identity verification"
+                },
+                {
+                  "citacao": "The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance.",
+                  "afirmacao": "The article investigates adoption challenges and solutions, focusing on enterprise integration and regulatory compliance"
+                }
+              ]
+            }
+          ],
+          "problema": "adoption challenges",
+          "solucao": "Não identificado nas fichas/trechos disponíveis.",
+          "avaliacao": "significantly reducing administrative overhead and fraud risks",
+          "limites": "Não identificado nas fichas/trechos disponíveis.",
+          "possibilidades": "Explorar a aplicação de VCs para controle de acesso em IoT de cidades inteligentes; combinar VCs com criptografia baseada em atributos (ABE) para compartilhamento de dados sensíveis; avaliar desempenho e escalabilidade em ambientes de edge computing; analisar requisitos regulatórios para identidade digital no setor público; investigar a integração de segurança pós‑quântica em VCs para IIoT.",
+          "assinatura": "71fe7feb5ad1a2870f19"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": {
+      "descricao": "Implementar um framework de interoperabilidade que traduza os modelos de dados das Verifiable Credentials (VCs) para os esquemas de padrões IoT (W3C Web of Things – WoT, oneM2M). O framework será avaliado comparando‑se com a abordagem descrita por Gudipati (2025) sobre VCs, que demonstra benefícios de segurança e privacidade, porém não trata de mapeamento para IoT. A comparação focará em (i) complexidade de integração, (ii) desempenho de verificação de credenciais e (iii) suporte a casos de uso de controle de acesso em cidades inteligentes.",
+      "componentes": [
+        "Módulo de parsing de VCs (usando a biblioteca de referência da DIF)",
+        "Módulo de mapeamento para perfis WoT e oneM2M (tabelas de correspondência configuráveis)",
+        "Adaptador de edge gateway que aplica o framework em fluxos de dados de sensores",
+        "Benchmark de carga que reproduz cenários de controle de acesso a recursos urbanos (ex.: iluminação pública, estacionamento inteligente)"
+      ],
+      "comparacao_trabalho": "Gudipati_2025"
+    },
+    "recursos": {
+      "dados": [
+        "Esquemas de recursos WoT (ex.: TD – Thing Description) disponíveis no repositório GitHub da W3C",
+        "Modelos de recursos oneM2M (ex.: XML/JSON) publicados na especificação oficial",
+        "Conjunto de exemplos de VCs (JSON‑LD) fornecidos pelo projeto DIF (Digital Identity Foundation)",
+        "Dataset de telemetria de sensores urbanos aberto (ex.: CityPulse Smart City Dataset) – opcional, caso esteja disponível"
+      ],
+      "ferramentas": [
+        "Biblioteca de VCs da DIF (JavaScript/Python)",
+        "Framework de edge computing (e.g., Eclipse Kura ou Azure IoT Edge) para hospedar o adaptador",
+        "Ferramenta de teste de carga (e.g., Locust ou k6) para gerar requisições de credenciais",
+        "Ambiente de desenvolvimento Docker para garantir reproducibilidade"
+      ],
+      "infraestrutura": [
+        "Máquina virtual ou servidor de teste com CPU ≥ 4 cores, 16 GB RAM, conectividade de rede padrão",
+        "Opcional: acesso a um laboratório de IoT universitário ou a um piloto de cidade inteligente local"
+      ]
+    },
+    "metricas": [
+      "Cobertura de mapeamento (% de atributos VC correspondidos a propriedades WoT/oneM2M)",
+      "Latência adicional introduzida pelo framework (ms) em comparação ao fluxo direto sem mapeamento",
+      "Taxa de sucesso de verificação de credenciais (percentual de tentativas concluídas sem erro)",
+      "Throughput (número de credenciais processadas por segundo) sob carga crescente",
+      "Escalabilidade (número máximo de dispositivos simultâneos suportados mantendo latência < 200 ms)",
+      "Conformidade com padrões (verificação automática de que os documentos gerados são validados pelos validadores WoT e oneM2M)"
+    ],
+    "duvidas_orientador": [
+      "Qual nível de granularidade de mapeamento (campo a campo ou agrupado) será suficiente para atender aos requisitos de controle de acesso em serviços urbanos?",
+      "Como garantir que o framework continue compatível com futuras versões dos padrões WoT e oneM2M sem reescrever todo o código?",
+      "Qual estratégia de revogação de VCs será adotada no cenário de edge computing, considerando restrições de conectividade?",
+      "É viável validar o desempenho em um piloto real de cidade inteligente ou será necessário limitar os testes a ambientes simulados?",
+      "De que forma a privacidade dos dados sensoriais será preservada ao expor atributos de VCs mapeados para padrões IoT?"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T16:51:25"
+}

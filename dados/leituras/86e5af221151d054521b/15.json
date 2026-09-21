@@ -1,0 +1,41 @@
+{
+  "resumo": "O trecho destaca que blockchain tem sido investigado para mitigar ameaças internas e garantir coordenação segura entre partes heterogêneas em sistemas distribuídos. São apresentadas as principais características: descentralização via arquitetura peer‑to‑peer, ledger distribuído e imutável, e mecanismos de consenso para validação de transações, proporcionando resistência a falhas, adulteração e censura.",
+  "perfil": {
+    "problema": "Absence of decentralized identity; no patient-centric or role-based access control",
+    "solucao": "Blockchain technology with SSI is needed for the vaccine supply chain system",
+    "avaliacao": "Prototype implementations confirm the practicality of blockchain-based vaccination tracking while acknowledging the need for richer data models and real-world organizational validation",
+    "limites": "Governance layer unclear; interoperability challenges with healthcare IT systems",
+    "possibilidades": [
+      "Investigar quais algoritmos de consenso são mais adequados para dispositivos edge em cidades inteligentes.",
+      "Aplicar a descentralização do ledger para coordenar sensores IoT heterogêneos em tempo real.",
+      "Desenvolver mecanismos de mitigação de ameaças internas usando políticas de acesso baseadas em credenciais verificáveis.",
+      "Estender o modelo de governança descentralizada para suportar requisitos regulatórios de saúde pública."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Blockchain operates on a peer-to-peer architecture in which multiple nodes maintain synchronized copies of the ledger, eliminating dependence on a single controlling entity.",
+      "afirmacao": "Blockchain operates on a peer-to-peer architecture ... eliminating dependence on a single controlling entity."
+    },
+    {
+      "citacao": "Blockchain networks rely on consensus algorithms to validate transactions and maintain",
+      "afirmacao": "Blockchain networks rely on consensus algorithms to validate transactions and maintain."
+    }
+  ],
+  "interpretacao": "O texto reforça que as propriedades intrínsecas do blockchain – descentralização, ledger distribuído e consenso – são fundamentais para garantir segurança e resiliência em ambientes distribuídos, como cadeias de suprimentos de vacinas e infraestruturas de cidades inteligentes.",
+  "duvidas": "Quais algoritmos de consenso são mais adequados para dispositivos de borda com recursos limitados? Como integrar essas propriedades de blockchain com SSI para atender às exigências de privacidade e revogação dinâmica de credenciais?",
+  "avisos": [],
+  "id": "eadb4b8c5e40163cdefc",
+  "artigo": "Chaurasia_2026",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Absence of decentralized identity; no patient-centric or role-based access control",
+    "solucao": "Blockchain technology with SSI is needed for the vaccine supply chain system",
+    "avaliacao": "Prototype implementations confirm the practicality of blockchain-based vaccination tracking while acknowledging the need for richer data models and real-world organizational validation",
+    "limites": "Governance layer unclear; interoperability challenges with healthcare IT systems",
+    "possibilidades": "Investigar quais algoritmos de consenso são mais adequados para dispositivos edge em cidades inteligentes.; Aplicar a descentralização do ledger para coordenar sensores IoT heterogêneos em tempo real.; Desenvolver mecanismos de mitigação de ameaças internas usando políticas de acesso baseadas em credenciais verificáveis.; Estender o modelo de governança descentralizada para suportar requisitos regulatórios de saúde pública.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86e5af221151d054521b"
+  }
+}

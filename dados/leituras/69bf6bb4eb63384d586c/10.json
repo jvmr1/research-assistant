@@ -1,0 +1,41 @@
+{
+  "resumo": "O trecho destaca que a taxonomia proposta serve como base para padronização e design arquitetural aprimorado, oferecendo clareza conceitual dos componentes fundamentais e adaptabilidade a tecnologias emergentes, apoiando tanto o avanço teórico quanto a implementação prática de identidades baseadas em DLT.",
+  "perfil": {
+    "problema": "Não informado.",
+    "solucao": "provides conceptual clarity about fundamental components while remaining adaptable to emerging technologies and implementation patterns",
+    "avaliacao": "the taxonomy supports both theoretical advancement and practical implementation in this critical domain",
+    "limites": "Não informado.",
+    "possibilidades": [
+      "Aplicar a taxonomia para avaliar soluções SSI em cidades inteligentes com computação de borda.",
+      "Incorporar métricas de consumo energético de DLT ao avaliar dispositivos IoT.",
+      "Estender a taxonomia para incluir modelos de governança transjurisdicional em compartilhamento de dados públicos.",
+      "Desenvolver um framework de interoperabilidade que alinhe a taxonomia com padrões W3C DID e Verifiable Credentials."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "It provides conceptual clarity about fundamental components while remaining adaptable to emerging technologies and implementation patterns.",
+      "afirmacao": "It provides conceptual clarity about fundamental components while remaining adaptable to emerging technologies and implementation patterns."
+    },
+    {
+      "citacao": "the taxonomy supports both theoretical advancement and practical implementation in this critical domain.",
+      "afirmacao": "the taxonomy supports both theoretical advancement and practical implementation in this critical domain."
+    }
+  ],
+  "interpretacao": "O texto reforça que a taxonomia não só clarifica os elementos essenciais das arquiteturas de identidade baseadas em DLT, mas também se mantém flexível frente a novas tecnologias, facilitando sua aplicação tanto em pesquisas quanto em projetos reais.",
+  "duvidas": "Quais critérios específicos a taxonomia usa para medir a adaptabilidade a tecnologias emergentes? Como a taxonomia aborda a integração com padrões existentes de identidade digital?",
+  "avisos": [],
+  "id": "17ca03d99691b76f8421",
+  "artigo": "Vaziry_2025",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Trust emerged as the central concern across various layers of DLT-based IDM architectures",
+    "solucao": "provides conceptual clarity about fundamental components while remaining adaptable to emerging technologies and implementation patterns",
+    "avaliacao": "the taxonomy supports both theoretical advancement and practical implementation in this critical domain",
+    "limites": "Another limitation could be the rapid evolution of the research field",
+    "possibilidades": "Aplicar a taxonomia para avaliar soluções SSI em cidades inteligentes com computação de borda.; Incorporar métricas de consumo energético de DLT ao avaliar dispositivos IoT.; Estender a taxonomia para incluir modelos de governança transjurisdicional em compartilhamento de dados públicos.; Desenvolver um framework de interoperabilidade que alinhe a taxonomia com padrões W3C DID e Verifiable Credentials.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

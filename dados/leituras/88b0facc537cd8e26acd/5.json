@@ -1,0 +1,41 @@
+{
+  "resumo": "O artigo apresenta um esquema de registro verificável baseado em identidade descentralizada (VS‑DID) que utiliza compromissos vetoriais, provas geradas via Hyperproof e polynomial commitments, e agrega provas por meio de Non‑interactive Inner Product Arguments (IPA) em uma árvore linear binária, permitindo geração, agregação, verificação e atualização de provas para vetores de identidade em IIoT.",
+  "perfil": {
+    "problema": "addressing security issues in identity registry and updates within DID systems",
+    "solucao": "sliding window accumulator structure",
+    "avaliacao": "Our evaluation results have demonstrated that our approach has an advantage in offering secure verifiability and high efficiency, comparing to other existing methods",
+    "limites": "high computational overhead and limited interoperability",
+    "possibilidades": [
+      "Integrar criptografia baseada em atributos (ABE) ao esquema VS‑DID para controle de acesso granular em dispositivos IIoT.",
+      "Avaliar a latência e escalabilidade do acumulador de janela deslizante em ambientes edge/fog com milhares de dispositivos.",
+      "Explorar mecanismos de revogação distribuída usando provas de conhecimento zero‑knowledge entre organizações.",
+      "Aplicar o modelo híbrido on‑chain/off‑chain a serviços de cidades inteligentes, como gestão de tráfego e energia.",
+      "Investigar a interoperabilidade do VS‑DID com padrões SSI adotados por órgãos públicos.",
+      "Implementar suporte a credenciais verificáveis (VC) para autorizações dinâmicas em cenários de compartilhamento de dados entre múltiplas cidades inteligentes."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "The proposed vector commitment scheme includes four phases: generation of proof,aggregationofproof,verificationofproof,andupdate of proof.",
+      "afirmacao": "O esquema inclui quatro fases: geração de prova, agregação de prova, verificação de prova e atualização de prova."
+    }
+  ],
+  "interpretacao": "O uso de árvore linear binária e IPA permite agregar provas de forma não interativa, reduzindo o tamanho dos dados enviados ao verificador e facilitando atualizações quando elementos do vetor mudam de posição.",
+  "duvidas": "Como o esquema lida com a revogação de identidades já registradas? Qual o impacto de mudanças frequentes no vetor W sobre o custo de atualização em ambientes com recursos limitados?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "af2b3bb0ebc4c645e2c7",
+  "artigo": "Ding_2025",
+  "pagina": 6,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "addressing security issues in identity registry and updates within DID systems",
+    "solucao": "sliding window accumulator structure",
+    "avaliacao": "Our evaluation results have demonstrated that our approach has an advantage in offering secure verifiability and high efficiency, comparing to other existing methods",
+    "limites": "high computational overhead and limited interoperability",
+    "possibilidades": "Integrar criptografia baseada em atributos (ABE) ao esquema VS‑DID para controle de acesso granular em dispositivos IIoT.; Avaliar a latência e escalabilidade do acumulador de janela deslizante em ambientes edge/fog com milhares de dispositivos.; Explorar mecanismos de revogação distribuída usando provas de conhecimento zero‑knowledge entre organizações.; Aplicar o modelo híbrido on‑chain/off‑chain a serviços de cidades inteligentes, como gestão de tráfego e energia.; Investigar a interoperabilidade do VS‑DID com padrões SSI adotados por órgãos públicos.; Implementar suporte a credenciais veri",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "88b0facc537cd8e26acd"
+  }
+}

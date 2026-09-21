@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta um guia detalhado para adoção e implantação de mecanismos de defesa que garantam segurança e privacidade no IIoT aplicado à manufatura inteligente, destacando os desafios de segurança decorrentes da convergência IT/OT e a carência de orientações práticas.",
+  "perfil": {
+    "problema": "such inherent interconnectivity introduces significant security and privacy challenges.",
+    "solucao": "providing in-depth guidance on adopting and deploying different defense mechanisms designed to mitigate various cyber threats while ensuring secure and privacy-preserving IIoT infrastructure.",
+    "avaliacao": "Não informado.",
+    "limites": "most of these techniques require major technical expertise to be implemented.",
+    "possibilidades": "Explorar a integração de blockchain para controle de acesso descentralizado; aplicar identidade auto‑soberana (SSI) e credenciais verificáveis ao gerenciamento de dispositivos IIoT; avaliar criptografia baseada em atributos (ABE) para compartilhamento de dados sensíveis; conduzir estudos de caso em linhas de produção reais para validar a eficácia prática dos guias; desenvolver ferramentas automatizadas que reduzam a necessidade de expertise técnica."
+  },
+  "evidencias": [
+    {
+      "citacao": "such inherent interconnectivity introduces significant security and privacy challenges.",
+      "afirmacao": "A interconectividade inerente do IIoT gera desafios significativos de segurança e privacidade."
+    },
+    {
+      "citacao": "there is a lack of specific follow-through guides on how to adopt and implement such mechanisms.",
+      "afirmacao": "Existe falta de guias específicos para adoção e implementação dos mecanismos de defesa."
+    }
+  ],
+  "interpretacao": "O trabalho identifica que, embora o IIoT traga ganhos operacionais, a heterogeneidade entre IT e OT cria vulnerabilidades que ainda carecem de orientações práticas, limitando a adoção segura em ambientes industriais.",
+  "duvidas": "Quais são os requisitos específicos de infraestrutura (ex.: edge computing, redes 5G) para aplicar os guias propostos? Como medir a eficácia dos mecanismos de defesa em cenários reais de manufatura?",
+  "avisos": [],
+  "id": "dd3da9e9b6d40d1d2019",
+  "artigo": "Abdullahi_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "such inherent interconnectivity introduces significant security and privacy challenges.",
+    "solucao": "providing in-depth guidance on adopting and deploying different defense mechanisms designed to mitigate various cyber threats while ensuring secure and privacy-preserving IIoT infrastructure.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "most of these techniques require major technical expertise to be implemented.",
+    "possibilidades": "Explorar a integração de blockchain para controle de acesso descentralizado; aplicar identidade auto‑soberana (SSI) e credenciais verificáveis ao gerenciamento de dispositivos IIoT; avaliar criptografia baseada em atributos (ABE) para compartilhamento de dados sensíveis; conduzir estudos de caso em linhas de produção reais para validar a eficácia prática dos guias; desenvolver ferramentas automatizadas que reduzam a necessidade de expertise técnica.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9de2ab0bcfc3fa9cca82"
+  }
+}

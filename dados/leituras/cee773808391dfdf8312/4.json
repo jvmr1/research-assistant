@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho descreve como a integração de contratos inteligentes em blockchains permissionadas permite a autenticação em tempo real de dados IoT, garantindo integridade e mitigando falsificação, acesso não autorizado e replay attacks. Após a verificação, os dados são criptografados com homomorphic encryption e enviados ao cloud, possibilitando análises sem revelar o conteúdo. O fluxo inclui coleta, verificação, criptografia e classificação via SVM.",
+  "perfil": {
+    "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+    "solucao": "programming smart contracts to verify the data's authenticity before it is committed to the blockchain ledger",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não informado",
+    "possibilidades": "Investigar a combinação de contratos inteligentes com credenciais verificáveis baseadas em SSI para controle de acesso em cidades inteligentes; avaliar o impacto de homomorphic encryption em cenários de borda com recursos limitados; propor mecanismos de revogação de credenciais criptografadas em blockchains permissionadas; explorar a integração de ABE para políticas de compartilhamento de dados entre organizações públicas."
+  },
+  "evidencias": [
+    {
+      "citacao": "These smart contracts automatically validate, log, and manage data transactions, thereby providing a secure, immutable, and transparent mechanism for handling IoT data.",
+      "afirmacao": "Smart contracts automatically validate, log, and manage data transactions, thereby providing a secure, immutable, and transparent mechanism for handling IoT data."
+    },
+    {
+      "citacao": "the data are encrypted using homomorphic encryption and securely outsourced to the cloud.",
+      "afirmacao": "Data are encrypted using homomorphic encryption and securely outsourced to the cloud."
+    }
+  ],
+  "interpretacao": "O autor propõe um fluxo de dados IoT que combina verificação por contratos inteligentes e privacidade via homomorphic encryption, permitindo análises avançadas sem comprometer a confidencialidade, o que reforça a governança de dados em ambientes distribuídos.",
+  "duvidas": "Como é medido o overhead de execução dos contratos inteligentes em tempo real? Qual o custo computacional da homomorphic encryption para dispositivos de borda? Existem testes de escalabilidade com milhares de dispositivos?",
+  "avisos": [],
+  "id": "a8dfb592fcf8fdfaf689",
+  "artigo": "Addula_2025",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "mitigating risks such as data falsification, unauthorized access, and replay attacks",
+    "solucao": "programming smart contracts to verify the data's authenticity before it is committed to the blockchain ledger",
+    "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar a combinação de contratos inteligentes com credenciais verificáveis baseadas em SSI para controle de acesso em cidades inteligentes; avaliar o impacto de homomorphic encryption em cenários de borda com recursos limitados; propor mecanismos de revogação de credenciais criptografadas em blockchains permissionadas; explorar a integração de ABE para políticas de compartilhamento de dados entre organizações públicas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

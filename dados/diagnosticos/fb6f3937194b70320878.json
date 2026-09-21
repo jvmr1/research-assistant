@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T19:16:38",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 1,
+        "resumo": "O artigo apresenta um levantamento abrangente sobre controle de acesso baseado em blockchain para registros eletrônicos de saúde (EHR), destacando que sistemas de e‑health tradicionais apresentam riscos de privacidade como acessos não autorizados. Propõe a integração de blockchain com técnicas de preservação de privacidade e contratos inteligentes para melhorar transparência, integridade e disponibilidade, além de automatizar autenticação e controle de acesso. A revisão inclui 45 trabalhos selecionados, analisa plataformas, protocolos de consenso e técnicas criptográficas, e discute estudos de caso reais, apontando desafios e direções futuras.",
+        "interpretacao": "O estudo demonstra que a combinação de blockchain com técnicas criptográficas pode mitigar os principais riscos de privacidade nos sistemas de saúde eletrônicos, oferecendo um caminho promissor para controle de acesso automatizado e auditável.",
+        "duvidas": "Quais são as limitações práticas de escalabilidade e latência ao aplicar contratos inteligentes em ambientes de saúde com alta taxa de transações? Como os requisitos regulatórios (ex.: GDPR, HIPAA) influenciam a escolha de plataformas permissionadas versus permissionless?"
+      },
+      {
+        "pagina": 2,
+        "resumo": "O texto descreve a transição dos sistemas de saúde tradicionais para e‑health, destacando a importância dos registros eletrônicos (EHR) e os desafios de interoperabilidade e privacidade. Aponta incidentes de vazamento de dados e apresenta o blockchain como solução potencial para controle de acesso, oferecendo transparência, descentralização e resistência a adulterações, especialmente em ambientes permissioned.",
+        "interpretacao": "O trecho reforça que, apesar dos benefícios dos EHRs, a falta de padrões comuns e as ameaças à privacidade limitam sua adoção, e que o blockchain surge como infraestrutura promissora para garantir controle de acesso auditável e resistente a falhas centralizadas.",
+        "duvidas": "Quais são os custos de desempenho e consumo de energia ao empregar blockchains permissioned em ambientes de edge computing? Como garantir a escalabilidade do registro de auditoria de acesso em redes de grande porte?"
+      },
+      {
+        "pagina": 3,
+        "resumo": "O trecho descreve a importância de contabilizar atividades de usuários em sistemas de saúde para auditoria e conformidade, destacando que autenticação, autorização e accounting são essenciais para controle de acesso a prontuários eletrônicos. A pesquisa classifica métodos de controle de acesso baseados em blockchain em permissivos e permissionados, analisa técnicas de privacidade, plataformas, protocolos de consenso e contratos inteligentes, e aponta desafios de privacidade e direções futuras.",
+        "interpretacao": "O documento enfatiza que, além da criptografia, a rastreabilidade (accounting) é crucial para garantir a conformidade e a confiança nos sistemas de saúde baseados em blockchain, oferecendo um panorama estruturado das soluções existentes.",
+        "duvidas": "Quais são as métricas específicas usadas para avaliar a escalabilidade e a revogabilidade nas soluções de controle de acesso apresentadas? Como os métodos de accounting podem ser adaptados para dispositivos de IoT com recursos limitados em ambientes de smart city?"
+      },
+      {
+        "pagina": 4,
+        "resumo": "O trecho revisa diversas pesquisas sobre o uso de blockchain em sistemas de saúde, destacando requisitos, aplicações, limitações e direções futuras. Evidenciam-se desafios de interoperabilidade, segurança, privacidade, escalabilidade e consumo de energia, bem como o potencial da blockchain para melhorar a proteção de dados sensíveis por meio de gerenciamento descentralizado e mecanismos de criptografia robustos.",
+        "interpretacao": "O texto indica que, embora haja um crescente número de estudos sobre blockchain na saúde, ainda persistem lacunas críticas relacionadas à interoperabilidade, privacidade e eficiência, sugerindo a necessidade de pesquisas que adaptem essas soluções ao contexto de cidades inteligentes e IoT.",
+        "duvidas": "Quais métricas específicas de privacidade foram propostas nos trabalhos citados? Como os autores avaliam a viabilidade prática das soluções de blockchain em ambientes de saúde reais? Há evidências empíricas de implementação em larga escala?"
+      },
+      {
+        "pagina": 5,
+        "resumo": "O artigo apresenta uma revisão sistemática de trabalhos que utilizam blockchain para controle de acesso e preservação de privacidade em saúde, categorizando métodos em blockchains permissionless e permissioned, avaliando fatores críticos de privacidade e segurança, e apontando a falta de comparações holísticas como lacuna que preenchem.",
+        "interpretacao": "O trabalho destaca que, apesar do crescente interesse em blockchain para saúde, ainda há ausência de análises comparativas abrangentes que considerem simultaneamente privacidade e segurança, e preenche essa lacuna ao oferecer uma taxonomia detalhada dos métodos de controle de acesso.",
+        "duvidas": "Quais critérios específicos foram usados para avaliar os fatores críticos de privacidade e segurança? Como a revisão trata a escalabilidade e consumo de energia dos diferentes tipos de blockchain? Há evidências empíricas que sustentem a eficácia das soluções propostas?"
+      },
+      {
+        "pagina": 6,
+        "resumo": "A Tabela 1 apresenta uma comparação entre o presente levantamento e demais surveys na área de saúde, listando autores, ano de publicação, principais contribuições (frameworks EHR, tipos de blockchain, protocolos de consenso, técnicas de privacidade, controle de acesso) e o período coberto por cada estudo, evidenciando a abrangência e as lacunas abordadas pelo trabalho em relação a revisões anteriores de 2019 a 2024.",
+        "interpretacao": "A tabela demonstra que o estudo atual amplia o escopo das revisões anteriores ao combinar múltiplas dimensões (tipos de blockchain, consenso, privacidade, controle de acesso) e ao cobrir um período mais recente, indicando uma visão mais integrada das soluções de blockchain para saúde.",
+        "duvidas": "Quais critérios específicos foram usados para classificar os tipos de blockchain e as técnicas de privacidade nos surveys comparados? Como o presente survey trata de questões de escalabilidade e consumo de energia em relação aos trabalhos listados?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo oferece um levantamento abrangente (45 trabalhos) sobre controle de acesso baseado em blockchain para registros eletrônicos de saúde (EHR), destacando riscos de privacidade em sistemas e‑health tradicionais e propondo a integração de blockchain com técnicas criptográficas e contratos inteligentes para melhorar transparência, integridade, disponibilidade e auditoria. Classifica soluções em blockchains permissionless e permissioned, analisa plataformas, protocolos de consenso, técnicas de privacidade e accounting, e identifica desafios de interoperabilidade, escalabilidade, consumo de energia e conformidade regulatória (GDPR, HIPAA). A revisão amplia o escopo de surveys anteriores (2019‑2024) ao combinar múltiplas dimensões (tipo de blockchain, consenso, privacidade, controle de acesso) e aponta a falta de comparações holísticas entre privacidade e segurança, bem como a necessidade de métricas específicas para avaliar desempenho, revogabilidade e adaptação a dispositivos IoT de recursos limitados em ambientes de smart city.",
+    "lacunas_possiveis": [
+      "Escalabilidade e latência de contratos inteligentes em ambientes de saúde com alta taxa de transações.",
+      "Custos de desempenho e consumo energético de blockchains permissioned em edge computing.",
+      "Ausência de métricas padronizadas para avaliar privacidade, revogabilidade e interoperabilidade.",
+      "Falta de comparações holísticas que considerem simultaneamente privacidade e segurança.",
+      "Adaptação de mecanismos de accounting e controle de acesso para dispositivos IoT com recursos limitados em smart cities."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver benchmark experimental que mensure latência, throughput e consumo energético de contratos inteligentes em blockchains permissioned e permissionless para EHR.",
+      "Criar um conjunto de métricas padronizadas (ex.: tempo de revogação, índice de privacidade, overhead de interoperabilidade) aplicáveis a soluções de controle de acesso.",
+      "Elaborar um framework comparativo que avalie simultaneamente privacidade e segurança, integrando análises de criptografia, accounting e compliance regulatório.",
+      "Projetar protocolos de accounting leves baseados em attribute‑based encryption para dispositivos IoT em ambientes de smart city.",
+      "Investigar estratégias de escalabilidade híbrida (off‑chain + on‑chain) para suportar auditoria de acesso em larga escala sem comprometer a conformidade com GDPR/HIPAA."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:17:00"
+}

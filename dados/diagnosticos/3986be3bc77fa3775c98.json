@@ -1,0 +1,178 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-16T20:02:53",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para aprofundar ou esclarecer as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Mallick_2025",
+        "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "8e89232501c48173131d",
+            "pagina": 1,
+            "resumo": "O artigo apresenta uma arquitetura de saúde inteligente que combina blockchain, contratos inteligentes e IPFS para armazenar registros médicos de forma segura e descentralizada. Um dispositivo proxy protege sensores IoT vulneráveis usando criptografia. Avaliações experimentais medem tempos de upload, download, acesso e mineração, indicando ganhos de eficiência e desempenho ao integrar IPFS. O objetivo é superar falhas de sistemas centralizados, melhorar privacidade, interoperabilidade e escalabilidade em ambientes de saúde conectados.",
+            "evidencias": [
+              {
+                "citacao": "Centralized storage architecture in most IoT healthcare systems can lead to a single point of failure and easy manipulation.",
+                "afirmacao": "Centralized storage architecture ... can lead to a single point of failure and easy manipulation."
+              },
+              {
+                "citacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+                "afirmacao": "Public blockchain‑based healthcare systems improve efficiency and performance when IPFS is integrated."
+              }
+            ]
+          },
+          {
+            "id": "8652c5d9de08bd86ecf6",
+            "pagina": 2,
+            "resumo": "O trecho destaca que a privacidade e a segurança das informações de saúde em sistemas IoT são pouco protegidas, que dispositivos baratos são alvos fáceis e que a arquitetura centralizada gera gargalos de rede. Propõe blockchain integrado ao IoT e ao IPFS para eliminar ponto único de falha, melhorar escalabilidade e garantir integridade dos dados, mas reconhece limitações de desempenho e escalabilidade da própria rede blockchain.",
+            "evidencias": [
+              {
+                "citacao": "Blockchain with IoT integration can help healthcare systems overcome centralized communication architecture",
+                "afirmacao": "Blockchain with IoT integration can help healthcare systems overcome centralized communication architecture"
+              }
+            ]
+          },
+          {
+            "id": "44492b3f922b7e3bdd1b",
+            "pagina": 3,
+            "resumo": "O artigo propõe uma arquitetura que combina blockchain e IPFS para superar limitações de privacidade, escalabilidade, segurança e eficiência em sistemas de saúde IoT. Os dados são fragmentados, armazenados com identificadores criptográficos (CID) e distribuídos via rede P2P, evitando ponto único de falha. A integração reduz a sobrecarga da blockchain, melhora a capacidade de armazenamento e permite acesso rápido a arquivos frequentes, enquanto um proxy de dispositivos e autenticação criptográfica protegem a confidencialidade dos dados.",
+            "evidencias": [
+              {
+                "citacao": "once a file is uploaded, its hash is shared among all peer nodes in the network for instant access and to prevent data from having a single point of failure.",
+                "afirmacao": "once a file is uploaded, its hash is shared among all peer nodes in the network for instant access and to prevent data from having a single point of failure."
+              },
+              {
+                "citacao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity.",
+                "afirmacao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity."
+              }
+            ]
+          },
+          {
+            "id": "071465af0b89fdcdb181",
+            "pagina": 4,
+            "resumo": "O trecho descreve a seção de avaliação e resultados do trabalho, apresenta um panorama de trabalhos relacionados que utilizam IPFS, blockchain e técnicas de criptografia para melhorar a escalabilidade, confidencialidade e segurança em sistemas de saúde inteligentes. São citados diversos estudos que combinam armazenamento off‑chain, contratos inteligentes, edge‑IoT e criptografia baseada em atributos para superar limitações de desempenho e privacidade.",
+            "evidencias": [
+              {
+                "citacao": "Zheng et al. [17] proposed an IPFS-based Blockchain system to reduce the data storage in Blockchain networks and increase processing speed.",
+                "afirmacao": "Zheng et al. proposed an IPFS-based Blockchain system to reduce the data storage in Blockchain networks and increase processing speed."
+              }
+            ]
+          }
+        ],
+        "problema": "IPFS network has much faster upload and download speeds than the Blockchain network.",
+        "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+        "avaliacao": "upload, download, access, and mining times",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Avaliar o impacto de diferentes tamanhos de arquivos no tempo de mineração da Blockchain em cenários de borda.; Comparar o desempenho de IPFS e Blockchain em redes 5G vs LoRaWAN para aplicações de saúde.; Integrar identidade auto‑soberana (SSI) para autenticação de dispositivos IoT no fluxo de dados.; Investigar o uso de credenciais verificáveis (VCs) para controle de acesso granular aos registros de saúde armazenados em IPFS.; Estudar a escalabi"
+      },
+      {
+        "id": "Asaithambi_2025",
+        "titulo": "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "458e1cc4f946bb50f100",
+            "pagina": 1,
+            "resumo": "O artigo propõe uma arquitetura de computação de borda assistida por blockchain para IIoT, introduzindo um mecanismo seguro de compartilhamento de dados e autenticação de ponta a ponta baseada na reputação da blockchain e contratos inteligentes. Um consenso de Prova de Autenticação (PoAh) é usado para validar nós e rastrear atividades, reduzindo o tempo de autenticação e aumentando a taxa de resposta, conforme estudo experimental.",
+            "evidencias": [
+              {
+                "citacao": "End-to-end authentication is developed based on the blockchain’s reputation",
+                "afirmacao": "End-to-end authentication is developed based on the blockchain’s reputation"
+              },
+              {
+                "citacao": "the proposed architecture lowers the authentication time and obtains a high response rate",
+                "afirmacao": "the proposed architecture lowers the authentication time and obtains a high response rate"
+              }
+            ]
+          },
+          {
+            "id": "7a9f5dac96afa43d0dc9",
+            "pagina": 2,
+            "resumo": "O trecho descreve que o armazenamento centralizado de dados em IoT representa um grande obstáculo de segurança, favorecendo ataques. Propõe‑se usar edge computing para processar dados próximo à fonte, reduzindo latência e consumo de banda, e blockchain como ledger distribuído que garante integridade e transparência. Destaca‑se que edge computing melhora a resposta em tempo real e que blockchain oferece resistência a adulterações, sendo adequado a múltiplos setores, inclusive industrial.",
+            "evidencias": [
+              {
+                "citacao": "Centralized data storage is a big obstacle.",
+                "afirmacao": "Centralized data storage is a big obstacle."
+              }
+            ]
+          },
+          {
+            "id": "4641a8464bde80281737",
+            "pagina": 3,
+            "resumo": "O trecho descreve como algoritmos de consenso (Proof of Capacity, Proof of Stake, Proof of Burn, PBFT) garantem a confiabilidade da blockchain, destacando o papel dos smart contracts na automação e segurança das transações. São ressaltados os atributos de descentralização, imutabilidade e transparência, bem como os desafios de latência, consumo energético e baixa taxa de transferência ao aplicar blockchain em IoT. Também são apresentados requisitos de confiança para sistemas IoT de borda, como precisão, segurança e acessibilidade.",
+            "evidencias": [
+              {
+                "citacao": "consensus algorithms play a crucial role in establishing the trustworthiness of every node in the blockchain",
+                "afirmacao": "Consensus algorithms play a crucial role in establishing the trustworthiness of every node in the blockchain."
+              }
+            ]
+          },
+          {
+            "id": "6f92d6b0e0fd3e875838",
+            "pagina": 4,
+            "resumo": "O artigo propõe uma arquitetura privada baseada em blockchain para IIoT com computação de borda, enfatizando leveza, escalabilidade e extensibilidade. Destaca requisitos de confiabilidade, diversidade, recursos limitados e flexibilidade. Introduz nós pequenos com máquinas virtuais para criptografia assimétrica e um mecanismo PoAh para autenticação de dispositivos, abordando gestão de confiança, compartilhamento seguro de dados e registro de dispositivos.",
+            "evidencias": [
+              {
+                "citacao": "first step is implementing small nodes that use virtual machines to conduct asymmetric cryptography in real time.",
+                "afirmacao": "A arquitetura utiliza nós pequenos com máquinas virtuais para criptografia assimétrica em tempo real."
+              }
+            ]
+          }
+        ],
+        "problema": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+        "solucao": "edge-level implementation of authentication that lowers the computational burden and improves the industry platform’s security",
+        "avaliacao": "maximum throughput of 1273 tps",
+        "limites": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+        "possibilidades": "Explorar a integração do algoritmo Poah citado (Puthal et al., 2020) na arquitetura proposta para melhorar a escalabilidade; comparar o framework BlockEdge (Kumar et al., 2020) com a solução atual em termos de latência e taxa de transação; avaliar a adoção de credenciais verificáveis e SSI conforme a tendência das referências; investigar a aplicação de criptografia baseada em atributos (ABE) inspirada em trabalhos citados para controle de acesso "
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "Dois grupos de trabalhos abordam a segurança e a escalabilidade de IoT em ambientes distribuídos usando blockchain. Mallick_2025 (saúde) propõe uma arquitetura que combina blockchain, contratos inteligentes e IPFS para armazenar registros médicos; um proxy criptográfico protege sensores e a avaliação mede tempos de upload, download, acesso e mineração, mostrando ganhos de eficiência. Asaithambi_2025 (IIoT) apresenta computação de borda assistida por blockchain com um mecanismo de autenticação baseado em reputação (PoAh) e contratos inteligentes, alcançando até 1273 tps, mas com degradação de desempenho acima de 100 nós. Ambos buscam eliminar pontos únicos de falha e melhorar privacidade, porém diferem no domínio (saúde vs industrial), na estratégia de armazenamento (off‑chain IPFS vs processamento na borda) e nos focos de avaliação (latência de dados vs taxa de transação). Limitações comuns incluem escalabilidade da blockchain e ausência de identidade auto‑soberana (SSI) ou controle de acesso baseado em atributos.",
+    "ideias": [
+      {
+        "titulo": "Arquitetura híbrida IPFS‑PoAh com SSI para serviços de cidades inteligentes",
+        "descricao": "Integra o armazenamento off‑chain via IPFS de Mallick_2025 com o mecanismo de autenticação PoAh de Asaithambi_2025, adicionando identidade auto‑soberana (SSI) para dispositivos de borda. O objetivo é avaliar latência, taxa de transação e privacidade em um cenário de sensores de tráfego urbano. A comparação entre as duas abordagens revela a lacuna de integração de SSI e de como o off‑chain pode aliviar a carga da blockchain em ambientes de borda.",
+        "fontes": [
+          "Mallick_2025",
+          "Asaithambi_2025"
+        ],
+        "lacuna": "Nenhum estudo combina IPFS com PoAh nem incorpora SSI para controle de acesso granular em cidades inteligentes."
+      },
+      {
+        "titulo": "Controle de acesso granular: ABE vs criptografia assimétrica em edge‑IoT",
+        "descricao": "Estende o algoritmo de criptografia de Mallick_2025 para usar criptografia baseada em atributos (ABE) nos dados armazenados em IPFS e compara seu desempenho e flexibilidade com a criptografia assimétrica em tempo real proposta por Asaithambi_2025 nos nós de borda. A hipótese é que ABE oferece controle de acesso mais fino sem penalizar significativamente a latência, preenchendo a lacuna de avaliação comparativa entre esses esquemas em ambientes híbridos.",
+        "fontes": [
+          "Mallick_2025",
+          "Asaithambi_2025"
+        ],
+        "lacuna": "Ausência de estudo comparativo entre ABE e criptografia assimétrica para acesso a dados off‑chain em IoT de borda."
+      },
+      {
+        "titulo": "Impacto do off‑chain IPFS na escalabilidade de redes de borda blockchain",
+        "descricao": "Investiga se a redução de carga de dados na blockchain, obtida ao armazenar arquivos grandes em IPFS (Mallick_2025), melhora a taxa de transação e a latência quando o número de nós de borda ultrapassa 100 (limite observado em Asaithambi_2025). O experimento medirá throughput, tempo de autenticação e consumo de energia, testando a hipótese de que o off‑chain mitiga a degradação de desempenho em grandes implantações.",
+        "fontes": [
+          "Mallick_2025",
+          "Asaithambi_2025"
+        ],
+        "lacuna": "Nenhum trabalho avaliou o efeito combinado de off‑chain storage e escalabilidade de nós de borda em blockchain."
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:03:20"
+}

@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:49:12",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things",
+    "perfil_anterior": {
+      "problema": "Low-power IoT devices may need help to handle the high processing demands of blockchain consensus methods",
+      "solucao": "The proposed system, evaluated using MATLAB and Hyperledger Fabric, is not only efficient and reliable but also highly cost-effective.",
+      "avaliacao": "The authentication time of proposed architecture with different nodes.",
+      "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+      "possibilidades": "Avaliar o desempenho do PoAh em cenários de mobilidade de dispositivos IoT em cidades inteligentes.; Integrar mecanismos de identidade auto‑soberana (SSI) aos contratos inteligentes que utilizam PoAh.; Comparar o PoAh com outros consensos leves (e.g., Proof of Authority, Proof of Stake) em termos de consumo energético.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados armazenados na blockchain.; Testar a arquitetura em ambientes de borda heterogêneos com milhares de nós para validar escalabilidade."
+    },
+    "pagina": 12,
+    "texto": "that PoAh offers adequate security when combined with ECDSA in decentralized IIoT networks. In addition, \nPoAh effectively tackles the two main flaws in the existing blockchain consensus: the network’s 51% attack \nand erratic network connection. While only trustworthy nodes can authenticate blocks in PoAh, any network \ndevice may produce blocks. This selective notification of peers about adverse circumstances resulting from these \nshortcomings ensures a more secure system. Blocks can only be added to the chain and authenticated by trusted \npeers, and the dynamic nature of trust values effectively addresses PoW’s vulnerability to a 51% assault. One of \nthe main advantages of the proposed blockchain model is the traceability of unauthorized access. The proposed \nconsensus model based blockchain network transaction Ttxr can be able to get the random message shared \n( PID i,j ) by any node in the network (Ni,j ). If any IoT node is originated to share any illegal message, then the \nproposed IoT will send back illegal message back to Ttxr . This will ensure by the public key of the node (Ni,j ), \nthen the real node identity is calculated as follow as:\n RID i,j = hash(msg.publickey ) ⊕ PID i,j\nFor the above analysis we can prove that our proposed model can easily trace the origin of any illegal activity.\nPerformance evaluation of industrial operations\nThe efficiency study of the proposed blockchain structure, as demonstrated in this section, is crucial for \nunderstanding the potential impact of blockchain on industrial procedures. The service time required for \nvarious industrial procedures, which was assessed through several trials, is a key metric in determining the \nefficiency and practicality of the proposed blockchain structure. The duration of a task, comprising run-time \nor system processes executed on the computer’s behalf, is the task’s running time or processor time. The five \nindustrial processes carried out by the system at hand are gathering data, movement, information from sensors \ncapturing, device authentication, user authentication, and device identification. In this study, we used a Core i5 \ndesktop computer to conduct thorough simulations in Python to separate consumers, components, documents, \nand controllers into distinct groups and record the service’s execution time. We go over each operation’s service \nduration in the sections that follow.\nFirst, we examine the enrollment procedure for blockchain-enabled intelligent industrial networks, a crucial \nstep in establishing a secure and efficient network. There are five groups of users, with 10, 20, 30, 40, and 50 \nmembers each. A single user’s registration procedure consists of three primary steps: submitting a transaction \nrequest, authenticating the purchase, and updating the blockchain after successful verification. The first group’s \nexecution time records a minimum of 815 milliseconds and a high of 1571 milliseconds. For the first group, \nthe median time of execution is 963 ms. The bar graph in Fig. 5 compares the service time required for the \nvarious user groups, providing insights into the scalability and performance of the enrollment procedure. The \ncomparison shows that more execution time was needed as the number of users increased. With fifty users, \nthe fifth group is thought to be the largest. This group’s average time is 963 milliseconds. The user enrollment \nprocedure responds quickly overall, which is a positive indicator of the efficiency of the proposed blockchain \nstructure.\nThe sensor’s data-capturing procedure is examined in the third stage. Immutable information storage is one of \nthe most essential features of blockchain-enabled technologies. The sensors for the suggested solution are divided \ninto five groups, each with 10, 25, 50, 75, and 100 devices. Sensor identification, data encryption, transactional \noperation, and sensor data retention based on the device ID are the four steps of the blockchain network’s storage \nof information procedure. Figure 6 displays a bar graph that compares the application’s execution times for the \nvarious sensor groups used for data recording. The graph indicates that 1908 ms is the mean execution time for \nFig. 5. The service time computation of blockchain devices for user registration.\n \nScientific Reports |        (2025) 15:15410 12| https://doi.org/10.1038/s41598-025-00337-3\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve o consenso PoAh combinado com ECDSA, que melhora a segurança contra ataques de 51% e conexões instáveis em redes IIoT, detalha a rastreabilidade de mensagens ilegais e apresenta avaliação de desempenho de processos industriais, como tempo de inscrição de usuários (815‑1571 ms) e captura de dados de sensores (≈1908 ms).",
+    "perfil": {
+      "problema": "the network’s 51% attack and erratic network connection",
+      "solucao": "PoAh offers adequate security when combined with ECDSA in decentralized IIoT networks",
+      "avaliacao": "The first group’s execution time records a minimum of 815 milliseconds and a high of 1571 milliseconds",
+      "limites": "Não informado",
+      "possibilidades": [
+        "Avaliar o desempenho do PoAh em cenários de mobilidade de dispositivos IoT em cidades inteligentes.",
+        "Integrar mecanismos de identidade auto‑soberana (SSI) aos contratos inteligentes que utilizam PoAh.",
+        "Comparar o PoAh com outros consensos leves (e.g., Proof of Authority, Proof of Stake) em termos de consumo energético.",
+        "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados armazenados na blockchain.",
+        "Testar a arquitetura em ambientes de borda heterogêneos com milhares de nós para validar escalabilidade."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "PoAh mitigates 51% attack through dynamic trust values.",
+        "citacao": "the dynamic nature of trust values effectively addresses PoW’s vulnerability to a 51% assault"
+      },
+      {
+        "afirmacao": "User enrollment time remains under 1 s even with 50 users.",
+        "citacao": "The first group’s execution time records a minimum of 815 milliseconds and a high of 1571 milliseconds"
+      }
+    ],
+    "interpretacao": "O consenso PoAh, ao combinar ECDSA e valores de confiança dinâmicos, parece oferecer resistência a ataques de maioria e melhorar a confiabilidade em redes IIoT com conectividade irregular, ao mesmo tempo em que mantém tempos de operação aceitáveis para processos industriais críticos.",
+    "duvidas": "Como o PoAh se comporta em ambientes com alta latência de rede ou perda de pacotes? Qual o impacto de escalonar para milhares de dispositivos IoT em termos de consumo energético e gerenciamento de chaves?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:49:17"
+}

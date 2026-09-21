@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T20:26:51",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "On the adoption and deployment of secure and privacy-preserving IIoT in smart manufacturing: a comprehensive guide with recent advances",
+    "perfil_anterior": {
+      "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+      "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "system is not readily available as a commercial product",
+      "possibilidades": "• Avaliar a integração de blockchain com SSI para controle de acesso descentralizado em dispositivos IIoT da camada de percepção. • Desenvolver mecanismos automáticos que traduzam as diretrizes de segurança (ENISA, NIST, ETSI) em políticas de edge computing para gateways. • Investigar o impacto de vulnerabilidades de blockchain (ex.: double spending) sobre a latência dos processos de pré‑processamento nos gateways. • Extender a arquitetura de quatro camadas incorporando criptografia baseada em atributos (ABE) para controle de acesso granular nos dados armazenados na nuvem."
+    },
+    "pagina": 9,
+    "texto": "On the adoption and deployment of secure and privacy- … Page 9 of 37 53\nTable 2 Key contribution of our work over other guides and survey papers in terms of guidelines to be adopted and deployed\nGuides and Survey works Guides to a secure and privacy preserving IIoT tools and infrastructures\nGuide to secure digital\nservices\nGuide to secure\nnetwork\nconnectivity\nGuide to secure cloud database Guide to\ndata privacy\nA AC DS T & DM NS NM NC PG-U PG-I\nNIST IR 8259A [ 24] ✕✕ ✓ ✓ ✕ ✓ ✕ ✕ ✕ ✕\nNIST IR-CSF-2.0 [25] ✓ ✓ ✓ ✕ ✓✓✓✓ ✕ ✕\nENISA-Baseline [26] ✓ ✓ ✓ ✓ ✓✓✓✓ ✕ ✓\nENISA-Secure IIoT [27] ✓ ✓ ✓ ✓ ✓✓✕✓ ✕ ✕\nETSI EN-303 645 [ 28] ✓✓ ✓ ✕ ✕ ✓ ✕ ✓ ✕ ✕\nETSI TR 103 621 [ 29] ✓ ✓ ✓ ✓ ✓✓✕✓ ✕ ✕\nISO/IEC-27400:2022 [30] ✓ ✓ ✓ ✓ ✓✓✕✓ ✓ ✓\nCISA [31] ✓ ✓ ✓ ✓ ✓✓✓✓ ✕ ✕\nOur Guides ✓ ✓ ✓ ✓ ✓✓✓✓ ✓ ✓\nA Authentication, AC Access control, DS Data security,T&DM Tools and device management,NS Network segmentation, NM Network monitoring,\nNC Network conﬁguration, PG-U Privacy guides for users, PG-I Privacy guides for industries\nPerception or device layer\nNetwork or gateway layer\nApplication or data \nmanagement layer\nCloud or \nprocessing \nlayer\nRobots, sensors, actuators, monitors, meters, cameras\nRouters, firewalls, edge devices\nData visualization, machine learning, AI, data processing, advanced analytics\nData storage, high-level data analytics\nEdge computing\nFig. 1 The four distinct layers and components of a typical IIoT architecture\nbecause the continuous data streaming generates sub-\nstantial data ﬂows that exceed the capacity for direct\ntransmission to the cloud. The complexity of managing\nan IoT network increases signiﬁcantly when there is a\nlarge number of sensors continuously transmitting data.\nMoreover, in the event that the sensor data is presented\nin analog format, it is necessary for the gateway to con-\nvert it into digital form in order to facilitate subsequent\ninformation processing [ 46].\n3. The application or data management layer :A f t e rt h e\ncollection of data, its conversion into digital format, and\nsubsequent aggregation, the data is prepared for further\nprocessing using edge systems. The edge IT systems have\nthe capability to be either onsite or remote; however,\nit is most often seen that these systems are located in\nclose proximity to the sensors. This is the stage at which\ndigitized and aggregated data is used for the purpose\nof conducting analytics. Furthermore, the available data\nexhibits coherence and logical consistency with the help\nof knowledge possessed via machine learning and data\nvisualization. Once practical and implementable insight\nfrom the extracted data is gained, it is often followed by\nthe insights acquired. The use of this supplementary pro-\ncessing mechanism effectively mitigates the volume of\ndata being sent to data centers or cloud-based infrastruc-\ntures. By adopting this approach, one is able to mitigate\n123",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho apresenta uma comparação de guias e surveys de segurança e privacidade para IIoT, destacando que seu próprio guia cobre todas as áreas (autenticação, controle de acesso, etc.). Define uma arquitetura de quatro camadas (percepção, gateway, aplicação/gerenciamento de dados e nuvem) e descreve desafios de fluxo contínuo de dados que supera a capacidade de transmissão direta ao cloud, exigindo conversão analógica‑digital nos gateways e processamento de borda para reduzir a carga na nuvem.",
+    "perfil": {
+      "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+      "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "system is not readily available as a commercial product",
+      "possibilidades": "• Avaliar a integração de SSI baseada em blockchain para autenticação descentralizada nos dispositivos da camada de percepção. • Propor um modelo de política automática que traduza as diretrizes NIST/ENISA em regras de segmentação de rede para gateways. • Investigar o uso de ABE para controle de acesso granular nos dados armazenados na camada de nuvem, considerando a latência introduzida pelo processamento de borda. • Desenvolver um protótipo de orquestração que combine edge computing e criptografia homomórfica para preservar privacidade durante a agregação de dados."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O streaming contínuo de dados gera fluxos substanciais que excedem a capacidade de transmissão direta para a nuvem.",
+        "citacao": "The continuous data streaming generates substantial data flows that exceed the capacity for direct transmission to the cloud."
+      },
+      {
+        "afirmacao": "O processamento de borda reduz o volume de dados enviados a data centers ou infraestruturas baseadas em nuvem.",
+        "citacao": "By adopting this approach, one is able to mitigate the volume of data being sent to data centers or cloud-based infrastructures."
+      }
+    ],
+    "interpretacao": "O texto enfatiza a necessidade de camadas de gateway e edge computing para lidar com alta taxa de geração de dados em IIoT, apontando que diretrizes de segurança devem ser aplicadas em cada camada da arquitetura de quatro níveis.",
+    "duvidas": "Como as diretrizes propostas pelo guia são traduzidas em políticas operacionais específicas para cada camada? Existe avaliação prática de desempenho (latência, overhead) ao aplicar as recomendações de segurança nas camadas de gateway e edge?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:27:13"
+}

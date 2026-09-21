@@ -76,3 +76,32 @@ class RevisaoTest(unittest.TestCase):
             revisao.detalhar(self.p)
         self.assertEqual(motor.ler_json(path, {})['meu_trabalho'], 'Comparar soluções')
         self.assertEqual(len(self.p.estado['propostas']), 1)
+
+    def test_redacao_focada_publica_introducao_e_filtra_fontes(self):
+        self.p.cfg['modo_pesquisa'] = 'focada'
+        with patch('revisao.matriz', return_value=[{
+            'id': 'A', 'titulo': 'SSI em cidades inteligentes',
+            'escopo': {'tipo': 'pdf', 'feitos': 2, 'total': 2, 'concluida': True},
+            'fichas_amostradas': [{'id': 'ficha-A', 'pagina': 1, 'resumo': 'SSI.',
+                                   'evidencias': [{'afirmacao': 'Credencial verificável', 'citacao': 'verifiable credential'}]}],
+        }]), patch('revisao.chamar', return_value={
+            'introducao': ['Introdução [A].', 'Problema [A].', 'Objetivo [A].'],
+            'fundamentacao_teorica': [
+                {'titulo': 'SSI', 'texto': 'Fundamentação [A].', 'fontes': ['A']},
+                {'titulo': 'Segurança', 'texto': 'Segurança [A].', 'fontes': ['A']},
+                {'titulo': 'Governança', 'texto': 'Governança [A].', 'fontes': ['A']},
+                {'titulo': 'Revogação', 'texto': 'Revogação [A].', 'fontes': ['A']},
+            ],
+            'mapa_fases': [{'fase': 'Revogação', 'acoes_cidadao': 'Solicita.', 'acoes_entidades': 'Publicam estado.',
+                            'riscos': 'Perda de acesso.', 'estado_da_arte': 'Descrito em [A].',
+                            'lacunas': 'Recuperação.', 'fontes': ['A', 'inventada']}],
+            'fontes_usadas': ['A', 'inventada'],
+        }):
+            self.assertTrue(revisao.redigir_pesquisa_focada(self.p))
+        self.assertEqual(self.p.estado['redacao_focada']['fontes_usadas'], ['A'])
+        self.assertEqual(self.p.estado['redacao_focada']['mapa_fases'][0]['fontes'], ['A'])
+        self.p.painel()
+        redacao = (self.root / 'vault/INTRODUCAO-E-FUNDAMENTACAO.md').read_text(encoding='utf-8')
+        self.assertIn('## Introdução', redacao)
+        self.assertIn('Introdução [A].', redacao)
+        self.assertNotIn('[inventada]', redacao)

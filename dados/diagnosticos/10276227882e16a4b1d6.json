@@ -1,0 +1,55 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T17:34:29",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 13,
+        "resumo": "O artigo propõe uma arquitetura que combina blockchain e redes neurais profundas para detectar e prevenir anomalias em IoT, incluindo aplicações marítimas. O modelo DNN‑Blockchain alcança 99,18% de acurácia e reduz a taxa de falsos positivos para 15,42%, mas ainda enfrenta vulnerabilidades como ataques a contratos inteligentes e ataques de 51%. São sugeridas melhorias como verificação formal de contratos e algoritmos criptográficos leves.",
+        "interpretacao": "A combinação de blockchain com DNN demonstra potencial para melhorar a segurança de IoT, especialmente ao reduzir falsos alarmes, porém a dependência de contratos inteligentes ainda expõe o sistema a vulnerabilidades conhecidas.",
+        "duvidas": "Como a solução se comporta em ambientes de IoT com recursos extremamente limitados? Qual o impacto real de algoritmos criptográficos leves na segurança versus desempenho?"
+      },
+      {
+        "pagina": 14,
+        "resumo": "O artigo relata que, ao empregar contratos inteligentes na blockchain, o sistema de segurança IoT reage automaticamente a ameaças, eliminando atrasos humanos e alcançando 95,25% de eficiência no tempo de reação, o que garante mitigação em tempo real e baixa latência na preservação da integridade dos dispositivos conectados.",
+        "interpretacao": "A combinação de contratos inteligentes e DNN permite uma resposta quase instantânea a incidentes, reduzindo a janela de vulnerabilidade típica de intervenções manuais, embora a dependência de contratos inteligentes introduza novos vetores de risco.",
+        "duvidas": "Como o modelo escala em ambientes com milhares de dispositivos IoT? Qual o overhead de execução dos contratos inteligentes em hardware de borda com recursos limitados?"
+      },
+      {
+        "pagina": 15,
+        "resumo": "O trecho descreve a integração de armazenamento off‑chain (IPFS ou nuvem) e otimização de contratos inteligentes para reduzir latência, além de usar edge computing para pré‑processar dados IoT. O método mantém alta precisão na mitigação de ameaças, alcançando 94,96% de escalabilidade, e propõe técnicas como batch de transações e compressão de logs para evitar o inchaço da blockchain.",
+        "interpretacao": "A proposta reforça a importância de combinar blockchain com computação de borda e armazenamento off‑chain para manter alta precisão de segurança ao mesmo tempo em que controla a latência e o tamanho da cadeia.",
+        "duvidas": "Como a otimização dos contratos inteligentes será implementada na prática? Qual o impacto real da compressão de logs na detecção de anomalias? Existem métricas de comparação com soluções centralizadas para validar a melhoria de latência?"
+      },
+      {
+        "pagina": 16,
+        "resumo": "O estudo apresenta uma arquitetura híbrida DNN‑Blockchain para segurança de redes IoT, destacando alta escalabilidade (94,96%), rapidez (95,25%) e descentralização (97,33%). Cada dispositivo registra atividades em uma blockchain privada, reduzindo pontos únicos de falha. Embora a detecção de anomalias alcance 99,18% de acurácia, os autores apontam a necessidade de análise de custo computacional e otimizações para dispositivos com recursos limitados.",
+        "interpretacao": "Os autores demonstram que a combinação de DNN e blockchain pode oferecer alta escalabilidade e descentralização para IoT, mitigando pontos únicos de falha. Contudo, reconhecem que o custo computacional da treinamento e das operações blockchain pode ser um obstáculo para dispositivos de recursos limitados, exigindo otimizações de modelo e análise de viabilidade prática.",
+        "duvidas": "Qual algoritmo de consenso foi adotado e como ele impacta a latência em ambientes de borda? Qual é o overhead energético real dos nós IoT ao registrar transações em blockchain privada? Como a solução se comporta frente a ataques adversariais sofisticados contra o modelo DNN?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo propõe uma arquitetura híbrida que combina blockchain privada e redes neurais profundas (DNN) para detectar e prevenir anomalias em ambientes IoT, inclusive em aplicações marítimas. Os resultados relatados mostram alta acurácia (99,18 %), redução de falsos positivos (15,42 %), eficiência de reação (95,25 %) e escalabilidade (94,96 %). A solução utiliza contratos inteligentes para respostas automáticas, armazenamento off‑chain (IPFS ou nuvem) e edge computing para pré‑processamento, além de técnicas de batch de transações e compressão de logs para mitigar o inchaço da cadeia. Apesar dos benefícios, os autores reconhecem vulnerabilidades a ataques a contratos inteligentes e ataques de 51 %, bem como desafios de custo computacional, consumo energético e desempenho em dispositivos IoT com recursos limitados. São sugeridas melhorias como verificação formal de contratos e uso de algoritmos criptográficos leves, mas permanecem dúvidas sobre a implementação prática, overhead de borda e resistência a ataques avançados.",
+    "lacunas_possiveis": [
+      "Desempenho e overhead em dispositivos IoT com recursos extremamente limitados",
+      "Impacto energético da operação de nós IoT em blockchain privada",
+      "Escalabilidade da solução para milhares de dispositivos simultâneos",
+      "Detalhes do algoritmo de consenso adotado e sua latência em borda",
+      "Eficácia prática da compressão de logs na detecção de anomalias"
+    ],
+    "propostas_possiveis": [
+      "Realizar benchmarks de algoritmos criptográficos leves versus segurança oferecida",
+      "Medir o consumo energético e tempo de processamento de contratos inteligentes em hardware de borda",
+      "Testar a arquitetura em cenários de grande escala (milhares de dispositivos) para avaliar latência e throughput",
+      "Desenvolver e aplicar verificação formal de contratos inteligentes para mitigar vulnerabilidades",
+      "Comparar diferentes mecanismos de consenso (e.g., PoA, Raft) focados em ambientes de borda"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:34:40"
+}

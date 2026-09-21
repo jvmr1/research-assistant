@@ -1,0 +1,50 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:17:36",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Verifiable decentralized identity-based meta-computing in Industrial Internet of Things (IIoT)",
+    "perfil_anterior": {
+      "problema": "addressing security issues in identity registry and updates within DID systems",
+      "solucao": "sliding window accumulator structure",
+      "avaliacao": "Our evaluation results have demonstrated that our approach has an advantage in offering secure verifiability and high efficiency, comparing to other existing methods",
+      "limites": "high computational overhead and limited interoperability",
+      "possibilidades": "Integrar criptografia baseada em atributos (ABE) ao esquema VS‑DID para controle de acesso granular em dispositivos IIoT.; Avaliar a latência e escalabilidade do acumulador de janela deslizante em ambientes edge/fog com milhares de dispositivos.; Explorar mecanismos de revogação distribuída usando provas de conhecimento zero‑knowledge entre organizações.; Aplicar o modelo híbrido on‑chain/off‑chain a serviços de cidades inteligentes, como gestão de tráfego e energia.; Investigar a interoperabilidade do VS‑DID com padrões SSI adotados por órgãos públicos."
+    },
+    "pagina": 6,
+    "texto": "Journal Pre-proof\nJournal Pre-proof\nTable 1\nSymbols used in the DID Verifiable Registry\nSymbol Description\n𝐖 Identity vector, 𝐖=(𝑤0,𝑤1,…,𝑤𝑙−1).\n𝑤𝑖 𝑖-th element of𝐖.\n𝐶 Commitment to 𝐖.\n𝜋𝑖 Proof for𝑤𝑖.\n𝜋𝑈 Aggregated proof for subset𝑈.\n𝐶𝑈 Aggregated commitment for subset𝑈.\n𝑔1,𝑔2 Generators of 𝔾1 and 𝔾2.\n𝑒 Bilinear pairing,𝑒∶ 𝔾1× 𝔾2 → 𝔾𝑇.\n𝔾𝑇 Target group of bilinear pairing.\n𝐀 Trapdoor in commitment scheme.\n𝑌𝑘,𝑛 Selection function in multilinear polynomial.\n𝜆 Security parameter.\n𝑝𝑝 Public parameters.\n𝑆𝐾 Secret key.\n𝑃𝑉𝐾 Public verification key.\n𝑈 Subset of indices in𝐖.\nΔ Number of positions𝑤𝑖 is shifted.\n𝑠𝑢𝑝𝑖,𝑗 Supplementary info for updating proofs.\n𝑥𝑖,𝑗 𝑗-th node in binary tree path for𝑤𝑖.\n𝑏 Number of identical bits between two paths.\nDID register phase, the user generates a commitment𝐶 and\ncorresponding proof𝜋 for their identity information vector\n𝐖 and then submits a registry request. The DID verifier\nthen validates the proof using the provided commitment.\nUpon successful validation, the commitment and proof are\nrecorded in the verifiable registry. To ensure efficient ag-\ngregation and management of commitments, we employ a\nbinary linear tree structure as the foundational framework\nfor the commitment scheme. Table 1 shows the symbols\nand descriptions usd in DID registry. The proposed vector\ncommitment scheme includes four phases: generation of\nproof,aggregationofproof,verificationofproof,andupdate\nof proof.\nGeneration of proof.We initially adopt the principles\nof Hyperproof [41] and polynomial commitments [52] by\nrepresenting the original identity information vector𝐖 =\n(𝑤0,𝑤1,...,𝑤 𝑙−1)∈ ℤ𝑙\n𝑝 using a multilinear extended poly-\nnomial function𝑓. Subsequently, we construct the commit-\nmentusingabilinearpairinggroup,wherethegroup 𝔾1 and\n𝔾2 aregeneratedbytherespectivegenerators 𝑔1 and𝑔2,and\nthe pairing𝑒 mapping 𝔾1 × 𝔾2 → 𝔾𝑇. Specifically, let us\ndenote 𝑔\n𝑡𝑗−𝑖𝑗\n2 (𝑗 ∈ [0,𝑛]) as the verification key located at\nthe𝑖-th position of𝐖.\nThe commitment is shown in Eq. (1).\n𝐶 =𝑔𝑓(𝐀)\n1 =𝑔\n∑𝑙−1\n𝑘=0𝑤𝑘𝑌𝑘,𝑛(𝐀)\n1 =\n𝑛−1∏\n𝑗=0\n(𝑔\n𝑌𝑘,𝑛(𝐀)\n1 )𝑤𝑘, (1)\nwhere 𝐀 denotes a trapdoor,𝑌𝑘,𝑛 (𝑘 ∈ [0,2𝑛)) denotes the\nselection function. The trapdoor𝐴 is used to generate the\ncommitment𝐶. It ensures that the commitment is binding\nand hiding, meaning that an adversary cannot forge a valid\ncommitment or extract information about the committed\nvalues without knowing the knowledge of𝐴. To reduce\nthe proof generation time, we employ a binary linear tree\nstructure to recursively decompose the multilinear extended\npolynomial function. All commitments involved in the path\nto root of𝑤𝑖 represents the proof𝜋𝑖 for𝑤𝑖. Specifically, the\nproofgenerationprocessconsistsofthefollowingfunctions:\n• 𝑝𝑝,𝑆𝐾,𝑃𝑉𝐾 ← 𝖦𝖾𝗇(𝜆):Inputsthesecurityparame-\nter𝜆. Outputs the public parameters𝑝𝑝, public verifi-\ncation key𝑃𝑉𝐾 , and secret key𝑆𝐾.\n• 𝐶 ← 𝖢𝗈𝗆(𝐖): Inputs the identity information vector\n𝐖=(𝑤0,𝑤1,...,𝑤 𝑙−1) and outputs the commitment\n𝐶 of 𝐖∈ ℤ𝑙\n𝑝.\n• 𝜋𝑖 ← 𝖮𝗉𝖾𝗇(𝑤𝑖,𝑖): Inputs the the position𝑖 and the\nelement 𝑤𝑖 at the𝑖-th position in𝐖. The algorithm\noutputs the corresponding proof𝜋𝑖.\nAggregation of proof.In the VS-DID model, we ag-\ngregate the proofs of individual elements𝑤𝑖 in the user’s\nidentityinformationvector 𝐖intoasingleaggregatedproof.\nThis aggregated proof verifies the integrity and accuracy\nof the entire vector 𝐖. Inspired by Hyperproof [41], we\napplythe Non-interactiveInnerProductArguments (IPA)to\nfacilitate proof aggregation. We use the IPA to generate an\naggregated proof𝜋𝑈 and a corresponding aggregated com-\nmitment𝐶𝑈 from all individual proofs and their associated\nverificationkeys.Specifically,theproofaggregationprocess\nconsists of the following function:\n• 𝜋𝑈,𝐶𝑈 ← 𝖠𝗀𝗀𝗋(𝑤𝑖,𝜋𝑖,𝑈) (𝑖 ∈ 𝑈): Inputs the indi-\nvidualvectorelement 𝑤𝑖 andthecorrespondingproof\n𝜋𝑖.Thealgorithmoutputstheaggregatedproof 𝜋𝑈 and\naggregated commitment𝐶𝑈.\nVerification of proof. During the verification phase,\nthe public verification key is𝑔2, and the user submits the\nproof𝜋𝑖 =(𝑥𝑖,𝑛,𝑥𝑖,𝑛−1,…,𝑥𝑖,1), where𝑥𝑖,𝑛 is the𝑛-th node\nof the𝑖-th path in the binary linear tree. The DID verifier\nverifies the validity of the proof by computing𝑒(𝐶∕𝑔𝑎𝑖\n1,𝑔2)\nand∏\n𝑗∈[0,𝑛]𝑒(𝑥𝑖,𝑗,𝑔\n𝑎𝑗−𝑖𝑗\n2 ). When Eq. (2) holds, the proof is\nsuccessfully verified.\n𝑒(𝐶∕𝑔𝑎𝑖\n1,𝑔2)=\n∏\n𝑗∈[0,𝑛]\n𝑒(𝑥𝑖,𝑗,𝑔\n𝑎𝑗−𝑖𝑗\n2 ). (2)\nSpecifically, the proof verification process consists of the\nfollowing function:\n• (0,1) ← 𝖵𝖾𝗋𝗂𝖿 𝗒(𝐶,𝑈,𝜋 𝑈,(𝑤𝑖)𝑖∈𝑈,(𝑃𝑉𝐾 𝑖)𝑖∈𝑈): In-\nputs the proof𝜋𝑈, the commitment𝐶 and the vector\nelement𝑤𝑖. The algorithm outputs0 or1.\nUpdate of proof.To enhance the practicality and main-\ntainability of VS-DID, we address proof updates when the\npositions of elements in the identity information vector are\naltered. Suppose the position of element𝑤𝑖 in vector 𝐖\nis shifted by Δ positions. To achieve the update of the\nKai Ding et al.:Preprint submitted to Elsevier Page 6 of 14",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta um esquema de registro verificável baseado em identidade descentralizada (VS‑DID) que utiliza compromissos vetoriais, provas geradas via Hyperproof e polynomial commitments, e agrega provas por meio de Non‑interactive Inner Product Arguments (IPA) em uma árvore linear binária, permitindo geração, agregação, verificação e atualização de provas para vetores de identidade em IIoT.",
+    "perfil": {
+      "problema": "addressing security issues in identity registry and updates within DID systems",
+      "solucao": "sliding window accumulator structure",
+      "avaliacao": "Our evaluation results have demonstrated that our approach has an advantage in offering secure verifiability and high efficiency, comparing to other existing methods",
+      "limites": "high computational overhead and limited interoperability",
+      "possibilidades": [
+        "Integrar criptografia baseada em atributos (ABE) ao esquema VS‑DID para controle de acesso granular em dispositivos IIoT.",
+        "Avaliar a latência e escalabilidade do acumulador de janela deslizante em ambientes edge/fog com milhares de dispositivos.",
+        "Explorar mecanismos de revogação distribuída usando provas de conhecimento zero‑knowledge entre organizações.",
+        "Aplicar o modelo híbrido on‑chain/off‑chain a serviços de cidades inteligentes, como gestão de tráfego e energia.",
+        "Investigar a interoperabilidade do VS‑DID com padrões SSI adotados por órgãos públicos.",
+        "Implementar suporte a credenciais verificáveis (VC) para autorizações dinâmicas em cenários de compartilhamento de dados entre múltiplas cidades inteligentes."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O esquema inclui quatro fases: geração de prova, agregação de prova, verificação de prova e atualização de prova.",
+        "citacao": "The proposed vector commitment scheme includes four phases: generation of proof,aggregationofproof,verificationofproof,andupdate of proof."
+      },
+      {
+        "afirmacao": "A verificação utiliza o emparelhamento bilinear e verifica a igualdade e(C/g_ai1, g2)=∏ e(x_i,j, g_{a_j−i_j}^2).",
+        "citacao": "The DID verifier verifies the validity of the proof by computing e(𝐶∕𝑔𝑎𝑖1,𝑔2) and ∏ e(𝑥𝑖,𝑗,𝑔𝑎𝑗−𝑖𝑗2)."
+      }
+    ],
+    "interpretacao": "O uso de árvore linear binária e IPA permite agregar provas de forma não interativa, reduzindo o tamanho dos dados enviados ao verificador e facilitando atualizações quando elementos do vetor mudam de posição.",
+    "duvidas": "Como o esquema lida com a revogação de identidades já registradas? Qual o impacto de mudanças frequentes no vetor W sobre o custo de atualização em ambientes com recursos limitados?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:18:27"
+}

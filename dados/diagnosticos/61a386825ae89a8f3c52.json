@@ -1,0 +1,519 @@
+{
+  "etapa": "redacao-focada",
+  "inicio": "2026-09-21T00:51:07",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Escreva uma seção acadêmica desenvolvida, não um resumo. Use os trabalhos-exemplo apenas para aprender estrutura, extensão, profundidade e modo de referenciar; eles NÃO são fontes do tema e não podem ser citados. A introdução deve ter 5 a 8 parágrafos substanciais, cobrindo contexto de cidades inteligentes, problema, motivação, justificativa, objetivo geral, objetivos específicos e organização do texto. A fundamentação deve ter pelo menos 6 subseções nomeadas, cada uma com 2 a 4 parágrafos: (1) cidades inteligentes e atores, (2) identidade digital e SSI, (3) DID e credenciais verificáveis, (4) autenticação e controle de acesso, (5) segurança e privacidade no ciclo de dados, (6) interoperabilidade e governança, (7) revogação e recuperação de acesso. Compare conceitos e abordagens, explicando limites e relações, em vez de listar definições. Regra central de escrita acadêmica: cada informação, ideia, definição, frase factual, taxonomia ou avaliação que não seja contribuição autoral explícita precisa de citação no próprio parágrafo. Definições conceituais devem preferir fontes originais, padrões formais ou surveys reconhecidos; por exemplo, não defina cidades inteligentes, SSI, DID, VC, ABE ou criptografia homomórfica sem apontar a fonte que sustenta a definição. Não escreva parágrafos conceituais sem fonte. Use citações autor-data somente quando o trabalho fornecido trouxer autor e ano; caso contrário cite o identificador real do trabalho entre colchetes, por exemplo [Papatheodorou_2025]. NUNCA escreva [ID_EXATO], [ID] ou qualquer marcador genérico. Cada afirmação factual precisa de uma fonte real; se nenhuma ficha sustentar a afirmação, escreva “não identificado nas fontes lidas”. Depois faça exatamente 7 itens no mapa: emissão, apresentação/verificação, transmissão, processamento, armazenamento, revogação e recuperação de acesso. Em cada item use 2 a 4 frases por campo para ações do cidadão e entidades administrativas, riscos, estado da arte e lacunas. Use somente os trabalhos fornecidos. Insira citações no texto como [ID_EXATO] e liste em fontes_usadas somente IDs fornecidos. Não invente autores, anos, resultados ou consenso: quando a fonte não sustentar algo, escreva “não identificado nas fontes lidas” e trate lacunas como hipóteses. A redação é um rascunho de trabalho, não uma afirmação de novidade comprovada. JSON no esquema fornecido. Use estrutura semelhante aos trabalhos de exemplo, mas sem copiar trechos e sem tratá-los como fonte temática. EXEMPLOS DE FORMA, NÃO FONTES: [{\"arquivo\": \"André Luiz Almeida Cardoso.pdf\", \"paginas\": 79, \"estrutura_identificada\": [\"1 Introdução\", \"2 Fundamentação Teórica\", \"3 Trabalhos Relacionados\"], \"trecho_apenas_para_estilo\": \"UNIVERSIDADE FEDERAL DO MARANHÃO Programa de Pós-Graduação em Ciência da Computação André Luiz Almeida Cardoso Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain São Luís 2024 André Luiz Almeida Cardoso Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain Dissertação apresentada ao Programa de Pós- Graduação em Ciência da Computação - da Universidade Federal do Maranhão, como re- quisito para obtenção do título de Mestre em Ciência da Computação. Universidade Federal do Maranhão – UFMA Programa de Pós-Graduação em Ciência da Computação UFMA Orientador: Prof. Dr. Francisco José da Silva Unifesp Co-orientador: Prof. Dr. Arlindo Flavio da Conceição São Luís 2024 Ficha gerada por meio do SIGAA/Biblioteca com dados fornecidos pelo(a) autor(a). Diretoria Integrada de Bibliotecas/UFMA Almeida Cardoso, André Luiz\"}, {\"arquivo\": \"Danilo_TCC_final.pdf\", \"paginas\": 54, \"estrutura_identificada\": [\"1 Introdução\", \"1.1 Justificativa\", \"1.2 Objetivos\", \"2 Fundamentação Teórica\"], \"trecho_apenas_para_estilo\": \"UNIVERSIDADE FEDERAL DO MARANHÃO Curso de Ciência da Computação Danilo Isaque Sousa Maia Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes São Luís 2025 Danilo Isaque Sousa Maia Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes Monografia apresentada ao curso de Ciência da Computação da Universidade Federal do Maranhão, como parte dos requisitos necessáriosparaobtençãodograudeBacharel em Ciência da Computação. Orientador: Prof. Dr. Francisco José da Silva e Silva São Luís 2025 Ficha gerada por meio do SIGAA/Biblioteca com dados fornecidos pelo(a) autor(a). Diretoria Integrada de Bibliotecas/UFMA Sousa Maia, Danilo Isaque. Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes / Danilo Isaque Sousa Maia. - 2025. 5\"}, {\"arquivo\": \"dissertacao_wesleyFioreze_23_06_2026_anotada.pdf\", \"paginas\": 96, \"estrutura_identificada\": [], \"trecho_apenas_para_estilo\": \"UNIVERSIDADE FEDERAL DE S ˜AO P AULO DEP ARTMENT OF SCIENCE AND TECHNOLOGY PROFESSIONAL MASTER’S PROGRAM IN TECHNOLOGICAL INNOVA TION BLOCKCHAIN-ENABLED ABE FRAMEWORK FOR SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS WESLEYNOVAESFIOREZECOSTA ADVISOR: PROF. DR. ARLINDOFLAVIO DACONCEIC¸ ˜AO CO-ADVISOR: PROF. DR. VLADIMIRROCHA S˜ao Jos´e dos Campos – SP June 2026 UNIVERSIDADE FEDERAL DE S ˜AO P AULO DEP ARTMENT OF SCIENCE AND TECHNOLOGY PROFESSIONAL MASTER’S PROGRAM IN TECHNOLOGICAL INNOVA TION BLOCKCHAIN-ENABLED ABE FRAMEWORK FOR SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS WESLEYNOVAESFIOREZECOSTA Dissertation presented to the Professional Master’s Program in Technological Innovation at the Univer- sidade Federal de S ˜ao Paulo, as part of the require- ments for obtaining the degree of Master in Sciences. Advisor: Prof. Dr. Arlindo Flavio da Conceic ¸˜ao S˜ao Jos´e dos Campos – SP June 2\"}]",
+  "entrada": {
+    "objetivo": "# Instruções do agente\n\nEdite este arquivo antes de rodar. Ele é seu painel principal de comando.\nO agente nunca sobrescreve este arquivo automaticamente.\n\n## Configuração\n\n- modo de pesquisa: focada\n- ano mínimo: 2025\n- resultados por consulta: 10\n- trabalhos simultâneos: 1\n- fonte acadêmica principal: openalex\n- fontes acadêmicas auxiliares: crossref, semantic_scholar\n- modelo ia: openrouter\n- modelo openrouter: openai/gpt-oss-120b\n- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M\n- fila openrouter: openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free\n\nUse `modo de pesquisa: geral` para voltar ao fluxo exploratório de lacunas e\npropostas. Use `modo de pesquisa: focada` para produzir estado da arte,\nintrodução e fundamentação teórica rastreáveis.\n\n## Variáveis de busca\n\n- domínio: smart cities, urban computing, public administration, digital public services\n- tecnologia: self-sovereign identity, decentralized identity, verifiable credentials, decentralized identifiers, attribute-based encryption, homomorphic encryption\n- problema: citizen actions, administrative entity actions, transmission security, processing security, storage security, revocation, credential recovery, loss of access, selective disclosure, privacy-preserving access control, interoperability\n- contexto: smart city services, public sector, citizen identity, cross-organization data sharing, IoT services, urban data governance\n\n## Consultas iniciais\n\n- self sovereign identity smart cities security verifiable credentials\n- decentralized identity smart city services privacy access control\n- verifiable credentials public sector smart cities interoperability\n- attribute based encryption smart city IoT data sharing access control\n- homomorphic encryption smart cities privacy preserving identity\n- blockchain decentralized identity IoT smart cities access control\n\n## Consultas referenciais obrigatórias\n\nEstas buscas servem para encontrar as melhores referências conceituais, e não\napenas trabalhos já presentes no acervo. Para definições, priorizar padrões\nformais, trabalhos seminais e surveys reconhecidos. Se as melhores fontes não\nestiverem no acervo, o agente deve buscá-las, registrá-las e só então usar as\ncitações conceituais.\n\n- smart city definition seminal survey urban computing\n- Caragliu Del Bo Nijkamp smart cities definition\n- Giffinger smart cities ranking definition\n- self-sovereign identity principles decentralized identity survey\n- W3C decentralized identifiers DID core verifiable credentials standard\n- attribute-based encryption original paper survey ciphertext-policy ABE\n- homomorphic encryption original paper survey privacy preserving computation\n- verifiable credentials revocation status list survey\n\n## Consultas de validação de propostas\n\nEstas buscas confrontam as propostas atuais com trabalhos acadêmicos recentes,\nfora do acervo já baixado. Uma proposta só deve ser mantida como promissora se\nas buscas específicas não encontrarem trabalho que já resolva exatamente a\nmesma lacuna. Se encontrarem algo muito próximo, o agente deve restringir,\nreformular ou descartar a proposta.\n\n- self-sovereign identity smart cities verifiable credentials revocation blockchain\n- verifiable credentials recovery decentralized identity smart cities secret sharing\n- attribute-based encryption verifiable credentials IoT smart cities access control\n- homomorphic encryption decentralized identity IoT smart cities privacy preserving\n- bl",
+    "trabalhos": [
+      {
+        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "titulo": "Danilo_TCC_final",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "Não identificado nas fichas/trechos disponíveis.",
+        "solucao": "uso de identidades autosoberanas (SSI) baseadas em blockchain para dar controle aos cidadãos sobre suas credenciais digitais",
+        "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Explorar a integração de mecanismos de revogação de credenciais verificáveis, como listas de revogação distribuídas, ao middleware InterSCity para melhorar a gestão de identidade e a resiliência contra comprometimento de credenciais.",
+        "fichas_amostradas": [
+          {
+            "id": "4d0d92e96ed42493301d",
+            "pagina": 1,
+            "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+            "evidencias": [
+              {
+                "afirmacao": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+                "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes"
+              },
+              {
+                "afirmacao": "O estudo está inserido no contexto de cidades inteligentes.",
+                "citacao": "Cidades Inteligentes"
+              }
+            ]
+          },
+          {
+            "id": "4af4e95bcf402163cf78",
+            "pagina": 2,
+            "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+            "evidencias": [
+              {
+                "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+                "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Exemplo_60479560a08f3b4cd724",
+        "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "superar a dependência de intermediários centralizados, oferecendo controle granular de acesso, privacidade, auditabilidade e interoperabilidade entre organizações sem relação prévia de confiança.",
+        "solucao": "Não identificado nas fichas/trechos disponíveis.",
+        "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+        "limites": "limitações (revogação de atributos e escopo da avaliação de escalabilidade criptográfica)",
+        "possibilidades": "Implementar um mecanismo de recuperação de credenciais baseado em secret sharing, permitindo que cidadãos restabeleçam o acesso perdido a credenciais verificáveis em ambientes de IoT urbano, com avaliação de usabilidade e segurança.",
+        "fichas_amostradas": [
+          {
+            "id": "b8fdb35fb7d73dc3651b",
+            "pagina": 1,
+            "resumo": "Dissertação de mestrado profissional intitulada \"BLOCKCHAIN-ENABLED ABE FRAMEWORK FOR SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS\", apresentada por Wesley Novaes Fioreze Costa na Universidade Federal de São Paulo em junho de 2026, sob orientação do Prof. Dr. Arlindo Flávio Daconceição e co-orientação do Prof. Dr. Vladimir Rocha.",
+            "evidencias": [
+              {
+                "afirmacao": "O trabalho propõe um framework baseado em blockchain e ABE para compartilhamento seguro de dados IIoT.",
+                "citacao": "BLOCKCHAIN-ENABLED ABE FRAMEWORK FOR SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS"
+              },
+              {
+                "afirmacao": "O título indica foco em segurança de dados de Internet Industrial das Coisas entre organizações.",
+                "citacao": "SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS"
+              }
+            ]
+          },
+          {
+            "id": "df91d89200211a73c761",
+            "pagina": 2,
+            "resumo": "Dissertação de mestrado profissional apresentada em junho de 2026 à Universidade Federal de São Paulo, sob orientação do Prof. Dr. Arlindo Flavio da Conceição, propõe um framework baseado em blockchain e criptografia baseada em atributos (ABE) para garantir o compartilhamento seguro de dados IIoT entre organizações.",
+            "evidencias": [
+              {
+                "afirmacao": "Problema de compartilhamento seguro de dados IIoT entre organizações.",
+                "citacao": "SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS"
+              },
+              {
+                "afirmacao": "Solução baseada em blockchain e ABE.",
+                "citacao": "BLOCKCHAIN-ENABLED ABE FRAMEWORK"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Exemplo_da24de257de987bc603b",
+        "titulo": "André Luiz Almeida Cardoso",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+        "solucao": "Gestão de Identidades pode desempenhar um papel fundamental",
+        "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Explorar integração de SSI com blockchain para canais seguros de comunicação em CIs; Aplicar ABE para controle de acesso seletivo a sensores IoT; Investigar protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade; Avaliar uso de criptografia homomórfica para análise de da",
+        "fichas_amostradas": [
+          {
+            "id": "2319445f0172f8e04af6",
+            "pagina": 1,
+            "resumo": "O trecho apresenta o título de um trabalho de André Luiz Almeida Cardoso, intitulado “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, desenvolvido na Universidade Federal do Maranhão em 2024, indicando foco em identidade digital para cidades inteligentes usando blockchain.",
+            "evidencias": [
+              {
+                "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain.",
+                "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain"
+              }
+            ]
+          },
+          {
+            "id": "5b0dc507d4dec2105c36",
+            "pagina": 2,
+            "resumo": "Dissertação de André Luiz Almeida Cardoso, apresentada à UFMA em 2024, propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
+            "evidencias": [
+              {
+                "afirmacao": "O trabalho propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain.",
+                "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Abdullahi_2025",
+        "titulo": "On the adoption and deployment of secure and privacy-preserving IIoT in smart manufacturing: a comprehensive guide with recent advances",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "Lack of account suspension or deactivation regulations in place.",
+        "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+        "avaliacao": "The technique outperforms other access control-based methods in terms of security, computational expenses, storage complexity, and energy usage.",
+        "limites": "system is not readily available as a commercial product",
+        "possibilidades": "Integrar DHACS com Self‑Sovereign Identity e Verifiable Credentials para autenticação descentralizada de dispositivos.; Aplicar Attribute‑Based Encryption ao mecanismo de controle de acesso híbrido para reforçar a privacidade dos atributos.; Avaliar o desempenho de HASAO e DHACS em ambientes de edge",
+        "fichas_amostradas": [
+          {
+            "id": "dd3da9e9b6d40d1d2019",
+            "pagina": 1,
+            "resumo": "O artigo apresenta um guia detalhado para adoção e implantação de mecanismos de defesa que garantam segurança e privacidade no IIoT aplicado à manufatura inteligente, destacando os desafios de segurança decorrentes da convergência IT/OT e a carência de orientações práticas.",
+            "evidencias": [
+              {
+                "afirmacao": "A interconectividade inerente do IIoT gera desafios significativos de segurança e privacidade.",
+                "citacao": "such inherent interconnectivity introduces significant security and privacy challenges."
+              },
+              {
+                "afirmacao": "Existe falta de guias específicos para adoção e implementação dos mecanismos de defesa.",
+                "citacao": "there is a lack of specific follow-through guides on how to adopt and implement such mechanisms."
+              }
+            ]
+          },
+          {
+            "id": "ed4ab4a74904066e6ad9",
+            "pagina": 2,
+            "resumo": "O trecho descreve que a adoção do IIoT na manufatura inteligente enfrenta sérias barreiras de cibersegurança devido à integração heterogênea de dispositivos, ampliando a superfície de ataque. O trabalho propõe um levantamento abrangente que oferece mecanismos de defesa robustos e diretrizes detalhadas para garantir uma infraestrutura IIoT segura e preservadora da privacidade, preenchendo a lacuna de guias práticos deixada por pesquisas anteriores",
+            "evidencias": [
+              {
+                "afirmacao": "cybersecurity concerns pose a significant obstacle to the adoption of IIoT",
+                "citacao": "However, cybersecurity concerns pose a significant obstacle to the adoption of IIoT, making it challenging to effectively utilize its capabilities."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Addula_2025",
+        "titulo": "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "privacy-preserving authentication framework tailored for industrial IoT applications",
+        "solucao": "integrates hash evaluation and MAC verification",
+        "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Avaliar a integração de identidade auto‑soberana (SSI) para interoperabilidade entre serviços públicos de cidades inteligentes; testar o modelo em arquiteturas de edge computing; incorporar mecanismos de revogação de credenciais baseados em blockchain; analisar a escalabilidade em ambientes IIoT het",
+        "fichas_amostradas": [
+          {
+            "id": "df6bffac640d82c70f15",
+            "pagina": 1,
+            "resumo": "O artigo propõe um framework de autenticação IoT baseado em blockchain permissionada, combinando armazenamento otimizado, mecanismo de autenticação leve e criptografia homomórfica para proteger dados antes da nuvem. Visa melhorar a escalabilidade e reduzir a sobrecarga de armazenamento, oferecendo maior privacidade e confiança em ambientes IoT de grande escala, avaliado por simulações comparativas.",
+            "evidencias": [
+              {
+                "afirmacao": "A maioria das pesquisas existentes foca vulnerabilidades específicas, deixando de lado privacidade e confiança.",
+                "citacao": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues."
+              },
+              {
+                "afirmacao": "O estudo introduz criptografia homomórfica para proteger dados IoT antes da nuvem.",
+                "citacao": "we introduce, for the first time, the integration of homomorphic encryption to secure IoT data at the user end before uploading it to the cloud."
+              }
+            ]
+          },
+          {
+            "id": "5f602c19ab7e3def8b54",
+            "pagina": 2,
+            "resumo": "O artigo apresenta um modelo híbrido de blockchain combinado com criptografia homomórfica para autenticação escalável e preservação de privacidade em IoT industrial, especialmente em ambientes de saúde. Destaca a vulnerabilidade de arquiteturas centralizadas, a necessidade de segurança em redes 6G e propõe um framework de confiança que utiliza aprendizado profundo leve para autenticação biométrica, suportando milhares de sensores.",
+            "evidencias": [
+              {
+                "afirmacao": "Blockchain technology has emerged as a promising solution to many of the IoT security challenges",
+                "citacao": "Blockchain technology has emerged as a promising solution to many of the IoT security challenges [11]."
+              },
+              {
+                "afirmacao": "A key innovation in the proposed model is the integration of homomorphic encryption",
+                "citacao": "A key innovation in the proposed model is the integration of homomorphic encryption —introduced here for the first time."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Alar_2026",
+        "titulo": "Evaluating self-sovereign identity solutions for agricultural supply chains: a systematic review",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "Complexity and Accessibility: SSI solutions can be technologically complex, presenting challenges for stakeholders with limited digital literacy, such as smallholder farmers.",
+        "solucao": "Sovrin is offering an approach to digital identity management within agricultural supply chains that is truly transformative and tackles the three “Ts” of transparency, traceability, and stakeholder empowerment.",
+        "avaliacao": "Sovrin’s support for verifiable credentials and selective disclosure can help authenticate farmers, certifiers, and logistics providers while preserving privacy",
+        "limites": "Scalability is hampered by the complex integration requirements and the absence of standardized frameworks",
+        "possibilidades": "Adaptar as soluções SSI analisadas (ex.: Sovrin, uPort) para controle de acesso de sensores IoT em cidades inteligentes, combinando com criptografia baseada em atributos (ABE) para compartilhamento seguro de dados sensoriais.; Desenvolver um framework de interoperabilidade que traduza os princípios ",
+        "fichas_amostradas": [
+          {
+            "id": "fb7504b1c48c53a1ba82",
+            "pagina": 1,
+            "resumo": "Revisão sistemática de 78 estudos sobre identidade auto‑soberana (SSI) aplicada a cadeias de suprimentos agrícolas, destacando que nenhum SSI atende totalmente aos requisitos, embora Sovrin seja o mais promissor, e apontando lacunas para pesquisas piloto e avaliações reais.",
+            "evidencias": [
+              {
+                "afirmacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection.",
+                "citacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection."
+              }
+            ]
+          },
+          {
+            "id": "f157611da758320fcd3b",
+            "pagina": 2,
+            "resumo": "O trecho destaca que, embora o blockchain aumente a transparência nas cadeias de suprimentos agrícolas, a verificação de identidade ainda é um grande desafio, especialmente em contextos rurais com recursos limitados. A identidade auto-soberana (SSI) surge como solução promissora, oferecendo controle descentralizado, privacidade e credenciais verificáveis, porém há escassez de estudos que avaliem sua adequação, escalabilidade e implementação práti",
+            "evidencias": [
+              {
+                "afirmacao": "identity verification remains a major challenge",
+                "citacao": "identity verification remains a major challenge, particularly in multi-stakeholder agricultural networks."
+              },
+              {
+                "afirmacao": "self-sovereign identity is very promising for creating decentralized identity management systems",
+                "citacao": "technology that enables self-sovereign identity is very promising for creating decentralized identity management systems."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Asaithambi_2025",
+        "titulo": "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+        "solucao": "edge-level implementation of authentication that lowers the computational burden and improves the industry platform’s security",
+        "avaliacao": "maximum throughput of 1273 tps",
+        "limites": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+        "possibilidades": "Explorar a integração do algoritmo Poah citado (Puthal et al., 2020) na arquitetura proposta para melhorar a escalabilidade; comparar o framework BlockEdge (Kumar et al., 2020) com a solução atual em termos de latência e taxa de transação; avaliar a adoção de credenciais verificáveis e SSI conforme ",
+        "fichas_amostradas": [
+          {
+            "id": "458e1cc4f946bb50f100",
+            "pagina": 1,
+            "resumo": "O artigo propõe uma arquitetura de computação de borda assistida por blockchain para IIoT, introduzindo um mecanismo seguro de compartilhamento de dados e autenticação de ponta a ponta baseada na reputação da blockchain e contratos inteligentes. Um consenso de Prova de Autenticação (PoAh) é usado para validar nós e rastrear atividades, reduzindo o tempo de autenticação e aumentando a taxa de resposta, conforme estudo experimental.",
+            "evidencias": [
+              {
+                "afirmacao": "End-to-end authentication is developed based on the blockchain’s reputation",
+                "citacao": "End-to-end authentication is developed based on the blockchain’s reputation"
+              },
+              {
+                "afirmacao": "the proposed architecture lowers the authentication time and obtains a high response rate",
+                "citacao": "the proposed architecture lowers the authentication time and obtains a high response rate"
+              }
+            ]
+          },
+          {
+            "id": "7a9f5dac96afa43d0dc9",
+            "pagina": 2,
+            "resumo": "O trecho descreve que o armazenamento centralizado de dados em IoT representa um grande obstáculo de segurança, favorecendo ataques. Propõe‑se usar edge computing para processar dados próximo à fonte, reduzindo latência e consumo de banda, e blockchain como ledger distribuído que garante integridade e transparência. Destaca‑se que edge computing melhora a resposta em tempo real e que blockchain oferece resistência a adulterações, sendo adequado a",
+            "evidencias": [
+              {
+                "afirmacao": "Centralized data storage is a big obstacle.",
+                "citacao": "Centralized data storage is a big obstacle."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Chaurasia_2026",
+        "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "Absence of decentralized identity; no patient-centric or role-based access control",
+        "solucao": "Blockchain technology with SSI is needed for the vaccine supply chain system",
+        "avaliacao": "Prototype implementations confirm the practicality of blockchain-based vaccination tracking while acknowledging the need for richer data models and real-world organizational validation",
+        "limites": "Governance layer unclear; interoperability challenges with healthcare IT systems",
+        "possibilidades": "Investigar quais algoritmos de consenso são mais adequados para dispositivos edge em cidades inteligentes.; Aplicar a descentralização do ledger para coordenar sensores IoT heterogêneos em tempo real.; Desenvolver mecanismos de mitigação de ameaças internas usando políticas de acesso baseadas em cre",
+        "fichas_amostradas": [
+          {
+            "id": "4ceb6ac97cf63c6923c0",
+            "pagina": 1,
+            "resumo": "O artigo em pré‑publicação propõe um gerenciamento da cadeia de suprimentos de vacinas que preserva a privacidade, utilizando blockchain e identidade auto‑soberana (SSI). Foi recebido em 24 de novembro de 2025, aceito em 21 de janeiro de 2026 e está disponível em acesso aberto sob licença Creative Commons BY‑NC‑ND 4.0.",
+            "evidencias": [
+              {
+                "afirmacao": "Received: 24 November 2025",
+                "citacao": "Received: 24 November 2025"
+              }
+            ]
+          },
+          {
+            "id": "586efd8043390c482550",
+            "pagina": 2,
+            "resumo": "O artigo apresenta um estudo que combina blockchain, identidade auto-soberana (SSI) e técnicas de preservação de privacidade para melhorar a cadeia de suprimentos de vacinas. Os autores comparam frameworks baseados em blockchain, destacando benefícios em rastreabilidade, prevenção de falsificações e privacidade dos dados. Resultados empíricos indicam eficácia da solução proposta, embora reconheçam desafios de escalabilidade, interoperabilidade e ",
+            "evidencias": [
+              {
+                "afirmacao": "Empirical results prove the efficacy of the proposed supply chain framework",
+                "citacao": "The empirical results prove the efficacy of the proposed supply chain framework"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Hudda_2025",
+        "titulo": "A review on WSN based resource constrained smart IoT systems",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "The predominant focus of current research works on energy efficiency is on selecting cluster heads using criteria like distance, residual energy, and node degree.",
+        "solucao": "Não identificado nas fichas/trechos disponíveis.",
+        "avaliacao": "The current study also recognizes that advanced technologies like SDN, ML, 5G, D2D communication, big data, cloud computing, computer vision, and edge computing could significantly enhance the capabilities of smart systems.",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Extensão de mecanismos de seleção de heads de cluster com inclusão de parâmetros adicionais como carga, contagem de heads, atraso e SNR.",
+        "fichas_amostradas": [
+          {
+            "id": "988cb4206d9979395ad5",
+            "pagina": 15,
+            "resumo": "O trecho descreve uma revisão de sistemas IoT com restrições de recursos, destacando a necessidade de incluir mais parâmetros na seleção de heads de cluster para eficiência energética, a demanda por criptosistemas leves para preservar privacidade, a aplicação de paradigmas offline e online para mecanismos de privacidade com baixo consumo energético, e a potencialidade de tecnologias avançadas como SDN, ML, 5G e edge computing para aprimorar os si",
+            "evidencias": [
+              {
+                "afirmacao": "Multiple Parameters: The predominant focus of current research works on energy efficiency is on selecting cluster heads using criteria like distance, residual energy, and node degree.",
+                "citacao": "The predominant focus of current research works on energy efficiency is on selecting cluster heads using criteria like distance, residual energy, and node degree."
+              },
+              {
+                "afirmacao": "Lightweight Cryptosystems: Studies on privacy preservation and security enhancement frequently use public cryptosystems such as RSA and Elgamal.",
+                "citacao": "Studies on privacy preservation and security enhancement frequently use public cryptosystems such as RSA and Elgamal."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Li_2025",
+        "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "Performance may degrade as the number of nodes increases due to communication overhead.",
+        "solucao": "Permissioned access: Only authorized participants can join the network, ensuring controlled and secure data sharing within the consortium.",
+        "avaliacao": "High performance: The consortium blockchain, in combination with the PBFT consensus algorithm, enables fast transaction throughput and efficient resource usage.",
+        "limites": "Relies on trust between consortium members, which may limit adoption in competitive environments.",
+        "possibilidades": "Avaliar a aplicação de blockchains permissionless com SSI em cidades inteligentes, medindo impactos na interoperabilidade de identidade auto‑soberana.; Comparar desempenho e privacidade entre padrões permissioned e permissionless em ambientes de edge computing para IoT industrial.; Desenvolver mecan",
+        "fichas_amostradas": [
+          {
+            "id": "9204f94425974d5dcd28",
+            "pagina": 1,
+            "resumo": "Revisão sistemática que analisa soluções baseadas em blockchain para preservação de privacidade no compartilhamento de dados de saúde, identificando que a maioria das propostas está em estágio de prova de conceito (TRL3) e que buscas e verificações privativas ainda são pouco exploradas.",
+            "evidencias": [
+              {
+                "afirmacao": "privacy-preserving search and verification remain underexplored",
+                "citacao": "privacy-preserving search and verification remain underexplored"
+              }
+            ]
+          },
+          {
+            "id": "a401c6bcf9ae3644122e",
+            "pagina": 4,
+            "resumo": "O trecho destaca a importância da integridade, verificação, autenticação e autorização dos dados de saúde em ambientes de blockchain, ressaltando requisitos regulatórios (HIPAA, GDPR) e a necessidade de mecanismos de busca eficientes para uso secundário, além de descrever as etapas do compartilhamento de dados em saúde.",
+            "evidencias": [
+              {
+                "afirmacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage",
+                "citacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Maciá-Lillo_2025",
+        "titulo": "AI edge cloud service provisioning for knowledge management smart applications",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "Security is a major concern in all steps of knowledge management.",
+        "solucao": "advanced methods such as decentralized identity and authentication, homomorphic encryption, or zero trust architecture.",
+        "avaliacao": "The results show the difference in computing capabilities for both platforms.",
+        "limites": "First, the experiments were made on a limited set of devices, a single raspberry pi and cloud server, representing only two scenarios, the edge and the cloud.",
+        "possibilidades": "Investigar balanceamento dinâmico de carga com monitoramento em tempo real; adaptar a arquitetura para suportar GPUs e outros aceleradores; desenvolver protocolos de segurança adaptativos baseados em identidade descentralizada e zero‑trust; avaliar custos e desempenho em múltiplas regiões geográfica",
+        "fichas_amostradas": [
+          {
+            "id": "24b5878738d870783ad9",
+            "pagina": 1,
+            "resumo": "O artigo propõe uma arquitetura serverless edge‑cloud para suportar processos de gestão do conhecimento em cidades inteligentes, combinando escalabilidade da nuvem e processamento próximo à fonte na borda, reduzindo latência e congestionamento de rede, conforme demonstrado em experimentos.",
+            "evidencias": [
+              {
+                "afirmacao": "A arquitetura híbrida edge‑cloud reduz o tempo de transmissão de dados.",
+                "citacao": "reducing data transmission times and alleviating network congestion"
+              },
+              {
+                "afirmacao": "Computação serverless simplifica o desenvolvimento de aplicações.",
+                "citacao": "supporting serverless computing for simplified application development"
+              }
+            ]
+          },
+          {
+            "id": "5267fad6cf2ca41bbe8d",
+            "pagina": 2,
+            "resumo": "O artigo apresenta uma arquitetura híbrida edge‑cloud serverless para suportar processos de gestão do conhecimento (KM) em cidades inteligentes. A proposta combina computação em nuvem para escalabilidade, edge computing para proximidade dos dados e serverless para simplificar o desenvolvimento e otimizar recursos. Experimentos mostram redução de latência, congestionamento de rede e custos operacionais, além de melhorar a análise em tempo real e a",
+            "evidencias": [
+              {
+                "afirmacao": "A arquitetura híbrida edge‑cloud reduz significativamente os tempos de transmissão de dados, congestionamento de rede e custos operacionais.",
+                "citacao": "significantly reducing data transmission times, network congestion, and operational costs"
+              },
+              {
+                "afirmacao": "Computação serverless simplifica o deployment de aplicações e otimiza a utilização de recursos, aumentando a responsividade.",
+                "citacao": "simplify application deployment, optimize resource utilization, and enhance responsiveness"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Mallick_2025",
+        "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "IPFS network has much faster upload and download speeds than the Blockchain network.",
+        "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+        "avaliacao": "upload, download, access, and mining times",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Avaliar o impacto de diferentes tamanhos de arquivos no tempo de mineração da Blockchain em cenários de borda.; Comparar o desempenho de IPFS e Blockchain em redes 5G vs LoRaWAN para aplicações de saúde.; Integrar identidade auto‑soberana (SSI) para autenticação de dispositivos IoT no fluxo de dados",
+        "fichas_amostradas": [
+          {
+            "id": "8e89232501c48173131d",
+            "pagina": 1,
+            "resumo": "O artigo apresenta uma arquitetura de saúde inteligente que combina blockchain, contratos inteligentes e IPFS para armazenar registros médicos de forma segura e descentralizada. Um dispositivo proxy protege sensores IoT vulneráveis usando criptografia. Avaliações experimentais medem tempos de upload, download, acesso e mineração, indicando ganhos de eficiência e desempenho ao integrar IPFS. O objetivo é superar falhas de sistemas centralizados, m",
+            "evidencias": [
+              {
+                "afirmacao": "Centralized storage architecture ... can lead to a single point of failure and easy manipulation.",
+                "citacao": "Centralized storage architecture in most IoT healthcare systems can lead to a single point of failure and easy manipulation."
+              },
+              {
+                "afirmacao": "Public blockchain‑based healthcare systems improve efficiency and performance when IPFS is integrated.",
+                "citacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS."
+              }
+            ]
+          },
+          {
+            "id": "8652c5d9de08bd86ecf6",
+            "pagina": 2,
+            "resumo": "O trecho destaca que a privacidade e a segurança das informações de saúde em sistemas IoT são pouco protegidas, que dispositivos baratos são alvos fáceis e que a arquitetura centralizada gera gargalos de rede. Propõe blockchain integrado ao IoT e ao IPFS para eliminar ponto único de falha, melhorar escalabilidade e garantir integridade dos dados, mas reconhece limitações de desempenho e escalabilidade da própria rede blockchain.",
+            "evidencias": [
+              {
+                "afirmacao": "Blockchain with IoT integration can help healthcare systems overcome centralized communication architecture",
+                "citacao": "Blockchain with IoT integration can help healthcare systems overcome centralized communication architecture"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "erro": "Contexto grande demais. Encurte as instruções; nada foi truncado silenciosamente.",
+  "resposta_bruta": null,
+  "fim": "2026-09-21T00:51:07"
+}

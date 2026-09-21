@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo oferece um levantamento abrangente (45 trabalhos) sobre controle de acesso baseado em blockchain para registros eletrônicos de saúde (EHR), destacando riscos de privacidade em sistemas e‑health tradicionais e propondo a integração de blockchain com técnicas criptográficas e contratos inteligentes para melhorar transparência, integridade, disponibilidade e auditoria. Classifica soluções em blockchains permissionless e permissioned, analisa plataformas, protocolos de consenso, técnicas de privacidade e accounting, e identifica desafios de interoperabilidade, escalabilidade, consumo de energia e conformidade regulatória (GDPR, HIPAA). A revisão amplia o escopo de surveys anteriores (2019‑2024) ao combinar múltiplas dimensões (tipo de blockchain, consenso, privacidade, controle de acesso) e aponta a falta de comparações holísticas entre privacidade e segurança, bem como a necessidade de métricas específicas para avaliar desempenho, revogabilidade e adaptação a dispositivos IoT de recursos limitados em ambientes de smart city.",
+  "lacunas_possiveis": [
+    "Escalabilidade e latência de contratos inteligentes em ambientes de saúde com alta taxa de transações.",
+    "Custos de desempenho e consumo energético de blockchains permissioned em edge computing.",
+    "Ausência de métricas padronizadas para avaliar privacidade, revogabilidade e interoperabilidade.",
+    "Falta de comparações holísticas que considerem simultaneamente privacidade e segurança.",
+    "Adaptação de mecanismos de accounting e controle de acesso para dispositivos IoT com recursos limitados em smart cities."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver benchmark experimental que mensure latência, throughput e consumo energético de contratos inteligentes em blockchains permissioned e permissionless para EHR.",
+    "Criar um conjunto de métricas padronizadas (ex.: tempo de revogação, índice de privacidade, overhead de interoperabilidade) aplicáveis a soluções de controle de acesso.",
+    "Elaborar um framework comparativo que avalie simultaneamente privacidade e segurança, integrando análises de criptografia, accounting e compliance regulatório.",
+    "Projetar protocolos de accounting leves baseados em attribute‑based encryption para dispositivos IoT em ambientes de smart city.",
+    "Investigar estratégias de escalabilidade híbrida (off‑chain + on‑chain) para suportar auditoria de acesso em larga escala sem comprometer a conformidade com GDPR/HIPAA."
+  ]
+}

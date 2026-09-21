@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T19:59:53",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 1,
+        "resumo": "O artigo propõe uma arquitetura de computação de borda assistida por blockchain para IIoT, introduzindo um mecanismo seguro de compartilhamento de dados e autenticação de ponta a ponta baseada na reputação da blockchain e contratos inteligentes. Um consenso de Prova de Autenticação (PoAh) é usado para validar nós e rastrear atividades, reduzindo o tempo de autenticação e aumentando a taxa de resposta, conforme estudo experimental.",
+        "interpretacao": "O trabalho demonstra que combinar blockchain com computação de borda pode melhorar a segurança e a eficiência da autenticação em ambientes IIoT, oferecendo rastreabilidade e controle de acesso via contratos inteligentes.",
+        "duvidas": "Quais são os custos computacionais e de energia do consenso PoAh em dispositivos de borda? Como a solução lida com revogação de credenciais ou nós comprometidos? Há avaliação de interoperabilidade com padrões de identidade digital existentes?"
+      },
+      {
+        "pagina": 2,
+        "resumo": "O trecho descreve que o armazenamento centralizado de dados em IoT representa um grande obstáculo de segurança, favorecendo ataques. Propõe‑se usar edge computing para processar dados próximo à fonte, reduzindo latência e consumo de banda, e blockchain como ledger distribuído que garante integridade e transparência. Destaca‑se que edge computing melhora a resposta em tempo real e que blockchain oferece resistência a adulterações, sendo adequado a múltiplos setores, inclusive industrial.",
+        "interpretacao": "O texto enfatiza que a centralização dos dados em IoT aumenta vulnerabilidades e propõe a combinação de edge computing e blockchain para melhorar segurança, latência e privacidade, deslocando o processamento para a borda e usando um ledger distribuído resistente a adulterações.",
+        "duvidas": "Qual algoritmo de consenso específico é adotado na blockchain proposta? Como o modelo trata a revogação de credenciais e a gestão de identidade? Há avaliação empírica da escalabilidade e da sobrecarga introduzida pela integração edge‑blockchain?"
+      },
+      {
+        "pagina": 3,
+        "resumo": "O trecho descreve como algoritmos de consenso (Proof of Capacity, Proof of Stake, Proof of Burn, PBFT) garantem a confiabilidade da blockchain, destacando o papel dos smart contracts na automação e segurança das transações. São ressaltados os atributos de descentralização, imutabilidade e transparência, bem como os desafios de latência, consumo energético e baixa taxa de transferência ao aplicar blockchain em IoT. Também são apresentados requisitos de confiança para sistemas IoT de borda, como precisão, segurança e acessibilidade.",
+        "interpretacao": "O texto enfatiza que a segurança e a confiança em sistemas IoT de borda podem ser reforçadas por blockchain, mas alerta para os custos de desempenho e energia associados a algoritmos de consenso tradicionais.",
+        "duvidas": "Quais algoritmos de consenso são mais adequados para dispositivos IoT com recursos limitados? Como equilibrar transparência e privacidade ao usar criptografia avançada na borda?"
+      },
+      {
+        "pagina": 4,
+        "resumo": "O artigo propõe uma arquitetura privada baseada em blockchain para IIoT com computação de borda, enfatizando leveza, escalabilidade e extensibilidade. Destaca requisitos de confiabilidade, diversidade, recursos limitados e flexibilidade. Introduz nós pequenos com máquinas virtuais para criptografia assimétrica e um mecanismo PoAh para autenticação de dispositivos, abordando gestão de confiança, compartilhamento seguro de dados e registro de dispositivos.",
+        "interpretacao": "O trabalho foca na integração de blockchain com computação de borda para IIoT, buscando superar limitações de recursos e garantir confiança, mas ainda não demonstra avaliação prática ou métricas detalhadas.",
+        "duvidas": "Como o PoAh se compara a outros algoritmos de consenso em termos de latência e consumo energético? Qual o plano para validar a arquitetura em ambientes reais de cidades inteligentes?"
+      },
+      {
+        "pagina": 5,
+        "resumo": "O trecho revisa diversas propostas que combinam blockchain e computação de borda para IIoT, destacando arquiteturas de gestão baseadas em contratos inteligentes, sistemas de confiança como BlockEdge e TrustChain, e mecanismos de controle de acesso em ambientes genéricos de IoT. Aponta que, apesar dos avanços, ainda há limitações de escalabilidade, consumo energético e interoperabilidade que precisam ser superadas para adoção em larga escala.",
+        "interpretacao": "O texto indica que a combinação de blockchain com computação de borda pode melhorar a confiança e a segurança em IIoT, mas ainda enfrenta desafios de desempenho e interoperabilidade que precisam ser abordados.",
+        "duvidas": "Quais métricas específicas foram usadas para medir a redução do tempo de autenticação? Como a proposta lida com a heterogeneidade de dispositivos em ambientes de cidades inteligentes?"
+      },
+      {
+        "pagina": 6,
+        "resumo": "O texto descreve desafios de dispositivos IoT de baixa potência ao executar consenso blockchain, propõe uma blockchain leve com estrutura EOG e consenso PoS aprimorado para borda, e discute a integração de computação de borda (MEC) para suportar essas soluções, apontando limitações de dependência de infraestrutura e conectividade.",
+        "interpretacao": "O trabalho avança ao propor uma blockchain leve com estrutura de dados EOG e consenso PoS otimizado, permitindo que dispositivos de borda com recursos restritos participem de redes IIoT, embora dependa fortemente da disponibilidade de servidores MEC, o que pode limitar sua adoção em áreas com infraestrutura fraca.",
+        "duvidas": "Como a solução lida com a revogação de credenciais em ambientes com conectividade intermitente? Qual o impacto real do armazenamento de blocos expirados na latência de transações? Como garantir a segurança dos nós MEC que atuam como servidores de autenticação?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta uma arquitetura de computação de borda assistida por blockchain para IIoT, introduzindo um mecanismo de autenticação ponto‑a‑ponto baseado em reputação da blockchain e contratos inteligentes, com consenso Proof of Authentication (PoAh). A proposta visa substituir o armazenamento centralizado, reduzindo latência e consumo de banda ao processar dados na borda, ao mesmo tempo que garante integridade, transparência e rastreabilidade via ledger distribuído. São descritos requisitos de confiabilidade, leveza e escalabilidade, incluindo nós pequenos com máquinas virtuais para criptografia assimétrica. A revisão da literatura aponta desafios de energia, latência, taxa de transferência e interoperabilidade ao aplicar blockchains tradicionais em IoT, sugerindo blockchains leves, estruturas EOG e consenso PoS otimizado. Embora a solução prometa melhorar segurança e eficiência, faltam avaliações práticas detalhadas sobre custos computacionais, revogação de credenciais, interoperabilidade com padrões de identidade digital e validação em ambientes reais de cidades inteligentes.",
+    "lacunas_possiveis": [
+      "Custos computacionais e consumo energético do consenso PoAh em dispositivos de borda.",
+      "Mecanismos de revogação de credenciais e tratamento de nós comprometidos.",
+      "Interoperabilidade com padrões de identidade digital (SSI, verifiable credentials).",
+      "Avaliação empírica de escalabilidade, latência e sobrecarga da integração edge‑blockchain.",
+      "Validação da arquitetura em ambientes reais de cidades inteligentes e com heterogeneidade de dispositivos."
+    ],
+    "propostas_possiveis": [
+      "Realizar experimentos de benchmark comparando PoAh com outros consensos leves (e.g., PoS, PBFT) em termos de latência e energia.",
+      "Desenvolver um módulo de revogação baseado em smart contracts que suporte atualização dinâmica de reputação e remoção de nós comprometidos.",
+      "Integrar protocolos de identidade auto‑soberana (SSI) e credenciais verificáveis à camada de autenticação da arquitetura.",
+      "Construir um testbed em uma zona piloto de cidade inteligente para medir desempenho, escalabilidade e interoperabilidade com dispositivos heterogêneos.",
+      "Estudar estratégias de gerenciamento de conectividade intermitente para garantir a consistência da blockchain leve em ambientes com infraestrutura limitada."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:00:04"
+}

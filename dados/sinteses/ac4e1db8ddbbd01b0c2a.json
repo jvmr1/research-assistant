@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta uma revisão sistemática (2018‑2024) de soluções de identidade auto‑soberana (SSI) aplicadas a cadeias de suprimentos agrícolas, combinando SSI e blockchain. Foram consultadas bases como Scopus, Web of Science, ScienceDirect e IEEE Xplore, resultando em 1.229 registros; após remoção de 331 duplicatas, restaram 898 artigos únicos. O número de publicações cresceu de 3 em 2018 para 24,7 % em 2024, indicando interesse crescente. A revisão aplicou critérios de inclusão/exclusão e avaliação de qualidade por dois avaliadores independentes, excluindo literatura cinzenta. Os autores identificam lacunas em privacidade, custos, interoperabilidade, ausência de estudos empíricos e falta de integração da SSI com blockchain para rastreabilidade. Também apontam desafios de escalabilidade, regulação e necessidade de combinar SSI com IoT e controle de acesso baseado em atributos (ABE) em ambientes distribuídos, como cidades inteligentes.",
+  "lacunas_possiveis": [
+    "Escassez de estudos empíricos que integrem SSI, blockchain e IoT em contextos urbanos de smart cities.",
+    "Ausência de métricas de desempenho (latência, throughput) para soluções SSI‑blockchain em edge computing.",
+    "Falta de padrões de interoperabilidade entre credenciais verificáveis SSI e sistemas de rastreabilidade agrícola existentes.",
+    "Pouca análise de custos e viabilidade econômica da adoção conjunta de SSI e blockchain.",
+    "Limitações na privacidade e controle de acesso quando SSI é combinado com blockchains públicas."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um piloto que incorpore SSI e credenciais verificáveis a um sistema de rastreabilidade blockchain em uma cadeia de suprimentos alimentares urbana.",
+    "Criar um framework de interoperabilidade baseado em atributos (ABE) para conectar SSI a plataformas de IoT e edge computing em smart cities.",
+    "Realizar experimentos de benchmark medindo latência e throughput de transações SSI‑blockchain em nós de borda.",
+    "Conduzir estudo de custo‑benefício comparando soluções centralizadas versus descentralizadas (SSI + blockchain) para controle de acesso em serviços públicos.",
+    "Propor diretrizes regulatórias e de privacidade para a adoção de SSI em ambientes de rastreabilidade agrícola e urbano."
+  ]
+}

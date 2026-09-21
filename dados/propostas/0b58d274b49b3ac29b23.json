@@ -1,0 +1,32 @@
+{
+  "id": "0b58d274b49b3ac29b23",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T14:45:54",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Addula_2025: Desenvolver um protocolo de revogação baseado em blocos de status que minimize comunicação",
+  "fontes": [
+    "Addula_2025"
+  ],
+  "problema": "Mecanismo de revogação de credenciais em tempo real e seu impacto na latência",
+  "hipotese_lacuna": "Mecanismo de revogação de credenciais em tempo real e seu impacto na latência",
+  "meu_trabalho": "Desenvolver um protocolo de revogação baseado em blocos de status que minimize comunicação adicional e preserve anonimato",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver um protocolo de revogação baseado em blocos de status que minimize comunicação adicional e preserve anonimato",
+  "modo": "artigo",
+  "buscas": [
+    "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication limitations future work",
+    "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Como garantir que o bloco de status preserve o anonimato dos dispositivos sem revelar identidades ao registrar revogações?; Qual a frequência ideal de criação de blocos de status para equilibrar latência e overhead de rede?; O uso de homomorphic encryption impacta significativamente a latência de revogação comparado ao CRL tradicional?; Como validar a interoperabilidade do protocolo SBR entre diferentes domínios de cidades inteligentes (ex.: energia vs. mobilidade)?; Quais limites de tamanho de bloco de status são aceitáveis antes de comprometer a performance da rede permissionada?",
+  "evidencias_usadas": [
+    "df6bffac640d82c70f15",
+    "5f602c19ab7e3def8b54",
+    "7effbc03f18051519c19"
+  ],
+  "fatos": "A maioria das pesquisas existentes foca vulnerabilidades específicas, deixando de lado privacidade e confiança.; O estudo introduz criptografia homomórfica para proteger dados IoT antes da nuvem.; Blockchain technology has emerged as a promising solution to many of the IoT security challenges; A key innovation in the proposed model is the integration of homomorphic encryption; Finger vein (FV) recognition stands out as one of the most secure biometric approaches.",
+  "experimento": "descricao: Implementar um protocolo de revogação baseado em blocos de status (Status‑Block Revocation – SBR) que registra, de forma compacta, o estado de validade de credenciais SSI em uma blockchain permissionada. O protótipo será integrado ao framework de autenticação IoT proposto por Addula_2025 (blockchain permissionada + homomorphic encryption) substituindo o mecanismo de revogação implícito por SBR. Serão realizados testes comparativos entre (i) Addula_2025 sem revogação explícita, (ii) SBR integrado ao mesmo framework, e (iii) um esquema tradicional de lista de revogação (CRL) em blockchain.; comparacao_trabalho_base: Addula_2025 – \"A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication\"",
+  "recursos": "dados: Conjunto de dados públicos de sensores urbanos (ex.: CityPulse, Smart* City dataset) contendo leituras de temperatura, tráfego e energia.; Logs de autenticação simulados gerados a partir de 500 dispositivos IoT virtuais.; ferramentas: Plataforma de blockchain permissionada (Hyperledger Fabric ou Besu).; Bibliotecas SSI (DIF Universal Resolver, Aries Cloud Agent).; Implementação de criptografia homomórfica leve (Microsoft SEAL).; Ambiente de edge computing (Raspberry Pi 4 ou Jetson Nano).; Orquestrador de containers (Docker‑Compose) para replicar nós da rede.; infraestrutura: Cluster de 3 máquinas virtuais (2 CPU, 8 GB RAM) para nós de ordem.; 1 máquina física para atuar como edge gateway.; Rede local configurada com latência controlada (tc).",
+  "metricas": "Latência de revogação (tempo entre a emissão da ordem de revogação e a efetiva negação de acesso).; Overhead de comunicação (bytes adicionais por transação de revogação).; Tamanho do anonimato (número de credenciais indistinguíveis no bloco de status).; Taxa de sucesso de autenticação (percentual de tentativas legítimas aceitas).; Throughput de autenticação (autenticações por segundo).; Escalabilidade (variação das métricas acima ao aumentar de 100 para 1000 dispositivos).",
+  "detalhada": true
+}

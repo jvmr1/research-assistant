@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T20:30:18",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "On the adoption and deployment of secure and privacy-preserving IIoT in smart manufacturing: a comprehensive guide with recent advances",
+    "perfil_anterior": {
+      "problema": "Inadequate authentication mechanism : Weak authentication and authorization mechanisms also exist within those communication channels.",
+      "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "system is not readily available as a commercial product",
+      "possibilidades": "Explorar a integração de blockchain para registro imutável de eventos de autenticação falha em NB‑IoT e Wireless‑HART.; Aplicar Self‑Sovereign Identity (SSI) com Verifiable Credentials para reforçar a autenticação de dispositivos OT/IT.; Investigar o uso de Attribute‑Based Encryption (ABE) na proteção de dados transmitidos por Modbus e MQTT.; Desenvolver um framework de colaboração IT‑OT que inclua métricas de segurança e processos de troca de informações em tempo real."
+    },
+    "pagina": 14,
+    "texto": "53 Page 14 of 37 S. M. Abdullahi, S. Lazarova-Molnar\nFig. 4 Attack taxonomy of the IIoT [ 17]\ncontinue to use unsupported operating systems like Win-\ndows XP , while many IIoT systems depend on obsolete\nﬁrmware or vulnerable third-party components [ 52].\nNonetheless, ensuring security for both the SCADA\nsystems and PLCs is of utmost importance due to the\nmany vulnerabilities they present in both the ﬁrmware\nand software components of the IIoT systems, which\ninclude a range of cyber threats such as ransomware,\nspooﬁng, DoS/DDoS, worm-based malware, etc. Major\nweaknesses of such systems include the following:\na. Inadequate understanding of the devices associated\nwith SCADA and PLCs systems from both the OT\nand IT sides.\nb. Lack of secure authentication mechanisms for access\ncontrol and data protection.\nc. Lack of security measures related to remote access.\nd. Software design without adequate security consider-\nation.\ne. Enabling unlimited uploads on such systems and\ndeploying PLCs operating system with vulnerabil-\nities.\nLikewise, considering that the majority of smart manufac-\nturing facilities include several devices intended for remote\naccess, other attack vectors exploit vulnerabilities such as:\n1. Intercepting unencrypted passwords on ICS networks.\n2. Utilizing preconﬁgured passwords or SSH keys for\nﬁrmware authentication.\n3. Exploiting the code execution process of a device in order\nto get unauthorized access to conﬁdential data.\n123",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho destaca vulnerabilidades críticas em sistemas IIoT de manufatura inteligente, como uso de sistemas operacionais obsoletos, firmware vulnerável e falta de mecanismos seguros de autenticação e controle de acesso, além de riscos de acesso remoto não protegido e design de software sem segurança.",
+    "perfil": {
+      "problema": "Lack of secure authentication mechanisms for access control and data protection.",
+      "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "system is not readily available as a commercial product",
+      "possibilidades": "Investigar a integração de blockchain para registro imutável de tentativas de autenticação falha; aplicar Self‑Sovereign Identity com Verifiable Credentials para autenticação de dispositivos OT/IT; avaliar Attribute‑Based Encryption para proteção de dados de SCADA/PLC; desenvolver mecanismos de detecção automática de firmware e SO obsoletos usando aprendizado de máquina; criar um framework de hardening para sistemas legacy em ambientes IIoT."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Lack of secure authentication mechanisms for access control and data protection.",
+        "citacao": "Lack of secure authentication mechanisms for access control and data protection."
+      },
+      {
+        "afirmacao": "Inadequate understanding of the devices associated with SCADA and PLCs systems from both the OT and IT sides.",
+        "citacao": "Inadequate understanding of the devices associated with SCADA and PLCs systems from both the OT and IT sides."
+      }
+    ],
+    "interpretacao": "O texto evidencia que a segurança dos componentes críticos (SCADA, PLC) ainda depende de práticas desatualizadas, o que aumenta a superfície de ataque e requer intervenções de segurança específicas.",
+    "duvidas": "Quais são as estratégias práticas para migrar dispositivos legacy que utilizam Windows XP ou firmware obsoleto para ambientes seguros sem interromper a produção? Como mensurar a eficácia de novos mecanismos de autenticação em cenários de acesso remoto heterogêneo?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:30:56"
+}

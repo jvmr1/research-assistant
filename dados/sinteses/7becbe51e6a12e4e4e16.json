@@ -1,0 +1,17 @@
+{
+  "resumo": "O trabalho apresenta um modelo de gestão de identidade baseado em Self‑Sovereign Identity (SSI) e blockchain, implementado no middleware InterSCity com Hyperledger, para serviços de cidades inteligentes. A proposta inclui arquitetura de agentes, fluxos de conexão, emissão, armazenamento, apresentação e verificação de credenciais, medindo latência inferior a 500 ms em cada operação. São detalhadas as siglas e conceitos centrais (SSI, DID, DIDComm, JWT) e o modelo de Cardoso (2024) é expandido para incluir o cidadão. Experimentos mostram métricas de desempenho em milissegundos para as fases críticas do ciclo de vida da credencial. Embora demonstre viabilidade técnica e eficiência, o estudo não descreve mecanismos de revogação, recuperação de credenciais perdidas, interoperabilidade com outros padrões além do JWT, nem avalia impactos de escalabilidade, uso de ABE ou criptografia homomórfica.",
+  "lacunas_possiveis": [
+    "Ausência de mecanismo detalhado de revogação de credenciais em larga escala",
+    "Falta de estratégia para recuperação de identidade após perda de chave privada",
+    "Escalabilidade do modelo em ambientes com milhares de dispositivos IoT",
+    "Interoperabilidade limitada a JWT, sem avaliação de outros padrões de credenciais verificáveis",
+    "Impacto de técnicas avançadas (ABE, criptografia homomórfica) na latência não investigado"
+  ],
+  "propostas_possiveis": [
+    "Integrar um protocolo de revogação baseada em blockchain (ex.: revocation registries) e avaliar seu custo de latência",
+    "Desenvolver um mecanismo de recuperação de chaves usando secret sharing ou recuperação social para cidadãos",
+    "Realizar testes de desempenho em cenários com alta densidade de dispositivos IoT para validar escalabilidade",
+    "Implementar suporte a múltiplos formatos de credenciais (ex.: W3C Verifiable Credentials) e medir interoperabilidade",
+    "Explorar a adoção de Attribute‑Based Encryption ou criptografia homomórfica nos fluxos de emissão e verificação para melhorar privacidade sem degradar o tempo de resposta"
+  ]
+}

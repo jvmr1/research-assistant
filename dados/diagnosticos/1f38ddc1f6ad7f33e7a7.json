@@ -1,0 +1,55 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T17:54:33",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 13,
+        "resumo": "O trecho descreve a análise de correlações entre variáveis de rede e demonstra que o modelo AAIFLF‑PPCD alcança alta precisão (≈99,5%) e AUC (~98%) na detecção de múltiplas classes de ameaças em cenários com 80%/20% de treinamento/validação, confirmando sua eficácia preditiva.",
+        "interpretacao": "Os resultados indicam que o modelo possui excelente desempenho de classificação, embora a presença de correlações fortes sugira oportunidade de reduzir dimensionalidade para melhorar eficiência.",
+        "duvidas": "Qual é o impacto do custo computacional em dispositivos de borda limitados? Como o modelo se comporta em ambientes com recursos de rede variáveis? A avaliação cobre cenários de ataque emergentes ou apenas as classes listadas?"
+      },
+      {
+        "pagina": 14,
+        "resumo": "O método AAIFLF‑PPCD demonstra alta eficácia na detecção de ameaças cibernéticas em ambientes IoT de cidades inteligentes, alcançando acurácia média de 99,18 % e AUC de 97,33 % sob divisão 70 %/30 % de treinamento e teste, com confusões nulas nas matrizes de classificação.",
+        "interpretacao": "Os resultados indicam que o método AAIFLF‑PPCD mantém alta acurácia e boas métricas de precisão/recall mesmo com divisão 70/30 de treinamento/teste, sugerindo boa capacidade de generalização.",
+        "duvidas": "Não há detalhes sobre o custo computacional real nos nós de borda nem sobre a escalabilidade para grandes redes IoT; falta informação sobre a robustez frente a ataques adversariais."
+      },
+      {
+        "pagina": 15,
+        "resumo": "O modelo AAIFLF‑PPCD apresenta aumento progressivo de acurácia e redução de perda ao longo de 0‑25 épocas, superando técnicas como SVM, KNN e CNN+GRU, com precisão de 97.20 % e F1‑score de 96.92 %. O tempo de processamento é de 4.51 s, consideravelmente menor que os demais métodos, indicando eficiência para detecção de ciberameaças em cidades inteligentes assistidas por IoT.",
+        "interpretacao": "Os resultados indicam que a combinação de seleção de atributos via HHO, classificação SSAE e ajuste WOA produz um modelo competitivo tanto em acurácia quanto em latência, adequado para ambientes de borda em cidades inteligentes.",
+        "duvidas": "Como o modelo se comporta em cenários de recursos extremamente limitados ou com tráfego de ataque zero‑day não representado nos dados de treinamento?"
+      },
+      {
+        "pagina": 16,
+        "resumo": "O método AAIFLF-PPCD foi testado em um conjunto de dados de referência, apresentando acurácia superior de 99,47% em comparação com modelos existentes, sob diferentes medidas de desempenho.",
+        "interpretacao": "Os resultados indicam que o modelo atinge alta acurácia, porém o trecho não detalha outras métricas nem descreve o benchmark utilizado, limitando a avaliação comparativa.",
+        "duvidas": "Qual a composição exata do benchmark dataset? Como foram definidos TRPH e TSPH? Qual o custo computacional observado nas fases de HHO, SSAE e WOA?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta o modelo AAIFLF‑PPCD, um framework de IA federada para detecção de ciberameaças em ambientes IoT de cidades inteligentes sustentáveis. Em experimentos com divisão 80/20, o modelo alcança precisão ≈99,5 % e AUC ≈98 %, e com divisão 70/30 obtém acurácia média 99,18 % e AUC 97,33 %, sem confusões nas matrizes de classificação. Comparado a SVM, KNN e CNN+GRU, o AAIFLF‑PPCD atinge 97,20 % de precisão e F1‑score 96,92 % em até 25 épocas, com tempo de processamento de 4,51 s, superior ao de métodos concorrentes. Em benchmark adicional, registra acurácia 99,47 % frente a modelos existentes. As análises sugerem boa generalização e eficiência para borda, embora apontem correlações fortes entre variáveis de rede.",
+    "lacunas_possiveis": [
+      "Custo computacional real e consumo de energia nos nós de borda limitados",
+      "Escalabilidade do modelo para grandes redes IoT e topologias heterogêneas",
+      "Robustez frente a ataques adversariais e a ameaças zero‑day não representadas no treinamento",
+      "Detalhamento da composição do benchmark dataset e definição das métricas TRPH/TSPH",
+      "Impacto de variações de recursos de rede (latência, perda de pacotes) no desempenho"
+    ],
+    "propostas_possiveis": [
+      "Realizar testes de desempenho e consumo energético em dispositivos de borda reais sob diferentes cargas",
+      "Avaliar a resistência do AAIFLF‑PPCD a ataques adversariais e a cenários de zero‑day, incluindo geração de dados sintéticos",
+      "Expandir o benchmark com datasets públicos bem descritos, documentando a composição e as métricas usadas",
+      "Aplicar técnicas de redução de dimensionalidade para mitigar correlações fortes entre variáveis de rede",
+      "Estudar o comportamento do modelo em redes IoT com conectividade variável e topologias distribuídas"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:55:58"
+}

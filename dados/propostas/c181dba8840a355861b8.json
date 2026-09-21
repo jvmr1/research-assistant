@@ -1,0 +1,32 @@
+{
+  "id": "c181dba8840a355861b8",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T17:57:31",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Ragab_2025: Realizar experimentos com conjuntos de dados multi‑administrador que reflitam heterogeneid",
+  "fontes": [
+    "Ragab_2025"
+  ],
+  "problema": "Gerenciamento de dados heterogêneos e não‑i.i.d. entre diferentes organizações e dispositivos IoT",
+  "hipotese_lacuna": "Gerenciamento de dados heterogêneos e não‑i.i.d. entre diferentes organizações e dispositivos IoT",
+  "meu_trabalho": "Realizar experimentos com conjuntos de dados multi‑administrador que reflitam heterogeneidade realista e avaliar estratégias de normalização ou personalização de modelos locais",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Realizar experimentos com conjuntos de dados multi‑administrador que reflitam heterogeneidade realista e avaliar estratégias de normalização ou personalização de modelos locais",
+  "modo": "artigo",
+  "buscas": [
+    "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities limitations future work",
+    "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Qual estratégia de normalização (z‑score, min‑max, quantil) preserva melhor a privacidade sem degradar a acurácia em dados heterogêneos?; A personalização local aumenta significativamente o risco de vazamento de informações específicas de cada administrador?; Qual o impacto do uso de blockchain/SSI na latência total do ciclo de treinamento federado?; Até que ponto a compressão de modelo (pruning, quantização) pode reduzir o custo computacional sem comprometer a detecção de ataques zero‑day?; Como medir de forma prática a robustez contra ataques de envenenamento de dados em um cenário multi‑administrador?",
+  "evidencias_usadas": [
+    "3365ebacbbc86eb8ad7b",
+    "4c147c115c45c215e76d",
+    "0496bd8c9938d870579f"
+  ],
+  "fatos": "Federated Learning offers a privacy-preserving solution for detecting cyberattacks in IoT systems; The AAIFLF-PPCD technique achieved 99.47% accuracy; Ensuring security in smart cities means sustaining data and the lattice from any evil actions and threats.; This work investigates the impossibility of FL for privacy-preserving cyberthreat detection.; The AAIFLF-PPCD model introduces a novel feature selection mechanism based on HHO to improve cyberthreat detection performance.; The AAIFLF-PPCD approach integrates the WOA model for hyperparameter tuning to enhance classifier performance.",
+  "experimento": "descricao: Implementar um framework federado que treine modelos de detecção de ameaças em ambientes IoT de cidades inteligentes usando conjuntos de dados multi‑administrador heterogêneos. Avaliar duas estratégias: (i) normalização global dos dados antes do treinamento federado e (ii) personalização de modelos locais com ajuste fino pós‑agregação. Comparar o desempenho com o modelo AAIFLF‑PPCD descrito por Ragab (2025).; trabalho_comparativo: Ragab_2025 – AAIFLF‑PPCD (FL + HHO + SSAE + WOA).",
+  "recursos": "dados: Conjunto de dados IoT‑23 (tráfego de dispositivos IoT).; CICIDS2017 (tráfego de rede de IoT/IIoT).; UNSW‑NB15 (cenários de ataque em redes).; Possibilidade de combinar amostras de diferentes administradores simulando heterogeneidade.; ferramentas: FedML ou Flower para orquestração de aprendizado federado.; Docker/Kubernetes para simular nós de borda com recursos limitados.; Hyperledger Fabric (ou outra DLT leve) para registrar hashes de modelos e gerenciar credenciais SSI.; Bibliotecas de SSI como DIF Universal Resolver + Veramo ou Indy‑SDK.; Implementação de ABE (e.g., Charm‑Crypto) para controle de acesso baseado em atributos.; Python, PyTorch/TensorFlow para os classificadores (SSAE, etc.).; infraestrutura: Cluster de máquinas virtuais ou servidores de laboratório com CPU moderada (ex.: 4‑8 vCPUs, 16 GB RAM).; Acesso a rede local para medir latência e overhead de comunicação federada.",
+  "metricas": "Precisão, recall, F1‑score e acurácia na detecção de ataques.; Overhead de comunicação (MB transmitidos por rodada).; Tempo de convergência (número de rodadas até estabilização).; Consumo de CPU/memória nos nós de borda (medido em % e MB).; Energia estimada por rodada (Joules, via medição de consumo).; Privacidade: avaliação de vazamento de gradientes usando métricas de inferência de atributos ou epsilon de DP (se aplicado).; Taxa de falha de sincronização (percentual de nós que perdem atualizações).",
+  "detalhada": true
+}

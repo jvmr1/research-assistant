@@ -1,0 +1,34 @@
+{
+  "resumo": "Revisão sistemática de 78 estudos sobre identidade auto‑soberana (SSI) aplicada a cadeias de suprimentos agrícolas, destacando que nenhum SSI atende totalmente aos requisitos, embora Sovrin seja o mais promissor, e apontando lacunas para pesquisas piloto e avaliações reais.",
+  "perfil": {
+    "problema": "persistent challenges related to traceability, authenticity verification, and data integrity",
+    "solucao": "Self‑Sovereign Identity (SSI) solutions",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "no existing SSI solution fully satisfies all the essential criteria for agricultural supply chains",
+    "possibilidades": "Realizar pilotos em ambientes de cidades inteligentes; integrar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular; avaliar desempenho em edge computing e IoT de alta taxa de dados; adaptar frameworks para interoperabilidade entre setores (agro, saúde, energia)."
+  },
+  "evidencias": [
+    {
+      "citacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection.",
+      "afirmacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection."
+    }
+  ],
+  "interpretacao": "O estudo evidencia que, embora a tecnologia SSI baseada em blockchain seja reconhecida como caminho para melhorar rastreabilidade e confiança nas cadeias agrícolas, ainda não há soluções que atendam integralmente aos requisitos de transparência, controle do usuário e descentralização, indicando a necessidade de implementações experimentais e ajustes específicos ao contexto agrícola.",
+  "duvidas": "Quais são os impactos de escala ao aplicar SSI em redes IoT de grande volume? Como garantir a revogação eficiente de credenciais em ambientes distribuídos? Qual o custo computacional de integrar ABE com SSI em dispositivos de borda? Como adaptar os princípios de SSI para atender a regulamentações de privacidade em diferentes jurisdições?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "fb7504b1c48c53a1ba82",
+  "artigo": "Alar_2026",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "persistent challenges related to traceability, authenticity verification, and data integrity",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "no existing SSI solution fully satisfies all the essential criteria for agricultural supply chains",
+    "possibilidades": "Realizar pilotos em ambientes de cidades inteligentes; integrar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular; avaliar desempenho em edge computing e IoT de alta taxa de dados; adaptar frameworks para interoperabilidade entre setores (agro, saúde, energia).",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "a43721962e8ed22236d0"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T21:14:02",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "SoK: A Taxonomy for Distributed-Ledger-Based Identity Management",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo apresenta a primeira taxonomia metodológica para arquiteturas de identidade baseadas em ledger distribuído, resultante da análise de 390 artigos e discussões com especialistas. A taxonomia contém 22 dimensões e 113 características organizadas em três grupos (âncora de confiança, identidade e ledger) e foi desenvolvida em três iterações, sendo validada em duas arquiteturas representativas e por revisão de literatura e painel de especialistas. O trabalho descreve fundamentos de blockchain, identidade digital, SSI, DIDs e VCs, detalhando papéis de emissor, detentor e verificador, bem como modelos de âncora de confiança, governança, tipos de identificadores, credenciais, migração, vida útil, revogação, privacidade e recuperação. A proposta visa suprir a lacuna metodológica existente, permitindo a comparação sistemática e o design de soluções interoperáveis, centradas no usuário e adequadas a ambientes distribuídos como cidades inteligentes, IoT e edge computing.",
+        "lacunas_possiveis": [
+          "Critérios de validação prática da taxonomia em cenários reais.",
+          "Cobertura de requisitos de privacidade específicos (ex.: saúde, mobilidade urbana).",
+          "Mecanismos de revogação e recuperação de credenciais em ambientes de edge computing.",
+          "Avaliação de escalabilidade e latência das âncoras de confiança distribuídas em redes IoT de grande escala.",
+          "Métricas de desempenho para validar a taxonomia em contextos de IoT/IIoT."
+        ],
+        "propostas_possiveis": [
+          "Definir e aplicar critérios de validação prática por meio de estudos de caso em cidades inteligentes.",
+          "Estender a taxonomia com dimensões específicas de privacidade para setores como saúde e mobilidade urbana.",
+          "Desenvolver métricas de latência, escalabilidade e custo de transação para âncoras de confiança em redes permissionadas e permissionless.",
+          "Criar benchmarks de revogação e recuperação de credenciais adaptados a recursos limitados de edge computing.",
+          "Conduzir avaliações empíricas da taxonomia em projetos piloto de IoT/IIoT, medindo desempenho e robustez."
+        ]
+      },
+      {
+        "resumo": "O artigo apresenta uma taxonomia abrangente para gestão de identidade baseada em ledger distribuído (DLT), estruturada em três grupos principais – âncora de confiança, identidade e ledger – e composta por 22 dimensões e 113 características, conforme a Tabela II. A taxonomia foi validada por especialistas e aplicada a duas arquiteturas de IDM, revelando lacunas recorrentes como ausência de mecanismos de revogação e controle de divulgação, bem como desafios de interoperabilidade entre diferentes padrões de identidade (DIDs, SAML, X.509) e blockchains. O estudo destaca a utilidade da taxonomia para comparar soluções, orientar o design de sistemas e apoiar a padronização, especialmente em contextos de cidades inteligentes, IoT e computação de borda, embora reconheça a necessidade de atualização contínua diante da rápida evolução tecnológica.",
+        "lacunas_possiveis": [
+          "Interoperabilidade entre diferentes DLTs e padrões de identidade (DIDs, SAML, X.509).",
+          "Métricas e avaliação de overhead de uso em dispositivos IoT de baixa potência e edge computing.",
+          "Critérios claros para classificação de revogação (on‑chain vs ausente) e revogação descentralizada em tempo real.",
+          "Abordagem de cenários híbridos de permissão (public permissionless vs private permissioned).",
+          "Medição da adaptabilidade da taxonomia a tecnologias emergentes e integração com padrões existentes."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um framework de interoperabilidade que estenda a taxonomia para avaliar compatibilidade entre múltiplas blockchains e padrões de identidade.",
+          "Definir e validar métricas de overhead específicas para dispositivos IoT de baixa potência e ambientes de borda, usando a taxonomia como guia de requisitos.",
+          "Ampliar a taxonomia com sub‑dimensões que detalhem mecanismos de revogação descentralizada e critérios de permissão híbrida.",
+          "Criar uma ferramenta interativa de preenchimento automático da taxonomia para facilitar sua aplicação prática em projetos de cidades inteligentes.",
+          "Conduzir um estudo piloto que aplique a taxonomia a um caso de uso real de SSI em serviços públicos de smart city, avaliando governança, privacidade e custos de implementação."
+        ]
+      },
+      {
+        "resumo": "O artigo apresenta uma taxonomia para gestão de identidade baseada em ledger distribuído, sustentada por um amplo conjunto de referências recentes (2020‑2025) que cobrem frameworks e esquemas de identidade auto‑soberana (SSI) aplicados a domínios como metaverso, redes veiculares, serviços públicos, saúde, transporte, registro de terras, IoT industrial, smart grids e edge computing. As fichas destacam que esses trabalhos abordam autenticação descentralizada, controle de compartilhamento de dados, revogação de credenciais, verificação de credenciais não transferíveis e criptografia baseada em identidade, tanto em blockchains públicos quanto permissionados. Embora a taxonomia seja proposta como ferramenta de organização e comparação, as fichas apontam a ausência de métricas de desempenho (latência, consumo energético), avaliações de privacidade e conformidade regulatória, bem como de critérios claros para classificação e interoperabilidade entre diferentes blockchains, especialmente em ambientes dinâmicos de cidades inteligentes.",
+        "lacunas_possiveis": [
+          "Falta de métricas padronizadas de desempenho (latência, escalabilidade, consumo energético) nas comparações de soluções.",
+          "Ausência de avaliação sistemática de privacidade e conformidade regulatória em casos de uso IoT e cidades inteligentes.",
+          "Critérios de classificação da taxonomia não detalhados, especialmente quanto à evolução rápida de padrões SSI.",
+          "Escassez de estudos sobre revogação de credenciais em ambientes altamente dinâmicos.",
+          "Carência de análises de interoperabilidade entre blockchains permissionados e públicos para aplicações de cidades inteligentes."
+        ],
+        "propostas_possiveis": [
+          "Desenvolver um benchmark que inclua latência, throughput e consumo energético para os esquemas identificados.",
+          "Estender a taxonomia incorporando dimensões de privacidade, conformidade (ex.: GDPR) e métricas de desempenho.",
+          "Realizar um estudo comparativo focado em mecanismos de revogação de credenciais em cenários de smart city.",
+          "Propor um framework de interoperabilidade que conecte blockchains permissionados e públicos usando padrões SSI.",
+          "Aplicar a taxonomia em um caso‑de‑uso piloto de IoT urbano (ex.: gestão de sensores de tráfego) para validar critérios de classificação."
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo propõe a primeira taxonomia metodológica para arquiteturas de identidade baseadas em ledger distribuído (DLT), estruturada em três grupos – âncora de confiança, identidade e ledger – e composta por 22 dimensões e 113 características. A taxonomia foi construída a partir da análise de 390 artigos, validações com especialistas e aplicação em duas arquiteturas representativas, abordando fundamentos de blockchain, identidade digital, SSI, DIDs e VCs, bem como papéis de emissor, detentor e verificador, governança, tipos de identificadores, credenciais, revogação, privacidade e recuperação. Seu objetivo é suprir a lacuna metodológica existente, permitindo a comparação sistemática, o design de soluções interoperáveis e centradas no usuário, adequadas a ambientes distribuídos como cidades inteligentes, IoT, IIoT e edge computing. Embora a proposta ofereça um quadro abrangente, ainda carece de validação prática, métricas de desempenho, critérios de privacidade setoriais e mecanismos de interoperabilidade entre diferentes blockchains e padrões de identidade.",
+    "lacunas_possiveis": [
+      "Critérios de validação prática da taxonomia em cenários reais.",
+      "Cobertura de requisitos de privacidade específicos (ex.: saúde, mobilidade urbana).",
+      "Mecanismos de revogação e recuperação de credenciais em ambientes de edge computing.",
+      "Avaliação de escalabilidade e latência das âncoras de confiança distribuídas em redes IoT de grande escala.",
+      "Métricas de desempenho (latência, throughput, consumo energético) para validar a taxonomia em contextos de IoT/IIoT.",
+      "Interoperabilidade entre diferentes DLTs e padrões de identidade (DIDs, SAML, X.509).",
+      "Métricas e avaliação de overhead em dispositivos IoT de baixa potência e edge computing.",
+      "Critérios claros para classificação de revogação (on‑chain vs ausente) e revogação descentralizada em tempo real.",
+      "Abordagem de cenários híbridos de permissão (public permissionless vs private permissioned).",
+      "Adaptabilidade da taxonomia a tecnologias emergentes e integração com padrões existentes.",
+      "Avaliação sistemática de privacidade e conformidade regulatória (ex.: GDPR) em casos de uso de cidades inteligentes.",
+      "Escassez de estudos sobre revogação de credenciais em ambientes altamente dinâmicos."
+    ],
+    "propostas_possiveis": [
+      "Definir e aplicar critérios de validação prática por meio de estudos de caso em cidades inteligentes.",
+      "Estender a taxonomia com dimensões específicas de privacidade para setores como saúde e mobilidade urbana.",
+      "Desenvolver métricas de latência, escalabilidade, throughput e custo de transação para âncoras de confiança em redes permissionadas e permissionless.",
+      "Criar benchmarks de revogação e recuperação de credenciais adaptados a recursos limitados de edge computing.",
+      "Conduzir avaliações empíricas da taxonomia em projetos piloto de IoT/IIoT, medindo desempenho e robustez.",
+      "Desenvolver um framework de interoperabilidade que avalie compatibilidade entre múltiplas blockchains e padrões de identidade.",
+      "Definir e validar métricas de overhead específicas para dispositivos IoT de baixa potência e ambientes de borda.",
+      "Ampliar a taxonomia com sub‑dimensões que detalhem mecanismos de revogação descentralizada e critérios de permissão híbrida.",
+      "Criar uma ferramenta interativa de preenchimento automático da taxonomia para facilitar sua aplicação prática em projetos de cidades inteligentes.",
+      "Aplicar a taxonomia a um caso de uso real de SSI em serviços públicos de smart city, avaliando governança, privacidade e custos de implementação.",
+      "Desenvolver um benchmark que inclua latência, throughput e consumo energético para os esquemas identificados.",
+      "Incorporar dimensões de conformidade regulatória (ex.: GDPR) e métricas de desempenho à taxonomia.",
+      "Realizar um estudo comparativo focado em mecanismos de revogação de credenciais em cenários de smart city.",
+      "Propor um framework de interoperabilidade que conecte blockchains permissionados e públicos usando padrões SSI.",
+      "Aplicar a taxonomia em um caso‑de‑uso piloto de IoT urbano (ex.: gestão de sensores de tráfego) para validar critérios de classificação."
+    ],
+    "fonte": "PDF parcial"
+  },
+  "ia": null,
+  "fim": "2026-09-16T21:14:53"
+}

@@ -1,0 +1,45 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:32:12",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "prevent data from having a single point of failure",
+      "solucao": "Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity",
+      "avaliacao": "The results show that public healthcare systems based on the Blockchain considerably boost efficiency and performance by integrating IPFS.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "• Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n• Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n• Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n• Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n• Medir escalabilidade e latência com milhares de dispositivos IoT;\n• Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde."
+    },
+    "pagina": 5,
+    "texto": "Page 5 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \n3 System model\nProcessing real-time healthcare data, timely patient monitoring, and providing health -\ncare services are challenging for healthcare providers worldwide [ 30, 31]. Although \nmost existing Blockchain-integrated IoT systems provide smart healthcare systems, as \nthe number of connected healthcare devices grows, the system’s access to, processing, \nand storage of healthcare data slows down. The inability to deliver continuous, real-time \npatient care is a major concern for many healthcare facilities. Patients may get worse \nor possibly die if they do not receive the best possible care immediately. To address \nthe shortcomings of current Blockchain-integrated IoT healthcare systems, we have \nproposed an IPFS-integrated Blockchain-IoT healthcare system. Figure  1. depicts the \nproposed framework, which is secure, interoperable, and scalable for healthcare organi -\nzations. It integrates Blockchain, IoT, and IPFS (Table 1).\n3.1 Framework description\nIn this system, real-time patient care is prioritized above all else. Still, strong privacy, \nsecurity, and scalability solutions for accessing, processing, transferring, and storing \nhealthcare data are also paramount. Each “block\" in the Blockchain healthcare system \nis a timestamped, cryptographically linked, distributed, and immutable set of records. \nThe proposed system employs smart contracts built on the Ethereum platform to check \nif IoT devices adhere to pre-defined privacy policies and other limitations. Device access \npermissions are granted to devices via a smart contract-defined access management \nand authentication method. All healthcare IoT devices used in this framework fall into \nsecured and unsecured categories. Unsecured IoT devices are cheap and vulnerable \nand cannot execute privacy policies and agreements. These devices are connected via \na device proxy. The device proxy authorises these gadgets to the system and monitors \ntheir behaviour. The proposed framework also uses decentralized and cryptographically \nFig. 1 Proposed healthcare framework using IPFS storage system\n ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "final{": {
+      "resumo": "O artigo propõe um framework que integra Blockchain, IoT e IPFS para garantir segurança, interoperabilidade e escalabilidade no compartilhamento de dados de saúde, priorizando o atendimento em tempo real e usando contratos inteligentes na Ethereum para gerenciar permissões de acesso.",
+      "perfil": {
+        "problema": "the system’s access to, processing, and storage of healthcare data slows down.",
+        "solucao": "we have proposed an IPFS-integrated Blockchain-IoT healthcare system.",
+        "avaliacao": "Não informado.",
+        "limites": "Não informado.",
+        "possibilidades": "- Incorporar identidade auto‑soberana (SSI) para controle de acesso pelos pacientes;\n- Aplicar criptografia baseada em atributos (ABE) para compartilhamento granular de dados de saúde;\n- Avaliar a solução em ambientes de cidades inteligentes com edge computing distribuído;\n- Investigar mecanismos de revogação cross‑organizacional usando credenciais verificáveis;\n- Medir escalabilidade e latência com milhares de dispositivos IoT;\n- Integrar princípios zero‑trust para reforçar a confiança entre organizações de saúde."
+      },
+      "evidencias": [
+        {
+          "afirmacao": "O aumento do número de dispositivos de saúde conectados reduz a velocidade de acesso, processamento e armazenamento dos dados.",
+          "citacao": "the system’s access to, processing, and storage of healthcare data slows down."
+        },
+        {
+          "afirmacao": "Foi proposto um sistema de saúde baseado em Blockchain‑IoT integrado ao IPFS.",
+          "citacao": "we have proposed an IPFS-integrated Blockchain-IoT healthcare system."
+        }
+      ],
+      "interpretacao": "A integração de IPFS ao Blockchain‑IoT busca aliviar o gargalo de armazenamento e melhorar a capacidade de resposta em tempo real, usando contratos inteligentes para impor políticas de privacidade.",
+      "duvidas": "Quais são as métricas de desempenho (latência, throughput) obtidas na validação? Como o proxy de dispositivos trata dispositivos inseguros em termos de segurança e privacidade?"
+    }
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:32:23"
+}

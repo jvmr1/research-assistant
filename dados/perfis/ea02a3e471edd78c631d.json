@@ -1,0 +1,7 @@
+{
+  "problema": "superar a dependência de intermediários centralizados",
+  "solucao": "combinar contratos inteligentes na blockchain Hyperledger Besu com criptografia baseada em atributos (ABE)",
+  "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+  "limites": "Não identificado nas fichas/trechos disponíveis.",
+  "possibilidades": "Integrar mecanismos de revogação e recuperação de credenciais baseados em identidade autossoberana (SSI) para permitir que cidadãos restabeleçam acesso a serviços de cidades inteligentes após perda de chaves ou credenciais."
+}

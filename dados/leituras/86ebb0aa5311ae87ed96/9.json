@@ -1,0 +1,36 @@
+{
+  "resumo": "O trabalho propõe um framework onde um device proxy registra dispositivos mediante prova de identidade, e uma dApp baseada em smart contracts conecta usuários e pacientes ao sistema de saúde. Dados são armazenados no IPFS e seu hash criptográfico é gravado na blockchain; a recuperação ocorre mediante verificação do hash. O processo de criptografia/decriptação é descrito no Algoritmo 3.",
+  "perfil": {
+    "problema": "requires proof of identity",
+    "solucao": "A device proxy is used to identify and register these devices.",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Integrar identidade auto‑soberana (SSI) para substituir a prova de identidade baseada em proxy; Avaliar o impacto da latência de rede na recuperação de arquivos em ambientes de cidades inteligentes; Comparar diferentes algoritmos de hash (ex.: SHA‑256 vs Keccak‑256) quanto ao consumo energético dos dispositivos IoT de saúde; Extender o framework para suportar computação de borda (edge computing) e nuvem híbrida, medindo desempenho e escalabilidade."
+  },
+  "evidencias": [
+    {
+      "citacao": "A device proxy is used to identify and register these devices.",
+      "afirmacao": "A device proxy is used to identify and register these devices."
+    },
+    {
+      "citacao": "The encryption and decryption process of proposed healthcare system is presented in Algorithm 3.",
+      "afirmacao": "The encryption and decryption process of proposed healthcare system is presented in Algorithm 3."
+    }
+  ],
+  "interpretacao": "O trecho descreve um fluxo completo de registro, armazenamento e recuperação de dados de saúde, combinando um proxy de dispositivos para autenticação, uma dApp para interação e IPFS + blockchain para integridade e disponibilidade dos arquivos.",
+  "duvidas": "Qual o mecanismo exato de prova de identidade exigido pelo device proxy? Como são gerenciados os direitos de acesso ao arquivo após a verificação do hash?",
+  "avisos": [],
+  "id": "5a836f5e481b480f4ae8",
+  "artigo": "Mallick_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "requires proof of identity",
+    "solucao": "A device proxy is used to identify and register these devices.",
+    "avaliacao": "Total number of transactions per block",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Integrar identidade auto‑soberana (SSI) para substituir a prova de identidade baseada em proxy; Avaliar o impacto da latência de rede na recuperação de arquivos em ambientes de cidades inteligentes; Comparar diferentes algoritmos de hash (ex.: SHA‑256 vs Keccak‑256) quanto ao consumo energético dos dispositivos IoT de saúde; Extender o framework para suportar computação de borda (edge computing) e nuvem híbrida, medindo desempenho e escalabilidade.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86ebb0aa5311ae87ed96"
+  }
+}

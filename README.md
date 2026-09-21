@@ -1,17 +1,31 @@
-﻿# Agente de revisão exploratória para mestrado
+﻿# Assistente de Pesquisa Acadêmica
 
-Este projeto é um agente de garimpo e leitura de literatura acadêmica. A ideia é rodar por horas em um terminal, buscar trabalhos em bases abertas e processar um trabalho por vez: triar título/resumo, tentar obter texto completo permitido, fazer pré-leitura, fichar o texto relevante até o fim e alimentar um relatório com lacunas e propostas de contribuição antes de passar ao próximo trabalho.
+Este projeto ajuda um pesquisador a sair de uma ideia, de instruções e de
+alguns trabalhos-base para uma revisão organizada e um primeiro texto acadêmico.
+Ele busca trabalhos em bases acadêmicas abertas, lê os textos disponíveis,
+compara ideias, registra evidências e produz uma versão inicial de introdução,
+fundamentação teórica, estado da arte e possíveis lacunas.
+
+O sistema é uma ferramenta de apoio à pesquisa, não um gerador de trabalho
+pronto. O pesquisador deve revisar o texto, conferir cada referência no trabalho
+original, corrigir interpretações e decidir o que pode ser aproveitado. O texto
+gerado não deve ser apresentado como autoria automática nem como substituto da
+leitura, da orientação ou da contribuição intelectual do pesquisador. A proposta
+é ajudar a começar e organizar a escrita, não plagiar: as fontes são registradas
+para conferência e a redação deve ser reescrita e validada pelo pesquisador.
 
 O fluxo de uso é simples:
 
-1. Edite `vault/INSTRUCOES.md`.
-2. Rode `python agente.py`.
-3. Acompanhe o terminal.
-4. Leia `vault/RELATORIO.md`.
-5. Avalie ideias em `vault/AVALIAR-PROPOSTAS.md`.
-6. Rode novamente para o agente buscar mais perto do que você marcou como interessante.
+1. Edite `vault/INSTRUCOES.md` com o tema, as perguntas e o modo de pesquisa.
+2. Coloque trabalhos-base em `exemplos/` quando quiser que o agente os leia e use como sementes da pesquisa.
+3. Configure a chave em `.env` e instale as dependências.
+4. Rode `python agente.py` e acompanhe o terminal.
+5. Leia os relatórios e revise as fontes e o texto produzido.
+6. Rode novamente para ampliar o corpus e melhorar a redação.
 
-O repositório versiona apenas código, testes e documentação. A base pessoal do Obsidian, PDFs baixados, caches, relatórios e estado de execução ficam fora do Git.
+O repositório inclui o estado de pesquisa, PDFs, exemplos, notas Markdown e
+testes para que outra máquina receba o projeto no mesmo ponto. Segredos locais,
+bytecode e ambientes virtuais instalados não entram no Git.
 
 ## Estrutura versionada
 
@@ -21,19 +35,24 @@ O repositório versiona apenas código, testes e documentação. A base pessoal 
 - `apresentacao.py`: gera os arquivos Markdown visíveis em `vault/`.
 - `tests/`: testes de regressão.
 - `.env.example`: modelo de configuração local, sem chave.
-- `.gitignore`: impede versionar base pessoal, PDFs, caches e chaves.
+- `.gitignore`: impede versionar `.env`, bytecode, caches e ambientes virtuais.
 
-## Pastas geradas localmente
+## Pastas do projeto
 
-Estas pastas são criadas ou atualizadas durante a execução e ficam fora do Git:
+Estas pastas fazem parte do estado transportável do projeto e podem ser
+versionadas:
 
-- `vault/`: sua base Markdown/Obsidian, incluindo `INSTRUCOES.md`, `RELATORIO.md`, `AVALIAR-PROPOSTAS.md` e notas dos trabalhos.
-- `dados/`: estado interno, caches de texto, diagnósticos, fichamentos e propostas em JSON.
+- `exemplos/`: trabalhos fornecidos pelo pesquisador. São lidos integralmente
+	como sementes e também orientam a forma da redação, mas não são usados como
+	citações automáticas.
+- `vault/`: instruções, relatórios, redação, notas Markdown e avaliações.
+- `dados/`: estado interno, fichamentos, diagnósticos, propostas e histórico.
 - `pdfs/`: PDFs/HTML baixados de fontes abertas ou colocados manualmente.
-- `.obsidian/`: configuração local do Obsidian.
-- `backup-*` e `imagens/`: backups e capturas locais.
+- `.obsidian/`: configuração do Obsidian, quando houver.
 
-Se você quiser transportar a base entre Windows e Linux, sincronize essas pastas por fora do Git, por exemplo via Syncthing, Obsidian Sync, Dropbox, Google Drive ou cópia manual. O Git deve ficar só com o programa.
+Como PDFs e estado de pesquisa podem aumentar o repositório, confirme a política
+do seu servidor Git antes de publicar. Para esta cópia, eles são intencionais e
+necessários para transportar o contexto entre máquinas.
 
 ## Instalação no Linux
 
@@ -51,7 +70,9 @@ python -m unittest discover -s tests -v
 python agente.py --uma-vez
 ```
 
-Na primeira execução, se `vault/INSTRUCOES.md` não existir, o agente cria um arquivo inicial para você editar.
+Na primeira execução, se `vault/INSTRUCOES.md` não existir, o agente cria um
+arquivo inicial para você editar. Nesta versão, o arquivo já versionado em
+`vault/` mantém as instruções e o contexto escolhidos pelo pesquisador.
 
 ## Instalação no Windows
 
@@ -74,6 +95,7 @@ Crie uma chave no OpenRouter e coloque em `.env`:
 ```env
 OPENROUTER_API_KEY=cole_sua_chave_aqui
 UNPAYWALL_EMAIL=seu-email@exemplo.com
+SEMANTIC_SCHOLAR_API_KEY=opcional
 CORE_API_KEY=opcional
 ```
 
@@ -142,6 +164,11 @@ Depois ajuste em `vault/INSTRUCOES.md`:
 
 A fonte acadêmica principal é o OpenAlex, porque costuma responder de forma mais estável e traz metadados de acesso aberto. Semantic Scholar e Crossref ficam como auxiliares: se uma fonte der limite, timeout ou falhar, o agente tenta a próxima. Unpaywall não muda a seleção de trabalhos; ele só tenta encontrar uma cópia open access pelo DOI.
 
+Se você tiver uma chave do Semantic Scholar, coloque-a em `.env` como
+`SEMANTIC_SCHOLAR_API_KEY`. O agente envia a chave no header `x-api-key` e
+serializa as chamadas ao Semantic Scholar para respeitar o limite de 1
+requisição por segundo, cumulativo entre endpoints.
+
 No `vault/INSTRUCOES.md`, a configuração recomendada é:
 
 ```md
@@ -189,27 +216,28 @@ Use `Ctrl+C` para pausar. Rodar o mesmo comando depois retoma o estado salvo.
 
 ## Fluxo do agente
 
-1. Lê `vault/INSTRUCOES.md`.
-2. Gera consultas a partir das variáveis de busca e consultas manuais.
-3. Busca resultados no Semantic Scholar por padrão.
-4. Deduplica por DOI ou título.
-5. Faz triagem por título/resumo.
-6. Tenta encontrar texto completo aberto pelo PDF do Semantic Scholar e por Unpaywall pelo DOI. CORE continua opcional quando configurado.
-7. Baixa somente texto aberto permitido.
-8. Descarta do grafo trabalhos sem texto integral útil, mantendo registro interno em JSON.
-9. Faz pré-leitura de introdução/conclusão quando possível.
-10. Lê integralmente um trabalho aprovado antes de passar para outro.
-11. Registra fichamento e síntese do trabalho.
-12. Atualiza estado da arte, lacunas e propostas no relatório.
-13. Para quando houver propostas novas aguardando avaliação humana.
-14. Na próxima execução, usa as avaliações positivas para puxar buscas próximas.
+1. Lê `vault/INSTRUCOES.md` e o estado persistido em `dados/`.
+2. Importa PDFs de `exemplos/` e `pdfs/`; os trabalhos-base de `exemplos/` são sementes prioritárias e têm leitura integral obrigatória.
+3. Gera consultas a partir das variáveis, consultas manuais e ideias encontradas.
+4. Busca resultados no OpenAlex por padrão; Crossref e Semantic Scholar são fallbacks configuráveis.
+5. Deduplica por DOI ou título e faz triagem por título/resumo.
+6. Tenta obter texto completo aberto por fontes permitidas, incluindo Unpaywall e Semantic Scholar.
+7. Faz pré-leitura e depois fichamento por trechos, validando citações literais contra o texto original.
+8. Consolida cada trabalho e compara as abordagens, limites, avaliações e possibilidades.
+9. No modo `focada`, produz o mapa de fases e atualiza `vault/INTRODUCAO-E-FUNDAMENTACAO.md`.
+10. No modo `geral`, organiza o estado da arte, hipóteses de lacunas e propostas de contribuição.
+11. Registra fontes, consultas, tarefas e falhas em `dados/` para permitir retomada em outra máquina.
+12. O pesquisador revisa o resultado, confere referências e pode ajustar as instruções antes da próxima rodada.
 
 ## Arquivos que você deve olhar durante o uso
 
 - `vault/INSTRUCOES.md`: comandos e direção da pesquisa. Você edita.
-- `vault/RELATORIO.md`: lacunas e propostas geradas. Você lê.
+- `vault/INTRODUCAO-E-FUNDAMENTACAO.md`: redação focada com links para as notas dos trabalhos citados.
+- `vault/PROPOSTAS-DE-TRABALHO.md`: lista de propostas, lacunas, hipóteses, formas de avaliação e fontes.
 - `vault/AVALIAR-PROPOSTAS.md`: avaliação das ideias para guiar próximas buscas. Você edita.
-- `vault/trabalhos/`: notas dos trabalhos com texto integral útil.
+- `vault/trabalhos/`: notas dos trabalhos citados ou usados nas propostas. Cada nota deve ter síntese/fichamento e apontar para o anexo local quando houver.
+- `pdfs/`: PDFs ou HTMLs dos textos completos disponíveis.
+- `vault/RELATORIO.md` e `vault/METODOLOGIA-REVISAO.md`: arquivos operacionais/legados de rastreabilidade.
 
 ## Testes
 
@@ -222,6 +250,10 @@ Rode os testes antes de mandar mudanças para o Git.
 
 ## Observações metodológicas
 
-Este é um assistente de revisão exploratória e brainstorm. Ele não substitui a revisão crítica do pesquisador nem a orientação. As propostas são hipóteses: servem para encontrar direções promissoras, trabalhos próximos, lacunas possíveis e ideias de contribuição factíveis.
+Este é um assistente de revisão e redação provisória. Ele não substitui a
+revisão crítica do pesquisador nem a orientação. Citações e afirmações da IA
+precisam ser conferidas nas fontes; lacunas, estado da arte e propostas não são
+conclusões confirmadas. Trabalhos em `exemplos/` orientam o contexto e a forma,
+mas a redação final deve ser autoral, citada e validada pelo pesquisador.
 
 O agente não deve burlar restrições de acesso. Quando não consegue texto integral permitido, registra internamente e segue para outros trabalhos.

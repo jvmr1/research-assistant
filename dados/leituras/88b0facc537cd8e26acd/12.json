@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho indica que o artigo, ainda em fase de pre‑proof, recebeu apoio financeiro da National Natural Science Foundation of China (grant nos. U24B20146, 62372044) e do Beijing Municipal Science and Technology Commission (projeto Z241100009124008).",
+  "perfil": {
+    "problema": "Não informado",
+    "solucao": "Não informado",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Investigar como o financiamento pode ser direcionado a experimentos de implantação de identidade descentralizada em ambientes de IIoT de cidades inteligentes; explorar parcerias com agências de fomento para validar protótipos em larga escala; propor métricas de impacto socioeconômico dos projetos financiados."
+  },
+  "evidencias": [
+    {
+      "citacao": "National Natural Science Foundation of China (Grant No.s U24B20146,62372044)",
+      "afirmacao": "O trabalho recebeu apoio da National Natural Science Foundation of China."
+    }
+  ],
+  "interpretacao": "O trecho fornece apenas informações de financiamento, sem detalhes sobre o problema abordado, a solução proposta, avaliações ou limitações técnicas do estudo.",
+  "duvidas": "Quais são os objetivos específicos do trabalho? Como o financiamento será utilizado nas fases de desenvolvimento e validação? Existem resultados preliminares ou métricas de desempenho associadas ao projeto?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "a7e098509152565f0287",
+  "artigo": "Ding_2025",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "issue of authentication in meta-computing-enabled IIoT",
+    "solucao": "sliding window accumulator structure",
+    "avaliacao": "the verifier time remains constant at 0.003 seconds across all tree heights.",
+    "limites": "the size of the public parameters for the Merkle SNARK scheme reaches approximately 50GB, and the parameter generation process requires over 30 hours.",
+    "possibilidades": "Investigar como o financiamento pode ser direcionado a experimentos de implantação de identidade descentralizada em ambientes de IIoT de cidades inteligentes; explorar parcerias com agências de fomento para validar protótipos em larga escala; propor métricas de impacto socioeconômico dos projetos financiados.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "88b0facc537cd8e26acd"
+  }
+}

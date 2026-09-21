@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:49:17",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A secure and trustworthy blockchain-assisted edge computing architecture for industrial internet of things",
+    "perfil_anterior": {
+      "problema": "the network’s 51% attack and erratic network connection",
+      "solucao": "PoAh offers adequate security when combined with ECDSA in decentralized IIoT networks",
+      "avaliacao": "The first group’s execution time records a minimum of 815 milliseconds and a high of 1571 milliseconds",
+      "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+      "possibilidades": "Avaliar o desempenho do PoAh em cenários de mobilidade de dispositivos IoT em cidades inteligentes.; Integrar mecanismos de identidade auto‑soberana (SSI) aos contratos inteligentes que utilizam PoAh.; Comparar o PoAh com outros consensos leves (e.g., Proof of Authority, Proof of Stake) em termos de consumo energético.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados armazenados na blockchain.; Testar a arquitetura em ambientes de borda heterogêneos com milhares de nós para validar escalabilidade."
+    },
+    "pagina": 13,
+    "texto": "the most extensive set of devices. It shows that the suggested design performs satisfactorily in collecting sensor \ninformation.\nThe authorization of people to view the information collected by the sensor is an additional crucial function. \nThe method consists of three steps:\n• Submitting a transaction request with user and device details.\n• Authenticating the consumer and device, following effective authentication.\n• Granting access to stored data.\nThe sensor’s record is divided into five groups to assess the time required for execution. These groups comprise \nnumerical information about outside characteristics like climate, pressure, size, moisture, etc. A bar graph \ndisplaying a comparative examination of the service execution time for the various record groups is depicted in \nFig. 7. The graph shows that the procedure was performed more quickly because the total execution time was \nless than 875 ms. For the most enormous batch of sensor recordings, the average execution time is 1612 ms. It \nshows that the suggested design performs satisfactorily in recording sensor data. In conclusion, the total service \nexecution time statistics show that the suggested blockchain platform performs satisfactorily for every activity.\nC. Blockchain Efficiency.\nFig. 7. The service time computation of blockchain devices for storage.\n \nFig. 6. The service time computation of blockchain devices for task execution.\n \nScientific Reports |        (2025) 15:15410 13| https://doi.org/10.1038/s41598-025-00337-3\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho apresenta uma arquitetura de computação de borda assistida por blockchain para IIoT, que inclui coleta de dados de sensores e um processo de autorização em três etapas (submissão de transação, autenticação e concessão de acesso). Os tempos de execução são inferiores a 875 ms para a maioria dos grupos de registros e 1612 ms em média para o maior lote, indicando desempenho satisfatório.",
+    "perfil": {
+      "problema": "the network’s 51% attack and erratic network connection",
+      "solucao": "PoAh offers adequate security when combined with ECDSA in decentralized IIoT networks",
+      "avaliacao": "the total execution time was less than 875 ms",
+      "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+      "possibilidades": [
+        "Avaliar a escalabilidade do mecanismo de autorização (três etapas) em cenários com milhares de dispositivos IoT.",
+        "Integrar credenciais verificáveis (verifiable credentials) ao processo de concessão de acesso para suportar identidade auto‑soberana (SSI).",
+        "Comparar o desempenho de PoAh com outros consensos leves (Proof of Authority, Proof of Stake) considerando latência de autorização.",
+        "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular aos dados armazenados na blockchain.",
+        "Testar a arquitetura em ambientes de borda heterogêneos com conectividade intermitente para validar robustez."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "A autorização de pessoas para visualizar as informações coletadas pelo sensor é uma função crucial adicional.",
+        "citacao": "The authorization of people to view the information collected by the sensor is an additional crucial function."
+      },
+      {
+        "afirmacao": "O tempo total de execução foi inferior a 875 ms para a maioria dos grupos de registros.",
+        "citacao": "the total execution time was less than 875 ms"
+      }
+    ],
+    "interpretacao": "Os resultados indicam que a arquitetura proposta consegue atender aos requisitos de latência para coleta e acesso a dados de sensores em ambientes industriais, embora o tempo aumente para lotes maiores, sugerindo necessidade de otimizações para alta carga.",
+    "duvidas": "Como o mecanismo de autorização se comporta sob alta concorrência de solicitações? Qual o impacto da variabilidade de conectividade de borda nos tempos de autenticação e concessão de acesso?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:49:35"
+}

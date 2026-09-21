@@ -1,0 +1,15 @@
+{
+  "resumo": "O artigo propõe o modelo Verifiable and Searchable Decentralized Identity (VS‑DID) para meta‑computação no IIoT, combinando armazenamento híbrido on‑chain/off‑chain com um registro verificável baseado em compromissos chave‑valor. A inovação central é o acumulador de janela deslizante, que permite atualizações incrementais e consultas eficientes, reduzindo o tempo de prova agregada em 93,5 % e o tempo de compromisso em 96,5 % em relação a esquemas Merkle‑SNARK, mantendo verificação prática. O esquema utiliza compromissos vetoriais, provas geradas via Hyperproof e agregação por Non‑interactive Inner Product Arguments em uma árvore binária, visando baixo custo de armazenamento e escalabilidade para grandes volumes de dados e dispositivos IIoT. As fichas destacam a necessidade de verificação cruzada de identidades, redução da sobrecarga computacional e suporte a atualizações em tempo real, mas apontam lacunas em revogação, avaliação prática e interoperabilidade.",
+  "lacunas_possiveis": [
+    "Mecanismo de revogação de credenciais em tempo real não detalhado",
+    "Ausência de experimentos em dispositivos IoT com recursos limitados",
+    "Falta de métricas de latência, throughput e custos de armazenamento/comunicação em cenários reais de cidades inteligentes",
+    "Interoperabilidade limitada com padrões SSI existentes"
+  ],
+  "propostas_possiveis": [
+    "Desenvolver e validar um protocolo de revogação incremental integrado ao acumulador de janela deslizante",
+    "Realizar testes de desempenho em hardware IoT de baixa potência, medindo latência e consumo de energia",
+    "Comparar o VS‑DID com outras soluções (Merkle‑SNARK, IPFS, etc.) em ambientes de edge computing, quantificando custos de armazenamento e comunicação",
+    "Estender o modelo para suportar interoperabilidade com padrões SSI como DID‑Core e Verifiable Credentials da W3C"
+  ]
+}

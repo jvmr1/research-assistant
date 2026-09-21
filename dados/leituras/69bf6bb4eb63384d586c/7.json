@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho descreve dimensões da taxonomia proposta para gestão de identidade baseada em DLT, incluindo revogação, controle de divulgação, verificabilidade, mecanismo de consenso, overhead de uso e nível de permissão. Em seguida, avalia duas obras: uma arquitetura de identidade descentralizada para IoT que carece de controle de divulgação e revogação, e um gerenciamento de metadados SAML que não trata de âncoras de confiança nem de revogação.",
+  "perfil": {
+    "problema": "there is no structured method to assess and compare these solutions, particularly regarding critical aspects such as trust sources, governance frameworks, and credential management.",
+    "solucao": "The artifact ”Taxonomy”, showing DLT-based identity management architecture-related dimensions and their characteristics.",
+    "avaliacao": "The taxonomy aims to provide a comprehensive framework spanning the complete spectrum of DLT-based IDM solutions while facilitating conceptual comparability through systematic classification of fundamental architectural components.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a dimensão 'Disclosure Control' para SSI em cidades inteligentes, integrando criptografia baseada em atributos (ABE) para limitar a exposição de atributos de identidade; investigar revogação descentralizada combinada com consenso DAG em ambientes de edge computing; comparar impactos de permissioned vs permissionless ledgers na latência e privacidade de serviços públicos de smart cities."
+  },
+  "evidencias": [
+    {
+      "citacao": "Revocation determines whether the architecture allows for invalidating a credential and specifies where the revocation process is conducted and where the revocation status is stored.",
+      "afirmacao": "Revocation determines whether the architecture allows for invalidating a credential and specifies where the revocation process is conducted and where the revocation status is stored."
+    },
+    {
+      "citacao": "Consensus Mechanism: The consensus algorithm is a fundamental component of any distributed ledger-based solution and affects properties like fault tolerance, latency, decentralization, and security.",
+      "afirmacao": "Consensus Mechanism: The consensus algorithm is a fundamental component of any distributed ledger-based solution and affects properties like fault tolerance, latency, decentralization, and security."
+    }
+  ],
+  "interpretacao": "O texto evidencia lacunas recorrentes nas propostas analisadas, como ausência de mecanismos de revogação e controle de divulgação, indicando que a taxonomia pode orientar futuros projetos a considerar essas dimensões críticas.",
+  "duvidas": "Como a taxonomia poderia ser adaptada para avaliar a interoperabilidade entre diferentes padrões de identidade (DIDs, SAML, X.509) em ambientes híbridos de smart cities? Quais métricas específicas de overhead de uso seriam relevantes para dispositivos IoT de baixa potência?",
+  "avisos": [],
+  "id": "c7462157aa04418c2924",
+  "artigo": "Vaziry_2025",
+  "pagina": 8,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "there is no structured method to assess and compare these solutions, particularly regarding critical aspects such as trust sources, governance frameworks, and credential management.",
+    "solucao": "The artifact ”Taxonomy”, showing DLT-based identity management architecture-related dimensions and their characteristics.",
+    "avaliacao": "The taxonomy aims to provide a comprehensive framework spanning the complete spectrum of DLT-based IDM solutions while facilitating conceptual comparability through systematic classification of fundamental architectural components.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a dimensão 'Disclosure Control' para SSI em cidades inteligentes, integrando criptografia baseada em atributos (ABE) para limitar a exposição de atributos de identidade; investigar revogação descentralizada combinada com consenso DAG em ambientes de edge computing; comparar impactos de permissioned vs permissionless ledgers na latência e privacidade de serviços públicos de smart cities.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "69bf6bb4eb63384d586c"
+  }
+}

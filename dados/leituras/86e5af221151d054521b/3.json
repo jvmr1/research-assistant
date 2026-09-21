@@ -1,0 +1,22 @@
+{
+  "id": "726fe23cb2679234ce43",
+  "artigo": "Chaurasia_2026",
+  "pagina": 4,
+  "tipo": "pdf",
+  "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+  "evidencias": [],
+  "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+  "duvidas": "Conferir manualmente este trecho se ele for importante.",
+  "avisos": [
+    "falha_tecnica_ficha"
+  ],
+  "perfil_acumulado": {
+    "problema": "drug and vaccine supply chain counterfeiting emerged as a serious threat",
+    "solucao": "emerging technologies such as blockchain and Self-Sovereign Identity (SSI) have gained attention for improving the efficiency, transparency, and security of vaccine supply chain management",
+    "avaliacao": "empirical results prove the efficacy of the proposed supply chain framework",
+    "limites": "scalability issues, interoperability constraints, and privacy concerns",
+    "possibilidades": "Integrar edge computing para verificação em tempo real da autenticidade dos lotes de vacina nas fronteiras da cidade inteligente.; Combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular a dados de rastreamento.; Avaliar a interoperabilidade entre plataformas municipais de saúde e provedores de identidade descentralizada.; Desenvolver mecanismos de revogação distribuída de credenciais SSI via contratos inteligentes.; Aplicar a abordagem a sensores IoT de monitoramento de temperatura e localização na cadeia de frio de vacinas.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86e5af221151d054521b"
+  }
+}

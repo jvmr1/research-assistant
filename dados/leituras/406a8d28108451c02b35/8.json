@@ -1,0 +1,42 @@
+{
+  "resumo": "Os autores apresentam uma arquitetura de computação de borda assistida por blockchain para IIoT, implementada em Hyperledger Fabric com consenso PoAh. Simulações em MATLAB mostram alta eficiência, confiabilidade e baixo custo, usando containers Docker e VMs conectadas por LAN de 1 Mbps. O tempo de autenticação aumenta conforme o número de nós (de 5 a 50), mas permanece eficiente. Os custos de cálculo e comunicação são detalhados, reforçando a viabilidade econômica da solução.",
+  "perfil": {
+    "problema": "Low-power IoT devices may need help to handle the high processing demands of blockchain consensus methods",
+    "solucao": "The proposed system, evaluated using MATLAB and Hyperledger Fabric, is not only efficient and reliable but also highly cost-effective.",
+    "avaliacao": "Figure 4 illustrates that authentication times grow for varying numbers of peers deployed as terminal counts rise from five to fifty.",
+    "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+    "possibilidades": [
+      "Explorar a escalabilidade do consenso PoAh com milhares de nós em ambientes de borda heterogêneos.",
+      "Integrar Self‑Sovereign Identity (SSI) nos contratos inteligentes para gerenciamento descentralizado de credenciais.",
+      "Aplicar criptografia baseada em atributos (ABE) nos dados armazenados na blockchain para controle de acesso granular.",
+      "Avaliar o consumo energético da solução em dispositivos IoT de baixa potência.",
+      "Testar a arquitetura em múltiplas cidades inteligentes para validar interoperabilidade e resiliência."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "The proposed system, evaluated using MATLAB and Hyperledger Fabric, is not only efficient and reliable but also highly cost-effective.",
+      "afirmacao": "O sistema proposto é altamente custo‑efetivo."
+    },
+    {
+      "citacao": "Figure 4 illustrates that authentication times grow for varying numbers of peers deployed as terminal counts rise from five to fifty.",
+      "afirmacao": "Os tempos de autenticação aumentam com o número de pares."
+    }
+  ],
+  "interpretacao": "Os resultados indicam que a combinação de PoAh e Hyperledger Fabric oferece uma solução prática e econômica para autenticação em IIoT, embora a latência aumente com a escala, sugerindo necessidade de otimizações para grandes implantações.",
+  "duvidas": "Como o desempenho e o custo‑benefício se comportam em cenários reais com conectividade intermitente e recursos de MEC limitados?",
+  "avisos": [],
+  "id": "4183f2720ed51377e624",
+  "artigo": "Asaithambi_2025",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Low-power IoT devices may need help to handle the high processing demands of blockchain consensus methods",
+    "solucao": "The proposed system, evaluated using MATLAB and Hyperledger Fabric, is not only efficient and reliable but also highly cost-effective.",
+    "avaliacao": "Figure 4 illustrates that authentication times grow for varying numbers of peers deployed as terminal counts rise from five to fifty.",
+    "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+    "possibilidades": "Explorar a escalabilidade do consenso PoAh com milhares de nós em ambientes de borda heterogêneos.; Integrar Self‑Sovereign Identity (SSI) nos contratos inteligentes para gerenciamento descentralizado de credenciais.; Aplicar criptografia baseada em atributos (ABE) nos dados armazenados na blockchain para controle de acesso granular.; Avaliar o consumo energético da solução em dispositivos IoT de baixa potência.; Testar a arquitetura em múltiplas cidades inteligentes para validar interoperabilidade e resiliência.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "406a8d28108451c02b35"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo propõe um modelo serverless Edge‑Cloud para processos de gestão do conhecimento em cidades inteligentes, usando servidores de borda de baixa potência distribuídos e conectados via Wi‑Fi, 5G ou outras redes sem fio. As tarefas de IA são executadas localmente para reduzir latência e, em picos de demanda, são descarregadas para a nuvem ou CDN. O fluxo de conhecimento sobe ao data‑center, é processado e desce novamente aos stakeholders, permitindo captura, processamento e distribuição adaptáveis.",
+  "perfil": {
+    "problema": "they need a supporting computing architecture.",
+    "solucao": "Serverless edge computing enables running code at edge locations without managing servers.",
+    "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+    "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+    "possibilidades": "Explorar a integração de identidade auto‑soberana (SSI) para autenticação dos nós de borda; aplicar credenciais verificáveis para rastrear a proveniência dos dados de conhecimento; usar criptografia baseada em atributos (ABE) para proteger informações sensíveis nas funções serverless; criar camada de auditoria baseada em blockchain para registro de offloading e revogação de credenciais; avaliar aprendizado federado para recomendações de conhecimento que preservem a privacidade dos usuários."
+  },
+  "evidencias": [
+    {
+      "citacao": "Serverless model for efficient AI knowledge processing in the smart city",
+      "afirmacao": "O modelo serverless Edge‑Cloud permite processamento de IA de forma eficiente na cidade inteligente."
+    },
+    {
+      "citacao": "Low power edge servers are distributed around the city, with wireless network connection to these servers",
+      "afirmacao": "Servidores de borda de baixa potência são distribuídos pela cidade e conectados via Wi‑Fi, 5G ou outras redes sem fio."
+    }
+  ],
+  "interpretacao": "O texto reforça a ideia de que a computação serverless na borda pode atender às exigências de latência e escalabilidade das aplicações de cidades inteligentes, ao mesmo tempo em que permite flexibilidade para deslocar carga para a nuvem quando necessário.",
+  "duvidas": "Como será garantida a segurança e a privacidade dos dados processados nas funções serverless em ambientes de borda com recursos limitados?",
+  "avisos": [],
+  "id": "608832582804617cbd33",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "they need a supporting computing architecture.",
+    "solucao": "Serverless edge computing enables running code at edge locations without managing servers.",
+    "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+    "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+    "possibilidades": "Explorar a integração de identidade auto‑soberana (SSI) para autenticação dos nós de borda; aplicar credenciais verificáveis para rastrear a proveniência dos dados de conhecimento; usar criptografia baseada em atributos (ABE) para proteger informações sensíveis nas funções serverless; criar camada de auditoria baseada em blockchain para registro de offloading e revogação de credenciais; avaliar aprendizado federado para recomendações de conhecimento que preservem a privacidade dos usuários.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

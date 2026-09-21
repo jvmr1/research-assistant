@@ -1,0 +1,36 @@
+{
+  "resumo": "O estudo avalia o modelo federado global ao variar o número de nós de borda, mostrando aumento de acurácia de 88,5 % (10 nós) para 95,2 % (50 nós) e redução do tempo de convergência de 20 para 10 épocas. Também analisa o desempenho da blockchain, observando latência de transação de 50 ms a 150 ms e queda de throughput de 100 para 55 Tx/s ao crescer de 500 para 10 000 transações, com tempo de finalização de bloco dobrando.",
+  "perfil": {
+    "problema": "reducing the risk of model poisoning attacks",
+    "solucao": "decentralized model update storage",
+    "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+    "limites": "While CIFAR-10 is an image dataset primarily used in computer vision tasks, it was selected in this study to facilitate controlled experimentation of the federated learning process under non-IID conditions",
+    "possibilidades": "Aplicar o framework a dados reais de prontuários eletrônicos (EHR) em ambientes de cidades inteligentes, integrando SSI e credenciais verificáveis para controle de acesso granular nos nós de borda; avaliar o impacto de diferentes algoritmos de consenso (PoS, BFT) em escala de milhares de dispositivos IoT; combinar o mecanismo de privacidade com criptografia baseada em atributos (ABE) para políticas de compartilhamento interdepartamental; investigar técnicas de compressão de atualizações para reduzir a latência e melhorar o throughput da blockchain."
+  },
+  "evidencias": [
+    {
+      "citacao": "accuracy of the federated model improves consistently from 88.5% with 10 nodes to 95.2% with 50 nodes",
+      "afirmacao": "A acurácia do modelo federado melhora consistentemente de 88,5 % com 10 nós para 95,2 % com 50 nós."
+    },
+    {
+      "citacao": "transaction latency increases from 50 ms to 150 ms, while throughput decreases from 100 Tx/sec to 55 Tx/sec",
+      "afirmacao": "A latência de transação da blockchain aumenta de 50 ms para 150 ms quando o número de transações cresce de 500 para 10 000, enquanto o throughput diminui de 100 Tx/sec para 55 Tx/sec."
+    }
+  ],
+  "interpretacao": "Os resultados indicam que maior participação de nós de borda enriquece o conjunto de dados agregado, melhorando métricas de classificação e acelerando a convergência, ao mesmo tempo em que a escalabilidade da camada blockchain apresenta degradação de latência e throughput, refletindo o trade‑off entre número de atualizações e eficiência da rede.",
+  "duvidas": "Como o aumento da latência e a redução do throughput da blockchain impactam a viabilidade de atualizações em tempo real em cenários críticos de saúde? Quais estratégias de otimização (e.g., sharding, off‑chain aggregation) poderiam mitigar esses efeitos sem comprometer a segurança?",
+  "avisos": [],
+  "id": "7a9a3a9facdb4bd65324",
+  "artigo": "Munusamy_2025",
+  "pagina": 13,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "reducing the risk of model poisoning attacks",
+    "solucao": "decentralized model update storage",
+    "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+    "limites": "While CIFAR-10 is an image dataset primarily used in computer vision tasks, it was selected in this study to facilitate controlled experimentation of the federated learning process under non-IID conditions",
+    "possibilidades": "Aplicar o framework a dados reais de prontuários eletrônicos (EHR) em ambientes de cidades inteligentes, integrando SSI e credenciais verificáveis para controle de acesso granular nos nós de borda; avaliar o impacto de diferentes algoritmos de consenso (PoS, BFT) em escala de milhares de dispositivos IoT; combinar o mecanismo de privacidade com criptografia baseada em atributos (ABE) para políticas de compartilhamento interdepartamental; investigar técnicas de compressão de atualizações para reduzir a latência e melhorar o throughput da blockchain.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

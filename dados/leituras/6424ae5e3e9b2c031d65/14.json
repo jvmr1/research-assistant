@@ -1,0 +1,43 @@
+{
+  "resumo": "O trecho descreve como o YouGovern combina IPFS com Web3.Storage (Filecoin) para garantir persistência dos dados de identidade, inclui testes automatizados e auditorias de segurança dos contratos inteligentes, e implementa revogação, rotação de chaves e controle de acesso via funções de smart contract protegidas por OpenZeppelin ReentrancyGuard.",
+  "perfil": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": [
+      "Avaliar o impacto da integração IPFS + Web3.Storage sobre a latência de registro de DIDs.",
+      "Incorporar controle de acesso baseado em atributos (ABE) nas políticas dos smart contracts existentes.",
+      "Testar a interoperabilidade da solução com outras blockchains públicas (ex.: Polygon, Avalanche).",
+      "Implementar revogação automática usando provas de conhecimento zero (ZKP).",
+      "Expandir o suporte a agentes/guardians para gestão delegada e recuperação de credenciais.",
+      "Analisar a resiliência do modelo híbrido de armazenamento (IPFS + nós institucionais) sob falhas massivas de nós.",
+      "Aplicar verificação formal (model checking) aos contratos de controle de acesso para garantir ausência de vulnerabilidades lógicas."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "To comply with the W3C DID specification, YouGovern includes mechanisms for revocation and key rotation.",
+      "afirmacao": "The platform provides revocation and key rotation mechanisms compliant with the W3C DID specification."
+    }
+  ],
+  "interpretacao": "O texto evidencia que o YouGovern reforça a disponibilidade dos dados de identidade ao adotar armazenamento híbrido e consolida a segurança ao empregar testes automatizados, auditorias e proteções contra reentrância, além de oferecer funcionalidades de revogação e controle de acesso diretamente nos contratos inteligentes.",
+  "duvidas": "Não há detalhes sobre o desempenho do acesso a credenciais após a integração com Web3.Storage nem sobre a escalabilidade das funções de controle de acesso em cenários de alta concorrência.",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "53d9d1b98e4a08aebbfb",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 15,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "uPort lacks native revocation mechanisms and fine-grained access control",
+    "solucao": "YouGovern system is developed on Binance Smart Chain (BSC), leveraging smart contracts to establish a decentralized framework for self-sovereign identity management.",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+    "possibilidades": "Avaliar o impacto da integração IPFS + Web3.Storage sobre a latência de registro de DIDs.; Incorporar controle de acesso baseado em atributos (ABE) nas políticas dos smart contracts existentes.; Testar a interoperabilidade da solução com outras blockchains públicas (ex.: Polygon, Avalanche).; Implementar revogação automática usando provas de conhecimento zero (ZKP).; Expandir o suporte a agentes/guardians para gestão delegada e recuperação de credenciais.; Analisar a resiliência do modelo híbrido de armazenamento (IPFS + nós institucionais) sob falhas massivas de nós.; Aplicar verificação form",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  },
+  "reaproveitada_de": "ad0ae8a32d584f7fbea6"
+}

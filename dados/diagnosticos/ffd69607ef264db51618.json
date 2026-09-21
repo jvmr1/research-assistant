@@ -1,0 +1,131 @@
+{
+  "etapa": "redacao-focada",
+  "inicio": "2026-09-20T23:33:49",
+  "revisao": "05e12be4f82748351512",
+  "tarefa": "Escreva uma seção acadêmica desenvolvida, não um resumo. Use os trabalhos-exemplo apenas para aprender estrutura, extensão, profundidade e modo de referenciar; eles NÃO são fontes do tema e não podem ser citados. A introdução deve ter 5 a 8 parágrafos substanciais, cobrindo contexto de cidades inteligentes, problema, motivação, justificativa, objetivo geral, objetivos específicos e organização do texto. A fundamentação deve ter pelo menos 6 subseções nomeadas, cada uma com 2 a 4 parágrafos: (1) cidades inteligentes e atores, (2) identidade digital e SSI, (3) DID e credenciais verificáveis, (4) autenticação e controle de acesso, (5) segurança e privacidade no ciclo de dados, (6) interoperabilidade e governança, (7) revogação e recuperação de acesso. Compare conceitos e abordagens, explicando limites e relações, em vez de listar definições. Regra central de escrita acadêmica: cada informação, ideia, definição, frase factual, taxonomia ou avaliação que não seja contribuição autoral explícita precisa de citação no próprio parágrafo. Definições conceituais devem preferir fontes originais, padrões formais ou surveys reconhecidos; por exemplo, não defina cidades inteligentes, SSI, DID, VC, ABE ou criptografia homomórfica sem apontar a fonte que sustenta a definição. Não escreva parágrafos conceituais sem fonte. Use citações autor-data somente quando o trabalho fornecido trouxer autor e ano; caso contrário cite o identificador real do trabalho entre colchetes, por exemplo [Papatheodorou_2025]. NUNCA escreva [ID_EXATO], [ID] ou qualquer marcador genérico. Cada afirmação factual precisa de uma fonte real; se nenhuma ficha sustentar a afirmação, escreva “não identificado nas fontes lidas”. Depois faça exatamente 7 itens no mapa: emissão, apresentação/verificação, transmissão, processamento, armazenamento, revogação e recuperação de acesso. Em cada item use 2 a 4 frases por campo para ações do cidadão e entidades administrativas, riscos, estado da arte e lacunas. Use somente os trabalhos fornecidos. Insira citações no texto como [ID_EXATO] e liste em fontes_usadas somente IDs fornecidos. Não invente autores, anos, resultados ou consenso: quando a fonte não sustentar algo, escreva “não identificado nas fontes lidas” e trate lacunas como hipóteses. A redação é um rascunho de trabalho, não uma afirmação de novidade comprovada. JSON no esquema fornecido. Use estrutura semelhante aos trabalhos de exemplo, mas sem copiar trechos e sem tratá-los como fonte temática. EXEMPLOS DE FORMA, NÃO FONTES: [{\"arquivo\": \"André Luiz Almeida Cardoso.pdf\", \"paginas\": 79, \"estrutura_identificada\": [\"1 Introdução\", \"2 Fundamentação Teórica\", \"3 Trabalhos Relacionados\"], \"trecho_apenas_para_estilo\": \"UNIVERSIDADE FEDERAL DO MARANHÃO Programa de Pós-Graduação em Ciência da Computação André Luiz Almeida Cardoso Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain São Luís 2024 André Luiz Almeida Cardoso Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain Dissertação apresentada ao Programa de Pós- Graduação em Ciência da Computação - da Universidade Federal do Maranhão, como re- quisito para obtenção do título de Mestre em Ciência da Computação. Universidade Federal do Maranhão – UFMA Programa de Pós-Graduação em Ciência da Computação UFMA Orientador: Prof. Dr. Francisco José da Silva Unifesp Co-orientador: Prof. Dr. Arlindo Flavio da Conceição São Luís 2024 Ficha gerada por meio do SIGAA/Biblioteca com dados fornecidos pelo(a) autor(a). Diretoria Integrada de Bibliotecas/UFMA Almeida Cardoso, André Luiz\"}, {\"arquivo\": \"Danilo_TCC_final.pdf\", \"paginas\": 54, \"estrutura_identificada\": [\"1 Introdução\", \"1.1 Justificativa\", \"1.2 Objetivos\", \"2 Fundamentação Teórica\"], \"trecho_apenas_para_estilo\": \"UNIVERSIDADE FEDERAL DO MARANHÃO Curso de Ciência da Computação Danilo Isaque Sousa Maia Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes São Luís 2025 Danilo Isaque Sousa Maia Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes Monografia apresentada ao curso de Ciência da Computação da Universidade Federal do Maranhão, como parte dos requisitos necessáriosparaobtençãodograudeBacharel em Ciência da Computação. Orientador: Prof. Dr. Francisco José da Silva e Silva São Luís 2025 Ficha gerada por meio do SIGAA/Biblioteca com dados fornecidos pelo(a) autor(a). Diretoria Integrada de Bibliotecas/UFMA Sousa Maia, Danilo Isaque. Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes / Danilo Isaque Sousa Maia. - 2025. 5\"}, {\"arquivo\": \"dissertacao_wesleyFioreze_23_06_2026_anotada.pdf\", \"paginas\": 96, \"estrutura_identificada\": [], \"trecho_apenas_para_estilo\": \"UNIVERSIDADE FEDERAL DE S ˜AO P AULO DEP ARTMENT OF SCIENCE AND TECHNOLOGY PROFESSIONAL MASTER’S PROGRAM IN TECHNOLOGICAL INNOVA TION BLOCKCHAIN-ENABLED ABE FRAMEWORK FOR SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS WESLEYNOVAESFIOREZECOSTA ADVISOR: PROF. DR. ARLINDOFLAVIO DACONCEIC¸ ˜AO CO-ADVISOR: PROF. DR. VLADIMIRROCHA S˜ao Jos´e dos Campos – SP June 2026 UNIVERSIDADE FEDERAL DE S ˜AO P AULO DEP ARTMENT OF SCIENCE AND TECHNOLOGY PROFESSIONAL MASTER’S PROGRAM IN TECHNOLOGICAL INNOVA TION BLOCKCHAIN-ENABLED ABE FRAMEWORK FOR SECURE IIOT DATA SHARING ACROSS ORGANIZATIONS WESLEYNOVAESFIOREZECOSTA Dissertation presented to the Professional Master’s Program in Technological Innovation at the Univer- sidade Federal de S ˜ao Paulo, as part of the require- ments for obtaining the degree of Master in Sciences. Advisor: Prof. Dr. Arlindo Flavio da Conceic ¸˜ao S˜ao Jos´e dos Campos – SP June 2\"}]",
+  "entrada": {
+    "objetivo": "# Instruções do agente\n\nEdite este arquivo antes de rodar. Ele é seu painel principal de comando.\nO agente nunca sobrescreve este arquivo automaticamente.\n\n## Configuração\n\n- modo de pesquisa: focada\n- ano mínimo: 2025\n- resultados por consulta: 10\n- trabalhos simultâneos: 1\n- fonte acadêmica principal: openalex\n- fontes acadêmicas auxiliares: crossref, semantic_scholar\n- modelo ia: openrouter\n- modelo openrouter: openai/gpt-oss-120b\n- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M\n- fila openrouter: openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free\n\nUse `modo de pesquisa: geral` para voltar ao fluxo exploratório de lacunas e\npropostas. Use `modo de pesquisa: focada` para produzir estado da arte,\nintrodução e fundamentação teórica rastreáveis.\n\n## Variáveis de busca\n\n- domínio: smart cities, urban computing, public administration, digital public services\n- tecnologia: self-sovereign identity, decentralized identity, verifiable credentials, decentralized identifiers, attribute-based encryption, homomorphic encryption\n- problema: citizen actions, administrative entity actions, transmission security, processing security, storage security, revocation, credential recovery, loss of access, selective disclosure, privacy-preserving access control, interoperability\n- contexto: smart city services, public sector, citizen identity, cross-organization data sharing, IoT services, urban data governance\n\n## Consultas iniciais\n\n- self sovereign identity smart cities security verifiable credentials\n- decentralized identity smart city services privacy access control\n- verifiable credentials public sector smart cities interoperability\n- attribute based encryption smart city IoT data sharing access control\n- homomorphic encryption smart cities privacy preserving identity\n- blockchain decentralized identity IoT smart cities access control\n\n## Consultas referenciais obrigatórias\n\nEstas buscas servem para encontrar as melhores referências conceituais, e não\napenas trabalhos já presentes no acervo. Para definições, priorizar padrões\nformais, trabalhos seminais e surveys reconhecidos. Se as melhores fontes não\nestiverem no acervo, o agente deve buscá-las, registrá-las e só então usar as\ncitações conceituais.\n\n- smart city definition seminal survey urban computing\n- self-sovereign identity principles decentralized identity survey\n- W3C decentralized identifiers DID core verifiable credentials standard\n- attribute-based encryption original paper survey ciphertext-policy ABE\n- homomorphic encryption original paper survey privacy preserving computation\n- verifiable credentials revocation status list survey\n\n## Consultas de validação de propostas\n\nEstas buscas confrontam as propostas atuais com trabalhos acadêmicos recentes,\nfora do acervo já baixado. Uma proposta só deve ser mantida como promissora se\nas buscas específicas não encontrarem trabalho que já resolva exatamente a\nmesma lacuna. Se encontrarem algo muito próximo, o agente deve restringir,\nreformular ou descartar a proposta.\n\n- self-sovereign identity smart cities verifiable credentials revocation blockchain\n- verifiable credentials recovery decentralized identity smart cities secret sharing\n- attribute-based encryption verifiable credentials IoT smart cities access control\n- homomorphic encryption decentralized identity IoT smart cities privacy preserving\n- blockchain attribute-based encryption SSI revocation IoT\n\n## Objetivo da pesquisa focada\n\nRevisa",
+    "trabalhos": [
+      {
+        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "titulo": "Danilo_TCC_final",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "problema": "autenticação e controle de acesso em cidades inteligentes",
+        "solucao": "modelo de gestão de identidades baseado em blockchain para Cidades Inteligentes, utilizando Identidades Autosoberanas (SSI)",
+        "avaliacao": "experimentos mostram latência inferior a 500 ms por operação, indicando viabilidade prática",
+        "limites": "Não identificado nas fichas/trechos disponíveis.",
+        "possibilidades": "Incluir suporte a credenciais verificáveis com revogação baseada em status list off‑chain, permitindo escalabilidade maior e auditoria eficiente das revogações em ambientes de IoT nas cidades inteligentes.",
+        "fichas_amostradas": [
+          {
+            "id": "4d0d92e96ed42493301d",
+            "pagina": 1,
+            "resumo": "Trabalho de conclusão de curso da Universidade Federal do Maranhão que propõe autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
+            "evidencias": [
+              {
+                "afirmacao": "O trabalho aborda autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+                "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes"
+              },
+              {
+                "afirmacao": "O estudo está inserido no contexto de cidades inteligentes.",
+                "citacao": "Cidades Inteligentes"
+              }
+            ]
+          },
+          {
+            "id": "4af4e95bcf402163cf78",
+            "pagina": 2,
+            "resumo": "O trabalho de Danilo Isaque Sousa Maia, apresentado à UFMA em 2025, propõe um modelo de autenticação e controle de acesso para cidades inteligentes baseado em blockchain e identidades autosoberanas, visando melhorar a segurança e a gestão de identidade dos cidadãos.",
+            "evidencias": [
+              {
+                "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+                "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "introducao": [
+      "As cidades inteligentes emergem como ecossistemas urbanos onde tecnologias de informação e comunicação são integradas à infraestrutura física para melhorar a eficiência dos serviços públicos, a qualidade de vida dos cidadãos e a sustentabilidade ambiental. Não identificado nas fontes lidas.",
+      "Um dos desafios centrais desses ambientes é a gestão segura e confiável da identidade digital dos cidadãos, que precisa suportar múltiplas interações com serviços públicos e privados, ao mesmo tempo em que garante privacidade e controle sobre os dados pessoais. Não identificado nas fontes lidas.",
+      "A identidade autossoberana (SSI) tem sido proposta como uma alternativa descentralizada que coloca o cidadão no controle de suas credenciais, eliminando a dependência de autoridades centralizadas. Essa abordagem foi adotada no modelo de autenticação e controle de acesso para cidades inteligentes descrito por Danilo Maia, que combina SSI com blockchain para prover confiança distribuída [4d0d92e96ed42493301d].",
+      "A justificativa para investigar SSI em contextos urbanos reside na necessidade de soluções que permitam interoperabilidade entre diferentes serviços, reduzam vetores de ataque associados a bases de dados centralizadas e atendam a requisitos regulatórios de proteção de dados. O trabalho de Danilo Maia destaca a relevância desses aspectos ao situar sua proposta no cenário de cidades inteligentes [4af4e95bcf402163cf78].",
+      "O objetivo geral deste estudo é revisar o estado da arte da aplicação da identidade autossoberana do cidadão em cidades inteligentes, mapeando as ações de cidadãos e entidades administrativas ao longo de todo o ciclo de vida das credenciais digitais. Não identificado nas fontes lidas.",
+      "Objetivos específicos incluem: (i) identificar atores e processos envolvidos em cada fase do ciclo de credenciais; (ii) analisar riscos de segurança e privacidade associados; (iii) compilar requisitos de interoperabilidade e governança; e (iv) apontar lacunas de pesquisa, especialmente em revogação e recuperação de acesso. Não identificado nas fontes lidas.",
+      "A estrutura do artigo segue a sequência: introdução, fundamentação teórica (com sete subseções que abordam conceitos e relações), mapa detalhado do ciclo de vida das credenciais, discussão de lacunas e propostas de pesquisa, e considerações finais. Não identificado nas fontes lidas."
+    ],
+    "fundamentacao": {
+      "cidades_inteligentes_e_atores": [
+        "Cidades inteligentes são caracterizadas por redes de sensores, plataformas de dados abertos e serviços digitais que envolvem múltiplos atores, como cidadãos, órgãos públicos, provedores de serviços privados e operadores de infraestrutura de IoT. Não identificado nas fontes lidas.",
+        "A interação entre esses atores gera fluxos de dados que requerem mecanismos de autenticação, autorização e auditoria para garantir a confiabilidade dos serviços oferecidos. Não identificado nas fontes lidas."
+      ],
+      "identidade_digital_e_ssi": [
+        "Identidade digital refere‑se ao conjunto de atributos que permitem a identificação de um agente em ambientes computacionais; a SSI propõe que esses atributos sejam geridos pelo próprio usuário, sem intermediários centralizados. Essa perspectiva foi adotada no modelo de Danilo Maia, que utiliza carteiras digitais controladas pelos cidadãos [4d0d92e96ed42493301d].",
+        "A descentralização traz benefícios de resiliência e autonomia, porém introduz desafios de gerenciamento de chaves, revogação de credenciais e interoperabilidade entre diferentes domínios de serviço. Não identificado nas fontes lidas."
+      ],
+      "did_e_credenciais_verificaveis": [
+        "Decentralized Identifiers (DIDs) são identificadores globais resolvíveis que apontam para documentos de identidade controlados pelo proprietário, enquanto Verifiable Credentials (VCs) são declarações assinadas digitalmente que podem ser verificadas por terceiros sem revelar informações adicionais. Não identificado nas fontes lidas.",
+        "No contexto de cidades inteligentes, DIDs e VCs permitem que cidadãos provem atributos (ex.: idade, residência) a serviços públicos sem expor dados desnecessários, facilitando o princípio de divulgação seletiva. Não identificado nas fontes lidas."
+      ],
+      "autenticacao_e_controle_de_acesso": [
+        "O modelo proposto por Danilo Maia emprega blockchain como camada de registro imutável para validar transações de autenticação e aplicar políticas de controle de acesso baseadas em credenciais verificáveis [4af4e95bcf402163cf78].",
+        "Embora a blockchain ofereça transparência e resistência à censura, seu desempenho pode ser limitado por latência e custos de transação, exigindo soluções híbridas que combinam ledger público e privado. Não identificado nas fontes lidas."
+      ],
+      "seguranca_e_privacidade_no_ciclo_de_dados": [
+        "A segurança ao longo do ciclo de vida das credenciais inclui proteção contra interceptação durante a transmissão, integridade no processamento e confidencialidade no armazenamento. Danilo Maia aponta que a adoção de SSI reduz a superfície de ataque ao eliminar bases de dados centrais de identidade [4d0d92e96ed42493301d].",
+        "Entretanto, a privacidade ainda depende de mecanismos de divulgação seletiva e de revogação eficiente, que não foram plenamente abordados no trabalho analisado, indicando lacunas a serem investigadas. Não identificado nas fontes lidas."
+      ],
+      "interoperabilidade_e_governanca": [
+        "Interoperabilidade requer padrões abertos (ex.: W3C DID, VC) e políticas de governança que definam papéis, responsabilidades e processos de auditoria entre diferentes entidades municipais e fornecedores de tecnologia. Não identificado nas fontes lidas.",
+        "A ausência de um modelo de governança unificado pode gerar fragmentação de identidades digitais, dificultando a integração de serviços transversais como mobilidade, saúde e energia. Não identificado nas fontes lidas."
+      ],
+      "revogacao_e_recuperacao_de_acesso": [
+        "A revogação de credenciais é crítica para impedir o uso indevido após comprometimento; Danilo Maia sugere a extensão de seu modelo com listas de status off‑chain, embora ainda não tenha implementado tal mecanismo [4af4e95bcf402163cf78].",
+        "A recuperação de acesso perdido, por exemplo por esquecimento de chaves, permanece um ponto aberto, pois soluções como secret sharing ou recuperação baseada em autoridades confiáveis ainda não foram exploradas no contexto apresentado. Não identificado nas fontes lidas."
+      ]
+    },
+    "mapa_ciclo_credencial": [
+      {
+        "fase": "emissao",
+        "descricao": "O cidadão solicita a emissão de uma credencial verificável por meio de uma carteira digital SSI, apresentando documentos comprobatórios ao órgão emissor; o órgão valida os documentos e registra o DID associado no ledger blockchain. Riscos incluem falsificação de documentos e comprometimento da chave privada do cidadão. O estado da arte demonstra protótipos de emissão baseada em blockchain, mas carece de padrões de auditoria para autoridades emissores. Não identificado nas fontes lidas."
+      },
+      {
+        "fase": "apresentacao_verificacao",
+        "descricao": "Ao acessar um serviço urbano (ex.: transporte público), o cidadão apresenta a credencial via protocolo de apresentação seletiva; o verificador consulta a blockchain para confirmar a assinatura e verifica a revogação usando a lista de status. Riscos envolvem replay attacks e vazamento de atributos não necessários. Danilo Maia descreve a utilização de VCs para controle de acesso, mas não detalha mecanismos de apresentação seletiva. Não identificado nas fontes lidas."
+      },
+      {
+        "fase": "transmissao",
+        "descricao": "A credencial é transmitida entre dispositivos (ex.: smartphone do cidadão e leitor IoT) usando canais criptografados (TLS ou protocolos de camada de aplicação). A principal ameaça é a interceptação de tráfego que poderia revelar metadados. Não identificado nas fontes lidas."
+      },
+      {
+        "fase": "processamento",
+        "descricao": "O serviço processa a credencial para autorizar a ação solicitada, aplicando políticas de acesso baseadas em atributos (ex.: idade > 18). O processamento pode ser vulnerável a ataques de lógica ou manipulação de políticas. Danilo Maia indica que seu modelo suporta verificação de políticas, porém não especifica técnicas de proteção contra manipulação. Não identificado nas fontes lidas."
+      },
+      {
+        "fase": "armazenamento",
+        "descricao": "Credenciais emitidas podem ser armazenadas de forma descentralizada na carteira do cidadão ou em repositórios seguros controlados por entidades públicas. Riscos incluem perda de chave privada e comprometimento de dispositivos de armazenamento. O modelo de Danilo Maia utiliza blockchain para registro, mas não aborda estratégias de backup ou recuperação de chaves. Não identificado nas fontes lidas."
+      },
+      {
+        "fase": "revogacao",
+        "descricao": "Quando uma credencial é comprometida ou expirada, o emissor atualiza a lista de status (status list) na blockchain, tornando-a inválida para futuras verificações. Riscos incluem atrasos na propagação da revogação e inconsistência entre nós. Danilo Maia propõe a adoção de listas de status off‑chain como futuro aprimoramento, mas ainda não há implementação prática. Não identificado nas fontes lidas."
+      },
+      {
+        "fase": "recuperacao_de_acesso",
+        "descricao": "Caso o cidadão perca o acesso à sua carteira (ex.: perda do dispositivo), um protocolo de recuperação baseado em secret sharing ou autoridades de confiança pode ser acionado para restaurar a chave privada. Riscos incluem a possibilidade de comprometimento das partes de recuperação. O trabalho analisado não apresenta solução concreta para recuperação de acesso, indicando uma lacuna de pesquisa. Não identificado nas fontes lidas."
+      }
+    ],
+    "fontes_usadas": [
+      "4d0d92e96ed42493301d",
+      "4af4e95bcf402163cf78"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-20T23:34:02"
+}

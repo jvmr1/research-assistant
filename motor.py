@@ -35,6 +35,8 @@ import requests
 _OPENROUTER_LOCK = threading.Lock()
 _OPENROUTER_PROXIMA_CHAMADA = 0.0
 _OLLAMA_INICIADO_PELO_AGENTE = None
+_SEMANTIC_SCHOLAR_LOCK = threading.Lock()
+_SEMANTIC_SCHOLAR_PROXIMA_CHAMADA = 0.0
 TAMANHO_TRECHO = 11000
 MAX_TRECHOS_TEXTO_COMPLETO = 16
 
@@ -47,6 +49,7 @@ DECISOES_PRELEITURA_FINAIS = {
     "precisa_texto_melhor",
 }
 DECISOES_APROVADAS_PARA_LEITURA = {"ler_integralmente"}
+PASTAS_TEXTOS_LOCAIS = ("pdfs", "exemplos")
 
 
 
@@ -302,6 +305,38 @@ def lento(funcao, *args, descricao=None, intervalo=10, **kwargs):
                 aviso = time.monotonic()
 
 
+def semantic_scholar_headers():
+    chave_api = os.environ.get("SEMANTIC_SCHOLAR_API_KEY") or os.environ.get("S2_API_KEY")
+    return {"x-api-key": chave_api} if chave_api else {}
+
+
+def semantic_scholar_get(url, **kwargs):
+    """Chamada ao Semantic Scholar respeitando limite de 1 req/s.
+
+    A chave acadêmica aumenta confiabilidade, mas o limite informado pelo usuário
+    é cumulativo entre endpoints; por isso serializamos e espaçamos todas as
+    chamadas Semantic Scholar feitas pelo agente.
+    """
+    global _SEMANTIC_SCHOLAR_PROXIMA_CHAMADA
+    headers = dict(kwargs.pop("headers", {}) or {})
+    headers.update(semantic_scholar_headers())
+    with _SEMANTIC_SCHOLAR_LOCK:
+        resposta = None
+        for tentativa in range(2):
+            espera = _SEMANTIC_SCHOLAR_PROXIMA_CHAMADA - time.monotonic()
+            if espera > 0:
+                time.sleep(espera)
+            resposta = requests.get(url, headers=headers, **kwargs)
+            _SEMANTIC_SCHOLAR_PROXIMA_CHAMADA = time.monotonic() + 1.05
+            if resposta.status_code != 429 or tentativa:
+                return resposta
+            retry_after = resposta.headers.get("Retry-After")
+            pausa = float(retry_after) if retry_after and retry_after.replace(".", "", 1).isdigit() else 2.0
+            log(f"Semantic Scholar em limite 429; aguardando {pausa:.1f}s antes de uma única nova tentativa.")
+            time.sleep(pausa)
+        return resposta
+
+
 def gerar(modelo, orientacao, tarefa, dados, esquema=None):
     if modelo_openrouter_invalido(modelo):
         modelo = "openai/gpt-oss-120b"
@@ -314,6 +349,7 @@ def gerar(modelo, orientacao, tarefa, dados, esquema=None):
     )
     if len(sistema) + len(tarefa) + len(json.dumps(dados, ensure_ascii=False)) > 26000:
         raise ValueError("Contexto grande demais. Encurte as instruções; nada foi truncado silenciosamente.")
+    limite_saida = 6000 if 'EXEMPLOS DE FORMA, NÃO FONTES' in tarefa else 3000
     if eh_openrouter(modelo):
         api_key = os.environ.get("OPENROUTER_API_KEY")
         modelo_openrouter = modelo.replace("openrouter/", "", 1)
@@ -333,19 +369,25 @@ def gerar(modelo, orientacao, tarefa, dados, esquema=None):
             ],
             "response_format": {"type": "json_object"},
             "temperature": 0.1,
-            "max_tokens": 3000,
+            "max_tokens": limite_saida,
         }
         log(f"IA remota: OpenRouter / {modelo_openrouter}")
-        resposta = requests.post(
-            "https://openrouter.ai/api/v1/chat/completions",
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
-                "X-OpenRouter-Title": "Agente de revisão de literatura",
-            },
-            json=corpo,
-            timeout=(10, 1200),
-        )
+        try:
+            resposta = requests.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json",
+                    "X-OpenRouter-Title": "Agente de revisão de literatura",
+                },
+                json=corpo,
+                timeout=(10, 180),
+            )
+        except requests.RequestException as erro:
+            raise ModeloIndisponivel(
+                modelo_openrouter,
+                f"timeout ou falha de rede após limite de 180s: {str(erro)[:180]}",
+            ) from erro
         if getattr(resposta, "status_code", 200) == 429:
             retry_after = getattr(resposta, "headers", {}).get("Retry-After", "")
             try:
@@ -405,8 +447,8 @@ def gerar(modelo, orientacao, tarefa, dados, esquema=None):
         "model": modelo, "system": sistema,
         "prompt": tarefa + "\nMATERIAL:\n" + json.dumps(dados, ensure_ascii=False),
         "format": esquema or "json", "stream": True, **({"think": False} if moderno else {}),
-        "options": {"temperature": 0.7 if moderno else 0.1, "num_ctx": 16384, "num_predict": 3000},
-    }, stream=True, timeout=(10, 1200)) as resposta:
+        "options": {"temperature": 0.7 if moderno else 0.1, "num_ctx": 16384, "num_predict": limite_saida},
+    }, stream=True, timeout=(10, 180)) as resposta:
         if getattr(resposta, "status_code", 200) == 404:
             raise ModeloIndisponivel(modelo, "modelo local não encontrado no Ollama; rode `ollama pull " + modelo + "` ou remova a reserva local", definitivo=True)
         try:
@@ -520,8 +562,80 @@ class Pesquisa:
             self.instrucoes, self.cfg, self.revisao = texto, cfg, revisao
             gravar(self.root / "dados/orientacoes" / f"{revisao}.md", texto)
             log("Orientações carregadas. As análises anteriores ficam preservadas no histórico.")
+        self.reabrir_preleituras_com_texto_local()
+        self.reabrir_exemplos_para_leitura_integral()
         self.aplicar_feedback_propostas()
         return cfg
+
+    def eh_exemplo_local(self, artigo):
+        return artigo.get("fonte") == "PDF de exemplo fornecido pelo pesquisador"
+
+    def reabrir_exemplos_para_leitura_integral(self):
+        """Garante que trabalhos em exemplos/ sejam lidos, não apenas usados como contexto.
+
+        Nesta etapa os exemplos são sementes da pesquisa. Mesmo que a pré-leitura
+        considere um TCC/dissertação apenas contextual, queremos uma nota limpa
+        para cada arquivo e um brainstorm comparativo posterior.
+        """
+        alterou = False
+        for artigo in self.artigos:
+            if not self.eh_exemplo_local(artigo):
+                continue
+            if artigo.get("sintese_artigo", {}).get("revisao") == self.revisao:
+                continue
+            if artigo.get("leitura_agente", {}).get("feitos"):
+                continue
+            pre = artigo.get("pre_leitura_agente", {})
+            if pre.get("revisao") == self.revisao and pre.get("decisao") != "ler_integralmente":
+                artigo["pre_leitura_agente"] = {
+                    "revisao": self.revisao,
+                    "decisao": "ler_integralmente",
+                    "decisao_original": pre.get("decisao"),
+                    "justificativa": (
+                        "PDF da pasta exemplos/ é semente obrigatória do brainstorm; "
+                        "será lido integralmente mesmo quando a pré-leitura o classificar como contexto."
+                    ),
+                    "evidencias": pre.get("evidencias", []),
+                }
+                ident = chave(["preleitura", self.revisao, artigo["id_openalex"], artigo.get("pdf_local"), artigo.get("texto_local")])
+                self.estado.get("tarefas", {}).pop(ident, None)
+                artigo["revisoes_processadas"] = [
+                    r for r in artigo.get("revisoes_processadas", [])
+                    if r != self.revisao
+                ]
+                alterou = True
+                log(f"Exemplo reaberto para leitura integral: {artigo['nome_local']}.")
+        if alterou:
+            self.salvar()
+
+    def reabrir_preleituras_com_texto_local(self):
+        """Recoloca no funil trabalhos antigos marcados como texto insuficiente.
+
+        Houve versões que classificavam HTML/PDF local como `precisa_texto_melhor`
+        quando não achavam os títulos Introduction/Conclusion. Se o arquivo está
+        salvo localmente, a retomada deve tentar a leitura de novo em vez de
+        manter o trabalho eternamente em "sem proposta".
+        """
+        alterou = False
+        for artigo in self.artigos:
+            pre = artigo.get("pre_leitura_agente", {})
+            if pre.get("revisao") != self.revisao or pre.get("decisao") != "precisa_texto_melhor":
+                continue
+            if artigo.get("leitura_agente", {}).get("feitos") or artigo.get("sintese_artigo", {}).get("revisao") == self.revisao:
+                continue
+            local = artigo.get("pdf_local") or artigo.get("texto_local")
+            if not local:
+                continue
+            path = (self.root / local).resolve()
+            if not path.exists():
+                continue
+            artigo.pop("pre_leitura_agente", None)
+            ident = chave(["preleitura", self.revisao, artigo["id_openalex"], artigo.get("pdf_local"), artigo.get("texto_local")])
+            self.estado.get("tarefas", {}).pop(ident, None)
+            alterou = True
+            log(f"Pré-leitura reaberta com texto local: {artigo['nome_local']}.")
+        if alterou:
+            self.salvar()
 
     def tarefa(self, identificador, acao):
         tarefa = self.estado["tarefas"].get(identificador, {})
@@ -533,9 +647,10 @@ class Pesquisa:
             'localhost:11434/api/generate', 'api/generate', 'Nenhum modelo respondeu',
             'modelo local', 'Ollama', 'OPENROUTER_API_KEY', 'nao retornou um objeto JSON',
             'não retornou um objeto JSON', 'Modelo indisponivel', 'Modelo indisponível'))
-        if erro_modelo:
-            # Erro de IA/modelo pode ser resolvido por troca de provedor, download
-            # de modelo ou correção de código. Não deixe isso congelar uma triagem.
+        if erro_modelo and tarefa.get("definitivo") and time.time() - tarefa.get("avisado_em", 0) > 3600:
+            # Erro definitivo antigo de modelo pode ser resolvido por troca de
+            # provedor ou correção de configuração. Pendências temporizadas
+            # precisam ser respeitadas para não repetir a mesma chamada em loop.
             self.estado["tarefas"].pop(identificador, None)
             tarefa = {}
         if '403' in tarefa.get('erro', '') or '401' in tarefa.get('erro', ''):
@@ -620,6 +735,16 @@ class Pesquisa:
                 continue
             avaliacao = avaliacoes.get(meta.get("id"), {})
             valor = avaliacao.get("avaliacao", "pendente")
+            if valor == "descartar":
+                obj = ler_json(self.root / "dados/propostas" / f"{meta['id']}.json", {})
+                if obj.get("avaliacao_humana") == "descartar" and meta.get("avaliacao_humana") == "descartar":
+                    continue
+                obj["avaliacao_humana"] = "descartar"
+                obj["comentario_humano"] = avaliacao.get("comentario", "")
+                meta["avaliacao_humana"] = "descartar"
+                json_gravar(self.root / "dados/propostas" / f"{meta['id']}.json", obj)
+                log("Proposta descartada por feedback humano: " + meta.get("titulo", ""))
+                continue
             if valor not in {"gostei", "muito_interessante", "interessante"}:
                 continue
             assinatura = chave([meta.get("id"), valor, avaliacao.get("comentario", "")])
@@ -677,7 +802,7 @@ class Pesquisa:
         encontrados = []
         fontes = []
         principal = (self.cfg.get("fonte_academica_principal") or "openalex").lower().replace("-", "_")
-        auxiliares = {f.lower().replace("-", "_") for f in self.cfg.get("fontes_academicas_auxiliares", [])}
+        auxiliares = [f.lower().replace("-", "_") for f in self.cfg.get("fontes_academicas_auxiliares", [])]
         ordem = []
         for fonte in [principal, *auxiliares]:
             if fonte in {"semantic", "semantic_scholar", "semanticscholar"}:
@@ -690,7 +815,7 @@ class Pesquisa:
                 ordem.append(fonte)
 
         def buscar_semantic_scholar():
-            resposta = lento(requests.get, "https://api.semanticscholar.org/graph/v1/paper/search", params={
+            resposta = lento(semantic_scholar_get, "https://api.semanticscholar.org/graph/v1/paper/search", params={
                 "query": consulta,
                 "offset": (pagina - 1) * self.cfg["resultados_por_consulta"],
                 "limit": self.cfg["resultados_por_consulta"],
@@ -903,6 +1028,10 @@ class Pesquisa:
             pendentes = [a for a in self.artigos if not self.trabalho_fechado_no_ciclo(a)]
         if not pendentes:
             return None
+        pendentes = sorted(pendentes, key=lambda a: (
+            0 if a.get("fonte") == "PDF de exemplo fornecido pelo pesquisador" else 1,
+            a.get("nome_local", ""),
+        ))
         numero = 1 + len([l for l in self.estado.get("lotes", [])
                           if l.get("revisao") == self.revisao])
         escolhido = pendentes[0]
@@ -929,17 +1058,16 @@ class Pesquisa:
         log(f"Trabalho {lote['numero']} concluído; o próximo trabalho poderá ser escolhido.")
 
     def modelos_ia(self):
-        """Usa um modelo principal fixo e Ollama apenas como reserva técnica."""
+        """Usa a fila OpenRouter na ordem configurada e Ollama como reserva."""
         modelos = []
         modo_original = (self.cfg.get("modelo_ia") or "ollama").strip()
         modo = modo_original.lower()
         if modo in {"openrouter", "remoto", "auto"} or modelo_openrouter_invalido(modo_original):
-            modelo = self.cfg.get("modelo_openrouter") or (self.cfg.get("modelos_openrouter") or [""])[0]
-            if modelo_openrouter_invalido(modelo):
-                modelo = "openai/gpt-oss-120b"
-            if modelo and os.environ.get("OPENROUTER_API_KEY"):
-                modelos.append(modelo)
-            elif modelo:
+            fila = self.cfg.get("modelos_openrouter") or [self.cfg.get("modelo_openrouter") or "openai/gpt-oss-120b"]
+            fila = [m for m in fila if m and not modelo_openrouter_invalido(m)]
+            if os.environ.get("OPENROUTER_API_KEY"):
+                modelos.extend(fila)
+            elif fila:
                 log("OPENROUTER_API_KEY ausente; usando Ollama local como reserva.")
         elif eh_openrouter(modo_original):
             if os.environ.get("OPENROUTER_API_KEY"):
@@ -1097,6 +1225,18 @@ class Pesquisa:
                                                'justificativa': 'Nao ha texto integral aberto baixado para fundamentar proposta. Trabalho registrado e descartado operacionalmente; o agente seguira buscando outros.',
                                                'evidencias': []}
                     return True
+                if self.eh_exemplo_local(a):
+                    a['pre_leitura_agente'] = {
+                        'revisao': self.revisao,
+                        'decisao': 'ler_integralmente',
+                        'justificativa': (
+                            'PDF da pasta exemplos/ usado como semente da pesquisa; leitura integral obrigatória '
+                            'para gerar nota limpa e alimentar o brainstorm de propostas.'
+                        ),
+                        'evidencias': [],
+                    }
+                    log(f"Pré-leitura: ler_integralmente — exemplo local obrigatório: {a['nome_local']}")
+                    return True
                 try:
                     trechos = self.trechos(a)
                     amostra = extrair_preleitura_trechos(trechos)
@@ -1117,7 +1257,11 @@ class Pesquisa:
                 log(f"Pré-leitura de introdução/conclusão: {a['nome_local']}")
                 obj = lento(gerar_com_fallback, self.modelos_ia(), self.instrucoes,
                             'Faça a segunda triagem do funil usando introdução/conclusão quando disponíveis. Decida se vale leitura integral. '
-                            'Use ler_integralmente para alinhado; ler_com_resumo quando só há resumo mas ele é útil; manter_como_contexto para periférico; descartar para fora de escopo; precisa_texto_melhor quando o material é insuficiente. JSON no esquema.',
+                            'Esta é uma revisão exploratória: favoreça ler_integralmente quando o trabalho puder sustentar uma extensão, '
+                            'adaptação, combinação, replicação, comparação ou avaliação relacionada a qualquer parte do escopo. '
+                            'Não exija que o mesmo artigo cubra simultaneamente IoT, cidades inteligentes, blockchain, SSI, ABE e interoperabilidade. '
+                            'Use manter_como_contexto apenas quando ele realmente não puder fundamentar nenhuma contribuição; descartar para fora '
+                            'do escopo; precisa_texto_melhor somente quando a extração estiver ilegível ou materialmente incompleta. JSON no esquema.',
                             {'titulo': a.get('titulo'), 'triagem_titulo_resumo': a.get('triagem_agente', {}), 'amostra': amostra}, esquema=esquema,
                             descricao=f"pré-leitura {a['nome_local']}")
                 self.registrar_meta_ia(obj)
@@ -1138,6 +1282,8 @@ class Pesquisa:
                 }
                 decisao = bruta if bruta in permitidas else aliases.get(bruta)
                 tem_texto_integral = bool(a.get('pdf_local') or a.get('texto_local'))
+                tamanho_extraido = sum(len(t.get('texto', '')) for t in trechos)
+                texto_integral_legivel = tem_texto_integral and tamanho_extraido >= 1500
                 if decisao not in permitidas:
                     decisao = 'precisa_texto_melhor' if tem_texto_integral else 'descartar_sem_texto_integral'
                     obj['decisao_original'] = obj.get('decisao')
@@ -1152,6 +1298,18 @@ class Pesquisa:
                         'Havia texto integral local, mas a resposta da IA pediu descarte por falta de texto. '
                         'O trabalho foi marcado para revisão com texto melhor para não registrar uma causa falsa.'
                     )
+                if (decisao == 'precisa_texto_melhor' and texto_integral_legivel
+                        and a.get('triagem_agente', {}).get('classificacao') in {'priorizar', 'revisar', 'sem_resumo'}):
+                    # A extração acima já confirmou que existe amostra legível do
+                    # texto integral. Não deixe uma decisão contraditória da IA
+                    # encerrar justamente os trabalhos mais alinhados ao escopo.
+                    obj['decisao_original'] = obj.get('decisao')
+                    decisao = 'ler_integralmente'
+                    obj['justificativa'] = (
+                        'PDF integral local e legível confirmado; a triagem anterior manteve o trabalho '
+                        'no funil exploratório. A leitura integral foi aprovada apesar do pedido contraditório '
+                        'por texto melhor. Justificativa original: ' + str(obj.get('justificativa') or '')
+                    )[:700]
                 obj['decisao'] = decisao
                 a['pre_leitura_agente'] = dict(obj, revisao=self.revisao)
                 log(f"Pré-leitura: {obj['decisao']} — {obj.get('justificativa','')[:220]}")
@@ -1227,7 +1385,7 @@ class Pesquisa:
             consultas.append(("https://api.semanticscholar.org/graph/v1/paper/search",
                               {"query": titulo, "limit": 3, "fields": campos, "openAccessPdf": ""}))
         for url, params in consultas:
-            resposta = lento(requests.get, url, params=params, timeout=30,
+            resposta = lento(semantic_scholar_get, url, params=params, timeout=30,
                             descricao=f"Semantic Scholar texto {artigo['nome_local']}")
             if getattr(resposta, "status_code", 200) == 404:
                 continue
@@ -1364,24 +1522,46 @@ class Pesquisa:
 
     def importar_pdfs(self):
         conhecidos = {Path(a.get("pdf_local", "")).name for a in self.artigos if a.get("pdf_local")}
-        for path in sorted((self.root / "pdfs").glob("*.pdf")):
-            if path.name in conhecidos:
-                continue
-            existente = next((a for a in self.artigos if a["nome_local"] == path.stem), None)
-            if existente:
-                existente["pdf_local"] = path.relative_to(self.root).as_posix()
-                continue
-            nome = "Local_" + chave(path.name)
-            self.artigos.append({"id_openalex": "local:" + chave(path.name), "nome_local": nome,
-                                 "titulo": path.stem, "ano": None, "resumo": None, "fonte": "PDF fornecido pelo pesquisador",
-                                 "pdf_local": path.relative_to(self.root).as_posix(), "status": "triagem_pendente", "url": ""})
+        fontes = [
+            ("pdfs", "PDF fornecido pelo pesquisador", "Local_"),
+            ("exemplos", "PDF de exemplo fornecido pelo pesquisador", "Exemplo_"),
+        ]
+        consulta_exemplo = (
+            "segurança em cidades inteligentes identidade autosoberana "
+            "self-sovereign identity attribute-based encryption homomorphic encryption"
+        )
+        for pasta, fonte, prefixo in fontes:
+            for path in sorted((self.root / pasta).glob("*.pdf")):
+                if path.name in conhecidos:
+                    continue
+                relativo = path.relative_to(self.root).as_posix()
+                existente = next((a for a in self.artigos if a["nome_local"] == path.stem), None)
+                if existente:
+                    existente["pdf_local"] = relativo
+                    existente.setdefault("fonte", fonte)
+                    conhecidos.add(path.name)
+                    continue
+                nome = prefixo + chave([pasta, path.name])
+                registro = {"id_openalex": f"{pasta}:" + chave(path.name), "nome_local": nome,
+                            "titulo": path.stem, "ano": None, "resumo": None, "fonte": fonte,
+                            "pdf_local": relativo, "status": "triagem_pendente", "url": "",
+                            "consulta": consulta_exemplo if pasta == "exemplos" else "PDF fornecido localmente"}
+                if pasta == "exemplos":
+                    self.artigos.insert(0, registro)
+                else:
+                    self.artigos.append(registro)
+                conhecidos.add(path.name)
         self.salvar()
 
     def trechos(self, artigo):
+        def caminho_local_seguro(relativo, tipo):
+            path = (self.root / relativo).resolve()
+            if not any(path.is_relative_to((self.root / pasta).resolve()) for pasta in PASTAS_TEXTOS_LOCAIS):
+                raise ValueError(f"{tipo} local deve estar dentro de uma destas pastas: " + ", ".join(PASTAS_TEXTOS_LOCAIS) + ".")
+            return path
+
         if artigo.get("texto_local"):
-            path = (self.root / artigo["texto_local"]).resolve()
-            if not path.is_relative_to((self.root / "pdfs").resolve()):
-                raise ValueError("Texto local deve estar dentro da pasta pdfs.")
+            path = caminho_local_seguro(artigo["texto_local"], "Texto")
             cache = self.root / "dados/textos" / (chave(["trechos-v2", TAMANHO_TRECHO, MAX_TRECHOS_TEXTO_COMPLETO, self.estado.get("execucao"), str(path), path.stat().st_size, path.stat().st_mtime_ns]) + ".json")
             if cache.exists():
                 return ler_json(cache, [])
@@ -1400,9 +1580,7 @@ class Pesquisa:
             resumo = self.b.texto_resumo(artigo)
             return [] if resumo == "Resumo não disponível." else [{"pagina": None, "texto": resumo, "tipo": "resumo"}]
         from pypdf import PdfReader
-        path = (self.root / artigo["pdf_local"]).resolve()
-        if not path.is_relative_to((self.root / "pdfs").resolve()):
-            raise ValueError("PDF local deve estar dentro da pasta pdfs.")
+        path = caminho_local_seguro(artigo["pdf_local"], "PDF")
         cache = self.root / "dados/textos" / (chave(["trechos-v2", TAMANHO_TRECHO, MAX_TRECHOS_TEXTO_COMPLETO, self.estado.get("execucao"), str(path), path.stat().st_size, path.stat().st_mtime_ns]) + ".json")
         if cache.exists():
             return ler_json(cache, [])
@@ -1451,7 +1629,11 @@ def principal(base):
     try:
         import pypdf  # noqa: F401
     except ImportError:
-        raise SystemExit("Falta instalar dependências: python -m pip install -r requirements.txt")
+        raise SystemExit(
+            "Falta instalar dependências no Python atual. "
+            "Neste projeto, rode com o ambiente virtual: .venv/bin/python agente.py "
+            "ou instale nele: .venv/bin/python -m pip install -r requirements.txt"
+        )
     for pasta in [base.DATA, base.ARTIGOS, base.PDFS, base.SESSOES, base.PROPOSTAS]:
         pasta.mkdir(parents=True, exist_ok=True)
     if hasattr(base, "garantir_instrucoes_iniciais"):
@@ -1505,6 +1687,3 @@ def principal(base):
             pesquisa.painel()
     finally:
         lock.close()
-
-
-

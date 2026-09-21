@@ -1,0 +1,29 @@
+{
+  "id": "38cf918a123f248ef82e",
+  "revisao": "5f8412cc6e604fb9d78f",
+  "gerado_em": "2026-09-20T22:17:01",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Exemplo_60479560a08f3b4cd724: Integrar identidade autossoberana (SSI) e DIDs para dispositivos e cidadãos, usando wallet",
+  "fontes": [
+    "Exemplo_60479560a08f3b4cd724"
+  ],
+  "problema": "Detalhamento dos requisitos de interoperabilidade organizacional e semântica entre diferentes domínios administrativos.",
+  "hipotese_lacuna": "Detalhamento dos requisitos de interoperabilidade organizacional e semântica entre diferentes domínios administrativos.",
+  "meu_trabalho": "Integrar identidade autossoberana (SSI) e DIDs para dispositivos e cidadãos, usando wallets digitais e verifiable credentials nos fluxos de emissão, apresentação e verificação.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Integrar identidade autossoberana (SSI) e DIDs para dispositivos e cidadãos, usando wallets digitais e verifiable credentials nos fluxos de emissão, apresentação e verificação.",
+  "modo": "artigo",
+  "buscas": [
+    "dissertacao_wesleyFioreze_23_06_2026_anotada limitations future work",
+    "dissertacao_wesleyFioreze_23_06_2026_anotada smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "validacao_estado_da_arte": "pendente: as buscas geradas a partir das tags desta proposta devem ser executadas e os trabalhos retornados precisam ser lidos antes de tratar a lacuna como novidade.",
+  "evidencias_usadas": [
+    "b8fdb35fb7d73dc3651b",
+    "df91d89200211a73c761",
+    "a9a4bdbb3703f579e472"
+  ],
+  "fatos": "O trabalho propõe um framework baseado em blockchain e ABE para compartilhamento seguro de dados IIoT.; O título indica foco em segurança de dados de Internet Industrial das Coisas entre organizações.; Problema de compartilhamento seguro de dados IIoT entre organizações.; Solução baseada em blockchain e ABE.; I would like to express my sincere gratitude to all the people who supported me directly and indirectly during the stages of this project."
+}

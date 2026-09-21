@@ -1,0 +1,40 @@
+{
+  "resumo": "O artigo apresenta o algoritmo PoAh, um consenso leve que reduz o consumo de recursos e o tempo de execução em comparação ao PoW e PoS, tornando‑se adequado para dispositivos IIoT de baixa potência em cenários de cidades inteligentes. Testes em bancada com seis nós demonstram que PoAh valida blocos rapidamente, mantendo a segurança ao integrar a criptografia do PoW.",
+  "perfil": {
+    "problema": "Low-power IoT devices may need help to handle the high processing demands of blockchain consensus methods",
+    "solucao": "The PoAh algorithm implements a less resource and energy‑intensive authentication approach. It is beneficial for resource‑constrained IIoT designs.",
+    "avaliacao": "The authentication time of proposed architecture with different nodes.",
+    "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+    "possibilidades": [
+      "Avaliar o desempenho do PoAh em cenários de mobilidade de dispositivos IoT em cidades inteligentes.",
+      "Integrar mecanismos de identidade auto‑soberana (SSI) aos contratos inteligentes que utilizam PoAh.",
+      "Comparar o PoAh com outros consensos leves (e.g., Proof of Authority, Proof of Stake) em termos de consumo energético.",
+      "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados armazenados na blockchain.",
+      "Testar a arquitetura em ambientes de borda heterogêneos com milhares de nós para validar escalabilidade."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "PoW , which takes about 10 min to validate a single block, is simply not practical for IoT use.",
+      "afirmacao": "PoAh offers a key advantage of reduced execution time without compromising on security."
+    }
+  ],
+  "interpretacao": "O estudo demonstra que o consenso PoAh pode superar as limitações de energia e tempo dos algoritmos tradicionais, oferecendo uma solução viável para a integração de blockchain em dispositivos IIoT de baixa potência, especialmente em ambientes de cidades inteligentes onde a conectividade pode ser limitada.",
+  "duvidas": "Como o PoAh se comporta em escalas muito maiores que o testbed de seis nós? Qual o impacto da dependência de servidores MEC na robustez da solução em áreas com conectividade intermitente?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "87663cda143089a73c92",
+  "artigo": "Asaithambi_2025",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Low-power IoT devices may need help to handle the high processing demands of blockchain consensus methods",
+    "solucao": "The proposed system, evaluated using MATLAB and Hyperledger Fabric, is not only efficient and reliable but also highly cost-effective.",
+    "avaliacao": "The authentication time of proposed architecture with different nodes.",
+    "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+    "possibilidades": "Avaliar o desempenho do PoAh em cenários de mobilidade de dispositivos IoT em cidades inteligentes.; Integrar mecanismos de identidade auto‑soberana (SSI) aos contratos inteligentes que utilizam PoAh.; Comparar o PoAh com outros consensos leves (e.g., Proof of Authority, Proof of Stake) em termos de consumo energético.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados armazenados na blockchain.; Testar a arquitetura em ambientes de borda heterogêneos com milhares de nós para validar escalabilidade.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "406a8d28108451c02b35"
+  }
+}

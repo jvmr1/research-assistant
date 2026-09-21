@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-20T18:17:26",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "André Luiz Almeida Cardoso",
+    "perfil_anterior": {
+      "problema": "without security mechanisms, it becomes impossible to develop and deploy smart city applications.",
+      "solucao": "Arquitetura geral da solução e interações.",
+      "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Investigar como os mecanismos de consenso listados (PBFT, PoA, PoS, etc.) podem ser combinados com SSI para garantir integridade e disponibilidade de credenciais em ambientes IoT; mapear as siglas a uma ontologia unificada que relacione DID, ABE e criptografia homomórfica, facilitando interoperabilidade entre serviços de cidades inteligentes."
+    },
+    "pagina": 13,
+    "texto": "Sumário\nLista de tabelas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . x\nLista de Siglas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi\n1 INTRODUÇÃO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15\n1.1 Contexto Geral . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17\n1.2 Caracterização do Problema . . . . . . . . . . . . . . . . . . . . . . . 17\n1.3 Objetivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18\n1.4 Organização do Trabalho . . . . . . . . . . . . . . . . . . . . . . . . . 18\n2 FUNDAMENTAÇÃO TEÓRICA . . . . . . . . . . . . . . . . . . . . 20\n2.1 Identidades e Gestão de Identidades . . . . . . . . . . . . . . . . . . . 20\n2.1.1 Arquiteturas para Gestão de Identidade . . . . . . . . . . . . . . . . . . . 21\n2.2 A Tecnologia Blockchain . . . . . . . . . . . . . . . . . . . . . . . . . 23\n2.2.1 Características da Blockchain . . . . . . . . . . . . . . . . . . . . . . . . . 24\n2.2.2 Funcionamento . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24\n2.2.3 Principais Algoritmos de Consenso . . . . . . . . . . . . . . . . . . . . . . 25\n2.2.4 Comparativo Entre os Algoritmos de consenso . . . . . . . . . . . . . . . . 28\n2.2.5 Blockchain 2.0 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29\n2.2.6 Contratos Inteligentes . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29\n2.2.7 Tipos de Blockchain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30\n2.2.8 Aplicações de blockchain no Gerenciamento de Identidades . . . . . . . . . 31\n3 TRABALHOS RELACIONADOS . . . . . . . . . . . . . . . . . . . . 33\n3.1 Metodologia para Seleção dos Trabalhos Relacionados . . . . . . . . 33\n3.2 Blockchain-based Identity Management System and Self-sovereign\nIdentity Ecosystem: A comprehensive Survey . . . . . . . . . . . . . 33\n3.3 Resumo dos Trabalhos Relacionados . . . . . . . . . . . . . . . . . . . 34\n3.3.1 A Lightweight Blockchain-Based IoT Identity Management Approach . . . . 34\n3.3.2 Identity Management in IoT Networks Using Blockchain and Smart Contracts 36\n3.3.3 An Identity Management Framework for Internet of Things . . . . . . . . . 37\n3.3.4 Developing an IoT Identity Management System Using Blockchain . . . . . 38\n3.3.5 DAG Blockchain-based Lightweight Authentication and Authorization Scheme\nfor IoT Devices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40\n3.4 Comparação dos Trabalhos Relacionados . . . . . . . . . . . . . . . . 40\n3.4.1 Discussão dos Trabalhos Relacionados . . . . . . . . . . . . . . . . . . . . 42",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho apresenta o sumário do trabalho, indicando capítulos que abordam introdução, contexto, caracterização do problema, objetivos, fundamentos teóricos sobre identidade e blockchain, algoritmos de consenso, aplicações de blockchain em gestão de identidade e um levantamento de trabalhos relacionados, incluindo surveys e propostas leves para IoT.",
+    "perfil": {
+      "problema": "Caracterização do Problema",
+      "solucao": "Arquiteturas para Gestão de Identidade",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "Explorar a integração de algoritmos de consenso (ex.: PBFT, PoA) com SSI para melhorar a disponibilidade de credenciais em ambientes IoT; mapear as siglas do sumário a uma ontologia que relacione DID, ABE e criptografia homomórfica, facilitando a interoperabilidade entre serviços de cidades inteligentes."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O documento contém uma seção dedicada à caracterização do problema.",
+        "citacao": "2.1.2 Caracterização do Problema"
+      },
+      {
+        "afirmacao": "Há um capítulo que revisa algoritmos de consenso de blockchain.",
+        "citacao": "2.2.3 Principais Algoritmos de Consenso"
+      }
+    ],
+    "interpretacao": "O sumário indica que o trabalho pretende construir uma base teórica sólida sobre identidade digital e blockchain, analisando diferentes algoritmos de consenso e apresentando um panorama de soluções existentes para gestão de identidade em IoT.",
+    "duvidas": "Quais critérios foram usados para selecionar os trabalhos relacionados? Como a avaliação de desempenho (ex.: consumo de memória) será conduzida nas seções posteriores?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:17:35"
+}

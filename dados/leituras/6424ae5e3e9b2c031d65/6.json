@@ -1,0 +1,42 @@
+{
+  "resumo": "O trecho descreve duas categorias de contas na Binance Smart Chain (BSC): Externally Owned Accounts (EOAs), que são contas de usuário associadas a um par de chaves criptográficas e identificadas por um endereço de carteira, e Contract Accounts, que são contratos inteligentes controlados por EOAs e executados pela EVM. Explica ainda que aplicações descentralizadas (dApps) utilizam esses contratos para compartilhar dados em redes P2P, permitindo que usuários atualizem informações pessoais sem servidores centralizados, e contextualiza a importância da identidade digital em plataformas digitais.",
+  "perfil": {
+    "problema": "they are usually used to enforce some type of agreement so that all contributors can be certain of the outcome without an intercessor’s involvement.",
+    "solucao": "Smart contracts are written in the BSC and coded with a specific programming language known as Solidity",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": [
+      "Investigar como a separação entre EOAs e Contract Accounts pode ser usada para delegar permissões de acesso finas em dispositivos IoT de cidades inteligentes.",
+      "Avaliar a viabilidade de integrar dApps baseados em BSC com gateways de edge computing para reduzir latência em cenários de controle de acesso em tempo real.",
+      "Explorar mecanismos de revogação de credenciais que combinam a assinatura de transações por EOAs com políticas de acesso armazenadas em contratos inteligentes.",
+      "Propor um modelo híbrido que armazene metadados de identidade off‑chain (ex.: IPFS) e utilize hashes nos contratos para garantir integridade e privacidade."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Externally Owned Accounts (EOAs) are considered user-type accounts (for users) and are linked to a cryptographic key pair created upon account creation.",
+      "afirmacao": "Externally Owned Accounts (EOAs) are considered user-type accounts (for users) and are linked to a cryptographic key pair created upon account creation."
+    },
+    {
+      "citacao": "A smart contract is a kind of account that is controlled and operated by an EOA.",
+      "afirmacao": "A smart contract is a kind of account that is controlled and operated by an EOA."
+    }
+  ],
+  "interpretacao": "O texto esclarece a arquitetura de contas na BSC, distinguindo entre contas de usuário (EOAs) que detêm chaves privadas e contratos inteligentes que executam lógica de negócio. Essa separação permite que dApps operem de forma descentralizada, usando EOAs para autorizar transações e contratos para gerenciar identidade e controle de acesso, o que é relevante para soluções de SSI em cidades inteligentes.",
+  "duvidas": "Como garantir a proteção da chave privada das EOAs em dispositivos IoT com recursos limitados? Qual o impacto de usar BSC, com seu modelo de consenso, na latência de autenticação em cenários de edge computing?",
+  "avisos": [],
+  "id": "c0b45c04f7729b48dcfd",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 7,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "they are usually used to enforce some type of agreement so that all contributors can be certain of the outcome without an intercessor’s involvement.",
+    "solucao": "Smart contracts are written in the BSC and coded with a specific programming language known as Solidity",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar como a separação entre EOAs e Contract Accounts pode ser usada para delegar permissões de acesso finas em dispositivos IoT de cidades inteligentes.; Avaliar a viabilidade de integrar dApps baseados em BSC com gateways de edge computing para reduzir latência em cenários de controle de acesso em tempo real.; Explorar mecanismos de revogação de credenciais que combinam a assinatura de transações por EOAs com políticas de acesso armazenadas em contratos inteligentes.; Propor um modelo híbrido que armazene metadados de identidade off‑chain (ex.: IPFS) e utilize hashes nos contratos para ",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  },
+  "reaproveitada_de": "ad0ae8a32d584f7fbea6"
+}

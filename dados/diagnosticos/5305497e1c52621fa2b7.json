@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T21:08:02",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "SoK: A Taxonomy for Distributed-Ledger-Based Identity Management",
+    "perfil_anterior": {
+      "problema": "limited standardization, interoperability, and poor user experience of current solutions continue to hinder the widespread adoption of secure ledger-based identity systems",
+      "solucao": "Não identificado nas fichas/trechos disponíveis.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar a abordagem com SSI e credenciais verificáveis em edge computing; avaliar desempenho e escalabilidade em cenários de IIoT distribuído; estender dimensões para incluir privacidade, revogação de credenciais e criptografia baseada em atributos."
+    },
+    "pagina": 4,
+    "texto": "rather than merely listing features. The taxonomy\ndevelopment process presented here follows an\niterative approach guided by a meta-characteristic\nthat defines the taxonomy’s focus and scope.\nA. Problem and Objectives\nIn DLT-based IDM, solutions range from fully\non-chain systems to those with minimal blockchain\nintegration. However, there is no structured\nmethod to assess and compare these solutions,\nparticularly regarding critical aspects such as trust\nsources, governance frameworks, and credential\nmanagement. Researchers and practitioners\ndeveloping these solutions often fail to report\nkey dimensions of the architecture, hindering\ncomprehensive evaluation and comparison. This\ntaxonomy addresses this gap by providing a\nclassification framework for researchers and\npractitioners, enabling effective communication\nand comparison of system architectures.\nB. Meta-Characteristic and Approach\nThe meta-characteristic serves as the fundamental\nlens through which the phenomenon is observed and\nclassified, guiding the selection of all dimensions\nand characteristics in the taxonomy. After careful\nconsideration of the research objectives and\ntarget users, the meta-characteristic is defined as:\nSystem Architectures of IDM Solutions utilizing\nDistributed Ledger Technology .\nC. Ending Conditions and Evaluation Goals\nThe taxonomy development follows Nickerson’s\nmethodology [6], employing eight objective\nconditions (covering completeness, consistency,\nuniqueness, and utility) and five subjective\nconditions (addressing conciseness, robustness,\ncomprehensiveness, extendibility, and explanatory\npower). These conditions determine when the\niterative development concludes. The taxonomy\naims to provide a comprehensive framework\nspanning the complete spectrum of DLT-based\nIDM solutions while facilitating conceptual\ncomparability through systematic classification of\nfundamental architectural components.\nThe evaluation criteria for the taxonomy\nare defined as: Provision of a comprehensive\ntaxonomy encompassing the complete spectrum\nof DLT-based IDM solutions and Facilitation of\nconceptual comparability through the identification\nand classification of fundamental architectural\ncomponents.\nV. T AXONOMY DEVELOPMENT\nThis section describes the iterative development\nprocess for creating the taxonomy. The approach\nwas structured and included a literature review,\ndiscussions with an expert panel, and validation\nagainst established taxonomies. Figure 1 illustrates\nthe development and evaluation process.\nA. Literature-Based Development (Iteration 1)\nThe first iteration followed an empirical-to-\nconceptual approach through a structured literature\nreview. The search used the terms ”blockchain”\nOR ”distributed ledger” AND ”identity” in\npublication titles across five databases (IEEE\nXplore, SpringerLink, ACM Digital Library, Wiley\nOnline Library, Science Direct) in October 2024.\nAfter removing duplicates, 440 articles were\nidentified.\nA categorization process was applied to organize\nthe literature into coherent groups, resulting in the\nclassification shown in Table I. The 51 articles in the\n”surveys and reviews” category were set aside for\nlater analysis, while the remaining 390 articles were\ndistributed among four experts for review. Each\nexpert developed their own taxonomy based on their\nshare of articles, guided by the meta-characteristic\ndefined in Section IV-B.\nB. Expert Panel Integration (Iteration 2)\nThe second iteration used an empirical-\nto-conceptual approach to integrate the four\nindependently developed taxonomies. A panel of\nresearchers analyzed similarities, differences, and\nlimitations across these taxonomies, extracting the\nmost important dimensions and characteristics.\nThrough multiple discussions, the panel refined and\nconsolidated these elements into a single, cohesive\ntaxonomy.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve a criação de uma taxonomia para sistemas de identidade baseados em DLT, destacando a ausência de método estruturado para comparar soluções quanto a confiança, governança e gerenciamento de credenciais. A taxonomia, desenvolvida iterativamente segundo a metodologia de Nickerson, busca cobrir todo o espectro de arquiteturas IDM, garantindo completude, consistência e utilidade, e foi validada por revisão de literatura e painel de especialistas.",
+    "perfil": {
+      "problema": "there is no structured method to assess and compare these solutions, particularly regarding critical aspects such as trust sources, governance frameworks, and credential management.",
+      "solucao": "This taxonomy addresses this gap by providing a classification framework for researchers and practitioners, enabling effective communication and comparison of system architectures.",
+      "avaliacao": "The taxonomy aims to provide a comprehensive framework spanning the complete spectrum of DLT-based IDM solutions while facilitating conceptual comparability through systematic classification of fundamental architectural components.",
+      "limites": "Não informado",
+      "possibilidades": "Aplicar a taxonomia ao contexto de IoT em cidades inteligentes; integrar com SSI e credenciais verificáveis em edge computing; avaliar desempenho e escalabilidade em cenários de IIoT distribuído; estender dimensões para incluir privacidade, revogação de credenciais e criptografia baseada em atributos."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "não há método estruturado para avaliar e comparar soluções DLT‑based IDM",
+        "citacao": "there is no structured method to assess and compare these solutions, particularly regarding critical aspects such as trust sources, governance frameworks, and credential management."
+      },
+      {
+        "afirmacao": "a taxonomia busca completude, consistência, unicidade e utilidade",
+        "citacao": "The taxonomy development follows Nickerson’s methodology ... employing eight objective conditions (covering completeness, consistency, uniqueness, and utility) ..."
+      }
+    ],
+    "interpretacao": "O trabalho propõe uma taxonomia como ferramenta de classificação que preenche a lacuna metodológica existente, permitindo que pesquisadores e praticantes comparem arquiteturas de identidade distribuída de forma sistemática e padronizada.",
+    "duvidas": "Quais dimensões específicas de privacidade e revogação de credenciais ainda não foram contempladas? Como a taxonomia se comporta ao ser aplicada a ambientes de edge computing com recursos limitados? Há planos de validar empiricamente a taxonomia em projetos reais de cidades inteligentes?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T21:08:12"
+}

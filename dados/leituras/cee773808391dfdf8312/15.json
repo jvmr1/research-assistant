@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta uma abordagem permissionada baseada em blockchain para autenticação IoT escalável e com preservação de privacidade. Os autores, Dr. Santosh Reddy Addula e Dr. Aitizaz Ali, possuem ampla experiência em IA, ML, IoT, segurança cibernética e blockchain, reforçando a credibilidade da proposta. O trabalho integra avaliação de hash e verificação MAC, mantendo latência inferior aos modelos de referência.",
+  "perfil": {
+    "problema": "privacy-preserving authentication framework tailored for industrial IoT applications",
+    "solucao": "integrates hash evaluation and MAC verification",
+    "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Avaliar a integração de identidade auto‑soberana (SSI) para interoperabilidade entre serviços públicos de cidades inteligentes; testar o modelo em arquiteturas de edge computing; incorporar mecanismos de revogação de credenciais baseados em blockchain; analisar a escalabilidade em ambientes IIoT heterogêneos."
+  },
+  "evidencias": [
+    {
+      "citacao": "research focuses on Artificial Intelligence, Machine Learning, IoT, Cybersecurity, Blockchain",
+      "afirmacao": "Os autores têm experiência em blockchain, IoT e segurança cibernética."
+    },
+    {
+      "citacao": "He was the Reviewer of IEEE Internet of Things Journal, IEEE Transactions on Network Science and Engineering, IEEE Access",
+      "afirmacao": "Um dos autores atua como revisor de revistas renomadas em IoT e segurança."
+    }
+  ],
+  "interpretacao": "O trecho acrescenta informações biográficas que confirmam a expertise dos autores nas áreas centrais do trabalho (IoT, blockchain, segurança), mas não traz novos detalhes técnicos sobre a solução proposta.",
+  "duvidas": "Faltam informações sobre a arquitetura específica da blockchain permissionada, métricas detalhadas de desempenho e como a privacidade é garantida além da verificação de hash e MAC.",
+  "avisos": [],
+  "id": "b215fd9447590448d50b",
+  "artigo": "Addula_2025",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "privacy-preserving authentication framework tailored for industrial IoT applications",
+    "solucao": "integrates hash evaluation and MAC verification",
+    "avaliacao": "maintains lower latency levels when compared to the benchmark models",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Avaliar a integração de identidade auto‑soberana (SSI) para interoperabilidade entre serviços públicos de cidades inteligentes; testar o modelo em arquiteturas de edge computing; incorporar mecanismos de revogação de credenciais baseados em blockchain; analisar a escalabilidade em ambientes IIoT heterogêneos.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "cee773808391dfdf8312"
+  }
+}

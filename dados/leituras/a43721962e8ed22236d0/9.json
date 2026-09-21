@@ -1,0 +1,39 @@
+{
+  "resumo": "O trecho apresenta a Figura 4, que mostra a distribuição percentual de artigos ao longo dos anos, e a Tabela 4, que resume estudos de caso regionais de aplicação de blockchain em cadeias de suprimentos alimentares. São listadas iniciativas de diversos países (Gana, EUA, Turquia, China, Índia, etc.) focadas em rastreabilidade, transparência, segurança alimentar, financiamento agrícola e conectividade entre produtores e compradores.",
+  "perfil": {
+    "problema": "there is a lack of literature on their combined application in agricultural supply chains.",
+    "solucao": "prompting the exploration of SSI as a complementary technology to enhance trust and user-controlled authentication",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+    "possibilidades": [
+      "Comparar as iniciativas de blockchain listadas na Tabela 4 com projetos de cidades inteligentes que utilizam SSI, identificando lacunas de interoperabilidade e oportunidades de integração.",
+      "Desenvolver um protótipo que combine SSI, blockchain e ABE para controle de acesso granular aos dados de sensores agrícolas citados, avaliando desempenho em edge computing.",
+      "Realizar análise bibliométrica da evolução temporal (Figura 4) das publicações sobre blockchain em cadeias agrícolas versus publicações sobre identidade auto-soberana em smart cities.",
+      "Investigar a viabilidade de estender as soluções de rastreabilidade (ex.: IBM Food Trust) para incluir credenciais verificáveis que garantam a privacidade dos agricultores."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "TABLE 4 Summary of regional case studies dealing with blockchain application in food supply chain.",
+      "afirmacao": "Existem iniciativas de blockchain em cadeias de suprimentos agrícolas em diversos países."
+    }
+  ],
+  "interpretacao": "O material evidencia que a adoção de blockchain para rastreabilidade e transparência está disseminada globalmente em cadeias agrícolas, mas não aborda a integração com identidades auto-soberanas, sugerindo uma oportunidade de pesquisa para combinar essas tecnologias em contextos de cidades inteligentes.",
+  "duvidas": "Como a SSI poderia ser incorporada às iniciativas de blockchain descritas? Quais desafios de interoperabilidade surgiriam ao conectar credenciais verificáveis com sistemas de rastreabilidade agrícola existentes?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "742849dac1f870d36f07",
+  "artigo": "Alar_2026",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "there is a lack of literature on their combined application in agricultural supply chains.",
+    "solucao": "prompting the exploration of SSI as a complementary technology to enhance trust and user-controlled authentication",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+    "possibilidades": "Comparar as iniciativas de blockchain listadas na Tabela 4 com projetos de cidades inteligentes que utilizam SSI, identificando lacunas de interoperabilidade e oportunidades de integração.; Desenvolver um protótipo que combine SSI, blockchain e ABE para controle de acesso granular aos dados de sensores agrícolas citados, avaliando desempenho em edge computing.; Realizar análise bibliométrica da evolução temporal (Figura 4) das publicações sobre blockchain em cadeias agrícolas versus publicações sobre identidade auto-soberana em smart cities.; Investigar a viabilidade de estender as soluções de",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "a43721962e8ed22236d0"
+  }
+}

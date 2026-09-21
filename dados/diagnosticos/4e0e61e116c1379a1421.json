@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T16:50:18",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+    "perfil_anterior": {
+      "problema": "unauthorized access, malware assaults, and data breaches",
+      "solucao": "blockchain-based architecture and integrated DNN to ensure data integrity, enhance anomaly detection, and offer IoT networks autonomous, distributed threat-mitigating properties",
+      "avaliacao": "94.96% scalability",
+      "limites": "weaknesses in smart contracts, Sybil attacks, and 51% assaults may still penetrate blockchain-based security procedures",
+      "possibilidades": "Explorar consenso leve (PoA, DAG) em ambientes de borda para reduzir ainda mais a latência; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar quantização e poda de modelos DNN para diminuição da carga computacional nos nós de borda; investigar aprendizado federado para treinamento distribuído sem exposição de dados sensíveis; avaliar a robustez contra ataques adversariais usando técnicas de defesa avançadas; testar estratégias de batch e compressão de logs para minimizar o crescimento da blockchain em cenários de cidades inteligentes."
+    },
+    "pagina": 16,
+    "texto": "loads, our distributed approach efficiently handles ever more linked devices. Blockchain’s distributed ledger for \nsecure transactions, paired with the DNN model’s ability to accommodate massive IoT traffic volumes without \nperformance degradation, ensures that the solution stays trustworthy and efficient even as the IoT network \nexpands.\n S = pdse\n[\nd − qa′′]\n+\n[\nyt − uj′′]\n+ Bsw\n[\noi − sn′′]\n (24)\nIncorporating parallel distributed system performance pdse [d − qa′′], dynamic load adaptability \n[yt − uj′′], and blockchain-supported balanced workloads Bsw [oi − sn′′] , the equation represents the \nevaluation of scalability ( S). The method improves the system’ s scalability by using decentralized computing \nmethodologies and optimizing the allocation of resources in Eq. 24.\nThe method significantly lowers single points of failure by using a decentralization score of 97.33%, enhancing \nIoT network security (Fig. 10). While the Blockchain-integrated solution ensures distributed, tamper-proof data \nstorage and authentication, conventional centralized security systems are open to deliberate access. Every IoT \ndevice logs activities on a private Blockchain, ensuring trust and preventing illicit alterations. This significant \ndegree of decentralization guarantees its self-sustaining character and strengthens the IoT ecosystem by \nimproving resilience against cyberattacks, openness, and security.\n D = Bs\n[\nw − uy′′]\n+ Ua\n[\nw − sy′′]\n− hf s′′ (25)\nBy combining blockchain-supported processes ( Bs [w − uy′′]) and unified self-governing systems \n(Ua [w − sy′′]), the Eq.  25 stands for the analysis of decentralization ( D) and the reduction of centralized \ncontrol factors (hf s′′). The method uses blockchain technology and autonomous decision-making systems to \nbolster decentralization, as shown in Table 3.\nThe hybrid DNN-Blockchain architecture for IoT network security is presented in this study. Blockchain \nguarantees automatic threat reaction and tamper-proof security; the DNN detects abnormalities with 99.18% \naccuracy. The system has tremendous scalability—94.96%, responds rapidly (95.25%), decentralizes (97.33%), \nand reduces false positives (15.42%). Results show how well IoT ecosystems are locked by artificial intelligence-\nblockchain synergy, as shown in Table 3 and Fig. 11.\nA comprehensive computational cost analysis for DNN training and blockchain operations is necessary to \nguarantee that the DNNs-BCT system is feasible for real-world deployment, especially in IoT contexts with \nlimited resources. T o decrease inference delay and energy consumption, optimization methods like pruned \narchitectures, quantization, or knowledge distillation may be necessary for DNN models, which are useful for \nanomaly detection but computationally costly. When assessing the training phase, it is important to consider \nthe memory footprint, processing time, and GPU/TPU needs to guarantee scalability. The blockchain adds \nprocessing costs with transaction verification, block production, and consensus procedures. Although blockchain \ntechnology improves security by recording transactions in an immutable way and allowing for decentralized \nauthentication, the limited resources of IoT devices require cryptographic techniques that are efficient and \nFig. 10. Analysis of decentralization.\n \nScientific Reports |        (2025) 15:22369 16| https://doi.org/10.1038/s41598-025-04164-4\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O estudo apresenta uma arquitetura híbrida DNN‑Blockchain para segurança de redes IoT, destacando alta escalabilidade (94,96%), rapidez (95,25%) e descentralização (97,33%). Cada dispositivo registra atividades em uma blockchain privada, reduzindo pontos únicos de falha. Embora a detecção de anomalias alcance 99,18% de acurácia, os autores apontam a necessidade de análise de custo computacional e otimizações para dispositivos com recursos limitados.",
+    "perfil": {
+      "problema": "single points of failure",
+      "solucao": "hybrid DNN-Blockchain architecture for IoT network security",
+      "avaliacao": "scalability—94.96%",
+      "limites": "computational cost analysis for DNN training and blockchain operations is necessary",
+      "possibilidades": "Explorar consenso leve (PoA, DAG) para reduzir latência; integrar verifiable credentials para gerenciamento de identidade e revogação de dispositivos IoT; aplicar aprendizado federado para treinamento distribuído sem exposição de dados sensíveis; avaliar robustez contra ataques adversariais usando técnicas de defesa avançadas; otimizar modelos DNN com poda, quantização ou destilação para dispositivos de borda."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "The method improves the system’s scalability by using decentralized computing methodologies and optimizing the allocation of resources.",
+        "citacao": "The method improves the system’ s scalability by using decentralized computing methodologies and optimizing the allocation of resources in Eq. 24."
+      },
+      {
+        "afirmacao": "The DNN detects abnormalities with 99.18% accuracy.",
+        "citacao": "the DNN detects abnormalities with 99.18% accuracy."
+      }
+    ],
+    "interpretacao": "Os autores demonstram que a combinação de DNN e blockchain pode oferecer alta escalabilidade e descentralização para IoT, mitigando pontos únicos de falha. Contudo, reconhecem que o custo computacional da treinamento e das operações blockchain pode ser um obstáculo para dispositivos de recursos limitados, exigindo otimizações de modelo e análise de viabilidade prática.",
+    "duvidas": "Qual algoritmo de consenso foi adotado e como ele impacta a latência em ambientes de borda? Qual é o overhead energético real dos nós IoT ao registrar transações em blockchain privada? Como a solução se comporta frente a ataques adversariais sofisticados contra o modelo DNN?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T16:50:56"
+}

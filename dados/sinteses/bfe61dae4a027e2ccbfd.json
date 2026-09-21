@@ -1,0 +1,15 @@
+{
+  "resumo": "O YouGovern é uma solução de identidade auto-soberana (SSI) baseada em blockchain, implementada na Binance Smart Chain (BSC) com contratos inteligentes escritos em Solidity e geridos via Truffle Suite. A arquitetura combina registro de DIDs on‑chain, armazenamento descentralizado de dados de identidade em IPFS e Web3.Storage (Filecoin) e interface web desenvolvida em React.js que se integra ao MetaMask. As interações são expostas por APIs RESTful e o controle de acesso é implementado com OpenZeppelin, usando funções protegidas e ReentrancyGuard. O sistema inclui mecanismos de revogação de DIDs, rotação de chaves e auditorias de segurança, além de testes automatizados. Embora ofereça privacidade ao eliminar servidores centrais, ainda há questões abertas sobre desempenho (latência e custo de gas) ao escalar papéis, revogação frequente e integração com IPFS/Web3.Storage, bem como suporte a múltiplas cadeias e estratégias de recuperação de credenciais.",
+  "lacunas_possiveis": [
+    "Impacto da integração com IPFS/Web3.Storage na latência e custo de transação durante operações de identidade.",
+    "Escalabilidade e desempenho das funções de controle de acesso e revogação em cenários de alta concorrência.",
+    "Ausência de suporte a múltiplas blockchains além da BSC e avaliação de interoperabilidade.",
+    "Estratégias de recuperação de credenciais quando agentes/guardians ainda não estão implementados."
+  ],
+  "propostas_possiveis": [
+    "Realizar benchmarks comparando tempos de resposta e custos de gas ao usar IPFS versus armazenamento local em diferentes volumes de credenciais.",
+    "Desenvolver e testar mecanismos de revogação em lote e otimizações de contrato para reduzir gas em alta frequência de revogação.",
+    "Estender a implementação para outras EVM‑compatible chains (e.g., Polygon, Avalanche) e avaliar interoperabilidade de DIDs entre elas.",
+    "Projetar um módulo de recuperação de credenciais baseado em agentes de confiança ou multi‑signature, avaliando sua eficácia e impacto de segurança."
+  ]
+}

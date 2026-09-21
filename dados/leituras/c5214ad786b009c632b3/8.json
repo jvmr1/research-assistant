@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho detalha a formulação da função de perda do SSAE, incluindo o termo de penalidade de esparsidade β e a divergência KL, e descreve o uso do algoritmo de otimização Walrus (WO/WOA) para ajuste de hiperparâmetros, destacando sua eficiência em convergência e menor custo computacional comparado a buscas convencionais.",
+  "perfil": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Explorar a aplicação do algoritmo WO em conjunto com técnicas de quantização de modelo para reduzir ainda mais o consumo de energia em nós de borda; Avaliar a eficácia de penalidades de esparsidade adaptativas que variam β conforme a carga de trabalho do dispositivo; Integrar mecanismos de verificação de integridade baseados em blockchain nos pesos otimizados pelo WO para garantir autenticidade distribuída."
+  },
+  "evidencias": [
+    {
+      "citacao": "JssAE = J (W, b)+ Jsparse = 1\nm\n∑ m\ni=1\n1\n2 (∥ xi − zi∥ )2 + β\n∑ s\nj=1\nKL(ρ ∥ ˆρ j\n)",
+      "afirmacao": "The last SSAE loss function is described as: JssAE = J (W, b)+ Jsparse = 1/m Σ ... + β Σ KL(ρ ∥ ˆρ_j)."
+    }
+  ],
+  "interpretacao": "O uso do WO como otimizador de hiperparâmetros reforça a proposta de melhorar a eficiência computacional, alinhado ao objetivo de reduzir custos em ambientes de borda.",
+  "duvidas": "Como a escolha de β impacta a convergência do SSAE em cenários de dados heterogêneos? Qual o overhead real de implementar WO em dispositivos com recursos limitados?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "5284d06e436fd6285a06",
+  "artigo": "Ragab_2025",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Explorar a aplicação do algoritmo WO em conjunto com técnicas de quantização de modelo para reduzir ainda mais o consumo de energia em nós de borda; Avaliar a eficácia de penalidades de esparsidade adaptativas que variam β conforme a carga de trabalho do dispositivo; Integrar mecanismos de verificação de integridade baseados em blockchain nos pesos otimizados pelo WO para garantir autenticidade distribuída.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "c5214ad786b009c632b3"
+  }
+}

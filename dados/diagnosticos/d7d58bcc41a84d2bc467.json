@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T20:11:24",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+    "perfil_anterior": {
+      "problema": "lack of comprehensive support for heterogeneous Electronic Health Record (EHR) data",
+      "solucao": "Efficient and Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+      "avaliacao": "Simulation results indicate that: (1) as a privacy-preserving strategy, BSDA achieves high throughput and low transaction latency",
+      "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+      "possibilidades": "Adaptar a camada de analytics de borda para sensores urbanos, integrando SSI e credenciais verificáveis para controle de acesso baseado em atributos (ABE); testar a escalabilidade da blockchain leve (PoA ou DAG) com milhares de nós de borda em ambientes de smart city; explorar aprendizado federado vertical entre diferentes departamentos municipais usando atributos complementares de cidadãos; projetar mecanismos de incentivo tokenizado que recompensem a contribuição de dados de alta qualidade em tempo real."
+    },
+    "pagina": 9,
+    "texto": "enforcing rules that promote fairness, transparency, and verifiability without centralized control. Together, these \nmechanisms significantly enhance the scalability, security, and robustness of the federated learning system while \nensuring efficient and privacy-preserving model convergence across diverse and distributed environments.\nBlockchain network layer (decentralized ledger and security management)\nThe proposed EPP-BCFL framework incorporates several key functions to enhance the security, efficiency, \nand reliability of federated learning in decentralized healthcare environments. One of its core functionalities is \ndecentralized model update storage, where each local model update is hashed and recorded on the blockchain. \nThis ensures an immutable audit trail, eliminating the possibility of tampering and protecting the global \nmodel from poisoning attacks. In addition to preserving integrity, the system offers strong security against \nadversarial behaviors. Smart contracts are employed to validate the authenticity and consistency of updates from \nparticipating edge nodes before they are included in the aggregation process. This validation step, combined \nwith a Byzantine Fault Tolerance (BFT) mechanism, ensures that the system remains robust even when some \nnodes behave maliciously or are compromised. To further enhance operational efficiency, the framework adopts \na hybrid Proof-of-Stake (PoS) and BFT consensus protocol.\nEach participating node i generates an update θ t+1\ni  and computes a cryptographic hash:\n Hi = Hash\n(\nθ t+1\ni\n)\nwhere Hi is stored on the blockchain ledger for verification.\nThe probability Pi of a node i being chosen as a validator depends on its stake Si relative to the total stake \nin the network Stotal:\n \nPi = Si\nStotal\nThis ensures fairness and reduces centralization risks.\nFor consensus to be achieved, more than 2/3 of nodes must agree on the same model update:\n \n∑\nN\ni=1I (Vi = Hi) > 2N\n3\nwhere Vi represents the validator’ s decision and I(.)is an indicator function that checks if the update matches \nthe stored hash.\nScientific Reports |        (2025) 15:27524 9| https://doi.org/10.1038/s41598-025-12225-x\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve o framework EPP-BCFL que utiliza armazenamento descentralizado de atualizações de modelo, contratos inteligentes e um consenso híbrido PoS+BFT para garantir auditabilidade, resistência a ataques e justiça na seleção de validadores, promovendo escalabilidade, segurança e robustez em ambientes de aprendizado federado distribuído.",
+    "perfil": {
+      "problema": "without centralized control",
+      "solucao": "decentralized model update storage",
+      "avaliacao": "significantly enhance the scalability, security, and robustness",
+      "limites": "Não informado",
+      "possibilidades": [
+        "Adaptar o mecanismo de auditoria baseada em hash para sensores urbanos de smart city, integrando SSI e credenciais verificáveis para controle de acesso granular.",
+        "Testar a escalabilidade da camada de consenso híbrido PoS+BFT em redes de borda com milhares de nós IoT, avaliando desempenho comparado a DAGs leves.",
+        "Estender o framework para aprendizado federado vertical entre diferentes departamentos municipais, usando atributos de cidadãos como chaves de acesso.",
+        "Desenvolver um modelo de incentivo tokenizado que recompense a contribuição de dados de alta qualidade e a disponibilidade de nós de borda em tempo real."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Each local model update is hashed and recorded on the blockchain, ensuring an immutable audit trail.",
+        "citacao": "Each local model update is hashed and recorded on the blockchain."
+      },
+      {
+        "afirmacao": "Smart contracts are employed to validate the authenticity and consistency of updates from participating edge nodes.",
+        "citacao": "Smart contracts are employed to validate the authenticity and consistency of updates from participating edge nodes."
+      }
+    ],
+    "interpretacao": "O uso de armazenamento descentralizado e contratos inteligentes cria uma trilha de auditoria inviolável e protege contra ataques de envenenamento, enquanto o consenso híbrido PoS+BFT equilibra justiça e resistência a falhas, tornando o framework adequado para ambientes críticos como saúde e, potencialmente, cidades inteligentes.",
+    "duvidas": "Como o mecanismo de stake será gerenciado em contextos de smart city onde os participantes podem não possuir tokens? Qual o impacto da latência de consenso híbrido em aplicações de tempo real de IoT? Existem planos para integrar mecanismos de revogação de credenciais em caso de comprometimento de nós?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:11:29"
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T17:53:22",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "perfil_anterior": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "Aplicar quantização ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; implementar seleção de recursos em tempo real baseada em correlação de atributos; avaliar impacto de diferentes proporções TRPH/TSPH na generalização."
+    },
+    "pagina": 16,
+    "texto": "the AAIFLF-PPCD technique was evaluated using a benchmark dataset. The performance validation of the \nAAIFLF-PPCD technique exhibited a superior accuracy value of 99.47% over existing models under diverse \nmeasures.\nFig. 8. Average of AAIFLF-PPCD technique under 80%TRPH and 20%TSPH.\n \nScientific Reports |         (2025) 15:4470 16| https://doi.org/10.1038/s41598-025-88843-2\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O método AAIFLF-PPCD foi testado em um conjunto de dados de referência, apresentando acurácia superior de 99,47% em comparação com modelos existentes, sob diferentes medidas de desempenho.",
+    "perfil": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "explorar compressão ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; avaliar impacto de diferentes proporções TRPH/TSPH na generalização; investigar eficiência de federated learning com comunicação otimizada."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "the AAIFLF-PPCD technique was evaluated using a benchmark dataset",
+        "citacao": "the AAIFLF-PPCD technique was evaluated using a benchmark dataset."
+      },
+      {
+        "afirmacao": "superior accuracy value of 99.47% over existing models",
+        "citacao": "The performance validation of the AAIFLF-PPCD technique exhibited a superior accuracy value of 99.47% over existing models under diverse measures."
+      }
+    ],
+    "interpretacao": "Os resultados indicam que o modelo atinge alta acurácia, porém o trecho não detalha outras métricas nem descreve o benchmark utilizado, limitando a avaliação comparativa.",
+    "duvidas": "Qual a composição exata do benchmark dataset? Como foram definidos TRPH e TSPH? Qual o custo computacional observado nas fases de HHO, SSAE e WOA?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:53:56"
+}

@@ -1,0 +1,19 @@
+{
+  "resumo": "O artigo apresenta o YouGovern, um sistema de identidade auto‑soberana (SSI) baseado na Binance Smart Chain (BSC) que combina contratos inteligentes baseados em papéis, armazenamento híbrido (on‑chain + IPFS) e controle de acesso descentralizado. As fichas descrevem a arquitetura de contas da BSC (EOAs e Contract Accounts) e como dApps podem usar esses contratos para gerenciar identidades sem servidores centralizados. Comparações entre uPort (BSC) e Sovrin (Hyperledger Indy) revelam lacunas em mediação, revogação, escalabilidade (≈15 tps em blockchains públicas) e custos operacionais. O esquema DNS‑IdM é introduzido como alternativa que usa contratos inteligentes para gerenciar identidades de forma semelhante ao DNS. O caso de uso do YouGovern demonstra registro de endereços via MetaMask, upload de arquivos ao IPFS, solicitação e aprovação de acesso por transação, e verificação de credenciais por autoridades confiáveis. As dúvidas levantadas apontam questões de proteção de chaves privadas em dispositivos IoT, latência e throughput em edge computing, overhead de armazenamento híbrido, e necessidade de agentes mediadores leves.",
+  "lacunas_possiveis": [
+    "Proteção de chaves privadas de EOAs em dispositivos IoT de recursos limitados",
+    "Ausência de mediador/guardian para gerenciar identidade e consentimento em ambientes críticos",
+    "Escalabilidade limitada das blockchains públicas (≈15 tps) para milhares de dispositivos edge",
+    "Mecanismos de revogação de credenciais e controle de acesso granular ainda não detalhados",
+    "Impacto de armazenamento híbrido (on‑chain + IPFS) em latência e custo para edge devices",
+    "Delegação de confiança entre diferentes autoridades governamentais"
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um módulo leve de gerenciamento de chaves privadas (ex.: hardware secure element ou TPM) integrado ao YouGovern para IoT",
+    "Projetar um agente mediador/guardian descentralizado que interaja entre EOAs e contratos inteligentes, facilitando consentimento e recuperação social",
+    "Implementar um registro de revogação off‑chain (ex.: Merkle‑tree) sincronizado com a BSC para revogar credenciais de forma eficiente",
+    "Realizar benchmark comparativo de DNS‑IdM versus uPort em cenários de edge computing, medindo latência e throughput",
+    "Otimizar o fluxo de armazenamento híbrido, avaliando compressão de dados e caching local para reduzir custos de IPFS",
+    "Criar um framework de delegação de autoridade baseado em endereços verificados, permitindo hierarquias de confiança entre entidades governamentais"
+  ]
+}

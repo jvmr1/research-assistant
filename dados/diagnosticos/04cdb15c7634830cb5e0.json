@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T17:52:28",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Advanced artificial intelligence with federated learning framework for privacy-preserving cyberthreat detection in IoT-assisted sustainable smart cities",
+    "perfil_anterior": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "improving both model accuracy and computational efficiency",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "Investigar quantização ou poda de modelo para reduzir carga computacional nos nós de borda; integrar identidade auto‑soberana (SSI) para controle de acesso aos dados de detecção; avaliar robustez contra ataques zero‑day usando tráfego sintético; explorar seleção de recursos em tempo real baseada em correlação de atributos; analisar o efeito de diferentes proporções TRPH/TSPH sobre a generalização."
+    },
+    "pagina": 15,
+    "texto": "highlighted that the TRA and V AL accuy  values display increasing tendencies, notifying the proficiency of the \nAAIFLF-PPCD model with superior performance above numerous iterations.\nFigure 14 shows the TRALOS and V ALLOS graph of the AAIFLF-PPCD approach under 70%TRPH and \n30%TSPH. The loss values are computed across a range of 0–25 epochs. The TRALOS and V ALLOS values \nshow a decreasing trend, which notifies the competency of the AAIFLF-PPCD technique in harmonizing an \nequilibrium among data fitting and generalization.\nTable 4; Fig. 15analyze the comparative results of the AAIFLF-PPCD model with the recent techniques20–22,38–40. \nThe results underlined that the SVM, KNN, MLP , CNN + GRU, HZDA-5G IIoT , and PSO Ensemble models \nhave reported worse performance. In the meantime, the IRMOFNN-AD model has gained closer outcomes \nwith improved precn, recal, accuy , and F 1score  of 95.33%, 95.33%, 99.10%, and 95.45%, respectively. \nAdditionally, the AAIFLF-PPCD approach reported enhanced performance with superior precn, recal,\naccuy , and F 1score  of 97.20%, 96.84%, 99.47%, and 96.92%, respectively.\nIn Table 5; Fig. 16, the comparative analysis of the AAIFLF-PPCD approach is identified in terms of processing \ntime (PT). The results suggest that the AAIFLF-PPCD model accomplishes more excellent performance. Based \non PT , the AAIFLF-PPCD model presents lesser PT of 4.51s, demonstrating its superior efficiency in PT . In \ncomparison, the SVM, KNN, MLP , CNN + GRU, HZDA-5G IIoT , PSO Ensemble, IRMOFNN-AD, XAI, SHAP , \nV AE, and AGRU methods attain improved PT values of 11.93s, 15.58s, 10.54s, 14.49s, 9.80s, 8.21s, 7.95s, 8.50s, \n9.18s, 9.77s, and 10.32s, subsequently. This highlights the significant advantage of the AAIFLF-PPCD model \nin terms of processing time, making it a more time-efficient choice for cyberthreat detection in comparison to \ntraditional and advanced methods.\nConclusion\nThis manuscript presented the AAIFLF-PPCD model in IoT-assisted sustainable smart cities. The AAIFLF-\nPPCD model concentrated on ensuring robust and scalable cyberthreat detection while preserving the privacy \nof IoT users in smart cities. Initially, the AAIFLF-PPCD model involved three stages: HHO HHO-based feature \nselection, SSAE-based attack detection, and WOA-based hyperparameter tuning. Primarily, the AAIFLF-PPCD \nmodel utilized HHO-based feature selection to identify the most related features from the IoT data. Next, the \nSSAE classifier was employed to detect cyberthreats. Eventually, the WOA was used for hyperparameter tuning \nto enhance the parameters of the SSAE method and achieve optimal performance. The simulated outcome of \nClasses Accuy P recn Recal F 1score AU Cscore\nTRPH (80%)\nL-1 99.67 97.69 98.36 98.02 99.08\nL-2 99.53 99.02 95.38 97.17 97.65\nL-3 99.59 98.43 96.68 97.55 98.27\nL-4 99.61 98.69 96.65 97.66 98.27\nL-5 97.77 79.54 98.23 87.90 97.98\nL-6 99.79 99.38 98.07 98.73 99.01\nL-7 99.62 99.38 96.12 97.72 98.03\nL-8 99.70 98.10 98.25 98.18 99.04\nL-9 99.64 98.66 96.91 97.78 98.40\nL-10 99.50 99.27 94.76 96.96 97.35\nL-11 99.53 98.95 95.34 97.11 97.63\nL-12 99.72 99.28 97.33 98.30 98.63\nAverage 99.47 97.20 96.84 96.92 98.28\nTSPH (20%)\nL-1 99.62 96.93 98.34 97.63 99.03\nL-2 99.52 98.31 95.69 96.98 97.77\nL-3 99.75 98.75 98.14 98.45 99.02\nL-4 99.60 98.47 96.38 97.41 98.12\nL-5 97.93 81.36 98.85 89.25 98.35\nL-6 99.65 99.03 96.96 97.98 98.43\nL-7 99.45 98.72 94.48 96.55 97.18\nL-8 99.48 97.18 96.59 96.88 98.17\nL-9 99.72 98.85 97.91 98.38 98.90\nL-10 99.42 98.68 93.95 96.26 96.92\nL-11 99.48 98.81 95.23 96.99 97.56\nL-12 99.52 98.21 96.10 97.14 97.97\nAverage 99.43 96.94 96.55 96.66 98.12\nTable 2. Classifier outcome of AAIFLF-PPCD technique under 80%TRPH and 20%TSPH.\n \nScientific Reports |         (2025) 15:4470 15| https://doi.org/10.1038/s41598-025-88843-2\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O modelo AAIFLF‑PPCD apresenta aumento progressivo de acurácia e redução de perda ao longo de 0‑25 épocas, superando técnicas como SVM, KNN e CNN+GRU, com precisão de 97.20 % e F1‑score de 96.92 %. O tempo de processamento é de 4.51 s, consideravelmente menor que os demais métodos, indicando eficiência para detecção de ciberameaças em cidades inteligentes assistidas por IoT.",
+    "perfil": {
+      "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+      "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+      "avaliacao": "enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%",
+      "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+      "possibilidades": "Aplicar quantização ou poda de modelo para reduzir carga computacional nos nós de borda; integrar SSI para controle de acesso aos dados de detecção; testar robustez contra ataques zero‑day usando tráfego sintético; implementar seleção de recursos em tempo real baseada em correlação de atributos; avaliar impacto de diferentes proporções TRPH/TSPH na generalização."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "AAIFLF-PPCD alcançou precisão de 97.20 % e F1‑score de 96.92 %.",
+        "citacao": "AAIFLF-PPCD approach reported enhanced performance with superior precn, recal, accuy , and F 1score of 97.20%, 96.84%, 99.47%, and 96.92%"
+      },
+      {
+        "afirmacao": "Tempo de processamento de 4.51 s, inferior aos demais métodos.",
+        "citacao": "AAIFLF-PPCD model presents lesser PT of 4.51s, demonstrating its superior efficiency in PT"
+      }
+    ],
+    "interpretacao": "Os resultados indicam que a combinação de seleção de atributos via HHO, classificação SSAE e ajuste WOA produz um modelo competitivo tanto em acurácia quanto em latência, adequado para ambientes de borda em cidades inteligentes.",
+    "duvidas": "Como o modelo se comporta em cenários de recursos extremamente limitados ou com tráfego de ataque zero‑day não representado nos dados de treinamento?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T17:53:22"
+}

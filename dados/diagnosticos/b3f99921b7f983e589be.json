@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:29:47",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "AI edge cloud service provisioning for knowledge management smart applications",
+    "perfil_anterior": {
+      "problema": "Security is a major concern in all steps of knowledge management.",
+      "solucao": "decentralized identity mechanisms can be integrated to enhance user privacy and control over personal data",
+      "avaliacao": "The results show the difference in computing capabilities for both platforms.",
+      "limites": "components from different cloud providers lack standardization, making it difficult to manage resources from different providers and legacy applications",
+      "possibilidades": "Avaliar estratégias de offloading dinâmico que considerem os tempos críticos de computação identificados para decidir entre edge e cloud em tempo real.; Integrar mecanismos de identidade auto‑soberana (SSI) para controlar o acesso a recursos de computação edge, usando credenciais verificáveis que levem em conta a carga de trabalho atual.; Quantificar o consumo energético das diferentes alocações (edge vs cloud) sob os cenários de carga descritos.; Desenvolver algoritmos de agendamento adaptativo que ajustem a distribuição de tarefas com base nos limites críticos de PT observados.; Explorar téc"
+    },
+    "pagina": 15,
+    "texto": "threshold. The thresholds can be used as a way to balance work to the cloud when the workload increases in the \nedge.\nAlthough the cloud platform exhibited lower PT than the edge in the ideal scenario, the proposed Edge-\nCloud architecture offers several other key advantages of edge computing. Price of computations in the edge \ndepends on the power consumption, and the fixed price of the device. The base price of a Raspberry Pi 4 starts \nat $35. We got that value from the official website. The power consumption of the Raspberry depends on the \nCPU load and peripheral device usage. Experiments from Ali Süzen et al. 111 show that the average power \nconsumption of a Raspberry Pi 4 during CNN work is 3.9W . Using the average electricity price of $0.31/kWh in \nthe European Union in 2024, the price per hour of computation in the Raspberry edge server is of $0.001198. \nThe m5.large server average price is of $0.1162 per hour. Using that data, Fig. 6 shows the price to compute the \ncrash detection service with different image sizes for the cloud and edge servers. This experiment shows where \nthe edge really shines. The results show that the edge server has a cost of computation up to 59.72 times less than \nthe cloud server. By performing computation tasks to edge servers, the architecture reduces network congestion \nand optimizes resource allocation, contributing to overall cost savings. This shows the cost-effectiveness of the \narchitecture.\nOn top of that, edge servers play a crucial role in reducing network congestion and providing more scalable \nand efficient data processing closer to the source. In this architecture, by offloading computations to local \nedge nodes, the system can handle real-time applications more effectively, even during peak demand periods. \nFurthermore, the distributed nature of edge servers allows for better resilience and fault tolerance, ensuring \nthat critical services remain operational despite potential cloud service disruptions or network latency spikes. \nTherefore, while the cloud may offer advantages in total process time under specific conditions, the role of \nthe edge server in optimizing resource allocation and ensuring continuous operation of smart city applications \nmakes it an essential component of the proposed model. Furthermore, the integration of the cloud and edge \nlayers improves the long term scalability of the applications.\nDiscussion on limitations and future work\nThere are some aspects of this work that could be improved in future research. First,\nWhile this article provides a comprehensive analysis of the serverless edge computing model for KM processes \nin the smart city, several limitations must be considered:\nFirst, the experiments were made on a limited set of devices, a single raspberry pi and cloud server, \nrepresenting only two scenarios, the edge and the cloud. It may leave out other configurations used in real-world \nFig. 5. Comparison of transmission time, computation and total processing times for different data sizes \nacross Cloud and Edge platforms.\n \nScientific Reports |        (2025) 15:32246 15| https://doi.org/10.1038/s41598-025-14429-7\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O estudo demonstra que, embora a nuvem apresente menor tempo total de processamento em cenários ideais, a arquitetura Edge‑Cloud reduz drasticamente o custo computacional (até 59,72×), diminui a congestão de rede e aumenta a resiliência, sendo essencial para aplicações de cidades inteligentes. Limitações incluem experimentos com apenas um Raspberry Pi e um servidor cloud.",
+    "perfil": {
+      "problema": "Security is a major concern in all steps of knowledge management.",
+      "solucao": "decentralized identity mechanisms can be integrated to enhance user privacy and control over personal data",
+      "avaliacao": "The results show the difference in computing capabilities for both platforms.",
+      "limites": "First, the experiments were made on a limited set of devices, a single raspberry pi and cloud server, representing only two scenarios, the edge and the cloud.",
+      "possibilidades": "Avaliar configurações com múltiplos nós edge para validar a escalabilidade; integrar SSI e credenciais verificáveis para controle de acesso dinâmico entre edge e cloud; desenvolver algoritmo de offloading adaptativo que use os thresholds em tempo real; quantificar o consumo energético das alocações edge vs. cloud em diferentes cargas de trabalho; investigar mecanismos de tolerância a falhas distribuídas para garantir continuidade dos serviços críticos."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O servidor edge tem custo de computação até 59,72 vezes menor que o servidor cloud.",
+        "citacao": "the edge server has a cost of computation up to 59.72 times less than the cloud server."
+      },
+      {
+        "afirmacao": "A arquitetura reduz a congestão de rede e melhora a resiliência dos serviços críticos.",
+        "citacao": "edge servers play a crucial role in reducing network congestion and providing more scalable and efficient data processing... ensuring that critical services remain operational despite potential cloud service disruptions."
+      }
+    ],
+    "interpretacao": "Os resultados indicam que, apesar de a nuvem oferecer menor tempo de processamento em condições ideais, a computação na borda traz benefícios econômicos e operacionais significativos para aplicações de cidades inteligentes, especialmente em termos de custo, latência e robustez.",
+    "duvidas": "Como o desempenho e o custo se comportariam com uma topologia edge mais heterogênea (vários dispositivos, diferentes capacidades)? Qual seria o impacto da integração de SSI nos fluxos de autenticação e controle de acesso entre edge e cloud?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:30:06"
+}

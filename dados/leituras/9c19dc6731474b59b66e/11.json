@@ -1,0 +1,43 @@
+{
+  "resumo": "O texto descreve o fluxo de execução de funções serverless em uma arquitetura multilayer (edge, CDN, nuvem), detalhando tempos de computação, setup e comunicação, bem como o overhead de decisão de escalonamento. Apresenta o modelo de gestão de conhecimento (KM) que integra criação, armazenamento, compartilhamento, aplicação e feedback, enfatizando a necessidade de segurança (TLS, RBAC) em todas as etapas.",
+  "perfil": {
+    "problema": "Security is a major concern in all steps of knowledge management.",
+    "solucao": "The proposed framework integrates in every step of KM processes: knowledge creation, storage, sharing, application, feedback.",
+    "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+    "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+    "possibilidades": [
+      "Incorporar identidade auto‑soberana (SSI) para autenticação dos nós de borda e gerenciamento de credenciais.",
+      "Utilizar credenciais verificáveis para rastrear a proveniência das funções de IA distribuídas.",
+      "Aplicar criptografia baseada em atributos (ABE) para proteger dados sensíveis nas funções serverless.",
+      "Criar camada de auditoria baseada em blockchain para registrar alocação, revogação e migração de funções entre borda e nuvem.",
+      "Explorar aprendizado federado ou reforço para decisão dinâmica de placement de funções de IA, preservando privacidade.",
+      "Investigar provas de conhecimento zero‑knowledge para validar credenciais sem revelar informações sensíveis.",
+      "Desenvolver políticas de controle de acesso baseadas em atributos (ABAC) que integrem atributos de dispositivos IoT e contextos de edge‑cloud.",
+      "Implementar mecanismos de revogação descentralizada de credenciais usando smart contracts."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "The first time a service is invoked, or after a long time, the corresponding function might not be present in the Edge environment. In that case, the function has to be retrieved from the cloud server, and the execution environment has to be created.",
+      "afirmacao": "A primeira invocação de uma função na borda tem custo elevado porque a função precisa ser recuperada da nuvem."
+    }
+  ],
+  "interpretacao": "O trecho reforça que a arquitetura proposta, embora escalável, introduz overhead de decisão de offloading e requer mecanismos robustos de segurança. A ênfase na integração de processos de KM indica que a camada de edge deve suportar não só computação, mas também fluxo completo de conhecimento, o que abre espaço para soluções de identidade descentralizada e criptografia avançada.",
+  "duvidas": "Como o overhead de escalonamento (S + R) impacta a latência em cenários de alta frequência de requisições? Quais são os custos energéticos associados ao carregamento inicial de funções na borda? De que forma políticas ABAC podem ser operacionalizadas em tempo real nas camadas edge e CDN?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "8c1707f055d78da64793",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Security is a major concern in all steps of knowledge management.",
+    "solucao": "Serverless edge computing enables running code at edge locations without managing servers.",
+    "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+    "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+    "possibilidades": "Incorporar identidade auto‑soberana (SSI) para autenticação dos nós de borda e gerenciamento de credenciais.; Utilizar credenciais verificáveis para rastrear a proveniência das funções de IA distribuídas.; Aplicar criptografia baseada em atributos (ABE) para proteger dados sensíveis nas funções serverless.; Criar camada de auditoria baseada em blockchain para registrar alocação, revogação e migração de funções entre borda e nuvem.; Explorar aprendizado federado ou reforço para decisão dinâmica de placement de funções de IA, preservando privacidade.; Investigar provas de conhecimento zero‑knowl",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "resumo": "A dissertação de Wesley Fioreze (23/06/2026) investiga a combinação de criptografia baseada em atributos (ABE/CP‑ABE/KP‑ABE) e blockchain (Hyperledger Besu) para garantir segurança, privacidade e interoperabilidade de dados em ambientes IIoT de cidades inteligentes. O trabalho segue uma metodologia estruturada, com revisão sistemática da literatura, definição de questões de pesquisa, critérios de inclusão/exclusão e avaliação de desempenho criptográfico, incluindo sobrecarga de payload e complexidade de políticas de acesso. O índice apresenta fluxos de ABE, contratos inteligentes, diagramas de arquitetura, métricas de desempenho e um glossário que inclui DID, SSI, VC e KP‑ABE, indicando que a solução proposta pretende integrar identidade autossoberana, credenciais verificáveis e controle de acesso baseado em atributos. Contudo, detalhes sobre a integração prática de SSI/DIDs, mecanismos de revogação, recuperação de credenciais e o papel do IPFS permanecem ausentes.",
+  "lacunas_possiveis": [
+    "Integração concreta entre DIDs/SSI e ABE/CP‑ABE nas fases de revogação e recuperação de credenciais.",
+    "Definição e avaliação de critérios específicos de desempenho (latência, overhead) para políticas de acesso complexas.",
+    "Descrição dos mecanismos de recuperação de credenciais perdidas dentro dos fluxos de contratos inteligentes.",
+    "Papel e implementação do IPFS no gerenciamento e armazenamento de credenciais."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um fluxo que combine SSI/DIDs com KP‑ABE para controle de acesso seletivo e revogação distribuída.",
+    "Implementar um módulo de recuperação de credenciais baseado em secret sharing integrado a smart contracts.",
+    "Avaliar o impacto de diferentes complexidades de políticas ABE na latência de transações blockchain em cenários IIoT.",
+    "Utilizar IPFS como camada de armazenamento off‑chain para credenciais verificáveis, garantindo disponibilidade e integridade."
+  ]
+}

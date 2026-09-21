@@ -1,0 +1,39 @@
+{
+  "resumo": "O trecho descreve os critérios de avaliação de qualidade aplicados na revisão de texto completo, a seleção metodológica por dois avaliadores independentes e a exclusão de literatura cinzenta. Foram coletados 1.229 artigos, dos quais 331 duplicados foram removidos, resultando em 898 artigos únicos. O número de publicações cresceu de 3 em 2018 para 24,7% em 2024, indicando interesse crescente. Também apresenta as strings de busca, critérios de inclusão/exclusão e a distribuição anual dos estudos.",
+  "perfil": {
+    "problema": "there is a lack of literature on their combined application in agricultural supply chains.",
+    "solucao": "prompting the exploration of SSI as a complementary technology to enhance trust and user-controlled authentication",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+    "possibilidades": [
+      "Aplicar a mesma estratégia de avaliação de qualidade a revisões sistemáticas sobre SSI e blockchain em cidades inteligentes, incluindo bases como ACM Digital Library e MDPI Sensors.",
+      "Incorporar literatura cinzenta de projetos piloto industriais e municipais para capturar perspectivas emergentes antes da fase de elegibilidade.",
+      "Desenvolver um protótipo que combine SSI, blockchain e ABE para controle de acesso granular a dados de sensores em edge computing de smart cities.",
+      "Realizar estudos de caso em zonas rurais integradas a infraestruturas urbanas, avaliando desempenho de SSI sob conectividade intermitente e requisitos de privacidade."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "quality assessment criteria was developed and applied during the full-text review stage.",
+      "afirmacao": "Os critérios de avaliação de qualidade foram desenvolvidos e aplicados durante a revisão de texto completo por dois pesquisadores independentes."
+    }
+  ],
+  "interpretacao": "A revisão demonstra rigor metodológico ao combinar avaliação dupla, critérios de qualidade claros e exclusão sistemática de duplicatas, o que reforça a confiabilidade dos resultados e evidencia o rápido crescimento da pesquisa em SSI e blockchain aplicados a cadeias de suprimentos agrícolas.",
+  "duvidas": "Como foram definidas as fronteiras entre literatura cinzenta considerada relevante e a excluída na fase de elegibilidade?; Quais foram os parâmetros específicos usados para avaliar a 'transparência metodológica' dos estudos incluídos?; Existe detalhamento dos casos regionais apresentados na Tabela 4, e como eles podem ser comparados a contextos urbanos de smart cities?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "90cef02b00c13db537e7",
+  "artigo": "Alar_2026",
+  "pagina": 8,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "there is a lack of literature on their combined application in agricultural supply chains.",
+    "solucao": "prompting the exploration of SSI as a complementary technology to enhance trust and user-controlled authentication",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+    "possibilidades": "Aplicar a mesma estratégia de avaliação de qualidade a revisões sistemáticas sobre SSI e blockchain em cidades inteligentes, incluindo bases como ACM Digital Library e MDPI Sensors.; Incorporar literatura cinzenta de projetos piloto industriais e municipais para capturar perspectivas emergentes antes da fase de elegibilidade.; Desenvolver um protótipo que combine SSI, blockchain e ABE para controle de acesso granular a dados de sensores em edge computing de smart cities.; Realizar estudos de caso em zonas rurais integradas a infraestruturas urbanas, avaliando desempenho de SSI sob conectividad",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "a43721962e8ed22236d0"
+  }
+}

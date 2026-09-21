@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo propõe uma arquitetura que une computação de borda e blockchain para IIoT, usando servidores MEC que executam containers Docker e armazenam identificadores de usuários e dispositivos na blockchain. Quatro smart contracts (identidade, submissão, verificação e crédito) gerenciam identidade, reputação e credenciamento, enquanto o consenso Proof‑of‑Authentication (PoAh) – baseado em criptografia ElGamal, ECDSA e valores de confiança – visa reduzir carga computacional e consumo energético em dispositivos de recursos limitados. Implementada em Hyperledger Fabric, a solução foi simulada em MATLAB e testada em bancada, mostrando autenticação eficiente (tempo crescente com número de nós, mas ainda aceitável) e custos baixos de comunicação e cálculo. Os autores destacam a escalabilidade dinâmica, baixa latência e resistência a ataques de 51 %, embora reconheçam limitações em cenários de alta latência, conectividade intermitente, revogação de certificados e escalabilidade para grandes redes.",
+  "lacunas_possiveis": [
+    "Comparação do consumo energético do PoAh com outros consensos leves (ex.: PoS, PBFT).",
+    "Desempenho e robustez da arquitetura em ambientes de alta latência, perda de pacotes ou conectividade intermitente.",
+    "Mecanismo de revogação de certificados de identidade e sua eficácia em caso de comprometimento.",
+    "Escalabilidade do PoAh e da solução para milhares de dispositivos IoT, além dos testes com até 50 nós.",
+    "Resistência a ataques Sybil, replay e outras ameaças em redes altamente dinâmicas."
+  ],
+  "propostas_possiveis": [
+    "Realizar experimentos comparativos de consumo energético entre PoAh, PoS e PBFT em dispositivos de baixa potência.",
+    "Avaliar a arquitetura em cenários de alta latência e mobilidade, simulando redes com perda de pacotes e conectividade intermitente.",
+    "Desenvolver e integrar um protocolo de revogação de identidade baseado em smart contracts e credenciais verificáveis (SSI).",
+    "Escalar simulações e testes de bancada para milhares de nós, medindo latência, custo de comunicação e consumo energético.",
+    "Analisar a vulnerabilidade do PoAh a ataques Sybil e replay, propondo contramedidas como limites de confiança dinâmicos ou provas de trabalho leves."
+  ]
+}

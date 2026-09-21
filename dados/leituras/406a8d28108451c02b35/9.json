@@ -1,0 +1,42 @@
+{
+  "resumo": "O artigo apresenta o algoritmo de consenso PoAh, projetado para ser menos intensivo em recursos e energia, atendendo a dispositivos IIoT com restrições. Experimentos em bancada e simulações mostram que o tempo de autenticação cresce conforme o número de nós aumenta, conforme ilustrado na Figura 4. Custos de comunicação e blockchain são detalhados em uma tabela, indicando tempos de geração de valores aleatórios, hash, emparelhamento criptográfico, verificação de nó e implantação do PoAh.",
+  "perfil": {
+    "problema": "Low-power IoT devices may need help to handle the high processing demands of blockchain consensus methods",
+    "solucao": "The proposed system, evaluated using MATLAB and Hyperledger Fabric, is not only efficient and reliable but also highly cost-effective.",
+    "avaliacao": "The authentication time of proposed architecture with different nodes.",
+    "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+    "possibilidades": [
+      "Avaliar o desempenho do PoAh em cenários de mobilidade de dispositivos IoT em cidades inteligentes.",
+      "Integrar mecanismos de identidade auto-soberana (SSI) aos contratos inteligentes que utilizam PoAh.",
+      "Comparar o PoAh com outros consensos leves (e.g., Proof of Authority, Proof of Stake) em termos de consumo energético.",
+      "Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados armazenados na blockchain.",
+      "Testar a arquitetura em ambientes de borda heterogêneos com milhares de nós para validar escalabilidade."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "The PoAh algorithm implements a less resource- and energy-intensive authentication approach.",
+      "afirmacao": "O algoritmo PoAh oferece autenticação menos intensiva em recursos e energia."
+    },
+    {
+      "citacao": "Fig. 4. The authentication time of proposed architecture with different nodes.",
+      "afirmacao": "O tempo de autenticação aumenta com o número de nós na arquitetura proposta."
+    }
+  ],
+  "interpretacao": "O trecho reforça que o consenso PoAh foi concebido para ambientes IIoT com restrição de recursos, proporcionando autenticação mais leve e demonstrando que o tempo de autenticação escala com o número de nós, o que é crítico para a viabilidade em redes de borda extensas.",
+  "duvidas": "Como o PoAh se comporta em termos de segurança contra ataques de Sybil ou replay em ambientes altamente dinâmicos? Qual é o impacto real do consumo energético nos dispositivos de baixa potência ao longo de longos períodos de operação?",
+  "avisos": [],
+  "id": "eb376b0b3a1aee39020e",
+  "artigo": "Asaithambi_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Low-power IoT devices may need help to handle the high processing demands of blockchain consensus methods",
+    "solucao": "The proposed system, evaluated using MATLAB and Hyperledger Fabric, is not only efficient and reliable but also highly cost-effective.",
+    "avaliacao": "The authentication time of proposed architecture with different nodes.",
+    "limites": "The plan mostly depends on MEC servers’ dependability and accessibility, which might be problematic in areas with inadequate infrastructure or erratic connectivity",
+    "possibilidades": "Avaliar o desempenho do PoAh em cenários de mobilidade de dispositivos IoT em cidades inteligentes.; Integrar mecanismos de identidade auto-soberana (SSI) aos contratos inteligentes que utilizam PoAh.; Comparar o PoAh com outros consensos leves (e.g., Proof of Authority, Proof of Stake) em termos de consumo energético.; Aplicar criptografia baseada em atributos (ABE) para controle de acesso granular nos dados armazenados na blockchain.; Testar a arquitetura em ambientes de borda heterogêneos com milhares de nós para validar escalabilidade.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "406a8d28108451c02b35"
+  }
+}

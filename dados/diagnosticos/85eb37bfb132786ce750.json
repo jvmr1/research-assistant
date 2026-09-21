@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T20:31:53",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "On the adoption and deployment of secure and privacy-preserving IIoT in smart manufacturing: a comprehensive guide with recent advances",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 7,
+        "resumo": "O capítulo apresenta métricas para adoção de blockchain em manufatura inteligente, destaca vulnerabilidades típicas da tecnologia (ex.: goldfinder, double spending) e resume diretrizes de guias como ENISA, CISA, NIST e ETSI, apontando que muitos são de alto nível e pouco aplicáveis a sistemas de baixo nível. Evidencia a necessidade de medidas proativas de segurança, integração de arquiteturas adequadas e uso de tecnologias avançadas como deep learning e blockchain para detecção de ameaças em IIoT.",
+        "interpretacao": "O texto reforça que, embora o blockchain ofereça promessas de segurança, ele traz vulnerabilidades específicas que precisam ser mitigadas; ao mesmo tempo, os guias existentes são majoritariamente de alto nível, exigindo adaptação para contextos de IIoT de baixo nível e ambientes de cidades inteligentes.",
+        "duvidas": "Quais são os detalhes das dez métricas propostas e como elas podem ser operacionalizadas em cenários reais de IIoT? Como as vulnerabilidades citadas (goldfinder, double spending) se manifestam em implementações de blockchain específicas para manufatura inteligente?"
+      },
+      {
+        "pagina": 8,
+        "resumo": "O texto apresenta um guia abrangente para adoção e implantação segura de IIoT em manufatura inteligente, destacando a necessidade de equilibrar blockchain com outras tecnologias devido a vulnerabilidades próprias. Descreve a arquitetura de quatro camadas (dispositivos, gateway, nuvem e aplicação) amplamente aceita na indústria, enfatizando a importância de uma base resiliente, padrões IEEE para sensores inteligentes e a função dos gateways como dispositivos de borda que pré‑processam dados antes de enviá‑los ao cloud.",
+        "interpretacao": "O guia reforça que a simples adoção de blockchain não é suficiente; é preciso combiná‑la com outras medidas de segurança e considerar a arquitetura completa de IIoT, especialmente a camada de gateway que atua como ponto crítico de processamento e proteção de dados.",
+        "duvidas": "Quais são as métricas específicas para medir o trade‑off entre segurança adicional de blockchain e a latência introduzida nos gateways? Como garantir a interoperabilidade de identidades auto‑soberanas entre dispositivos de diferentes fabricantes dentro da camada de percepção?"
+      },
+      {
+        "pagina": 9,
+        "resumo": "O trabalho apresenta uma comparação de guias e surveys de segurança e privacidade para IIoT, destacando que seu próprio guia cobre todas as áreas (autenticação, controle de acesso, etc.). Define uma arquitetura de quatro camadas (percepção, gateway, aplicação/gerenciamento de dados e nuvem) e descreve desafios de fluxo contínuo de dados que supera a capacidade de transmissão direta ao cloud, exigindo conversão analógica‑digital nos gateways e processamento de borda para reduzir a carga na nuvem.",
+        "interpretacao": "O texto enfatiza a necessidade de camadas de gateway e edge computing para lidar com alta taxa de geração de dados em IIoT, apontando que diretrizes de segurança devem ser aplicadas em cada camada da arquitetura de quatro níveis.",
+        "duvidas": "Como as diretrizes propostas pelo guia são traduzidas em políticas operacionais específicas para cada camada? Existe avaliação prática de desempenho (latência, overhead) ao aplicar as recomendações de segurança nas camadas de gateway e edge?"
+      },
+      {
+        "pagina": 10,
+        "resumo": "O trecho descreve as camadas de processamento de IIoT, destacando a camada de nuvem como responsável por análises intensivas e aprendizado de máquina, e a camada de interface de usuário para visualização de dados. Em seguida, apresenta o conceito de fábricas inteligentes, onde a automação total, aprendizado de máquina, big data e cibersegurança permitem maior eficiência, redução de custos e integração de dispositivos na borda.",
+        "interpretacao": "O texto reforça a importância das camadas de nuvem e de interface para análise e visualização de dados em IIoT, ao mesmo tempo que destaca que fábricas inteligentes dependem de integração de dispositivos de borda, IA e cibersegurança para alcançar eficiência e segurança.",
+        "duvidas": "Como garantir que as políticas de segurança definidas nas camadas superiores sejam propagadas de forma automática para os dispositivos da camada de percepção? Qual o impacto da latência introduzida por ABE ou blockchain nas aplicações de controle em tempo real nas fábricas inteligentes?"
+      },
+      {
+        "pagina": 11,
+        "resumo": "O trecho descreve os principais ataques que podem afetar o IIoT em manufatura inteligente, como DDoS, man-in-the-middle e malware, e enfatiza a necessidade de conscientização dos administradores para identificar e diferenciar essas ameaças.",
+        "interpretacao": "O trecho destaca a variedade de ameaças que comprometem a segurança e privacidade do IIoT em ambientes de manufatura inteligente, servindo como alerta para administradores de sistemas.",
+        "duvidas": "Quais mecanismos de defesa específicos são recomendados para cada tipo de ataque? Como integrar identidade descentralizada e ABE nas arquiteturas IIoT para mitigar esses riscos?"
+      },
+      {
+        "pagina": 12,
+        "resumo": "O trecho descreve diversas ameaças ao IIoT em manufatura inteligente, incluindo ransomware, phishing, spoofing, sniffing e manipulação de dados, destacando a vulnerabilidade dos sistemas OT que não foram projetados com segurança. A convergência IT/OT, facilitada por nós de borda, expõe protocolos de comunicação como Modbus e Profibus a falhas, tornando o ecossistema suscetível a ataques tanto cibernéticos quanto físicos. Uma compreensão detalhada da taxonomia de ataques é apresentada como base para estratégias de mitigação abrangentes.",
+        "interpretacao": "O texto evidencia que a integração de IT e OT amplia a superfície de ataque do IIoT, exigindo medidas de segurança específicas para protocolos de comunicação e mecanismos de autenticação robustos, sobretudo em ambientes industriais onde a segurança não foi considerada inicialmente.",
+        "duvidas": "Quais são as abordagens mais eficazes para proteger protocolos legados como Modbus sem substituir a infraestrutura existente? Como a adoção de SSI pode ser operacionalizada em dispositivos OT com recursos limitados?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta um guia abrangente para a adoção e implantação segura de IIoT em manufatura inteligente, estruturado em uma arquitetura de quatro camadas (dispositivos, gateway, nuvem e aplicação). Destaca métricas para adoção de blockchain, mas aponta vulnerabilidades específicas (por exemplo, goldfinder e double spending) que exigem mitigação. Evidencia que os guias de segurança existentes (ENISA, CISA, NIST, ETSI) são de alto nível e pouco aplicáveis a sistemas de baixo nível, demandando adaptações. Salienta a importância dos gateways como ponto crítico de pré‑processamento e proteção de dados, bem como a necessidade de edge computing para lidar com fluxos contínuos de dados que sobrecarregam a nuvem. Discute ainda os principais vetores de ataque (DDoS, MITM, ransomware, phishing, spoofing, etc.) e a ampliação da superfície de ataque pela convergência IT/OT, especialmente em protocolos legados como Modbus e Profibus. Por fim, propõe a integração de tecnologias avançadas – deep learning, blockchain, identidade auto‑soberana (SSI) e criptografia baseada em atributos (ABE) – para detecção de ameaças e controle de acesso, embora reconheça que ainda faltam detalhes operacionais e avaliações de desempenho.",
+    "lacunas_possiveis": [
+      "Detalhamento operacional das dez métricas de adoção de blockchain para IIoT.",
+      "Mecanismos concretos para mitigar vulnerabilidades de blockchain (goldfinder, double spending) em ambientes industriais.",
+      "Métodos de avaliação de latência e overhead introduzidos por blockchain/ABE nos gateways e na camada de controle em tempo real.",
+      "Estratégias práticas para interoperabilidade de identidades auto‑soberanas entre dispositivos de diferentes fabricantes.",
+      "Abordagens de proteção de protocolos legados (Modbus, Profibus) sem substituição completa da infraestrutura."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver um framework de métricas operacionais que traduza as métricas de adoção de blockchain em indicadores mensuráveis (ex.: taxa de detecção de anomalias, tempo de consenso).",
+      "Implementar protótipos de consenso híbrido que combinem blockchain permissionado com mecanismos de detecção de double spending baseados em aprendizado de máquina.",
+      "Criar um benchmark de latência e consumo de recursos para avaliar o impacto de ABE e blockchain nas funções de controle de processos críticos nos gateways.",
+      "Projetar um esquema de identidade auto‑soberana baseado em verifiable credentials que suporte perfis de dispositivos heterogêneos e teste sua interoperabilidade em um cenário multi‑fabricante.",
+      "Desenvolver adaptadores de segurança (gateways de proteção) que encapsulem tráfego Modbus/Profibus em canais criptografados e integrem políticas de acesso baseadas em ABE."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:32:01"
+}

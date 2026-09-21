@@ -1,0 +1,34 @@
+{
+  "resumo": "O texto descreve o uso de árvores de Merkle para verificação eficiente de transações, a disponibilidade proporcionada pela descentralização da blockchain que elimina pontos únicos de falha, e o papel dos contratos inteligentes na automação de controle de acesso e proteção de privacidade em sistemas de saúde.",
+  "perfil": {
+    "problema": "Traditionally, data is recorded in a centralized database, which poses security and privacy risks and makes it challenging to restore data once it has been compromised.",
+    "solucao": "A blockchain system, on the other hand, allows each node to act as both a sender and a receiver, creating a fair and distributed peer-to-peer network.",
+    "avaliacao": "Não informado.",
+    "limites": "Não informado.",
+    "possibilidades": "Explorar a aplicação de provas de Merkle para auditoria de integridade de dados de IoT em monitoramento de saúde urbana; integrar identidade auto‑soberana (SSI) com contratos inteligentes para consentimento dinâmico de pacientes; combinar árvores de Merkle com criptografia baseada em atributos (ABE) para controle de acesso granular em ambientes distribuídos de saúde."
+  },
+  "evidencias": [
+    {
+      "citacao": "Merkle trees enable efﬁcient and secure veriﬁcation of individual transactions.",
+      "afirmacao": "Merkle trees enable efficient and secure verification of individual transactions."
+    }
+  ],
+  "interpretacao": "O trecho destaca como estruturas de Merkle e contratos inteligentes podem suprir a necessidade de integridade, disponibilidade e controle de acesso em ambientes de saúde distribuídos, reforçando a proposta de usar blockchain para garantir segurança e privacidade.",
+  "duvidas": "Como garantir a privacidade dos dados de saúde ao usar provas de Merkle públicas? Qual o overhead de desempenho ao integrar contratos inteligentes com ABE para controle de acesso granular?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "20d10b3f17b2af1b3918",
+  "artigo": "Tawfik_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Traditionally, data is recorded in a centralized database, which poses security and privacy risks and makes it challenging to restore data once it has been compromised.",
+    "solucao": "A blockchain system, on the other hand, allows each node to act as both a sender and a receiver, creating a fair and distributed peer-to-peer network.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "public blockchains offer high decentralization but may encounter scalability and privacy challenges.",
+    "possibilidades": "Explorar a aplicação de provas de Merkle para auditoria de integridade de dados de IoT em monitoramento de saúde urbana; integrar identidade auto‑soberana (SSI) com contratos inteligentes para consentimento dinâmico de pacientes; combinar árvores de Merkle com criptografia baseada em atributos (ABE) para controle de acesso granular em ambientes distribuídos de saúde.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "36f23c87078e4a5a079a"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:36:44",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "Algorithm 2 Accessing Healthcare Data From IPFS",
+      "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+      "avaliacao": "upload, download, access, and mining times",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Avaliar latência e throughput de recuperação de dados via IPFS em cenários de borda; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar o esquema de criptografia do Algoritmo 3 com técnicas pós‑quânticas; analisar a escalabilidade do modelo quando múltiplas cidades inteligentes compartilham dados simultaneamente; investigar o impacto de diferentes protocolos de rede na mineração e no tempo de acesso; explorar ajustes dinâmicos de tamanho de bloco para suportar fluxos heterogêneos de IoT."
+    },
+    "pagina": 14,
+    "texto": "Page 14 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \nmore time than downloading the same file from IPFS. The IPFS and Blockchain network \nfile access times are depicted in Fig.  7. In an experiment, we accessed files from several \nworkstations with different file sizes. It has been observed that accessing a file using the \nIPFS network is significantly faster than using the Blockchain network. The experimen -\ntal findings of testing several file sizes of healthcare data on different machines show that \nthe IPFS network requires much less time for uploading, downloading, and accessing \nFig. 7 Blockchain vs. IPFS access times\n \nFig. 6 Blockchain vs. IPFS download times\n \nFig. 5 IPFS vs. Blockchain upload times\n ",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "Os experimentos mostraram que, ao compartilhar dados de saúde em uma rede híbrida, o IPFS apresenta tempos de upload, download e acesso significativamente menores que a blockchain, independentemente do tamanho dos arquivos ou da estação de trabalho utilizada.",
+    "perfil": {
+      "problema": "accessing a file using the IPFS network is significantly faster than using the Blockchain network",
+      "solucao": "Algorithm 3 Algorithm for Encrypting and Decrypting Healthcare Data",
+      "avaliacao": "upload, download, access, and mining times",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Avaliar o desempenho do IPFS em cenários de borda com recursos limitados; integrar identidade auto‑soberana (SSI) para autenticar dispositivos antes do acesso ao IPFS; comparar o algoritmo de criptografia proposto com técnicas pós‑quânticas; estudar a escalabilidade quando múltiplas cidades inteligentes compartilham simultaneamente grandes volumes de dados de saúde; analisar o impacto de diferentes protocolos de rede (e.g., 5G, LoRaWAN) na latência de acesso ao IPFS."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O IPFS é mais rápido que a blockchain para acesso a arquivos.",
+        "citacao": "accessing a file using the IPFS network is significantly faster than using the Blockchain network"
+      },
+      {
+        "afirmacao": "O IPFS requer muito menos tempo para upload, download e acesso de dados de saúde.",
+        "citacao": "the IPFS network requires much less time for uploading, downloading, and accessing"
+      }
+    ],
+    "interpretacao": "Os resultados indicam que, para compartilhamento de dados de saúde em cidades inteligentes, o uso do IPFS pode reduzir significativamente a latência e melhorar a eficiência operacional em comparação com soluções baseadas exclusivamente em blockchain.",
+    "duvidas": "Como o desempenho do IPFS se comporta em redes com alta perda de pacotes ou conectividade intermitente? Qual o impacto da integração de SSI sobre esses tempos de acesso?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:37:01"
+}

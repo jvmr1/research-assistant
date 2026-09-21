@@ -1,0 +1,55 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-21T00:49:32",
+  "revisao": "e7b8232d88fc37f0003b",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 13,
+        "resumo": "O trecho apresenta a estrutura dos capítulos finais da dissertação, destacando seções sobre privacidade e controle de acesso, escalabilidade criptográfica e de volume de dados, discussão dos resultados, vantagens, limitações (revogação de atributos e escopo da avaliação de escalabilidade criptográfica), conclusões, contribuições, trabalhos futuros e artefatos de pesquisa.",
+        "interpretacao": "A dissertação avança ao discutir explicitamente questões de privacidade, controle de acesso e escalabilidade criptográfica, reconhecendo a revogação de atributos como desafio e apontando a necessidade de ampliar a avaliação de escalabilidade.",
+        "duvidas": "Quais métricas específicas foram usadas para avaliar a escalabilidade criptográfica? Como o escopo limitado da avaliação impacta a generalização dos resultados para diferentes cenários de cidades inteligentes?"
+      },
+      {
+        "pagina": 14,
+        "resumo": "O trecho introduz a evolução da Indústria 4.0 e o conceito de IIoT, destacando a importância da interoperabilidade técnica, semântica, organizacional e legal, conforme o EIF e a ISO 11354-1, e indica que a dissertação focará apenas na interoperabilidade técnica suportada por comunicação publish/subscribe.",
+        "interpretacao": "O autor contextualiza a necessidade de interoperabilidade nas IIoT como um desafio multidimensional, limitando o escopo da dissertação à camada técnica, o que indica uma oportunidade de ampliar a abordagem para incluir mecanismos de identidade descentralizada.",
+        "duvidas": "Como a solução proposta de smart contracts se relaciona com a camada técnica de interoperabilidade descrita? Existe alguma consideração sobre a integração de SSI/DIDs nas comunicações publish/subscribe? Quais são as implicações das camadas semântica e organizacional não abordadas?"
+      },
+      {
+        "pagina": 15,
+        "resumo": "O trecho destaca a necessidade de interoperabilidade orientada à governança e segurança para troca de dados entre domínios administrativos independentes, sem confiança prévia. Embora a interoperabilidade semântica esteja fora do escopo, a expansão dos dispositivos IoT (prevista em 29 bi até 2030) intensifica desafios de compartilhamento seguro, governança de acesso, privacidade e auditoria. Um cenário de cadeia de suprimentos ilustra a necessidade de controle de acesso granular, permitindo que organizações mantenham autonomia e evitem dependência de um intermediário centralizado.",
+        "interpretacao": "O autor enfatiza que, apesar do crescimento explosivo de dispositivos IoT, a falta de mecanismos de governança e controle de acesso granular impede a colaboração interorganizacional segura, exigindo soluções que preservem a autonomia de cada entidade sem depender de autoridades centrais.",
+        "duvidas": "Quais são os requisitos específicos de desempenho para os mecanismos de controle de acesso granular em ambientes IIoT de alta frequência? Como a exclusão da interoperabilidade semântica afeta a aplicabilidade prática das propostas de controle de acesso?"
+      },
+      {
+        "pagina": 16,
+        "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+        "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+        "duvidas": "Conferir manualmente este trecho se ele for importante."
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "A dissertação apresenta, nos capítulos finais, discussões sobre privacidade, controle de acesso e escalabilidade criptográfica, reconhecendo a revogação de atributos como um desafio ainda não totalmente resolvido e apontando a necessidade de ampliar a avaliação de escalabilidade. No contexto da Indústria 4.0 e IIoT, destaca‑se a importância da interoperabilidade técnica, semântica, organizacional e legal, embora o trabalho se restrinja à camada técnica suportada por comunicação publish/subscribe. A necessidade de interoperabilidade orientada à governança e segurança para troca de dados entre domínios administrativos independentes, sem confiança prévia, é enfatizada, sobretudo diante da projeção de 29 bi dispositivos IoT até 2030. Um cenário de cadeia de suprimentos ilustra a demanda por controle de acesso granular que preserve a autonomia das organizações e evite dependência de intermediários centralizados, ao passo que a interoperabilidade semântica permanece fora do escopo.",
+    "lacunas_possiveis": [
+      "Ausência de métricas específicas para avaliar a escalabilidade criptográfica.",
+      "Escopo limitado à interoperabilidade técnica, sem considerar camadas semântica, organizacional e legal.",
+      "Falta de integração de SSI/DIDs nos protocolos publish/subscribe.",
+      "Desconhecimento dos requisitos de desempenho para controle de acesso granular em ambientes IIoT de alta frequência.",
+      "Desafio aberto de revogação de atributos dentro do modelo de controle de acesso."
+    ],
+    "propostas_possiveis": [
+      "Desenvolver um conjunto de métricas e benchmarks para medir a escalabilidade criptográfica em cenários de cidades inteligentes.",
+      "Estender a arquitetura publish/subscribe para incorporar identidades auto‑soberanas (SSI/DIDs) e credenciais verificáveis.",
+      "Projetar um mecanismo de controle de acesso granular baseado em atributos revogáveis, suportando auditoria e privacidade.",
+      "Criar um framework de interoperabilidade que abarque as dimensões semântica, organizacional e legal, complementando a camada técnica.",
+      "Definir requisitos de desempenho e conduzir experimentos de alta frequência para validar a viabilidade do controle de acesso granular em IIoT."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-21T00:49:36"
+}

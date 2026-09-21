@@ -1,0 +1,67 @@
+{
+  "fontes": [
+    {
+      "id": "Exemplo_da24de257de987bc603b",
+      "titulo": "André Luiz Almeida Cardoso",
+      "escopo": {
+        "tipo": "pdf",
+        "feitos": 16,
+        "total": 16,
+        "concluida": true
+      },
+      "fichas_amostradas": [
+        {
+          "id": "2319445f0172f8e04af6",
+          "pagina": 1,
+          "resumo": "O trecho apresenta o título de um trabalho de André Luiz Almeida Cardoso, intitulado “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, desenvolvido na Universidade Federal do Maranhão em 2024, indicando foco em identidade digital para cidades inteligentes usando blockchain.",
+          "evidencias": [
+            {
+              "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+              "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+            }
+          ]
+        },
+        {
+          "id": "5b0dc507d4dec2105c36",
+          "pagina": 2,
+          "resumo": "Dissertação de André Luiz Almeida Cardoso, apresentada à UFMA em 2024, propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
+          "evidencias": [
+            {
+              "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+              "afirmacao": "O trabalho propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+            }
+          ]
+        },
+        {
+          "id": "68eb2691f5e562c5f06f",
+          "pagina": 3,
+          "resumo": "Dissertação de mestrado de André Luiz Almeida Cardoso (2024) intitulada “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, com 77 páginas, orientada por Francisco José da Silva e Silva e coorientada por Arlindo Flavio da Conceição, apresentada ao Programa de Pós‑graduação em Ciência da Computação da UFMA.",
+          "evidencias": [
+            {
+              "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+              "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+            }
+          ]
+        },
+        {
+          "id": "f9770a69b618d85c75dd",
+          "pagina": 4,
+          "resumo": "A dissertação de André Luiz Almeida Cardoso, defendida em 2024 na UFMA, propõe um modelo de gestão de identidades para cidades inteligentes fundamentado na tecnologia blockchain.",
+          "evidencias": [
+            {
+              "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+              "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+            }
+          ]
+        }
+      ],
+      "problema": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+      "solucao": "Gestão de Identidades pode desempenhar um papel fundamental",
+      "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar integração de SSI com blockchain para canais seguros de comunicação em CIs; Aplicar ABE para controle de acesso seletivo a sensores IoT; Investigar protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade; Avaliar uso de criptografia homomórfica para análise de dados de mobilidade preservando privacidade.",
+      "assinatura": "a6dd17ddc760fe0d49a1"
+    }
+  ],
+  "metodo": "fichamento individual"
+}

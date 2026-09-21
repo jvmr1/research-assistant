@@ -1,0 +1,143 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-16T16:59:14",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. A ideia já está publicada; esta etapa só acrescenta um caminho possível.",
+  "entrada": {
+    "ideia": "Projetar esquemas de searchable encryption compatíveis com blockchains públicos para consultas privativas de dados de saúde.",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Li_2025",
+          "titulo": "Privacy preservation in blockchain-based healthcare data sharing: A systematic review",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "9204f94425974d5dcd28",
+              "pagina": 1,
+              "resumo": "Revisão sistemática que analisa soluções baseadas em blockchain para preservação de privacidade no compartilhamento de dados de saúde, identificando que a maioria das propostas está em estágio de prova de conceito (TRL3) e que buscas e verificações privativas ainda são pouco exploradas.",
+              "evidencias": [
+                {
+                  "citacao": "privacy-preserving search and verification remain underexplored",
+                  "afirmacao": "privacy-preserving search and verification remain underexplored"
+                }
+              ]
+            },
+            {
+              "id": "a401c6bcf9ae3644122e",
+              "pagina": 4,
+              "resumo": "O trecho destaca a importância da integridade, verificação, autenticação e autorização dos dados de saúde em ambientes de blockchain, ressaltando requisitos regulatórios (HIPAA, GDPR) e a necessidade de mecanismos de busca eficientes para uso secundário, além de descrever as etapas do compartilhamento de dados em saúde.",
+              "evidencias": [
+                {
+                  "citacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage",
+                  "afirmacao": "Verification involves confirming the integrity and authenticity of healthcare data to ensure it remains unaltered and reliable for further usage"
+                }
+              ]
+            },
+            {
+              "id": "a11b06389fc8def579c1",
+              "pagina": 6,
+              "resumo": "O trecho descreve os principais desafios de privacidade ao usar blockchain para compartilhamento de dados de saúde, como transparência, imutabilidade, inferência de identidade, vulnerabilidades em contratos inteligentes e a complexa gestão on/off‑chain. Também apresenta métodos de preservação, destacando mecanismos on/off‑chain, PoS e PBFT como opções mais adequadas para ambientes de saúde.",
+              "evidencias": [
+                {
+                  "citacao": "Blockchain’s transparency is beneficial for data integrity but creates risks when sensitive data is involved.",
+                  "afirmacao": "Blockchain’s transparency is beneficial for data integrity but creates risks when sensitive data is involved."
+                }
+              ]
+            },
+            {
+              "id": "cb8ef267426e5f148dfd",
+              "pagina": 8,
+              "resumo": "O artigo descreve a metodologia de uma revisão sistemática sobre privacidade em compartilhamento de dados de saúde baseado em blockchain, apresentando três perguntas de pesquisa, estratégia de busca (2008‑2024, IEEE, ACM, etc.) e critérios de inclusão. Destaca o uso de proxy re‑encryption para compartilhar dados sem expor privacidade e adota os Níveis de Maturidade Tecnológica (TRL) para avaliar a prontidão das soluções, indicando que a maioria está em estágio de prova de conceito (TRL3).",
+              "evidencias": [
+                {
+                  "citacao": "When a data requester applies for it, the proxy can transform the ciphertext of healthcare data into one that the requester can decode with their private key.",
+                  "afirmacao": "Proxy re‑encryption enables healthcare data to be shared without revealing individual privacy."
+                },
+                {
+                  "citacao": "First assessment of the feasibility of the concept and technologies with prototypes",
+                  "afirmacao": "The study classifies technology maturity using TRL levels, identifying most solutions at TRL3."
+                }
+              ]
+            }
+          ],
+          "problema": "Performance may degrade as the number of nodes increases due to communication overhead.",
+          "solucao": "Permissioned access: Only authorized participants can join the network, ensuring controlled and secure data sharing within the consortium.",
+          "avaliacao": "High performance: The consortium blockchain, in combination with the PBFT consensus algorithm, enables fast transaction throughput and efficient resource usage.",
+          "limites": "Relies on trust between consortium members, which may limit adoption in competitive environments.",
+          "possibilidades": "Avaliar a aplicação de blockchains permissionless com SSI em cidades inteligentes, medindo impactos na interoperabilidade de identidade auto‑soberana.; Comparar desempenho e privacidade entre padrões permissioned e permissionless em ambientes de edge computing para IoT industrial.; Desenvolver mecanismos de revogação de credenciais verificáveis adaptados a consórcios, reduzindo a dependência de confiança entre participantes.; Integrar criptografi",
+          "assinatura": "b8443972948d3ef5dd5c"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": {
+      "descricao": {
+        "fato": "A revisão sistemática de Li_2025 (2025) aponta que buscas e verificações privativas em blockchains de saúde ainda são pouco exploradas e que a maioria das propostas está em TRL3.",
+        "interpretacao": "Existe um hiato de pesquisa entre a necessidade regulatória de privacidade (HIPAA, GDPR) e a disponibilidade de mecanismos de busca criptografados em redes públicas.",
+        "hipotese": "Um esquema de searchable encryption (SSE) integrado a uma blockchain pública permitirá consultas de dados de saúde de forma privada, mantendo latência e custo de gas compatíveis com requisitos de uso real."
+      },
+      "implementacao": {
+        "esquema_sse": "Adaptar um protocolo SSE simétrico (ex.: SSE‑2) usando criptografia baseada em hash e índices invertidos armazenados off‑chain (IPFS).",
+        "blockchain": "Deploy de contratos inteligentes Solidity em uma testnet pública (Goerli) que armazenam hashes de índices e gerenciam permissões via verifiable credentials (SSI).",
+        "fluxo": "1) Dados de saúde são criptografados e enviados ao IPFS; 2) Metadados de índice são inseridos no contrato; 3) Usuário autorizado gera token SSI, envia token ao contrato, que devolve token de busca; 4) Cliente usa token para executar busca SSE sobre os índices off‑chain."
+      },
+      "comparacao": {
+        "trabalho_base": "Li_2025 – identifica a ausência de soluções de busca privativa em blockchains de saúde.",
+        "trabalho_comparativo": "Implementação de busca tradicional sem criptografia (consulta direta ao IPFS) como baseline; opcionalmente, comparar com solução de proxy re‑encryption descrita na seção 8 do mesmo estudo."
+      }
+    },
+    "recursos": {
+      "dados": [
+        {
+          "nome": "MIMIC‑III",
+          "descricao": "Conjunto de registros clínicos desidentificados, disponível mediante credenciamento.",
+          "disponibilidade": "Público (requere aprovação de acesso)."
+        },
+        {
+          "nome": "Synthea synthetic health dataset",
+          "descricao": "Dados de saúde sintéticos gerados automaticamente, livremente distribuídos.",
+          "disponibilidade": "Open‑source."
+        }
+      ],
+      "ferramentas": [
+        "Ethereum Goerli testnet",
+        "Hardhat (framework de desenvolvimento Solidity)",
+        "IPFS (gateway público ou local)",
+        "Solidity 0.8.x",
+        "Python 3.11 + PyCryptodome",
+        "OpenMined PySyft (para prototipar SSE)",
+        "Docker (para orquestrar nós blockchain e IPFS)"
+      ],
+      "infraestrutura": [
+        "Máquina local ou VM com 8 GB RAM, 4 vCPU, SSD ≥ 100 GB",
+        "Acesso à internet para interagir com testnet e IPFS",
+        "Conta GitHub para CI/CD opcional"
+      ]
+    },
+    "metricas": [
+      "Latência de busca (ms) – tempo entre envio da query e retorno dos resultados.",
+      "Custo de gas (gwei) por operação de inserção e busca.",
+      "Throughput (consultas/s) sob carga crescente de nós (1, 5, 10).",
+      "Tamanho do índice armazenado off‑chain (MB).",
+      "Avaliação de vazamento de informação de padrão de consulta (análise de frequência).",
+      "Conformidade regulatória – checklist de requisitos HIPAA/GDPR atendidos."
+    ],
+    "duvidas_orientador": [
+      "Qual nível de granularidade de controle de acesso (por registro, por atributo) é mais adequado ao cenário de saúde pública?",
+      "Deverá o esquema SSE suportar buscas por palavras‑chave, por intervalo ou ambos?",
+      "Qual testnet (Goerli, Sepolia) oferece melhor trade‑off entre custo de gas e estabilidade para experimentos de longo prazo?",
+      "É preferível armazenar índices totalmente off‑chain (IPFS) ou mantê‑los parcialmente on‑chain para reduzir latência?",
+      "Como validar a revogação de credenciais SSI no contrato inteligente sem gerar overhead excessivo?"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T16:59:53"
+}

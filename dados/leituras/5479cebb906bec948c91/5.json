@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho descreve a arquitetura de lixeiras inteligentes que combinam sensores IoT (câmera, ultrassônico e de carga) com um microcontrolador que executa classificação CNN e aciona um servo para separar resíduos. Os dados de nível, peso e imagens são enviados a uma plataforma em nuvem e visualizados via aplicativo Blynk, permitindo monitoramento remoto em tempo real.",
+  "perfil": {
+    "problema": "growing challenges of waste classification in smart cities",
+    "solucao": "AI-driven waste management framework",
+    "avaliacao": "with 95% accuracy",
+    "limites": "none have explored structural designs using deep learning",
+    "possibilidades": "Integrar os sensores de nível e peso com protocolos de identidade auto‑soberana (SSI) para controle de acesso aos dados; aplicar credenciais verificáveis para autorizar a leitura dos dados de sensores entre municípios; usar criptografia baseada em atributos (ABE) para proteger informações de peso e nível durante a troca; avaliar a escalabilidade da solução em arquiteturas de borda (edge computing) com processamento local das classificações; testar interoperabilidade entre diferentes plataformas de gestão de resíduos usando blockchain."
+  },
+  "evidencias": [
+    {
+      "citacao": "These bins are equipped with IoT-enabled sensors that facilitate real-time waste monitoring and data transmission.",
+      "afirmacao": "Os lixos são equipados com sensores habilitados para IoT que facilitam o monitoramento em tempo real e a transmissão de dados."
+    },
+    {
+      "citacao": "The collected data is transmitted to a cloud-based platform and accessed via the Blynk application, enabling remote waste monitoring and management.",
+      "afirmacao": "Os dados coletados são enviados a uma plataforma baseada na nuvem e acessados via aplicativo Blynk."
+    }
+  ],
+  "interpretacao": "A proposta detalha uma solução prática de coleta inteligente, integrando IA para classificação de resíduos e IoT para monitoramento físico, o que reforça a viabilidade de sistemas distribuídos de gestão de resíduos em cidades inteligentes.",
+  "duvidas": "Como garantir a privacidade dos dados de sensores ao transmiti‑los para a nuvem? Qual o impacto de latência da comunicação IoT na acurácia da classificação em tempo real? Há avaliação de consumo energético dos sensores e do microcontrolador?",
+  "avisos": [],
+  "id": "b008bb4a9ba50d9639d2",
+  "artigo": "Alabdali_2025",
+  "pagina": 6,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "growing challenges of waste classification in smart cities",
+    "solucao": "AI-driven waste management framework",
+    "avaliacao": "with 95% accuracy",
+    "limites": "none have explored structural designs using deep learning",
+    "possibilidades": "Integrar os sensores de nível e peso com protocolos de identidade auto‑soberana (SSI) para controle de acesso aos dados; aplicar credenciais verificáveis para autorizar a leitura dos dados de sensores entre municípios; usar criptografia baseada em atributos (ABE) para proteger informações de peso e nível durante a troca; avaliar a escalabilidade da solução em arquiteturas de borda (edge computing) com processamento local das classificações; testar interoperabilidade entre diferentes plataformas de gestão de resíduos usando blockchain.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "5479cebb906bec948c91"
+  }
+}

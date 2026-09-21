@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-20T18:46:44",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Danilo_TCC_final",
+    "perfil_anterior": {
+      "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+      "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+      "avaliacao": "latência inferior a 500ms por operação",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Investigar a integração de criptografia baseada em atributos (ABE) para controle de acesso seletivo; aplicar criptografia homomórfica para processamento de dados sensíveis sem revelar informações; desenvolver mecanismos de recuperação de credenciais perdidas usando secret sharing distribuído; avaliar a interoperabilidade entre diferentes plataformas de blockchain e padrões de credenciais verificáveis; analisar a escalabilidade do modelo em cenários de alta densidade de dispositivos IoT."
+    },
+    "pagina": 7,
+    "texto": "Abstract\nSmart Cities promise to transform urban life by offering safer, more efficient, and more\naccessiblepublicservices.Informationsecurityisapillarfortrustandtheproperfunctioning\nof Smart Cities. Exposure to cyber threats, such as unauthorized access, fraud, and denial-\nof-service attacks, can compromise the integrity and availability of critical services. Identity\nmanagement, authentication mechanisms, and access control are fundamental to protecting\nprivacy and sensitive data in the context of Smart City applications. This work proposes\nan identity management model, as well as authentication and access control mechanisms\nfor Smart City applications based onblockchain technology. For citizen identity, a Self-\nSovereign Identity approach is used, allowing citizens to control their digital credentials\nsecurely and without intermediaries, promoting greater transparency and security in the\nuse of public services. The proposed model was implemented using theInterSCity Smart\nCities middleware and theHyperledger blockchainplatform. Experimental results indicate\nthat the solution has satisfactory performance, with latency below 500ms per operation,\nvalidating the feasibility of usingblockchain and Self-Sovereign Identities to create a more\nsecure and efficient digital urban environment for Smart Cities.\nKeywords: Smart Cities, Blockchain, Self-Sovereign Identities, Access Control,\nAuthentication.",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho propõe um modelo de gestão de identidade baseado em Self‑Sovereign Identity e blockchain para aplicações de cidades inteligentes, visando proteger contra acessos não autorizados, fraudes e ataques DDoS, com latência inferior a 500 ms por operação, implementado no middleware InterSCity e Hyperledger.",
+    "perfil": {
+      "problema": "unauthorized access, fraud, and denial-of-service attacks",
+      "solucao": "a Self‑Sovereign Identity approach",
+      "avaliacao": "latency below 500ms per operation",
+      "limites": "Não informado",
+      "possibilidades": "Integrar criptografia baseada em atributos (ABE) para controle de acesso seletivo; aplicar criptografia homomórfica para processamento de dados sensíveis sem revelar informações; desenvolver mecanismos de recuperação de credenciais perdidas usando secret sharing distribuído; avaliar a interoperabilidade entre diferentes plataformas de blockchain e padrões de credenciais verificáveis; analisar a escalabilidade do modelo em cenários de alta densidade de dispositivos IoT."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "exposure to cyber threats, such as unauthorized access, fraud, and denial-of-service attacks",
+        "citacao": "Exposure to cyber threats, such as unauthorized access, fraud, and denial-of-service attacks, can compromise the integrity and availability of critical services."
+      },
+      {
+        "afirmacao": "latency below 500ms per operation",
+        "citacao": "Experimental results indicate that the solution has satisfactory performance, with latency below 500ms per operation."
+      }
+    ],
+    "interpretacao": "O estudo demonstra a viabilidade técnica de combinar SSI e blockchain para melhorar a segurança e a eficiência em serviços digitais de cidades inteligentes, embora não detalhe mecanismos de revogação ou recuperação de credenciais.",
+    "duvidas": "Como o modelo trata a revogação de credenciais e a recuperação de identidade em caso de perda de chave? Qual o impacto da escalabilidade em ambientes com milhares de dispositivos IoT?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:46:48"
+}

@@ -1,0 +1,39 @@
+{
+  "resumo": "O trecho descreve os mecanismos de migração e reprodução do algoritmo Whale Optimization (WO) usados para ajustar a posição dos vetores solução, incluindo sinais de perigo, coeficiente β, passos de migração, e comportamentos de roosting e juvenis baseados em sequências de Halton e voos de Lévy.",
+  "perfil": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": [
+      "Aplicar o mecanismo de migração baseado em sinais de perigo para adaptar dinamicamente a alocação de recursos de borda durante o treinamento federado.",
+      "Explorar o coeficiente β adaptativo como controlador de fase de exploração/exploração em ambientes IoT com carga variável.",
+      "Integrar a sequência de Halton e o voo de Lévy nas atualizações de modelo federado para melhorar a diversidade de soluções e acelerar a convergência.",
+      "Definir limiares de safety_signal que acionem re‑treinamento imediato do detector de ameaças quando riscos críticos forem detectados."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "If danger signals are incredibly high, more than a particular pre-defined level, the walrus group must migrate to other, suitable regions for survival.",
+      "afirmacao": "If danger signals are incredibly high, more than a particular pre-defined level, the walrus group must migrate to other, suitable regions for survival."
+    }
+  ],
+  "interpretacao": "Os detalhes do WO apresentados (sinais de perigo, coeficiente β, passos de migração e estratégias de roosting) sugerem um controle fino entre exploração global e exploração local, o que pode ser aproveitado para melhorar a busca de hiperparâmetros e a robustez do modelo federado em cenários de cidades inteligentes.",
+  "duvidas": "Como o coeficiente β evolui ao longo das iterações em ambientes reais de IoT? Qual o impacto da migração baseada em danger_signal sobre o consumo energético dos nós de borda? Como integrar as estratégias de roosting (Halton, Lévy) ao processo de agregação federada sem comprometer a privacidade?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "924c58a63d575f5c798a",
+  "artigo": "Ragab_2025",
+  "pagina": 10,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "ensure robust and scalable cyberthreat detection while preserving the privacy of IoT users in smart cities",
+    "solucao": "AAIFLF-PPCD model contains three stages: HHO-based feature selection, SSAE-based attack recognition, and WOA-based hyperparameter tuning",
+    "avaliacao": "improving both model accuracy and computational efficiency",
+    "limites": "high computational cost and complexity associated with integrating BC, FL, and AI, particularly in resource-constrained environments",
+    "possibilidades": "Aplicar o mecanismo de migração baseado em sinais de perigo para adaptar dinamicamente a alocação de recursos de borda durante o treinamento federado.; Explorar o coeficiente β adaptativo como controlador de fase de exploração/exploração em ambientes IoT com carga variável.; Integrar a sequência de Halton e o voo de Lévy nas atualizações de modelo federado para melhorar a diversidade de soluções e acelerar a convergência.; Definir limiares de safety_signal que acionem re‑treinamento imediato do detector de ameaças quando riscos críticos forem detectados.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "c5214ad786b009c632b3"
+  }
+}

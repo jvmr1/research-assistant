@@ -1,0 +1,48 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T20:13:05",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+    "perfil_anterior": {
+      "problema": "To mitigate the risk of centralization, we introduce a cap on the maximum allowable stake contribution from any single entity.",
+      "solucao": "decentralized model update storage",
+      "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+      "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+      "possibilidades": "Aplicar o consenso híbrido PoS‑BFT a redes de sensores IoT em smart cities, avaliando desempenho com milhares de nós.; Integrar Self‑Sovereign Identity (SSI) e credenciais verificáveis ao processo de seleção de validadores para controle de acesso granular em serviços municipais.; Estender o framework para aprendizado federado vertical entre diferentes departamentos municipais, usando atributos de cidadãos como chaves de acesso.; Investigar a combinação de Differential Privacy e Homomorphic Encryption com credenciais verificáveis para auditoria de privacidade em ambientes de edge computing."
+    },
+    "pagina": 12,
+    "texto": "then these perturbed values are discretized (e.g., fixed-point or scaled integers) to ensure compatibility with \ninteger-based ZKP schemes. This discretization preserves the DP guarantees within a bounded precision range \nand allows the subsequent ZKP protocols implemented using efficient zk-SNARKs to verify the integrity of the \nmodel updates without accessing raw data.\nResults and discussion\nThe proposed Efficient Privacy-Preserving BCFL Framework was implemented and evaluated using Python \n3.9 with key libraries such as TensorFlow, PyTorch, NumPy, Pandas, and Scikit-learn for federated learning \nmodel training, and Hyperledger Fabric for blockchain-based secure aggregation. The blockchain network was \nsimulated with five validator nodes using the PoS with BFT consensus to ensure efficient and secure aggregation \nof federated model updates. For this study, we used the CIFAR-10 dataset, a publicly available dataset widely used \nfor image classification tasks in federated learning research. CIFAR-10 consists of 60,000 color images (32 × 32 \npixels) in 10 classes, with 50,000 images for training and 10,000 images for testing. The dataset was partitioned \ninto non-IID subsets, where each edge node received images from only a subset of classes to simulate real-\nworld federated learning condition. The evaluation of the proposed Efficient Privacy-Preserving Blockchain-\nbased Federated Learning (EPP-BCFL) Framework was conducted through a structured methodology to \nensure a comprehensive assessment of its performance. The CIFAR-10 dataset was employed for benchmarking, \nwhere data was partitioned among edge nodes in a non-IID (Non-Independent and Identically Distributed) \nmanner to replicate real-world federated learning conditions. Each edge node locally trained a Convolutional \nNeural Network (CNN) using Stochastic Gradient Descent (SGD) as the optimization algorithm, running for \nmultiple epochs to ensure sufficient learning from private datasets. To maintain privacy, the Privacy-Preserving \nModel Aggregation (PPMA) mechanism was utilized, leveraging secure multiparty computation (MPC) and \ndifferential privacy to encrypt and protect local model updates before being sent for aggregation. AMA was \nintroduced to assign different weights to model updates based on data distribution at each node, improving \nglobal model fairness and robustness. All updates were recorded on a blockchain-based ledger using a Proof-\nof-Stake (PoS) with Byzantine Fault Tolerance (BFT) consensus mechanism to ensure secure, immutable, \nand verifiable transactions, reducing the risk of model poisoning attacks. To evaluate the effectiveness of the \nEPP-BCFL framework, we conducted a series of federated learning experiments using the CIFAR-10 dataset. \nWhile CIFAR-10 is an image dataset primarily used in computer vision tasks, it was selected in this study to \nfacilitate controlled experimentation of the federated learning process under non-IID conditions. To simulate \nthe heterogeneity commonly found in Electronic Health Records (EHRs), the CIFAR-10 dataset was partitioned \nin a non-IID manner, where each edge node received data samples from limited subsets of classes. This emulates \nthe uneven class distribution and data imbalance typically encountered in real-world healthcare settings where \nmedical institutions possess patient records with varying demographics and disease profiles. The simulation \ndetails and dataset details are shown in Table 2.\nNumber of Edge Nodes Accuracy (%) Precision (%) Recall (%) F1-Score (%) Convergence Time (Epochs) Estimated Time (Seconds)\n10 88.5 87.2 85.6 86.4 20 600\n20 90.1 88.9 87.5 88.2 18 540\n30 92.3 90.5 89.8 90.2 15 450\n40 93.8 92.1 91.4 91.7 12 360\n50 95.2 94.0 93.3 93.6 10 300\nTable 3. Results of federated model Training.\n \nComponent Description\nProgramming Language Python 3.9\nKey Libraries TensorFlow, PyTorch, Scikit-learn, NumPy, Pandas, PySyft\nBlockchain Platform Hyperledger Fabric\nPrivacy Mechanism Secure Multi-party Computation (MPC), Differential Privacy\nConsensus Mechanism Proof-of-Stake (PoS) + Byzantine Fault Tolerance (BFT)\nValidator Nodes 50\nDataset CIFAR-10\nDataset Size 60,000 color images (32 × 32 pixels) in 10 classes\nTraining/Test Split 50,000 training images, 10,000 testing images\nData Distribution Non-IID (Each node receives a subset of classes)\nOptimization Algorithm Stochastic Gradient Descent (SGD)\nSystem Specs Intel Core i9-12900 K, 64GB RAM, NVIDIA RTX 4090 GPU, Ubuntu 22.04 LTS\nTable 2. Simulation environment and dataset Description.\n \nScientific Reports |        (2025) 15:27524 12| https://doi.org/10.1038/s41598-025-12225-x\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trabalho apresenta o Efficient Privacy-Preserving BCFL Framework (EPP-BCFL), que combina aprendizado federado, MPC, diferencial de privacidade e blockchain com consenso PoS+BFT para garantir integridade e privacidade dos modelos. Avaliado com CIFAR-10 em cenário non‑IID, demonstra aumento de acurácia e redução de tempo de convergência à medida que o número de nós de borda cresce, embora use um dataset de visão computacional como proxy para EHRs.",
+    "perfil": {
+      "problema": "reducing the risk of model poisoning attacks",
+      "solucao": "All updates were recorded on a blockchain-based ledger using a Proof-of-Stake (PoS) with Byzantine Fault Tolerance (BFT) consensus mechanism to ensure secure, immutable, and verifiable transactions",
+      "avaliacao": "The evaluation of the proposed Efficient Privacy-Preserving Blockchain-based Federated Learning (EPP-BCFL) Framework was conducted through a structured methodology to ensure a comprehensive assessment of its performance",
+      "limites": "While CIFAR-10 is an image dataset primarily used in computer vision tasks, it was selected in this study to facilitate controlled experimentation of the federated learning process under non-IID conditions",
+      "possibilidades": [
+        "Aplicar o framework a dados reais de prontuários eletrônicos (EHR) para validar a eficácia em cenários de saúde.",
+        "Integrar Self‑Sovereign Identity (SSI) e credenciais verificáveis para controle de acesso granular aos nós de borda em cidades inteligentes.",
+        "Escalar o número de validadores para milhares de nós IoT e avaliar o desempenho do consenso PoS+BFT em ambientes de edge computing.",
+        "Combinar o mecanismo de privacidade com criptografia baseada em atributos (ABE) para suportar políticas de compartilhamento de dados entre diferentes departamentos municipais."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O framework usa consenso PoS+BFT para garantir agregação segura dos modelos federados.",
+        "citacao": "Proof-of-Stake (PoS) with Byzantine Fault Tolerance (BFT) consensus mechanism"
+      },
+      {
+        "afirmacao": "A acurácia do modelo aumenta com o número de nós de borda, atingindo 95.2% com 50 nós.",
+        "citacao": "50 95.2 94.0 93.3 93.6 10 300"
+      }
+    ],
+    "interpretacao": "Os resultados indicam que a combinação de blockchain com técnicas de privacidade pode melhorar a robustez e a precisão de aprendizado federado em ambientes distribuídos, embora a validação ainda dependa de datasets sintéticos.",
+    "duvidas": "Como o desempenho do consenso PoS+BFT se comporta em redes com latência variável típica de cidades inteligentes? Quais são os impactos de usar dados reais de EHRs em termos de privacidade e carga computacional?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:13:23"
+}

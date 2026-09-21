@@ -1,0 +1,37 @@
+{
+  "resumo": "O trecho descreve a abordagem distribuída baseada em blockchain para SSI, destacando que os dados não ficam em servidor central, mas são armazenados em um ledger público e distribuído entre nós que atuam como servidores. Cada nó verifica transações, garantindo integridade e imutabilidade, o que confere confiança ao registro de credenciais. O texto enfatiza que a blockchain funciona simultaneamente como rede e banco de dados, facilitando a construção de aplicações SSI descentralizadas, exemplificando com a Binance Smart Chain (BSC).",
+  "perfil": {
+    "problema": "The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure.",
+    "solucao": "design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar a migração da solução SSI para blockchains permissionadas e comparar desempenho com BSC; analisar o impacto da imutabilidade do ledger na revogação de credenciais usando técnicas de off‑chain revocation; avaliar a resiliência da rede SSI em cenários de alta churn de nós IoT; explorar a integração de mecanismos de consenso leves (e.g., Proof‑of‑Authority) para reduzir latência em ambientes de edge computing."
+  },
+  "evidencias": [
+    {
+      "citacao": "Blockchain solves these issues, and it is a safer option to create an SSI identity application",
+      "afirmacao": "Blockchain provides a decentralized storage and network for SSI applications."
+    },
+    {
+      "citacao": "both the network nodes act simultaneously to ensure the security of all public ledger data",
+      "afirmacao": "All nodes on the blockchain act simultaneously to ensure the security of the public ledger data."
+    }
+  ],
+  "interpretacao": "O autor argumenta que a natureza distribuída e imutável da blockchain elimina a dependência de servidores centrais, aumentando a confiança e a segurança nas transações de identidade, o que é particularmente relevante para ambientes de cidades inteligentes onde a disponibilidade e a integridade dos dados são críticas.",
+  "duvidas": "Como a solução lida com a revogação de credenciais em um ledger imutável? Qual o custo energético da BSC comparado a outras plataformas em cenários de grande volume de transações IoT?",
+  "avisos": [],
+  "id": "923ed73b629f6f49d9d7",
+  "artigo": "Papatheodorou_2025",
+  "pagina": 5,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "The central problem addressed by this work is the lack of user-controlled identity systems that are scalable, cost-effective, and compatible with decentralized infrastructure.",
+    "solucao": "design, implement, and evaluate a decentralized self-sovereign identity system that supports verifiable credentials, privacy-preserving access control, and standards-based interoperability",
+    "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar a migração da solução SSI para blockchains permissionadas e comparar desempenho com BSC; analisar o impacto da imutabilidade do ledger na revogação de credenciais usando técnicas de off‑chain revocation; avaliar a resiliência da rede SSI em cenários de alta churn de nós IoT; explorar a integração de mecanismos de consenso leves (e.g., Proof‑of‑Authority) para reduzir latência em ambientes de edge computing.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "ad0ae8a32d584f7fbea6"
+  },
+  "reaproveitada_de": "ad0ae8a32d584f7fbea6"
+}

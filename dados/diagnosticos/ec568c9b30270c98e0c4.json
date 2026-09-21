@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T19:35:51",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration",
+    "perfil_anterior": {
+      "problema": "requires proof of identity",
+      "solucao": "A device proxy is used to identify and register these devices.",
+      "avaliacao": "Total number of transactions per block",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Integrar identidade auto‑soberana (SSI) para substituir a prova de identidade baseada em proxy; Avaliar o impacto da latência de rede na recuperação de arquivos em ambientes de cidades inteligentes; Comparar diferentes algoritmos de hash (ex.: SHA‑256 vs Keccak‑256) quanto ao consumo energético dos dispositivos IoT de saúde; Extender o framework para suportar computação de borda (edge computing) e nuvem híbrida, medindo desempenho e escalabilidade."
+    },
+    "pagina": 11,
+    "texto": "Page 11 of 22\nMallick et al. Discover Internet of Things             (2025) 5:90 \nAlgorithm 1 Registration and Healthcare Data Upload",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "A página 11 apresenta a referência a Mallick et al. (2025) e indica a presença do Algoritmo 1, que trata do registro e upload de dados de saúde em um cenário de IoT e blockchain.",
+    "perfil": {
+      "problema": "requires proof of identity",
+      "solucao": "A device proxy is used to identify and register these devices.",
+      "avaliacao": "Total number of transactions per block",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a integração de identidade auto‑soberana (SSI) no algoritmo de registro; Avaliar a eficácia do algoritmo em ambientes de borda (edge) com recursos limitados; Comparar diferentes protocolos de consenso blockchain quanto ao tempo de confirmação de upload de dados de saúde; Investigar mecanismos de revogação de credenciais para dispositivos IoT após o registro."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O documento inclui um Algoritmo 1 para registro e upload de dados de saúde.",
+        "citacao": "Algorithm 1 Registration and Healthcare Data Upload"
+      },
+      {
+        "afirmacao": "A referência citada é Mallick et al., Discover Internet of Things (2025).",
+        "citacao": "Mallick et al. Discover Internet of Things (2025) 5:90"
+      }
+    ],
+    "interpretacao": "A presença do Algoritmo 1 sugere que o trabalho propõe um procedimento específico para registrar dispositivos e enviar dados de saúde, possivelmente usando blockchain como camada de confiança.",
+    "duvidas": "Não há detalhes sobre como o algoritmo garante a identidade dos dispositivos, nem sobre métricas de desempenho ou segurança avaliadas."
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:36:04"
+}

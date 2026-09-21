@@ -1,0 +1,36 @@
+{
+  "resumo": "O texto destaca o uso de Hyperledger Fabric como alternativa ao Ethereum PoW para IoT, recomendando blockchains leves com consenso PoA ou DAGs para reduzir custo computacional e energia. Apresenta equações que ilustram a integração de alertas de segurança com IA e blockchain, e relata que a solução alcança mais de 98% de acurácia na detecção de ameaças, incluindo DDoS e malware.",
+  "perfil": {
+    "problema": "single points of failure",
+    "solucao": "a bespoke lightweight blockchain integrate efficient consensus methods such as Proof of Authority (PoA) or Directed Acyclic Graphs (DAGs)",
+    "avaliacao": "over 98% accuracy in identifying cyber threats",
+    "limites": "computational cost analysis for DNN training and blockchain operations is necessary",
+    "possibilidades": "Avaliar o desempenho de Hyperledger Fabric com PoA/DAGs em ambientes de borda de cidades inteligentes; integrar verifiable credentials para autenticação descentralizada de dispositivos IoT; explorar aprendizado federado para atualização contínua dos DNNs sem expor logs sensíveis; aplicar seleção avançada de características (RFE, PCA, MI) a dados de sensores urbanos; investigar a escalabilidade da solução em redes massivas de sensores."
+  },
+  "evidencias": [
+    {
+      "citacao": "Hyperledger Fabric is a great alternative to Ethereum’s energy-intensive Proof of Work (PoW) consensus.",
+      "afirmacao": "Hyperledger Fabric is a great alternative to Ethereum’s energy-intensive Proof of Work (PoW) consensus."
+    },
+    {
+      "citacao": "it achieves over 98% accuracy in identifying cyber threats, including DDoS assaults and malware injections.",
+      "afirmacao": "The solution achieves over 98% accuracy in identifying cyber threats, including DDoS assaults and malware injections."
+    }
+  ],
+  "interpretacao": "O trecho enfatiza a escolha de blockchains leves como Hyperledger Fabric com consenso PoA ou DAGs para reduzir custos computacionais em IoT, e destaca a alta precisão (≥98%) da detecção de ameaças usando DNNs, reforçando a proposta de combinar IA e blockchain para segurança autônoma e em tempo real.",
+  "duvidas": "Como será realizada a análise de custo computacional para treinamento DNN e operações blockchain? Qual o impacto da latência dos consensos PoA/DAGs nas respostas em tempo real? Como a solução se comporta em dispositivos de borda com recursos limitados?",
+  "avisos": [],
+  "id": "d91819e1051d377f0c40",
+  "artigo": "Sathyabama_2025",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "single points of failure",
+    "solucao": "a bespoke lightweight blockchain integrate efficient consensus methods such as Proof of Authority (PoA) or Directed Acyclic Graphs (DAGs)",
+    "avaliacao": "over 98% accuracy in identifying cyber threats",
+    "limites": "computational cost analysis for DNN training and blockchain operations is necessary",
+    "possibilidades": "Avaliar o desempenho de Hyperledger Fabric com PoA/DAGs em ambientes de borda de cidades inteligentes; integrar verifiable credentials para autenticação descentralizada de dispositivos IoT; explorar aprendizado federado para atualização contínua dos DNNs sem expor logs sensíveis; aplicar seleção avançada de características (RFE, PCA, MI) a dados de sensores urbanos; investigar a escalabilidade da solução em redes massivas de sensores.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "40196a11e46ff300b5bb"
+  }
+}

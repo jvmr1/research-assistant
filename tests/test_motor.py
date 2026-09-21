@@ -52,6 +52,12 @@ class PesquisaTest(unittest.TestCase):
         self.assertTrue(any('blockchain' in q and 'access control' in q for q in cfg['consultas']))
         self.assertIn('tecnologia', cfg['variaveis_busca'])
 
+    def test_modo_de_pesquisa_focada_e_geral_sao_configuraveis(self):
+        self.base.INSTRUCOES.write_text('- modo de pesquisa: focada\n', encoding='utf-8')
+        self.assertEqual(agente.carregar_instrucoes(self.base.INSTRUCOES)['modo_pesquisa'], 'focada')
+        self.base.INSTRUCOES.write_text('- modo de pesquisa: geral\n', encoding='utf-8')
+        self.assertEqual(agente.carregar_instrucoes(self.base.INSTRUCOES)['modo_pesquisa'], 'geral')
+
     def test_preleitura_aprova_antes_da_leitura_integral(self):
         a = self.artigo('A')
         a['pdf_local'] = 'pdfs/A.pdf'
@@ -107,11 +113,51 @@ class PesquisaTest(unittest.TestCase):
         a = self.artigo('A')
         a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
         a['pdf_local'] = 'pdfs/A.pdf'
-        with patch.object(self.p, 'trechos', return_value=[{'pagina': 1, 'texto': 'Introdução e conclusão alinhadas.', 'tipo': 'pdf'}]), \
+        with patch.object(self.p, 'trechos', return_value=[{'pagina': 1, 'texto': 'Introdução e conclusão alinhadas. ' * 80, 'tipo': 'pdf'}]), \
              patch('motor.gerar', return_value={'decisao': 'descartar_sem_texto_integral', 'justificativa': 'modelo confundiu a decisão'}):
             self.p.pre_leitura()
-        self.assertEqual(a['pre_leitura_agente']['decisao'], 'precisa_texto_melhor')
-        self.assertIn('texto integral local', a['pre_leitura_agente']['justificativa'])
+        self.assertEqual(a['pre_leitura_agente']['decisao'], 'ler_integralmente')
+        self.assertEqual(a['pre_leitura_agente']['decisao_original'], 'descartar_sem_texto_integral')
+
+    def test_preleitura_prioritaria_com_texto_supera_decisao_contraditoria(self):
+        a = self.artigo('A')
+        a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
+        a['pdf_local'] = 'pdfs/A.pdf'
+        self.p.artigos = [a]
+        self.p.estado['lote_atual'] = {'revisao': self.p.revisao, 'status': 'em_andamento', 'ids': ['A']}
+        resposta = {'decisao': 'precisa_texto_melhor', 'justificativa': 'Tema alinhado, mas quero texto melhor.'}
+        with patch.object(self.p, 'trechos', return_value=[{'pagina': 1, 'texto': 'x' * 2000, 'tipo': 'pdf'}]), \
+             patch('motor.gerar_com_fallback', return_value=resposta):
+            self.p.pre_leitura()
+        self.assertEqual(a['pre_leitura_agente']['decisao'], 'ler_integralmente')
+        self.assertEqual(a['pre_leitura_agente']['decisao_original'], 'precisa_texto_melhor')
+        self.assertIn('pdf integral local', a['pre_leitura_agente']['justificativa'].lower())
+
+    def test_preleitura_html_legivel_supera_decisao_contraditoria(self):
+        a = self.artigo('A')
+        a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'revisar'}
+        a['texto_local'] = 'pdfs/A.html'
+        a['pdf_local'] = ''
+        self.p.artigos = [a]
+        self.p.estado['lote_atual'] = {'revisao': self.p.revisao, 'status': 'em_andamento', 'ids': ['A']}
+        resposta = {'decisao': 'precisa_texto_melhor', 'justificativa': 'Tema alinhado, mas quero texto melhor.'}
+        with patch.object(self.p, 'trechos', return_value=[{'pagina': None, 'texto': 'x' * 2000, 'tipo': 'html'}]), \
+             patch('motor.gerar_com_fallback', return_value=resposta):
+            self.p.pre_leitura()
+        self.assertEqual(a['pre_leitura_agente']['decisao'], 'ler_integralmente')
+
+    def test_reabre_preleitura_com_texto_local_que_ficou_como_insuficiente(self):
+        a = self.artigo('A')
+        a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'revisar'}
+        a['texto_local'] = 'pdfs/A.html'
+        a['pre_leitura_agente'] = {'revisao': self.p.revisao, 'decisao': 'precisa_texto_melhor'}
+        (self.root / 'pdfs').mkdir()
+        (self.root / 'pdfs/A.html').write_text('<html><body>texto completo</body></html>', encoding='utf-8')
+        ident = motor.chave(['preleitura', self.p.revisao, a['id_openalex'], a.get('pdf_local'), a.get('texto_local')])
+        self.p.estado['tarefas'][ident] = {'erro': 'antigo', 'definitivo': True}
+        self.p.reabrir_preleituras_com_texto_local()
+        self.assertNotIn('pre_leitura_agente', a)
+        self.assertNotIn(ident, self.p.estado['tarefas'])
 
     def test_sem_resumo_nao_bloqueia_os_seguintes(self):
         a = self.artigo('SemResumo', False)
@@ -154,6 +200,8 @@ class PesquisaTest(unittest.TestCase):
         self.assertTrue(a['leitura_agente']['concluida'])
         self.assertEqual(a['sintese_artigo']['resumo'], 'Resumo consolidado.')
         self.assertEqual(a['leitura_agente']['tipo'], 'resumo')
+        self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia', 'revisao': self.p.revisao, 'fontes': ['A']}]
+        motor.json_gravar(self.root / 'dados/propostas/p.json', {'fontes': ['A'], 'meu_trabalho': 'Ideia', 'buscas': []})
         self.p.painel()
         nota = self.root / 'vault/trabalhos/A.md'
         self.assertIn('Página resumo', nota.read_text(encoding='utf-8'))
@@ -260,6 +308,19 @@ class PesquisaTest(unittest.TestCase):
         self.assertTrue(any('feedback humano' in c['origem'] for c in consultas))
         self.assertTrue(any('access control' in c['consulta'] or 'identity' in c['consulta'] for c in consultas))
 
+    def test_feedback_descartar_marca_proposta_para_exclusao_visual(self):
+        self.p.estado['propostas'] = [{'id': 'p1', 'titulo': 'Ideia fraca', 'revisao': self.p.revisao, 'fontes': ['A']}]
+        motor.json_gravar(self.root / 'dados/propostas/p1.json', {
+            'id': 'p1', 'titulo': 'Ideia fraca', 'fontes': ['A'], 'meu_trabalho': 'Não seguir.'
+        })
+        (self.root / 'vault/AVALIAR-PROPOSTAS.md').write_text(
+            '# Avaliar propostas\n\n## Ideia fraca\nid: p1\navaliacao: descartar\ncomentario: fora do foco\n',
+            encoding='utf-8')
+        self.p.aplicar_feedback_propostas()
+        obj = motor.ler_json(self.root / 'dados/propostas/p1.json', {})
+        self.assertEqual(obj['avaliacao_humana'], 'descartar')
+        self.assertEqual(self.p.estado['propostas'][0]['avaliacao_humana'], 'descartar')
+
     def test_resposta_truncada_nao_aceita(self):
         class Response:
             def __enter__(self): return self
@@ -267,7 +328,10 @@ class PesquisaTest(unittest.TestCase):
             def raise_for_status(self): pass
             def iter_lines(self):
                 yield json.dumps({'response': '{}', 'done': True, 'done_reason': 'length'}).encode()
-        with patch('motor.requests.post', return_value=Response()), self.assertRaisesRegex(ValueError, 'cortada'):
+        tags = types.SimpleNamespace(json=lambda: {'models': [{'name': 'teste'}]})
+        with patch('motor.ollama_responde', return_value=tags), \
+             patch('motor.requests.post', return_value=Response()), \
+             self.assertRaisesRegex(ValueError, 'cortada'):
             motor.gerar('teste', '', '', {})
 
     def test_openrouter_retorna_json_usando_chave_do_ambiente(self):
@@ -372,5 +436,3 @@ class PesquisaTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-

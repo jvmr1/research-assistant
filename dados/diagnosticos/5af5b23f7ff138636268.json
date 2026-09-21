@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:00:38",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "The YouGovern Secure Blockchain-Based Self-Sovereign Identity (SSI) Management and Access Control",
+    "perfil_anterior": {
+      "problema": "The latest SSI frameworks do not include a mediator, only a person-to-person arrangement",
+      "solucao": "uPort has been built on the BSC public blockchain without authorization",
+      "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+      "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+      "possibilidades": "Avaliar a introdução de um componente mediador leve (ex.: Edge Agent) para melhorar a interoperabilidade entre dispositivos IoT em cidades inteligentes.; Investigar a combinação de wallets digitais com armazenamento off‑chain (IPFS) para reduzir custos de transação em ambientes BSC.; Projetar mecanismos de revogação de credenciais que utilizem contratos inteligentes híbridos entre uPort e Sovrin, aproveitando atributos de privacidade baseados em ZKPs.; Testar a escalabilidade de uPort em cenários de edge computing com milhares de dispositivos conectados simultaneamente."
+    },
+    "pagina": 9,
+    "texto": "Appl. Sci. 2025, 15, 6437 9 of 26\nTable 1. Cont.\nSpecifications uPort Sovrin\nAvailability A user has to use his/her smart phone to\ncontrol his/her identity\nA user needs a smart phone, but it is not\nrequired to owned it\nTransparency Transparency is built on open-source projects\nand open standards\nTransparency is built on open-source projects\nand open standards\nPortability\nPortability is limited. Nevertheless, uPort is\nutilizing various open standards to enhance\nportability, such as DID and VC\nPortability is limited. Nevertheless, Sovrin is\nutilizing various open standards to enhance\nportability, such as DID and VC\nInteroperability Currently, it is evolving. Thus, it needs a\nfurther alignment with other SSI proposals\nCurrently, it is evolving. Thus, it needs a\nfurther alignment with other SSI proposals\nScalability\nScalability is limited. The public Ethereum\nblockchain elaborates around 15 transactions\nper second. uPort is resolving this by\npermitting users to generate Ethereum key\npairs and avoiding the establishment of\nmultiple contracts on the blockchain.\nScalability is limited. Sovrin resolves it by\nutilizing two rings of nodes. One ring of\nvalidators is accepting write transactions. A\nbigger ring of observers performs read-only\ncopies of the blockchain and executes\nread requests.\nThe new IDM 3.0 framework needs to be carefully evaluated for its various aspects.\nChristopher Allen suggested the Ten Principles for SSI [43], which provided an implementa-\ntion framework for the concept of self-supreme identity. Furthermore, as shown in Table 2,\nthe Sovrin Foundation [38] grouped in a white paper three categories: security, monitoring,\nand portability. However, in this sense, persistence does not interfere with Allen’s “right to\nbe forgotten”. It may as well be listed separately since control and consent must be created,\nas well as access and removal of identity.\nTable 2. Principles of SSI.\nSecurity Controllability Portability\nProtection Existence Interoperability\nPersistence Control Transparency\nMinimization Consent Access Portability\nDomain Name System–Identity Management (DNS–IdM) [44] is a scheme of Identity\nManagement based on smart contracts. This helps users preserve their identities related to\ndistinctive characteristics, achieving the self-sovereign concept. With respect to protection\nand privacy, DNS–IdM has promising results [44]. DNS–IdM can avoid traditional security\nthreats and the drawbacks of existing decentralized identity management systems because\nof its decentralized existence. For identity management, this method provides a domain\nname system-like experience. A person can use real-world attributes of his/her identity\nvia DNS–IdM to generate a digitized identification that can be used by various companies\nto authenticate a user and offer their services based on validated criteria. DNS–IdM varies\nfrom conventional schemes of identity management as well as the current advancements in\nthe blockchain-based identity systems, by utilizing the blockchain as a trustworthy and\nstable network to store identities while using smart contracts to obtain identities from their\nrespective recipients safely.\nMost conventional schemes of Identity Management primarily focus on mediators to\nvalidate statements concerning identity characteristics that, once checked, remain true even\nthough the beneficiaries have revoked or modified them. However, identity systems that are\nbased on blockchain depend entirely on the users’ acknowledgment of their identification",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo compara uPort e Sovrin quanto à disponibilidade, transparência, portabilidade, interoperabilidade e escalabilidade, apontando limitações de escalabilidade nas blockchains públicas (≈15 tps) e a necessidade de mediadores. Introduz o esquema DNS‑IdM, que usa contratos inteligentes para gerenciar identidades de forma descentralizada, oferecendo proteção de privacidade e evitando ameaças tradicionais. Destaca ainda os princípios de SSI de Allen e a classificação da Sovrin Foundation, ressaltando questões como controle, consentimento e direito ao esquecimento.",
+    "perfil": {
+      "problema": "The latest SSI frameworks do not include a mediator, only a person-to-person arrangement",
+      "solucao": "uPort has been built on the BSC public blockchain without authorization",
+      "avaliacao": "average DID registration latency of 0.94 s and a peak throughput of 12.5 transactions per second",
+      "limites": "Currently, there is no provision for a relevant Agent/Guardian",
+      "possibilidades": "Avaliar a integração do esquema DNS‑IdM com dispositivos IoT de cidades inteligentes, usando contratos inteligentes para delegar controle de identidade a edge agents leves; projetar mecanismos de revogação baseados em ZKP que operem sobre uPort e DNS‑IdM simultaneamente; testar a escalabilidade de uPort e DNS‑IdM em redes BSC/Ethereum com milhares de nós edge; explorar armazenamento híbrido (on‑chain + IPFS) para reduzir custos de transação e melhorar portabilidade."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Scalability is limited. The public Ethereum blockchain elaborates around 15 transactions per second.",
+        "citacao": "Scalability is limited. The public Ethereum blockchain elaborates around 15 transactions per second."
+      },
+      {
+        "afirmacao": "DNS–IdM helps users preserve their identities related to distinctive characteristics, achieving the self-sovereign concept.",
+        "citacao": "DNS–IdM helps users preserve their identities related to distinctive characteristics, achieving the self-sovereign concept."
+      }
+    ],
+    "interpretacao": "O trabalho evidencia que, apesar dos avanços de uPort e Sovrin, ainda há lacunas críticas em escalabilidade e na presença de um agente mediador, o que compromete a interoperabilidade em ambientes de cidades inteligentes. O esquema DNS‑IdM surge como uma proposta alternativa que combina contratos inteligentes e um modelo de identidade semelhante ao DNS, potencialmente mitigando algumas dessas limitações.",
+    "duvidas": "Como o DNS‑IdM se comporta em termos de latência e throughput comparado ao uPort em redes de edge computing? Quais são os requisitos de segurança para um agente mediador leve que possa operar entre dispositivos IoT e as blockchains públicas?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:01:06"
+}

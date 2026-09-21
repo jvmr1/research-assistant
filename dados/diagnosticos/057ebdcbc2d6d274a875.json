@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T14:38:38",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "A Novel Permissioned Blockchain Approach for Scalable and Privacy-Preserving IoT Authentication",
+    "perfil_anterior": {
+      "problema": "Most existing research on decentralized IoT applications tends to address specific vulnerabilities, with relatively few techniques dedicated to managing privacy and trust issues.",
+      "solucao": "integration of homomorphic encryption",
+      "avaliacao": "The proposed framework is evaluated through comprehensive simulations and compared with existing benchmark models.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Aplicar o protocolo TAB‑SAPP em cenários de cidades inteligentes com computação de borda; Integrar identidade auto‑soberana (SSI) e credenciais verificáveis ao framework blockchain; Explorar criptografia baseada em atributos (ABE) para controle de acesso granular em IoT; Validar o modelo em implantação real envolvendo múltiplas organizações públicas; Investigar mecanismos de revogação de credenciais em ambientes híbridos de nuvem e edge"
+    },
+    "pagina": 4,
+    "texto": " \n \n  \n \n225 \n \n \n \nJournal of Cyber Security and Risk Auditing Vol.2025, No.4                                         ISSN: 3079-5354 \nscenarios—such as when an unconscious patient arrives at a hospital and cannot manually provide credentials. In such \ncases, secure biometric identification becomes a viable solution, using modalities like palm vein or iris recognition [ 26]. \nBiometric authentication has gained prominence due to its combination of high security, reliability, and usability [ 23]. \nAmong these methods, finger vein (FV) recognition stands out as one of the most secure biometric approaches. Unlike \ntraditional authentication systems that store simple biometric templates, FV systems rely on unique morphological features \nof blood vein patterns to identify individuals. These biological traits are extremely difficult to forge or replicate, making  \nFV-based systems highly  resistant to spoofing and impersonation attacks.  To further secure FV biometrics, researchers \nhave proposed both unimodal and multimodal biometric systems. These systems typically extract distinctive features —\nsuch as junction points and angles between vei ns—to generate a unique biokey used for data encryption. In this process, \nan observation matrix captures the extracted biometric features, which are then encrypted using randomly generated keys \n[10]. Some researchers have also implemented multimodal biomet ric systems that combine FV with other traits such as \nretinal scans and fingerprints to enhance accuracy and resilience. However, despite these advancements, certain challenges \nremain. Studies such as those by [16] have highlighted that the proposed systems still suffer from high communication and \ncomputational overhead, which can be limiting in real -time and resource -constrained environments like IoT -based \nhealthcare systems. \n2.1 Overview of Blockchain Structure \nBlockchain is a decentralized and distributed ledger technology designed to securely record transactions across a network \nof interconnected nodes without the need for a central authority [ 14]. Each block in the blockchain contains a group of \nverified transactions, and once a block is appended to the chain, it becomes immutable —ensuring tamper-proof integrity \n[17]. This immutability and transparency make blockchain an ideal solution for applications requiring secure data \nmanagement. As illustrated in Figure 1, the blo ckchain's data structure is typically organized as a sequential linked list of \nblocks. Each block consists of a header, which includes a cryptographic hash of the previous block, a timestamp, and a \nnonce, along with a body containing a batch of transaction s. The transactions within each block are organized using a \nMerkle tree, a binary tree structure that allows efficient and secure verification of transaction integrity [ 19]. \nBlockchain systems rely on a distributed ledger model in which all nodes within the network maintain a synchronized copy \nof the ledger. This distributed nature ensures redundancy and resistance to tampering, as changes to the ledger require \nconsensus from a majority of nodes in the network [20]. The cryptographic hash functions and consensus mechanisms such \nas Proof of Work (PoW) or Proof of Stake (PoS) are central to maintaining the security and c onsistency of the blockchain \n[18]. Furthermore, each transaction on the blockchain is digitally signed using cryptographic keys, ensuring auth enticity \nand non -repudiation [19 ]. The decentralized storage model also enhances data availability and fault tolerance by \ndistributing identical copies of the blockchain across multiple peer nodes. In summary, the architecture and data model of \nblockchain are specifically engineered to offer secure, decentralized, and transparent data management, making it highly \nsuitable for applications such as finance, supply chain, healthcare, and the Internet of Things (IoT).  \n \nFigure 1. Structure of Blockchain. \n \n",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho descreve o uso de biometria de veia digital (FV) como método de autenticação robusto para IoT, destacando sua resistência a falsificações e a geração de chaves criptográficas a partir de características biométricas. Em seguida, apresenta a estrutura de blockchain como ledger descentralizado, imutável e transparente, adequado para gerenciamento seguro de dados em ambientes como saúde IoT, embora ressalte desafios de sobrecarga de comunicação e computação.",
+    "perfil": {
+      "problema": "high communication and computational overhead, which can be limiting in real‑time and resource‑constrained environments like IoT‑based healthcare systems.",
+      "solucao": "blockchain ... ideal solution for applications requiring secure data management.",
+      "avaliacao": "Não informado.",
+      "limites": "Não informado.",
+      "possibilidades": "Explorar a integração de biometria de veia digital com identidade auto‑soberana (SSI) para credenciais verificáveis em cidades inteligentes; avaliar o desempenho da combinação FV‑blockchain em cenários de computação de borda; investigar mecanismos de revogação de credenciais biométricas em redes permissioned; adaptar o modelo para suportar múltiplas modalidades biométricas (multimodal) e analisar o trade‑off entre segurança e sobrecarga."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Finger vein (FV) recognition stands out as one of the most secure biometric approaches.",
+        "citacao": "Among these methods, finger vein (FV) recognition stands out as one of the most secure biometric approaches."
+      },
+      {
+        "afirmacao": "Blockchain provides tamper‑proof integrity and immutability of recorded transactions.",
+        "citacao": "Each block ... becomes immutable —ensuring tamper‑proof integrity."
+      }
+    ],
+    "interpretacao": "O texto amplia o escopo do trabalho ao sugerir que a combinação de biometria de veia digital com blockchain pode atender à necessidade de autenticação segura e privacidade em IoT, especialmente em contextos críticos como saúde. Contudo, destaca que a sobrecarga de comunicação/computação ainda é um obstáculo a ser mitigado, indicando a importância de otimizações para ambientes de borda.",
+    "duvidas": "Como a proposta original lida com a sobrecarga computacional introduzida pela biometria FV? O framework já contempla mecanismos de revogação de credenciais biométricas? Há planos para validar a solução em cenários reais de cidades inteligentes?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T14:38:54"
+}

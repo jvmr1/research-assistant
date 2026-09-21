@@ -1,0 +1,174 @@
+{
+  "etapa": "panorama-brainstorm",
+  "inicio": "2026-09-16T20:33:02",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. Fontes devem ser IDs fornecidos. Buscas são termos para aprofundar ou esclarecer as ideias.",
+  "entrada": {
+    "trabalhos": [
+      {
+        "id": "Munusamy_2025",
+        "titulo": "Blockchain-enabled federated learning with edge analytics for secure and efficient electronic health records management",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "9c572813c3334a9c02c0",
+            "pagina": 1,
+            "resumo": "O artigo propõe o framework EPP-BCFL, que combina blockchain, aprendizado federado, SMPC e diferencial privacidade para reduzir custos computacionais e de comunicação, melhorar a precisão e proteger contra ataques de envenenamento em gestão de registros eletrônicos de saúde.",
+            "evidencias": [
+              {
+                "citacao": "Experimental evaluation on CIFAR-10 demonstrates 95.2% accuracy, a 43% reduction in communication latency, a 37% decrease in computational cost",
+                "afirmacao": "O EPP-BCFL alcança alta acurácia e reduz latência e custo computacional."
+              }
+            ]
+          },
+          {
+            "id": "1f03669b04ec41d70341",
+            "pagina": 2,
+            "resumo": "O trabalho apresenta o framework Enhanced Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) para gestão segura e eficiente de registros eletrônicos de saúde (EHR). Combina aprendizado federado, analytics na borda e blockchain, usando mecanismos híbridos de privacidade (SMPC e Differential Privacy), consenso PoS+BFT leve e agregação adaptativa que considera qualidade dos dados, confiança dos nós e detecção de anomalias, visando reduzir sobrecarga computacional, latência e vulnerabilidades a ataques.",
+            "evidencias": [
+              {
+                "citacao": "Federated Learning (FL) facilitates collaborative model training across multiple healthcare organizations without sharing raw patient data.",
+                "afirmacao": "FL facilitates collaborative model training across multiple healthcare organizations without sharing raw patient data."
+              }
+            ]
+          },
+          {
+            "id": "cc73fc3dc8e665986b0d",
+            "pagina": 3,
+            "resumo": "O trabalho apresenta o framework EPP-BCFL, que combina aprendizado federado, blockchain e técnicas de privacidade (SMPC, Differential Privacy, ZKP) para gerir registros eletrônicos de saúde. Destaca-se um consenso energeticamente eficiente que reduz latência em 43% e custo computacional em 37%, além de estratégias dinâmicas de agregação que dobram a velocidade de convergência. O sistema mantém alta acurácia (≈98,7%) e detecta anomalias em tempo real (~2,3 s).",
+            "evidencias": [
+              {
+                "citacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks.",
+                "afirmacao": "The framework achieved 95.2% accuracy with low communication overhead while defending against re-identification and inference attacks."
+              }
+            ]
+          },
+          {
+            "id": "862bec4e31919ba54052",
+            "pagina": 4,
+            "resumo": "O trecho revisa literatura sobre aprendizado federado baseado em blockchain (BCFL), destacando contribuições como segurança aprimorada via criptografia homomórfica e provas de conhecimento zero, mas apontando limitações recorrentes de sobrecarga computacional/comunicação, desafios de escalabilidade e ausência de mecanismos de incentivo, especialmente em ambientes de recursos limitados como IoT, saúde e cidades inteligentes.",
+            "evidencias": [
+              {
+                "citacao": "Several frameworks extended this idea by implementing federated learning in UAV ecosystems, emphasizing both data protection and scalability.",
+                "afirmacao": "Several frameworks extended this idea by implementing federated learning in UAV ecosystems, emphasizing both data protection and scalability."
+              }
+            ]
+          }
+        ],
+        "problema": "introduce significant computational overhead",
+        "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+        "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+        "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+        "possibilidades": "Aplicar o mecanismo de Agregação Adaptativa (AMA) em cenários de cidades inteligentes com dispositivos IoT heterogêneos.; Incluir métricas de consumo energético e latência para otimizar o trade‑off entre compressão, privacidade e eficiência energética em bordas municipais.; Testar a resistência do EPP-BCFL a ataques de envenenamento em redes de sensores urbanos distribuídos.; Integrar criptografia baseada em atributos (ABE) como camada adicional "
+      },
+      {
+        "id": "Abdullahi_2025",
+        "titulo": "On the adoption and deployment of secure and privacy-preserving IIoT in smart manufacturing: a comprehensive guide with recent advances",
+        "escopo": {
+          "tipo": "pdf",
+          "feitos": 16,
+          "total": 16,
+          "concluida": true
+        },
+        "fichas_amostradas": [
+          {
+            "id": "dd3da9e9b6d40d1d2019",
+            "pagina": 1,
+            "resumo": "O artigo apresenta um guia detalhado para adoção e implantação de mecanismos de defesa que garantam segurança e privacidade no IIoT aplicado à manufatura inteligente, destacando os desafios de segurança decorrentes da convergência IT/OT e a carência de orientações práticas.",
+            "evidencias": [
+              {
+                "citacao": "such inherent interconnectivity introduces significant security and privacy challenges.",
+                "afirmacao": "A interconectividade inerente do IIoT gera desafios significativos de segurança e privacidade."
+              },
+              {
+                "citacao": "there is a lack of specific follow-through guides on how to adopt and implement such mechanisms.",
+                "afirmacao": "Existe falta de guias específicos para adoção e implementação dos mecanismos de defesa."
+              }
+            ]
+          },
+          {
+            "id": "ed4ab4a74904066e6ad9",
+            "pagina": 2,
+            "resumo": "O trecho descreve que a adoção do IIoT na manufatura inteligente enfrenta sérias barreiras de cibersegurança devido à integração heterogênea de dispositivos, ampliando a superfície de ataque. O trabalho propõe um levantamento abrangente que oferece mecanismos de defesa robustos e diretrizes detalhadas para garantir uma infraestrutura IIoT segura e preservadora da privacidade, preenchendo a lacuna de guias práticos deixada por pesquisas anteriores.",
+            "evidencias": [
+              {
+                "citacao": "However, cybersecurity concerns pose a significant obstacle to the adoption of IIoT, making it challenging to effectively utilize its capabilities.",
+                "afirmacao": "cybersecurity concerns pose a significant obstacle to the adoption of IIoT"
+              }
+            ]
+          },
+          {
+            "id": "2861ffdd0f638b3b4781",
+            "pagina": 3,
+            "resumo": "O artigo apresenta diretrizes abrangentes para adoção e implantação segura e com preservação de privacidade do IIoT em manufatura inteligente, descrevendo a arquitetura de quatro camadas, analisando ataques e contramedidas, e destacando a falta de um framework sistemático consolidado.",
+            "evidencias": [
+              {
+                "citacao": "Guidelines for ensuring the security and privacy of the IIoT tools and infrastructure are covered",
+                "afirmacao": "Foram apresentadas diretrizes abrangentes para garantir a segurança e privacidade das ferramentas IIoT."
+              }
+            ]
+          },
+          {
+            "id": "2ee88b18acabfedb3234",
+            "pagina": 4,
+            "resumo": "O artigo apresenta uma comparação de suas contribuições com outras revisões sobre vulnerabilidades e mecanismos de defesa em IIoT, inclui uma tabela detalhada e discute guias de segurança como o NIST IR 8259A e as recomendações da ENISA, apontando a ausência de procedimentos de implementação prática e a necessidade de recursos operacionais para fortalecer a segurança em ambientes de manufatura inteligente.",
+            "evidencias": [
+              {
+                "citacao": "the guide fails to provide implementation procedures for these guidelines.",
+                "afirmacao": "the guide fails to provide implementation procedures for these guidelines."
+              },
+              {
+                "citacao": "The framework proposed in the guide has been widely used to reduce cybersecurity threats in different manufacturing use cases.",
+                "afirmacao": "The framework proposed in the guide has been widely used to reduce cybersecurity threats in different manufacturing use cases."
+              }
+            ]
+          }
+        ],
+        "problema": "Lack of account suspension or deactivation regulations in place.",
+        "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+        "avaliacao": "The technique outperforms other access control-based methods in terms of security, computational expenses, storage complexity, and energy usage.",
+        "limites": "system is not readily available as a commercial product",
+        "possibilidades": "Integrar DHACS com Self‑Sovereign Identity e Verifiable Credentials para autenticação descentralizada de dispositivos.; Aplicar Attribute‑Based Encryption ao mecanismo de controle de acesso híbrido para reforçar a privacidade dos atributos.; Avaliar o desempenho de HASAO e DHACS em ambientes de edge computing com recursos limitados.; Combinar os protocolos de autenticação baseados em PUFs com técnicas de aprendizado de máquina para detecção proat"
+      }
+    ]
+  },
+  "resposta": {
+    "panorama": "A literatura combina blockchains com aprendizado federado (Munusamy_2025) para proteger dados sensíveis, usando mecanismos híbridos de privacidade (SMPC + DP) e consenso leve, mas aponta sobrecarga computacional e falta de otimização para IoT de recursos limitados. Em paralelo, guias de segurança para IIoT em manufatura (Abdullahi_2025) enfatizam a necessidade de frameworks sistemáticos, controle de acesso e diretrizes práticas, porém carecem de soluções descentralizadas e de identidade auto‑soberana. Ambos concordam que a interoperabilidade, a privacidade e a escalabilidade são críticos, mas divergem na aplicação: saúde foca em precisão de modelos, enquanto IIoT foca em políticas de implantação e mitigação de ataques. Os trabalhos chegam a demonstrar reduções de latência e custos, porém ainda não testam ambientes urbanos heterogêneos nem integram criptografia baseada em atributos ou credenciais verificáveis.",
+    "ideias": [
+      {
+        "titulo": "Extensão do framework EPP‑BCFL para ambientes de cidades inteligentes com dispositivos IoT heterogêneos",
+        "descricao": "Adaptar o mecanismo de Agregação Adaptativa (AMA) de Munusamy_2025 ao cenário de IIoT descrito por Abdullahi_2025, incorporando métricas de consumo energético e latência nas bordas municipais. Avaliar a robustez contra envenenamento de dados em sensores urbanos e comparar a eficiência com as diretrizes de segurança existentes.",
+        "fontes": [
+          "Munusamy_2025",
+          "Abdullahi_2025"
+        ],
+        "lacuna": "Ausência de avaliação de AMA em IoT urbano e falta de métricas energéticas nas diretrizes de IIoT."
+      },
+      {
+        "titulo": "Integração de Self‑Sovereign Identity (SSI) e Verifiable Credentials ao controle de acesso híbrido de IIoT",
+        "descricao": "Combinar o modelo de controle de acesso proposto por Abdullahi_2025 com identidade auto‑soberana e credenciais verificáveis, inspirando‑se nas soluções de blockchain de Munusamy_2025. Testar a descentralização da autenticação de dispositivos e o impacto na privacidade dos atributos usando ABE como camada adicional.",
+        "fontes": [
+          "Munusamy_2025",
+          "Abdullahi_2025"
+        ],
+        "lacuna": "Guia de IIoT não contempla identidade descentralizada nem ABE; o framework de saúde não aborda controle de acesso baseado em SSI."
+      },
+      {
+        "titulo": "Avaliação comparativa de criptografia baseada em atributos (ABE) versus SMPC + DP em federated learning para smart cities",
+        "descricao": "Implementar ABE como alternativa ou complemento ao mecanismo híbrido de privacidade de Munusamy_2025 e medir seu desempenho em cenários de IIoT descritos por Abdullahi_2025 (edge computing, recursos limitados). Identificar trade‑offs entre precisão do modelo, sobrecarga de comunicação e proteção de atributos sensíveis.",
+        "fontes": [
+          "Munusamy_2025",
+          "Abdullahi_2025"
+        ],
+        "lacuna": "Nenhum dos trabalhos avaliou ABE em federated learning nem comparou seu custo versus SMPC + DP em ambientes de cidades inteligentes."
+      }
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T20:34:12"
+}

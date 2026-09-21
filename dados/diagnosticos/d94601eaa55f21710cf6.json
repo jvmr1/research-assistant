@@ -1,0 +1,128 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-20T18:18:58",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. A ideia já está publicada; esta etapa só acrescenta um caminho possível.",
+  "entrada": {
+    "ideia": "Integrar identidades autossoberanas (SSI) e credenciais verificáveis ao modelo baseado em Hyperledger Fabric.",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Exemplo_da24de257de987bc603b",
+          "titulo": "André Luiz Almeida Cardoso",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "2319445f0172f8e04af6",
+              "pagina": 1,
+              "resumo": "O trecho apresenta o título de um trabalho de André Luiz Almeida Cardoso, intitulado “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, desenvolvido na Universidade Federal do Maranhão em 2024, indicando foco em identidade digital para cidades inteligentes usando blockchain.",
+              "evidencias": [
+                {
+                  "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+                  "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+                }
+              ]
+            },
+            {
+              "id": "5b0dc507d4dec2105c36",
+              "pagina": 2,
+              "resumo": "Dissertação de André Luiz Almeida Cardoso, apresentada à UFMA em 2024, propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
+              "evidencias": [
+                {
+                  "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+                  "afirmacao": "O trabalho propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+                }
+              ]
+            },
+            {
+              "id": "68eb2691f5e562c5f06f",
+              "pagina": 3,
+              "resumo": "Dissertação de mestrado de André Luiz Almeida Cardoso (2024) intitulada “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, com 77 páginas, orientada por Francisco José da Silva e Silva e coorientada por Arlindo Flavio da Conceição, apresentada ao Programa de Pós‑graduação em Ciência da Computação da UFMA.",
+              "evidencias": [
+                {
+                  "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+                  "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+                }
+              ]
+            },
+            {
+              "id": "f9770a69b618d85c75dd",
+              "pagina": 4,
+              "resumo": "A dissertação de André Luiz Almeida Cardoso, defendida em 2024 na UFMA, propõe um modelo de gestão de identidades para cidades inteligentes fundamentado na tecnologia blockchain.",
+              "evidencias": [
+                {
+                  "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+                  "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+                }
+              ]
+            }
+          ],
+          "problema": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+          "solucao": "Gestão de Identidades pode desempenhar um papel fundamental",
+          "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+          "limites": "Não identificado nas fichas/trechos disponíveis.",
+          "possibilidades": "Explorar integração de SSI com blockchain para canais seguros de comunicação em CIs; Aplicar ABE para controle de acesso seletivo a sensores IoT; Investigar protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade; Avaliar uso de criptografia homomórfica para análise de dados de mobilidade preservando privacidade.",
+          "assinatura": "a6dd17ddc760fe0d49a1"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": {
+      "descricao": "Implementar um módulo de identidade autossoberana (SSI) baseado em DID e credenciais verificáveis sobre uma rede Hyperledger Fabric. O módulo deve suportar emissão, apresentação, verificação, revogação e recuperação de credenciais usando criptografia de atributos (ABE) e, opcionalmente, criptografia homomórfica para consultas de dados IoT. Comparar o desempenho e a privacidade do sistema proposto com (i) o modelo de gestão de identidades para cidades inteligentes baseado em blockchain descrito por Cardoso (2024) e (ii) a solução padrão de identidade do Hyperledger Fabric que utiliza certificados X.509.",
+      "fases": [
+        "Emissão de credenciais SSI via Hyperledger Fabric CA + Aries/Indy",
+        "Apresentação e verificação em serviços de IoT de cidade inteligente (ex.: sensores de tráfego)",
+        "Revogação de credenciais usando listas de revogação distribuídas (CRL) e protocolos de atualização de DID",
+        "Recuperação de acesso perdido via chaves de recuperação criptograficamente protegidas",
+        "Processamento de dados agregados com criptografia homomórfica para análise de mobilidade"
+      ]
+    },
+    "recursos": {
+      "dados": [
+        "Conjunto de dados de tráfego urbano aberto (ex.: Open Traffic Data – disponível em data.gov.br)",
+        "Logs de transações simuladas de serviços públicos (gerados via script de carga)",
+        "Metadados de identidade sintéticos (gerados conforme o padrão W3C DID)"
+      ],
+      "ferramentas": [
+        "Hyperledger Fabric v2.5 (disponível no GitHub oficial)",
+        "Hyperledger Aries Framework Go (para agentes SSI)",
+        "Hyperledger Indy (para armazenamento de DIDs e credenciais)",
+        "Biblioteca de ABE – Charm-Crypto (Python) ou libfenc (C)",
+        "Biblioteca de criptografia homomórfica – Microsoft SEAL (C++)",
+        "Docker Compose para orquestração de nós Fabric e agentes SSI",
+        "Prometheus + Grafana para coleta de métricas"
+      ],
+      "infraestrutura": [
+        "Cluster de 3 máquinas virtuais (2 CPU, 8 GB RAM cada) em um provedor de nuvem pública (ex.: AWS, GCP) – recursos padrão disponíveis",
+        "Repositório Git para código‑fonte e scripts de experimentos"
+      ]
+    },
+    "metricas": [
+      "Latência média (ms) para emissão, apresentação e verificação de credenciais",
+      "Throughput (transações/segundo) da rede Fabric com e sem módulo SSI",
+      "Consumo de memória e CPU dos nós Fabric e dos agentes SSI durante carga sustentada",
+      "Tempo de propagação de revogação (ms) até que todos os nós reconheçam a credencial revogada",
+      "Taxa de sucesso na recuperação de acesso perdido (percentual)",
+      "Precisão e tempo de consultas homomórficas sobre dados agregados (erro relativo, ms)",
+      "Indicadores de privacidade – entropia de atributos divulgados vs. atributos requeridos"
+    ],
+    "duvidas_orientador": [
+      "Qual estratégia de armazenamento de DIDs (Indy vs. Fabric ledger) oferece melhor escalabilidade em cenários de milhares de cidadãos?",
+      "Deveríamos usar ABE baseada em CP‑ABE ou KP‑ABE para controle de acesso a sensores IoT, considerando a complexidade de gerenciamento de chaves?",
+      "Qual abordagem de revogação (CRL distribuída, status de credencial on‑chain ou protocolos de atualização de DID) minimiza latência sem sobrecarregar a rede?",
+      "É viável integrar criptografia homomórfica para análises de mobilidade em tempo real sem comprometer a latência exigida pelos serviços de trânsito?",
+      "Como garantir interoperabilidade entre o módulo SSI e sistemas legados que ainda utilizam certificados X.509 no Fabric?",
+      "Qual conjunto de métricas de privacidade (ex.: diferencial de privacidade, entropia) é mais adequado para avaliar a exposição de atributos nas credenciais?",
+      "Qual carga de trabalho (número de transações simultâneas, tamanho das credenciais) deve ser adotada para refletir um cenário realista de cidade inteligente?"
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:19:17"
+}

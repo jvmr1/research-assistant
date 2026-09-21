@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:11:20",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+    "perfil_anterior": {
+      "problema": "Não identificado nas fichas/trechos disponíveis.",
+      "solucao": "Não identificado nas fichas/trechos disponíveis.",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a aplicação da abordagem proposta a contextos de cidades inteligentes, integrando sensores IoT para rastreamento de vacinas; avaliar a escalabilidade e desempenho da solução em ambientes de edge computing; combinar a SSI com criptografia baseada em atributos (ABE) para controle de acesso granular; investigar mecanismos de revogação de credenciais e interoperabilidade entre diferentes organizações de saúde."
+    },
+    "pagina": 2,
+    "texto": "Privacy-Preserving Vaccine Supply Chain \nManagement Leveraging Blockchain and \nSelf-Sovereign Identity\nBrijesh Kumar Chaurasia1, Nikita Tiwari 2*, and Nikhil Pateria3* \n1 Department of Computer Science and Engineering,\nPranveer Singh Institute of Technology, Kanpur, UP, INDIA\n2School of Computer Science, \nUniversity of Petroleum and Energy Studies, Dehradun, UK INDIA\n3Department of AI & ML,\nManipal University Jaipur, Jaipur, Rajasthan, INDIA\n*Corresponding Author\n*nikita.tiwari25@gmail.com\n*nikhil.pateria@jaipur.manipal.edu\nAbstract. Blockchain technology’s potential to enhance \nefficiency, security, and transparency has attracted a lot of \nattention to its integration into vaccination supply chain \nmanagement in recent years. This work presents a \ncomprehensive study on leveraging self-sovereign identity \n(SSI), blockchain, and privacy-preserving techniques to \noptimize vaccine distribution. We conduct a comparative \nanalysis of existing blockchain-based frameworks, evaluating \ntheir effectiveness in addressing key challenges such as \ntraceability, counterfeit prevention, and data privacy. The \nempirical results prove the efficacy of the proposed supply \nchain framework. Additionally, we identify and discuss critical \nchallenges current systems face, including scalability issues, \ninteroperability constraints, and privacy concerns. Our findings \nprovide a robust foundation for future research and \ndevelopment in the field, proposing potential improvements and \nstrategies to overcome the identified challenges.\nKeywords: Blockchain, Supply Chain Management, Self-\nSovereign Identity (SSI), Traceability, Counterfeit Prevention, \nand Interoperability.\n1 Introduction\nThe COVID-19 pandemic caused by the SARS-CoV-2 virus posed a \nmajor global public health challenge, placing unprecedented strain \nACCEPTED MANUSCRIPT\nARTICLE IN PRESSARTICLE IN PRESS",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta um estudo que combina blockchain, identidade auto-soberana (SSI) e técnicas de preservação de privacidade para melhorar a cadeia de suprimentos de vacinas. Os autores comparam frameworks baseados em blockchain, destacando benefícios em rastreabilidade, prevenção de falsificações e privacidade dos dados. Resultados empíricos indicam eficácia da solução proposta, embora reconheçam desafios de escalabilidade, interoperabilidade e privacidade que precisam ser superados.",
+    "perfil": {
+      "problema": "key challenges such as traceability, counterfeit prevention, and data privacy",
+      "solucao": "leveraging self-sovereign identity (SSI), blockchain, and privacy-preserving techniques to optimize vaccine distribution",
+      "avaliacao": "empirical results prove the efficacy of the proposed supply chain framework",
+      "limites": "scalability issues, interoperability constraints, and privacy concerns",
+      "possibilidades": "Aplicar a abordagem a cidades inteligentes integrando sensores IoT para rastreamento de vacinas; avaliar desempenho em ambientes de edge computing; combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular; investigar mecanismos de revogação de credenciais distribuídas via blockchain; explorar interoperabilidade entre diferentes provedores de saúde e plataformas municipais."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Blockchain and SSI can enhance traceability and prevent counterfeits",
+        "citacao": "Blockchain technology’s potential to enhance efficiency, security, and transparency ... integration into vaccination supply chain management"
+      },
+      {
+        "afirmacao": "Empirical results prove the efficacy of the proposed supply chain framework",
+        "citacao": "The empirical results prove the efficacy of the proposed supply chain framework"
+      }
+    ],
+    "interpretacao": "A integração de blockchain com SSI oferece uma base robusta para garantir a autenticidade e a privacidade dos dados na cadeia de suprimentos de vacinas, mas a viabilidade prática ainda depende de soluções para escalabilidade e interoperabilidade.",
+    "duvidas": "Como a solução lida com a revogação de credenciais em tempo real? Qual é o impacto de diferentes topologias de rede edge na escalabilidade do framework?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:11:40"
+}

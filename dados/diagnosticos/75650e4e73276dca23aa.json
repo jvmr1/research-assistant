@@ -1,0 +1,22 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T16:43:20",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Enhancing anomaly detection and prevention in Internet of Things (IoT) using deep neural networks and blockchain based cyber security",
+    "perfil_anterior": {
+      "problema": "the data flow that explains the storage, verification, and use of discovered abnormalities inside the blockchain network is lacking",
+      "solucao": "Integrating DL-based threat categorization with blockchain-based security and automated mitigation",
+      "avaliacao": "achieves over 98% accuracy in identifying cyber threats",
+      "limites": "significant computational overhead and delay, restricting their practical use in resource-limited IoT settings",
+      "possibilidades": "Implementar quantização de modelos DNN para reduzir a carga computacional em dispositivos de borda.; Avaliar o uso de consenso leve (PoA ou DAG) no Hyperledger Fabric para melhorar a latência em cenários de cidades inteligentes.; Integrar verifiable credentials ao fluxo de dados para gerenciar identidades e revogação de dispositivos IoT.; Testar a interoperabilidade da solução com plataformas FIWARE e OpenStack em ambientes de edge computing."
+    },
+    "pagina": 11,
+    "texto": " uv s\n[\ni − an′′]\n= Ba\n[\nw − ud′′]\n+ Ba\n[\nw − siu′′]\n (15)\nEquation 15 shows uv s [i − an′′] how undiscovered security flaws in systemsmay be turned into an authentication \nframework protected by blockchain technology. Here, several layers Ba [w − siu′′] and Ba [w − siu′′], which \nalso prohibits unauthorized manipulation. This emphasizes the capacity of the suggested solution to improve \nIoT security using AI-driven risk identification and trust mechanisms based on blockchain.\n cv w\n[\ni − sn′′]\n= Ba\n[\nwl − sn′′]\n+ Ka\n[\nw − uy′′]\n (16)\nTo transform vulnerabilities in cybersecurity in IoT networks ( cv w [i − sn′′]) into a security framework \nsupported by blockchain technology Ba [wl − sn′′] and adaptive defensive mechanisms Ka [w − uy′′] \npowered by artificial intelligence, Eq. 16 must be satisfied. The blockchain component guarantees data integrity \nand immutable logging, while AI-based anomaly detection constantly detects and mitigates risks.\nContribution 3: Automated threat mitigation via smart contracts\nBlockchain-based smart contracts for autonomous, real-time threat response provide safe, tamper-proof, \ndistributed IoT security.\nFigure  5 presents a grounded-on trajectory modeling maritime anomaly detecting system. It consists of \ntwo main phases: maritime trajectory modeling and anomaly detection. The first stage develops a Maritime \nFig. 4. Training and testing flow in IoT network traffic anomaly detection system.\n \nScientific Reports |        (2025) 15:22369 11| https://doi.org/10.1038/s41598-025-04164-4\nwww.nature.com/scientificreports/",
+    "tipo": "pdf"
+  },
+  "erro": "Ollama foi iniciado, mas não respondeu na porta 11434 em 20s.",
+  "resposta_bruta": null,
+  "fim": "2026-09-16T16:44:01"
+}

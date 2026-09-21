@@ -1,0 +1,31 @@
+{
+  "resumo": "O trabalho propõe um modelo de gestão de identidade baseado em Self‑Sovereign Identity e blockchain para aplicações de cidades inteligentes, visando proteger contra acessos não autorizados, fraudes e ataques DDoS, com latência inferior a 500 ms por operação, implementado no middleware InterSCity e Hyperledger.",
+  "perfil": {
+    "problema": "unauthorized access, fraud, and denial-of-service attacks",
+    "solucao": "a Self‑Sovereign Identity approach",
+    "avaliacao": "latency below 500ms per operation",
+    "limites": "Não informado",
+    "possibilidades": "Integrar criptografia baseada em atributos (ABE) para controle de acesso seletivo; aplicar criptografia homomórfica para processamento de dados sensíveis sem revelar informações; desenvolver mecanismos de recuperação de credenciais perdidas usando secret sharing distribuído; avaliar a interoperabilidade entre diferentes plataformas de blockchain e padrões de credenciais verificáveis; analisar a escalabilidade do modelo em cenários de alta densidade de dispositivos IoT."
+  },
+  "evidencias": [],
+  "interpretacao": "O estudo demonstra a viabilidade técnica de combinar SSI e blockchain para melhorar a segurança e a eficiência em serviços digitais de cidades inteligentes, embora não detalhe mecanismos de revogação ou recuperação de credenciais.",
+  "duvidas": "Como o modelo trata a revogação de credenciais e a recuperação de identidade em caso de perda de chave? Qual o impacto da escalabilidade em ambientes com milhares de dispositivos IoT?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "a3ab33e84c2e09dacd14",
+  "artigo": "Exemplo_55b3b0969325cccbbb2c",
+  "pagina": 7,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "acessos não autorizados, fraudes e ataques de negação de serviço",
+    "solucao": "utiliza-se uma abordagem de Identidades Autosoberanas",
+    "avaliacao": "latency below 500ms per operation",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Integrar criptografia baseada em atributos (ABE) para controle de acesso seletivo; aplicar criptografia homomórfica para processamento de dados sensíveis sem revelar informações; desenvolver mecanismos de recuperação de credenciais perdidas usando secret sharing distribuído; avaliar a interoperabilidade entre diferentes plataformas de blockchain e padrões de credenciais verificáveis; analisar a escalabilidade do modelo em cenários de alta densidade de dispositivos IoT.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "aa6f199c752f47517c1c"
+  },
+  "reaproveitada_de": "aa6f199c752f47517c1c"
+}

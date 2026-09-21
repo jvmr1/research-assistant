@@ -19,6 +19,37 @@ import unicodedata
 COLUNAS = ('problema', 'solucao', 'avaliacao', 'limites', 'possibilidades')
 
 
+def ler_json_seguro(path, padrao):
+    from motor import ler_json, log
+    try:
+        return ler_json(path, padrao)
+    except json.JSONDecodeError:
+        log(f"Ficha JSON inválida ignorada para retomada: {path}")
+        return padrao
+
+
+def ficha_json_invalida(path):
+    if not path.exists():
+        return False
+    try:
+        json.loads(path.read_text(encoding='utf-8'))
+        return False
+    except (OSError, json.JSONDecodeError):
+        return True
+
+
+def quarentenar_ficha_invalida(p, assinatura, indice, path):
+    from motor import chave, log
+    destino = p.root / 'dados/leituras_corrompidas' / assinatura / f'{indice}-{int(time.time())}.json'
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        path.replace(destino)
+    except OSError:
+        path.unlink(missing_ok=True)
+    p.estado.get('tarefas', {}).pop(chave(['ler', assinatura, indice]), None)
+    log(f"Ficha inválida movida para quarentena e trecho liberado para releitura: {path}")
+
+
 def texto(valor):
     if valor is None:
         return ''
@@ -175,11 +206,18 @@ def ler(p):
             antiga = p.root / 'dados/leituras' / legado['assinatura']
             for i, t in enumerate(trechos):
                 if (antiga / f'{i}.json').exists() and not (pasta / f'{i}.json').exists():
-                    f = ler_json(antiga / f'{i}.json', {})
+                    f = ler_json_seguro(antiga / f'{i}.json', {})
+                    if not f:
+                        continue
                     f['reaproveitada_de'] = legado['assinatura']
                     json_gravar(pasta / f'{i}.json', f)
-        fichas = {i: ler_json(pasta / f'{i}.json', {}) for i, t in enumerate(trechos)
-                  if t['texto'].strip() and (pasta / f'{i}.json').exists()}
+        for i, t in enumerate(trechos):
+            ficha_path = pasta / f'{i}.json'
+            if t['texto'].strip() and ficha_json_invalida(ficha_path):
+                quarentenar_ficha_invalida(p, assinatura, i, ficha_path)
+        fichas = {i: ficha for i, t in enumerate(trechos)
+                  if t['texto'].strip() and (pasta / f'{i}.json').exists()
+                  for ficha in [ler_json_seguro(pasta / f'{i}.json', {})] if ficha}
         total = sum(bool(t['texto'].strip()) for t in trechos)
         if fichas and a.get('perfil_revisao', {}).get('assinatura') != assinatura:
             perfis = [f.get('perfil_acumulado') for f in fichas.values() if f.get('perfil_acumulado', {}).get('assinatura') == assinatura]
@@ -219,6 +257,10 @@ def ler(p):
             if i in fichas or not trecho['texto'].strip():
                 continue
             ident = chave(['ler', assinatura, i])
+            if not (pasta / f'{i}.json').exists() and p.estado['tarefas'].get(ident, {}).get('feito'):
+                p.estado['tarefas'].pop(ident, None)
+                p.salvar()
+                log(f"Ficha ausente apesar de tarefa marcada como concluída; liberando releitura do trecho {i + 1}/{total}.")
             pendente = p.estado['tarefas'].get(ident, {})
             if pendente.get('feito') or pendente.get('tentar_em', 0) > time.time():
                 continue  # Um trecho problemático não impede a leitura das páginas seguintes.
@@ -259,6 +301,16 @@ def ler(p):
             if not obj:
                 tarefa = p.estado.get('tarefas', {}).get(ident, {})
                 erro = tarefa.get('erro', '')
+                erro_modelo = any(x in erro for x in (
+                    'localhost:11434/api/generate', 'api/generate', 'Nenhum modelo respondeu',
+                    'modelo local', 'Ollama', 'OPENROUTER_API_KEY', 'nao retornou um objeto JSON',
+                    'não retornou um objeto JSON', 'Modelo indisponivel', 'Modelo indisponível'))
+                if tarefa.get('tentar_em') and erro_modelo:
+                    p.mensagem = f"Leitura pausada por indisponibilidade de modelo; retomada programada para depois."
+                    p.estado['pausa_modelo_ate'] = tarefa.get('tentar_em')
+                    p.salvar()
+                    p.painel()
+                    return
                 if tarefa.get('definitivo') or ('Ficha sem conteúdo' in erro):
                     obj = {
                         'id': ident,
@@ -310,6 +362,7 @@ def ler(p):
 
 
 def matriz(p):
+    from motor import ler_json
     linhas = []
     for a in p.artigos:
         if p.ignorado(a):
@@ -318,10 +371,68 @@ def matriz(p):
         leitura = a.get('leitura_agente', {})
         if perfil.get('revisao') != p.revisao or leitura.get('revisao') != p.revisao or not leitura.get('feitos'):
             continue
+        fichas = []
+        pasta = p.root / 'dados/leituras' / leitura.get('assinatura', '')
+        for path in sorted(pasta.glob('*.json'), key=lambda x: int(x.stem) if x.stem.isdigit() else 10**9):
+            ficha = ler_json_seguro(path, {})
+            if ficha.get('resumo') and ficha.get('evidencias'):
+                fichas.append({k: ficha.get(k) for k in ('id', 'pagina', 'resumo', 'evidencias')})
+            if len(fichas) >= 4:
+                break
         linhas.append({'id': a['nome_local'], 'titulo': a['titulo'],
                        'escopo': {k: leitura[k] for k in ('tipo', 'feitos', 'total', 'concluida')},
+                       'fichas_amostradas': fichas,
                        **{c: texto(perfil.get(c, 'Não informado.'))[:450] for c in COLUNAS}})
     return linhas
+
+
+def exemplos_de_redacao(p):
+    """Fornece apenas estrutura e estilo dos trabalhos-exemplo, nunca evidência."""
+    pasta = p.root / 'exemplos'
+    if not pasta.exists():
+        return []
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        return []
+    exemplos = []
+    for caminho in sorted(pasta.glob('*.pdf'))[:3]:
+        try:
+            texto_pdf = '\n'.join((pagina.extract_text() or '') for pagina in PdfReader(caminho).pages)
+        except Exception:
+            continue
+        normalizado = ' '.join(texto_pdf.split())
+        marcadores = [
+            trecho for trecho in (
+                '1 Introdução', '1.1 Justificativa', '1.2 Objetivos',
+                '2 Fundamentação Teórica', '3 Trabalhos Relacionados',
+            ) if trecho.lower() in normalizado.lower()
+        ]
+        exemplos.append({
+            'arquivo': caminho.name,
+            'paginas': len(PdfReader(caminho).pages),
+            'estrutura_identificada': marcadores,
+            'trecho_apenas_para_estilo': normalizado[:3500],
+        })
+    return exemplos
+
+
+def secoes_redacao(valor, titulo_padrao):
+    if isinstance(valor, list):
+        resultado = []
+        for item in valor:
+            if isinstance(item, dict):
+                titulo = texto(item.get('titulo') or titulo_padrao)
+                corpo = texto(item.get('texto') or item.get('conteudo') or item.get('paragrafos'))
+                fontes = item.get('fontes', [])
+            else:
+                titulo, corpo, fontes = titulo_padrao, texto(item), []
+            if corpo:
+                resultado.append({'titulo': titulo, 'texto': corpo, 'fontes': fontes if isinstance(fontes, list) else []})
+        return resultado
+    if texto(valor):
+        return [{'titulo': titulo_padrao, 'texto': texto(valor), 'fontes': []}]
+    return []
 
 
 def propor_por_artigo(p, linhas):
@@ -379,6 +490,11 @@ def propor_por_artigo(p, linhas):
                 'riscos': 'Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.',
                 'duvidas_orientador': 'Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?'
             }
+            fichas_evidencia = por_id[nome].get('fichas_amostradas', [])
+            proposta['evidencias_usadas'] = [f['id'] for f in fichas_evidencia[:3]]
+            fatos = [e.get('afirmacao') for f in fichas_evidencia[:3] for e in f.get('evidencias', [])
+                     if isinstance(e, dict) and texto(e.get('afirmacao'))]
+            proposta['fatos'] = '; '.join(dict.fromkeys(fatos)) or 'Nenhuma evidência literal validada foi selecionada.'
             json_gravar(p.root / 'dados/propostas' / f'{pid}.json', proposta)
             json_gravar(p.root / 'dados/propostas' / f'{pid}-fontes.json',
                         {'fontes': [dict(por_id[nome], assinatura=leitura.get('assinatura'))],
@@ -500,10 +616,14 @@ def detalhar(p):
             log('Desenvolvendo a ideia: ' + obj['titulo'])
             fontes = ler_json(path.with_name(meta['id'] + '-fontes.json'), {})
             r = chamar(p, 'desenvolver-ideia',
-                'Desenvolva esta sugestão de mestrado sem julgá-la como banca. JSON: experimento (o que implementar e '
-                'com qual trabalho comparar), recursos (dados/ferramentas necessários, sem inventar disponibilidade), '
-                'metricas e duvidas_orientador (strings, até 80 palavras cada). Se faltar informação, proponha opções. '
-                'A ideia já está publicada; esta etapa só acrescenta um caminho possível.',
+                'Desenvolva esta sugestão em nível de reunião com orientador, como brainstorm profundo e útil. '
+                'Não escreva só uma frase. JSON com strings: experimento, recursos, metricas, riscos e duvidas_orientador. '
+                'Em experimento, detalhe: problema específico, hipótese, arquitetura/artefato a implementar, etapas, baseline '
+                'ou trabalhos de comparação, e cenário de avaliação. Em recursos, liste ferramentas, dados/simuladores, padrões '
+                'e bibliotecas possíveis, sem inventar disponibilidade. Em métricas, inclua desempenho, segurança, privacidade, '
+                'usabilidade/interoperabilidade quando couber. Em riscos, explique o que pode inviabilizar ou reduzir a novidade. '
+                'Em dúvidas, escreva perguntas concretas para levar à reunião. Use as fontes fornecidas e deixe claro quando for '
+                'inferência exploratória. Cada campo deve ter entre 120 e 250 palavras quando houver informação suficiente.',
                 {'ideia': obj['meu_trabalho'], 'fontes': fontes})
             for campo in ('experimento', 'recursos', 'metricas', 'duvidas_orientador'):
                 if texto(r.get(campo)):
@@ -517,8 +637,116 @@ def detalhar(p):
             return
 
 
+def redigir_pesquisa_focada(p):
+    """Gera uma redação provisória rastreável para o modo de pesquisa focada."""
+    from motor import chave, agora, json_gravar, log
+
+    if p.cfg.get('modo_pesquisa') != 'focada':
+        return False
+    corpus = [linha for linha in matriz(p) if linha.get('fichas_amostradas')]
+    if not corpus:
+        p.estado.setdefault('redacao_focada', {})['status'] = 'aguardando_fontes'
+        return False
+    assinatura = chave(corpus)
+    anterior = p.estado.get('redacao_focada', {})
+    if (anterior.get('assinatura') == assinatura
+            and anterior.get('versao') == 3
+            and isinstance(anterior.get('introducao'), list)
+            and isinstance(anterior.get('fundamentacao_teorica'), list)
+            and len(anterior['introducao']) >= 3
+            and len(anterior['fundamentacao_teorica']) >= 4):
+        return False
+    ident = chave(['redacao-focada-v3', p.revisao, assinatura])
+
+    def acao():
+        log('Escrevendo introdução e fundamentação teórica provisórias.')
+        esquema = {
+            'type': 'object',
+            'properties': {
+                'introducao': {'type': 'array', 'items': {'type': 'string'}, 'minItems': 5},
+                'fundamentacao_teorica': {'type': 'array', 'items': {'type': 'object', 'properties': {
+                    'titulo': {'type': 'string'}, 'texto': {'type': 'string'},
+                    'fontes': {'type': 'array', 'items': {'type': 'string'}}},
+                    'required': ['titulo', 'texto', 'fontes']}, 'minItems': 5},
+                'mapa_fases': {
+                    'type': 'array',
+                    'items': {
+                        'type': 'object',
+                        'properties': {
+                            'fase': {'type': 'string'},
+                            'acoes_cidadao': {'type': 'string'},
+                            'acoes_entidades': {'type': 'string'},
+                            'riscos': {'type': 'string'},
+                            'estado_da_arte': {'type': 'string'},
+                            'lacunas': {'type': 'string'},
+                            'fontes': {'type': 'array', 'items': {'type': 'string'}},
+                        },
+                        'required': ['fase', 'acoes_cidadao', 'acoes_entidades', 'riscos', 'estado_da_arte', 'lacunas', 'fontes'],
+                    },
+                },
+                'fontes_usadas': {'type': 'array', 'items': {'type': 'string'}},
+            },
+            'required': ['introducao', 'fundamentacao_teorica', 'mapa_fases', 'fontes_usadas'],
+        }
+        r = chamar(p, 'redacao-focada',
+            'Escreva uma seção acadêmica desenvolvida, não um resumo. Use os trabalhos-exemplo apenas para aprender '
+            'estrutura, extensão, profundidade e modo de referenciar; eles NÃO são fontes do tema e não podem ser citados. '
+            'A introdução deve ter 5 a 8 parágrafos substanciais, cobrindo contexto de cidades inteligentes, problema, '
+            'motivação, justificativa, objetivo geral, objetivos específicos e organização do texto. A fundamentação deve '
+            'ter pelo menos 6 subseções nomeadas, cada uma com 2 a 4 parágrafos: (1) cidades inteligentes e atores, '
+            '(2) identidade digital e SSI, (3) DID e credenciais verificáveis, (4) autenticação e controle de acesso, '
+            '(5) segurança e privacidade no ciclo de dados, (6) interoperabilidade e governança, (7) revogação e '
+            'recuperação de acesso. Compare conceitos e abordagens, explicando limites e relações, em vez de listar definições. '
+            'Use citações autor-data somente quando o trabalho fornecido trouxer autor e ano; caso contrário cite o '
+            'identificador real do trabalho entre colchetes, por exemplo [Papatheodorou_2025]. NUNCA escreva '
+            '[ID_EXATO], [ID] ou qualquer marcador genérico. Cada afirmação factual precisa de uma fonte real; se '
+            'nenhuma ficha sustentar a afirmação, escreva “não identificado nas fontes lidas”. '
+            'Depois faça exatamente 7 itens no mapa: emissão, apresentação/verificação, transmissão, processamento, '
+            'armazenamento, revogação e recuperação de acesso. Em cada item use 2 a 4 frases por campo para ações do cidadão '
+            'e entidades administrativas, riscos, estado da arte e lacunas. Use somente os '
+            'trabalhos fornecidos. Insira citações no texto como [ID_EXATO] e liste em fontes_usadas somente IDs '
+            'fornecidos. Não invente autores, anos, resultados ou consenso: quando a fonte não sustentar algo, escreva '
+            '“não identificado nas fontes lidas” e trate lacunas como hipóteses. A redação é um rascunho de trabalho, '
+            'não uma afirmação de novidade comprovada. JSON no esquema fornecido. '
+            'EXEMPLOS DE FORMA, NÃO FONTES: ' + json.dumps(exemplos_de_redacao(p), ensure_ascii=False),
+            {'objetivo': p.instrucoes, 'trabalhos': corpus}, esquema)
+        if '[ID_EXATO]' in json.dumps(r, ensure_ascii=False) or '[ID]' in json.dumps(r, ensure_ascii=False):
+            raise ValueError('A redação contém marcador de citação genérico; a tarefa será refeita com IDs reais.')
+        ids = {linha['id'] for linha in corpus}
+        fontes = [f for f in r.get('fontes_usadas', []) if isinstance(f, str) and f in ids]
+        introducao = secoes_redacao(r.get('introducao'), 'Introdução')
+        fundamentacao = secoes_redacao(r.get('fundamentacao_teorica'), 'Fundamentação teórica')
+        if len(introducao) < 3 or len(fundamentacao) < 4:
+            raise ValueError('A redação focada não trouxe introdução e fundamentação completas.')
+        fases = []
+        for fase in r.get('mapa_fases', []) if isinstance(r.get('mapa_fases'), list) else []:
+            if not isinstance(fase, dict) or not texto(fase.get('fase')):
+                continue
+            item = dict(fase)
+            item['fontes'] = [f for f in item.get('fontes', []) if isinstance(f, str) and f in ids]
+            fases.append(item)
+        resultado = {'versao': 3, 'revisao': p.revisao, 'assinatura': assinatura, 'gerado_em': agora(),
+                     'status': 'rascunho_em_revisao', 'introducao': introducao,
+                     'fundamentacao_teorica': fundamentacao,
+                     'mapa_fases': fases, 'fontes_usadas': fontes}
+        p.estado['redacao_focada'] = resultado
+        json_gravar(p.root / 'dados/redacao-focada.json', resultado)
+        p.salvar()
+        return True
+
+    return bool(p.tarefa(ident, acao))
+
+
 def ciclo(p):
     p.configurar()
+    pausa_modelo_ate = p.estado.get('pausa_modelo_ate', 0)
+    if pausa_modelo_ate and pausa_modelo_ate > time.time():
+        restante = int(pausa_modelo_ate - time.time())
+        p.mensagem = f"Modelos de IA indisponíveis; retomada em {max(1, restante)} s."
+        p.salvar()
+        p.painel()
+        return
+    p.estado.pop('pausa_modelo_ate', None)
     p.mensagem = 'Preparando o próximo trabalho.'
     p.importar_pdfs()
     p.painel()
@@ -564,8 +792,14 @@ def ciclo(p):
             return
 
         ler(p)
+        pausa_modelo_ate = p.estado.get('pausa_modelo_ate', 0)
+        if pausa_modelo_ate and pausa_modelo_ate > time.time():
+            p.salvar()
+            p.painel()
+            return
         propor(p)
         detalhar(p)
+        redigir_pesquisa_focada(p)
 
         if p.trabalho_fechado_no_ciclo(artigo):
             p.concluir_lote()

@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo \"An investigation on real-time insights: enhancing process control with IoT-enabled sensor networks\" (2025) apresenta uma revisão de literatura sobre o uso de redes de sensores IoT para monitoramento em tempo real e controle de processos. Publicado em acesso aberto sob licença CC‑BY 4.0, destaca palavras‑chave como IoT, sensores, monitoramento de processos, dados e inteligência artificial, e inclui extensiva referência a aplicações em agricultura, saúde, cidades inteligentes e indústria.",
+  "perfil": {
+    "problema": "IoT devices introduce novel vulnerabilities for cybercriminals, heightening dangers to data security and privacy.",
+    "solucao": "strategies like energy harvesting, low-power communication protocols and sleep scheduling are being investigated",
+    "avaliacao": "These technologies facilitate interconnected systems and optimize operations by enhancing efficiency, predictive maintenance, and sustainability.",
+    "limites": "Energy efficiency is one of the main issues with sensor network deployment, particularly in isolated or difficult-to-reach places.",
+    "possibilidades": "Integrar SSI baseada em verifiable credentials para autenticação de sensores em tempo real; aplicar edge AI com preservação de privacidade para análise instantânea de dados de processo; avaliar blockchain para rastreabilidade e integridade dos dados de sensores; comparar latência e consumo de MQTT vs CoAP em loops de controle críticos; desenvolver técnicas adaptativas de harvesting energético para monitoramento contínuo em ambientes industriais."
+  },
+  "evidencias": [
+    {
+      "citacao": "This article is licensed under a Creative Commons Attribution 4.0 International License",
+      "afirmacao": "The article is licensed under a Creative Commons Attribution 4.0 International License."
+    },
+    {
+      "citacao": "enhancing process control with IoT-enabled sensor networks",
+      "afirmacao": "The study focuses on enhancing process control with IoT-enabled sensor networks."
+    }
+  ],
+  "interpretacao": "O trabalho enfatiza a importância de combinar sensores IoT com técnicas de IA para obter insights em tempo real, reforçando a necessidade de soluções que conciliem eficiência energética e segurança dos dados.",
+  "duvidas": "Quais métricas específicas de latência e precisão foram avaliadas? Como a proposta lida com a escalabilidade em ambientes industriais heterogêneos?",
+  "avisos": [],
+  "id": "69adf6c88031902f1107",
+  "artigo": "Pandey_2025",
+  "pagina": null,
+  "tipo": "html",
+  "perfil_acumulado": {
+    "problema": "IoT devices introduce novel vulnerabilities for cybercriminals, heightening dangers to data security and privacy.",
+    "solucao": "strategies like energy harvesting, low-power communication protocols and sleep scheduling are being investigated",
+    "avaliacao": "These technologies facilitate interconnected systems and optimize operations by enhancing efficiency, predictive maintenance, and sustainability.",
+    "limites": "Energy efficiency is one of the main issues with sensor network deployment, particularly in isolated or difficult-to-reach places.",
+    "possibilidades": "Integrar SSI baseada em verifiable credentials para autenticação de sensores em tempo real; aplicar edge AI com preservação de privacidade para análise instantânea de dados de processo; avaliar blockchain para rastreabilidade e integridade dos dados de sensores; comparar latência e consumo de MQTT vs CoAP em loops de controle críticos; desenvolver técnicas adaptativas de harvesting energético para monitoramento contínuo em ambientes industriais.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "73aafbaad119de736d67"
+  }
+}

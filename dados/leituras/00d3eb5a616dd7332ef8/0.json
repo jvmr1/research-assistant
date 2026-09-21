@@ -1,0 +1,34 @@
+{
+  "resumo": "O artigo propõe o framework EPP-BCFL, que combina blockchain, aprendizado federado, SMPC e diferencial privacidade para reduzir custos computacionais e de comunicação, melhorar a precisão e proteger contra ataques de envenenamento em gestão de registros eletrônicos de saúde.",
+  "perfil": {
+    "problema": "high computational overhead on edge devices",
+    "solucao": "EPP-BCFL framework integrates blockchain with hybrid privacy mechanisms and intelligent aggregation strategies",
+    "avaliacao": "95.2% accuracy with 43% reduction in communication latency",
+    "limites": "evaluation performed only on CIFAR-10 dataset",
+    "possibilidades": "Aplicar o EPP-BCFL a bases reais de EHR; estender a smart‑cities IoT usando SSI e atributos‑baseados em criptografia; testar escalabilidade com milhares de nós de borda; analisar impacto de diferentes consensos PoS/BFT."
+  },
+  "evidencias": [
+    {
+      "citacao": "Experimental evaluation on CIFAR-10 demonstrates 95.2% accuracy, a 43% reduction in communication latency, a 37% decrease in computational cost",
+      "afirmacao": "O EPP-BCFL alcança alta acurácia e reduz latência e custo computacional."
+    }
+  ],
+  "interpretacao": "A integração de blockchain com técnicas de privacidade avançadas parece mitigar os principais gargalos de desempenho e segurança do aprendizado federado, embora a validação ainda esteja restrita a um benchmark de visão computacional.",
+  "duvidas": "Como o desempenho se comporta em dados reais de EHR com alta dimensionalidade? Qual o impacto de políticas de consentimento e regulatórias (HIPAA/GDPR) na implementação prática?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "9c572813c3334a9c02c0",
+  "artigo": "Munusamy_2025",
+  "pagina": 1,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "high computational overhead on edge devices",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Aplicar o EPP-BCFL a bases reais de EHR; estender a smart‑cities IoT usando SSI e atributos‑baseados em criptografia; testar escalabilidade com milhares de nós de borda; analisar impacto de diferentes consensos PoS/BFT.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

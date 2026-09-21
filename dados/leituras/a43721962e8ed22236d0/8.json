@@ -1,0 +1,41 @@
+{
+  "resumo": "O trecho apresenta a evolução anual da produção científica sobre SSI em cadeias de suprimentos agrícolas entre 2020 e 2024, destacando um salto de 5 artigos entre 2023 e 2024, totalizando 19 publicações em 2024, o que indica um aumento recente de interesse na área.",
+  "perfil": {
+    "problema": "there is a lack of literature on their combined application in agricultural supply chains.",
+    "solucao": "prompting the exploration of SSI as a complementary technology to enhance trust and user-controlled authentication",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+    "possibilidades": [
+      "Realizar análise bibliométrica comparando a tendência de publicações sobre SSI em cadeias agrícolas com a de cidades inteligentes, identificando lacunas de pesquisa específicas.",
+      "Ampliar a revisão sistemática incluindo bases como ACM Digital Library e IEEE Xplore para capturar trabalhos emergentes em smart cities que combinam SSI e blockchain.",
+      "Desenvolver um protótipo que integre SSI, blockchain e ABE para controle de acesso granular a dados de sensores em edge computing de cidades inteligentes, avaliando desempenho sob diferentes cargas de publicação.",
+      "Investigar a relação entre o aumento de publicações (2023‑2024) e a adoção de políticas públicas de identidade digital em projetos-piloto municipais."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "2024: Jumped significantly to 19 papers (5 new papers).",
+      "afirmacao": "2024: Jumped significantly to 19 papers (5 new papers)."
+    },
+    {
+      "citacao": "The most notable growth occurred between 2023 and 2024, with 05 additional papers published, indicating a recent surge in research activity.",
+      "afirmacao": "The most notable growth occurred between 2023 and 2024, with 05 additional papers published, indicating a recent surge in research activity."
+    }
+  ],
+  "interpretacao": "O aumento abrupto de publicações em 2024 sugere que o tema SSI aplicado a cadeias de suprimentos agrícolas está ganhando atenção, possivelmente impulsionado por demandas de rastreabilidade e confiança que podem ser transpostas para contextos de cidades inteligentes.",
+  "duvidas": "Quais são os fatores específicos (ex.: políticas, financiamento, eventos) que desencadearam o salto de publicações em 2024? Como a tendência observada se compara ao ritmo de produção científica sobre SSI em smart cities?",
+  "avisos": [],
+  "id": "e2ae31708c341c283661",
+  "artigo": "Alar_2026",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "there is a lack of literature on their combined application in agricultural supply chains.",
+    "solucao": "prompting the exploration of SSI as a complementary technology to enhance trust and user-controlled authentication",
+    "avaliacao": "Sovrin emerges as the most promising framework, excelling particularly in decentralization and privacy protection",
+    "limites": "Smart contracts have several limitations, such as their dependence on specific platforms and scalability issues.",
+    "possibilidades": "Realizar análise bibliométrica comparando a tendência de publicações sobre SSI em cadeias agrícolas com a de cidades inteligentes, identificando lacunas de pesquisa específicas.; Ampliar a revisão sistemática incluindo bases como ACM Digital Library e IEEE Xplore para capturar trabalhos emergentes em smart cities que combinam SSI e blockchain.; Desenvolver um protótipo que integre SSI, blockchain e ABE para controle de acesso granular a dados de sensores em edge computing de cidades inteligentes, avaliando desempenho sob diferentes cargas de publicação.; Investigar a relação entre o aumento de",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "a43721962e8ed22236d0"
+  }
+}

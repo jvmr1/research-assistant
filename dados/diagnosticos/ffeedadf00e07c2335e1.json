@@ -1,0 +1,91 @@
+{
+  "etapa": "sintese-artigo",
+  "inicio": "2026-09-16T19:00:39",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide as s?nteses parciais deste trabalho. JSON: resumo (at? 250 palavras), lacunas_possiveis (lista de strings) e propostas_possiveis (lista de strings). As duas listas s?o brainstorm derivado do trabalho, n?o alega??es comprovadas dos autores. N?o invente m?todos, resultados ou limita??es ausentes. Identifique quando a fonte ? HTML/PDF parcial.",
+  "entrada": {
+    "titulo": "Blockchain based solid waste classification with AI powered tracking and IoT integration",
+    "tipo_leitura": "pdf",
+    "sinteses_parciais": [
+      {
+        "resumo": "O artigo apresenta um framework para gestão de resíduos sólidos em cidades inteligentes que integra sensores IoT (ultrassônicos, de carga, câmeras) com classificação de imagens por redes neurais convolucionais (CNN) e registro de dados em blockchain. Os sensores coletam nível, peso e imagens dos resíduos; a IA classifica o lixo em tempo real, permitindo otimização de rotas de coleta, redução de emissões de CO₂ e maior transparência. A blockchain assegura integridade, imutabilidade e acesso rápido aos dados, enquanto protocolos MQTT/CoAP viabilizam a comunicação. O modelo inclui camadas de aplicação, consenso, rede e dados, e discute vulnerabilidades, contramedidas e a possibilidade de usar aprendizado por transferência para melhorar a acurácia com conjuntos de dados limitados. A solução demonstra viabilidade prática ao integrar IA, IoT e blockchain, mas levanta questões sobre custos operacionais, latência, privacidade e gerenciamento de credenciais.",
+        "lacunas_possiveis": [
+          "Custos operacionais e de manutenção da infraestrutura blockchain não foram quantificados.",
+          "Impacto da latência de escrita em blockchain nos ambientes de borda permanece incerto.",
+          "Mecanismos de revogação de credenciais de dispositivos IoT comprometidos não foram detalhados.",
+          "Privacidade dos dados sensoriais transmitidos à nuvem não foi avaliada explicitamente.",
+          "Requisitos de energia e comunicação dos sensores em áreas urbanas densas não foram especificados."
+        ],
+        "propostas_possiveis": [
+          "Realizar estudo de custo‑benefício comparando blockchains públicas, privadas e híbridas para gestão de resíduos.",
+          "Medir e modelar o overhead de latência introduzido por diferentes algoritmos de consenso em cenários de borda.",
+          "Desenvolver e testar um esquema de revogação de credenciais baseado em SSI ou ABE adaptado a sensores de recursos limitados.",
+          "Implementar técnicas de privacidade (ex.: criptografia homomórfica ou agregação diferencial) para proteger dados sensoriais antes da transmissão.",
+          "Avaliar o consumo energético dos sensores e microcontroladores em operação contínua e propor otimizações de hardware/software."
+        ]
+      },
+      {
+        "resumo": "O artigo propõe um framework para cidades inteligentes que combina classificação de resíduos baseada em redes neurais convolucionais (CNN) com transfer learning, execução em edge computing e rastreamento via blockchain. As CNN leves atingem 95 % de acurácia, recall de 91 % e F1‑score de 0,94, com latência de 1,2 s por imagem. Sensores de nível e peso alimentam o modelo, permitindo otimização de rotas que eleva a eficiência de coleta para 92 % e reduz emissões de CO₂ em 30 %. A blockchain, implementada em Proof‑of‑Stake, garante integridade dos dados (98 %) e rastreabilidade em tempo real, embora aumente a complexidade computacional e o consumo energético nos nós de borda. O estudo demonstra ganhos operacionais e ambientais, mas não apresenta detalhes sobre privacidade, controle de acesso, custos de consenso ou robustez contra ataques.",
+        "lacunas_possiveis": [
+          "Ausência de detalhes sobre a arquitetura e custos do consenso blockchain utilizado.",
+          "Falta de métricas de privacidade e mecanismos de controle de acesso (ex.: SSI, ABE).",
+          "Impacto energético da complexidade computacional nos dispositivos de borda.",
+          "Gestão de heterogeneidade de sensores e escalabilidade para diferentes cidades.",
+          "Procedimentos de revogação de credenciais e atualização de políticas de acesso."
+        ],
+        "propostas_possiveis": [
+          "Avaliar consensos mais leves (ex.: DAG ou BFT) para reduzir overhead energético.",
+          "Integrar identidade auto‑soberana (SSI) e criptografia baseada em atributos (ABE) para controle de acesso granular.",
+          "Implementar testes de robustez contra adulteração de dados e ataques de replay em ambientes de borda.",
+          "Utilizar aprendizado federado para preservar a privacidade das imagens capturadas pelos sensores.",
+          "Desenvolver mecanismos de revogação dinâmica de credenciais e atualização automática de políticas de acesso."
+        ]
+      },
+      {
+        "resumo": "O artigo propõe um framework de gestão de resíduos sólidos que combina redes neurais convolucionais (CNNs) para classificação de imagens, sensores IoT para monitoramento em tempo real e blockchain para garantir a integridade dos dados. Os resultados experimentais indicam precisão de classificação de 95%, latência de 1,2 s por imagem, integridade de dados de 98% e eficiência de coleta de 92%, com redução de emissões de CO₂ em 30%, contribuindo para metas de sustentabilidade em cidades inteligentes. Os autores ressaltam que a integração de IoT e blockchain aumenta a segurança dos dados, mas reconhecem vulnerabilidades a vazamentos e ataques cibernéticos em larga escala, além de questões éticas relacionadas ao viés de IA. O trabalho se apoia em literatura recente sobre blockchain como serviço para IoT, arquiteturas de acesso escaláveis e contratos inteligentes, mas ainda não esclarece detalhes sobre a integração da camada blockchain ao modelo de classificação, impactos de latência, consumo energético e privacidade das imagens.",
+        "lacunas_possiveis": [
+          "Impacto da complexidade computacional das CNNs em dispositivos de borda com recursos limitados",
+          "Custo e viabilidade da implantação de infraestrutura blockchain em escala municipal",
+          "Interoperabilidade de credenciais SSI entre diferentes provedores de serviços urbanos",
+          "Estratégias específicas de mitigação de riscos de segurança em implantações massivas de IoT",
+          "Integração e validação de modelos preditivos de geração e coleta de resíduos no fluxo existente"
+        ],
+        "propostas_possiveis": [
+          "Avaliar versões leves de CNNs (e.g., MobileNet) para execução em edge devices",
+          "Realizar análise de custo-benefício comparando blockchains permissionadas e públicas para uso municipal",
+          "Desenvolver um framework SSI que padronize credenciais digitais para serviços de resíduos em cidades inteligentes",
+          "Implementar mecanismos de segurança IoT, como TLS mutuo, detecção de anomalias baseada em aprendizado de máquina e atualização segura de firmware",
+          "Integrar modelos preditivos de geração de resíduos ao sistema de classificação e testar em cenários piloto reais"
+        ]
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O trabalho propõe um framework para a gestão de resíduos sólidos em cidades inteligentes que combina sensores IoT (ultrassônicos, de carga, câmeras) com classificação de imagens por redes neurais convolucionais (CNN) – incluindo versões leves e transfer learning – executadas em edge computing. Os dados são registrados em uma blockchain (implementada com consenso Proof‑of‑Stake) para garantir integridade (≈ 98 %) e rastreabilidade em tempo real. Os resultados experimentais relatados indicam acurácia de classificação de 95 %, latência de 1,2 s por imagem, eficiência de coleta de 92 % e redução de emissões de CO₂ em 30 %. A solução permite otimização de rotas, maior transparência e suporte a políticas de sustentabilidade urbana. Contudo, o estudo não quantifica custos operacionais da infraestrutura blockchain, nem detalha impactos de latência, consumo energético, privacidade dos dados sensoriais, controle de acesso granular, revogação de credenciais ou interoperabilidade de identidades digitais. Também são apontadas vulnerabilidades a ataques cibernéticos em larga escala e questões éticas relacionadas ao viés da IA. O artigo está disponível como PDF parcial.",
+    "lacunas_possiveis": [
+      "Quantificação de custos operacionais e de manutenção da infraestrutura blockchain (públicas, privadas, híbridas) e análise de viabilidade econômica municipal.",
+      "Impacto da latência de escrita e do consenso blockchain nos ambientes de borda e dispositivos com recursos limitados.",
+      "Ausência de métricas e mecanismos de privacidade dos dados sensoriais (imagens) e controle de acesso granular (SSI, ABE).",
+      "Falta de mecanismos de revogação de credenciais de dispositivos IoT comprometidos e atualização dinâmica de políticas de acesso.",
+      "Consumo energético dos sensores, microcontroladores e nós de borda durante operação contínua e sob carga de IA.",
+      "Detalhes da arquitetura de consenso (Proof‑of‑Stake) e comparação com consensos mais leves (DAG, BFT).",
+      "Interoperabilidade de credenciais SSI entre diferentes provedores de serviços urbanos.",
+      "Estratégias de mitigação de riscos de segurança em larga escala (TLS mútuo, detecção de anomalias, atualização segura de firmware).",
+      "Integração e validação de modelos preditivos de geração e coleta de resíduos no fluxo operacional existente.",
+      "Avaliação de viés algorítmico e questões éticas relacionadas ao uso de IA para classificação de resíduos."
+    ],
+    "propostas_possiveis": [
+      "Realizar estudo de custo‑benefício comparando blockchains públicas, privadas, híbridas e consensos leves (DAG, BFT) para gestão de resíduos.",
+      "Medir e modelar o overhead de latência introduzido por diferentes algoritmos de consenso em cenários de borda.",
+      "Desenvolver e testar um esquema de revogação de credenciais baseado em SSI ou ABE adaptado a sensores de recursos limitados, com atualização automática de políticas.",
+      "Implementar técnicas de privacidade (criptografia homomórfica, agregação diferencial, aprendizado federado) para proteger dados sensoriais antes da transmissão.",
+      "Avaliar o consumo energético dos sensores, microcontroladores e nós de borda; propor otimizações de hardware/software e uso de CNN leves (ex.: MobileNet).",
+      "Integrar identidade auto‑soberana (SSI) e criptografia baseada em atributos (ABE) para controle de acesso granular em serviços de resíduos.",
+      "Testar robustez contra adulteração de dados e ataques de replay em ambientes de borda, incluindo TLS mútuo e detecção de anomalias.",
+      "Incorporar modelos preditivos de geração de resíduos ao sistema de classificação e validar em pilotos reais.",
+      "Investigar viés algorítmico e desenvolver diretrizes éticas para o uso de IA na classificação de resíduos."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:01:20"
+}

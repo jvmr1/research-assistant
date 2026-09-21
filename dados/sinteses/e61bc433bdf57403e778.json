@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta um levantamento abrangente sobre o uso de blockchain para controle de acesso e preservação de privacidade em ambientes de saúde, destacando que a segurança das redes depende de mecanismos criptográficos como funções de hash, assinaturas digitais e árvores de Merkle. Descreve a arquitetura descentralizada das blockchains, diferenciando redes permissionless (públicas) e permissioned (privadas ou de consórcio), e discute como essa escolha afeta escalabilidade, privacidade e controle de acesso. Contratos inteligentes são apontados como instrumentos para codificar políticas de acesso, registrar auditorias e automatizar processos, embora a escolha do protocolo de consenso (PoW, PoS, DPoS, PBFT, etc.) influencie consumo energético, throughput e latência, aspectos críticos para aplicações de IoT e cidades inteligentes. O texto também menciona desafios relacionados ao tamanho de bloco, requisitos de desempenho em borda, integração de SSI e ABE, e a necessidade de equilibrar transparência com proteção de dados sensíveis.",
+  "lacunas_possiveis": [
+    "Impacto do tamanho de bloco na performance de redes IoT de borda em cidades inteligentes.",
+    "Requisitos de latência e throughput para blockchains permissioned em ambientes de IoT de borda.",
+    "Mecanismos para garantir privacidade de dados sensíveis em blockchains de consórcio sem perder transparência.",
+    "Overhead de desempenho ao integrar Attribute‑Based Encryption (ABE) e contratos inteligentes para controle de acesso granular.",
+    "Viabilidade de integrar Self‑Sovereign Identity (SSI) de forma padronizada em diferentes plataformas blockchain (Ethereum, Hyperledger) em cenários de smart city."
+  ],
+  "propostas_possiveis": [
+    "Realizar experimentos comparativos de diferentes tamanhos de bloco avaliando latência e throughput em dispositivos de borda.",
+    "Desenvolver benchmarks de desempenho para blockchains permissioned (ex.: Hyperledger Fabric) focados em requisitos de IoT (latência < 100 ms, alta taxa de transação).",
+    "Propor um modelo híbrido de privacidade que combine off‑chain storage criptografado com provas de Merkle zero‑knowledge para blockchains de consórcio.",
+    "Implementar e medir um protótipo de controle de acesso que combine contratos inteligentes com ABE, quantificando o overhead adicional.",
+    "Criar um framework de interoperabilidade SSI que suporte múltiplas plataformas blockchain, definindo padrões de identidade descentralizada para serviços de cidades inteligentes."
+  ]
+}

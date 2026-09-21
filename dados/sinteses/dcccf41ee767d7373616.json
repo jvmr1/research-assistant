@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo em pré‑publicação, recebido em 24/11/2025 e aceito em 21/01/2026, propõe um gerenciamento da cadeia de suprimentos de vacinas que preserva a privacidade ao combinar blockchain e identidade auto‑soberana (SSI). Os autores argumentam que a integração de SSI ao blockchain reduz a exposição de dados on‑chain, permite verificação descentralizada de credenciais e oferece controle de acesso baseado em papéis, melhorando rastreabilidade, transparência e interoperabilidade em ambientes multi‑jurisdicionais. Estudos empíricos apresentados indicam eficácia da solução, embora reconheçam desafios de escalabilidade, interoperabilidade e privacidade. As fichas apontam que soluções anteriores baseadas apenas em blockchain dependiam de identidades centralizadas, limitando o controle de acesso fino. O trabalho destaca ainda a necessidade de mecanismos de revogação de credenciais em tempo real e de avaliação de desempenho em cenários de alta taxa de transações e edge computing.",
+  "lacunas_possiveis": [
+    "Protocolos específicos de autenticação e controle de acesso não descritos.",
+    "Mecanismos de revogação de credenciais SSI em tempo real ainda não detalhados.",
+    "Avaliação de desempenho e latência em ambientes de alta frequência de transações e edge computing ausente.",
+    "Impacto de diferentes topologias de rede edge na escalabilidade não investigado.",
+    "Falta de métricas claras para validar a eficácia da solução proposta."
+  ],
+  "propostas_possiveis": [
+    "Desenvolver e testar protocolos de autenticação e controle de acesso baseados em SSI para IoT de cidades inteligentes.",
+    "Implementar e comparar mecanismos de revogação distribuída de credenciais, medindo consistência e tempo de propagação.",
+    "Realizar experimentos de desempenho em cenários de alta taxa de transações, incluindo medição de latência e overhead em dispositivos de baixa potência.",
+    "Avaliar a escalabilidade da arquitetura sob diferentes topologias de rede edge (e.g., fog, cloud‑edge híbrido).",
+    "Definir e aplicar métricas quantitativas (ex.: taxa de falsificação detectada, tempo de verificação) para validar a eficácia da solução."
+  ]
+}

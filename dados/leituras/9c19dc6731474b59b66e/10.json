@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo apresenta uma arquitetura de quatro camadas (dispositivos IoT, servidores de borda da cidade, servidores CDN de borda e nuvem) para provisionamento de serviços de IA em cidades inteligentes. Funções de IA são distribuídas entre as bordas e, em picos de demanda, podem ser alocadas na nuvem. O tempo de processo (PT) é definido como a soma dos atrasos de comunicação, configuração, computação e retorno de dados.",
+  "perfil": {
+    "problema": "they need a supporting computing architecture.",
+    "solucao": "Serverless edge computing enables running code at edge locations without managing servers.",
+    "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+    "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+    "possibilidades": "• Integrar identidade auto‑soberana (SSI) para autenticação dos nós de borda e gerenciamento de credenciais. • Aplicar credenciais verificáveis para rastrear a proveniência das funções de IA distribuídas. • Usar criptografia baseada em atributos (ABE) para proteger dados sensíveis nas funções serverless. • Criar camada de auditoria baseada em blockchain para registrar alocação, revogação e migração de funções entre borda e nuvem. • Avaliar aprendizado federado ou reforço para decisão dinâmica de placement de funções de IA, preservando privacidade. • Explorar provas de conhecimento zero‑knowledge para controle de acesso sem revelar atributos. • Investigar federated edge resources entre cidades para interoperabilidade de serviços de IA."
+  },
+  "evidencias": [
+    {
+      "citacao": "These are distributed between the different edge platforms around the city to provide the functionality where it is needed.",
+      "afirmacao": "As funções de IA são distribuídas entre diferentes plataformas de borda da cidade."
+    },
+    {
+      "citacao": "PT = Comm.(data)+ Setup(fi)+ Comp.(fi(data)) + Comm.(fi(data))",
+      "afirmacao": "O tempo de processo (PT) inclui comunicação, configuração, computação e comunicação dos resultados."
+    }
+  ],
+  "interpretacao": "O texto detalha como a distribuição hierárquica de recursos (IoT → borda da cidade → CDN → nuvem) permite atender demandas de IA de forma flexível, reduzindo latência ao executar funções localmente e recorrendo à nuvem apenas em picos. A definição explícita de PT evidencia a preocupação com a experiência do usuário em serviços de cidade inteligente.",
+  "duvidas": "• Como é feita a orquestração automática das funções entre as camadas em tempo real? • Quais métricas são usadas para decidir migração de funções para a nuvem? • Há avaliação de consumo energético da arquitetura proposta? • Como a segurança e a privacidade são garantidas durante a transferência de funções entre borda e nuvem?",
+  "avisos": [],
+  "id": "f8bf33c262c2c0b75c97",
+  "artigo": "Maciá-Lillo_2025",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "they need a supporting computing architecture.",
+    "solucao": "Serverless edge computing enables running code at edge locations without managing servers.",
+    "avaliacao": "faster data processing, reduced latency, improved scalability, and enhanced reliability.",
+    "limites": "The implementation of microservices is not a viable solution when considering the green aspect of systems.",
+    "possibilidades": "• Integrar identidade auto‑soberana (SSI) para autenticação dos nós de borda e gerenciamento de credenciais. • Aplicar credenciais verificáveis para rastrear a proveniência das funções de IA distribuídas. • Usar criptografia baseada em atributos (ABE) para proteger dados sensíveis nas funções serverless. • Criar camada de auditoria baseada em blockchain para registrar alocação, revogação e migração de funções entre borda e nuvem. • Avaliar aprendizado federado ou reforço para decisão dinâmica de placement de funções de IA, preservando privacidade. • Explorar provas de conhecimento zero‑knowled",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9c19dc6731474b59b66e"
+  }
+}

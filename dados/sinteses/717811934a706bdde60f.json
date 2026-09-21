@@ -1,0 +1,17 @@
+{
+  "resumo": "O artigo apresenta uma arquitetura para sistemas de saúde inteligentes que integra blockchain, contratos inteligentes e IPFS, armazenando registros médicos de forma descentralizada e segura. Um dispositivo proxy protege sensores IoT vulneráveis por meio de criptografia, enquanto os dados são fragmentados e referenciados por identificadores criptográficos (CID) na rede P2P. Avaliações experimentais medem tempos de upload, download, acesso e mineração, indicando ganhos de eficiência e desempenho ao reduzir a sobrecarga da blockchain e utilizar cache local. A proposta visa superar falhas de sistemas centralizados, melhorar privacidade, interoperabilidade e escalabilidade, embora reconheça limitações de desempenho da blockchain, ausência de métricas detalhadas e falta de mecanismos de revogação de credenciais ou avaliação em larga escala.",
+  "lacunas_possiveis": [
+    "Mecanismo de revogação de credenciais ou dispositivos comprometidos em tempo real",
+    "Métricas detalhadas de desempenho (latência, throughput) especialmente para consultas em tempo real",
+    "Escalabilidade do proxy criptográfico para milhares de sensores simultâneos",
+    "Custos operacionais e viabilidade de manutenção de nós IPFS em larga escala",
+    "Interoperabilidade entre diferentes provedores de saúde e ambientes de cidades inteligentes"
+  ],
+  "propostas_possiveis": [
+    "Desenvolver um esquema de revogação descentralizado, possivelmente baseado em identidade auto‑soberana (SSI) ou criptografia baseada em atributos",
+    "Realizar experimentos de latência e throughput em cenários de edge computing e redes 5G típicas de cidades inteligentes",
+    "Projetar e testar um proxy escalável com balanceamento de carga para suportar milhares de dispositivos IoT simultâneos",
+    "Analisar economicamente a operação de nós IPFS distribuídos, propondo otimizações de armazenamento e replicação",
+    "Criar um framework de interoperabilidade que adote padrões de saúde e identidade digital para integração multi‑organizacional"
+  ]
+}

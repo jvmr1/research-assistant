@@ -1,0 +1,22 @@
+{
+  "id": "dda92be44322c7f098df",
+  "artigo": "Munusamy_2025",
+  "pagina": 6,
+  "tipo": "pdf",
+  "resumo": "Trecho pulado por falha técnica repetida na extração da ficha. O texto original existe, mas a IA não retornou uma ficha utilizável.",
+  "evidencias": [],
+  "interpretacao": "Falha técnica de leitura deste trecho; seguir para os demais para não travar o trabalho.",
+  "duvidas": "Conferir manualmente este trecho se ele for importante.",
+  "avisos": [
+    "falha_tecnica_ficha"
+  ],
+  "perfil_acumulado": {
+    "problema": "lack of comprehensive support for heterogeneous Electronic Health Record (EHR) data",
+    "solucao": "Efficient and Privacy-Preserving Blockchain-Enabled Federated Learning (EPP-BCFL) framework",
+    "avaliacao": "Simulation results indicate that: (1) as a privacy-preserving strategy, BSDA achieves high throughput and low transaction latency",
+    "limites": "absence of effective incentivization mechanisms reduces sustained and honest participation",
+    "possibilidades": "Adaptar o EPP-BCFL para gerenciamento de dados de sensores urbanos em cidades inteligentes, integrando identidade auto‑soberana (SSI) e credenciais verificáveis para controle de acesso baseado em atributos (ABE).; Avaliar a escalabilidade do framework com milhares de nós de borda em cenários de smart city, testando protocolos de consenso leves (PoA, DAG).; Incorporar aprendizado federado vertical (VFL) para colaboração entre diferentes autoridades municipais que possuem atributos complementares de cidadãos.; Investigar mecanismos de incentivo baseados em tokens para motivar a participação cont",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

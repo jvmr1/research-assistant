@@ -1,0 +1,28 @@
+{
+  "id": "febc818cabd7401116ab",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T21:15:18",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Vaziry_2025: Desenvolver métricas de latência, escalabilidade, throughput e custo de transação para ânc",
+  "fontes": [
+    "Vaziry_2025"
+  ],
+  "problema": "Critérios de validação prática da taxonomia em cenários reais.",
+  "hipotese_lacuna": "Critérios de validação prática da taxonomia em cenários reais.",
+  "meu_trabalho": "Desenvolver métricas de latência, escalabilidade, throughput e custo de transação para âncoras de confiança em redes permissionadas e permissionless.",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Desenvolver métricas de latência, escalabilidade, throughput e custo de transação para âncoras de confiança em redes permissionadas e permissionless.",
+  "modo": "artigo",
+  "buscas": [
+    "SoK: A Taxonomy for Distributed-Ledger-Based Identity Management limitations future work",
+    "SoK: A Taxonomy for Distributed-Ledger-Based Identity Management smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "315584a7579e15581c02",
+    "812ceb6743b1dcaabce7",
+    "3c0d20a12c6881d609bc"
+  ],
+  "fatos": "The intersection of blockchain (distributed ledger) and identity management lacks a comprehensive architectural framework for classifying distributed-ledger-based identity solutions.; The resulting artifact comprises 22 dimensions with 113 characteristics organized into three groups: trust anchor implementations, identity architectures (identifiers and credentials), and ledger specifications.; SSI proclama um design de sistema que capacita indivíduos a controlar suas identidades digitais sem autoridades centrais.; DLT provides promising capabilities including immutable record-keeping and secure sharing of verification material, without a single point of failure."
+}

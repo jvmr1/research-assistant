@@ -1,0 +1,28 @@
+{
+  "id": "1c6ec0ac256c26d98753",
+  "revisao": "e2cc560b062ae24c3531",
+  "gerado_em": "2026-09-16T19:41:20",
+  "modelo": "síntese individual já extraída",
+  "titulo": "Mallick_2025: Realizar experimentos de latência e throughput em ambientes de edge computing e redes 5G t",
+  "fontes": [
+    "Mallick_2025"
+  ],
+  "problema": "Ausência de mecanismo de revogação em tempo real para credenciais ou dispositivos comprometidos",
+  "hipotese_lacuna": "Ausência de mecanismo de revogação em tempo real para credenciais ou dispositivos comprometidos",
+  "meu_trabalho": "Realizar experimentos de latência e throughput em ambientes de edge computing e redes 5G típicas de cidades inteligentes",
+  "interpretacao": "Hipótese preliminar gerada a partir do fichamento de um trabalho. Deve ser confrontada com as próximas leituras.",
+  "alteracao_sobre_trabalhos_proximos": "Realizar experimentos de latência e throughput em ambientes de edge computing e redes 5G típicas de cidades inteligentes",
+  "modo": "artigo",
+  "buscas": [
+    "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration limitations future work",
+    "Secure and trusted data sharing in smart healthcare using blockchain and IoT integration smart cities IoT blockchain access control"
+  ],
+  "riscos": "Ideia preliminar baseada em um único trabalho; pode ser enfraquecida ou já estar resolvida por trabalhos posteriores.",
+  "duvidas_orientador": "Vale aprofundar esta direção ou ela está ampla demais para uma dissertação?",
+  "evidencias_usadas": [
+    "8e89232501c48173131d",
+    "8652c5d9de08bd86ecf6",
+    "44492b3f922b7e3bdd1b"
+  ],
+  "fatos": "Centralized storage architecture ... can lead to a single point of failure and easy manipulation.; Public blockchain‑based healthcare systems improve efficiency and performance when IPFS is integrated.; Blockchain with IoT integration can help healthcare systems overcome centralized communication architecture; once a file is uploaded, its hash is shared among all peer nodes in the network for instant access and to prevent data from having a single point of failure.; Integrates an Interplanetary File System (IPFS) with the Blockchain network to reduce blockchain network overload and enhance healthcare systems’ scalability and storage capacity."
+}

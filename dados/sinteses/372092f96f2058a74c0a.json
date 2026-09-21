@@ -1,0 +1,17 @@
+{
+  "resumo": "A dissertação apresenta, nos capítulos finais, discussões sobre privacidade, controle de acesso e escalabilidade criptográfica, reconhecendo a revogação de atributos como desafio e apontando a necessidade de ampliar a avaliação de escalabilidade. Contextualiza a evolução da Indústria 4.0 e o IIoT, destacando a importância da interoperabilidade técnica, semântica, organizacional e legal (EIF, ISO 11354‑1), mas delimita seu foco à camada técnica suportada por comunicação publish/subscribe. Enfatiza a necessidade de interoperabilidade orientada à governança e segurança para troca de dados entre domínios administrativos independentes, sem confiança prévia, especialmente diante da projeção de 29 bilhões de dispositivos IoT até 2030. Um cenário de cadeia de suprimentos ilustra a exigência de controle de acesso granular que preserve a autonomia das organizações e evite dependência de intermediários centralizados. As fichas levantam dúvidas sobre métricas de escalabilidade, integração de SSI/DIDs, requisitos de desempenho e impactos da exclusão das camadas semântica e organizacional.",
+  "lacunas_possiveis": [
+    "Avaliação limitada da escalabilidade criptográfica sem métricas específicas nem abrangência de cenários de cidades inteligentes.",
+    "Ausência de integração de identidade autossoberana (SSI/DIDs) na camada técnica de publish/subscribe.",
+    "Exclusão da interoperabilidade semântica e organizacional, restringindo a aplicabilidade prática das propostas de controle de acesso.",
+    "Falta de definição de requisitos de desempenho para mecanismos de controle de acesso granular em ambientes IIoT de alta frequência.",
+    "Revogação de atributos tratada como desafio, mas sem solução detalhada ou avaliação de impacto."
+  ],
+  "propostas_possiveis": [
+    "Estender a avaliação de escalabilidade criptográfica com métricas quantitativas (latência, throughput) em diferentes topologias de cidades inteligentes.",
+    "Incorporar SSI/DIDs nos protocolos publish/subscribe para habilitar identidade descentralizada e verificação de credenciais em tempo real.",
+    "Desenvolver um modelo de interoperabilidade semântica que complemente a camada técnica, facilitando a compreensão e uso de dados entre domínios administrativos.",
+    "Projetar um esquema de controle de acesso granular baseado em Attribute‑Based Encryption com suporte a revogação dinâmica e auditoria.",
+    "Criar um framework de governança que vincule smart contracts a credenciais verificáveis, permitindo troca de dados sem confiança prévia entre organizações."
+  ]
+}

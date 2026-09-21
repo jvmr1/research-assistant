@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho descreve como contratos inteligentes permitem codificar políticas de controle de acesso, registrar auditorias e garantir integridade e transparência em blockchains públicas como Ethereum e Hyperledger. Também apresenta os protocolos de consenso (PoW e PoS), destacando a alta segurança e descentralização do PoW, mas apontando seu alto consumo de energia e limitada escalabilidade.",
+  "perfil": {
+    "problema": "Rules can be encoded to enforce specific access control policies using smart contracts for different users or groups.",
+    "solucao": "Smart contracts are self-executing agreements with predefined conditions encoded in code.",
+    "avaliacao": "This makes blockchain technology an attractive solution for many use cases and industries.",
+    "limites": "its primary drawback is the substantial amount of power required for mining blocks and its limited scalability.",
+    "possibilidades": "Integrar identidade auto‑soberana (SSI) com contratos inteligentes para consentimento dinâmico em cidades inteligentes; combinar auditoria de acesso baseada em contratos com criptografia baseada em atributos (ABE) para privacidade granular; avaliar o desempenho de PoS versus PoW em ambientes de edge computing para IoT em smart cities."
+  },
+  "evidencias": [
+    {
+      "citacao": "Rules can be encoded to enforce specific access control policies using smart contracts for different users or groups.",
+      "afirmacao": "Smart contracts can be used to implement blockchain-based systems for access control."
+    },
+    {
+      "citacao": "its primary drawback is the substantial amount of power required for mining blocks and its limited scalability.",
+      "afirmacao": "Proof of Work (PoW) offers decentralization and high security, but its primary drawback is the substantial amount of power required for mining blocks and its limited scalability."
+    }
+  ],
+  "interpretacao": "O texto evidencia que contratos inteligentes são instrumentos chave para automatizar políticas de acesso e gerar trilhas de auditoria, ao mesmo tempo que a escolha do protocolo de consenso impacta diretamente a viabilidade de implantação em cenários de IoT e cidades inteligentes devido a questões de energia e escalabilidade.",
+  "duvidas": "Como garantir a privacidade dos dados de saúde ao usar contratos inteligentes públicos? Qual é o custo operacional de migrar de PoW para PoS em redes de saúde distribuídas? Como integrar SSI de forma padronizada com diferentes plataformas de blockchain (Ethereum, Hyperledger) em ambientes de smart city?",
+  "avisos": [],
+  "id": "304dd68ee204ebbf7aff",
+  "artigo": "Tawfik_2025",
+  "pagina": 11,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Rules can be encoded to enforce specific access control policies using smart contracts for different users or groups.",
+    "solucao": "A blockchain system, on the other hand, allows each node to act as both a sender and a receiver, creating a fair and distributed peer-to-peer network.",
+    "avaliacao": "This makes blockchain technology an attractive solution for many use cases and industries.",
+    "limites": "its primary drawback is the substantial amount of power required for mining blocks and its limited scalability.",
+    "possibilidades": "Integrar identidade auto‑soberana (SSI) com contratos inteligentes para consentimento dinâmico em cidades inteligentes; combinar auditoria de acesso baseada em contratos com criptografia baseada em atributos (ABE) para privacidade granular; avaliar o desempenho de PoS versus PoW em ambientes de edge computing para IoT em smart cities.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "36f23c87078e4a5a079a"
+  }
+}

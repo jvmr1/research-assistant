@@ -1,0 +1,30 @@
+{
+  "resumo": "O trecho descreve diversas ameaças ao IIoT em manufatura inteligente, incluindo ransomware, phishing, spoofing, sniffing e manipulação de dados, destacando a vulnerabilidade dos sistemas OT que não foram projetados com segurança. A convergência IT/OT, facilitada por nós de borda, expõe protocolos de comunicação como Modbus e Profibus a falhas, tornando o ecossistema suscetível a ataques tanto cibernéticos quanto físicos. Uma compreensão detalhada da taxonomia de ataques é apresentada como base para estratégias de mitigação abrangentes.",
+  "perfil": {
+    "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "system is not readily available as a commercial product",
+    "possibilidades": "Investigar a aplicação de blockchain para registro imutável de incidentes de phishing e ransomware; integrar SSI para autenticação forte contra spoofing em ambientes OT; aplicar Attribute‑Based Encryption (ABE) para proteger dados sniffados em canais não criptografados; avaliar protocolos seguros alternativos ao Modbus/Profibus usando técnicas de verificação formal; desenvolver frameworks de teste de penetração focados na convergência IT/OT em edge nodes."
+  },
+  "evidencias": [],
+  "interpretacao": "O texto evidencia que a integração de IT e OT amplia a superfície de ataque do IIoT, exigindo medidas de segurança específicas para protocolos de comunicação e mecanismos de autenticação robustos, sobretudo em ambientes industriais onde a segurança não foi considerada inicialmente.",
+  "duvidas": "Quais são as abordagens mais eficazes para proteger protocolos legados como Modbus sem substituir a infraestrutura existente? Como a adoção de SSI pode ser operacionalizada em dispositivos OT com recursos limitados?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória.",
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "a342f2412377107fbbba",
+  "artigo": "Abdullahi_2025",
+  "pagina": 12,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "The recommendations in the above-mentioned guides and standards are high-level, which might not be applicable to low-level systems",
+    "solucao": "provide an overview of the comprehensive guidelines, which include measures and protocols to be followed during the adoption and deployment of IIoT tools and infrastructure",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "system is not readily available as a commercial product",
+    "possibilidades": "Investigar a aplicação de blockchain para registro imutável de incidentes de phishing e ransomware; integrar SSI para autenticação forte contra spoofing em ambientes OT; aplicar Attribute‑Based Encryption (ABE) para proteger dados sniffados em canais não criptografados; avaliar protocolos seguros alternativos ao Modbus/Profibus usando técnicas de verificação formal; desenvolver frameworks de teste de penetração focados na convergência IT/OT em edge nodes.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "9de2ab0bcfc3fa9cca82"
+  }
+}

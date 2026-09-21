@@ -1,0 +1,40 @@
+{
+  "resumo": "O trecho descreve como o framework EPP-BCFL ajusta pesos de dispositivos conforme qualidade dos dados, reduzindo a sobrecarga de comunicação via compressão (até 28% de ganho) sem degradar significativamente a acurácia (<1,5% de perda). Avalia a robustez contra ataques de envenenamento de dados, modelo e adversários FGSM, mostrando acurácias acima de 92% e tempos de resposta menores que os do FL baseline, mesmo com latência variável e dispositivos heterogêneos.",
+  "perfil": {
+    "problema": "introduce significant computational overhead",
+    "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+    "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+    "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+    "possibilidades": [
+      "Aplicar o mecanismo de Agregação Adaptativa (AMA) em cenários de cidades inteligentes com dispositivos IoT heterogêneos.",
+      "Incluir métricas de consumo energético e latência para otimizar o trade‑off entre compressão, privacidade e eficiência energética em bordas municipais.",
+      "Testar a resistência do EPP-BCFL a ataques de envenenamento em redes de sensores urbanos distribuídos.",
+      "Integrar criptografia baseada em atributos (ABE) como camada adicional de controle de acesso interdepartamental.",
+      "Explorar diferentes algoritmos de consenso (PoA, BFT) em redes de borda de escala municipal."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "We observe a compression efficiency gain of up to 28% when scaling from 10 to 50 clients.",
+      "afirmacao": "Compression efficiency gain of up to 28% when scaling from 10 to 50 clients."
+    }
+  ],
+  "interpretacao": "Os resultados indicam que a combinação de compressão adaptativa e o mecanismo AMA mantém a convergência e a acurácia mesmo em ambientes heterogêneos e sob condições de rede instáveis, reforçando a viabilidade do framework para aplicações críticas como gestão de registros de saúde eletrônicos.",
+  "duvidas": "Como a compressão afeta a privacidade dos dados sensíveis em cenários de cidades inteligentes? Qual seria o impacto de aumentar a proporção de clientes adversários além de 20%?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "f14e8f84b4b48f897caf",
+  "artigo": "Munusamy_2025",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "introduce significant computational overhead",
+    "solucao": "hybrid privacy mechanism, which combines Secure Multiparty Computation (MPC) and Differential Privacy (DP)",
+    "avaliacao": "EPP-BCFL is scalable and robust for real-world federated learning scenarios.",
+    "limites": "combining DP and SMPC without optimization may degrade accuracy and increase overhead",
+    "possibilidades": "Aplicar o mecanismo de Agregação Adaptativa (AMA) em cenários de cidades inteligentes com dispositivos IoT heterogêneos.; Incluir métricas de consumo energético e latência para otimizar o trade‑off entre compressão, privacidade e eficiência energética em bordas municipais.; Testar a resistência do EPP-BCFL a ataques de envenenamento em redes de sensores urbanos distribuídos.; Integrar criptografia baseada em atributos (ABE) como camada adicional de controle de acesso interdepartamental.; Explorar diferentes algoritmos de consenso (PoA, BFT) em redes de borda de escala municipal.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "00d3eb5a616dd7332ef8"
+  }
+}

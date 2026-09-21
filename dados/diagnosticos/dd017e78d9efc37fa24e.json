@@ -1,0 +1,85 @@
+{
+  "etapa": "desenvolver-ideia",
+  "inicio": "2026-09-20T18:50:54",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Desenvolva esta sugestão em nível de reunião com orientador, como brainstorm profundo e útil. Não escreva só uma frase. JSON com strings: experimento, recursos, metricas, riscos e duvidas_orientador. Em experimento, detalhe: problema específico, hipótese, arquitetura/artefato a implementar, etapas, baseline ou trabalhos de comparação, e cenário de avaliação. Em recursos, liste ferramentas, dados/simuladores, padrões e bibliotecas possíveis, sem inventar disponibilidade. Em métricas, inclua desempenho, segurança, privacidade, usabilidade/interoperabilidade quando couber. Em riscos, explique o que pode inviabilizar ou reduzir a novidade. Em dúvidas, escreva perguntas concretas para levar à reunião. Use as fontes fornecidas e deixe claro quando for inferência exploratória. Cada campo deve ter entre 120 e 250 palavras quando houver informação suficiente.",
+  "entrada": {
+    "ideia": "Aplicar criptografia baseada em atributos (ABE) para controle de acesso seletivo e divulgação mínima de atributos.",
+    "fontes": {
+      "fontes": [
+        {
+          "id": "Exemplo_da24de257de987bc603b",
+          "titulo": "André Luiz Almeida Cardoso",
+          "escopo": {
+            "tipo": "pdf",
+            "feitos": 16,
+            "total": 16,
+            "concluida": true
+          },
+          "fichas_amostradas": [
+            {
+              "id": "2319445f0172f8e04af6",
+              "pagina": 1,
+              "resumo": "O trecho apresenta o título de um trabalho de André Luiz Almeida Cardoso, intitulado “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, desenvolvido na Universidade Federal do Maranhão em 2024, indicando foco em identidade digital para cidades inteligentes usando blockchain.",
+              "evidencias": [
+                {
+                  "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+                  "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+                }
+              ]
+            },
+            {
+              "id": "5b0dc507d4dec2105c36",
+              "pagina": 2,
+              "resumo": "Dissertação de André Luiz Almeida Cardoso, apresentada à UFMA em 2024, propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
+              "evidencias": [
+                {
+                  "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+                  "afirmacao": "O trabalho propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+                }
+              ]
+            },
+            {
+              "id": "68eb2691f5e562c5f06f",
+              "pagina": 3,
+              "resumo": "Dissertação de mestrado de André Luiz Almeida Cardoso (2024) intitulada “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, com 77 páginas, orientada por Francisco José da Silva e Silva e coorientada por Arlindo Flavio da Conceição, apresentada ao Programa de Pós‑graduação em Ciência da Computação da UFMA.",
+              "evidencias": [
+                {
+                  "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+                  "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+                }
+              ]
+            },
+            {
+              "id": "f9770a69b618d85c75dd",
+              "pagina": 4,
+              "resumo": "A dissertação de André Luiz Almeida Cardoso, defendida em 2024 na UFMA, propõe um modelo de gestão de identidades para cidades inteligentes fundamentado na tecnologia blockchain.",
+              "evidencias": [
+                {
+                  "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+                  "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+                }
+              ]
+            }
+          ],
+          "problema": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+          "solucao": "Gestão de Identidades pode desempenhar um papel fundamental",
+          "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+          "limites": "Não identificado nas fichas/trechos disponíveis.",
+          "possibilidades": "Explorar integração de SSI com blockchain para canais seguros de comunicação em CIs; Aplicar ABE para controle de acesso seletivo a sensores IoT; Investigar protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade; Avaliar uso de criptografia homomórfica para análise de dados de mobilidade preservando privacidade.",
+          "assinatura": "a6dd17ddc760fe0d49a1"
+        }
+      ],
+      "metodo": "fichamento individual"
+    }
+  },
+  "resposta": {
+    "experimento": "Problema específico: em cidades inteligentes, sensores IoT e serviços públicos exigem controle de acesso granular que preserve a privacidade dos cidadãos, mas os modelos atuais baseados apenas em blockchain não garantem divulgação mínima de atributos. Hipótese: a combinação de Self‑Sovereign Identity (SSI) com criptografia baseada em atributos (ABE) permite que o cidadão autorize o acesso a dados IoT usando credenciais verificáveis que revelam apenas os atributos necessários, reduzindo a superfície de ataque e facilitando a revogação seletiva. Arquitetura/artefato: um protótipo de carteira digital SSI que emite Verifiable Credentials (VCs) contendo políticas ABE; um serviço de verificação que, ao receber uma apresentação, descodifica a política e aplica a decriptação ABE para liberar o recurso IoT. Etapas: (1) modelar o ciclo de vida da credencial (emissão, apresentação, verificação, revogação, recuperação); (2) implementar a carteira usando Hyperledger Aries e integrar biblioteca CP‑ABE (ex.: libfenc); (3) criar um sandbox de sensores IoT simulados (Smart City Lab) que requer atributos como \"residente\", \"classe de tarifa\"; (4) comparar contra baseline que usa apenas VC sem ABE. Cenário de avaliação: testes em ambiente de simulação de tráfego urbano com 10 000 solicitações de acesso, medindo latência, taxa de sucesso de verificação e vazamento de atributos.",
+    "recursos": "Ferramentas: Hyperledger Aries/Indy para SSI, libfenc ou Charm‑Crypto para CP‑ABE, Docker para orquestração, Node.js/Express para APIs de verificação, PostgreSQL para armazenamento de revogação. Dados/Simuladores: Smart City Lab (simulador de sensores de tráfego, iluminação e coleta de resíduos) disponível em repositório público; conjuntos de atributos sintéticos baseados em perfis de residentes (ex.: idade, zona, nível de renda). Padrões: W3C Verifiable Credentials, Decentralized Identifiers (DID), OpenID Connect para integração com serviços municipais. Bibliotecas: did‑jwt‑vc, jsonld‑signatures, Open Policy Agent (OPA) para políticas de acesso. Todas as ferramentas citadas são de código aberto e documentadas, sem necessidade de licenças proprietárias.",
+    "metricas": "Desempenho: latência média da verificação (ms), throughput (solicitações/s) e consumo de memória da carteira SSI durante sessões prolongadas. Segurança: número de tentativas de acesso não autorizadas detectadas, taxa de sucesso de ataques de replay e análise de superfície de ataque (atributos expostos). Privacidade: quantidade de atributos revelados por transação (medida em bits) comparada ao baseline sem ABE; índice de anonimato (k‑anonymity) dos logs de acesso. Usabilidade/Interoperabilidade: tempo de emissão e recuperação de credenciais (segundos), taxa de falha de interoperabilidade entre diferentes provedores de identidade (ex.: Aries vs. DIF), e avaliação qualitativa de usuários (escala Likert) sobre clareza do consentimento de atributos.",
+    "riscos": "Risco técnico: a integração de ABE pode introduzir latência incompatível com requisitos de tempo real de serviços críticos (ex.: controle de semáforos). Risco de novidade: trabalhos recentes já exploram ABE em IoT, podendo reduzir a contribuição original se não houver demonstração clara de benefício adicional ao combinar ABE com SSI e revogação baseada em blockchain. Risco de implementação: dependência de bibliotecas CP‑ABE ainda em fase experimental pode gerar bugs de segurança ou falta de suporte a atributos complexos. Risco regulatório: políticas de proteção de dados (LGPD) podem exigir auditoria de algoritmos criptográficos, dificultando a adoção sem validação jurídica. Cada risco pode inviabilizar a proposta ou exigir redirecionamento para foco em revogação ou recuperação de credenciais.",
+    "duvidas_orientador": "1. O escopo de atributos (ex.: residência, classe tarifária) é suficiente para demonstrar controle seletivo ou devemos incluir atributos sensíveis (ex.: saúde) para ampliar a relevância? 2. Qual baseline acadêmico seria mais adequado: um modelo SSI puro baseado em blockchain (ex.: Cardoso 2024) ou um sistema de controle de acesso ABE sem SSI? 3. Existe disponibilidade de um dataset real de sensores IoT de cidades brasileiras que possamos usar em vez de simuladores? 4. Qual a profundidade esperada para a avaliação de revogação de credenciais (tempo de propagação, impacto na latência)? 5. Devemos priorizar a implementação de políticas OPA ou usar políticas estáticas codificadas? 6. Há necessidade de validar a solução com usuários finais (cidadãos) ou basta avaliação técnica? 7. Como alinhar a proposta com requisitos da LGPD e possíveis auditorias de privacidade?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:51:38"
+}

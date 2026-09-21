@@ -1,0 +1,43 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-20T18:45:48",
+  "revisao": "ed7dd347db1679b96f2b",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Danilo_TCC_final",
+    "perfil_anterior": {
+      "problema": "Autenticação e Controle de Acesso Baseados em Blockchain",
+      "solucao": "Identidades Autosoberanas",
+      "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+      "limites": "Não identificado nas fichas/trechos disponíveis.",
+      "possibilidades": "Explorar a integração de SSI com criptografia baseada em atributos (ABE) para controle de acesso granular; desenvolver protocolos de revogação e recuperação de credenciais usando criptografia homomórfica; avaliar interoperabilidade entre diferentes plataformas de cidades inteligentes e padrões de credenciais verificáveis; investigar auditoria descentralizada e privacidade diferencial para análise de dados urbanos."
+    },
+    "pagina": 4,
+    "texto": "Danilo Isaque Sousa Maia\nAutenticação e Controle de Acesso Baseados em\nBlockchain e Identidades Autosoberanas para Cidades\nInteligentes\nMonografia apresentada ao curso de Ciência\nda Computação da Universidade Federal\ndo Maranhão, como parte dos requisitos\nnecessáriosparaobtençãodograudeBacharel\nem Ciência da Computação.\nTrabalho __________ em São Luís, 18 de junho de 2025:\nProf. Dr. Francisco José da Silva e\nSilva\nOrientador\nProf. Dr. Samyr Beliche Vale\nExaminador\nProf. Dr. Mario Antonio Meireles\nTeixeira\nExaminador\nSão Luís\n2025",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "Monografia de Danilo Isaque Sousa Maia, apresentada à UFMA em 2025, propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+    "perfil": {
+      "problema": "Autenticação e Controle de Acesso Baseados em Blockchain",
+      "solucao": "Identidades Autosoberanas",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": "Investigar integração de SSI com protocolos de consenso híbrido para escalabilidade em IoT urbano; desenvolver mecanismos de recuperação de credenciais perdidas usando secret sharing distribuído; avaliar desempenho de verifiable credentials em ambientes de baixa latência; propor framework de governança de identidade intermunicipal."
+    },
+    "evidencias": [
+      {
+        "afirmacao": "O trabalho propõe autenticação e controle de acesso baseados em blockchain e identidades autosoberanas para cidades inteligentes.",
+        "citacao": "Autenticação e Controle de Acesso Baseados em Blockchain e Identidades Autosoberanas para Cidades Inteligentes"
+      },
+      {
+        "afirmacao": "A monografia foi apresentada ao curso de Ciência da Computação da Universidade Federal do Maranhão em 2025.",
+        "citacao": "Monografia apresentada ao curso de Ciência da Computação da Universidade Federal do Maranhão, ... 2025"
+      }
+    ],
+    "interpretacao": "O trecho confirma que o foco da pesquisa é a aplicação de blockchain e SSI para melhorar a segurança e a gestão de acesso em serviços urbanos, indicando um contexto acadêmico recente (2025).",
+    "duvidas": "Quais são os requisitos funcionais e não‑funcionais detalhados para a solução proposta? Existe alguma avaliação experimental ou estudo de caso descrito no documento?"
+  },
+  "ia": null,
+  "fim": "2026-09-20T18:46:07"
+}

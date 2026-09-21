@@ -1,0 +1,67 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-16T19:17:00",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "Blockchain-based access control and privacy preservation in healthcare: a comprehensive survey",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 7,
+        "resumo": "O trecho descreve como funções de hash e assinaturas digitais garantem a integridade e a segurança dos blocos em uma blockchain, destacando a dificuldade de modificar blocos devido ao encadeamento de hashes e às propriedades de resistência a ataques, além de mencionar variações de tamanho de bloco entre diferentes implementações.",
+        "interpretacao": "O trecho reforça que a segurança de blockchains depende fortemente de mecanismos criptográficos como hash e assinaturas digitais, o que é crucial para garantir a integridade e a resistência a ataques em sistemas de controle de acesso distribuídos.",
+        "duvidas": "Como as limitações de tamanho de bloco impactam a performance de redes IoT de borda em cidades inteligentes? De que forma diferentes protocolos de consenso influenciam a privacidade dos dados compartilhados?"
+      },
+      {
+        "pagina": 8,
+        "resumo": "O trecho descreve a estrutura de blocos, o papel dos nós e os mecanismos criptográficos que garantem a integridade e a resistência a adulterações em blockchains. Apresenta a arquitetura descentralizada, a ausência de ponto único de falha e a classificação das redes em permissionless (públicas) e permissioned (privadas ou consórcio), destacando que blockchains públicas oferecem alta descentralização, porém enfrentam desafios de escalabilidade e privacidade.",
+        "interpretacao": "O texto reforça que a segurança das blockchains provém de técnicas criptográficas e da replicação distribuída, e que a escolha entre redes permissionless e permissioned influencia diretamente questões de privacidade, escalabilidade e controle de acesso, aspectos críticos para aplicações em saúde e cidades inteligentes.",
+        "duvidas": "Quais são os requisitos de desempenho específicos (latência, throughput) para blockchains permissioned em ambientes de IoT de borda? Como integrar de forma prática SSI e ABE em blockchains existentes sem comprometer a eficiência?"
+      },
+      {
+        "pagina": 9,
+        "resumo": "O trecho descreve os diferentes tipos de blockchain (públicas, privadas e consórcios), destacando que blockchains de consórcio são permissionadas e governadas por múltiplas organizações. Apresenta ainda os elementos-chave da tecnologia, como transparência, integridade e uso de Merkle trees, e compara características como identidade dos participantes, necessidade de autenticação e throughput.",
+        "interpretacao": "O texto enfatiza que a escolha entre blockchains públicas, privadas ou de consórcio impacta diretamente aspectos críticos como privacidade, escalabilidade e segurança, sendo essencial para setores sensíveis como saúde e cidades inteligentes.",
+        "duvidas": "Como garantir a privacidade dos dados sensíveis em blockchains de consórcio sem sacrificar a transparência? Qual o custo de desempenho ao integrar ABE em blockchains permissioned para controle de acesso granular?"
+      },
+      {
+        "pagina": 10,
+        "resumo": "O texto descreve o uso de árvores de Merkle para verificação eficiente de transações, a disponibilidade proporcionada pela descentralização da blockchain que elimina pontos únicos de falha, e o papel dos contratos inteligentes na automação de controle de acesso e proteção de privacidade em sistemas de saúde.",
+        "interpretacao": "O trecho destaca como estruturas de Merkle e contratos inteligentes podem suprir a necessidade de integridade, disponibilidade e controle de acesso em ambientes de saúde distribuídos, reforçando a proposta de usar blockchain para garantir segurança e privacidade.",
+        "duvidas": "Como garantir a privacidade dos dados de saúde ao usar provas de Merkle públicas? Qual o overhead de desempenho ao integrar contratos inteligentes com ABE para controle de acesso granular?"
+      },
+      {
+        "pagina": 11,
+        "resumo": "O trecho descreve como contratos inteligentes permitem codificar políticas de controle de acesso, registrar auditorias e garantir integridade e transparência em blockchains públicas como Ethereum e Hyperledger. Também apresenta os protocolos de consenso (PoW e PoS), destacando a alta segurança e descentralização do PoW, mas apontando seu alto consumo de energia e limitada escalabilidade.",
+        "interpretacao": "O texto evidencia que contratos inteligentes são instrumentos chave para automatizar políticas de acesso e gerar trilhas de auditoria, ao mesmo tempo que a escolha do protocolo de consenso impacta diretamente a viabilidade de implantação em cenários de IoT e cidades inteligentes devido a questões de energia e escalabilidade.",
+        "duvidas": "Como garantir a privacidade dos dados de saúde ao usar contratos inteligentes públicos? Qual é o custo operacional de migrar de PoW para PoS em redes de saúde distribuídas? Como integrar SSI de forma padronizada com diferentes plataformas de blockchain (Ethereum, Hyperledger) em ambientes de smart city?"
+      },
+      {
+        "pagina": 12,
+        "resumo": "O trecho descreve diversos protocolos de consenso blockchain (PoS, DPoS, PoAc, PBFT, DBFT, PoA, PoET, PoV, PoC), destacando suas vantagens como alta taxa de transferência, eficiência energética e escalabilidade, bem como limitações como consumo de energia, risco de centralização e necessidade de hardware especializado. Cada mecanismo apresenta trade‑offs entre desempenho, segurança e descentralização, relevantes para aplicações distribuídas em IoT e cidades inteligentes.",
+        "interpretacao": "O texto evidencia que a escolha do mecanismo de consenso deve equilibrar desempenho, consumo energético e grau de descentralização, aspectos críticos para garantir segurança e eficiência em infraestruturas de IoT e smart cities.",
+        "duvidas": "Qual o impacto prático da centralização parcial em DPoS e DBFT em ambientes de cidades inteligentes? Como o custo de hardware especializado exigido por PoET afeta sua viabilidade em dispositivos de borda?"
+      }
+    ]
+  },
+  "resposta": {
+    "resumo": "O artigo apresenta um levantamento abrangente sobre o uso de blockchain para controle de acesso e preservação de privacidade em ambientes de saúde, destacando que a segurança das redes depende de mecanismos criptográficos como funções de hash, assinaturas digitais e árvores de Merkle. Descreve a arquitetura descentralizada das blockchains, diferenciando redes permissionless (públicas) e permissioned (privadas ou de consórcio), e discute como essa escolha afeta escalabilidade, privacidade e controle de acesso. Contratos inteligentes são apontados como instrumentos para codificar políticas de acesso, registrar auditorias e automatizar processos, embora a escolha do protocolo de consenso (PoW, PoS, DPoS, PBFT, etc.) influencie consumo energético, throughput e latência, aspectos críticos para aplicações de IoT e cidades inteligentes. O texto também menciona desafios relacionados ao tamanho de bloco, requisitos de desempenho em borda, integração de SSI e ABE, e a necessidade de equilibrar transparência com proteção de dados sensíveis.",
+    "lacunas_possiveis": [
+      "Impacto do tamanho de bloco na performance de redes IoT de borda em cidades inteligentes.",
+      "Requisitos de latência e throughput para blockchains permissioned em ambientes de IoT de borda.",
+      "Mecanismos para garantir privacidade de dados sensíveis em blockchains de consórcio sem perder transparência.",
+      "Overhead de desempenho ao integrar Attribute‑Based Encryption (ABE) e contratos inteligentes para controle de acesso granular.",
+      "Viabilidade de integrar Self‑Sovereign Identity (SSI) de forma padronizada em diferentes plataformas blockchain (Ethereum, Hyperledger) em cenários de smart city."
+    ],
+    "propostas_possiveis": [
+      "Realizar experimentos comparativos de diferentes tamanhos de bloco avaliando latência e throughput em dispositivos de borda.",
+      "Desenvolver benchmarks de desempenho para blockchains permissioned (ex.: Hyperledger Fabric) focados em requisitos de IoT (latência < 100 ms, alta taxa de transação).",
+      "Propor um modelo híbrido de privacidade que combine off‑chain storage criptografado com provas de Merkle zero‑knowledge para blockchains de consórcio.",
+      "Implementar e medir um protótipo de controle de acesso que combine contratos inteligentes com ABE, quantificando o overhead adicional.",
+      "Criar um framework de interoperabilidade SSI que suporte múltiplas plataformas blockchain, definindo padrões de identidade descentralizada para serviços de cidades inteligentes."
+    ]
+  },
+  "ia": null,
+  "fim": "2026-09-16T19:17:12"
+}

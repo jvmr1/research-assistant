@@ -1,0 +1,41 @@
+{
+  "resumo": "O trecho descreve princípios de gestão de identidade para cadeias de suprimentos agrícolas e compara várias soluções SSI (Sovrin, uPort, SelfKey, Civic, Blockstack, ShoCard, LifeID, Evernym), destacando controle do usuário, privacidade, ausência de autoridade central e transparência via blockchain.",
+  "perfil": {
+    "problema": "Complexity and Accessibility: SSI solutions can be technologically complex, presenting challenges for stakeholders with limited digital literacy, such as smallholder farmers.",
+    "solucao": "Sovrin is offering an approach to digital identity management within agricultural supply chains that is truly transformative and tackles the three “Ts” of transparency, traceability, and stakeholder empowerment.",
+    "avaliacao": "Sovrin’s support for verifiable credentials and selective disclosure can help authenticate farmers, certifiers, and logistics providers while preserving privacy",
+    "limites": "Scalability is hampered by the complex integration requirements and the absence of standardized frameworks",
+    "possibilidades": [
+      "Adaptar as soluções SSI analisadas (ex.: Sovrin, uPort) para controle de acesso de sensores IoT em cidades inteligentes, combinando com criptografia baseada em atributos (ABE) para compartilhamento seguro de dados sensoriais.",
+      "Desenvolver um framework de interoperabilidade que traduza os princípios de SSI para padrões de edge computing e protocolos de comunicação em smart cities.",
+      "Avaliar a usabilidade e escalabilidade das soluções SSI em ambientes urbanos com grande número de usuários de baixa alfabetização digital, incluindo testes de desempenho em redes de borda.",
+      "Integrar credenciais verificáveis (VCs) de SSI com políticas de controle de acesso baseadas em atributos para habilitar serviços públicos descentralizados (ex.: gestão de resíduos, mobilidade) em cidades inteligentes."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "Sovrin empowers users to have full control over identity data.",
+      "afirmacao": "Sovrin empowers users to have full control over identity data."
+    },
+    {
+      "citacao": "uPort allows stakeholders in agricultural supply chains to retain ownership of data via a mobile application.",
+      "afirmacao": "uPort allows stakeholders in agricultural supply chains to retain ownership of data via a mobile application."
+    }
+  ],
+  "interpretacao": "O texto evidencia que múltiplas soluções SSI oferecem controle de identidade, privacidade e transparência, mas variam em complexidade e custos operacionais, sugerindo que a escolha depende do contexto de uso e da capacidade dos usuários.",
+  "duvidas": "Quais são os requisitos de infraestrutura de borda necessários para integrar SSI com sensores IoT em cidades inteligentes? Como a adoção de ABE impactaria a performance das credenciais verificáveis em ambientes de alta latência?",
+  "avisos": [],
+  "id": "8fe98a07279733611106",
+  "artigo": "Alar_2026",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Complexity and Accessibility: SSI solutions can be technologically complex, presenting challenges for stakeholders with limited digital literacy, such as smallholder farmers.",
+    "solucao": "Sovrin is offering an approach to digital identity management within agricultural supply chains that is truly transformative and tackles the three “Ts” of transparency, traceability, and stakeholder empowerment.",
+    "avaliacao": "Sovrin’s support for verifiable credentials and selective disclosure can help authenticate farmers, certifiers, and logistics providers while preserving privacy",
+    "limites": "Scalability is hampered by the complex integration requirements and the absence of standardized frameworks",
+    "possibilidades": "Adaptar as soluções SSI analisadas (ex.: Sovrin, uPort) para controle de acesso de sensores IoT em cidades inteligentes, combinando com criptografia baseada em atributos (ABE) para compartilhamento seguro de dados sensoriais.; Desenvolver um framework de interoperabilidade que traduza os princípios de SSI para padrões de edge computing e protocolos de comunicação em smart cities.; Avaliar a usabilidade e escalabilidade das soluções SSI em ambientes urbanos com grande número de usuários de baixa alfabetização digital, incluindo testes de desempenho em redes de borda.; Integrar credenciais verif",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "a43721962e8ed22236d0"
+  }
+}

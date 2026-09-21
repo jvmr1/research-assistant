@@ -1,0 +1,36 @@
+{
+  "resumo": "O artigo propõe um esquema leve de compartilhamento seguro de dados IoT que combina CP-ABE otimizado por curvas elípticas e blockchain, delegando parte do processamento a nós de borda e usando gerenciamento distribuído de chaves para evitar escrow e uso indevido, demonstrando maior eficiência e segurança.",
+  "perfil": {
+    "problema": "issues of key misuse, key escrow, and large computation",
+    "solucao": "lightweight IoT data security sharing scheme integrating blockchain and CP-ABE",
+    "avaliacao": "more efficient and secure",
+    "limites": "Não informado",
+    "possibilidades": "Avaliar o esquema em ambientes de cidades inteligentes reais; integrar identidade auto-soberana (SSI) para gerenciamento de credenciais; testar a escalabilidade com milhares de dispositivos IoT; combinar com criptografia baseada em atributos para assinatura de dados; investigar mecanismos de revogação distribuída entre organizações."
+  },
+  "evidencias": [
+    {
+      "citacao": "conventional centralized CP-ABE scheme is plagued by the issues of key misuse, key escrow, and large computation",
+      "afirmacao": "O esquema centralizado CP-ABE apresenta problemas de uso indevido de chaves, escrow e alto custo computacional."
+    },
+    {
+      "citacao": "security and performance analysis indicates that the proposed scheme is more efficient and secure",
+      "afirmacao": "A análise de segurança e desempenho indica que o esquema proposto é mais eficiente e seguro."
+    }
+  ],
+  "interpretacao": "A proposta busca superar limitações de CP-ABE tradicional ao usar criptografia baseada em curvas elípticas e delegar tarefas a edge nodes, enquanto a blockchain garante rastreabilidade e gerenciamento de chaves distribuído, resultando em menor carga para dispositivos IoT.",
+  "duvidas": "Quais são os custos de armazenamento on‑chain versus off‑chain em cenários de grande volume de dados? Como o esquema lida com revogação de atributos em tempo real?",
+  "avisos": [],
+  "id": "ce7404b4e6a7debd45dd",
+  "artigo": "Tian_2025",
+  "pagina": null,
+  "tipo": "html",
+  "perfil_acumulado": {
+    "problema": "issues of key misuse, key escrow, and large computation",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "more efficient and secure",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Avaliar o esquema em ambientes de cidades inteligentes reais; integrar identidade auto-soberana (SSI) para gerenciamento de credenciais; testar a escalabilidade com milhares de dispositivos IoT; combinar com criptografia baseada em atributos para assinatura de dados; investigar mecanismos de revogação distribuída entre organizações.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "7e7cbfa178efb1ff8ea0"
+  }
+}

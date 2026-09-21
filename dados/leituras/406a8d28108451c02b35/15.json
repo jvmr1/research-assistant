@@ -1,0 +1,36 @@
+{
+  "resumo": "O trecho apresenta uma lista extensa de referências relacionadas a blockchain, edge computing e IoT industrial, incluindo trabalhos sobre mecanismos de consenso leves (Poah), frameworks como BlockEdge, e soluções de privacidade e controle de acesso, além das informações de autoria, financiamento e declaração de conflitos de interesse do artigo.",
+  "perfil": {
+    "problema": "Não informado",
+    "solucao": "Não informado",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Explorar a integração do algoritmo Poah citado (Puthal et al., 2020) na arquitetura proposta para melhorar a escalabilidade; comparar o framework BlockEdge (Kumar et al., 2020) com a solução atual em termos de latência e taxa de transação; avaliar a adoção de credenciais verificáveis e SSI conforme a tendência das referências; investigar a aplicação de criptografia baseada em atributos (ABE) inspirada em trabalhos citados para controle de acesso granular."
+  },
+  "evidencias": [
+    {
+      "citacao": "Puthal, D., Mohanty, S. P ., Y anambaka, V . P . & Kougianos, E. Poah: A novel consensus algorithm for fast scalable private blockchain for large-scale iot frameworks. arXiv preprint. arXiv:2001.07297 (2020).",
+      "afirmacao": "Poah é um algoritmo de consenso novel para blockchains privadas escaláveis em grandes frameworks IoT."
+    },
+    {
+      "citacao": "Kumar, T. et al. BlockEdge: blockchain-edge framework for industrial IoT networks. IEEE Access 8, 154166–154185 (2020).",
+      "afirmacao": "BlockEdge propõe um framework blockchain-edge para redes industriais IoT."
+    }
+  ],
+  "interpretacao": "A presença dessas referências indica que o trabalho se apoia em literatura recente sobre consenso leve, integração blockchain-edge e privacidade, reforçando a relevância da proposta no contexto de cidades inteligentes e IIoT.",
+  "duvidas": "Como a arquitetura proposta difere ou complementa o framework BlockEdge? Qual o papel específico do Poah na solução apresentada? Há detalhes sobre a implementação de credenciais verificáveis ou ABE que ainda não foram descritos?",
+  "avisos": [],
+  "id": "1dc02ab0c7a154099cf5",
+  "artigo": "Asaithambi_2025",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+    "solucao": "edge-level implementation of authentication that lowers the computational burden and improves the industry platform’s security",
+    "avaliacao": "maximum throughput of 1273 tps",
+    "limites": "performance decreased when the blockchain network’s participating edge nodes grew above 100",
+    "possibilidades": "Explorar a integração do algoritmo Poah citado (Puthal et al., 2020) na arquitetura proposta para melhorar a escalabilidade; comparar o framework BlockEdge (Kumar et al., 2020) com a solução atual em termos de latência e taxa de transação; avaliar a adoção de credenciais verificáveis e SSI conforme a tendência das referências; investigar a aplicação de criptografia baseada em atributos (ABE) inspirada em trabalhos citados para controle de acesso granular.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "406a8d28108451c02b35"
+  }
+}

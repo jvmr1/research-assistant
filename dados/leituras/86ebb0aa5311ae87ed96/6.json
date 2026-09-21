@@ -1,0 +1,34 @@
+{
+  "resumo": "O trecho apresenta equações que demonstram a redução do tamanho dos blocos da blockchain ao armazenar arquivos no IPFS, comparando o tamanho sem IPFS e com IPFS, evidenciando ganhos de eficiência para o compartilhamento de dados de saúde.",
+  "perfil": {
+    "problema": "no single point of failure",
+    "solucao": "Each file is stored in an IPFS, with its corresponding hash maintained in the Blockchain network.",
+    "avaliacao": "the reduction of block size",
+    "limites": "Não informado",
+    "possibilidades": "• Avaliar o impacto da redução de tamanho de bloco na latência de rede em cenários de edge computing;\n• Investigar como a diminuição do tamanho dos blocos afeta a escalabilidade com milhares de dispositivos IoT;\n• Integrar métricas de consumo energético ao analisar o uso de IPFS versus armazenamento direto na blockchain;\n• Explorar combinações de IPFS com SSI para controle de acesso granular aos dados de saúde."
+  },
+  "evidencias": [
+    {
+      "citacao": "Eq. 2 shows the total number of transactions per block, and Eq. 3 provides the execution time of each transaction.",
+      "afirmacao": "Equações 2 e 3 quantificam, respectivamente, o número total de transações por bloco e o tempo de execução de cada transação."
+    }
+  ],
+  "interpretacao": "Ao mover os arquivos para o IPFS, apenas seus hashes são armazenados na blockchain, o que diminui significativamente o tamanho dos blocos e pode acelerar o processamento de transações e reduzir o consumo de armazenamento.",
+  "duvidas": "Como a redução do tamanho dos blocos impacta a segurança e a resistência a ataques de negação de serviço? Qual é o efeito da latência de rede ao recuperar dados do IPFS em ambientes de edge computing? Como garantir a integridade e a disponibilidade dos dados armazenados no IPFS em longo prazo?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "e624275cd4958fcfa0fb",
+  "artigo": "Mallick_2025",
+  "pagina": 7,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "no single point of failure",
+    "solucao": "Each file is stored in an IPFS, with its corresponding hash maintained in the Blockchain network.",
+    "avaliacao": "the reduction of block size",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "• Avaliar o impacto da redução de tamanho de bloco na latência de rede em cenários de edge computing;\n• Investigar como a diminuição do tamanho dos blocos afeta a escalabilidade com milhares de dispositivos IoT;\n• Integrar métricas de consumo energético ao analisar o uso de IPFS versus armazenamento direto na blockchain;\n• Explorar combinações de IPFS com SSI para controle de acesso granular aos dados de saúde.",
+    "revisao": "e2cc560b062ae24c3531",
+    "assinatura": "86ebb0aa5311ae87ed96"
+  }
+}

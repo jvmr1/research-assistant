@@ -1,0 +1,49 @@
+{
+  "etapa": "leitura",
+  "inicio": "2026-09-16T18:11:40",
+  "revisao": "e2cc560b062ae24c3531",
+  "tarefa": "Leia este trecho e atualize o entendimento deste trabalho, usando o perfil anterior como memória. JSON: resumo (até 100 palavras sobre o trecho), perfil (objeto com problema, solucao, avaliacao, limites, possibilidades: nos primeiros quatro campos copie uma frase literal curta do trecho ou do perfil anterior, até 500 caracteres; se ausente diga Não informado. Em possibilidades sugira extensões), evidencias (até 2 objetos: afirmacao e citacao literal curta copiada do trecho no idioma original), interpretacao e duvidas (strings). Cite somente o trecho novo. Não invente avaliações ausentes. Possibilidades são ideias de extensão, não afirmações dos autores. Se não houver informação, diga não informado.",
+  "entrada": {
+    "titulo": "Privacy-preserving vaccine supply chain management leveraging blockchain and self-sovereign identity",
+    "perfil_anterior": {
+      "problema": "key challenges such as traceability, counterfeit prevention, and data privacy",
+      "solucao": "leveraging self-sovereign identity (SSI), blockchain, and privacy-preserving techniques to optimize vaccine distribution",
+      "avaliacao": "empirical results prove the efficacy of the proposed supply chain framework",
+      "limites": "scalability issues, interoperability constraints, and privacy concerns",
+      "possibilidades": "Aplicar a abordagem a cidades inteligentes integrando sensores IoT para rastreamento de vacinas; avaliar desempenho em ambientes de edge computing; combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular; investigar mecanismos de revogação de credenciais distribuídas via blockchain; explorar interoperabilidade entre diferentes provedores de saúde e plataformas municipais."
+    },
+    "pagina": 3,
+    "texto": "on healthcare systems and medical supply chains worldwide [1]. In \nresponse, rapid vaccine development and large-scale immunization \ncampaigns were initiated as critical mitigation measures [2,3]. \nHowever, alongside accelerated vaccine production and \ndistribution, drug and vaccine supply chain counterfeiting \nemerged as a serious threat, leading to adverse health outcomes \nand undermining public trust in vaccination programs [4]. Fig. 1 \nillustrates the exponential increase in reported counterfeit \npharmaceutical incidents globally, with projections indicating \ncontinued growth beyond 2025 [5].\n2020 2021 2022 2023\n0\n1000\n2000\n3000\n4000\n5000\n6000\n7000\nNumber of Drug Incidents\nYear\n Counterfeit Drug Incidents\nFig. 1. Counterfeit Incidents Concerning Pharmaceuticals\nIn this context, emerging technologies such as blockchain \nand Self-Sovereign Identity (SSI) have gained attention for \nimproving the efficiency, transparency, and security of vaccine \nsupply chain management. Blockchain enables immutable tracking \nand verification of vaccine batches across distributed stakeholders, \nthereby strengthening trust and traceability [6]. The major benefits \nachievable through an efficient vaccine distribution framework are \nillustrated in Fig. 2.\n￿ Security & Fraud Prevention: Public confidence is essential for \nsuccessful vaccination programs. Transparent and verifiable \nvaccine distribution systems help prevent counterfeiting and \nstrengthen trust, while delays and logistical gaps undermine \nimmunization efforts [7]. Integrating blockchain, SSI, and QR-\nACCEPTED MANUSCRIPT\nARTICLE IN PRESSARTICLE IN PRESS",
+    "tipo": "pdf"
+  },
+  "resposta": {
+    "resumo": "O trecho destaca o aumento de incidentes de falsificação de vacinas, apontando a tecnologia blockchain e a identidade auto-soberana (SSI) como soluções para melhorar a transparência, rastreabilidade e segurança na cadeia de suprimentos de vacinas.",
+    "perfil": {
+      "problema": "drug and vaccine supply chain counterfeiting emerged as a serious threat",
+      "solucao": "emerging technologies such as blockchain and Self-Sovereign Identity (SSI) have gained attention for improving the efficiency, transparency, and security of vaccine supply chain management",
+      "avaliacao": "Não informado",
+      "limites": "Não informado",
+      "possibilidades": [
+        "Integrar edge computing para verificação em tempo real da autenticidade dos lotes de vacina nas fronteiras da cidade inteligente.",
+        "Combinar SSI com criptografia baseada em atributos (ABE) para controle de acesso granular a dados de rastreamento.",
+        "Avaliar a interoperabilidade entre plataformas municipais de saúde e provedores de identidade descentralizada.",
+        "Desenvolver mecanismos de revogação distribuída de credenciais SSI via contratos inteligentes.",
+        "Aplicar a abordagem a sensores IoT de monitoramento de temperatura e localização na cadeia de frio de vacinas."
+      ]
+    },
+    "evidencias": [
+      {
+        "afirmacao": "Counterfeit incidents in pharmaceuticals are increasing globally.",
+        "citacao": "Fig. 1 illustrates the exponential increase in reported counterfeit pharmaceutical incidents globally, with projections indicating continued growth beyond 2025."
+      },
+      {
+        "afirmacao": "Blockchain and SSI can enhance security and fraud prevention in vaccine distribution.",
+        "citacao": "Integrating blockchain, SSI, and QR... Transparent and verifiable vaccine distribution systems help prevent counterfeiting and strengthen trust."
+      }
+    ],
+    "interpretacao": "O texto reforça a necessidade de combater a falsificação de vacinas, apresentando blockchain e SSI como pilares para criar um ecossistema de rastreamento confiável, porém ainda não demonstra resultados empíricos ou limitações específicas.",
+    "duvidas": "Quais métricas foram usadas para validar a eficácia da solução proposta? Como a abordagem lida com a revogação de credenciais SSI em caso de comprometimento? Há avaliação de desempenho em ambientes de edge computing?"
+  },
+  "ia": null,
+  "fim": "2026-09-16T18:11:58"
+}

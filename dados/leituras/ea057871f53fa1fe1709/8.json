@@ -1,0 +1,37 @@
+{
+  "resumo": "O trecho apresenta a lista de acrônimos utilizados na dissertação, incluindo termos‑chave como DID (Decentralized Identifier), ABE (Attribute‑Based Encryption) e CP‑ABE, que são relevantes para identidade autossoberana e controle de acesso em ambientes de IIoT e cidades inteligentes.",
+  "perfil": {
+    "problema": "secure exchange of data in distributed IIoT environments",
+    "solucao": "smart contracts on the Hyperledger Besu blockchain",
+    "avaliacao": "The developed architecture reduces the dependence on unilateral control over access rules",
+    "limites": "Traditional solutions tend to depend on centralized intermediaries",
+    "possibilidades": "Explorar a integração de DIDs e credenciais verificáveis com ABE/CP‑ABE para controle de acesso baseado em atributos em serviços de cidades inteligentes; Avaliar o uso de IPFS para armazenamento descentralizado de credenciais revogáveis; Investigar políticas de revogação automática usando smart contracts combinados com ECIES para proteção de transmissão."
+  },
+  "evidencias": [
+    {
+      "citacao": "DID–Decentralized Identifier",
+      "afirmacao": "DID–Decentralized Identifier"
+    },
+    {
+      "citacao": "ABE–Attribute-Based Encryption",
+      "afirmacao": "ABE–Attribute-Based Encryption"
+    }
+  ],
+  "interpretacao": "A presença desses acrônimos indica que a pesquisa considera tecnologias de identidade descentralizada e criptografia baseada em atributos como componentes centrais da solução proposta.",
+  "duvidas": "Como os autores pretendem combinar DIDs com ABE/CP‑ABE nas fases de revogação e recuperação de credenciais? Qual o papel específico do IPFS no gerenciamento de credenciais?",
+  "avisos": [],
+  "id": "14ad5f8d2333a6f4764d",
+  "artigo": "Exemplo_60479560a08f3b4cd724",
+  "pagina": 9,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "secure exchange of data in distributed IIoT environments",
+    "solucao": "smart contracts on the Hyperledger Besu blockchain",
+    "avaliacao": "The developed architecture reduces the dependence on unilateral control over access rules",
+    "limites": "Traditional solutions tend to depend on centralized intermediaries",
+    "possibilidades": "Explorar a integração de DIDs e credenciais verificáveis com ABE/CP‑ABE para controle de acesso baseado em atributos em serviços de cidades inteligentes; Avaliar o uso de IPFS para armazenamento descentralizado de credenciais revogáveis; Investigar políticas de revogação automática usando smart contracts combinados com ECIES para proteção de transmissão.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "d54bdcaf66d25b3bc5ea"
+  },
+  "reaproveitada_de": "70f146e8652fe84ad53e"
+}
