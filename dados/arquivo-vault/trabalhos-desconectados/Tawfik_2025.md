@@ -5,7 +5,7 @@ doi: https://doi.org/10.1007/s10586-025-05308-x
 ano: 2025
 status: triagem_pendente
 acesso_aberto: true
-pdf_local: pdfs/Tawfik_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Tawfik_2025.pdf
 tags: [blockchain, cidades-inteligentes, contratos-inteligentes, controle-de-acesso, iot, privacidade]
 ---
 # Tawfik_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1007/s10586-025-05308-x
 
 Triagem: revisar. O artigo aborda controle de acesso baseado em blockchain e preservação de privacidade, tópicos centrais para o grupo de pesquisa. Contudo, o domínio de aplicação é saúde (EHR), não cidades inteligentes ou IoT industrial, que são o foco principal da revisão. Ainda assim, a análise de arquiteturas permissionadas vs. permissionless, uso de smart contracts para autenticação e controle de acesso, e a discussão de técnicas criptográficas de privacidade podem oferecer insights metodológicos e arquiteturais úteis para adaptar soluções a ambientes de smart cities e IoT. Por isso, recomenda‑se revisar o trabalho para extrair possíveis abordagens transferíveis, mas não priorizá‑lo como fonte principal.
 
-[PDF local](../../pdfs/Tawfik_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Tawfik_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

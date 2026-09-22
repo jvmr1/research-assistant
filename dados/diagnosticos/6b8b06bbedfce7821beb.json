@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_60479560a08f3b4cd724",
+        "id": "Fioreze_2026",
         "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
         "escopo": {
           "tipo": "pdf",
@@ -150,7 +150,7 @@
         "titulo": "Framework híbrido VC‑ABE para controle de acesso cidadão em IoT urbano",
         "descricao": "Combina o framework blockchain‑ABE de Fioreze (2026) com as Verifiable Credentials descritas por Gudipati (2025) para criar credenciais que suportam seleção de atributos e políticas de acesso baseadas em ABE. O modelo inclui um mecanismo de revogação baseado em lista de status na blockchain e recuperação de credenciais via secret sharing, abordando lacunas de revogação e perda de acesso ainda não tratadas em ambientes urbanos.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
+          "Fioreze_2026",
           "Gudipati_2025"
         ],
         "lacuna": "Ausência de integração prática entre VCs e ABE que ofereça revogação escalável e recuperação de credenciais para cidadãos em serviços de IoT urbano.",
@@ -161,7 +161,7 @@
         "descricao": "Estende o sistema de segurança turística baseado em blockchain de S_2026 (2026) incorporando carteiras SSI que utilizam credenciais verificáveis e criptografia baseada em atributos (ABE) conforme o framework de Fioreze. O objetivo é permitir divulgação seletiva de atributos turísticos (ex.: idade, nacionalidade) e oferecer recuperação de credenciais via secret sharing, suprindo a lacuna de privacidade e resiliência de identidade para visitantes urbanos.",
         "fontes": [
           "S_2026",
-          "Exemplo_60479560a08f3b4cd724"
+          "Fioreze_2026"
         ],
         "lacuna": "Falta de mecanismos de privacidade seletiva e recuperação de identidade para turistas que utilizam SSI em ambientes de cidades inteligentes.",
         "busca_anterioridade": "self-sovereign identity smart city tourism secret sharing; blockchain identity revocation tourist smart city"
@@ -170,7 +170,7 @@
         "titulo": "Registro descentralizado de revogação para credenciais SSI em serviços públicos",
         "descricao": "Propõe um registro de revogação distribuído na blockchain que combina a abordagem de revogação limitada de Fioreze (2026) com as necessidades de gerenciamento de status de VCs apontadas por Gudipati (2025). O registro utiliza provas de conhecimento zero para atualizar o status sem revelar atributos, permitindo que entidades públicas verifiquem a validade das credenciais em tempo real, preenchendo a lacuna de revogação escalável em ambientes de administração municipal.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
+          "Fioreze_2026",
           "Gudipati_2025"
         ],
         "lacuna": "Nenhum trabalho integra um registro de revogação descentralizado e eficiente para VCs/SSI em serviços públicos de cidades inteligentes.",

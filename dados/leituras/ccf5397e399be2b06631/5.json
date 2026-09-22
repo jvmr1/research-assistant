@@ -1,0 +1,35 @@
+{
+  "resumo": "O trabalho propõe um modelo de gestão descentralizada de identidades baseado em blockchain (Hyperledger Fabric) para cidades inteligentes, destacando a importância da segurança da informação e avaliando o custo computacional da solução.",
+  "perfil": {
+    "problema": "sem mecanismos de segurança torna-se impossível desenvolver e implantar aplicações de cidades inteligentes.",
+    "solucao": "modelo para gestão descentralizada de identidades baseado em blockchain.",
+    "avaliacao": "os resultados demonstram a aplicabilidade do modelo e mensuram o custo de adoção.",
+    "limites": "Não informado.",
+    "possibilidades": "Explorar a integração de identidade autossoberana (SSI) e credenciais verificáveis ao modelo proposto, incorporando criptografia baseada em atributos (ABE) ou homomórfica para controle de acesso seletivo, revogação e recuperação de credenciais perdidas em ambientes IoT de cidades inteligentes."
+  },
+  "evidencias": [
+    {
+      "citacao": "A gestão de identidades se apresenta como uma solução para criar um ecossistema seguro para o desenvolvimento de aplicações de cidades inteligentes.",
+      "afirmacao": "A gestão de identidades se apresenta como uma solução para criar um ecossistema seguro para o desenvolvimento de aplicações de cidades inteligentes."
+    }
+  ],
+  "interpretacao": "O texto enfatiza que a segurança da informação é pré-requisito para cidades inteligentes e propõe a blockchain como infraestrutura para gestão descentralizada de identidades, demonstrando viabilidade prática por meio de avaliação de custos computacionais.",
+  "duvidas": "Quais são as limitações específicas de escalabilidade e privacidade do modelo proposto? Como o modelo lida com revogação e recuperação de credenciais em caso de perda de acesso pelo cidadão?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "861bcc28c717ccae0a9c",
+  "artigo": "Cardoso_2024",
+  "pagina": 6,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "sem mecanismos de segurança torna-se impossível desenvolver e implantar aplicações de cidades inteligentes.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "os resultados demonstram a aplicabilidade do modelo e mensuram o custo de adoção.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar a integração de identidade autossoberana (SSI) e credenciais verificáveis ao modelo proposto, incorporando criptografia baseada em atributos (ABE) ou homomórfica para controle de acesso seletivo, revogação e recuperação de credenciais perdidas em ambientes IoT de cidades inteligentes.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "a6dd17ddc760fe0d49a1"
+  },
+  "reaproveitada_de": "75b1091bf587fa2ff05f"
+}

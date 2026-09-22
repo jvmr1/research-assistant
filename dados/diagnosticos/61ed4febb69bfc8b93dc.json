@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_da24de257de987bc603b",
+        "id": "Cardoso_2024",
         "titulo": "André Luiz Almeida Cardoso",
         "escopo": {
           "tipo": "pdf",
@@ -138,7 +138,7 @@
         "titulo": "SSI com ABE para controle de acesso seletivo em sensores IoT de cidades inteligentes",
         "descricao": "Combina o modelo de identidade baseada em blockchain de Cardoso (2024) com a ênfase de Hudda (2025) em criptossistemas leves para IoT. Propõe uma carteira SSI que emite credenciais verificáveis contendo atributos criptografados por ABE, permitindo que sensores restritos verifiquem apenas atributos relevantes, reduzindo carga computacional e preservando privacidade. A lacuna reside na ausência de soluções que integrem SSI e ABE em dispositivos de recursos limitados.",
         "fontes": [
-          "Exemplo_da24de257de987bc603b",
+          "Cardoso_2024",
           "Hudda_2025"
         ],
         "lacuna": "Falta de integração prática de SSI com criptografia baseada em atributos em ambientes IoT de baixa potência.",
@@ -148,7 +148,7 @@
         "titulo": "Credenciais verificáveis com revogação baseada em blockchain para compartilhamento de dados agrícolas em cidades inteligentes",
         "descricao": "Une o modelo de Cardoso (2024) ao cenário de IoT agrícola de Mansoor (2025). Propõe o uso de DIDs e credenciais verificáveis emitidas sobre blockchain, complementadas por um mecanismo de lista de revogação distribuída, permitindo que dados de sensores agrícolas sejam compartilhados com serviços urbanos (ex.: gestão de recursos hídricos) de forma auditável e revogável. A lacuna está na escassez de abordagens que tratam revogação de credenciais entre domínios heterogêneos.",
         "fontes": [
-          "Exemplo_da24de257de987bc603b",
+          "Cardoso_2024",
           "Mansoor_2025"
         ],
         "lacuna": "Ausência de mecanismos de revogação interoperáveis para credenciais verificáveis em contextos intersetoriais (agricultura‑cidade).",
@@ -158,7 +158,7 @@
         "titulo": "Esquema híbrido de revogação e recuperação de acesso usando blockchain e criptografia homomórfica em serviços urbanos IoT",
         "descricao": "Integra as preocupações de segurança de Hudda (2025) com a visão de Cardoso (2024) e acrescenta homomorphic encryption para permitir análise de dados de sensores sem revelar informações sensíveis. O esquema usa blockchain para registrar status de revogação e secret sharing para recuperação de credenciais perdidas, enquanto a computação homomórfica permite consultas agregadas sobre dados criptografados. A lacuna consiste na falta de soluções que combinem revogação, recuperação e processamento privativo em dispositivos IoT de cidades inteligentes.",
         "fontes": [
-          "Exemplo_da24de257de987bc603b",
+          "Cardoso_2024",
           "Hudda_2025"
         ],
         "lacuna": "Carência de arquiteturas que unam revogação, recuperação de credenciais e computação homomórfica em ambientes IoT restritos.",

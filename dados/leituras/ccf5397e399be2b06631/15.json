@@ -1,0 +1,35 @@
+{
+  "resumo": "O trecho destaca que as cidades inteligentes (CIs) enfrentam ameaças de segurança como negação de serviço e acesso não autorizado, o que pode causar prejuízos graves e perda de confiança pública. Enfatiza que a gestão de identidades é essencial para garantir confidencialidade, integridade e controle de acesso em ambientes IoT, permitindo canais seguros, autenticação auditável e proteção dos dados sensoriais.",
+  "perfil": {
+    "problema": "as CIs também estão susceptíveis a ameaças de segurança tais como: negação de serviço, invenção e modificação de dados, acesso não autorizado a serviços e dados.",
+    "solucao": "Gestão de Identidades pode desempenhar um papel fundamental",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": "Explorar integração de SSI com blockchain para canais seguros de comunicação em CIs; Aplicar ABE para controle de acesso seletivo a sensores IoT; Investigar protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade; Avaliar uso de criptografia homomórfica para análise de dados de mobilidade preservando privacidade."
+  },
+  "evidencias": [
+    {
+      "citacao": "Neste sentido, a Gestão de Identidades pode desempenhar um papel fundamental\nna garantia da segurança em ambientes de IoT e CI.",
+      "afirmacao": "Gestão de Identidades pode desempenhar um papel fundamental na garantia da segurança em ambientes de IoT e CI."
+    }
+  ],
+  "interpretacao": "O texto reforça que a segurança da informação é crítica nas CIs e que a gestão de identidades, possivelmente suportada por SSI e blockchain, pode mitigar ameaças ao prover autenticação, controle de acesso e auditoria em todo o ciclo de vida dos dados.",
+  "duvidas": "Quais são os requisitos específicos para implementar SSI em dispositivos IoT de baixa potência? Como garantir a revogação eficiente de credenciais em ambientes com conectividade intermitente? Existem métricas práticas para avaliar a sobrecarga de memória introduzida por soluções baseadas em blockchain em CIs?",
+  "avisos": [
+    "Citação não conferida descartada; a interpretação do trecho continua provisória."
+  ],
+  "id": "06ae7679a442d7232125",
+  "artigo": "Cardoso_2024",
+  "pagina": 16,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+    "solucao": "Gestão de Identidades pode desempenhar um papel fundamental",
+    "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Explorar integração de SSI com blockchain para canais seguros de comunicação em CIs; Aplicar ABE para controle de acesso seletivo a sensores IoT; Investigar protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade; Avaliar uso de criptografia homomórfica para análise de dados de mobilidade preservando privacidade.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "a6dd17ddc760fe0d49a1"
+  },
+  "reaproveitada_de": "75b1091bf587fa2ff05f"
+}

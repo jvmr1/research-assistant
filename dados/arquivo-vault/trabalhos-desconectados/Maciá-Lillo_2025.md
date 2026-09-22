@@ -5,7 +5,7 @@ doi: https://doi.org/10.1038/s41598-025-14429-7
 ano: 2025
 status: triagem_pendente
 acesso_aberto: true
-pdf_local: pdfs/Maciá-Lillo_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Maciá-Lillo_2025.pdf
 tags: [cidades-inteligentes, interoperabilidade, iot, ssi]
 ---
 # Maciá-Lillo_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1038/s41598-025-14429-7
 
 Triagem: revisar. O trabalho aborda arquitetura edge‑cloud serverless para processos de gestão do conhecimento em cidades inteligentes, alinhado ao contexto de edge computing e sistemas distribuídos. Contudo, não trata de blockchain, identidade auto‑soberana, credenciais verificáveis, criptografia baseada em atributos ou controle de acesso, que são os focos prioritários da revisão. Por isso, embora relevante para a dimensão de edge computing em smart cities, a contribuição direta ao tema central da revisão é limitada, justificando uma classificação de revisão (manter para possível exploração de integração com mecanismos de segurança e identidade).
 
-[PDF local](../../pdfs/Maci%C3%A1-Lillo_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Maci%C3%A1-Lillo_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

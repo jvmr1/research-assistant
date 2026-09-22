@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_60479560a08f3b4cd724",
+        "id": "Fioreze_2026",
         "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
         "escopo": {
           "tipo": "pdf",
@@ -79,7 +79,7 @@
         "possibilidades": "Incorporar credenciais verificáveis (VC) baseadas em DID para gerenciar políticas de acesso dinâmicas e permitir revogação descentralizada dos direitos de acesso aos dados IIoT. Além disso, adicionar um mecanismo de recuperação de credenciais usando secret sharing para mitigar perda de acesso pelo cidadão."
       },
       {
-        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "id": "Maia_2025",
         "titulo": "Danilo_TCC_final",
         "escopo": {
           "tipo": "pdf",
@@ -155,8 +155,8 @@
       {
         "descricao": "Unir o framework de Fioreze (blockchain + ABE) com o modelo SSI de Danilo, introduzindo credenciais verificáveis (VC) emitidas para cidadãos que carregam atributos usados nas políticas ABE. Isso permitiria que serviços de cidades inteligentes consultassem atributos de VCs para autorizar acesso a fluxos de dados IIoT, mantendo a seletividade e possibilitando revogação descentralizada via status list off‑chain.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Ausência de um mecanismo unificado que ligue credenciais de identidade cidadã a políticas de acesso baseadas em atributos para dados IIoT, bem como revogação coordenada entre domínios.",
         "busca": "self-sovereign identity verifiable credentials attribute-based encryption smart city IIoT revocation"
@@ -164,8 +164,8 @@
       {
         "descricao": "Desenvolver um esquema de revogação e recuperação de credenciais SSI que combine listas de status na blockchain (proposta de Danilo) com compartilhamento secreto (sugerido por Fioreze) para reconstruir credenciais perdidas. O método permitiria que cidadãos recuperassem acesso sem depender de um único ponto de falha, ao mesmo tempo em que revogam direitos comprometidos de forma auditável.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Revogação e recuperação são tratadas separadamente nos trabalhos existentes; falta um protocolo integrado que use secret sharing e status list para ambos os problemas.",
         "busca": "SSI credential revocation status list secret sharing smart city IoT"
@@ -173,8 +173,8 @@
       {
         "descricao": "Propor a aplicação de criptografia homomórfica sobre dados IIoT compartilhados via framework de Fioreze, controlados por autenticação SSI de Danilo. Cidadãos autenticados poderiam submeter consultas homomórficas que permitem análises agregadas sem revelar dados brutos, preservando privacidade enquanto mantêm controle de acesso baseado em atributos.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Nenhum dos trabalhos integra SSI com computação homomórfica para processamento privado de dados IIoT em cidades inteligentes.",
         "busca": "homomorphic encryption self-sovereign identity smart city IIoT data processing"

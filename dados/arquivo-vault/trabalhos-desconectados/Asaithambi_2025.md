@@ -5,7 +5,7 @@ doi: https://doi.org/10.1038/s41598-025-00337-3
 ano: 2025
 status: triado_baixa
 acesso_aberto: true
-pdf_local: pdfs/Asaithambi_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Asaithambi_2025.pdf
 tags: [blockchain, contratos-inteligentes, controle-de-acesso, governanca-de-dados, interoperabilidade, iot, privacidade, sistemas-distribuidos]
 ---
 # Asaithambi_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1038/s41598-025-00337-3
 
 Triagem: baixa. O trabalho trata de uma arquitetura de computação de borda assistida por blockchain para o Industrial Internet of Things (IIoT), focando em autenticação de dispositivos, integridade de dados e eficiência de consenso (PoAh). Embora envolva IoT e blockchain, não aborda identidade autossoberana (SSI), credenciais verificáveis, controle de acesso baseado em atributos, criptografia homomórfica ou outros mecanismos de privacidade e interoperabilidade relevantes ao escopo da revisão (cidades inteligentes, serviços públicos digitais, ações de cidadãos ou entidades administrativas). Portanto, o artigo tem pouca relevância direta para o objetivo da pesquisa focada.
 
-[PDF local](../../pdfs/Asaithambi_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Asaithambi_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

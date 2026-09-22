@@ -5,7 +5,7 @@ doi: https://doi.org/10.1007/s43926-025-00195-5
 ano: 2025
 status: triagem_pendente
 acesso_aberto: true
-pdf_local: pdfs/Mallick_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Mallick_2025.pdf
 tags: [abe, blockchain, contratos-inteligentes, governanca-de-dados, interoperabilidade, iot, privacidade]
 ---
 # Mallick_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1007/s43926-025-00195-5
 
 Triagem: revisar. O trabalho aborda IoT, blockchain, controle de acesso e privacidade de dados, temas centrais do grupo de pesquisa. Contudo, o foco está em saúde inteligente (smart healthcare) e não em cidades inteligentes ou serviços públicos urbanos, que são o domínio prioritário. Ainda assim, a proposta de arquitetura descentralizada com smart contracts, IPFS e monitoramento de dispositivos vulneráveis pode oferecer insights úteis para soluções de segurança, interoperabilidade e privacidade em ambientes de cidades inteligentes, especialmente em contextos de edge computing e sistemas distribuídos. Por isso, recomenda‑se revisar o artigo para avaliar possíveis adaptações ou extensões ao contexto de smart cities.
 
-[PDF local](../../pdfs/Mallick_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Mallick_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

@@ -1,0 +1,37 @@
+{
+  "resumo": "O trecho lista as ilustrações do trabalho, destacando arquiteturas, diagramas de sequência e avaliações de latência e consumo de processamento da solução proposta para gestão de identidades em ambientes IoT de cidades inteligentes.",
+  "perfil": {
+    "problema": "Não informado.",
+    "solucao": "Arquitetura geral da solução e interações.",
+    "avaliacao": "Latência (ms) e número de clientes ao longo do tempo, utilizando o modelo proposto.",
+    "limites": "Não informado.",
+    "possibilidades": "Investigar a integração de credenciais verificáveis nos diagramas de sequência; aplicar criptografia baseada em atributos (ABE) para controle de acesso nos dispositivos IoT; avaliar mecanismos de revogação e recuperação de credenciais usando blockchain; medir impacto de criptografia homomórfica no consumo de processamento apresentado."
+  },
+  "evidencias": [
+    {
+      "citacao": "Figura 25 –Latência (ms) e número de clientes ao longo do tempo, utilizando o modelo proposto.",
+      "afirmacao": "Avaliação de desempenho da solução proposta."
+    },
+    {
+      "citacao": "Figura 23 –Latência (ms) e número de clientes virtuais ao longo do tempo, para as operações de autenticação.",
+      "afirmacao": "Medição de latência para operações de autenticação."
+    }
+  ],
+  "interpretacao": "O material demonstra que o estudo inclui uma arquitetura detalhada, diagramas de classe e sequência, além de experimentos de desempenho (latência e consumo) que sustentam a viabilidade da solução de identidade proposta para cidades inteligentes.",
+  "duvidas": "O trecho não fornece descrições textuais que relacionem as figuras ao problema de segurança ou às limitações da abordagem; faltam detalhes sobre como as métricas de latência se traduzem em benefícios de privacidade ou interoperabilidade.",
+  "avisos": [],
+  "id": "84266afdef9cb94e8ef3",
+  "artigo": "Cardoso_2024",
+  "pagina": 8,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "without security mechanisms, it becomes impossible to develop and deploy smart city applications.",
+    "solucao": "Arquitetura geral da solução e interações.",
+    "avaliacao": "Latência (ms) e número de clientes ao longo do tempo, utilizando o modelo proposto.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar a integração de credenciais verificáveis nos diagramas de sequência; aplicar criptografia baseada em atributos (ABE) para controle de acesso nos dispositivos IoT; avaliar mecanismos de revogação e recuperação de credenciais usando blockchain; medir impacto de criptografia homomórfica no consumo de processamento apresentado.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "a6dd17ddc760fe0d49a1"
+  },
+  "reaproveitada_de": "75b1091bf587fa2ff05f"
+}

@@ -4,11 +4,11 @@
   "revisao": "e7b8232d88fc37f0003b",
   "tarefa": "Desenvolva esta sugestão em nível de reunião com orientador, como brainstorm profundo e útil. Não escreva só uma frase. JSON com strings: experimento, recursos, metricas, riscos e duvidas_orientador. Em experimento, detalhe: problema específico, hipótese, arquitetura/artefato a implementar, etapas, baseline ou trabalhos de comparação, e cenário de avaliação. Em recursos, liste ferramentas, dados/simuladores, padrões e bibliotecas possíveis, sem inventar disponibilidade. Em métricas, inclua desempenho, segurança, privacidade, usabilidade/interoperabilidade quando couber. Em riscos, explique o que pode inviabilizar ou reduzir a novidade, incluindo o risco de a proposta já ter sido tratada e quais buscas/tags precisam ser lidas para checar anterioridade. Em dúvidas, escreva perguntas concretas para levar à reunião. Use as fontes fornecidas e deixe claro quando for inferência exploratória. Cada campo deve ter entre 120 e 250 palavras quando houver informação suficiente.",
   "entrada": {
-    "ideia": "Investigar a integração de listas de revogação distribuídas (LRDs) com credenciais verificáveis emitidas por SSI, avaliando desempenho e segurança em cenários de IoT. A ideia combina o modelo de autenticação baseado em blockchain de Maia (Exemplo_55b3b0969325cccbbb2c) com a análise de desafios de adoção de VCs de Gudipati_2025, identificando a lacuna de revogação prática em ambientes de borda.",
+    "ideia": "Investigar a integração de listas de revogação distribuídas (LRDs) com credenciais verificáveis emitidas por SSI, avaliando desempenho e segurança em cenários de IoT. A ideia combina o modelo de autenticação baseado em blockchain de Maia (Maia_2025) com a análise de desafios de adoção de VCs de Gudipati_2025, identificando a lacuna de revogação prática em ambientes de borda.",
     "fontes": {
       "fontes": [
         {
-          "id": "Exemplo_55b3b0969325cccbbb2c",
+          "id": "Maia_2025",
           "titulo": "Danilo_TCC_final",
           "escopo": {
             "tipo": "pdf",

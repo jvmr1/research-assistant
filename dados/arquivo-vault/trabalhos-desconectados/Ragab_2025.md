@@ -5,7 +5,7 @@ doi: https://doi.org/10.1038/s41598-025-88843-2
 ano: 2025
 status: triagem_pendente
 acesso_aberto: true
-pdf_local: pdfs/Ragab_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Ragab_2025.pdf
 tags: [blockchain, cidades-inteligentes, controle-de-acesso, iot, privacidade, seguranca]
 ---
 # Ragab_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1038/s41598-025-88843-2
 
 Triagem: revisar. O trabalho aborda IoT em cidades inteligentes e trata de privacidade e segurança mediante aprendizado federado, temas alinhados ao interesse geral do grupo (segurança e privacidade em IoT/Smart Cities). Contudo, não envolve as tecnologias centrais de interesse – blockchain, identidade auto-soberana, credenciais verificáveis, criptografia baseada em atributos ou controle de acesso interoperável – nem propõe soluções para interoperabilidade ou gestão de identidade. Assim, embora relevante para a temática de segurança, não preenche diretamente as lacunas de pesquisa prioritárias, justificando uma revisão detalhada antes de decidir sua inclusão ou exclusão.
 
-[PDF local](../../pdfs/Ragab_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Ragab_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

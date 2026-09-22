@@ -1,0 +1,33 @@
+{
+  "resumo": "A dissertação de André Luiz Almeida Cardoso, defendida em 2024 na UFMA, propõe um modelo de gestão de identidades para cidades inteligentes fundamentado na tecnologia blockchain.",
+  "perfil": {
+    "problema": "Não identificado nas fichas/trechos disponíveis.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar a integração do modelo com identidades autossoberanas (SSI) e credenciais verificáveis; avaliar interoperabilidade entre plataformas de cidades inteligentes; explorar mecanismos de revogação e recuperação de credenciais usando criptografia homomórfica ou ABE; analisar desempenho e escalabilidade em ambientes IoT."
+  },
+  "evidencias": [
+    {
+      "citacao": "Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain",
+      "afirmacao": "Propõe um modelo de gestão de identidades para cidades inteligentes baseado em blockchain."
+    }
+  ],
+  "interpretacao": "O trecho indica que a dissertação foca em um modelo de identidade usando blockchain para cidades inteligentes, mas não fornece detalhes sobre o problema abordado, a solução proposta, a avaliação realizada ou as limitações do estudo.",
+  "duvidas": "Quais são os requisitos de segurança e privacidade considerados? Como o modelo trata a revogação e a recuperação de credenciais perdidas? Qual a arquitetura técnica detalhada e como ela se integra com SSI ou credenciais verificáveis?",
+  "avisos": [],
+  "id": "f9770a69b618d85c75dd",
+  "artigo": "Cardoso_2024",
+  "pagina": 4,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Não identificado nas fichas/trechos disponíveis.",
+    "solucao": "Não identificado nas fichas/trechos disponíveis.",
+    "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar a integração do modelo com identidades autossoberanas (SSI) e credenciais verificáveis; avaliar interoperabilidade entre plataformas de cidades inteligentes; explorar mecanismos de revogação e recuperação de credenciais usando criptografia homomórfica ou ABE; analisar desempenho e escalabilidade em ambientes IoT.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "a6dd17ddc760fe0d49a1"
+  },
+  "reaproveitada_de": "75b1091bf587fa2ff05f"
+}

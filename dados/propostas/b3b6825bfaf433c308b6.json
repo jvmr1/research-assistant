@@ -3,9 +3,9 @@
   "revisao": "05e12be4f82748351512",
   "gerado_em": "2026-09-20T23:33:17",
   "modelo": "síntese individual já extraída",
-  "titulo": "Exemplo_55b3b0969325cccbbb2c: Integrar listas de revogação (VC Revocation List) ou protocolos de revogação baseados em b",
+  "titulo": "Maia_2025: Integrar listas de revogação (VC Revocation List) ou protocolos de revogação baseados em b",
   "fontes": [
-    "Exemplo_55b3b0969325cccbbb2c"
+    "Maia_2025"
   ],
   "problema": "Ausência de mecanismo de revogação de credenciais e de protocolos de revogação adequados para IoT de alta latência",
   "hipotese_lacuna": "Ausência de mecanismo de revogação de credenciais e de protocolos de revogação adequados para IoT de alta latência",

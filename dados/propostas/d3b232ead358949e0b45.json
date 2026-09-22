@@ -5,7 +5,7 @@
   "modelo": "openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free, qwen2.5:7b-instruct-q4_K_M",
   "titulo": "Esquema híbrido de revogação e recuperação de acesso usando blockchain e criptografia homomórfica em serviços urbanos IoT",
   "fontes": [
-    "Exemplo_da24de257de987bc603b",
+    "Cardoso_2024",
     "Hudda_2025"
   ],
   "problema": "Carência de arquiteturas que unam revogação, recuperação de credenciais e computação homomórfica em ambientes IoT restritos.",

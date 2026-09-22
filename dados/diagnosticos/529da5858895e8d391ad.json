@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "id": "Maia_2025",
         "titulo": "Danilo_TCC_final",
         "escopo": {
           "tipo": "pdf",
@@ -140,13 +140,13 @@
     ]
   },
   "resposta": {
-    "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na proposta de usar blockchain e credenciais verificáveis (VCs) para autenticação e controle de acesso (Exemplo_55b3b0969325cccbbb2c). Os trabalhos de revisão apontam que VCs trazem privacidade, descentralização e redução de fraudes (Gudipati_2025). Há consenso de que a integração com IoT e serviços públicos requer mecanismos de revogação e recuperação de credenciais, ainda pouco explorados. Divergem quanto ao papel da IA e geo‑fencing: S_2026 propõe um sistema de segurança turística baseado em IA e identidade blockchain, enquanto outros focam apenas na camada de identidade. Os estudos chegam a protótipos de middleware ou casos de uso específicos, mas carecem de avaliações de escalabilidade, interoperabilidade entre diferentes órgãos e de combinações com criptografia baseada em atributos (ABE) ou homomórfica.",
+    "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na proposta de usar blockchain e credenciais verificáveis (VCs) para autenticação e controle de acesso (Maia_2025). Os trabalhos de revisão apontam que VCs trazem privacidade, descentralização e redução de fraudes (Gudipati_2025). Há consenso de que a integração com IoT e serviços públicos requer mecanismos de revogação e recuperação de credenciais, ainda pouco explorados. Divergem quanto ao papel da IA e geo‑fencing: S_2026 propõe um sistema de segurança turística baseado em IA e identidade blockchain, enquanto outros focam apenas na camada de identidade. Os estudos chegam a protótipos de middleware ou casos de uso específicos, mas carecem de avaliações de escalabilidade, interoperabilidade entre diferentes órgãos e de combinações com criptografia baseada em atributos (ABE) ou homomórfica.",
     "ideias": [
       {
         "titulo": "Mecanismo de revogação distribuída para VCs em ambientes IoT de cidades inteligentes",
-        "descricao": "Investigar a integração de listas de revogação distribuídas (LRDs) com credenciais verificáveis emitidas por SSI, avaliando desempenho e segurança em cenários de IoT. A ideia combina o modelo de autenticação baseado em blockchain de Maia (Exemplo_55b3b0969325cccbbb2c) com a análise de desafios de adoção de VCs de Gudipati_2025, identificando a lacuna de revogação prática em ambientes de borda.",
+        "descricao": "Investigar a integração de listas de revogação distribuídas (LRDs) com credenciais verificáveis emitidas por SSI, avaliando desempenho e segurança em cenários de IoT. A ideia combina o modelo de autenticação baseado em blockchain de Maia (Maia_2025) com a análise de desafios de adoção de VCs de Gudipati_2025, identificando a lacuna de revogação prática em ambientes de borda.",
         "fontes": [
-          "Exemplo_55b3b0969325cccbbb2c",
+          "Maia_2025",
           "Gudipati_2025"
         ],
         "lacuna": "Ausência de soluções de revogação escaláveis e interoperáveis para VCs em IoT urbano.",
@@ -157,10 +157,10 @@
       },
       {
         "titulo": "Combinação de credenciais verificáveis com criptografia baseada em atributos para controle de acesso seletivo em serviços públicos",
-        "descricao": "Propor um framework que une VCs a ABE, permitindo que cidadãos divulguem apenas atributos necessários ao acessar serviços municipais. A proposta cruza a visão de VCs como facilitadoras de privacidade (Gudipati_2025) com o modelo de controle de acesso baseado em blockchain de Maia (Exemplo_55b3b0969325cccbbb2c), preenchendo a lacuna de seleção de atributos em ambientes de múltiplas autoridades.",
+        "descricao": "Propor um framework que une VCs a ABE, permitindo que cidadãos divulguem apenas atributos necessários ao acessar serviços municipais. A proposta cruza a visão de VCs como facilitadoras de privacidade (Gudipati_2025) com o modelo de controle de acesso baseado em blockchain de Maia (Maia_2025), preenchendo a lacuna de seleção de atributos em ambientes de múltiplas autoridades.",
         "fontes": [
           "Gudipati_2025",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Maia_2025"
         ],
         "lacuna": "Falta de mecanismos de divulgação seletiva de atributos em credenciais digitais para serviços públicos.",
         "buscas": [
@@ -173,7 +173,7 @@
         "descricao": "Desenvolver uma arquitetura que incorpora identidade autossoberana com módulos de IA para detecção de risco em tempo real, estendendo o sistema de turismo seguro de S_2026. A ideia combina a proposta de IA e geo‑fencing (S_2026) com a base de SSI para garantir privacidade dos dados de localização, abordando a lacuna de proteção de identidade em aplicações de segurança urbana.",
         "fontes": [
           "S_2026",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Maia_2025"
         ],
         "lacuna": "Integração insuficiente entre SSI e IA para proteção de identidade em serviços de segurança urbana.",
         "buscas": [

@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_60479560a08f3b4cd724",
+        "id": "Fioreze_2026",
         "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
         "escopo": {
           "tipo": "pdf",
@@ -144,12 +144,12 @@
     ]
   },
   "resposta": {
-    "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na necessidade de descentralização, privacidade e controle de acesso baseado em atributos. Padrões como DID e Verifiable Credentials (VC) da W3C definem a camada de identidade, enquanto surveys (ex.: Sicari 2023 SSI Survey) destacam desafios de adoção e interoperabilidade. Trabalhos aplicados, como a dissertação de Fioreze (Exemplo_60479560a08f3b4cd724), propõem frameworks que combinam blockchain e criptografia baseada em atributos (ABE) para compartilhamento seguro de dados IIoT entre organizações. Gudipati 2025 demonstra o potencial transformador das VC para reduzir fraudes e custos administrativos, sugerindo ainda a integração com ABE e mecanismos de recuperação. O estudo de S 2026 explora identidade blockchain em sistemas de segurança turística, mas não aborda SSI nem revogação. Em conjunto, as fontes concordam que a segurança de transmissão, a revogação descentralizada e a recuperação de credenciais são lacunas críticas ainda não totalmente resolvidas.",
+    "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na necessidade de descentralização, privacidade e controle de acesso baseado em atributos. Padrões como DID e Verifiable Credentials (VC) da W3C definem a camada de identidade, enquanto surveys (ex.: Sicari 2023 SSI Survey) destacam desafios de adoção e interoperabilidade. Trabalhos aplicados, como a dissertação de Fioreze (Fioreze_2026), propõem frameworks que combinam blockchain e criptografia baseada em atributos (ABE) para compartilhamento seguro de dados IIoT entre organizações. Gudipati 2025 demonstra o potencial transformador das VC para reduzir fraudes e custos administrativos, sugerindo ainda a integração com ABE e mecanismos de recuperação. O estudo de S 2026 explora identidade blockchain em sistemas de segurança turística, mas não aborda SSI nem revogação. Em conjunto, as fontes concordam que a segurança de transmissão, a revogação descentralizada e a recuperação de credenciais são lacunas críticas ainda não totalmente resolvidas.",
     "ideias": [
       {
         "descricao": "Integrar o framework blockchain‑ABE de Fioreze com Verifiable Credentials de Gudipati para criar um modelo de controle de acesso baseado em atributos para cidadãos em serviços IoT de cidades inteligentes, incorporando revogação descentralizada e recuperação de credenciais via secret sharing.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
+          "Fioreze_2026",
           "Gudipati_2025"
         ],
         "lacuna": "Ausência de solução unificada que combine VC, ABE e mecanismos de recuperação de credenciais para uso cidadão em ambientes IoT urbanos.",
@@ -167,7 +167,7 @@
       {
         "descricao": "Desenvolver um registro de revogação descentralizado baseado em blockchain que complemente o framework ABE de Fioreze, usando o Status List 2021 da W3C para gerenciar revogação dinâmica de direitos de acesso a dados IIoT entre agências municipais.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
+          "Fioreze_2026",
           "W3C_VC_Revocation_2022"
         ],
         "lacuna": "Os atuais frameworks ABE‑blockchain carecem de mecanismos eficientes e escaláveis de revogação de credenciais em cenários de compartilhamento inter‑organizacional.",

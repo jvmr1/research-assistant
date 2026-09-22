@@ -3,9 +3,9 @@
   "revisao": "5f8412cc6e604fb9d78f",
   "gerado_em": "2026-09-20T22:12:23",
   "modelo": "síntese individual já extraída",
-  "titulo": "Exemplo_55b3b0969325cccbbb2c: Desenvolver e integrar protocolos de revogação baseados em blockchain (smart contracts, re",
+  "titulo": "Maia_2025: Desenvolver e integrar protocolos de revogação baseados em blockchain (smart contracts, re",
   "fontes": [
-    "Exemplo_55b3b0969325cccbbb2c"
+    "Maia_2025"
   ],
   "problema": "Ausência de mecanismo explícito de revogação de credenciais (incluindo protocolos adequados para IoT de alta latência)",
   "hipotese_lacuna": "Ausência de mecanismo explícito de revogação de credenciais (incluindo protocolos adequados para IoT de alta latência)",

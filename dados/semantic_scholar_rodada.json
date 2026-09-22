@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Privacy Protection During the Issuance and Revocation of Verifiable Credentials in Self‐Sovereign Identity",
+    "year": 2025,
+    "authors": "Tiantian Zhang, Ying Wang, Bo Gong",
+    "abstract": "Self‐sovereign identity management systems operate in open network environments and face security threats from semi‐trusted or malicious adversary models. In such environments, verifiable credentials are susceptible to attacks such as theft and forgery. In response to the privacy risks associated with verifiable credentials during issuance and revocation, this article proposes a privacy protection scheme for user information during the issuance and revocation processes of verifiable credentials in self‐sovereign identity management based on blockchain technology. First, a privacy‐preserving method that does not rely on a single identity provider and resists Sybil attacks has been designed using secure multi‐party computation cryptographic techniques. Second, the consortium blockchain committee nodes act as the issuer of verifiable credentials. By combining attribute commitments and zero‐knowledge proof techniques, the user's identity information is hidden, achieving the privacy protection goal during the issuance of verifiable credentials. Furthermore, in order to protect user privacy during the revocation of verifiable credentials (VCs), we employ a cryptographic accumulator techn",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/2360ee089ad7b15009707fb2260fe8de4eb017c3",
+    "doi": "10.1002/cpe.70084",
+    "citations": 2
+  },
+  {
+    "title": "Self-Sovereign Digital Identity System for Smart Cities: A Pilot Project with Trustchain and Hyperledger Indy in the Municipality of Santa Rosa",
+    "year": 2026,
+    "authors": "Carla O. Castanho, Marcelo P. Chequin, Sandro Sawicki",
+    "abstract": "In a smart city context increasingly dependent on big tech platforms, this paper presents the implementation and validation of a system integrating Trustchain and Hyperledger Indy for decentralised citizen identification in accessing environmental data in Santa Rosa (RS), Brazil, addressing the need to mitigate centralised data vulnerability while preserving privacy and self-sovereignty. Through a mobile application that requires verifiable credentials, the proposed solution demonstrates the feasibility of the hybrid architecture, consistent performance in digital identity creation and verification metrics, and a stable registration and query workflow, positioning itself as an effective identity management mechanism for smart cities.",
+    "pdf": "https://sol.sbc.org.br/index.php/cblockchain/article/download/43033/42799",
+    "url": "https://www.semanticscholar.org/paper/8c005abbd895458e183f628a144d12c9152a3945",
+    "doi": "10.5753/cblockchain.2026.23616",
+    "citations": 0
+  },
+  {
+    "title": "A Quantum-Resistant Self-Sovereign Identity Cross-Domain Authentication System Based on Lattice Cryptography",
+    "year": 2025,
+    "authors": "Jihong Xie, Youwen Cui, Meiqi Zhou",
+    "abstract": "To address centralized trust risks, inadequate privacy protection, and quantum vulnerability of traditional crossdomain authentication systems, this paper proposes a quantumresistant self-sovereign identity (SSI) scheme based on lattice cryptography. Centered on Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs), it constructs a decentralized ecosystem with two key innovations: a “single trapdoor - multi-attribute public key” structure (reducing storage and simplifying key management) and a lattice-based linkable ring signature (balancing anonymity and traceability). Implemented via TrapGen, SamplePre, and rejection sampling, the scheme's security relies on the Short Integer Solution (SIS) problem, with unconditional anonymity and unforgeability proven in the random oracle model. Efficiency comparisons confirm advantages in signature/verification time and storage overhead. This work provides a secure, privacy-preserving post-quantum solution for crossdomain collaboration in smart cities and supply chains. Future work will focus on lattice optimization and zero-knowledge proof integration.",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/635ed5a1f752d0a0130a5863570257a4f182ab90",
+    "doi": "10.1109/EIECC67963.2025.11409601",
+    "citations": 0
+  },
+  {
+    "title": "Security Threats in Self-Sovereign Identity (SSI) Models for Academic Credentials: Analysis and Mitigation",
+    "year": 2025,
+    "authors": "Vidisha Pradhan, Parth Shah",
+    "abstract": "This survey paper examines the possibilities of using Self-Sovereign Identity (SSI) technology for the verification of academic credentials. With Self-Sovereign Identity, students gain greater control, privacy, and flexibility over the management of their academic credentials. SSI technology enables the use of Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs) and thus reduces the reliance of students on central authorities and eases the sharing of credentials across educational institutions. This paper examines consolidated real-world implementations, as well as recent studies, such as those from MIT, the University of Bologna, and the European Blockchain Services Infrastructure. It examines major security vulnerabilities of systems developed on SSI for example, stolen digital wallets, leaked issuer keys, and credential revocation, selective sharing, and sharing of credentials. It also suggests improvements on these security issues through technological, managerial and regulatory means. This survey demonstrates that while SSI can promote trust and improved interoperability within the education system, there are necessary safeguards, usability, and institutional flex",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/047ea0b83f54a5d61b652307c84bfbe0123af6a4",
+    "doi": "10.1109/MoSICom67153.2025.11398201",
+    "citations": 0
+  },
+  {
+    "title": "A Survey on Credential Revocation and DID Deactivation in Self-Sovereign Identity Systems",
+    "year": 2026,
+    "authors": "Younho Lee, Hojune Shin, Daeseon Choi",
+    "abstract": "Self-Sovereign Identity (SSI) enables user-controlled identity management based on Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs). However, ensuring reliable and privacy-preserving revocation remains one of the most critical and challenging aspects of credential lifecycle governance. This survey provides a narrative review of revocation mechanisms in SSI systems, spanning status-list approaches, cryptographic accumulators, positive-confirmation models such as short-lived credentials, and DID deactivation and governance-aware methods. Each category is analyzed across security, privacy, performance, scalability, and operational integration criteria, revealing their practical trade-offs. Based on an extensive analysis of academic sources, standards, and real deployments, the survey develops a unified taxonomy of SSI revocation and identifies persistent challenges: particularly privacy–accountability balancing, offline verification, key compromise handling, post-quantum readiness, and regulatory compliance. The findings offer guidance for system architects, implementers, and policymakers seeking trustworthy and interoperable revocation solutions in decentralized iden",
+    "pdf": "https://doi.org/10.1109/access.2025.3649792",
+    "url": "https://www.semanticscholar.org/paper/9f9a270ca34248493981456777d5e4db37a2c04b",
+    "doi": "10.1109/ACCESS.2025.3649792",
+    "citations": 8
+  },
+  {
+    "title": "Decentralized Identity Systems for Secure Public Engagement Advancing Inclusive Access and Privacy through Blockchain Driven Verifiable Credentials and Zero Knowledge Proofs",
+    "year": 2025,
+    "authors": "J. Burugulla, Kishore Challa, J. S.",
+    "abstract": ": But decentralized identity systems are revolutionizing these governments – public engagement ensuring services protected by a secure, privacy-ensuring and inclusive access. In this research paper, we investigate how combining blockchain based verifiable credentials with zero knowledge proofs (ZKPs) can help solve some of the main bottleneck problems, such as: scalability, interoperability and regulatory compliance. These systems allow for performant, user-centric designs that work for a wide range of demographics with a high level of performance and data minimization standards; making use of highly innovative, leading-edge privacy-preserving technologies. Furthermore, the paper also focuses on domain-specific use cases and applications within the intelligent community, smart cities, e-governance and IoT ecosystem, establishing a baseline for expanded implementation and practical use. In summary, this work lays the foundation for both theoretical and practical knowledge about decentralized identity systems, catalysing innovation in secure public engagement and digital inclusion abroad and at home.",
+    "pdf": "https://doi.org/10.5220/0014202400004932",
+    "url": "https://www.semanticscholar.org/paper/eb343a1eaafa99d1f87eb9e2d9fedb2e6d2d8354",
+    "doi": "10.5220/0014202400004932",
+    "citations": 0
+  },
+  {
+    "title": "An Access Control Scheme Based on Decentralized Identifiers and Verifiable Credentials in IoT",
+    "year": 2022,
+    "authors": "Yunliang Li, Yan-Fang Fu, Zhiqiang Du",
+    "abstract": "With the rapid development of information technology, the Internet of Things (IoT) has become more complex, and more and more devices and users are connected to the IoT system. While improving data interactivity and expanding the scope of data sharing, secure access to IoT resources is also facing great risks. Therefore, it is necessary to design an appropriate access control scheme. Firstly, this paper introduces Decentralized Identifiers (DID) and Verifiable Credentials. It is used for authentication and rights management of users and devices, respectively, which makes identity and authority unforgeable. Secondly, this paper uses blockchain technology to support DID and Verifiable Credentials, which can ensure the decentralization, invariance and traceability of data. Finally, using smart contracts enables automatic processing of requester authorization and access requests. The test results show that the scheme has good performance.",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/56a99e6f69557019c9f93de567ed821e6c5e2c63",
+    "doi": "10.1109/iccsmt58129.2022.00065",
+    "citations": 3
+  },
+  {
+    "title": "Data Verifiable Personalized Access Control Electronic Healthcare Record Sharing Based on Blockchain in IoT Environment",
+    "year": 2024,
+    "authors": "Hui Wang, Yong Xie, Yining Liu",
+    "abstract": "Electronic health records (EHRs) based on the Internet of Things (IoT) can provide real-time health data for quick intelligent medical services and give convenience to many data-sharing scenarios. However, EHRs also face various security threats since they are highly private. To the best of our knowledge, no recognized data-sharing work can satisfy the stringent privacy requirements of EHRs. Motivated by this, we propose a blockchain-based personalized access control EHR-sharing scheme with data verifiability, which can safeguard the interests of data owners (DOs) and users simultaneously. First, we take ciphertext-policy attribute-based encryption to achieve personalized access control for DOs. Second, we design an interactive zero-knowledge proof protocol between DOs and users, which can provide authenticity verification of EHR for users and prevent EHR away from forgery. In addition, smart contracts and the interplanetary file system are used to reduce the computation and storage costs of patients. Finally, the security analysis shows that the proposed scheme meets the predefined security goals. The performance analysis demonstrates that the proposed scheme is efficient and can ",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/da6c48bc4fee4acee3080d375cccb8cd1df80338",
+    "doi": "10.1109/JIOT.2023.3309322",
+    "citations": 17
+  },
+  {
+    "title": "Blockchain and Structural Relationship Based Access Control for IoT: A Smart City Use Case",
+    "year": 2019,
+    "authors": "Fariza Sabrina",
+    "abstract": "Smart city is one of the major Internet of Things (IoT) applications and has become an emerging paradigm with the recent advancements of IoT devices and sensors. But the heterogenous nature of a smart city IoT environment makes it vulnerable to many privacy and security concerns and introduces significant challenges for access control of IoT resources especially where access needs to be provided to third parties and external organizations. This paper proposes a new structural relationships-based access control (SRBAC) model that can be used to delegate resource access rights to users in a large scale IoT scenario like smart city while keeping the resource owner in full control. The proposed architecture uses smart contracts and public blockchain for managing access control for external users and a local off-block chain storage for managing access control for organization’s internal users and enforcing fine-grained access control for the resources.",
+    "pdf": "https://figshare.com/articles/conference_contribution/Blockchain_and_structural_relationship_based_access_control_for_IoT_A_smart_city_use_case/13452548",
+    "url": "https://www.semanticscholar.org/paper/1e6397938333b1ed62f07b5ce8eb40a1013c4e72",
+    "doi": "10.1109/LCN44214.2019.8990757",
+    "citations": 17
+  },
+  {
+    "title": "Blockchain-Enhanced Access Control for IoT Systems in Smart Cities",
+    "year": 2024,
+    "authors": "Santhosh Kumar Kuchoor, Sanjeev Kukreti, R. S. S. Raju Battula",
+    "abstract": "With the exponential growth of smart gadgets and the technologies that connect them, the Internet of Things (IoT) has emerged as the most promising new technology of the last decade. This is true from both a business and academic standpoint. Deployment in smart-home and smart-city initiatives throughout the globe has increased IoT's popularity. Regrettably, the processing power, storage capacity, and bandwidth of IoT network devices are severely constrained. So, compared to other endpoint devices like PCs, tablets, and smartphones, they are more susceptible to assaults. The development of a safe and reliable model for commonly used operations is booming, including data collection, processing, storage, and communication. It isn't easy to build such a model since there are so many obstacles to overcome. New cybersecurity risks emerge on a regular basis, while old ones remain dormant and ready to be exploited. Sadly, these cyber dangers also serve to safeguard the IoT. Due to recent developments, research into cyberphysical systems, the internet of things (IoT), and blockchain is more important than ever. In Internet of Things (IoT) systems, where security breaches compromise the cent",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/7761b520118be0d56af7fbeef699ab9a3ec22e80",
+    "doi": "10.1109/ICDSCNC62492.2024.10941491",
+    "citations": 1
+  },
+  {
+    "title": "Blockchain-Based Decentralized Identity Systems: A Survey of Security, Privacy, and Interoperability",
+    "year": 2025,
+    "authors": "Vikas Prajapati",
+    "abstract": "Blockchain technology, a decentralized and immutable ledger, has transformed identity and access management\n(IAM) by enhancing security, privacy, and trust in digital ecosystems. Ensuring safe authentication and data integrity is\n\nmade possible by its integration with sophisticated cryptographic techniques like zero-knowledge proofs (ZKPs) and public-\nkey infrastructure (PKI). Other methods include verifiable credentials (VCs) and decentralized identifiers (DIDs). This\n\npaper provides a comprehensive analysis of blockchain-based IAM systems, comparing leading blockchain platforms,\nincluding Ethereum, Hyperledger Indy, IOTA, and IoTeX, in identity management. The role of blockchain in mitigating\nidentity-related threats, such as identity theft and unauthorized access, is explored through decentralization, immutability,\nand smart contract automation. Additionally, key security enhancements, including cryptographic mechanisms that\nstrengthen decentralized identity solutions and privacy-preserving authentication, are examined. The potential of\nblockchain to establish a self-sovereign identity framework that fosters trust, scalability, and security in digital identity\necosystems is high",
+    "pdf": "https://www.ijisrt.com/assets/upload/files/IJISRT25MAR1062.pdf",
+    "url": "https://www.semanticscholar.org/paper/6c2bf587bbfaa9423e879594564c3406a255c92f",
+    "doi": "10.38124/ijisrt/25mar1062",
+    "citations": 5
+  },
+  {
+    "title": "On Identity, Transaction, and Smart Contract Privacy on Permissioned and Permissionless Blockchain: A Comprehensive Survey",
+    "year": 2024,
+    "authors": "Wei Liang, Yaqin Liu, Ce Yang",
+    "abstract": "Blockchain is a decentralized distributed ledger that combines multiple technologies, including chain data structures, P2P networks, consensus algorithms, cryptography, and smart contracts. This gives the blockchain the characteristics of decentralization, immutability, and traceability. However, blockchain stores smart contracts and transactions in blocks publicly, which poses the risk of data leakage and misuse. For example, by mining and analyzing blockchain transaction information, attackers can correlate transactions with user information, resulting in the disclosure of user privacy. Many current reviews focus on the privacy of permissionless blockchains or cryptocurrencies, requiring more in-depth investigations and detailed categorical analysis. To fill this gap, this work comprehensively reviews the latest and traditional methods related to identity, transaction, and smart contract privacy within permissioned and permissionless blockchains. Additionally, we summarize the existing problems, threats, and challenges of data management in different blockchain architectures. Last, we discuss future research directions for blockchain privacy protection technology, which can offer",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/86fb9aa001743b18419c984a13a6b3d63fb6e633",
+    "doi": "10.1145/3676164",
+    "citations": 108
+  },
+  {
+    "title": "FL-DABE-BC: A Privacy-Enhanced Decentralized Authentication and Secure Communication Framework for FL in IoT-Enabled Smart Cities",
+    "year": 2025,
+    "authors": "Sathwik Narkedimilli, P. P, Amballa Venkata Sriram",
+    "abstract": "Federated Learning (FL) offers a distributed approach to machine learning that preserves data privacy by avoiding the exchange of sensitive IoT sensor information. This paper introduces a novel IoT framework that integrates advanced security tools to tackle key privacy and security challenges. It employs Decentralized Attribute-Based Encryption (DABE) for decentralized authentication and data encryption, Homomorphic Encryption (HE) for secure computations on encrypted data, Secure Multi-Party Computation (SMPC) for collaborative processing, and Blockchain for distributed ledger management and transparent communication. In this system, IoT devices encrypt data locally with DABE, while initial model training occurs on cloud servers within an immutable blockchain network that supports peer-to-peer authentication. Encrypted model weights are then transferred to the fog layer via HE and aggregated using SMPC, after which the FL server updates and distributes the global model to the IoT devices. This innovative framework effectively addresses the challenges of secure decentralized learning, enabling privacy-preserving, efficient, and secure federated learning for IoT applications and rea",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/c88ffac29f26261017db40da6ad9670397b8a2ba",
+    "doi": "10.1145/3722565.3727194",
+    "citations": 10
+  },
+  {
+    "title": "Decentralized Intelligence for Smart Cities: Integrating Federated Learning, Blockchain, and Foundation Models for Privacy-Preserving Urban Data Management",
+    "year": 2025,
+    "authors": "Shruti Hardia",
+    "abstract": "The growing complexity of urban data management in smart cities necessitates innovative solutions that balance predictive accuracy, scalability, and privacy. This paper proposes a novel framework that integrates Federated Learning (FL), Blockchain, and Foundation Models (FMs) to address these challenges. By leveraging FL, data is processed locally on edge devices, ensuring that sensitive information remains private and secure, while the predictive power of FMs enhances real-time decision-making across urban systems. Blockchain technology ensures transparency and trust, providing an immutable ledger for secure governance and operations. The proposed system enables seamless collaboration across diverse data sources while preserving privacy and fostering a decentralized, resilient infrastructure. A practical use case in inventory management and sales forecasting for businesses within a smart city is presented, showcasing how this framework can enhance operational efficiency, reduce costs, and maintain high standards of data protection. This integrated approach sets a new standard for secure, adaptive, and efficient smart city management.",
+    "pdf": "",
+    "url": "https://www.semanticscholar.org/paper/6d892e017ffa15f71dcd233db0c0f1032cecd579",
+    "doi": "10.1109/ISADS66912.2025.00017",
+    "citations": 6
+  }
+]

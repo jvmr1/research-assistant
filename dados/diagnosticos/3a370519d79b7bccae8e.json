@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_60479560a08f3b4cd724",
+        "id": "Fioreze_2026",
         "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
         "escopo": {
           "tipo": "pdf",
@@ -79,7 +79,7 @@
         "possibilidades": "Investigar a integração de identidades auto‑soberanas (SSI/DIDs) com políticas de controle de acesso baseadas em ABE para ambientes IIoT; explorar credenciais verificáveis como mecanismo de autenticação de dispositivos IoT em cadeias de suprimentos; propor extensões que combinam criptografia homomórfica com smart contracts para auditoria de acesso sem revelar dados sensíveis; avaliar estratégias de revogação distribuída de credenciais em redes in"
       },
       {
-        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "id": "Maia_2025",
         "titulo": "Danilo_TCC_final",
         "escopo": {
           "tipo": "pdf",
@@ -155,22 +155,22 @@
       {
         "descricao": "Investigar um modelo híbrido que une o framework de Fioreze (blockchain + ABE para IIoT) com o módulo de identidade cidadã de Maia (SSI/DIDs), permitindo que dispositivos industriais autenticados por credenciais verificáveis também carreguem atributos de identidade do cidadão. A lacuna reside na ausência de um mecanismo unificado que suporte tanto controle de acesso baseado em atributos de dispositivos quanto em atributos de usuários, facilitando políticas de acesso contextuais em serviços urbanos.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ]
       },
       {
         "descricao": "Desenvolver um protocolo de revogação distribuída que combine smart contracts (propostos por Maia) com técnicas de revogação de ABE (sugeridas por Fioreze), permitindo a invalidação rápida de credenciais de dispositivos e cidadãos sem depender de autoridades centrais. A lacuna identificada é a falta de mecanismos de revogação escaláveis que operem simultaneamente em camadas de identidade humana e de dispositivos IoT.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ]
       },
       {
         "descricao": "Propor a aplicação de criptografia homomórfica nos fluxos de dados do middleware de cidades inteligentes (sugerida como possibilidade em ambos os trabalhos) para permitir análises agregadas de dados IIoT e de uso de serviços urbanos sem revelar informações sensíveis, integrando‑a com credenciais verificáveis para controle de acesso seletivo. A lacuna está na inexistência de provas‑de‑conceito que unam homomorphic encryption, SSI e ABE em um cenário de smart city.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ]
       }
     ]

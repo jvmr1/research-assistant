@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "id": "Maia_2025",
         "titulo": "Danilo_TCC_final",
         "escopo": {
           "tipo": "pdf",
@@ -75,7 +75,7 @@
         "possibilidades": "Integrar módulos SSI ao InterSCity, usando o Resource Adaptor para conectar carteiras digitais de cidadãos e sensores IoT; explorar contratos inteligentes para revogação de credenciais dentro da arquitetura de microsserviços; aplicar ABE e criptografia homomórfica nos fluxos de dados do middleware para controle de acesso e processamento privativo."
       },
       {
-        "id": "Exemplo_da24de257de987bc603b",
+        "id": "Cardoso_2024",
         "titulo": "André Luiz Almeida Cardoso",
         "escopo": {
           "tipo": "pdf",
@@ -144,8 +144,8 @@
         "titulo": "Controle de acesso seletivo a sensores IoT usando SSI + ABE",
         "descricao": "Combinar a proposta de Danilo de usar SSI para autenticação com a sugestão de Cardoso de aplicar ABE para acesso seletivo a dispositivos IoT, criando um modelo onde o DID do cidadão contém credenciais verificáveis que, ao serem apresentadas, são avaliadas por políticas ABE antes de liberar dados de sensores. Avaliar latência e consumo de memória comparando os dois cenários.",
         "fontes": [
-          "Exemplo_55b3b0969325cccbbb2c",
-          "Exemplo_da24de257de987bc603b"
+          "Maia_2025",
+          "Cardoso_2024"
         ],
         "lacuna": "Falta de avaliação integrada de ABE em fluxos SSI para IoT; necessidade de medir impacto de políticas criptográficas no desempenho."
       },
@@ -153,8 +153,8 @@
         "titulo": "Processamento de dados de mobilidade com criptografia homomórfica e SSI",
         "descricao": "Unir a ideia de Danilo de usar middleware para tratamento de credenciais com a proposta de Cardoso de aplicar criptografia homomórfica, permitindo que agregações de dados de mobilidade sejam computadas sobre credenciais criptografadas sem revelar informações individuais. O estudo mediria precisão dos resultados e overhead computacional.",
         "fontes": [
-          "Exemplo_55b3b0969325cccbbb2c",
-          "Exemplo_da24de257de987bc603b"
+          "Maia_2025",
+          "Cardoso_2024"
         ],
         "lacuna": "Ausência de experimentos que integrem homomorphic encryption ao ciclo de vida das credenciais SSI em ambientes de cidades inteligentes."
       },
@@ -162,8 +162,8 @@
         "titulo": "Protocolo descentralizado de revogação de credenciais SSI via contratos inteligentes",
         "descricao": "Aproveitar a observação de Danilo de que o modelo atual não trata revogação e a sugestão de Cardoso de investigar protocolos de revogação adaptados a alta mobilidade, desenvolvendo um mecanismo onde DIDs são vinculados a contratos inteligentes que registram eventos de revogação e permitem recuperação segura de acesso perdido pelo cidadão.",
         "fontes": [
-          "Exemplo_55b3b0969325cccbbb2c",
-          "Exemplo_da24de257de987bc603b"
+          "Maia_2025",
+          "Cardoso_2024"
         ],
         "lacuna": "Nenhum dos trabalhos apresenta um design concreto de revogação descentralizada; necessidade de validar segurança e usabilidade em cenários reais."
       }

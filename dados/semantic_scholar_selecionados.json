@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Self-Sovereign Digital Identity System for Smart Cities: A Pilot Project with Trustchain and Hyperledger Indy in the Municipality of Santa Rosa",
+    "year": 2026,
+    "authors": "Carla O. Castanho, Marcelo P. Chequin, Sandro Sawicki",
+    "abstract": "In a smart city context increasingly dependent on big tech platforms, this paper presents the implementation and validation of a system integrating Trustchain and Hyperledger Indy for decentralised citizen identification in accessing environmental data in Santa Rosa (RS), Brazil, addressing the need to mitigate centralised data vulnerability while preserving privacy and self-sovereignty. Through a mobile application that requires verifiable credentials, the proposed solution demonstrates the feasibility of the hybrid architecture, consistent performance in digital identity creation and verification metrics, and a stable registration and query workflow, positioning itself as an effective identity management mechanism for smart cities.",
+    "pdf": "https://sol.sbc.org.br/index.php/cblockchain/article/download/43033/42799",
+    "url": "https://www.semanticscholar.org/paper/8c005abbd895458e183f628a144d12c9152a3945",
+    "doi": "10.5753/cblockchain.2026.23616",
+    "citations": 0,
+    "local_pdf": "obsidian/referencias/pdfs/Castanho_2026.pdf"
+  },
+  {
+    "title": "A Survey on Credential Revocation and DID Deactivation in Self-Sovereign Identity Systems",
+    "year": 2026,
+    "authors": "Younho Lee, Hojune Shin, Daeseon Choi",
+    "abstract": "Self-Sovereign Identity (SSI) enables user-controlled identity management based on Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs). However, ensuring reliable and privacy-preserving revocation remains one of the most critical and challenging aspects of credential lifecycle governance. This survey provides a narrative review of revocation mechanisms in SSI systems, spanning status-list approaches, cryptographic accumulators, positive-confirmation models such as short-lived credentials, and DID deactivation and governance-aware methods. Each category is analyzed across security, privacy, performance, scalability, and operational integration criteria, revealing their practical trade-offs. Based on an extensive analysis of academic sources, standards, and real deployments, the survey develops a unified taxonomy of SSI revocation and identifies persistent challenges: particularly privacy–accountability balancing, offline verification, key compromise handling, post-quantum readiness, and regulatory compliance. The findings offer guidance for system architects, implementers, and policymakers seeking trustworthy and interoperable revocation solutions in decentralized iden",
+    "pdf": "https://doi.org/10.1109/access.2025.3649792",
+    "url": "https://www.semanticscholar.org/paper/9f9a270ca34248493981456777d5e4db37a2c04b",
+    "doi": "10.1109/ACCESS.2025.3649792",
+    "citations": 8,
+    "download_error": "status=202 bytes=0"
+  },
+  {
+    "title": "Decentralized Identity Systems for Secure Public Engagement Advancing Inclusive Access and Privacy through Blockchain Driven Verifiable Credentials and Zero Knowledge Proofs",
+    "year": 2025,
+    "authors": "J. Burugulla, Kishore Challa, J. S.",
+    "abstract": ": But decentralized identity systems are revolutionizing these governments – public engagement ensuring services protected by a secure, privacy-ensuring and inclusive access. In this research paper, we investigate how combining blockchain based verifiable credentials with zero knowledge proofs (ZKPs) can help solve some of the main bottleneck problems, such as: scalability, interoperability and regulatory compliance. These systems allow for performant, user-centric designs that work for a wide range of demographics with a high level of performance and data minimization standards; making use of highly innovative, leading-edge privacy-preserving technologies. Furthermore, the paper also focuses on domain-specific use cases and applications within the intelligent community, smart cities, e-governance and IoT ecosystem, establishing a baseline for expanded implementation and practical use. In summary, this work lays the foundation for both theoretical and practical knowledge about decentralized identity systems, catalysing innovation in secure public engagement and digital inclusion abroad and at home.",
+    "pdf": "https://doi.org/10.5220/0014202400004932",
+    "url": "https://www.semanticscholar.org/paper/eb343a1eaafa99d1f87eb9e2d9fedb2e6d2d8354",
+    "doi": "10.5220/0014202400004932",
+    "citations": 0,
+    "local_pdf": "obsidian/referencias/pdfs/Burugulla_2025.pdf"
+  },
+  {
+    "title": "Blockchain and Structural Relationship Based Access Control for IoT: A Smart City Use Case",
+    "year": 2019,
+    "authors": "Fariza Sabrina",
+    "abstract": "Smart city is one of the major Internet of Things (IoT) applications and has become an emerging paradigm with the recent advancements of IoT devices and sensors. But the heterogenous nature of a smart city IoT environment makes it vulnerable to many privacy and security concerns and introduces significant challenges for access control of IoT resources especially where access needs to be provided to third parties and external organizations. This paper proposes a new structural relationships-based access control (SRBAC) model that can be used to delegate resource access rights to users in a large scale IoT scenario like smart city while keeping the resource owner in full control. The proposed architecture uses smart contracts and public blockchain for managing access control for external users and a local off-block chain storage for managing access control for organization’s internal users and enforcing fine-grained access control for the resources.",
+    "pdf": "https://figshare.com/articles/conference_contribution/Blockchain_and_structural_relationship_based_access_control_for_IoT_A_smart_city_use_case/13452548",
+    "url": "https://www.semanticscholar.org/paper/1e6397938333b1ed62f07b5ce8eb40a1013c4e72",
+    "doi": "10.1109/LCN44214.2019.8990757",
+    "citations": 17,
+    "download_error": "status=202 bytes=0"
+  }
+]

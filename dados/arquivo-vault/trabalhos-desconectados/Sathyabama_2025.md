@@ -5,7 +5,7 @@ doi: https://doi.org/10.1038/s41598-025-04164-4
 ano: 2025
 status: triagem_pendente
 acesso_aberto: true
-pdf_local: pdfs/Sathyabama_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Sathyabama_2025.pdf
 tags: [abe, blockchain, contratos-inteligentes, controle-de-acesso, governanca-de-dados, interoperabilidade, iot, seguranca, sistemas-distribuidos]
 ---
 # Sathyabama_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1038/s41598-025-04164-4
 
 Triagem: revisar. O trabalho aborda IoT, blockchain e segurança cibernética, temas centrais do escopo de pesquisa. Contudo, foca em detecção de anomalias via redes neurais profundas e uso de blockchain para integridade e resposta automática, sem tratar diretamente de identidade digital auto-soberana, controle de acesso baseado em atributos, interoperabilidade entre organizações ou contextos de cidades inteligentes. Por isso, não se enquadra como prioridade máxima, mas merece ser revisado para avaliar possíveis extensões ou combinações com abordagens de SSI, controle de acesso ou ABE que poderiam preencher lacunas identificadas no grupo de pesquisa.
 
-[PDF local](../../pdfs/Sathyabama_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Sathyabama_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

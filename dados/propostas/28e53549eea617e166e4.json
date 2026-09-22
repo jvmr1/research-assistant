@@ -5,7 +5,7 @@
   "modelo": "openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free, qwen2.5:7b-instruct-q4_K_M",
   "titulo": "Integrar o modelo de identidade baseado em blockchain de Cardoso com o framework de Verifiable Credentials de Gudipati, acrescentando criptografia baseada em atributos (ABE) para permitir divulgação seletiva de atributos de sensores IoT em serviços urbanos. O artefato seria uma carteira SSI que emite VCs contendo políticas ABE, suportando revogação via lista de status na blockchain. Avaliar desempenho de emissão, verificação e controle de acesso em cenários de mobilidade urbana.",
   "fontes": [
-    "Exemplo_da24de257de987bc603b",
+    "Cardoso_2024",
     "Gudipati_2025"
   ],
   "problema": "Ausência de mecanismos de controle de acesso seletivo e de políticas de atributos dentro de soluções blockchain‑centricas para cidades inteligentes.",

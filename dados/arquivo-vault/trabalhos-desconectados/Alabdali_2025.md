@@ -5,7 +5,7 @@ doi: https://doi.org/10.1038/s41598-025-97030-2
 ano: 2025
 status: triado_baixa
 acesso_aberto: true
-pdf_local: pdfs/Alabdali_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Alabdali_2025.pdf
 tags: [blockchain, cidades-inteligentes, controle-de-acesso, iot]
 ---
 # Alabdali_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1038/s41598-025-97030-2
 
 Triagem: baixa. O trabalho foca em classificação de resíduos sólidos usando IA, IoT e blockchain para melhorar a gestão de resíduos em cidades inteligentes. Embora envolva blockchain e IoT, não aborda identidade autossoberana, credenciais verificáveis, controle de acesso baseado em atributos, criptografia homomórfica ou outras tecnologias centrais ao objetivo da pesquisa focada, que é mapear o ciclo de vida das credenciais de identidade do cidadão e seus riscos de segurança e privacidade. Portanto, tem baixa relevância para o escopo de revisão proposto.
 
-[PDF local](../../pdfs/Alabdali_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Alabdali_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

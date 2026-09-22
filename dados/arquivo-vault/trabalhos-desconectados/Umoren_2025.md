@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1016/j.adhoc.2025.103876
 
 Triagem: sem_resumo. Requer PDF para avaliar.
 
-[Texto local](../../pdfs/Umoren_2025.html)
+[Texto local](../../obsidian/referencias/pdfs/Umoren_2025.html)
 
 ### Relações bibliográficas verificadas nos metadados
 

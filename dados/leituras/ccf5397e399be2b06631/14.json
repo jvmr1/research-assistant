@@ -1,0 +1,42 @@
+{
+  "resumo": "O trecho define Cidade Inteligente como uso de TIC para reduzir problemas de urbanização, destaca a IoT como tecnologia‑chave para sensoriamento e atuação em tempo real, exemplifica aplicações como ambulâncias e viaturas policiais, e aponta a segurança da informação como grande desafio nas CIs.",
+  "perfil": {
+    "problema": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+    "solucao": "Arquiteturas para Gestão de Identidade",
+    "avaliacao": "Não informado",
+    "limites": "Não informado",
+    "possibilidades": [
+      "Investigar integração de SSI com ABE para controle de acesso seletivo a dados de sensores IoT em CIs.",
+      "Explorar uso de criptografia homomórfica para análise de dados de mobilidade urbana preservando a privacidade dos cidadãos.",
+      "Desenvolver protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade e conectividade intermitente.",
+      "Criar ontologia unificada que relacione DID, ABE e criptografia homomórfica para melhorar a interoperabilidade entre serviços urbanos."
+    ]
+  },
+  "evidencias": [
+    {
+      "citacao": "A IoT é um paradigma que reúne diversos conceitos e tecnologias",
+      "afirmacao": "A IoT é um paradigma que reúne diversos conceitos e tecnologias"
+    },
+    {
+      "citacao": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+      "afirmacao": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação"
+    }
+  ],
+  "interpretacao": "O texto enfatiza que a IoT é central para a operação de cidades inteligentes, permitindo coleta e uso de dados em tempo real, mas ressalta que a segurança da informação permanece um obstáculo crítico que deve ser abordado nas arquiteturas de identidade.",
+  "duvidas": "Como garantir a segurança da informação nas interações massivas de dispositivos IoT em CIs? Quais mecanismos de revogação e recuperação de credenciais são adequados para cenários de mobilidade urbana? De que forma a interoperabilidade entre diferentes padrões de identidade pode ser mantida sem comprometer a privacidade?",
+  "avisos": [],
+  "id": "82a039646615913ae79b",
+  "artigo": "Cardoso_2024",
+  "pagina": 15,
+  "tipo": "pdf",
+  "perfil_acumulado": {
+    "problema": "Um dos grandes desafios envolvendo as CIs consiste na segurança da informação",
+    "solucao": "Arquiteturas para Gestão de Identidade",
+    "avaliacao": "Consumo de memória ao longo do tempo ao utilizar e ao não utilizar o modelo proposto.",
+    "limites": "Não identificado nas fichas/trechos disponíveis.",
+    "possibilidades": "Investigar integração de SSI com ABE para controle de acesso seletivo a dados de sensores IoT em CIs.; Explorar uso de criptografia homomórfica para análise de dados de mobilidade urbana preservando a privacidade dos cidadãos.; Desenvolver protocolos de revogação de credenciais SSI adaptados a ambientes de alta mobilidade e conectividade intermitente.; Criar ontologia unificada que relacione DID, ABE e criptografia homomórfica para melhorar a interoperabilidade entre serviços urbanos.",
+    "revisao": "ed7dd347db1679b96f2b",
+    "assinatura": "a6dd17ddc760fe0d49a1"
+  },
+  "reaproveitada_de": "75b1091bf587fa2ff05f"
+}

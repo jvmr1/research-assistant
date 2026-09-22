@@ -5,7 +5,7 @@ doi: https://doi.org/10.1007/s10207-024-00951-8
 ano: 2025
 status: triado_baixa
 acesso_aberto: true
-pdf_local: pdfs/Abdullahi_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Abdullahi_2025.pdf
 tags: [blockchain, governanca-de-dados, interoperabilidade, iot, privacidade, seguranca]
 ---
 # Abdullahi_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1007/s10207-024-00951-8
 
 Triagem: baixa. O trabalho foca em segurança e privacidade no contexto de IIoT para manufatura inteligente, abordando mecanismos de defesa, integração IT/OT e diretrizes de implantação. Não trata de identidade autossoberana, credenciais verificáveis, identidade descentralizada, criptografia homomórfica ou controle de acesso baseado em atributos, que são os temas centrais da revisão proposta. Assim, embora relevante para segurança em ambientes de IoT, está fora do escopo específico de identidade digital em cidades inteligentes e, portanto, tem baixa prioridade para o objetivo da pesquisa focada.
 
-[PDF local](../../pdfs/Abdullahi_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Abdullahi_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

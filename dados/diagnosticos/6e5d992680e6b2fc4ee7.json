@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_60479560a08f3b4cd724",
+        "id": "Fioreze_2026",
         "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
         "escopo": {
           "tipo": "pdf",
@@ -79,7 +79,7 @@
         "possibilidades": "Integrar mecanismos de revogação e recuperação de credenciais baseados em identidade autossoberana (SSI) para permitir que cidadãos restabeleçam acesso a serviços de cidades inteligentes após perda de chaves ou credenciais. Uma extensão viável seria implementar um protocolo de recuperação de chave usando secret sharing distribuído entre autoridades municipais."
       },
       {
-        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "id": "Maia_2025",
         "titulo": "Danilo_TCC_final",
         "escopo": {
           "tipo": "pdf",
@@ -155,8 +155,8 @@
       {
         "descricao": "Integrar o esquema de credenciais verificáveis SSI de Maia com o controle de acesso baseado em ABE de Fioreze, permitindo que cidadãos apresentem atributos seletivos ao solicitar serviços urbanos. Essa combinação pode oferecer privacidade reforçada e autorização granular sem expor identidade completa, preenchendo a lacuna de controle de acesso baseado em atributos ainda não tratada em nenhum dos trabalhos.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Ausência de integração entre SSI e ABE para controle de acesso seletivo em serviços de cidades inteligentes.",
         "buscas": [
@@ -167,8 +167,8 @@
       {
         "descricao": "Desenvolver um mecanismo de revogação e recuperação de credenciais baseado em secret sharing distribuído entre autoridades municipais, estendendo tanto o framework de Fioreze quanto o modelo SSI de Maia. O protocolo permitiria que o cidadão recupere chaves perdidas mediante a combinação de partes mantidas por diferentes órgãos, mitigando o risco de perda de acesso e reforçando a confiança no ecossistema descentralizado.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Nenhum dos trabalhos inclui revogação ou recuperação de credenciais baseada em secret sharing.",
         "buscas": [
@@ -179,8 +179,8 @@
       {
         "descricao": "Aplicar criptografia homomórfica ao processamento de dados IIoT compartilhados no framework de Fioreze, enquanto se utiliza SSI para consentimento e auditoria de uso. Essa proposta visa permitir análises sobre dados cifrados sem revelar informações sensíveis, integrando privacidade de dados e controle de identidade ainda não explorados conjuntamente nos estudos analisados.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Falta de abordagem que combine homomorphic encryption com SSI para processamento de dados IoT em cidades inteligentes.",
         "buscas": [

@@ -3295,6 +3295,42 @@
     "2863a8c2a49feb27d68a": {
       "feito": true,
       "quando": "2026-09-21T07:21:38"
+    },
+    "ebe7a0cbe8385fc2227e": {
+      "feito": true,
+      "quando": "2026-09-22T14:29:22"
+    },
+    "b1b5c87eef1719bbfd17": {
+      "feito": true,
+      "quando": "2026-09-22T14:29:22"
+    },
+    "3bf3500c214e935003ca": {
+      "erro": "Contexto grande demais. Encurte as instruções; nada foi truncado silenciosamente.",
+      "tentativas": 1,
+      "tentar_em": 1790098192.6494093
+    },
+    "996f2f046f350b0460ff": {
+      "erro": "Contexto grande demais. Encurte as instruções; nada foi truncado silenciosamente.",
+      "tentativas": 1,
+      "tentar_em": 1790098192.7639887
+    },
+    "339f7015ffcff374455c": {
+      "feito": true,
+      "quando": "2026-09-22T14:31:06"
+    },
+    "1e1ed9dde17885e5e129": {
+      "feito": true,
+      "quando": "2026-09-22T14:31:06"
+    },
+    "844e506226b1d226559c": {
+      "erro": "Ollama foi iniciado, mas não respondeu na porta 11434 em 20s.",
+      "tentativas": 1,
+      "tentar_em": 1790098337.3648508
+    },
+    "7238ea09173ce1a895b4": {
+      "erro": "Ollama foi iniciado, mas não respondeu na porta 11434 em 20s.",
+      "tentativas": 1,
+      "tentar_em": 1790098378.4783006
     }
   },
   "consultas": {
@@ -6721,177 +6757,177 @@
     {
       "id": "b979c89dcbc71adaf57a",
       "revisao": "ed7dd347db1679b96f2b",
-      "titulo": "Exemplo_da24de257de987bc603b: Integrar identidades autossoberanas (SSI) e credenciais verificáveis ao modelo baseado em ",
+      "titulo": "Cardoso_2024: Integrar identidades autossoberanas (SSI) e credenciais verificáveis ao modelo baseado em ",
       "fontes": [
-        "Exemplo_da24de257de987bc603b"
+        "Cardoso_2024"
       ]
     },
     {
       "id": "eff8e2bdc9167e356fa8",
       "revisao": "ed7dd347db1679b96f2b",
-      "titulo": "Exemplo_da24de257de987bc603b: Aplicar criptografia baseada em atributos (ABE) para controle de acesso seletivo e divulga",
+      "titulo": "Cardoso_2024: Aplicar criptografia baseada em atributos (ABE) para controle de acesso seletivo e divulga",
       "fontes": [
-        "Exemplo_da24de257de987bc603b"
+        "Cardoso_2024"
       ]
     },
     {
       "id": "fb9a03f219abe8d82de3",
       "revisao": "ed7dd347db1679b96f2b",
-      "titulo": "Exemplo_da24de257de987bc603b: Desenvolver mecanismos de revogação distribuída (registradores on‑chain) e protocolos de r",
+      "titulo": "Cardoso_2024: Desenvolver mecanismos de revogação distribuída (registradores on‑chain) e protocolos de r",
       "fontes": [
-        "Exemplo_da24de257de987bc603b"
+        "Cardoso_2024"
       ]
     },
     {
       "id": "12b50465b336547629f6",
       "revisao": "ed7dd347db1679b96f2b",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Incorporar revocation registries baseados em blockchain para revogação em tempo real",
+      "titulo": "Maia_2025: Incorporar revocation registries baseados em blockchain para revogação em tempo real",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "d49796b7edbdd61e252e",
       "revisao": "ed7dd347db1679b96f2b",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Desenvolver protocolos de recuperação de credenciais usando secret sharing, agentes de con",
+      "titulo": "Maia_2025: Desenvolver protocolos de recuperação de credenciais usando secret sharing, agentes de con",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "1d8f055499a7908e5149",
       "revisao": "ed7dd347db1679b96f2b",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Integrar criptografia baseada em atributos (ABE) ou criptografia homomórfica nos fluxos de",
+      "titulo": "Maia_2025: Integrar criptografia baseada em atributos (ABE) ou criptografia homomórfica nos fluxos de",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "68f1e2c11e34b36725f0",
       "revisao": "ed7dd347db1679b96f2b",
-      "titulo": "Exemplo_60479560a08f3b4cd724: Investigar a integração de identidades auto‑soberanas (SSI/DIDs) com políticas de controle",
+      "titulo": "Fioreze_2026: Investigar a integração de identidades auto‑soberanas (SSI/DIDs) com políticas de controle",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ]
     },
     {
       "id": "4f04f045936036cb9d15",
       "revisao": "5f8412cc6e604fb9d78f",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Desenvolver e integrar protocolos de revogação baseados em blockchain (smart contracts, re",
+      "titulo": "Maia_2025: Desenvolver e integrar protocolos de revogação baseados em blockchain (smart contracts, re",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "9efe4d2b497967875ee3",
       "revisao": "5f8412cc6e604fb9d78f",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Implementar mecanismos de recuperação de credenciais/identidade usando DIDs, secret sharin",
+      "titulo": "Maia_2025: Implementar mecanismos de recuperação de credenciais/identidade usando DIDs, secret sharin",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "04e4a0d3f03916526ba6",
       "revisao": "5f8412cc6e604fb9d78f",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Incorporar criptografia baseada em atributos (ABE) e/ou provas de conhecimento zero‑knowle",
+      "titulo": "Maia_2025: Incorporar criptografia baseada em atributos (ABE) e/ou provas de conhecimento zero‑knowle",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "38cf918a123f248ef82e",
       "revisao": "5f8412cc6e604fb9d78f",
-      "titulo": "Exemplo_60479560a08f3b4cd724: Integrar identidade autossoberana (SSI) e DIDs para dispositivos e cidadãos, usando wallet",
+      "titulo": "Fioreze_2026: Integrar identidade autossoberana (SSI) e DIDs para dispositivos e cidadãos, usando wallet",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ]
     },
     {
       "id": "727907da1798b2abc4d5",
       "revisao": "5f8412cc6e604fb9d78f",
-      "titulo": "Exemplo_60479560a08f3b4cd724: Implementar registro de revogação baseado em blockchain que suporte revogação seletiva bas",
+      "titulo": "Fioreze_2026: Implementar registro de revogação baseado em blockchain que suporte revogação seletiva bas",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ]
     },
     {
       "id": "a58f10bca17ef05551b9",
       "revisao": "5f8412cc6e604fb9d78f",
-      "titulo": "Exemplo_60479560a08f3b4cd724: Explorar criptografia homomórfica para processamento de dados IIoT sem descriptografia, pr",
+      "titulo": "Fioreze_2026: Explorar criptografia homomórfica para processamento de dados IIoT sem descriptografia, pr",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ]
     },
     {
       "id": "b3b6825bfaf433c308b6",
       "revisao": "05e12be4f82748351512",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Integrar listas de revogação (VC Revocation List) ou protocolos de revogação baseados em b",
+      "titulo": "Maia_2025: Integrar listas de revogação (VC Revocation List) ou protocolos de revogação baseados em b",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "753f34be958e0f6aa80c",
       "revisao": "05e12be4f82748351512",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Desenvolver esquema de recuperação de credenciais usando secret sharing ou múltiplas chave",
+      "titulo": "Maia_2025: Desenvolver esquema de recuperação de credenciais usando secret sharing ou múltiplas chave",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "2ad107f153273f670a44",
       "revisao": "05e12be4f82748351512",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Incorporar Attribute‑Based Encryption (ABE) ou criptografia homomórfica nos pipelines de d",
+      "titulo": "Maia_2025: Incorporar Attribute‑Based Encryption (ABE) ou criptografia homomórfica nos pipelines de d",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "b77e0048b4d843e8c7fd",
       "revisao": "05e12be4f82748351512",
-      "titulo": "Exemplo_60479560a08f3b4cd724: Integrar SSI/DIDs com criptografia baseada em atributos (ABE/CP‑ABE/KP‑ABE) para controle ",
+      "titulo": "Fioreze_2026: Integrar SSI/DIDs com criptografia baseada em atributos (ABE/CP‑ABE/KP‑ABE) para controle ",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ]
     },
     {
       "id": "dc7a7aa31761e35659bb",
       "revisao": "05e12be4f82748351512",
-      "titulo": "Exemplo_60479560a08f3b4cd724: Desenvolver e avaliar listas de revogação distribuídas (CRL) ou esquemas de revogação base",
+      "titulo": "Fioreze_2026: Desenvolver e avaliar listas de revogação distribuídas (CRL) ou esquemas de revogação base",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ]
     },
     {
       "id": "5c8d70e3197e2ebc8c9c",
       "revisao": "05e12be4f82748351512",
-      "titulo": "Exemplo_60479560a08f3b4cd724: Implementar módulos de recuperação de credenciais baseados em secret sharing integrados a ",
+      "titulo": "Fioreze_2026: Implementar módulos de recuperação de credenciais baseados em secret sharing integrados a ",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ]
     },
     {
       "id": "be00336bf726463e5a5c",
       "revisao": "e7b8232d88fc37f0003b",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Incorporar listas de revogação (CRL ou status list) ou protocolos de revogação descentrali",
+      "titulo": "Maia_2025: Incorporar listas de revogação (CRL ou status list) ou protocolos de revogação descentrali",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "093cc2ffe588b0e02696",
       "revisao": "e7b8232d88fc37f0003b",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Aplicar criptografia baseada em atributos (ABE) ou criptografia homomórfica para controle ",
+      "titulo": "Maia_2025: Aplicar criptografia baseada em atributos (ABE) ou criptografia homomórfica para controle ",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
       "id": "4080a44407f69bd9d90c",
       "revisao": "e7b8232d88fc37f0003b",
-      "titulo": "Exemplo_55b3b0969325cccbbb2c: Realizar testes de carga massiva simulando milhares de dispositivos IoT para validar escal",
+      "titulo": "Maia_2025: Realizar testes de carga massiva simulando milhares de dispositivos IoT para validar escal",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
@@ -6899,7 +6935,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "titulo": "Mecanismo de revogação distribuída para VCs em ambientes IoT de cidades inteligentes",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c",
+        "Maia_2025",
         "Gudipati_2025"
       ]
     },
@@ -6909,7 +6945,7 @@
       "titulo": "Combinação de credenciais verificáveis com criptografia baseada em atributos para controle de acesso seletivo em serviços públicos",
       "fontes": [
         "Gudipati_2025",
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
@@ -6918,7 +6954,7 @@
       "titulo": "Arquitetura híbrida SSI‑IA para segurança de turistas em cidades inteligentes",
       "fontes": [
         "S_2026",
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ]
     },
     {
@@ -6926,7 +6962,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "titulo": "Integrar o modelo de identidade baseado em blockchain de Cardoso com o framework de Verifiable Credentials de Gudipati, acrescentando criptografia baseada em atributos (ABE) para permitir divulgação seletiva de atributos de sensores IoT em serviços urbanos. O artefato seria uma carteira SSI que emite VCs contendo políticas ABE, suportando revogação via lista de status na blockchain. Avaliar desempenho de emissão, verificação e controle de acesso em cenários de mobilidade urbana.",
       "fontes": [
-        "Exemplo_da24de257de987bc603b",
+        "Cardoso_2024",
         "Gudipati_2025"
       ]
     },
@@ -6944,7 +6980,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "titulo": "SSI com ABE para controle de acesso seletivo em sensores IoT de cidades inteligentes",
       "fontes": [
-        "Exemplo_da24de257de987bc603b",
+        "Cardoso_2024",
         "Hudda_2025"
       ]
     },
@@ -6953,7 +6989,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "titulo": "Credenciais verificáveis com revogação baseada em blockchain para compartilhamento de dados agrícolas em cidades inteligentes",
       "fontes": [
-        "Exemplo_da24de257de987bc603b",
+        "Cardoso_2024",
         "Mansoor_2025"
       ]
     },
@@ -6962,7 +6998,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "titulo": "Esquema híbrido de revogação e recuperação de acesso usando blockchain e criptografia homomórfica em serviços urbanos IoT",
       "fontes": [
-        "Exemplo_da24de257de987bc603b",
+        "Cardoso_2024",
         "Hudda_2025"
       ]
     },
@@ -6971,7 +7007,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "titulo": "Framework híbrido VC‑ABE para controle de acesso cidadão em IoT urbano",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724",
+        "Fioreze_2026",
         "Gudipati_2025"
       ]
     },
@@ -6981,7 +7017,7 @@
       "titulo": "Identidade SSI com ABE para privacidade de turistas em cidades inteligentes",
       "fontes": [
         "S_2026",
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ]
     },
     {
@@ -6989,7 +7025,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "titulo": "Registro descentralizado de revogação para credenciais SSI em serviços públicos",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724",
+        "Fioreze_2026",
         "Gudipati_2025"
       ]
     }
@@ -8424,7 +8460,7 @@
       "revisao": "ed7dd347db1679b96f2b",
       "status": "concluido",
       "ids": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ],
       "iniciado_em": "2026-09-20T18:12:41",
       "modo": "um_trabalho_por_vez",
@@ -8435,7 +8471,7 @@
       "revisao": "ed7dd347db1679b96f2b",
       "status": "concluido",
       "ids": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ],
       "iniciado_em": "2026-09-20T18:14:03",
       "modo": "um_trabalho_por_vez",
@@ -8446,7 +8482,7 @@
       "revisao": "ed7dd347db1679b96f2b",
       "status": "concluido",
       "ids": [
-        "Exemplo_da24de257de987bc603b"
+        "Cardoso_2024"
       ],
       "iniciado_em": "2026-09-20T18:14:08",
       "modo": "um_trabalho_por_vez",
@@ -8600,7 +8636,7 @@
       "revisao": "ed7dd347db1679b96f2b",
       "status": "concluido",
       "ids": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ],
       "iniciado_em": "2026-09-20T18:45:01",
       "modo": "um_trabalho_por_vez",
@@ -8611,7 +8647,7 @@
       "revisao": "ed7dd347db1679b96f2b",
       "status": "concluido",
       "ids": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ],
       "iniciado_em": "2026-09-20T18:51:42",
       "modo": "um_trabalho_por_vez",
@@ -8655,7 +8691,7 @@
       "revisao": "5f8412cc6e604fb9d78f",
       "status": "concluido",
       "ids": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ],
       "iniciado_em": "2026-09-20T22:08:51",
       "modo": "um_trabalho_por_vez",
@@ -8666,7 +8702,7 @@
       "revisao": "05e12be4f82748351512",
       "status": "concluido",
       "ids": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ],
       "iniciado_em": "2026-09-20T23:30:25",
       "modo": "um_trabalho_por_vez",
@@ -8677,7 +8713,7 @@
       "revisao": "05e12be4f82748351512",
       "status": "concluido",
       "ids": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ],
       "iniciado_em": "2026-09-20T23:34:22",
       "modo": "um_trabalho_por_vez",
@@ -8688,7 +8724,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "status": "concluido",
       "ids": [
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Maia_2025"
       ],
       "iniciado_em": "2026-09-21T00:10:52",
       "modo": "um_trabalho_por_vez",
@@ -8699,7 +8735,7 @@
       "revisao": "e7b8232d88fc37f0003b",
       "status": "concluido",
       "ids": [
-        "Exemplo_60479560a08f3b4cd724"
+        "Fioreze_2026"
       ],
       "iniciado_em": "2026-09-21T00:48:37",
       "modo": "um_trabalho_por_vez",
@@ -8727,9 +8763,9 @@
       "revisao": "e7b8232d88fc37f0003b",
       "assinatura": "a165cf16d20634d8539b",
       "trechos": 18,
-      "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na necessidade de descentralização, privacidade e controle de acesso baseado em atributos. Padrões como DID e Verifiable Credentials (VC) da W3C definem a camada de identidade, enquanto surveys (ex.: Sicari 2023 SSI Survey) destacam desafios de adoção e interoperabilidade. Trabalhos aplicados, como a dissertação de Fioreze (Exemplo_60479560a08f3b4cd724), propõem frameworks que combinam blockchain e criptografia baseada em atributos (ABE) para compartilhamento seguro de dados IIoT entre organizações. Gudipati 2025 demonstra o potencial transformador das VC para reduzir fraudes e custos administrativos, sugerindo ainda a integração com ABE e mecanismos de recuperação. O estudo de S 2026 explora identidade blockchain em sistemas de segurança turística, mas não aborda SSI nem revogação. Em conjunto, as fontes concordam que a segurança de transmissão, a revogação descentralizada e a recuperação de credenciais são lacunas críticas ainda não totalmente resolvidas.",
+      "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na necessidade de descentralização, privacidade e controle de acesso baseado em atributos. Padrões como DID e Verifiable Credentials (VC) da W3C definem a camada de identidade, enquanto surveys (ex.: Sicari 2023 SSI Survey) destacam desafios de adoção e interoperabilidade. Trabalhos aplicados, como a dissertação de Fioreze (Fioreze_2026), propõem frameworks que combinam blockchain e criptografia baseada em atributos (ABE) para compartilhamento seguro de dados IIoT entre organizações. Gudipati 2025 demonstra o potencial transformador das VC para reduzir fraudes e custos administrativos, sugerindo ainda a integração com ABE e mecanismos de recuperação. O estudo de S 2026 explora identidade blockchain em sistemas de segurança turística, mas não aborda SSI nem revogação. Em conjunto, as fontes concordam que a segurança de transmissão, a revogação descentralizada e a recuperação de credenciais são lacunas críticas ainda não totalmente resolvidas.",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724",
+        "Fioreze_2026",
         "Gudipati_2025",
         "S_2026"
       ],
@@ -8741,8 +8777,8 @@
       "trechos": 32,
       "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na necessidade de descentralizar a gestão de credenciais, garantir privacidade e suportar interoperabilidade entre serviços públicos e IoT. Cardoso (2026) propõe um framework blockchain‑ABE para compartilhamento seguro de dados IIoT entre organizações, enfatizando controle de acesso baseado em atributos e a possibilidade de revogação descentralizada. Maia (2025) foca na autenticação e controle de acesso de cidadãos usando SSI e blockchain, mas não detalha mecanismos de revogação ou recuperação de credenciais. Fioreze (2026) sugere a inclusão de credenciais verificáveis (VC) e secret sharing para recuperação de acesso. Os trabalhos concordam que blockchain fornece a camada de confiança distribuída, enquanto divergem quanto ao foco: Fioreze prioriza segurança de dados industriais, Maia prioriza identidade do cidadão. Nenhum estudo combina SSI, ABE e recuperação de credenciais em um único fluxo de ciclo de vida da credencial, deixando lacunas abertas em revogação seletiva, auditoria de atributos e recuperação pós‑perda.",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724",
-        "Exemplo_55b3b0969325cccbbb2c"
+        "Fioreze_2026",
+        "Maia_2025"
       ],
       "quando": "2026-09-21T00:14:22"
     },
@@ -8761,9 +8797,9 @@
       "revisao": "e7b8232d88fc37f0003b",
       "assinatura": "1a42d35c4c1c11563f7d",
       "trechos": 18,
-      "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na proposta de usar blockchain e credenciais verificáveis (VCs) para autenticação e controle de acesso (Exemplo_55b3b0969325cccbbb2c). Os trabalhos de revisão apontam que VCs trazem privacidade, descentralização e redução de fraudes (Gudipati_2025). Há consenso de que a integração com IoT e serviços públicos requer mecanismos de revogação e recuperação de credenciais, ainda pouco explorados. Divergem quanto ao papel da IA e geo‑fencing: S_2026 propõe um sistema de segurança turística baseado em IA e identidade blockchain, enquanto outros focam apenas na camada de identidade. Os estudos chegam a protótipos de middleware ou casos de uso específicos, mas carecem de avaliações de escalabilidade, interoperabilidade entre diferentes órgãos e de combinações com criptografia baseada em atributos (ABE) ou homomórfica.",
+      "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na proposta de usar blockchain e credenciais verificáveis (VCs) para autenticação e controle de acesso (Maia_2025). Os trabalhos de revisão apontam que VCs trazem privacidade, descentralização e redução de fraudes (Gudipati_2025). Há consenso de que a integração com IoT e serviços públicos requer mecanismos de revogação e recuperação de credenciais, ainda pouco explorados. Divergem quanto ao papel da IA e geo‑fencing: S_2026 propõe um sistema de segurança turística baseado em IA e identidade blockchain, enquanto outros focam apenas na camada de identidade. Os estudos chegam a protótipos de middleware ou casos de uso específicos, mas carecem de avaliações de escalabilidade, interoperabilidade entre diferentes órgãos e de combinações com criptografia baseada em atributos (ABE) ou homomórfica.",
       "fontes": [
-        "Exemplo_55b3b0969325cccbbb2c",
+        "Maia_2025",
         "Gudipati_2025",
         "S_2026"
       ],
@@ -8775,7 +8811,7 @@
       "trechos": 18,
       "panorama": "A literatura sobre identidade digital em cidades inteligentes converge para três vertentes principais. Cardoso (2024) propõe um modelo de gestão de identidades baseado em blockchain, enfatizando a integridade da cadeia de confiança, mas avalia apenas consumo de memória e não trata revogação ou recuperação de credenciais. Gudipati (2025) apresenta as Verifiable Credentials (VCs) como facilitadoras da descentralização e privacidade, discute desafios de adoção e requisitos regulatórios, porém não explora mecanismos criptográficos avançados para controle de acesso seletivo. O trabalho de S_2026 (2026) combina IA, geo‑fencing e identidade blockchain para segurança de turistas, introduzindo um caso de uso concreto, mas foca na camada de identificação sem detalhar o ciclo completo da credencial (emissão, revogação, recuperação). Em conjunto, os estudos concordam que a descentralização (blockchain/DID) e a privacidade (SSI, VCs) são essenciais, diferem nas avaliações de desempenho (memória vs. escalabilidade) e na profundidade de cobertura dos estágios da credencial, deixando lacunas abertas em revogação eficiente, recuperação pós‑perda e controle de acesso baseado em atributos ou criptografia homomórfica.",
       "fontes": [
-        "Exemplo_da24de257de987bc603b",
+        "Cardoso_2024",
         "Gudipati_2025",
         "S_2026"
       ],
@@ -8787,7 +8823,7 @@
       "trechos": 48,
       "panorama": "A literatura sobre identidade digital em cidades inteligentes converge na necessidade de segurança, privacidade e interoperabilidade. Cardoso (2024) propõe um modelo de gestão de identidades baseado em blockchain para Smart Cities, enfatizando a confiança distribuída, mas não detalha mecanismos de controle de acesso seletivo ou revogação em ambientes IoT. Hudda (2025) revisa sistemas IoT restritos, apontando a adoção de criptossistemas leves (RSA, ElGamal) e a importância de eficiência energética, porém não considera identidades autossoberanas nem credenciais verificáveis. Mansoor (2025) discute a integração de sensores IoT na agricultura de precisão, destacando desafios de propriedade de dados e segurança, mas não aborda SSI, DIDs ou revogação de credenciais. Assim, há consenso sobre a necessidade de segurança e privacidade, divergência quanto ao nível de integração de SSI e criptografia avançada, e lacunas nas áreas de revogação, recuperação de acesso e controle de acesso seletivo em dispositivos de recursos limitados.",
       "fontes": [
-        "Exemplo_da24de257de987bc603b",
+        "Cardoso_2024",
         "Mansoor_2025",
         "Hudda_2025"
       ],
@@ -8799,7 +8835,7 @@
       "trechos": 18,
       "panorama": "A literatura sobre identidade autossoberana (SSI) em cidades inteligentes converge na necessidade de combinar credenciais verificáveis (VCs) com mecanismos criptográficos avançados para garantir privacidade, controle de acesso granular e interoperabilidade. Fioreze (2026) propõe um framework baseado em blockchain e criptografia baseada em atributos (ABE) para compartilhamento seguro de dados IIoT, destacando limitações em revogação e recuperação de credenciais. Gudipati (2025) apresenta VCs como facilitadoras da identidade digital, apontando desafios de adoção e sugerindo a integração com ABE para controle de acesso em IoT. O trabalho de S_2026 (2026) explora identidade blockchain em um sistema de segurança turística, mas não detalha SSI ou mecanismos de recuperação. Em conjunto, os estudos concordam que a descentralização e a criptografia são essenciais, diferem nas ênfases (dados industriais vs. identidade de usuários) e ainda não cobrem plenamente revogação escalável, recuperação de credenciais perdidas e a aplicação de ABE/VCs em serviços urbanos de larga escala.",
       "fontes": [
-        "Exemplo_60479560a08f3b4cd724",
+        "Fioreze_2026",
         "Gudipati_2025",
         "S_2026"
       ],
@@ -8811,7 +8847,7 @@
     "revisao": "4ca599c1ad574448079b",
     "assinatura": "5caf8f0e37cc48a66591",
     "gerado_em": "2026-09-18T13:19:27",
-    "status": "rascunho_em_revisao",
+    "status": "aguardando_fontes",
     "introducao": [
       {
         "titulo": "Introdução",
@@ -8982,5 +9018,15 @@
     "fontes_usadas": [
       "Papatheodorou_2025"
     ]
+  },
+  "lote_atual": {
+    "numero": 1,
+    "revisao": "686fa2b2925672e2fd71",
+    "status": "em_andamento",
+    "ids": [
+      "Cardoso_2024"
+    ],
+    "iniciado_em": "2026-09-22T14:31:06",
+    "modo": "um_trabalho_por_vez"
   }
 }

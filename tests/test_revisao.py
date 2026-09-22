@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import patch
 import test_motor
-import motor
-import revisao
+from src import motor
+from src import revisao
 
 
 class RevisaoTest(unittest.TestCase):
@@ -25,7 +25,7 @@ class RevisaoTest(unittest.TestCase):
         a['leitura_agente'] = {'assinatura': assinatura, 'revisao': 'orientacao-antiga'}
         motor.json_gravar(self.root / 'dados/leituras' / assinatura / '0.json',
                          {'id': 'ficha-antiga', 'resumo': 'Resumo já produzido.', 'evidencias': [], 'pagina': None, 'tipo': 'resumo'})
-        with patch('revisao.chamar', return_value={'problema': 'Resumo já produzido.'}) as chamar:
+        with patch('src.revisao.chamar', return_value={'problema': 'Resumo já produzido.'}) as chamar:
             self.p.ler()
         self.assertEqual(chamar.call_count, 2)
         self.assertEqual(chamar.call_args_list[0].args[1], 'reaproveitar-leituras')
@@ -47,7 +47,7 @@ class RevisaoTest(unittest.TestCase):
         assinatura = motor.chave(['revisao-exploratoria-v1', self.p.revisao, a['id_openalex'], ts])
         ident = motor.chave(['ler', assinatura, 0])
         self.p.estado['tarefas'][ident] = {'erro': 'temporário', 'tentar_em': 9999999999}
-        with patch.object(self.p, 'trechos', return_value=ts), patch('revisao.chamar', return_value={'resumo': 'Segundo.', 'evidencias': []}) as chamar:
+        with patch.object(self.p, 'trechos', return_value=ts), patch('src.revisao.chamar', return_value={'resumo': 'Segundo.', 'evidencias': []}) as chamar:
             self.p.ler()
         self.assertEqual(chamar.call_args.args[3]['pagina'], 2)
         self.assertEqual(a['leitura_agente']['feitos'], 1)
@@ -59,12 +59,12 @@ class RevisaoTest(unittest.TestCase):
             a['perfil_revisao'] = dict(revisao=self.p.revisao, problema='P', solucao='S', limites='L')
             a['leitura_agente'] = {'revisao': self.p.revisao, 'assinatura': nome, 'feitos': 1, 'total': 20, 'tipo': 'pdf', 'concluida': False}
         resposta = {'panorama': 'Há três abordagens.', 'ideias': [{'titulo':'Experimento comparativo', 'contribuicao':'Comparar A e C.', 'oportunidade':'Avaliação distinta.', 'fontes':['A','C']}]}
-        with patch('revisao.chamar', return_value=resposta) as chamar:
+        with patch('src.revisao.chamar', return_value=resposta) as chamar:
             self.p.propor()
         self.assertEqual(len(chamar.call_args.args[3]['trabalhos']), 3)
         self.assertEqual(len(self.p.estado['propostas']), 1)
         self.p.painel()
-        rel = (self.root / 'vault/RELATORIO.md').read_text(encoding='utf-8')
+        rel = (self.root / 'dados/anotacoes-ia.md').read_text(encoding='utf-8')
         self.assertIn('Comparar A e C.', rel)
         self.assertIn('Caminho experimental ainda em desenvolvimento', rel)
 
@@ -72,19 +72,19 @@ class RevisaoTest(unittest.TestCase):
         self.p.estado['propostas'] = [{'id':'ideia', 'revisao':self.p.revisao, 'titulo':'Ideia'}]
         path = self.root / 'dados/propostas/ideia.json'
         motor.json_gravar(path, {'modo':'brainstorm', 'titulo':'Ideia', 'meu_trabalho':'Comparar soluções'})
-        with patch('revisao.chamar', side_effect=ValueError('Falha')):
+        with patch('src.revisao.chamar', side_effect=ValueError('Falha')):
             revisao.detalhar(self.p)
         self.assertEqual(motor.ler_json(path, {})['meu_trabalho'], 'Comparar soluções')
         self.assertEqual(len(self.p.estado['propostas']), 1)
 
     def test_redacao_focada_publica_introducao_e_filtra_fontes(self):
         self.p.cfg['modo_pesquisa'] = 'focada'
-        with patch('revisao.matriz', return_value=[{
+        with patch('src.revisao.matriz', return_value=[{
             'id': 'A', 'titulo': 'SSI em cidades inteligentes',
             'escopo': {'tipo': 'pdf', 'feitos': 2, 'total': 2, 'concluida': True},
             'fichas_amostradas': [{'id': 'ficha-A', 'pagina': 1, 'resumo': 'SSI.',
                                    'evidencias': [{'afirmacao': 'Credencial verificável', 'citacao': 'verifiable credential'}]}],
-        }]), patch('revisao.chamar', return_value={
+        }]), patch('src.revisao.chamar', return_value={
             'introducao': ['Introdução [A].', 'Problema [A].', 'Objetivo [A].'],
             'fundamentacao_teorica': [
                 {'titulo': 'SSI', 'texto': 'Fundamentação [A].', 'fontes': ['A']},
@@ -101,7 +101,7 @@ class RevisaoTest(unittest.TestCase):
         self.assertEqual(self.p.estado['redacao_focada']['fontes_usadas'], ['A'])
         self.assertEqual(self.p.estado['redacao_focada']['mapa_fases'][0]['fontes'], ['A'])
         self.p.painel()
-        redacao = (self.root / 'vault/INTRODUCAO-E-FUNDAMENTACAO.md').read_text(encoding='utf-8')
+        redacao = (self.root / 'obsidian/TRABALHO.md').read_text(encoding='utf-8')
         self.assertIn('## Introdução', redacao)
         self.assertIn('Introdução [A].', redacao)
         self.assertNotIn('[inventada]', redacao)

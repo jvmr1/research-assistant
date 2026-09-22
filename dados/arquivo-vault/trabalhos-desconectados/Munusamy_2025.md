@@ -5,7 +5,7 @@ doi: https://doi.org/10.1038/s41598-025-12225-x
 ano: 2025
 status: triagem_pendente
 acesso_aberto: true
-pdf_local: pdfs/Munusamy_2025.pdf
+pdf_local: obsidian/referencias/pdfs/Munusamy_2025.pdf
 tags: [blockchain, cidades-inteligentes, governanca-de-dados, interoperabilidade, iot, privacidade]
 ---
 # Munusamy_2025
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1038/s41598-025-12225-x
 
 Triagem: revisar. O trabalho combina blockchain, computação de borda e técnicas de privacidade (SMPC, Differential Privacy) para melhorar a segurança e eficiência de aprendizado federado em ambientes sensíveis, o que se alinha aos interesses do grupo em sistemas distribuídos, blockchain e privacidade de dados. Contudo, o foco principal está na gestão de registros eletrônicos de saúde, sem abordar diretamente identidade digital auto‑soberana, controle de acesso baseado em atributos ou interoperabilidade entre serviços de cidades inteligentes. Por isso, embora seja relevante para a temática de segurança e privacidade em IoT/edge, não se enquadra como prioridade máxima para a linha de pesquisa em identidade e controle de acesso em cidades inteligentes, mas merece ser revisado para possíveis adaptações ou inspiração de técnicas.
 
-[PDF local](../../pdfs/Munusamy_2025.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Munusamy_2025.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

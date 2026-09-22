@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_60479560a08f3b4cd724",
+        "id": "Fioreze_2026",
         "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
         "escopo": {
           "tipo": "pdf",
@@ -80,7 +80,7 @@
         "possibilidades": "Incorporar credenciais verificáveis (VC) baseadas em DID para gerenciar políticas de acesso dinâmicas e permitir revogação descentralizada dos direitos de acesso aos dados IIoT. Além disso, adicionar um mecanismo de recuperação de credenciais usando secret sharing para mitigar perda de acesso pelo cidadão."
       },
       {
-        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "id": "Maia_2025",
         "titulo": "Danilo_TCC_final",
         "escopo": {
           "tipo": "pdf",
@@ -150,7 +150,7 @@
         "possibilidades": "Explorar a integração de mecanismos de revogação de credenciais verificáveis, como listas de revogação distribuídas, ao middleware InterSCity para melhorar a gestão de identidade e a resiliência contra comprometimento de credenciais."
       },
       {
-        "id": "Exemplo_da24de257de987bc603b",
+        "id": "Cardoso_2024",
         "titulo": "André Luiz Almeida Cardoso",
         "escopo": {
           "tipo": "pdf",

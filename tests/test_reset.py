@@ -3,7 +3,7 @@ import tempfile
 import types
 import unittest
 from pathlib import Path
-import motor
+from src import motor
 
 
 class ResetTest(unittest.TestCase):
@@ -12,7 +12,7 @@ class ResetTest(unittest.TestCase):
             root = Path(pasta)
             dados = root / 'dados'
             dados.mkdir()
-            instr = root / 'INSTRUCOES.md'
+            instr = root / 'ANOTACOES.md'
             instr.write_text('Minhas instruções.', encoding='utf-8')
             base = types.SimpleNamespace(ROOT=root, INSTRUCOES=instr,
                 carregar_jsonl=lambda p: [json.loads(l) for l in p.read_text().splitlines() if l.strip()],

@@ -1,12 +1,12 @@
-﻿import json
+import json
 from pathlib import Path
 import tempfile
 import types
 import unittest
 from unittest.mock import patch
 
-import agente
-import motor
+from src import agente
+from src import motor
 
 
 class PesquisaTest(unittest.TestCase):
@@ -16,8 +16,11 @@ class PesquisaTest(unittest.TestCase):
         self.root = Path(self.temp.name)
         self.base = types.SimpleNamespace(**{k: getattr(agente, k) for k in dir(agente) if not k.startswith('__')})
         self.base.ROOT = self.root
-        self.base.ARTIGOS = self.root / 'vault/trabalhos'
-        self.base.INSTRUCOES = self.root / 'vault/INSTRUCOES.md'
+        self.base.VAULT = self.root / 'obsidian'
+        self.base.ARTIGOS = self.root / 'obsidian/referencias/fichamentos'
+        self.base.PDFS = self.root / 'obsidian/referencias/pdfs'
+        self.base.EXEMPLOS = self.root / 'obsidian/referencias/pdfs'
+        self.base.INSTRUCOES = self.root / 'obsidian/ANOTACOES.md'
         self.base.INSTRUCOES.parent.mkdir(parents=True)
         self.texto = '# Decisões\nInvestigar revogação, sem exigir blockchain.\n## Consultas iniciais\n- IoT revocation\n- ano mínimo: 2025\n'
         self.base.INSTRUCOES.write_text(self.texto, encoding='utf-8')
@@ -36,12 +39,14 @@ class PesquisaTest(unittest.TestCase):
 
     def test_instrucoes_preservadas_e_transmitidas(self):
         self.artigo('A')
-        with patch('motor.gerar', return_value={'classificacao': 'priorizar', 'justificativa': 'Revogação'}) as gerar:
+        with patch('src.motor.gerar', return_value={'classificacao': 'priorizar', 'justificativa': 'Revogação'}) as gerar:
             self.p.triagem()
         self.assertEqual(gerar.call_args.args[1], self.texto)
         self.p.painel()
-        self.assertEqual(self.base.INSTRUCOES.read_text(encoding='utf-8'), self.texto)
-        self.assertTrue((self.root / 'vault/RELATORIO.md').exists())
+        texto_final = self.base.INSTRUCOES.read_text(encoding='utf-8')
+        self.assertIn(self.texto, texto_final)
+        self.assertEqual(texto_final.count('<!-- agente:propostas:inicio -->'), 1)
+        self.assertTrue((self.root / 'dados/anotacoes-ia.md').exists())
 
     def test_variaveis_de_busca_geram_consultas(self):
         self.base.INSTRUCOES.write_text(
@@ -60,10 +65,10 @@ class PesquisaTest(unittest.TestCase):
 
     def test_preleitura_aprova_antes_da_leitura_integral(self):
         a = self.artigo('A')
-        a['pdf_local'] = 'pdfs/A.pdf'
+        a['pdf_local'] = 'obsidian/referencias/pdfs/A.pdf'
         a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
         with patch.object(self.p, 'trechos', return_value=[{'pagina': 1, 'texto': 'Introduction smart city access control. Conclusion aligned contribution.', 'tipo': 'pdf'}]), \
-             patch('motor.gerar', return_value={'decisao': 'ler_integralmente', 'justificativa': 'alinhado', 'evidencias': ['access control']}):
+             patch('src.motor.gerar', return_value={'decisao': 'ler_integralmente', 'justificativa': 'alinhado', 'evidencias': ['access control']}):
             self.p.pre_leitura()
         self.assertEqual(a['pre_leitura_agente']['decisao'], 'ler_integralmente')
         self.assertTrue(self.p.aprovado_preleitura(a))
@@ -78,7 +83,7 @@ class PesquisaTest(unittest.TestCase):
             raise_for_status=lambda: None,
             json=lambda: {'best_oa_location': {'url_for_pdf': 'https://repo.example/a.pdf', 'url_for_landing_page': 'https://repo.example/a'}}
         )
-        with patch('motor.requests.get', return_value=resposta):
+        with patch('src.motor.requests.get', return_value=resposta):
             self.assertTrue(self.p.resolver_texto_aberto(a))
         self.assertEqual(a['url_pdf'], 'https://repo.example/a.pdf')
         self.assertTrue(a['acesso_aberto'])
@@ -94,7 +99,7 @@ class PesquisaTest(unittest.TestCase):
                                   json=lambda: {'externalIds': {'DOI': '10.1234/teste'}, 'url': 'https://semanticscholar.org/paper/x',
                                                 'openAccessPdf': {'url': 'https://pdf.example/a.pdf'}}),
         ]
-        with patch('motor.requests.get', side_effect=respostas):
+        with patch('src.motor.requests.get', side_effect=respostas):
             self.assertTrue(self.p.resolver_texto_aberto(a))
         self.assertEqual(a['url_pdf'], 'https://pdf.example/a.pdf')
         self.assertIn('Semantic Scholar', a['fontes_texto_completo'])
@@ -103,7 +108,7 @@ class PesquisaTest(unittest.TestCase):
         a = self.artigo('A')
         a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
         with patch.object(self.p, 'trechos', return_value=[{'pagina': None, 'texto': 'Resumo apenas.', 'tipo': 'resumo'}]), \
-             patch('motor.gerar') as gerar:
+             patch('src.motor.gerar') as gerar:
             self.p.pre_leitura()
         self.assertEqual(a['pre_leitura_agente']['decisao'], 'descartar_sem_texto_integral')
         self.assertFalse(self.p.aprovado_preleitura(a))
@@ -112,9 +117,9 @@ class PesquisaTest(unittest.TestCase):
     def test_preleitura_com_texto_nao_registra_falsa_falta_de_texto(self):
         a = self.artigo('A')
         a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
-        a['pdf_local'] = 'pdfs/A.pdf'
+        a['pdf_local'] = 'obsidian/referencias/pdfs/A.pdf'
         with patch.object(self.p, 'trechos', return_value=[{'pagina': 1, 'texto': 'Introdução e conclusão alinhadas. ' * 80, 'tipo': 'pdf'}]), \
-             patch('motor.gerar', return_value={'decisao': 'descartar_sem_texto_integral', 'justificativa': 'modelo confundiu a decisão'}):
+             patch('src.motor.gerar', return_value={'decisao': 'descartar_sem_texto_integral', 'justificativa': 'modelo confundiu a decisão'}):
             self.p.pre_leitura()
         self.assertEqual(a['pre_leitura_agente']['decisao'], 'ler_integralmente')
         self.assertEqual(a['pre_leitura_agente']['decisao_original'], 'descartar_sem_texto_integral')
@@ -122,12 +127,12 @@ class PesquisaTest(unittest.TestCase):
     def test_preleitura_prioritaria_com_texto_supera_decisao_contraditoria(self):
         a = self.artigo('A')
         a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
-        a['pdf_local'] = 'pdfs/A.pdf'
+        a['pdf_local'] = 'obsidian/referencias/pdfs/A.pdf'
         self.p.artigos = [a]
         self.p.estado['lote_atual'] = {'revisao': self.p.revisao, 'status': 'em_andamento', 'ids': ['A']}
         resposta = {'decisao': 'precisa_texto_melhor', 'justificativa': 'Tema alinhado, mas quero texto melhor.'}
         with patch.object(self.p, 'trechos', return_value=[{'pagina': 1, 'texto': 'x' * 2000, 'tipo': 'pdf'}]), \
-             patch('motor.gerar_com_fallback', return_value=resposta):
+             patch('src.motor.gerar_com_fallback', return_value=resposta):
             self.p.pre_leitura()
         self.assertEqual(a['pre_leitura_agente']['decisao'], 'ler_integralmente')
         self.assertEqual(a['pre_leitura_agente']['decisao_original'], 'precisa_texto_melhor')
@@ -136,23 +141,23 @@ class PesquisaTest(unittest.TestCase):
     def test_preleitura_html_legivel_supera_decisao_contraditoria(self):
         a = self.artigo('A')
         a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'revisar'}
-        a['texto_local'] = 'pdfs/A.html'
+        a['texto_local'] = 'obsidian/referencias/pdfs/A.html'
         a['pdf_local'] = ''
         self.p.artigos = [a]
         self.p.estado['lote_atual'] = {'revisao': self.p.revisao, 'status': 'em_andamento', 'ids': ['A']}
         resposta = {'decisao': 'precisa_texto_melhor', 'justificativa': 'Tema alinhado, mas quero texto melhor.'}
         with patch.object(self.p, 'trechos', return_value=[{'pagina': None, 'texto': 'x' * 2000, 'tipo': 'html'}]), \
-             patch('motor.gerar_com_fallback', return_value=resposta):
+             patch('src.motor.gerar_com_fallback', return_value=resposta):
             self.p.pre_leitura()
         self.assertEqual(a['pre_leitura_agente']['decisao'], 'ler_integralmente')
 
     def test_reabre_preleitura_com_texto_local_que_ficou_como_insuficiente(self):
         a = self.artigo('A')
         a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'revisar'}
-        a['texto_local'] = 'pdfs/A.html'
+        a['texto_local'] = 'obsidian/referencias/pdfs/A.html'
         a['pre_leitura_agente'] = {'revisao': self.p.revisao, 'decisao': 'precisa_texto_melhor'}
-        (self.root / 'pdfs').mkdir()
-        (self.root / 'pdfs/A.html').write_text('<html><body>texto completo</body></html>', encoding='utf-8')
+        (self.root / 'obsidian/referencias/pdfs').mkdir(parents=True)
+        (self.root / 'obsidian/referencias/pdfs/A.html').write_text('<html><body>texto completo</body></html>', encoding='utf-8')
         ident = motor.chave(['preleitura', self.p.revisao, a['id_openalex'], a.get('pdf_local'), a.get('texto_local')])
         self.p.estado['tarefas'][ident] = {'erro': 'antigo', 'definitivo': True}
         self.p.reabrir_preleituras_com_texto_local()
@@ -162,7 +167,7 @@ class PesquisaTest(unittest.TestCase):
     def test_sem_resumo_nao_bloqueia_os_seguintes(self):
         a = self.artigo('SemResumo', False)
         b = self.artigo('ComResumo')
-        with patch('motor.gerar', return_value={'classificacao': 'priorizar', 'justificativa': 'Relevante'}) as gerar:
+        with patch('src.motor.gerar', return_value={'classificacao': 'priorizar', 'justificativa': 'Relevante'}) as gerar:
             self.p.triagem()
             self.p.triagem()
         self.assertEqual(gerar.call_count, 1)
@@ -193,7 +198,7 @@ class PesquisaTest(unittest.TestCase):
             if tarefa.startswith('Consolide'):
                 return {'resumo': 'Resumo consolidado.', 'lacunas_possiveis': [], 'propostas_possiveis': []}
             return ficha.copy()
-        with patch('motor.gerar', side_effect=responder) as gerar:
+        with patch('src.motor.gerar', side_effect=responder) as gerar:
             self.p.ler()
             self.p.ler()
         self.assertEqual(gerar.call_count, 2)
@@ -203,7 +208,7 @@ class PesquisaTest(unittest.TestCase):
         self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia', 'revisao': self.p.revisao, 'fontes': ['A']}]
         motor.json_gravar(self.root / 'dados/propostas/p.json', {'fontes': ['A'], 'meu_trabalho': 'Ideia', 'buscas': []})
         self.p.painel()
-        nota = self.root / 'vault/trabalhos/A.md'
+        nota = self.root / 'obsidian/referencias/fichamentos/A.md'
         self.assertIn('Página resumo', nota.read_text(encoding='utf-8'))
 
     def test_trabalho_ja_sintetizado_nao_e_relido(self):
@@ -215,7 +220,7 @@ class PesquisaTest(unittest.TestCase):
         a['leitura_agente'] = {'revisao': self.p.revisao, 'assinatura': 'a', 'feitos': 1, 'total': 1, 'concluida': True, 'tipo': 'resumo', 'paginas_sem_texto': []}
         a['sintese_artigo'] = {'revisao': self.p.revisao, 'assinatura': 'a', 'resumo': 'já analisado'}
         with patch.object(self.p, 'trechos', return_value=[{'pagina': None, 'texto': 'B system', 'tipo': 'resumo'}]) as trechos, \
-                patch('motor.gerar', side_effect=lambda *args, **kwargs: {'resumo': 'B.', 'evidencias': [{'afirmacao': 'B', 'citacao': 'B system'}]}):
+                patch('src.motor.gerar', side_effect=lambda *args, **kwargs: {'resumo': 'B.', 'evidencias': [{'afirmacao': 'B', 'citacao': 'B system'}]}):
             self.p.ler()
         self.assertEqual(trechos.call_args.args[0]['nome_local'], 'B')
         self.assertEqual(a['sintese_artigo']['resumo'], 'já analisado')
@@ -248,7 +253,7 @@ class PesquisaTest(unittest.TestCase):
                 return {'resumo': 'A completo.', 'lacunas_possiveis': [], 'propostas_possiveis': []}
             return {'resumo': dados['texto'], 'evidencias': []}
         with patch.object(self.p, 'trechos', side_effect=trechos), \
-                patch('revisao.chamar', side_effect=resposta):
+                patch('src.revisao.chamar', side_effect=resposta):
             self.p.ler()
         self.assertEqual(a['leitura_agente']['feitos'], 2)
         self.assertTrue(a['leitura_agente']['concluida'])
@@ -264,14 +269,14 @@ class PesquisaTest(unittest.TestCase):
         self.assertNotEqual(antiga, self.p.revisao)
         self.assertEqual(len(self.p.artigos), 1)
         self.assertEqual(len(self.p.estado['propostas']), 1)
-        self.assertIn('orientações anteriores', (self.root / 'vault/RELATORIO.md').read_text(encoding='utf-8'))
+        self.assertIn('orientações anteriores', (self.root / 'dados/anotacoes-ia.md').read_text(encoding='utf-8'))
 
     def test_proposta_usa_fontes_reais_e_registra_buscas(self):
         for nome in ['A', 'B']:
             a = self.artigo(nome)
             a['triagem_agente'] = {'revisao': self.p.revisao, 'classificacao': 'priorizar'}
             a['pre_leitura_agente'] = {'revisao': self.p.revisao, 'decisao': 'ler_integralmente', 'justificativa': 'teste'}
-        with patch('motor.gerar', side_effect=lambda *args, **kwargs: {'resumo': 'Sistema.', 'evidencias': [{'afirmacao': 'Sistema', 'citacao': 'A system'}]}):
+        with patch('src.motor.gerar', side_effect=lambda *args, **kwargs: {'resumo': 'Sistema.', 'evidencias': [{'afirmacao': 'Sistema', 'citacao': 'A system'}]}):
             self.p.ler()
             self.p.ler()
         def propor(modelo, orientacao, tarefa, dados, **kwargs):
@@ -279,12 +284,12 @@ class PesquisaTest(unittest.TestCase):
             self.assertEqual({f['id'] for f in fontes}, {'A', 'B'})
             return {'panorama': 'Panorama acumulado do modelo.', 'ideias': [{'titulo': 'Ideia', 'oportunidade': 'Investigar revogação',
                 'contribuicao': 'Conteúdo do modelo meu_trabalho', 'fontes': ['A', 'B']}], 'buscas': ['IoT revocation experiment']}
-        with patch('motor.gerar', side_effect=propor):
+        with patch('src.motor.gerar', side_effect=propor):
             self.p.propor()
             self.p.propor()
         self.assertEqual(len(self.p.estado['propostas']), 1)
         self.p.painel()
-        path = self.root / 'vault/RELATORIO.md'
+        path = self.root / 'dados/anotacoes-ia.md'
         texto = path.read_text(encoding='utf-8')
         self.assertIn('O que seria o meu trabalho', texto)
         self.assertIn('Conteúdo do modelo meu_trabalho', texto)
@@ -300,7 +305,7 @@ class PesquisaTest(unittest.TestCase):
             'meu_trabalho': 'Avaliar controle de acesso com identidade descentralizada em cidades inteligentes.',
             'hipotese_lacuna': 'Falta avaliação integrada entre identidade e controle de acesso.'
         })
-        (self.root / 'vault/AVALIAR-PROPOSTAS.md').write_text(
+        (self.root / 'obsidian/ANOTACOES.md').write_text(
             '# Avaliar propostas\n\n## Controle de acesso adaptativo\nid: p1\navaliacao: gostei\ncomentario: direção promissora\n',
             encoding='utf-8')
         self.p.aplicar_feedback_propostas()
@@ -313,7 +318,7 @@ class PesquisaTest(unittest.TestCase):
         motor.json_gravar(self.root / 'dados/propostas/p1.json', {
             'id': 'p1', 'titulo': 'Ideia fraca', 'fontes': ['A'], 'meu_trabalho': 'Não seguir.'
         })
-        (self.root / 'vault/AVALIAR-PROPOSTAS.md').write_text(
+        (self.root / 'obsidian/ANOTACOES.md').write_text(
             '# Avaliar propostas\n\n## Ideia fraca\nid: p1\navaliacao: descartar\ncomentario: fora do foco\n',
             encoding='utf-8')
         self.p.aplicar_feedback_propostas()
@@ -329,8 +334,8 @@ class PesquisaTest(unittest.TestCase):
             def iter_lines(self):
                 yield json.dumps({'response': '{}', 'done': True, 'done_reason': 'length'}).encode()
         tags = types.SimpleNamespace(json=lambda: {'models': [{'name': 'teste'}]})
-        with patch('motor.ollama_responde', return_value=tags), \
-             patch('motor.requests.post', return_value=Response()), \
+        with patch('src.motor.ollama_responde', return_value=tags), \
+             patch('src.motor.requests.post', return_value=Response()), \
              self.assertRaisesRegex(ValueError, 'cortada'):
             motor.gerar('teste', '', '', {})
 
@@ -339,7 +344,7 @@ class PesquisaTest(unittest.TestCase):
         resposta.raise_for_status = lambda: None
         resposta.json = lambda: {'choices': [{'message': {'content': '{"ok": true}'}}]}
         with patch.dict('os.environ', {'OPENROUTER_API_KEY': 'chave-de-teste'}), \
-             patch('motor.requests.post', return_value=resposta) as post:
+             patch('src.motor.requests.post', return_value=resposta) as post:
             resultado = motor.gerar('openrouter/free', 'orientação', 'tarefa', {'x': 1})
         self.assertEqual(resultado, {'ok': True})
         self.assertEqual(post.call_args.kwargs['headers']['Authorization'], 'Bearer chave-de-teste')
@@ -354,8 +359,8 @@ class PesquisaTest(unittest.TestCase):
     def test_pdf_real_extrai_paginas_e_detecta_pagina_sem_texto(self):
         from pypdf import PdfWriter
         from pypdf.generic import DecodedStreamObject, NameObject, DictionaryObject
-        path = self.root / 'pdfs/teste.pdf'
-        path.parent.mkdir()
+        path = self.root / 'obsidian/referencias/pdfs/teste.pdf'
+        path.parent.mkdir(parents=True)
         writer = PdfWriter()
         page = writer.add_blank_page(width=600, height=800)
         fonte = DictionaryObject({NameObject('/Type'): NameObject('/Font'), NameObject('/Subtype'): NameObject('/Type1'), NameObject('/BaseFont'): NameObject('/Helvetica')})
@@ -366,7 +371,7 @@ class PesquisaTest(unittest.TestCase):
         writer.add_blank_page(width=600, height=800)
         writer.write(path)
         a = self.artigo('PDF', False)
-        a['pdf_local'] = 'pdfs/teste.pdf'
+        a['pdf_local'] = 'obsidian/referencias/pdfs/teste.pdf'
         trechos = self.p.trechos(a)
         self.assertEqual(trechos[0]['pagina'], 1)
         self.assertIn('A system', trechos[0]['texto'])
@@ -374,11 +379,11 @@ class PesquisaTest(unittest.TestCase):
         self.assertEqual(trechos[1]['pagina'], 2)
 
     def test_html_local_extrai_texto_como_fonte_de_leitura(self):
-        path = self.root / 'pdfs/teste.html'
-        path.parent.mkdir()
+        path = self.root / 'obsidian/referencias/pdfs/teste.html'
+        path.parent.mkdir(parents=True)
         path.write_text('<html><script>ignorar()</script><h1>Título</h1><p>Texto aberto.</p></html>', encoding='utf-8')
         a = self.artigo('HTML', False)
-        a['texto_local'] = 'pdfs/teste.html'
+        a['texto_local'] = 'obsidian/referencias/pdfs/teste.html'
         trechos = self.p.trechos(a)
         self.assertEqual(trechos[0]['tipo'], 'html')
         self.assertIn('Título Texto aberto.', trechos[0]['texto'])
@@ -389,7 +394,7 @@ class PesquisaTest(unittest.TestCase):
         nota = self.base.ARTIGOS / 'A.md'
         original = '---\nstatus: irrelevante\n---\nDecisão do orientador: fora de escopo.'
         nota.write_text(original, encoding='utf-8')
-        with patch('motor.gerar') as gerar:
+        with patch('src.motor.gerar') as gerar:
             self.p.triagem()
         gerar.assert_not_called()
         self.assertEqual(nota.read_text(encoding='utf-8'), original)
@@ -411,7 +416,7 @@ class PesquisaTest(unittest.TestCase):
         self.p.cfg['modelo_ia'] = 'openrouter'
         self.p.cfg['modelo_openrouter'] = 'openai/gpt-oss-120b'
         self.p.cfg['modelo_ollama'] = 'qwen2.5:7b-instruct-q4_K_M'
-        with patch.dict('motor.os.environ', {'OPENROUTER_API_KEY': 'x'}, clear=False):
+        with patch.dict('src.motor.os.environ', {'OPENROUTER_API_KEY': 'x'}, clear=False):
             modelos = self.p.modelos_ia()
         self.assertEqual(modelos, ['openai/gpt-oss-120b', 'qwen2.5:7b-instruct-q4_K_M'])
 
@@ -419,7 +424,7 @@ class PesquisaTest(unittest.TestCase):
         from unittest.mock import Mock
         resposta = Mock()
         resposta.json.return_value = {'models': [{'name': 'llama3.1:8b-instruct-q4_K_M'}]}
-        with patch('motor.requests.get', return_value=resposta),              patch('motor.baixar_modelo_ollama') as baixar,              patch('motor.gerar') as gerar:
+        with patch('src.motor.requests.get', return_value=resposta),              patch('src.motor.baixar_modelo_ollama') as baixar,              patch('src.motor.gerar') as gerar:
             self.assertTrue(self.p.modelo_disponivel())
         baixar.assert_not_called()
         gerar.assert_not_called()
@@ -428,7 +433,7 @@ class PesquisaTest(unittest.TestCase):
         from unittest.mock import Mock
         resposta = Mock()
         resposta.json.return_value = {'models': []}
-        with patch('motor.requests.get', return_value=resposta),              patch('motor.baixar_modelo_ollama') as baixar,              patch('motor.gerar') as gerar:
+        with patch('src.motor.requests.get', return_value=resposta),              patch('src.motor.baixar_modelo_ollama') as baixar,              patch('src.motor.gerar') as gerar:
             self.assertTrue(self.p.modelo_disponivel())
         baixar.assert_called_once_with('modelo-teste')
         gerar.assert_not_called()

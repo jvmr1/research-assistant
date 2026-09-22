@@ -1,4 +1,4 @@
-﻿# Assistente de Pesquisa Acadêmica
+# Assistente de Pesquisa Acadêmica
 
 Este projeto ajuda um pesquisador a sair de uma ideia, de instruções e de
 alguns trabalhos-base para uma revisão organizada e um primeiro texto acadêmico.
@@ -12,27 +12,28 @@ original, corrigir interpretações e decidir o que pode ser aproveitado. O text
 gerado não deve ser apresentado como autoria automática nem como substituto da
 leitura, da orientação ou da contribuição intelectual do pesquisador. A proposta
 é ajudar a começar e organizar a escrita, não plagiar: as fontes são registradas
-para conferência e a redação deve ser reescrita e validada pelo pesquisador.
+para conferência e a redação deve ser revisada e validada pelo pesquisador.
 
 O fluxo de uso é simples:
 
-1. Edite `vault/INSTRUCOES.md` com o tema, as perguntas e o modo de pesquisa.
-2. Coloque trabalhos-base em `exemplos/` quando quiser que o agente os leia e use como sementes da pesquisa.
+1. Edite `obsidian/ANOTACOES.md` como um caderno do pesquisador: tema, perguntas, decisões, dúvidas, feedback e ideias soltas.
+2. Coloque trabalhos-base em `obsidian/referencias/pdfs/` quando quiser que o agente os leia e use como sementes da pesquisa.
 3. Configure a chave em `.env` e instale as dependências.
 4. Rode `python agente.py` e acompanhe o terminal.
-5. Leia os relatórios e revise as fontes e o texto produzido.
+5. Leia `obsidian/TRABALHO.md`, as propostas no próprio arquivo de anotações e os fichamentos em `obsidian/referencias/fichamentos/`.
 6. Rode novamente para ampliar o corpus e melhorar a redação.
 
-O repositório inclui o estado de pesquisa, PDFs, exemplos, notas Markdown e
+O repositório inclui o estado de pesquisa, PDFs, trabalhos-base, notas Markdown e
 testes para que outra máquina receba o projeto no mesmo ponto. Segredos locais,
 bytecode e ambientes virtuais instalados não entram no Git.
 
 ## Estrutura versionada
 
-- `agente.py`: ponto de entrada e configuração editável. Cria `vault/INSTRUCOES.md` em clones novos.
-- `motor.py`: orquestra execução, buscas acadêmicas, estado persistente, downloads permitidos, OpenRouter/Ollama, triagem e pré-leitura.
-- `revisao.py`: leitura, fichamento, síntese, comparação entre trabalhos e geração de propostas.
-- `apresentacao.py`: gera os arquivos Markdown visíveis em `vault/`.
+- `agente.py`: atalho de execução na raiz. Mantém o comando simples: `python agente.py`.
+- `src/agente.py`: configuração, constantes, leitura das anotações e utilitários de metadados.
+- `src/motor.py`: orquestra execução, buscas acadêmicas, estado persistente, downloads permitidos, OpenRouter/Ollama, triagem e pré-leitura.
+- `src/revisao.py`: leitura, fichamento, síntese, comparação entre trabalhos e geração de propostas.
+- `src/apresentacao.py`: gera os arquivos Markdown visíveis em `obsidian/`.
 - `tests/`: testes de regressão.
 - `.env.example`: modelo de configuração local, sem chave.
 - `.gitignore`: impede versionar `.env`, bytecode, caches e ambientes virtuais.
@@ -42,13 +43,11 @@ bytecode e ambientes virtuais instalados não entram no Git.
 Estas pastas fazem parte do estado transportável do projeto e podem ser
 versionadas:
 
-- `exemplos/`: trabalhos fornecidos pelo pesquisador. São lidos integralmente
-	como sementes e também orientam a forma da redação, mas não são usados como
-	citações automáticas.
-- `vault/`: instruções, relatórios, redação, notas Markdown e avaliações.
-- `dados/`: estado interno, fichamentos, diagnósticos, propostas e histórico.
-- `pdfs/`: PDFs/HTML baixados de fontes abertas ou colocados manualmente.
-- `.obsidian/`: configuração do Obsidian, quando houver.
+- `obsidian/`: pasta que você abre no Obsidian; contém o caderno do pesquisador, o trabalho em construção e a biblioteca de referências.
+- `obsidian/referencias/pdfs/`: repositório dos textos completos usados como base da pesquisa, em PDF, HTML ou outro formato aberto.
+- `obsidian/referencias/fichamentos/`: um Markdown por trabalho de referência, com resumo/fichamento para leitura humana e para a IA reutilizar antes de decidir reler o texto completo.
+- `dados/`: estado interno para as IAs retomarem trabalho entre execuções: fichamentos, diagnósticos, propostas, histórico e `anotacoes-ia.md`.
+- `obsidian/.obsidian/`: configuração do Obsidian.
 
 Como PDFs e estado de pesquisa podem aumentar o repositório, confirme a política
 do seu servidor Git antes de publicar. Para esta cópia, eles são intencionais e
@@ -70,9 +69,9 @@ python -m unittest discover -s tests -v
 python agente.py --uma-vez
 ```
 
-Na primeira execução, se `vault/INSTRUCOES.md` não existir, o agente cria um
-arquivo inicial para você editar. Nesta versão, o arquivo já versionado em
-`vault/` mantém as instruções e o contexto escolhidos pelo pesquisador.
+Na primeira execução, se `obsidian/ANOTACOES.md` não existir, o agente cria um
+arquivo inicial para você editar. Esse arquivo substitui os antigos arquivos
+separados de instruções, propostas, avaliação de propostas e metodologia.
 
 ## Instalação no Windows
 
@@ -113,9 +112,9 @@ $env:OPENROUTER_API_KEY = "cole_sua_chave_aqui"
 python agente.py
 ```
 
-A configuração padrão em `vault/INSTRUCOES.md` usa um modelo principal fixo. Para custo zero e comportamento mais estável, use `modelo ia: ollama`. Para usar OpenRouter, informe um único modelo em `modelo ia:` ou use `modelo ia: openrouter` junto com `modelo openrouter:`. O Ollama continua como reserva técnica.
+A configuração padrão em `obsidian/ANOTACOES.md` usa um modelo principal fixo. Para custo zero e comportamento mais estável, use `modelo ia: ollama`. Para usar OpenRouter, informe um único modelo em `modelo ia:` ou use `modelo ia: openrouter` junto com `modelo openrouter:`. O Ollama continua como reserva técnica.
 
-Se você colocou crédito no OpenRouter e quiser usar um modelo pago específico, edite `vault/INSTRUCOES.md`:
+Se você colocou crédito no OpenRouter e quiser usar um modelo pago específico, edite `obsidian/ANOTACOES.md`:
 
 ```md
 - modelo ia: openrouter
@@ -127,7 +126,7 @@ Os nomes exatos dos modelos mudam com o tempo. Use os slugs atuais mostrados pel
 
 ## Configurando IA local com Ollama
 
-Instale o Ollama. O agente consulta os modelos instalados; se encontrar um modelo compatível, usa esse modelo. Se não houver nenhum modelo local adequado e o Ollama for necessário, ele tenta baixar automaticamente o modelo indicado em `vault/INSTRUCOES.md`.
+Instale o Ollama. O agente consulta os modelos instalados; se encontrar um modelo compatível, usa esse modelo. Se não houver nenhum modelo local adequado e o Ollama for necessário, ele tenta baixar automaticamente o modelo indicado em `obsidian/ANOTACOES.md`.
 
 Você também pode baixar manualmente antes de rodar:
 
@@ -144,7 +143,7 @@ python agente.py
 
 Se `ollama serve` não estiver rodando, o agente tenta iniciar automaticamente. No Linux, se você instalou Ollama como serviço, normalmente ele já fica disponível em `http://localhost:11434`.
 
-Para uma máquina com i9, 16 GB de RAM e GPU com 8 GB de VRAM, comece com um modelo 7B ou 8B quantizado. Se sobrar memória e a velocidade for aceitável, teste um 14B quantizado. Para este projeto, estabilidade e baixa alucinação importam mais que velocidade. Compare modelos olhando se eles retornam JSON válido, citam evidências corretamente e produzem propostas úteis no `RELATORIO.md`.
+Para uma máquina com i9, 16 GB de RAM e GPU com 8 GB de VRAM, comece com um modelo 7B ou 8B quantizado. Se sobrar memória e a velocidade for aceitável, teste um 14B quantizado. Para este projeto, estabilidade e baixa alucinação importam mais que velocidade. Compare modelos olhando se eles retornam JSON válido, citam evidências corretamente e produzem propostas úteis em `obsidian/ANOTACOES.md`.
 
 Exemplos para testar localmente:
 
@@ -153,7 +152,7 @@ ollama pull qwen2.5:7b-instruct-q4_K_M
 ollama pull qwen2.5:14b-instruct-q4_K_M
 ```
 
-Depois ajuste em `vault/INSTRUCOES.md`:
+Depois ajuste em `obsidian/ANOTACOES.md`:
 
 ```md
 - modelo ia: ollama
@@ -169,7 +168,7 @@ Se você tiver uma chave do Semantic Scholar, coloque-a em `.env` como
 serializa as chamadas ao Semantic Scholar para respeitar o limite de 1
 requisição por segundo, cumulativo entre endpoints.
 
-No `vault/INSTRUCOES.md`, a configuração recomendada é:
+No `obsidian/ANOTACOES.md`, a configuração recomendada é:
 
 ```md
 - fonte acadêmica principal: openalex
@@ -216,33 +215,31 @@ Use `Ctrl+C` para pausar. Rodar o mesmo comando depois retoma o estado salvo.
 
 ## Fluxo do agente
 
-1. Lê `vault/INSTRUCOES.md` e o estado persistido em `dados/`.
-2. Importa PDFs de `exemplos/` e `pdfs/`; os trabalhos-base de `exemplos/` são sementes prioritárias e têm leitura integral obrigatória.
+1. Lê `obsidian/ANOTACOES.md` e o estado persistido em `dados/`.
+2. Importa textos completos de `obsidian/referencias/pdfs/`; trabalhos-base indicados em `ANOTACOES.md` são sementes prioritárias e têm leitura integral obrigatória.
 3. Gera consultas a partir das variáveis, consultas manuais e ideias encontradas.
 4. Busca resultados no OpenAlex por padrão; Crossref e Semantic Scholar são fallbacks configuráveis.
 5. Deduplica por DOI ou título e faz triagem por título/resumo.
 6. Tenta obter texto completo aberto por fontes permitidas, incluindo Unpaywall e Semantic Scholar.
 7. Faz pré-leitura e depois fichamento por trechos, validando citações literais contra o texto original.
 8. Consolida cada trabalho e compara as abordagens, limites, avaliações e possibilidades.
-9. No modo `focada`, produz o mapa de fases e atualiza `vault/INTRODUCAO-E-FUNDAMENTACAO.md`.
+9. No modo `focada`, produz o mapa de fases e atualiza `obsidian/TRABALHO.md`.
 10. No modo `geral`, organiza o estado da arte, hipóteses de lacunas e propostas de contribuição.
 11. Registra fontes, consultas, tarefas e falhas em `dados/` para permitir retomada em outra máquina.
 12. O pesquisador revisa o resultado, confere referências e pode ajustar as instruções antes da próxima rodada.
 
 ## Arquivos que você deve olhar durante o uso
 
-- `vault/INSTRUCOES.md`: comandos e direção da pesquisa. Você edita.
-- `vault/INTRODUCAO-E-FUNDAMENTACAO.md`: redação focada com links para as notas dos trabalhos citados.
-- `vault/PROPOSTAS-DE-TRABALHO.md`: lista de propostas, lacunas, hipóteses, formas de avaliação e fontes.
-- `vault/AVALIAR-PROPOSTAS.md`: avaliação das ideias para guiar próximas buscas. Você edita.
-- `vault/trabalhos/`: notas dos trabalhos citados ou usados nas propostas. Cada nota deve ter síntese/fichamento e apontar para o anexo local quando houver.
-- `pdfs/`: PDFs ou HTMLs dos textos completos disponíveis.
-- `vault/RELATORIO.md` e `vault/METODOLOGIA-REVISAO.md`: arquivos operacionais/legados de rastreabilidade.
+- `obsidian/ANOTACOES.md`: caderno do pesquisador e único arquivo de interação com a IA. Você escreve orientações livres, acompanha propostas e marca `avaliacao:`/`comentario:` para guiar próximas buscas.
+- `obsidian/TRABALHO.md`: texto acadêmico em construção, hoje com introdução, fundamentação e mapa conceitual citando as notas dos trabalhos.
+- `obsidian/referencias/fichamentos/`: fichamentos dos trabalhos citados ou usados nas propostas. Cada nota deve resumir o trabalho, registrar lacunas/evidências e apontar para o texto completo local quando houver.
+- `obsidian/referencias/pdfs/`: textos completos disponíveis, baixados de fontes abertas ou colocados manualmente.
+- `dados/anotacoes-ia.md`: memória operacional e rastreabilidade do agente. Em geral você não precisa abrir este arquivo.
 
 ## Testes
 
 ```bash
-python -m py_compile agente.py motor.py revisao.py apresentacao.py
+python -m py_compile agente.py src/agente.py src/motor.py src/revisao.py src/apresentacao.py
 python -m unittest discover -s tests -v
 ```
 
@@ -253,7 +250,7 @@ Rode os testes antes de mandar mudanças para o Git.
 Este é um assistente de revisão e redação provisória. Ele não substitui a
 revisão crítica do pesquisador nem a orientação. Citações e afirmações da IA
 precisam ser conferidas nas fontes; lacunas, estado da arte e propostas não são
-conclusões confirmadas. Trabalhos em `exemplos/` orientam o contexto e a forma,
+conclusões confirmadas. Trabalhos em `obsidian/referencias/pdfs/` orientam o contexto e a forma,
 mas a redação final deve ser autoral, citada e validada pelo pesquisador.
 
 O agente não deve burlar restrições de acesso. Quando não consegue texto integral permitido, registra internamente e segue para outros trabalhos.

@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "1ec5218cd8e59382",
+    "type": "split",
+    "children": [
+      {
+        "id": "187270636331f826",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1fb5f3e3655cb590",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e7a1535bf128292e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e19172c99f85188b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09fb5fc246264262",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "3c3d7ded08a162f5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "a51b098e3d6b7653",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0e0e13ac8d7ce2f5",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c0ccd294442120b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "66071004e649af04",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "9fa070713c8e4b87",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "6c3bb3daba42ced0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "4b77a30497c370f4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "89363a9c5c51c242",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "1fb5f3e3655cb590",
+  "lastOpenFiles": [
+    "ANOTACOES.md",
+    "referencias/fichamentos/Vaziry_2025.md",
+    "referencias/fichamentos/Umoren_2025.md",
+    "referencias/fichamentos/Tian_2025.md",
+    "referencias/fichamentos/Tawfik_2025.md",
+    "referencias/fichamentos/Sathyabama_2025.md",
+    "referencias/fichamentos/S_2026.md",
+    "referencias/fichamentos/Ragab_2025.md",
+    "referencias/fichamentos/Papatheodorou_2025.md",
+    "referencias/fichamentos/Pandey_2025.md",
+    "referencias/fichamentos/Munusamy_2025.md",
+    "referencias/fichamentos/Mansoor_2025.md",
+    "referencias/fichamentos/Mallick_2025.md",
+    "referencias/fichamentos/Maia_2025.md",
+    "referencias/fichamentos/Maciá-Lillo_2025.md",
+    "referencias/fichamentos/Li_2025.md",
+    "referencias/fichamentos/Hudda_2025.md",
+    "referencias/fichamentos/Gudipati_2025.md",
+    "referencias/fichamentos/Fioreze_2026.md",
+    "referencias/fichamentos/Ding_2025.md",
+    "referencias/fichamentos/Chaurasia_2026.md",
+    "referencias/fichamentos/Castanho_2026.md",
+    "referencias/fichamentos/Cardoso_2024.md",
+    "referencias/fichamentos/Burugulla_2025.md",
+    "referencias/fichamentos/Asaithambi_2025.md",
+    "referencias/fichamentos/Alar_2026.md",
+    "referencias/fichamentos",
+    "referencias/pdfs/Δρίτσας_2025_2.html",
+    "referencias/pdfs/Δρίτσας_2025.html",
+    "referencias/pdfs/dissertacao_wesleyFioreze_23_06_2026_anotada.pdf",
+    "referencias/pdfs/Zhukabayeva_2025.html",
+    "referencias/pdfs/Zhang_2025.html",
+    "referencias/pdfs/Yee_2025.html",
+    "referencias/pdfs/Xiong_2025.pdf",
+    "referencias/pdfs/Wu_2025_2.html",
+    "referencias/pdfs/Wu_2025.html"
+  ]
+}

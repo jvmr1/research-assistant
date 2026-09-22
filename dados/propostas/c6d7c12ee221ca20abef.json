@@ -5,7 +5,7 @@
   "modelo": "openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free, qwen2.5:7b-instruct-q4_K_M",
   "titulo": "Registro descentralizado de revogação para credenciais SSI em serviços públicos",
   "fontes": [
-    "Exemplo_60479560a08f3b4cd724",
+    "Fioreze_2026",
     "Gudipati_2025"
   ],
   "problema": "Nenhum trabalho integra um registro de revogação descentralizado e eficiente para VCs/SSI em serviços públicos de cidades inteligentes.",

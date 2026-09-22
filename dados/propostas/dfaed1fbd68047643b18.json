@@ -5,7 +5,7 @@
   "modelo": "openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free, qwen2.5:7b-instruct-q4_K_M",
   "titulo": "Credenciais verificáveis com revogação baseada em blockchain para compartilhamento de dados agrícolas em cidades inteligentes",
   "fontes": [
-    "Exemplo_da24de257de987bc603b",
+    "Cardoso_2024",
     "Mansoor_2025"
   ],
   "problema": "Ausência de mecanismos de revogação interoperáveis para credenciais verificáveis em contextos intersetoriais (agricultura‑cidade).",

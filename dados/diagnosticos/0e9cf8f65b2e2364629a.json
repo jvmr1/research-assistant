@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_da24de257de987bc603b",
+        "id": "Cardoso_2024",
         "titulo": "André Luiz Almeida Cardoso",
         "escopo": {
           "tipo": "pdf",
@@ -137,7 +137,7 @@
       {
         "descricao": "Integrar o modelo de identidade baseado em blockchain de Cardoso com o framework de Verifiable Credentials de Gudipati, acrescentando criptografia baseada em atributos (ABE) para permitir divulgação seletiva de atributos de sensores IoT em serviços urbanos. O artefato seria uma carteira SSI que emite VCs contendo políticas ABE, suportando revogação via lista de status na blockchain. Avaliar desempenho de emissão, verificação e controle de acesso em cenários de mobilidade urbana.",
         "fontes": [
-          "Exemplo_da24de257de987bc603b",
+          "Cardoso_2024",
           "Gudipati_2025"
         ],
         "lacuna": "Ausência de mecanismos de controle de acesso seletivo e de políticas de atributos dentro de soluções blockchain‑centricas para cidades inteligentes.",
@@ -161,7 +161,7 @@
       {
         "descricao": "Propor um mecanismo de recuperação de credenciais perdidas que combina secret sharing (Shamir) com ABE, inserido no modelo de Cardoso. O cidadão dividiria sua chave mestra em fragmentos armazenados em nós federados; ao perder o acesso, poderia reconstruir a chave mediante prova de posse de atributos verificados. O esquema seria testado em um cenário de serviços de mobilidade urbana, medindo tempo de recuperação e resistência a ataques de comprometimento parcial.",
         "fontes": [
-          "Exemplo_da24de257de987bc603b",
+          "Cardoso_2024",
           "RevocationSurvey_2023"
         ],
         "lacuna": "Nenhum trabalho combina secret sharing e ABE para recuperação segura de credenciais SSI em ambientes de alta mobilidade urbana.",

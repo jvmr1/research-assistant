@@ -6,7 +6,7 @@
   "entrada": {
     "trabalhos": [
       {
-        "id": "Exemplo_60479560a08f3b4cd724",
+        "id": "Fioreze_2026",
         "titulo": "dissertacao_wesleyFioreze_23_06_2026_anotada",
         "escopo": {
           "tipo": "pdf",
@@ -80,7 +80,7 @@
         "possibilidades": "Incorporar credenciais verificáveis (VC) baseadas em DID para gerenciar políticas de acesso dinâmicas e permitir revogação descentralizada dos direitos de acesso aos dados IIoT. Além disso, adicionar um mecanismo de recuperação de credenciais usando secret sharing para mitigar perda de acesso pelo cidadão."
       },
       {
-        "id": "Exemplo_55b3b0969325cccbbb2c",
+        "id": "Maia_2025",
         "titulo": "Danilo_TCC_final",
         "escopo": {
           "tipo": "pdf",
@@ -157,8 +157,8 @@
       {
         "descricao": "Desenvolver um framework que una credenciais verificáveis baseadas em DID com políticas de controle de acesso definidas por criptografia baseada em atributos (ABE) para sensores IoT municipais. O modelo usaria blockchain para registro de políticas e listas de revogação, permitindo que cidadãos gerenciem dinamicamente quem pode acessar seus dados de mobilidade ou energia. Essa integração ainda não foi apresentada de forma consolidada, combinando a proposta de Fioreze (blockchain‑ABE) com a ênfase de Maia na SSI para cidadãos.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Ausência de um modelo unificado que vincule credenciais SSI a políticas ABE para controle de acesso de dados IoT em cidades inteligentes, incluindo revogação descentralizada.",
         "busca": "self-sovereign identity attribute-based encryption smart city IoT revocation"
@@ -166,8 +166,8 @@
       {
         "descricao": "Propor um mecanismo de processamento de dados urbanos que empregue criptografia homomórfica para cálculos agregados (ex.: contagem de tráfego) preservando a confidencialidade dos atributos individuais, enquanto a autenticação dos cidadãos ocorre via SSI e a apresentação seletiva de atributos. A combinação de homomorphic encryption com SSI ainda não foi explorada em literatura de smart cities, oferecendo potencial para análises de big data sem expor informações pessoais.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Nenhum estudo integra criptografia homomórfica ao fluxo de autenticação e autorização baseado em SSI para processamento de dados de cidades inteligentes.",
         "busca": "homomorphic encryption self-sovereign identity smart city data processing"
@@ -175,8 +175,8 @@
       {
         "descricao": "Criar um protocolo de recuperação de credenciais perdidas que combine secret sharing (Shamir) com wallets descentralizadas (DID) e listas de revogação distribuídas. O cidadão dividiria sua chave‑mestra em fragmentos armazenados em múltiplos nós de confiança; ao perder o acesso, poderia reconstruir a credencial sem depender de um provedor central. Fioreze já menciona secret sharing como possibilidade, mas não detalha o fluxo completo nem a integração com DID.",
         "fontes": [
-          "Exemplo_60479560a08f3b4cd724",
-          "Exemplo_55b3b0969325cccbbb2c"
+          "Fioreze_2026",
+          "Maia_2025"
         ],
         "lacuna": "Falta de um esquema operacional de recuperação de credenciais SSI que use secret sharing e suporte revogação automática após reconstrução.",
         "busca": "credential recovery secret sharing decentralized identity smart city"

@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1007/s43926-025-00124-6
 
 Triagem: revisar. O trabalho foca em IoT e redes de sensores para controle de processos em setores como cidades inteligentes, agricultura e saúde, alinhando-se ao domínio de IoT e smart cities do grupo. Contudo, o escopo principal está em monitoramento, escalabilidade e eficiência energética, sem abordar diretamente os temas centrais de identidade digital, SSI, controle de acesso, criptografia baseada em atributos ou interoperabilidade de segurança. A menção a blockchain e AI indica potencial de relevância, mas a ausência de foco em autenticação, privacidade ou controle de acesso coloca o artigo como candidato a revisão para avaliar possíveis extensões ou adaptações que integrem esses aspectos, ao invés de ser priorizado imediatamente.
 
-[Texto local](../../pdfs/Pandey_2025.html)
+[Texto local](../../obsidian/referencias/pdfs/Pandey_2025.html)
 
 ### Relações bibliográficas verificadas nos metadados
 

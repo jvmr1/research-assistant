@@ -5,7 +5,7 @@ doi: https://doi.org/10.1038/s41598-026-37402-4
 ano: 2026
 status: triagem_pendente
 acesso_aberto: true
-pdf_local: pdfs/Chaurasia_2026.pdf
+pdf_local: obsidian/referencias/pdfs/Chaurasia_2026.pdf
 tags: [blockchain, cidades-inteligentes, interoperabilidade, privacidade, ssi]
 ---
 # Chaurasia_2026
@@ -21,7 +21,7 @@ Fonte: https://doi.org/10.1038/s41598-026-37402-4
 
 Triagem: revisar. O trabalho aborda blockchain e identidade auto-soberana (SSI) para garantir privacidade e rastreabilidade em cadeias de suprimentos de vacinas, tópicos alinhados com os interesses de segurança, privacidade e identidade digital do grupo. Contudo, o foco está em logística de saúde e não em IoT, cidades inteligentes ou sistemas de borda, que são centrais para a linha de pesquisa. Assim, o artigo merece ser revisado para avaliar possíveis adaptações ou insights aplicáveis ao contexto de IoT e cidades inteligentes, mas não é prioridade imediata.
 
-[PDF local](../../pdfs/Chaurasia_2026.pdf)
+[PDF local](../../obsidian/referencias/pdfs/Chaurasia_2026.pdf)
 
 ### Relações bibliográficas verificadas nos metadados
 

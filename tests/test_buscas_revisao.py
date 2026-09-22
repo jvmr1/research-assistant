@@ -28,7 +28,7 @@ class BuscasTest(unittest.TestCase):
         self.p.cfg.update(ano_minimo=2025, resultados_por_consulta=10,
                           fonte_academica_principal='semantic_scholar',
                           fontes_academicas_auxiliares=['openalex'])
-        with patch('motor.requests.get', side_effect=[sem, oa]) as get:
+        with patch('src.motor.requests.get', side_effect=[sem, oa]) as get:
             resultados, fontes = self.p.buscar_fontes_academicas('smart city identity', 1)
         self.assertEqual(get.call_count, 2)
         self.assertEqual(fontes, ['OpenAlex'])
@@ -39,7 +39,7 @@ class BuscasTest(unittest.TestCase):
         sem = Mock()
         sem.json.return_value = {'data':[{'paperId':'1','title':'IoT revocation','year':2025,'abstract':'A useful abstract.'}]}
         self.p.cfg.update(ano_minimo=2025, resultados_por_consulta=10, fonte_academica_principal='semantic_scholar', fontes_academicas_auxiliares=[])
-        with patch('motor.requests.get', return_value=sem) as get:
+        with patch('src.motor.requests.get', return_value=sem) as get:
             resultados, fontes = self.p.buscar_fontes_academicas('IoT revocation',1)
         self.assertEqual(get.call_count, 1)
         self.assertEqual(resultados[0]['abstract'], 'A useful abstract.')

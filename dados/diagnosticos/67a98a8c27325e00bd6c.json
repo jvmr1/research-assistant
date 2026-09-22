@@ -1,0 +1,51 @@
+{
+  "etapa": "sintese-parcial",
+  "inicio": "2026-09-22T14:31:47",
+  "revisao": "686fa2b2925672e2fd71",
+  "tarefa": "Consolide este bloco de fichas de um artigo. JSON: resumo (at? 140 palavras), lacunas_possiveis (lista curta) e propostas_possiveis (lista curta). N?o invente fatos; use apenas as fichas recebidas. As lacunas/propostas s?o brainstorm preliminar.",
+  "entrada": {
+    "titulo": "André Luiz Almeida Cardoso",
+    "tipo_leitura": "pdf",
+    "fichas": [
+      {
+        "pagina": 1,
+        "resumo": "O trecho apresenta o título de um trabalho de André Luiz Almeida Cardoso, intitulado “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, desenvolvido na Universidade Federal do Maranhão em 2024, indicando foco em identidade digital para cidades inteligentes usando blockchain.",
+        "interpretacao": "O documento indica que o autor está investigando como a tecnologia blockchain pode ser aplicada à gestão de identidades em ambientes de cidades inteligentes, o que se alinha ao interesse em SSI e controle de acesso seguro.",
+        "duvidas": "Quais são os problemas específicos de identidade que o modelo pretende resolver? Como a solução proposta é avaliada experimentalmente? Quais são as limitações reconhecidas pelos autores?"
+      },
+      {
+        "pagina": 2,
+        "resumo": "Dissertação de André Luiz Almeida Cardoso, apresentada à UFMA em 2024, propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
+        "interpretacao": "O autor pretende desenvolver uma solução baseada em blockchain para gerenciar identidades digitais de cidadãos e entidades em ambientes de cidades inteligentes, buscando melhorar segurança e confiabilidade.",
+        "duvidas": "Quais são os requisitos funcionais e não funcionais do modelo proposto? Como o modelo lida com a revogação e recuperação de credenciais? Qual a estratégia de interoperabilidade com sistemas existentes?"
+      },
+      {
+        "pagina": 3,
+        "resumo": "Dissertação de mestrado de André Luiz Almeida Cardoso (2024) intitulada “Um Modelo de Gestão de Identidades para Cidades Inteligentes Baseado na Tecnologia Blockchain”, com 77 páginas, orientada por Francisco José da Silva e Silva e coorientada por Arlindo Flavio da Conceição, apresentada ao Programa de Pós‑graduação em Ciência da Computação da UFMA.",
+        "interpretacao": "O trabalho parece focar na construção de um framework de identidade digital para ambientes urbanos inteligentes, utilizando a plataforma Hyperledger Fabric e integrando dispositivos IoT, visando melhorar a segurança e a confiabilidade da gestão de identidades.",
+        "duvidas": "Quais são os requisitos funcionais e não funcionais detalhados do modelo? Como foi realizada a avaliação experimental ou de desempenho? O estudo aborda questões de privacidade, revogação ou recuperação de credenciais? Há discussões sobre interoperabilidade com outros padrões de identidade digital?"
+      },
+      {
+        "pagina": 4,
+        "resumo": "A dissertação de André Luiz Almeida Cardoso, defendida em 2024 na UFMA, propõe um modelo de gestão de identidades para cidades inteligentes fundamentado na tecnologia blockchain.",
+        "interpretacao": "O trecho indica que a dissertação foca em um modelo de identidade usando blockchain para cidades inteligentes, mas não fornece detalhes sobre o problema abordado, a solução proposta, a avaliação realizada ou as limitações do estudo.",
+        "duvidas": "Quais são os requisitos de segurança e privacidade considerados? Como o modelo trata a revogação e a recuperação de credenciais perdidas? Qual a arquitetura técnica detalhada e como ela se integra com SSI ou credenciais verificáveis?"
+      },
+      {
+        "pagina": 5,
+        "resumo": "O autor expressa agradecimentos a Deus, à família, aos mestres que o guiaram e aos colegas de trabalho, reconhecendo apoio e inspiração ao longo da trajetória acadêmica.",
+        "interpretacao": "Esta seção trata de agradecimentos pessoais e institucionais, não contendo informações técnicas sobre identidade autossoberana ou segurança em cidades inteligentes.",
+        "duvidas": "Não há informações sobre problema, solução, avaliação ou limites do trabalho; carece de conteúdo técnico para avançar na revisão focada."
+      },
+      {
+        "pagina": 6,
+        "resumo": "O trabalho propõe um modelo de gestão descentralizada de identidades baseado em blockchain (Hyperledger Fabric) para cidades inteligentes, destacando a importância da segurança da informação e avaliando o custo computacional da solução.",
+        "interpretacao": "O texto enfatiza que a segurança da informação é pré-requisito para cidades inteligentes e propõe a blockchain como infraestrutura para gestão descentralizada de identidades, demonstrando viabilidade prática por meio de avaliação de custos computacionais.",
+        "duvidas": "Quais são as limitações específicas de escalabilidade e privacidade do modelo proposto? Como o modelo lida com revogação e recuperação de credenciais em caso de perda de acesso pelo cidadão?"
+      }
+    ]
+  },
+  "erro": "Ollama foi iniciado, mas não respondeu na porta 11434 em 20s.",
+  "resposta_bruta": null,
+  "fim": "2026-09-22T14:32:28"
+}
