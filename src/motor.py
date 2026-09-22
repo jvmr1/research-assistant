@@ -157,22 +157,62 @@ def nomes_modelos_ollama(resposta):
         return []
 
 
+def _normalizar_nome_ollama(nome):
+    n = (nome or "").strip().lower().replace("_", "-")
+    n = re.sub(r"^(qwen\d+)\.(\d+b)$", r"\1:\2", n)
+    return n
+
+
+def _score_modelo_ollama(nome):
+    """Heurística só para quando não há preferência local explícita.
+
+    A melhor fonte continua sendo benchmark da máquina em dados/modelos.json ou
+    configuração direta em ANOTACOES.md. Esta pontuação apenas evita escolher um
+    modelo pequeno aleatório quando o Ollama já tem opções melhores instaladas.
+    """
+    n = _normalizar_nome_ollama(nome)
+    score = 0
+    if "qwen3" in n:
+        score += 120
+    elif "qwen2.5" in n or "qwen2" in n:
+        score += 95
+    elif "llama3" in n:
+        score += 80
+    elif "mistral" in n:
+        score += 70
+    elif "gemma" in n:
+        score += 60
+    elif "phi" in n:
+        score += 50
+    elif "qwen" in n:
+        score += 75
+    if "instruct" in n or "chat" in n:
+        score += 12
+    if ":8b" in n or "-8b" in n:
+        score += 18
+    elif ":7b" in n or "-7b" in n:
+        score += 16
+    elif ":14b" in n or "-14b" in n:
+        score += 10
+    elif ":3b" in n or "-3b" in n or ":1." in n or "-1." in n:
+        score -= 20
+    if "latest" in n:
+        score -= 1
+    return score
+
+
 def escolher_modelo_ollama(modelo_preferido, resposta):
-    """Escolhe um modelo local existente ou o preferido para baixar."""
+    """Escolhe modelo local respeitando preferência e benchmark da máquina."""
+    modelo_preferido = (modelo_preferido or "qwen3:8b").strip()
     nomes = nomes_modelos_ollama(resposta)
-    if modelo_preferido in nomes:
-        return modelo_preferido, False
-    if modelo_preferido + ":latest" in nomes:
-        return modelo_preferido + ":latest", False
-    preferidos = ("qwen", "llama", "mistral", "gemma", "phi")
-    instruct = [n for n in nomes if "instruct" in n.lower() or "chat" in n.lower()]
-    candidatos = instruct + nomes
-    for termo in preferidos:
-        for nome in candidatos:
-            if termo in nome.lower():
-                return nome, False
+    nomes_por_normalizado = {_normalizar_nome_ollama(n): n for n in nomes}
+    preferido_norm = _normalizar_nome_ollama(modelo_preferido)
+    if preferido_norm in nomes_por_normalizado:
+        return nomes_por_normalizado[preferido_norm], False
+    if _normalizar_nome_ollama(modelo_preferido + ":latest") in nomes_por_normalizado:
+        return nomes_por_normalizado[_normalizar_nome_ollama(modelo_preferido + ":latest")], False
     if nomes:
-        return nomes[0], False
+        return sorted(nomes, key=_score_modelo_ollama, reverse=True)[0], False
     return modelo_preferido, True
 
 

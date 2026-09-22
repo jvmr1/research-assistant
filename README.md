@@ -114,26 +114,44 @@ $env:OPENROUTER_API_KEY = "cole_sua_chave_aqui"
 python agente.py
 ```
 
-A configuração padrão em `obsidian/ANOTACOES.md` usa um modelo principal fixo. Para custo zero e comportamento mais estável, use `modelo ia: ollama`. Para usar OpenRouter, informe um único modelo em `modelo ia:` ou use `modelo ia: openrouter` junto com `modelo openrouter:`. O Ollama continua como reserva técnica.
+A configuração padrão em `obsidian/ANOTACOES.md` usa OpenRouter quando houver chave e mantém Ollama como reserva. A lista do OpenRouter é uma fila configurável de slugs reais, não uma garantia de “melhores modelos”; esses slugs mudam com o tempo e devem ser escolhidos pelo pesquisador conforme custo, qualidade e disponibilidade.
+
+A escolha local via Ollama segue esta prioridade:
+
+1. modelo explicitado em `obsidian/ANOTACOES.md`;
+2. modelo registrado em `dados/modelos.json`, útil para guardar o resultado de benchmark da máquina;
+3. melhor modelo já instalado no Ollama segundo uma heurística simples;
+4. download do modelo de reserva, se não houver nenhum modelo local instalado.
+
+Assim, se uma máquina foi testada e o melhor equilíbrio foi `qwen3:8b`, registre isso uma vez e o agente passa a respeitar essa decisão. O arquivo `dados/modelos.json` é local/ignorado pelo Git porque depende do hardware. Exemplo:
+
+```json
+{
+  "modelo_ollama": "qwen3:8b",
+  "observacao": "Escolhido por benchmark local nesta máquina."
+}
+```
+
+Confira o nome exato com `ollama list`. Se você escreveu informalmente `qwen3.8b`, o agente tenta casar com `qwen3:8b`, mas o ideal é usar o nome exibido pelo Ollama.
 
 Se você colocou crédito no OpenRouter e quiser usar um modelo pago específico, edite `obsidian/ANOTACOES.md`:
 
 ```md
 - modelo ia: openrouter
 - modelo openrouter: openai/gpt-oss-120b
-- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
+- modelo ollama de reserva: qwen3:8b
 ```
 
 Os nomes exatos dos modelos mudam com o tempo. Use os slugs atuais mostrados pelo OpenRouter. Para controlar gasto e reduzir variação, crie uma chave dedicada, configure limite de uso e escolha apenas um modelo principal.
 
 ## Configurando IA local com Ollama
 
-Instale o Ollama. O agente consulta os modelos instalados; se encontrar um modelo compatível, usa esse modelo. Se não houver nenhum modelo local adequado e o Ollama for necessário, ele tenta baixar automaticamente o modelo indicado em `obsidian/ANOTACOES.md`.
+Instale o Ollama. O agente consulta os modelos instalados; se encontrar o modelo preferido, usa exatamente ele. Se o preferido não estiver instalado, escolhe o melhor instalado por heurística, privilegiando modelos de conversa/instrução e famílias como Qwen, Llama, Mistral, Gemma e Phi. Se não houver nenhum modelo local e o Ollama for necessário, ele tenta baixar automaticamente o modelo indicado em `obsidian/ANOTACOES.md` ou em `dados/modelos.json`.
 
 Você também pode baixar manualmente antes de rodar:
 
 ```bash
-ollama pull qwen2.5:7b-instruct-q4_K_M
+ollama pull qwen3:8b
 ollama serve
 ```
 
@@ -150,7 +168,7 @@ Para uma máquina com i9, 16 GB de RAM e GPU com 8 GB de VRAM, comece com um mod
 Exemplos para testar localmente:
 
 ```bash
-ollama pull qwen2.5:7b-instruct-q4_K_M
+ollama pull qwen3:8b
 ollama pull qwen2.5:14b-instruct-q4_K_M
 ```
 
@@ -176,7 +194,7 @@ No `obsidian/ANOTACOES.md`, a configuração recomendada é:
 - fonte acadêmica principal: openalex
 - fontes acadêmicas auxiliares: semantic_scholar, crossref
 - modelo ia: openrouter
-- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
+- modelo ollama de reserva: qwen3:8b
 ```
 
 Se quiser testar uma IA remota fixa:
@@ -184,7 +202,7 @@ Se quiser testar uma IA remota fixa:
 ```md
 - modelo ia: openrouter
 - modelo openrouter: openai/gpt-oss-120b
-- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
+- modelo ollama de reserva: qwen3:8b
 ```
 
 ## Como rodar

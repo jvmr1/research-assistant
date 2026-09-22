@@ -22,7 +22,7 @@ Quando a IA trouxer um achado ou proposta, responda próximo ao item usando uma 
 - fontes acadêmicas auxiliares: semantic_scholar, crossref
 - modelo ia: openrouter
 - modelo openrouter: openai/gpt-oss-120b
-- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
+- modelo ollama de reserva: qwen3:8b
 
 ## Tema inicial
 

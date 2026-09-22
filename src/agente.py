@@ -35,14 +35,12 @@ INSTRUCOES = ANOTACOES_PESQUISADOR
 INSTRUCOES_LEGADO = VAULT / "INSTRUCOES.md"
 SESSOES = DATA / "sessoes"
 PROPOSTAS = DATA / "propostas"
-MODELO_OLLAMA = "qwen2.5:7b-instruct-q4_K_M"
+MODELO_OLLAMA = "qwen3:8b"
 MODELO_OPENROUTER = "openai/gpt-oss-120b"
-MODELOS_OPENROUTER = [
-    MODELO_OPENROUTER,
-    "nex-agi/nex-n2.5-pro:free",
-    "z-ai/glm-5.2:free",
-    "google/gemma-4-26b-a4b-it:free",
-]
+# Fila curta e conservadora: não é uma lista de "melhores modelos".
+# O pesquisador pode substituir por slugs atuais do OpenRouter em ANOTACOES.md.
+MODELOS_OPENROUTER = [MODELO_OPENROUTER]
+ARQUIVO_MODELOS_LOCAIS = DATA / "modelos.json"
 MODELOS_INVALIDOS = {"free", "openrouter/free", "gratis", "gratuito"}
 
 
@@ -84,8 +82,8 @@ análise e podem gerar novas buscas.
 - fontes acadêmicas auxiliares: semantic_scholar, crossref
 - modelo ia: openrouter
 - modelo openrouter: openai/gpt-oss-120b
-- fila openrouter: openai/gpt-oss-120b, nex-agi/nex-n2.5-pro:free, z-ai/glm-5.2:free, google/gemma-4-26b-a4b-it:free
-- modelo ollama de reserva: qwen2.5:7b-instruct-q4_K_M
+- fila openrouter: openai/gpt-oss-120b
+- modelo ollama de reserva: qwen3:8b
 
 Use `modo de pesquisa: geral` para a revisão exploratória de lacunas e propostas.
 Use `modo de pesquisa: focada` para construir o estado da arte e redigir uma
@@ -195,6 +193,28 @@ def combinacoes_variaveis_busca(variaveis, limite=24):
     return consultas
 
 
+def modelo_ollama_preferido_local(caminho=ARQUIVO_MODELOS_LOCAIS):
+    """Lê a preferência local de Ollama produzida por benchmark da máquina.
+
+    Este arquivo fica em dados/modelos.json, ignorado pelo Git, porque a melhor
+    escolha depende de hardware, VRAM, velocidade aceitável e qualidade percebida.
+    Campos aceitos: modelo_ollama, ollama_preferido ou modelo_preferido.
+    """
+    try:
+        if not caminho.exists():
+            return ""
+        dados = json.loads(caminho.read_text(encoding="utf-8-sig"))
+    except (OSError, ValueError, TypeError):
+        return ""
+    if not isinstance(dados, dict):
+        return ""
+    for chave_modelo in ("modelo_ollama", "ollama_preferido", "modelo_preferido"):
+        valor = str(dados.get(chave_modelo) or "").strip()
+        if valor:
+            return valor
+    return ""
+
+
 def carregar_instrucoes(caminho=INSTRUCOES):
     if not caminho.exists():
         return {"consultas": CONSULTAS}
@@ -207,7 +227,7 @@ def carregar_instrucoes(caminho=INSTRUCOES):
     fontes_academicas_auxiliares = ["semantic_scholar", "crossref"]
     modelo_ia = "ollama"
     modelos_openrouter = list(MODELOS_OPENROUTER)
-    modelo_ollama = MODELO_OLLAMA
+    modelo_ollama = modelo_ollama_preferido_local() or MODELO_OLLAMA
     artigos_por_ciclo_ia = 10
     modo_pesquisa = "geral"
     lendo_consultas = False
@@ -259,7 +279,9 @@ def carregar_instrucoes(caminho=INSTRUCOES):
 
         if (linha_limpa.lower().startswith("- modelo ollama:") or
             linha_limpa.lower().startswith("- modelo ollama de reserva:")):
-            modelo_ollama = linha_limpa.split(":", 1)[1].strip()
+            valor = linha_limpa.split(":", 1)[1].strip()
+            if valor:
+                modelo_ollama = valor
 
         if (linha_limpa.lower().startswith("- modelos openrouter:") or
             linha_limpa.lower().startswith("- fila openrouter:")):

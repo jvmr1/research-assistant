@@ -418,10 +418,10 @@ class PesquisaTest(unittest.TestCase):
     def test_modelos_ia_mantem_reserva_ollama_para_resolver_no_runtime(self):
         self.p.cfg['modelo_ia'] = 'openrouter'
         self.p.cfg['modelo_openrouter'] = 'openai/gpt-oss-120b'
-        self.p.cfg['modelo_ollama'] = 'qwen2.5:7b-instruct-q4_K_M'
+        self.p.cfg['modelo_ollama'] = 'qwen3:8b'
         with patch.dict('src.motor.os.environ', {'OPENROUTER_API_KEY': 'x'}, clear=False):
             modelos = self.p.modelos_ia()
-        self.assertEqual(modelos, ['openai/gpt-oss-120b', 'qwen2.5:7b-instruct-q4_K_M'])
+        self.assertEqual(modelos, ['openai/gpt-oss-120b', 'qwen3:8b'])
 
     def test_modelo_local_existente_e_escolhido_sem_download(self):
         from unittest.mock import Mock
@@ -431,6 +431,18 @@ class PesquisaTest(unittest.TestCase):
             self.assertTrue(self.p.modelo_disponivel())
         baixar.assert_not_called()
         gerar.assert_not_called()
+
+    def test_escolhe_qwen3_instalado_antes_de_modelo_menor(self):
+        from unittest.mock import Mock
+        resposta = Mock()
+        resposta.json.return_value = {'models': [
+            {'name': 'phi3:mini'},
+            {'name': 'qwen2.5:3b-instruct'},
+            {'name': 'qwen3:8b'},
+        ]}
+        escolhido, baixar = motor.escolher_modelo_ollama('qwen3.8b', resposta)
+        self.assertEqual(escolhido, 'qwen3:8b')
+        self.assertFalse(baixar)
 
     def test_sem_modelo_local_baixa_preferido(self):
         from unittest.mock import Mock
