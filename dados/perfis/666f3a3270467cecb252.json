@@ -1,7 +1,0 @@
-{
-  "problema": "superar a dependência de intermediários centralizados, oferecendo controle granular de acesso, privacidade, auditabilidade e interoperabilidade entre organizações sem relação prévia de confiança.",
-  "solucao": "Não identificado nas fichas/trechos disponíveis.",
-  "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
-  "limites": "Não identificado nas fichas/trechos disponíveis.",
-  "possibilidades": "Implementar um mecanismo de prova de conhecimento zero‑knowledge (ZKP) para permitir a divulgação seletiva de atributos nas credenciais verificáveis, reduzindo a exposição de dados pessoais ao mesmo tempo em que mantém a verificabilidade em ambientes IIoT."
-}

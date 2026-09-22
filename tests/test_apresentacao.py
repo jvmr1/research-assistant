@@ -77,7 +77,7 @@ class ApresentacaoTest(unittest.TestCase):
         nota = (self.root / 'obsidian/referencias/fichamentos/A.md').read_text(encoding='utf-8')
         self.assertIn('Ficha 0 indisponível', nota)
 
-    def test_nota_exibe_entendimento_consolidado_do_trabalho(self):
+    def test_fichamento_exibe_apenas_entendimento_do_trabalho(self):
         artigo = self.artigo('A')
         self.p.estado['propostas'] = [{'id': 'p', 'titulo': 'Ideia', 'revisao': self.p.revisao, 'fontes': ['A']}]
         motor.json_gravar(self.root / 'dados/propostas/p.json', {'fontes': ['A'], 'meu_trabalho': 'Ideia', 'buscas': []})
@@ -96,9 +96,63 @@ class ApresentacaoTest(unittest.TestCase):
         }
         self.p.painel()
         nota = (self.root / 'obsidian/referencias/fichamentos/A.md').read_text(encoding='utf-8')
-        self.assertIn('## Entendimento consolidado do trabalho', nota)
+        self.assertIn('## Resumo do trabalho', nota)
         self.assertIn('Síntese para leitura humana.', nota)
-        self.assertIn('Lacuna a investigar.', nota)
+        self.assertIn('Problema sustentado por ficha.', nota)
+        self.assertNotIn('Lacuna a investigar.', nota)
+        self.assertNotIn('Contribuição possível.', nota)
+        self.assertNotIn('Possibilidades de extensão', nota)
+
+    def test_trabalho_preserva_texto_existente_ao_atualizar_bloco_da_ia(self):
+        self.p.cfg['modo_pesquisa'] = 'focada'
+        trabalho = self.root / 'obsidian/TRABALHO.md'
+        trabalho.parent.mkdir(parents=True, exist_ok=True)
+        trabalho.write_text('# Texto do pesquisador\n\nMinha decisão permanece.\n', encoding='utf-8')
+        self.p.estado['redacao_focada'] = {
+            'status': 'rascunho_em_revisao',
+            'introducao': ['Nova introdução baseada nas anotações.'],
+            'fundamentacao_teorica': [{'titulo': 'SSI', 'texto': 'Fundamentação atualizada.'}],
+            'mapa_fases': [], 'fontes_usadas': [],
+        }
+        self.p.painel()
+        texto = trabalho.read_text(encoding='utf-8')
+        self.assertIn('Minha decisão permanece.', texto)
+        self.assertIn('Nova introdução baseada nas anotações.', texto)
+        self.assertIn('<!-- agente:trabalho:inicio -->', texto)
+
+    def test_dialogo_preserva_resposta_do_pesquisador(self):
+        self.p.cfg['modo_pesquisa'] = 'focada'
+        anotacoes = self.root / 'obsidian/ANOTACOES.md'
+        anotacoes.parent.mkdir(parents=True, exist_ok=True)
+        anotacoes.write_text(
+            '# Anotações\n\n<!-- agente:dialogo:inicio -->\n'
+            '#### 1. Recuperação social\nacao_pesquisador: revisar\n'
+            'resposta_pesquisador: Aprovar apenas se comparar com guardians.\n'
+            '<!-- agente:dialogo:fim -->\n', encoding='utf-8')
+        self.p.estado['redacao_focada'] = {
+            'status': 'rascunho_em_revisao', 'introducao': ['Introdução.'],
+            'fundamentacao_teorica': [], 'mapa_fases': [], 'fontes_usadas': [],
+            'achados_em_analise': [{'titulo': 'Recuperação social', 'consulta': 'guardians SSI',
+                                    'resumo': 'Comparar guardians.', 'acao_pesquisador': 'revisar'}],
+        }
+        self.p.painel()
+        texto = anotacoes.read_text(encoding='utf-8')
+        self.assertIn('Aprovar apenas se comparar com guardians.', texto)
+
+    def test_dialogo_preserva_anotacoes_livres_sem_bloco_anterior(self):
+        self.p.cfg['modo_pesquisa'] = 'focada'
+        anotacoes = self.root / 'obsidian/ANOTACOES.md'
+        anotacoes.parent.mkdir(parents=True, exist_ok=True)
+        anotacoes.write_text('# Anotações\n\nDecisão extensa do pesquisador.\n' * 20, encoding='utf-8')
+        self.p.estado['redacao_focada'] = {
+            'status': 'rascunho_em_revisao', 'introducao': ['Introdução.'],
+            'fundamentacao_teorica': [], 'mapa_fases': [], 'fontes_usadas': [],
+            'achados_em_analise': [],
+        }
+        self.p.painel()
+        texto = anotacoes.read_text(encoding='utf-8')
+        self.assertIn('Decisão extensa do pesquisador.', texto)
+        self.assertIn('<!-- agente:dialogo:inicio -->', texto)
 
     def test_relatorio_contem_proposta_completa_e_relacoes(self):
         a = self.artigo('A')
@@ -114,13 +168,15 @@ class ApresentacaoTest(unittest.TestCase):
         self.assertIn('Implementar revogação incremental.', rel)
         self.assertIn('> [!abstract]- Revogação eficiente — comparativa; 2 trabalho(s)', rel)
         self.assertIn('> Implementar revogação incremental.', rel)
+        self.assertIn('A e B usam estratégias diferentes.', rel)
         self.assertNotIn('<details', rel)
         self.assertNotIn('<summary', rel)
         nota_a = (self.root / 'obsidian/referencias/fichamentos/A.md').read_text(encoding='utf-8')
         nota_b = (self.root / 'obsidian/referencias/fichamentos/B.md').read_text(encoding='utf-8')
-        self.assertIn('Referencia: [B](B.md)', nota_a)
-        self.assertIn('É citado por: [A](A.md)', nota_b)
-        self.assertIn('A e B usam estratégias diferentes.', nota_a)
+        self.assertNotIn('Referencia:', nota_a)
+        self.assertNotIn('É citado por:', nota_b)
+        self.assertNotIn('Como se correlaciona com os demais', nota_a)
+        self.assertNotIn('Proposta completa nas anotações', nota_a)
 
     def test_proposta_descartada_some_do_relatorio_e_do_grafo(self):
         a = self.artigo('A')

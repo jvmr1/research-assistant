@@ -23,9 +23,10 @@ O fluxo de uso é simples:
 5. Leia `obsidian/TRABALHO.md`, as propostas no próprio arquivo de anotações e os fichamentos em `obsidian/referencias/fichamentos/`.
 6. Rode novamente para ampliar o corpus e melhorar a redação.
 
-O repositório inclui o estado de pesquisa, PDFs, trabalhos-base, notas Markdown e
-testes para que outra máquina receba o projeto no mesmo ponto. Segredos locais,
-bytecode e ambientes virtuais instalados não entram no Git.
+O repositório foi pensado para carregar o código genérico, testes e a estrutura
+mínima do Obsidian. O acervo real da pesquisa — PDFs, fichamentos, anotações,
+texto em construção e memória da IA — fica local ou em armazenamento privado.
+Segredos locais, bytecode e ambientes virtuais instalados não entram no Git.
 
 ## Estrutura versionada
 
@@ -40,18 +41,15 @@ bytecode e ambientes virtuais instalados não entram no Git.
 
 ## Pastas do projeto
 
-Estas pastas fazem parte do estado transportável do projeto e podem ser
-versionadas:
+Estas pastas existem no projeto, mas o Git versiona apenas templates e arquivos
+`.gitkeep` para preservar a estrutura limpa:
 
-- `obsidian/`: pasta que você abre no Obsidian; contém o caderno do pesquisador, o trabalho em construção e a biblioteca de referências.
-- `obsidian/referencias/pdfs/`: repositório dos textos completos usados como base da pesquisa, em PDF, HTML ou outro formato aberto.
-- `obsidian/referencias/fichamentos/`: um Markdown por trabalho de referência, com resumo/fichamento para leitura humana e para a IA reutilizar antes de decidir reler o texto completo.
-- `dados/`: estado interno para as IAs retomarem trabalho entre execuções: fichamentos, diagnósticos, propostas, histórico e `anotacoes-ia.md`.
-- `obsidian/.obsidian/`: configuração do Obsidian.
+- `obsidian/`: pasta que você abre no Obsidian. Localmente contém `ANOTACOES.md`, `TRABALHO.md` e a biblioteca de referências. No Git entram apenas `ANOTACOES.example.md`, `TRABALHO.example.md` e a estrutura vazia.
+- `obsidian/referencias/pdfs/`: repositório local dos textos completos usados como base da pesquisa, em PDF, HTML ou outro formato aberto. Conteúdo ignorado pelo Git.
+- `obsidian/referencias/fichamentos/`: fichamentos locais, um Markdown por trabalho de referência. Conteúdo ignorado pelo Git.
+- `dados/`: estado interno local para a IA retomar execuções: leituras, diagnósticos, propostas, histórico e `anotacoes-ia.md`. Conteúdo ignorado pelo Git.
 
-Como PDFs e estado de pesquisa podem aumentar o repositório, confirme a política
-do seu servidor Git antes de publicar. Para esta cópia, eles são intencionais e
-necessários para transportar o contexto entre máquinas.
+Se quiser transportar sua pesquisa pessoal entre máquinas, sincronize `obsidian/` e `dados/` por um repositório privado separado, backup criptografado ou nuvem privada. O repositório público fica limpo e reutilizável.
 
 ## Instalação no Linux
 
@@ -65,13 +63,15 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 cp .env.example .env
+cp obsidian/ANOTACOES.example.md obsidian/ANOTACOES.md
+cp obsidian/TRABALHO.example.md obsidian/TRABALHO.md
 python -m unittest discover -s tests -v
 python agente.py --uma-vez
 ```
 
-Na primeira execução, se `obsidian/ANOTACOES.md` não existir, o agente cria um
-arquivo inicial para você editar. Esse arquivo substitui os antigos arquivos
-separados de instruções, propostas, avaliação de propostas e metodologia.
+Na primeira execução, se `obsidian/ANOTACOES.md` não existir, o agente também
+consegue criar um arquivo inicial. Os templates versionados existem para deixar
+o ponto de partida claro em uma instalação limpa.
 
 ## Instalação no Windows
 
@@ -83,6 +83,8 @@ py -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 Copy-Item .env.example .env
+Copy-Item obsidian/ANOTACOES.example.md obsidian/ANOTACOES.md
+Copy-Item obsidian/TRABALHO.example.md obsidian/TRABALHO.md
 python -m unittest discover -s tests -v
 python agente.py --uma-vez
 ```
@@ -226,13 +228,21 @@ Use `Ctrl+C` para pausar. Rodar o mesmo comando depois retoma o estado salvo.
 9. No modo `focada`, produz o mapa de fases e atualiza `obsidian/TRABALHO.md`.
 10. No modo `geral`, organiza o estado da arte, hipóteses de lacunas e propostas de contribuição.
 11. Registra fontes, consultas, tarefas e falhas em `dados/` para permitir retomada em outra máquina.
-12. O pesquisador revisa o resultado, confere referências e pode ajustar as instruções antes da próxima rodada.
+12. No início de cada rodada, a IA lê novamente `ANOTACOES.md`, `TRABALHO.md`, `dados/anotacoes-ia.md` e os fichamentos já produzidos; só relê PDFs quando o fluxo indicar que falta evidência.
+13. A IA gera consultas adicionais para esclarecer pontos das anotações. Os resultados aparecem como achados em análise nas anotações; somente trabalhos aprovados e fichados entram na biblioteca de referências.
+14. O pesquisador revisa o resultado, confere referências e pode ajustar as instruções antes da próxima rodada.
+
+Em `ANOTACOES.md`, texto fora dos blocos automáticos é tratado como anotação do
+pesquisador. Achados da IA aparecem em `<!-- agente:dialogo:inicio -->`; responda
+em `resposta_pesquisador:` com `aprovar`, `rejeitar` ou `revisar`. A IA não deve
+tratar uma sugestão própria como aprovação e não pode apagar texto existente de
+`ANOTACOES.md` ou `TRABALHO.md`.
 
 ## Arquivos que você deve olhar durante o uso
 
-- `obsidian/ANOTACOES.md`: caderno do pesquisador e único arquivo de interação com a IA. Você escreve orientações livres, acompanha propostas e marca `avaliacao:`/`comentario:` para guiar próximas buscas.
+- `obsidian/ANOTACOES.md`: caderno local do pesquisador e principal arquivo de interação com a IA. Você escreve orientações livres, acompanha achados e responde com `aprovar`, `rejeitar` ou `revisar` para guiar próximas buscas.
 - `obsidian/TRABALHO.md`: texto acadêmico em construção, hoje com introdução, fundamentação e mapa conceitual citando as notas dos trabalhos.
-- `obsidian/referencias/fichamentos/`: fichamentos dos trabalhos citados ou usados nas propostas. Cada nota deve resumir o trabalho, registrar lacunas/evidências e apontar para o texto completo local quando houver.
+- `obsidian/referencias/fichamentos/`: uma nota por trabalho, contendo somente o resumo, o perfil factual e as evidências do próprio PDF. Conexões entre trabalhos, lacunas e propostas ficam em `obsidian/ANOTACOES.md`; afirmações já consolidadas entram em `obsidian/TRABALHO.md`.
 - `obsidian/referencias/pdfs/`: textos completos disponíveis, baixados de fontes abertas ou colocados manualmente.
 - `dados/anotacoes-ia.md`: memória operacional e rastreabilidade do agente. Em geral você não precisa abrir este arquivo.
 

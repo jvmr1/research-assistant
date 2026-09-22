@@ -21,6 +21,9 @@ class PesquisaTest(unittest.TestCase):
         self.base.PDFS = self.root / 'obsidian/referencias/pdfs'
         self.base.EXEMPLOS = self.root / 'obsidian/referencias/pdfs'
         self.base.INSTRUCOES = self.root / 'obsidian/ANOTACOES.md'
+        self.base.ANOTACOES_PESQUISADOR = self.base.INSTRUCOES
+        self.base.ANOTACOES_IA = self.root / 'dados/anotacoes-ia.md'
+        self.base.TRABALHO = self.root / 'obsidian/TRABALHO.md'
         self.base.INSTRUCOES.parent.mkdir(parents=True)
         self.texto = '# Decisões\nInvestigar revogação, sem exigir blockchain.\n## Consultas iniciais\n- IoT revocation\n- ano mínimo: 2025\n'
         self.base.INSTRUCOES.write_text(self.texto, encoding='utf-8')

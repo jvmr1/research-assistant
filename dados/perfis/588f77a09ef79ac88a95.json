@@ -1,7 +1,0 @@
-{
-  "problema": "superar a dependência de intermediários centralizados, oferecendo controle granular de acesso, privacidade, auditabilidade e interoperabilidade entre organizações sem relação prévia de confiança.",
-  "solucao": "Não identificado nas fichas/trechos disponíveis.",
-  "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
-  "limites": "limitações (revogação de atributos e escopo da avaliação de escalabilidade criptográfica)",
-  "possibilidades": "Implementar um mecanismo de recuperação de credenciais baseado em secret sharing, permitindo que cidadãos restabeleçam o acesso perdido a credenciais verificáveis em ambientes de IoT urbano, com avaliação de usabilidade e segurança."
-}

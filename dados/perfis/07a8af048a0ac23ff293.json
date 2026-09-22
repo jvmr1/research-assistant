@@ -1,7 +1,0 @@
-{
-  "problema": "visando melhorar a segurança e a gestão de identidade dos cidadãos.",
-  "solucao": "autenticação e controle de acesso em cidades inteligentes usando blockchain e identidades autosoberanas.",
-  "avaliacao": "latência inferior a 500 ms por operação, indicando viabilidade prática.",
-  "limites": "Não identificado nas fichas/trechos disponíveis.",
-  "possibilidades": "Integrar mecanismos de revogação baseada em listas de status de credenciais (VC) para suportar perda de acesso e melhorar a resiliência do sistema."
-}

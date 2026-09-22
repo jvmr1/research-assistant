@@ -1,7 +1,0 @@
-{
-  "problema": "autenticação e controle de acesso em cidades inteligentes",
-  "solucao": "modelo de gestão de identidades baseado em blockchain para Cidades Inteligentes, utilizando Identidades Autosoberanas (SSI)",
-  "avaliacao": "experimentos mostram latência inferior a 500 ms por operação, indicando viabilidade prática",
-  "limites": "Não identificado nas fichas/trechos disponíveis.",
-  "possibilidades": "Integrar mecanismos de criptografia homomórfica para permitir processamento de dados sensíveis sem revelar informações ao middleware, ampliando a privacidade nas interações da cidade inteligente."
-}

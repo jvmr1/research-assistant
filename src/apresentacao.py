@@ -4,7 +4,8 @@ Responsabilidades deste arquivo:
 - atualizar obsidian/ANOTACOES.md com propostas e feedback humano;
 - atualizar dados/anotacoes-ia.md com rastreabilidade e memória operacional;
 - atualizar obsidian/TRABALHO.md com a redação acadêmica em andamento;
-- manter em obsidian/referencias/fichamentos/ somente notas de artigos que sustentam propostas.
+- manter em obsidian/referencias/fichamentos/ somente o resumo e as evidências do próprio artigo;
+    conexões, lacunas e propostas ficam em ANOTACOES.md ou TRABALHO.md.
 
 Este arquivo deve só apresentar o estado já calculado. Ele não deve buscar
 artigos, chamar modelos de IA ou decidir relevância científica.
@@ -20,6 +21,10 @@ BLOCO_PROPOSTAS_INICIO = '<!-- agente:propostas:inicio -->'
 BLOCO_PROPOSTAS_FIM = '<!-- agente:propostas:fim -->'
 BLOCO_IA_INICIO = '<!-- agente:memoria-ia:inicio -->'
 BLOCO_IA_FIM = '<!-- agente:memoria-ia:fim -->'
+BLOCO_TRABALHO_INICIO = '<!-- agente:trabalho:inicio -->'
+BLOCO_TRABALHO_FIM = '<!-- agente:trabalho:fim -->'
+BLOCO_DIALOGO_INICIO = '<!-- agente:dialogo:inicio -->'
+BLOCO_DIALOGO_FIM = '<!-- agente:dialogo:fim -->'
 ARQUIVOS_LEGADOS_OBSIDIAN = [
     'INSTRUCOES.md',
     'AVALIAR-PROPOSTAS.md',
@@ -292,7 +297,7 @@ def linhas_lista_propostas(root, propostas, revisao, artigos, agora_func):
     candidatos = []
     for artigo in artigos.values():
         triagem = artigo.get('triagem_agente', {})
-        if triagem.get('revisao') != revisao or triagem.get('classificacao') != 'revisar':
+        if triagem.get('revisao') != revisao or triagem.get('classificacao') not in {'priorizar', 'revisar', 'sem_resumo'}:
             continue
         if artigo.get('sintese_artigo', {}).get('revisao') == revisao:
             continue
@@ -300,7 +305,7 @@ def linhas_lista_propostas(root, propostas, revisao, artigos, agora_func):
     if candidatos:
         linhas += [
             '## Trabalhos acadêmicos recentes que merecem leitura/checagem',
-            'Estes trabalhos apareceram nas buscas acadêmicas ou no acervo e foram classificados como `revisar`. Eles ajudam a entender o que a área está discutindo agora.',
+            'Estes trabalhos apareceram nas buscas acadêmicas ou no acervo e ainda estão em análise. Eles podem orientar a pesquisa, mas só viram referências após texto disponível, leitura e decisão de relevância.',
             '',
         ]
         for artigo in sorted(candidatos, key=lambda a: a.get('nome_local', ''))[:12]:
@@ -309,6 +314,16 @@ def linhas_lista_propostas(root, propostas, revisao, artigos, agora_func):
                 f"Pré-leitura: {artigo.get('pre_leitura_agente', {}).get('decisao', 'pendente')}. "
                 f"Motivo: {valor_markdown(artigo.get('triagem_agente', {}).get('justificativa', ''))[:350]}"
             ]
+    consultas = []
+    redacao = ler(root / 'dados/redacao-focada.json', {})
+    consultas.extend(redacao.get('consultas_novas', []) if isinstance(redacao.get('consultas_novas', []), list) else [])
+    for item in propostas:
+        obj = ler(root / 'dados/propostas' / f"{item[0].get('id')}.json", {})
+        consultas.extend(obj.get('buscas', []) if isinstance(obj.get('buscas', []), list) else [])
+    if consultas:
+        linhas += ['', '## Consultas acadêmicas para a próxima rodada',
+                   'Consultas geradas a partir das anotações, do trabalho atual e da memória da IA. Os resultados ainda precisam de triagem e não são referências aprovadas.',
+                   '\n'.join(f'- {q}' for q in dict.fromkeys(consultas) if q)]
     return linhas
 
 
@@ -318,25 +333,24 @@ def atualizar_redacao_focada(p, agora_func):
     from src.motor import gravar
     redacao = p.estado.get('redacao_focada', {})
     destino = p.root / 'obsidian/TRABALHO.md'
-    if (redacao.get('status') == 'aguardando_fontes' or not redacao.get('introducao')) and destino.exists():
-        atual = destino.read_text(encoding='utf-8-sig')
-        if '## Introdução' in atual and '## Fundamentação teórica' in atual:
-            return
+    if redacao.get('status') == 'aguardando_fontes' or not redacao.get('introducao'):
+        return
     linhas = [
-        '# Introdução e fundamentação teórica',
+        BLOCO_TRABALHO_INICIO,
+        '## Atualização assistida pela IA',
         f'Atualizado: {agora_func()}',
         '> Rascunho produzido pela IA a partir das fontes lidas. As marcações com IDs reais, como `[Papatheodorou_2025]`, e a lista de fontes permitem conferência; a redação ainda exige revisão humana.',
     ]
     if redacao.get('status') == 'aguardando_fontes' or not redacao.get('introducao'):
         linhas += ['', 'Ainda não há fichas suficientes para redigir. O agente continuará após concluir a leitura de fontes alinhadas ao escopo focado.']
     else:
-        linhas += ['', f"Status: `{redacao.get('status', 'rascunho')}`.", '## Introdução']
+        linhas += ['', f"Status: `{redacao.get('status', 'rascunho')}`.", '### Introdução']
         for secao in redacao.get('introducao', []):
             if isinstance(secao, dict):
                 linhas += [secao.get('texto', '')]
             else:
                 linhas += [str(secao)]
-        linhas += ['## Fundamentação teórica']
+        linhas += ['### Fundamentação teórica']
         for secao in redacao.get('fundamentacao_teorica', []):
             if isinstance(secao, dict):
                 linhas += [f"### {secao.get('titulo', 'Subseção')}", secao.get('texto', '')]
@@ -351,9 +365,64 @@ def atualizar_redacao_focada(p, agora_func):
                        '**Estado da arte**', fase.get('estado_da_arte', 'Não identificado nas fontes lidas.'),
                        '**Lacunas ou melhorias a investigar**', fase.get('lacunas', 'Não identificado nas fontes lidas.'),
                        '**Fontes da fase**', ', '.join(f'[{f}]' for f in fase.get('fontes', [])) or 'Nenhuma fonte associada.']
-        linhas += ['', '## Fontes usadas',
+        linhas += ['', '### Fontes usadas',
                    '\n'.join(f'- {link(nome)}' for nome in redacao.get('fontes_usadas', [])) or '- Nenhuma fonte validada.']
-    gravar(destino, '\n\n'.join(linhas) + '\n')
+    linhas.append(BLOCO_TRABALHO_FIM)
+    bloco = '\n\n'.join(linhas) + '\n'
+    atual = destino.read_text(encoding='utf-8-sig') if destino.exists() else ''
+    padrao = re.escape(BLOCO_TRABALHO_INICIO) + r'.*?' + re.escape(BLOCO_TRABALHO_FIM)
+    if re.search(padrao, atual, flags=re.S):
+        novo = re.sub(padrao, bloco.rstrip(), atual, count=1, flags=re.S)
+    else:
+        separador = '\n\n' if atual.rstrip() else ''
+        novo = atual.rstrip() + separador + bloco
+    if novo != atual:
+        gravar(destino, novo)
+
+
+def atualizar_dialogo_pesquisa(p, agora_func):
+    if p.cfg.get('modo_pesquisa') != 'focada':
+        return
+    from src.motor import gravar
+    redacao = p.estado.get('redacao_focada', {})
+    atual = p.b.ANOTACOES_PESQUISADOR.read_text(encoding='utf-8-sig') if p.b.ANOTACOES_PESQUISADOR.exists() else '# Anotações\n'
+    respostas = {
+        titulo.strip(): resposta.strip()
+        for titulo, resposta in re.findall(
+            r'(?ms)^####\s+\d+\.\s+(.*?)\n.*?^resposta_pesquisador:\s*(.*?)\s*(?=^####\s+\d+\.\s+|^###\s+|<!-- agente:dialogo:fim -->)',
+            atual)
+    }
+    linhas = [BLOCO_DIALOGO_INICIO, '## Diálogo de pesquisa da IA',
+              f'Atualizado: {agora_func()}',
+              'Este bloco é produzido pela IA. O pesquisador deve responder aos achados e marcar cada ação como `aprovar`, `rejeitar` ou `revisar`. Nada aqui é aprovação automática.']
+    achados = redacao.get('achados_em_analise', [])
+    if achados:
+        linhas += ['', '### Achados em análise']
+        for indice, item in enumerate(achados, 1):
+            titulo = item.get('titulo', 'Achado sem título')
+            linhas += [f'#### {indice}. {titulo}',
+                       f'consulta: {item.get("consulta", "")}',
+                       f'resumo: {item.get("resumo", "")}',
+                       f'acao_pesquisador: {item.get("acao_pesquisador", "revisar")}',
+                       'resposta_pesquisador: ' + respostas.get(titulo, '')]
+    else:
+        linhas += ['', 'Ainda não há achados novos aguardando resposta.']
+    aprovadas = redacao.get('decisoes_aprovadas', [])
+    if aprovadas:
+        linhas += ['', '### Decisões aprovadas consideradas pela IA',
+                   '\n'.join(f'- {item}' for item in aprovadas)]
+    linhas.append(BLOCO_DIALOGO_FIM)
+    novo = atualizar_bloco_preservando_texto(
+        p.b.ANOTACOES_PESQUISADOR,
+        BLOCO_DIALOGO_INICIO,
+        BLOCO_DIALOGO_FIM,
+        '# Anotações\n\nEste é o arquivo principal de conversa com a IA.',
+        linhas,
+    )
+    if len(novo) + 100 < len(atual):
+        raise ValueError('Atualização da IA reduziria ANOTACOES.md inesperadamente; escrita cancelada.')
+    if novo != atual:
+        gravar(p.b.ANOTACOES_PESQUISADOR, novo)
 
 
 def atualizar(p):
@@ -361,6 +430,7 @@ def atualizar(p):
     root = p.root
     migrar_anotacoes_do_pesquisador(root)
     atualizar_redacao_focada(p, agora)
+    atualizar_dialogo_pesquisa(p, agora)
     artigos = {a['nome_local']: a for a in p.artigos}
     ids = {a['id_openalex']: a['nome_local'] for a in p.artigos}
     todas_propostas = [(meta, ler(root / 'dados/propostas' / f"{meta['id']}.json", {}))
@@ -537,38 +607,27 @@ def atualizar(p):
         original = re.sub(r'(?ms)^## Triagem\n\n.*?(?=\n## |\Z)', triagem_bloco + '\n', original, count=1)
         analise_bloco = (
             '## Análise\n\n'
-            'A análise automática fica no bloco "Leitura e relações atualizadas pelo agente" abaixo, '
-            'incluindo fichamento, entendimento consolidado, lacunas possíveis e propostas derivadas.'
+            'A análise do trabalho fica no bloco "Leitura do trabalho" abaixo. '
+            'Conexões com outros trabalhos, lacunas e propostas ficam nas anotações do pesquisador, não neste fichamento.'
         )
         original = re.sub(r'(?ms)^## An[áa]lise\n\n.*?(?=\n## |\Z)', analise_bloco + '\n', original, count=1)
-        gerado = [INICIO, '## Leitura e relações atualizadas pelo agente',
+        gerado = [INICIO, '## Leitura do trabalho',
                   f"Fonte: {a.get('url') or a.get('fonte', 'PDF local')}",
-                  f"Triagem: {a.get('triagem_agente', {}).get('classificacao', 'pendente')}. "
-                  + valor_markdown(a.get('triagem_agente', {}).get('justificativa', ''))]
-        if pre.get('revisao') == p.revisao:
-            gerado += ['Pré-leitura: ' + valor_markdown(pre.get('decisao', 'pendente')) + ' — ' + valor_markdown(pre.get('justificativa', ''))]
-            if pre.get('evidencias'):
-                gerado += ['Evidências da pré-leitura', '\n'.join('- ' + str(e) for e in pre.get('evidencias', []))]
+                  'Esta nota resume exclusivamente o trabalho e suas evidências. '
+                  'Conexões com a pesquisa ficam em `ANOTACOES.md`.']
         perfil = a.get('perfil_revisao', {})
         if perfil.get('revisao') == p.revisao or sintese.get('revisao') == p.revisao:
-            gerado += ['### Entendimento consolidado do trabalho']
+            gerado += ['### Resumo do trabalho']
             if sintese.get('resumo'):
                 gerado += ['**Síntese da leitura**', sintese['resumo']]
             campos_perfil = {
                 'problema': 'Problema', 'solucao': 'Solução ou abordagem',
                 'avaliacao': 'Avaliação', 'limites': 'Limitações observadas',
-                'possibilidades': 'Possibilidades de extensão',
             }
             for campo, titulo in campos_perfil.items():
                 valor = perfil.get(campo)
                 if valor:
                     gerado += [f'**{titulo}**', str(valor)]
-            if sintese.get('lacunas_possiveis'):
-                gerado += ['**Possíveis lacunas levantadas na leitura**',
-                           '\n'.join(f'- {item}' for item in sintese['lacunas_possiveis'])]
-            if sintese.get('propostas_possiveis'):
-                gerado += ['**Possíveis contribuições derivadas deste trabalho**',
-                           '\n'.join(f'- {item}' for item in sintese['propostas_possiveis'])]
         if a.get('pdf_local'):
             alvo = a['pdf_local'].replace(chr(92), '/')
             if alvo.startswith('obsidian/referencias/'):
@@ -583,25 +642,6 @@ def atualizar(p):
             if alvo.startswith('obsidian/'):
                 alvo = alvo[len('obsidian/'):]
             gerado += [f"[Texto local](../{quote(alvo)})"]
-        refs = [ids[u] for u in a.get('referencias_openalex', []) if u in ids and ids[u] != nome]
-        citantes = [n for n, b in artigos.items() if a['id_openalex'] in b.get('referencias_openalex', []) and n != nome]
-        citantes += [ids[u] for u in a.get('citado_por_openalex', []) if u in ids and ids[u] != nome]
-        gerado += ['### Relações bibliográficas verificadas nos metadados',
-                   'Referencia: ' + (', '.join(link(n, '') for n in sorted(set(refs))) or 'nenhum trabalho do acervo identificado.'),
-                   'É citado por: ' + (', '.join(link(n, '') for n in sorted(set(citantes))) or 'nenhum trabalho do acervo identificado.')]
-        rels = [ids[u] for u in a.get('trabalhos_relacionados_openalex', []) if u in ids and ids[u] != nome]
-        if rels:
-            gerado += ['Relacionados segundo o OpenAlex (isso não implica citação): ' + ', '.join(link(n, '') for n in rels)]
-        gerado += ['### Como se correlaciona com os demais na análise']
-        pares = [(m, obj) for m, obj in propostas if nome in obj.get('fontes', [])]
-        if not pares:
-            gerado += ['Ainda não comparado pela IA. Não foi inferida relação apenas por coincidência temática.']
-        for meta, obj in pares:
-            outros = [n for n in obj.get('fontes', []) if n != nome and n in artigos]
-            gerado += [f"**Com {', '.join(link(n, '') for n in outros)} — {meta['titulo']}**",
-                       'Interpretação da IA: ' + obj.get('interpretacao', ''),
-                       'Possível alteração a investigar: ' + obj.get('alteracao_sobre_trabalhos_proximos', ''),
-                       '[Proposta completa nas anotações](../ANOTACOES.md)']
         leitura = a.get('leitura_agente', {})
         if leitura.get('assinatura'):
             gerado += ['### Fichamento', f"Base: {leitura.get('tipo')}; {leitura.get('feitos')}/{leitura.get('total')} trechos. "

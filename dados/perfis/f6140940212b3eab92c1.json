@@ -1,7 +1,0 @@
-{
-  "problema": "Não identificado nas fichas/trechos disponíveis.",
-  "solucao": "uso de identidades autosoberanas (SSI) baseadas em blockchain para dar controle aos cidadãos sobre suas credenciais digitais",
-  "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
-  "limites": "Não identificado nas fichas/trechos disponíveis.",
-  "possibilidades": "Explorar a integração de mecanismos de revogação de credenciais verificáveis, como listas de revogação distribuídas, ao middleware InterSCity para melhorar a gestão de identidade e a resiliência contra comprometimento de credenciais."
-}

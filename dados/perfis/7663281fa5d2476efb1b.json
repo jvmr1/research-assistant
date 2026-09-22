@@ -1,7 +1,0 @@
-{
-  "problema": "viabilizar troca segura, auditável e privada de dados IIoT entre organizações sem confiança prévia, reduzindo a dependência de intermediários centralizados.",
-  "solucao": "combinar contratos inteligentes na blockchain Hyperledger Besu com criptografia baseada em atributos (ABE)",
-  "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
-  "limites": "Não identificado nas fichas/trechos disponíveis.",
-  "possibilidades": "Incorporar credenciais verificáveis (VC) baseadas em DID para gerenciar políticas de acesso dinâmicas e permitir revogação descentralizada dos direitos de acesso aos dados IIoT."
-}

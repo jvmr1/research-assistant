@@ -1,7 +1,0 @@
-{
-  "problema": "ausência de sistemas de identidade controlados pelo usuário, escaláveis, econômicos e compatíveis com infraestruturas descentralizadas",
-  "solucao": "YouGovern, um sistema SSI baseado em blockchain (Binance Smart Chain) que segue os padrões W3C DID, usando contratos inteligentes para controle de acesso e armazenamento descentralizado via IPFS e Web3.Storage",
-  "avaliacao": "Avaliações de desempenho mostram latência média de registro de 0,94 s e pico de 12,5 transações por segundo, destacando melhorias em revogação e custos operacionais em relação a soluções como Sovrin e uPort",
-  "limites": "desafios de adoção em soluções baseadas em blockchain",
-  "possibilidades": "Implementar um mecanismo de recuperação de credenciais perdidas usando chaves de recuperação distribuídas entre autoridades municipais, permitindo que cidadãos restabeleçam o acesso sem comprometer a privacidade ou a descentralização."
-}

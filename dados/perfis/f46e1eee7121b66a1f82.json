@@ -1,7 +1,0 @@
-{
-  "problema": "superar a dependência de intermediários centralizados, oferecendo controle granular de acesso, privacidade, auditabilidade e interoperabilidade entre organizações sem relação prévia de confiança.",
-  "solucao": "Não identificado nas fichas/trechos disponíveis.",
-  "avaliacao": "Não identificado nas fichas/trechos disponíveis.",
-  "limites": "Não identificado nas fichas/trechos disponíveis.",
-  "possibilidades": "Incorporar credenciais verificáveis (VC) baseadas em DID para permitir revogação descentralizada e recuperação de acesso perdido, integrando um mecanismo de compartilhamento secreto para chaves de ABE, de modo a melhorar a resiliência contra comprometimento de credenciais em ambientes IIoT."
-}

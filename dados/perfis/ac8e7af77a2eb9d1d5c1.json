@@ -1,7 +1,0 @@
-{
-  "problema": "foco em identidade digital para cidades inteligentes usando blockchain.",
-  "solucao": "propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
-  "avaliacao": "destacando a importância da segurança da informação e avaliando o custo computacional da solução.",
-  "limites": "Não identificado nas fichas/trechos disponíveis.",
-  "possibilidades": "Integrar criptografia baseada em atributos (ABE) ao modelo de credenciais verificáveis, permitindo controle de acesso seletivo a dados de sensores IoT sem expor informações sensíveis."
-}

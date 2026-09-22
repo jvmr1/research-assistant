@@ -105,3 +105,50 @@ class RevisaoTest(unittest.TestCase):
         self.assertIn('## Introdução', redacao)
         self.assertIn('Introdução [A].', redacao)
         self.assertNotIn('[inventada]', redacao)
+
+    def test_dialogo_focado_le_anotacoes_trabalho_memoria_e_registra_consultas(self):
+        self.p.cfg['modo_pesquisa'] = 'focada'
+        self.base.ANOTACOES_PESQUISADOR.write_text('Decisão do pesquisador: priorizar recuperação.', encoding='utf-8')
+        self.base.TRABALHO.write_text('# Trabalho atual\nTexto já consolidado.', encoding='utf-8')
+        self.base.ANOTACOES_IA.write_text('# Memória\nJá verifiquei revogação.', encoding='utf-8')
+        with patch('src.revisao.matriz', return_value=[{
+            'id': 'A', 'titulo': 'Fonte SSI',
+            'escopo': {'tipo': 'pdf', 'feitos': 1, 'total': 1, 'concluida': True},
+            'fichas_amostradas': [{'id': 'ficha-A', 'pagina': 1, 'resumo': 'Resumo.', 'evidencias': []}],
+        }]), patch('src.revisao.chamar', return_value={
+            'introducao': ['Contexto [A].', 'Problema [A].', 'Objetivo [A].'],
+            'fundamentacao_teorica': [
+                {'titulo': 'SSI', 'texto': 'Fundamentação [A].', 'fontes': ['A']},
+                {'titulo': 'Segurança', 'texto': 'Segurança [A].', 'fontes': ['A']},
+                {'titulo': 'Governança', 'texto': 'Governança [A].', 'fontes': ['A']},
+                {'titulo': 'Recuperação', 'texto': 'Recuperação [A].', 'fontes': ['A']},
+            ],
+            'mapa_fases': [], 'fontes_usadas': ['A'],
+            'consultas_novas': ['SSI recuperação social smart cities'],
+        }) as chamar:
+            self.assertTrue(revisao.redigir_pesquisa_focada(self.p))
+        dados = chamar.call_args.args[3]
+        self.assertIn('Decisão do pesquisador', dados['anotacoes_do_pesquisador'])
+        self.assertIn('Texto já consolidado', dados['trabalho_atual'])
+        self.assertIn('Já verifiquei revogação', dados['memoria_operacional_da_ia'])
+        self.assertTrue(any(
+            item.get('consulta') == 'SSI recuperação social smart cities'
+            for item in self.p.estado['consultas'].values()
+        ))
+    def test_extrai_decisoes_humanas_do_dialogo(self):
+        texto = """# Anotações
+
+<!-- agente:dialogo:inicio -->
+#### 1. Recuperação social
+resposta_pesquisador: aprovar se comparar com guardians.
+#### 2. Identidade biométrica
+resposta_pesquisador: rejeitar, não quero ir nessa direção.
+#### 3. Revogação
+resposta_pesquisador: revisar com mais fontes.
+<!-- agente:dialogo:fim -->
+"""
+        decisoes = revisao.extrair_decisoes_pesquisador(texto)
+        self.assertEqual(decisoes['aprovadas'][0]['titulo'], 'Recuperação social')
+        self.assertEqual(decisoes['rejeitadas'][0]['titulo'], 'Identidade biométrica')
+        self.assertEqual(decisoes['revisar'][0]['titulo'], 'Revogação')
+

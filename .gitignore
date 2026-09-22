@@ -4,6 +4,22 @@
 # Trava local de execução do agente; não deve ser reaproveitada em outra máquina
 dados/agente.lock
 
+# Estado local da pesquisa e memória operacional da IA.
+# O repositório público deve carregar só a estrutura/template; seu acervo,
+# fichamentos, PDFs, anotações e memória ficam locais ou em nuvem privada.
+dados/**
+!dados/
+!dados/.gitkeep
+obsidian/**
+!obsidian/
+!obsidian/ANOTACOES.example.md
+!obsidian/TRABALHO.example.md
+!obsidian/referencias/
+!obsidian/referencias/pdfs/
+!obsidian/referencias/pdfs/.gitkeep
+!obsidian/referencias/fichamentos/
+!obsidian/referencias/fichamentos/.gitkeep
+
 # Ambiente virtual instalado localmente; recriado a partir de requirements.txt
 .venv/
 venv/

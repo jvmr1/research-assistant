@@ -1,7 +1,0 @@
-{
-  "problema": "foco em identidade digital para cidades inteligentes usando blockchain.",
-  "solucao": "propõe um modelo de gestão de identidades para cidades inteligentes baseado na tecnologia blockchain.",
-  "avaliacao": "destacando a importância da segurança da informação e avaliando o custo computacional da solução.",
-  "limites": "Não identificado nas fichas/trechos disponíveis.",
-  "possibilidades": "Integrar mecanismos de identidade autossoberana (SSI) e credenciais verificáveis ao modelo baseado em Hyperledger Fabric, permitindo revogação descentralizada e recuperação de acesso por meio de secret sharing."
-}

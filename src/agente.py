@@ -66,6 +66,14 @@ Este é o arquivo principal de conversa com a IA. Escreva aqui o rumo da
 pesquisa, dúvidas, preferências, decisões e feedback sobre propostas. O agente
 preserva o texto livre e atualiza apenas blocos marcados automaticamente.
 
+## Como conversar com a IA
+
+Escreva suas mensagens fora dos blocos `<!-- agente:... -->`. Para responder a
+um achado da IA, use `resposta_pesquisador:` e escreva `aprovar`, `rejeitar` ou
+`revisar`, seguido da sua explicação. A IA só pode levar uma ideia para
+`TRABALHO.md` quando houver aprovação explícita; achados sem resposta ficam em
+análise e podem gerar novas buscas.
+
 ## Configuração
 
 - modo de pesquisa: focada

@@ -642,6 +642,30 @@ def detalhar(p):
             return
 
 
+def extrair_decisoes_pesquisador(anotacoes):
+    """Extrai respostas humanas do bloco de diálogo para orientar a rodada.
+
+    A IA ainda recebe o caderno completo, mas este resumo estruturado reduz a
+    chance de tratar sugestão própria como aprovação humana.
+    """
+    decisoes = {'aprovadas': [], 'rejeitadas': [], 'revisar': []}
+    padrao = re.compile(
+        r'(?ms)^####\s+\d+\.\s+(.*?)\n.*?^resposta_pesquisador:\s*(.*?)\s*(?=^####\s+\d+\.\s+|^###\s+|<!-- agente:dialogo:fim -->)'
+    )
+    for titulo, resposta in padrao.findall(anotacoes or ''):
+        titulo = texto(titulo)
+        resposta_txt = texto(resposta)
+        normalizada = resposta_txt.lower()
+        item = {'titulo': titulo, 'resposta': resposta_txt}
+        if re.search(r'\b(aprovar|aprovado|gostei|muito_interessante|usar|seguir)\b', normalizada):
+            decisoes['aprovadas'].append(item)
+        elif re.search(r'\b(rejeitar|rejeitado|descartar|não gostei|nao gostei|ignorar)\b', normalizada):
+            decisoes['rejeitadas'].append(item)
+        elif resposta_txt:
+            decisoes['revisar'].append(item)
+    return decisoes
+
+
 def redigir_pesquisa_focada(p):
     """Gera uma redação provisória rastreável para o modo de pesquisa focada."""
     from src.motor import chave, agora, json_gravar, log
@@ -649,19 +673,29 @@ def redigir_pesquisa_focada(p):
     if p.cfg.get('modo_pesquisa') != 'focada':
         return False
     corpus = [linha for linha in matriz(p) if linha.get('fichas_amostradas')]
-    if not corpus:
-        p.estado.setdefault('redacao_focada', {})['status'] = 'aguardando_fontes'
-        return False
-    assinatura = chave(corpus)
+    anotacoes = p.b.ANOTACOES_PESQUISADOR.read_text(encoding='utf-8-sig') if p.b.ANOTACOES_PESQUISADOR.exists() else p.instrucoes
+    trabalho_path = p.b.TRABALHO
+    trabalho_atual = trabalho_path.read_text(encoding='utf-8-sig') if trabalho_path.exists() else ''
+    memoria_path = p.b.ANOTACOES_IA
+    memoria_ia = memoria_path.read_text(encoding='utf-8-sig') if memoria_path.exists() else ''
+    decisoes_humanas = extrair_decisoes_pesquisador(anotacoes)
+    contexto = {
+        'anotacoes_do_pesquisador': anotacoes[-24000:],
+        'decisoes_humanas_extraidas': decisoes_humanas,
+        'trabalho_atual': trabalho_atual[-24000:],
+        'memoria_operacional_da_ia': memoria_ia[-18000:],
+        'fichamentos_disponiveis': corpus,
+    }
+    assinatura = chave(contexto)
     anterior = p.estado.get('redacao_focada', {})
     if (anterior.get('assinatura') == assinatura
-            and anterior.get('versao') == 3
+            and anterior.get('versao') == 4
             and isinstance(anterior.get('introducao'), list)
             and isinstance(anterior.get('fundamentacao_teorica'), list)
             and len(anterior['introducao']) >= 3
             and len(anterior['fundamentacao_teorica']) >= 4):
         return False
-    ident = chave(['redacao-focada-v3', p.revisao, assinatura])
+    ident = chave(['dialogo-pesquisa-v1', p.revisao, assinatura])
 
     def acao():
         log('Escrevendo introdução e fundamentação teórica provisórias.')
@@ -690,11 +724,21 @@ def redigir_pesquisa_focada(p):
                     },
                 },
                 'fontes_usadas': {'type': 'array', 'items': {'type': 'string'}},
+                'consultas_novas': {'type': 'array', 'items': {'type': 'string'}, 'maxItems': 8},
+                'achados_em_analise': {'type': 'array', 'items': {'type': 'object', 'properties': {
+                    'titulo': {'type': 'string'}, 'resumo': {'type': 'string'},
+                    'consulta': {'type': 'string'}, 'acao_pesquisador': {'type': 'string'}},
+                    'required': ['titulo', 'resumo', 'consulta', 'acao_pesquisador']}, 'maxItems': 8},
+                'decisoes_aprovadas': {'type': 'array', 'items': {'type': 'string'}, 'maxItems': 12},
             },
             'required': ['introducao', 'fundamentacao_teorica', 'mapa_fases', 'fontes_usadas'],
         }
         r = chamar(p, 'redacao-focada',
-            'Escreva uma seção acadêmica desenvolvida, não um resumo. Use os trabalhos-exemplo apenas para aprender '
+            'Atue como assistente de pesquisa em uma rodada de continuidade. Leia as anotações do pesquisador, o '
+            'trabalho atual, a memória operacional e os fichamentos fornecidos. Preserve decisões e conteúdo válido já '
+            'existentes; não recomece a pesquisa nem repita análises já registradas. Atualize o texto para refletir da '
+            'melhor forma possível o que está nas anotações, distinguindo instrução, hipótese, evidência e texto já '
+            'estabelecido. Escreva uma seção acadêmica desenvolvida, não um resumo. Use os trabalhos-exemplo apenas para aprender '
             'estrutura, extensão, profundidade e modo de referenciar; eles NÃO são fontes do tema e não podem ser citados. '
             'A introdução deve ter 5 a 8 parágrafos substanciais, cobrindo contexto de cidades inteligentes, problema, '
             'motivação, justificativa, objetivo geral, objetivos específicos e organização do texto. A fundamentação deve '
@@ -709,12 +753,20 @@ def redigir_pesquisa_focada(p):
             'Depois faça exatamente 7 itens no mapa: emissão, apresentação/verificação, transmissão, processamento, '
             'armazenamento, revogação e recuperação de acesso. Em cada item use 2 a 4 frases por campo para ações do cidadão '
             'e entidades administrativas, riscos, estado da arte e lacunas. Use somente os '
-            'trabalhos fornecidos. Insira citações no texto como [ID_EXATO] e liste em fontes_usadas somente IDs '
-            'fornecidos. Não invente autores, anos, resultados ou consenso: quando a fonte não sustentar algo, escreva '
+            'trabalhos fornecidos. Liste em fontes_usadas somente IDs fornecidos. Não invente autores, anos, resultados '
+            'ou consenso: quando a fonte não sustentar algo, escreva '
             '“não identificado nas fontes lidas” e trate lacunas como hipóteses. A redação é um rascunho de trabalho, '
-            'não uma afirmação de novidade comprovada. JSON no esquema fornecido. '
-            'EXEMPLOS DE FORMA, NÃO FONTES: ' + json.dumps(exemplos_de_redacao(p), ensure_ascii=False),
-            {'objetivo': p.instrucoes, 'trabalhos': corpus}, esquema)
+            'não uma afirmação de novidade comprovada. As anotações usam esta convenção: texto fora de blocos automáticos '
+            'é do pesquisador; `## Resposta do pesquisador` contém respostas e aprovações humanas; o bloco marcado '
+            '`agente:dialogo` é da IA. Use `decisoes_humanas_extraidas.aprovadas` como lista principal de decisões aprovadas, '
+            '`decisoes_humanas_extraidas.rejeitadas` como direções a evitar e `decisoes_humanas_extraidas.revisar` como pontos que pedem mais evidência. '
+            'Nunca trate uma sugestão sua como aprovação. Gere achados_em_analise com '
+            '`acao_pesquisador: aprovar/rejeitar/revisar`, para o pesquisador responder depois. Só use decisões explicitamente '
+            'aprovadas para orientar alterações no trabalho. Gere também consultas acadêmicas novas, específicas e não '
+            'redundantes, para esclarecer pontos ainda não sustentados. Não promova um candidato a referência apenas '
+            'por aparecer na busca: ele só deve entrar em `referencias/fichamentos/` depois de triagem, texto disponível '
+            'e leitura suficiente. JSON no esquema fornecido. EXEMPLOS DE FORMA, NÃO FONTES: ' +
+            json.dumps(exemplos_de_redacao(p), ensure_ascii=False), contexto, esquema)
         if '[ID_EXATO]' in json.dumps(r, ensure_ascii=False) or '[ID]' in json.dumps(r, ensure_ascii=False):
             raise ValueError('A redação contém marcador de citação genérico; a tarefa será refeita com IDs reais.')
         ids = {linha['id'] for linha in corpus}
@@ -730,10 +782,15 @@ def redigir_pesquisa_focada(p):
             item = dict(fase)
             item['fontes'] = [f for f in item.get('fontes', []) if isinstance(f, str) and f in ids]
             fases.append(item)
-        resultado = {'versao': 3, 'revisao': p.revisao, 'assinatura': assinatura, 'gerado_em': agora(),
+        consultas = [texto(q)[:200] for q in r.get('consultas_novas', []) if texto(q)][:8]
+        achados = [item for item in r.get('achados_em_analise', []) if isinstance(item, dict) and texto(item.get('titulo'))][:8]
+        aprovadas = [texto(item)[:500] for item in r.get('decisoes_aprovadas', []) if texto(item)][:12]
+        p.registrar_consultas(consultas, 'continuidade IA a partir de ANOTACOES.md')
+        resultado = {'versao': 4, 'revisao': p.revisao, 'assinatura': assinatura, 'gerado_em': agora(),
                      'status': 'rascunho_em_revisao', 'introducao': introducao,
                      'fundamentacao_teorica': fundamentacao,
-                     'mapa_fases': fases, 'fontes_usadas': fontes}
+                     'mapa_fases': fases, 'fontes_usadas': fontes, 'consultas_novas': consultas,
+                     'achados_em_analise': achados, 'decisoes_aprovadas': aprovadas}
         p.estado['redacao_focada'] = resultado
         json_gravar(p.root / 'dados/redacao-focada.json', resultado)
         p.salvar()
