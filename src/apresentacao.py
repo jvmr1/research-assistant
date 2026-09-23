@@ -134,6 +134,36 @@ def proposta_descartada(meta, obj):
     return str(valor).strip().lower() == 'descartar'
 
 
+def referencias_citadas_no_obsidian(root):
+    """IDs de fichamentos citados nas anotações ou no trabalho atual."""
+    citadas = set()
+    for rel in ('obsidian/ANOTACOES.md', 'obsidian/TRABALHO.md'):
+        path = root / rel
+        if not path.exists():
+            continue
+        texto = path.read_text(encoding='utf-8-sig')
+        citadas.update(re.findall(r'referencias/fichamentos/([^\]|)#]+)', texto))
+        citadas.update(re.findall(r'\[\[referencias/fichamentos/([^\]|#]+)', texto))
+    return {nome[:-3] if nome.endswith('.md') else nome for nome in citadas}
+
+
+def referencias_ativas(root, propostas, redacao=None):
+    """Referências que devem permanecer visíveis no Obsidian."""
+    ativas = {
+        fonte
+        for meta, obj in propostas
+        if not proposta_descartada(meta, obj)
+        for fonte in (obj.get('fontes', meta.get('fontes', [])) if obj else meta.get('fontes', []))
+    }
+    if isinstance(redacao, dict):
+        ativas.update(f for f in redacao.get('fontes_usadas', []) if isinstance(f, str))
+        for fase in redacao.get('mapa_fases', []) if isinstance(redacao.get('mapa_fases'), list) else []:
+            if isinstance(fase, dict):
+                ativas.update(f for f in fase.get('fontes', []) if isinstance(f, str))
+    ativas.update(referencias_citadas_no_obsidian(root))
+    return ativas
+
+
 def link_ou_nome(nome, root):
     path = root / 'obsidian/referencias/fichamentos' / f'{nome}.md'
     return link(nome) if path.exists() else f'`{nome}`'
@@ -214,32 +244,17 @@ def atualizar_avaliacao_propostas(root, propostas, revisao, agora_func, artigos=
     antigas = avaliacoes_existentes(path)
     antigas.update(avaliacoes_existentes(legado))
     linhas = [
-        '## Propostas em avaliação',
+        '## Propostas',
         f'Atualizado: {agora_func()}',
-        'Edite os campos `avaliacao:` e `comentario:` abaixo. Você também pode escrever livremente fora deste bloco.',
+        'Cada proposta fica em um toggle. Abra, revise resumo/trabalhos/descrição e edite `avaliacao:` e `comentario:` no final do próprio item.',
         'Valores úteis para `avaliacao:`: `pendente`, `muito_interessante`, `gostei`, `neutra`, `descartar`.',
-        'Marque como `muito_interessante` ou `gostei` para guiar as próximas buscas na direção desta proposta.',
     ]
     atuais = [(m, o) for m, o in propostas
               if m.get('revisao') == revisao and not proposta_descartada(m, o)]
-    if not atuais:
-        linhas.append('Ainda não há propostas nesta orientação.')
-    for meta, obj in atuais:
-        antigo = antigas.get(meta.get('id'), {})
-        avaliacao = antigo.get('avaliacao') or obj.get('avaliacao_humana') or 'pendente'
-        comentario = antigo.get('comentario') or obj.get('comentario_humano') or ''
-        fontes = obj.get('fontes', meta.get('fontes', [])) if obj else meta.get('fontes', [])
-        linhas += [
-            '',
-            f"## {meta.get('titulo', 'Proposta sem título')}",
-            f"id: {meta.get('id')}",
-            f"avaliacao: {avaliacao}",
-            f"comentario: {comentario}",
-            'fontes: ' + (', '.join(fontes) if fontes else 'não informadas'),
-            'resumo: ' + str((obj or {}).get('meu_trabalho') or (obj or {}).get('hipotese_lacuna') or 'Detalhes nas memória interna da IA.')[:700],
-        ]
     if artigos is not None:
-        linhas += ['', *linhas_lista_propostas(root, propostas, revisao, artigos, agora_func)]
+        linhas += ['', *linhas_lista_propostas(root, propostas, revisao, artigos, agora_func, antigas)]
+    elif not atuais:
+        linhas.append('Ainda não há propostas nesta orientação.')
     gravar = __import__('src.motor', fromlist=['gravar']).gravar
     cabecalho = (
         '# Anotações\n\n'
@@ -253,45 +268,81 @@ def atualizar_lista_propostas(root, propostas, revisao, artigos, agora_func):
     atualizar_avaliacao_propostas(root, propostas, revisao, agora_func, artigos)
 
 
-def linhas_lista_propostas(root, propostas, revisao, artigos, agora_func):
+def linhas_lista_propostas(root, propostas, revisao, artigos, agora_func, antigas=None):
     """Gera a visão curta das propostas para o bloco do pesquisador."""
     atuais = [(m, o) for m, o in propostas
               if m.get('revisao') == revisao and not proposta_descartada(m, o)]
-    linhas = [
-        '## Lista detalhada das possíveis propostas',
-        f'Atualizado: {agora_func()}',
-        'Linha atual: segurança em cidades inteligentes com identidade autosoberana, com atenção a criptografia baseada em atributos e/ou homomórfica quando a lacuna justificar.',
-        'Use os campos `avaliacao:` e `comentario:` deste mesmo arquivo para guiar as próximas buscas.',
-        '',
-    ]
+    antigas = antigas or {}
+    linhas = []
     if not atuais:
-        linhas.append('Ainda não há propostas ativas para a orientação atual.')
+        linhas.append('Ainda não há propostas ativas para a orientação atual. Quando houver propostas antigas sem detalhamento suficiente, o agente deve reler a memória interna, fichamentos e fontes para desenvolver melhor antes de levar ao trabalho.')
     for indice, (meta, obj) in enumerate(atuais, 1):
+        obj = obj or {}
         titulo = meta.get('titulo', 'Proposta sem título')
-        fontes = obj.get('fontes', meta.get('fontes', [])) if obj else meta.get('fontes', [])
+        fontes = obj.get('fontes', meta.get('fontes', []))
+        antigo = antigas.get(meta.get('id'), {})
+        avaliacao = antigo.get('avaliacao') or obj.get('avaliacao_humana') or 'pendente'
+        comentario = antigo.get('comentario') or obj.get('comentario_humano') or ''
         tags = sorted({tag for fonte in fontes for tag in __import__('src.agente', fromlist=['criar_tags']).criar_tags(artigos.get(fonte, {}).get('consulta', ''), artigos.get(fonte, {}))})
+        resumo = valor_markdown(obj.get('meu_trabalho') or obj.get('hipotese_lacuna') or 'Detalhes ainda incompletos no relatório.')
+        trabalhos = '\n'.join(f'- {link_ou_nome(fonte, root)} — {artigos.get(fonte, {}).get("titulo", fonte)}' for fonte in fontes) or '- Nenhuma fonte informada.'
         linhas += [
-            f'## {indice}. {titulo}',
+            '<details>',
+            f'<summary>{indice}. {titulo}</summary>',
+            '',
+            '### Resumo',
+            resumo,
+            '',
+            '### Trabalhos-base e fontes usadas',
+            trabalhos,
+            '',
+            '### Descrição detalhada da proposta',
             '**Ideia do trabalho**',
-            valor_markdown((obj or {}).get('meu_trabalho') or (obj or {}).get('hipotese_lacuna') or 'Detalhes ainda incompletos no relatório.'),
+            resumo,
+            '',
             '**Lacuna explorada**',
-            valor_markdown((obj or {}).get('hipotese_lacuna') or 'Ainda não registrada.'),
+            valor_markdown(obj.get('hipotese_lacuna') or 'Ainda não registrada.'),
+            '',
+            '**Problema observado**',
+            valor_markdown(obj.get('problema') or 'Ainda não detalhado.'),
+            '',
+            '**Fatos sustentados nos trabalhos**',
+            valor_markdown(obj.get('fatos') or 'Ainda não detalhado.'),
+            '',
+            '**Interpretação feita**',
+            valor_markdown(obj.get('interpretacao') or 'Ainda não detalhada.'),
+            '',
+            '**Trabalhos próximos e o que eu alteraria**',
+            valor_markdown(obj.get('alteracao_sobre_trabalhos_proximos') or 'Ainda não detalhado.'),
+            '',
             '**Como desenvolver e avaliar**',
-            valor_markdown((obj or {}).get('experimento') or 'Ainda não detalhado.'),
+            valor_markdown(obj.get('experimento') or 'Ainda não detalhado.'),
+            '',
             '**Recursos, ferramentas e dados possíveis**',
-            valor_markdown((obj or {}).get('recursos') or 'Ainda não detalhado.'),
+            valor_markdown(obj.get('recursos') or 'Ainda não detalhado.'),
+            '',
             '**Métricas de avaliação**',
-            valor_markdown((obj or {}).get('metricas') or 'Ainda não detalhado.'),
+            valor_markdown(obj.get('metricas') or 'Ainda não detalhado.'),
+            '',
             '**Riscos, limites e incertezas**',
-            valor_markdown((obj or {}).get('riscos') or 'Ainda não detalhado.'),
+            valor_markdown(obj.get('riscos') or 'Ainda não detalhado.'),
+            '',
             '**Perguntas para reunião com orientador**',
-            valor_markdown((obj or {}).get('duvidas_orientador') or 'Ainda não detalhado.'),
-            '**Fontes que sustentam**',
-            '\n'.join(f'- {link_ou_nome(fonte, root)} — {artigos.get(fonte, {}).get("titulo", fonte)}' for fonte in fontes) or '- Nenhuma fonte informada.',
+            valor_markdown(obj.get('duvidas_orientador') or 'Ainda não detalhado.'),
+            '',
             '**Tags temáticas**',
             ' '.join(f'#{tag}' for tag in tags) or 'Nenhuma tag temática identificada.',
+            '',
             '**Próximas buscas sugeridas**',
-            '\n'.join(f'- {q}' for q in (obj or {}).get('buscas', [])) or '- Nenhuma busca sugerida.',
+            '\n'.join(f'- {q}' for q in obj.get('buscas', [])) or '- Nenhuma busca sugerida.',
+            '',
+            '### Avaliação do pesquisador',
+            f'id: {meta.get("id")}',
+            f'avaliacao: {avaliacao}',
+            f'comentario: {comentario}',
+            'fontes: ' + (', '.join(fontes) if fontes else 'não informadas'),
+            '',
+            '</details>',
             '',
         ]
     candidatos = []
@@ -314,6 +365,25 @@ def linhas_lista_propostas(root, propostas, revisao, artigos, agora_func):
                 f"Pré-leitura: {artigo.get('pre_leitura_agente', {}).get('decisao', 'pendente')}. "
                 f"Motivo: {valor_markdown(artigo.get('triagem_agente', {}).get('justificativa', ''))[:350]}"
             ]
+    ativas = referencias_ativas(root, atuais, ler(root / 'dados/redacao-focada.json', {}))
+    bases = [a for a in artigos.values() if a.get('fonte') == 'PDF de exemplo fornecido pelo pesquisador']
+    analisadas_sem_uso = [
+        a for a in artigos.values()
+        if a.get('sintese_artigo', {}).get('revisao') == revisao
+        and a.get('nome_local') not in ativas
+        and a.get('fonte') != 'PDF de exemplo fornecido pelo pesquisador'
+    ]
+    if analisadas_sem_uso:
+        linhas += ['', '## Referências analisadas sem uso ativo',
+                   'Estes trabalhos têm leitura/fichamento, mas ainda não sustentam proposta ativa nem trecho aprovado do trabalho. Se uma proposta for marcada como `descartar`, o agente registra as fontes em `dados/` para evitar repetir a direção. A remoção física de PDFs deve ser feita só com confirmação explícita.', '']
+        for artigo in sorted(analisadas_sem_uso, key=lambda a: a.get('nome_local', ''))[:20]:
+            linhas.append(f"- `{artigo.get('nome_local')}` — {artigo.get('titulo', '')}")
+    if bases:
+        linhas += ['', '## Trabalhos-base preservados',
+                   'Estes trabalhos foram fornecidos como sementes pelo pesquisador e permanecem na base mesmo quando não sustentam uma proposta ativa.', '']
+        for artigo in sorted(bases, key=lambda a: a.get('nome_local', '')):
+            linhas.append(f"- `{artigo.get('nome_local')}` — {artigo.get('titulo', artigo.get('nome_local'))}")
+
     consultas = []
     redacao = ler(root / 'dados/redacao-focada.json', {})
     consultas.extend(redacao.get('consultas_novas', []) if isinstance(redacao.get('consultas_novas', []), list) else [])
@@ -392,7 +462,7 @@ def atualizar_dialogo_pesquisa(p, agora_func):
             r'(?ms)^####\s+\d+\.\s+(.*?)\n.*?^resposta_pesquisador:\s*(.*?)\s*(?=^####\s+\d+\.\s+|^###\s+|<!-- agente:dialogo:fim -->)',
             atual)
     }
-    linhas = [BLOCO_DIALOGO_INICIO, '## Diálogo de pesquisa da IA',
+    linhas = ['## Diálogo de pesquisa da IA',
               f'Atualizado: {agora_func()}',
               'Este bloco é produzido pela IA. O pesquisador deve responder aos achados e marcar cada ação como `aprovar`, `rejeitar` ou `revisar`. Nada aqui é aprovação automática.']
     achados = redacao.get('achados_em_analise', [])
@@ -411,7 +481,6 @@ def atualizar_dialogo_pesquisa(p, agora_func):
     if aprovadas:
         linhas += ['', '### Decisões aprovadas consideradas pela IA',
                    '\n'.join(f'- {item}' for item in aprovadas)]
-    linhas.append(BLOCO_DIALOGO_FIM)
     novo = atualizar_bloco_preservando_texto(
         p.b.ANOTACOES_PESQUISADOR,
         BLOCO_DIALOGO_INICIO,
@@ -504,11 +573,8 @@ def atualizar(p):
         for meta, obj in antigas:
             linhas += proposta(meta, obj)
 
-    fontes_relevantes = {
-        fonte
-        for meta, obj in propostas
-        for fonte in obj.get('fontes', [])
-    }
+    redacao = ler(root / 'dados/redacao-focada.json', {})
+    fontes_relevantes = referencias_ativas(root, propostas, redacao)
     (root / 'obsidian/TRABALHOS-SEM-PROPOSTA.md').unlink(missing_ok=True)
     atualizar_avaliacao_propostas(root, propostas, p.revisao, agora, artigos)
 

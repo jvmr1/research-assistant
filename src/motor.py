@@ -787,6 +787,14 @@ class Pesquisa:
                 obj["avaliacao_humana"] = "descartar"
                 obj["comentario_humano"] = avaliacao.get("comentario", "")
                 meta["avaliacao_humana"] = "descartar"
+                rejeitadas = self.estado.setdefault("referencias_rejeitadas", {})
+                for nome in obj.get("fontes", meta.get("fontes", [])):
+                    rejeitadas.setdefault(nome, {
+                        "motivo": "fonte associada a proposta descartada pelo pesquisador",
+                        "proposta": meta.get("id"),
+                        "comentario": avaliacao.get("comentario", ""),
+                        "quando": agora(),
+                    })
                 json_gravar(self.root / "dados/propostas" / f"{meta['id']}.json", obj)
                 log("Proposta descartada por feedback humano: " + meta.get("titulo", ""))
                 continue

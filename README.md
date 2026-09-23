@@ -51,6 +51,30 @@ Estas pastas existem no projeto, mas o Git versiona apenas templates e arquivos
 
 Se quiser transportar sua pesquisa pessoal entre máquinas, sincronize `obsidian/` e `dados/` por um repositório privado separado, backup criptografado ou nuvem privada. O repositório público fica limpo e reutilizável.
 
+## Ambiente virtual
+
+Use uma venv local para instalar as dependências sem misturar com o Python do sistema.
+
+No Linux/macOS:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+No Windows PowerShell:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+Depois de ativar a venv, rode os comandos do projeto normalmente com `python`.
+
 ## Instalação no Linux
 
 Use Python 3.11 ou superior.
