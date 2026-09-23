@@ -48,7 +48,8 @@ class PesquisaTest(unittest.TestCase):
         self.p.painel()
         texto_final = self.base.INSTRUCOES.read_text(encoding='utf-8')
         self.assertIn(self.texto, texto_final)
-        self.assertEqual(texto_final.count('<!-- agente:propostas:inicio -->'), 1)
+        self.assertEqual(texto_final.count('<!-- agente:propostas:inicio -->'), 0)
+        self.assertLessEqual(texto_final.count('## Propostas'), 1)
         self.assertTrue((self.root / 'dados/anotacoes-ia.md').exists())
 
     def test_variaveis_de_busca_geram_consultas(self):

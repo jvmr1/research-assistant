@@ -239,28 +239,27 @@ def avaliacoes_existentes(path):
 
 
 def atualizar_avaliacao_propostas(root, propostas, revisao, agora_func, artigos=None):
+    """Remove o bloco automático legado de propostas.
+
+    A interface do pesquisador deve ter uma única seção visível `## Propostas`.
+    Novas propostas são sincronizadas diretamente nessa seção por
+    `atualizar_propostas_manuais_com_estado`; este bloco antigo ficava duplicado
+    e confundia a revisão no Obsidian.
+    """
     path = root / 'obsidian/ANOTACOES.md'
-    legado = root / 'obsidian/AVALIAR-PROPOSTAS.md'
-    antigas = avaliacoes_existentes(path)
-    antigas.update(avaliacoes_existentes(legado))
-    linhas = [
-        '## Propostas',
-        f'Atualizado: {agora_func()}',
-        'Cada proposta fica em um toggle. Abra, revise resumo/trabalhos/descrição e edite `avaliacao:` e `comentario:` no final do próprio item.',
-        'Valores úteis para `avaliacao:`: `pendente`, `muito_interessante`, `gostei`, `neutra`, `descartar`.',
-    ]
-    atuais = [(m, o) for m, o in propostas
-              if m.get('revisao') == revisao and not proposta_descartada(m, o)]
-    if artigos is not None:
-        linhas += ['', *linhas_lista_propostas(root, propostas, revisao, artigos, agora_func, antigas)]
-    elif not atuais:
-        linhas.append('Ainda não há propostas nesta orientação.')
-    gravar = __import__('src.motor', fromlist=['gravar']).gravar
-    cabecalho = (
-        '# Anotações\n\n'
-        'Este é o arquivo principal de conversa com a IA. Escreva livremente fora dos blocos automáticos.\n'
+    if not path.exists():
+        return
+    atual = path.read_text(encoding='utf-8-sig')
+    novo = re.sub(
+        re.escape(BLOCO_PROPOSTAS_INICIO) + r'.*?' + re.escape(BLOCO_PROPOSTAS_FIM),
+        '',
+        atual,
+        count=1,
+        flags=re.S,
     )
-    gravar(path, atualizar_bloco_preservando_texto(path, BLOCO_PROPOSTAS_INICIO, BLOCO_PROPOSTAS_FIM, cabecalho, linhas))
+    if novo != atual:
+        gravar = __import__('src.motor', fromlist=['gravar']).gravar
+        gravar(path, novo.strip() + '\n')
 
 
 def atualizar_lista_propostas(root, propostas, revisao, artigos, agora_func):
@@ -513,21 +512,7 @@ def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
         valor = valor_markdown(obj.get(nome) or '')
         return valor if valor and valor != 'Ainda não detalhado.' else padrao
 
-    def repl(m):
-        bloco = m.group(0)
-        idm = re.search(r'(?im)^id:\s*(\S+)\s*$', bloco)
-        if not idm or idm.group(1).strip() not in por_id:
-            return bloco
-        pid = idm.group(1).strip()
-        meta, obj = por_id[pid]
-        if not obj.get('detalhada'):
-            return bloco
-        resumo_m = re.search(r'(?is)<summary>(.*?)</summary>', bloco)
-        summary = resumo_m.group(1).strip() if resumo_m else meta.get('titulo', obj.get('titulo', 'Proposta sem título'))
-        avaliacao_m = re.search(r'(?im)^avaliacao:\s*([^\n]*)', bloco)
-        comentario_m = re.search(r'(?im)^comentario:\s*([^\n]*)', bloco)
-        avaliacao = avaliacao_m.group(1).strip() if avaliacao_m else obj.get('avaliacao_humana', 'pendente')
-        comentario = comentario_m.group(1).strip() if comentario_m else obj.get('comentario_humano', '')
+    def renderizar(pid, summary, avaliacao, comentario, meta, obj):
         fontes = obj.get('fontes') or meta.get('fontes') or []
         trabalhos = '\n'.join(f'- {link_ou_nome(fonte, p.root)} — {artigos.get(fonte, {}).get("titulo", fonte)}' for fonte in fontes) or '- Nenhuma fonte informada.'
         linhas = [
@@ -584,7 +569,57 @@ def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
         ]
         return '\n'.join(linhas)
 
+    def repl(m):
+        bloco = m.group(0)
+        idm = re.search(r'(?im)^id:\s*(\S+)\s*$', bloco)
+        if not idm or idm.group(1).strip() not in por_id:
+            return bloco
+        pid = idm.group(1).strip()
+        meta, obj = por_id[pid]
+        if not obj.get('detalhada'):
+            return bloco
+        resumo_m = re.search(r'(?is)<summary>(.*?)</summary>', bloco)
+        summary = resumo_m.group(1).strip() if resumo_m else meta.get('titulo', obj.get('titulo', 'Proposta sem título'))
+        avaliacao_m = re.search(r'(?im)^avaliacao:\s*([^\n]*)', bloco)
+        comentario_m = re.search(r'(?im)^comentario:\s*([^\n]*)', bloco)
+        avaliacao = avaliacao_m.group(1).strip() if avaliacao_m else obj.get('avaliacao_humana', 'pendente')
+        comentario = comentario_m.group(1).strip() if comentario_m else obj.get('comentario_humano', '')
+        return renderizar(pid, summary, avaliacao or 'pendente', comentario, meta, obj)
+
+
     novo = re.sub(r'(?is)<details>\s*.*?</details>', repl, atual)
+    ids_existentes = set(re.findall(r'(?im)^id:\s*(\S+)\s*$', novo))
+    candidatos = []
+    for meta, obj in propostas:
+        pid = meta.get('id')
+        if not pid or pid in ids_existentes:
+            continue
+        obj = obj or {}
+        if proposta_descartada(meta, obj):
+            continue
+        # O hash da orientação muda quando o pesquisador edita ANOTACOES.md.
+        # Portanto, uma proposta útil não deve sumir só porque nasceu em uma
+        # revisão imediatamente anterior. Limitamos a anexação automática às
+        # propostas mais recentes para não ressuscitar lixo histórico antigo.
+        candidatos.append((str(obj.get('gerado_em') or ''), meta, obj))
+    candidatos.sort(key=lambda item: item[0])
+    novos_blocos = []
+    for _, meta, obj in candidatos[-40:]:
+        pid = meta.get('id')
+        titulo = meta.get('titulo') or obj.get('titulo') or 'Proposta sem título'
+        indice = len(ids_existentes) + len(novos_blocos) + 1
+        novos_blocos.append(renderizar(pid, f'{indice}. {titulo}', obj.get('avaliacao_humana') or 'pendente', obj.get('comentario_humano') or '', meta, obj))
+    if novos_blocos:
+        insercao = '\n\n'.join(novos_blocos) + '\n\n'
+        marcador = re.search(r'(?m)^## Observações de trabalhos recentes\s*$', novo)
+        if marcador:
+            novo = novo[:marcador.start()] + insercao + novo[marcador.start():]
+        else:
+            auto = novo.find(BLOCO_PROPOSTAS_INICIO)
+            if auto >= 0:
+                novo = novo[:auto] + insercao + novo[auto:]
+            else:
+                novo = novo.rstrip() + '\n\n' + insercao
     if novo != atual:
         gravar(path, novo)
 

@@ -809,16 +809,16 @@ def resumo_anotacoes_para_prompt(anotacoes):
         propostas.append(
             f"- id={item['id']}; avaliacao={item['avaliacao']}; incompleta={item['incompleta']}; "
             f"titulo={item['titulo']}; fontes={', '.join(item['fontes']) or 'não informadas'}; "
-            f"resumo={item['resumo'][:500]}"
+            f"resumo={item['resumo'][:220]}"
         )
     decisoes = extrair_decisoes_pesquisador(anotacoes)
     partes = [
         'ORIENTAÇÕES E ANOTAÇÕES LIVRES DO PESQUISADOR:',
-        texto_limpo[-9000:],
+        texto_limpo[-4500:],
         'PROPOSTAS VISÍVEIS EM ANOTACOES.md:',
         '\n'.join(propostas[-20:]) or 'Nenhuma proposta estruturada encontrada.',
         'DECISÕES HUMANAS EXTRAÍDAS:',
-        json.dumps(decisoes, ensure_ascii=False)[:4000],
+        json.dumps(decisoes, ensure_ascii=False)[:1800],
     ]
     return '\n\n'.join(partes)
 
@@ -838,7 +838,7 @@ def corpus_para_prompt(corpus, anotacoes):
     for linha in corpus:
         if linha not in selecionados:
             selecionados.append(linha)
-        if len(selecionados) >= 12:
+        if len(selecionados) >= 7:
             break
     compactos = []
     for linha in selecionados:
@@ -847,8 +847,8 @@ def corpus_para_prompt(corpus, anotacoes):
         for ficha in linha.get('fichas_amostradas', [])[:2]:
             fichas.append({
                 'pagina': ficha.get('pagina'),
-                'resumo': texto(ficha.get('resumo'))[:500],
-                'evidencias': ficha.get('evidencias', [])[:2],
+                'resumo': texto(ficha.get('resumo'))[:260],
+                'evidencias': ficha.get('evidencias', [])[:1],
             })
         item['fichas_amostradas'] = fichas
         compactos.append(item)
@@ -870,8 +870,8 @@ def redigir_pesquisa_focada(p):
     contexto = {
         'anotacoes_do_pesquisador': resumo_anotacoes_para_prompt(anotacoes),
         'decisoes_humanas_extraidas': decisoes_humanas,
-        'trabalho_atual': trabalho_atual[-9000:],
-        'memoria_operacional_da_ia': memoria_ia[-5000:],
+        'trabalho_atual': trabalho_atual[-4500:],
+        'memoria_operacional_da_ia': memoria_ia[-1800:],
         'fichamentos_disponiveis': corpus_para_prompt(corpus, anotacoes),
     }
     assinatura = chave(contexto)
