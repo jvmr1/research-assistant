@@ -494,6 +494,100 @@ def atualizar_dialogo_pesquisa(p, agora_func):
         gravar(p.b.ANOTACOES_PESQUISADOR, novo)
 
 
+
+def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
+    """Sincroniza a lista manual de propostas em ANOTACOES.md com dados detalhados.
+
+    A lista visível no Obsidian é a fila viva do pesquisador. Se uma proposta
+    ali tem `id:` e o agente já detalhou o JSON correspondente, o texto do
+    toggle deve ser atualizado no mesmo lugar, preservando avaliação humana.
+    """
+    from src.motor import gravar
+    path = p.b.ANOTACOES_PESQUISADOR
+    if not path.exists():
+        return
+    atual = path.read_text(encoding='utf-8-sig')
+    por_id = {meta.get('id'): (meta, obj or {}) for meta, obj in propostas if meta.get('id')}
+
+    def campo(obj, nome, padrao='Ainda não detalhado.'):
+        valor = valor_markdown(obj.get(nome) or '')
+        return valor if valor and valor != 'Ainda não detalhado.' else padrao
+
+    def repl(m):
+        bloco = m.group(0)
+        idm = re.search(r'(?im)^id:\s*(\S+)\s*$', bloco)
+        if not idm or idm.group(1).strip() not in por_id:
+            return bloco
+        pid = idm.group(1).strip()
+        meta, obj = por_id[pid]
+        if not obj.get('detalhada'):
+            return bloco
+        resumo_m = re.search(r'(?is)<summary>(.*?)</summary>', bloco)
+        summary = resumo_m.group(1).strip() if resumo_m else meta.get('titulo', obj.get('titulo', 'Proposta sem título'))
+        avaliacao_m = re.search(r'(?im)^avaliacao:\s*([^\n]*)', bloco)
+        comentario_m = re.search(r'(?im)^comentario:\s*([^\n]*)', bloco)
+        avaliacao = avaliacao_m.group(1).strip() if avaliacao_m else obj.get('avaliacao_humana', 'pendente')
+        comentario = comentario_m.group(1).strip() if comentario_m else obj.get('comentario_humano', '')
+        fontes = obj.get('fontes') or meta.get('fontes') or []
+        trabalhos = '\n'.join(f'- {link_ou_nome(fonte, p.root)} — {artigos.get(fonte, {}).get("titulo", fonte)}' for fonte in fontes) or '- Nenhuma fonte informada.'
+        linhas = [
+            '<details>',
+            f'<summary>{summary}</summary>',
+            '',
+            '### Resumo',
+            valor_markdown(obj.get('meu_trabalho') or obj.get('titulo') or meta.get('titulo') or 'Resumo ainda não registrado.'),
+            '',
+            '### Trabalhos-base e fontes usadas',
+            trabalhos,
+            '',
+            '### Descrição detalhada da proposta',
+            '**Ideia do trabalho**',
+            valor_markdown(obj.get('meu_trabalho') or obj.get('titulo') or meta.get('titulo') or 'Ainda não detalhado.'),
+            '',
+            '**Lacuna explorada**',
+            campo(obj, 'hipotese_lacuna'),
+            '',
+            '**Problema observado**',
+            campo(obj, 'problema'),
+            '',
+            '**Fatos sustentados nos trabalhos**',
+            campo(obj, 'fatos'),
+            '',
+            '**Interpretação feita**',
+            campo(obj, 'interpretacao'),
+            '',
+            '**Trabalhos próximos e o que eu alteraria**',
+            campo(obj, 'alteracao_sobre_trabalhos_proximos'),
+            '',
+            '**Como desenvolver e avaliar**',
+            campo(obj, 'experimento'),
+            '',
+            '**Recursos, ferramentas e dados possíveis**',
+            campo(obj, 'recursos'),
+            '',
+            '**Métricas de avaliação**',
+            campo(obj, 'metricas'),
+            '',
+            '**Riscos, limites e incertezas**',
+            campo(obj, 'riscos'),
+            '',
+            '**Perguntas para reunião com orientador**',
+            campo(obj, 'duvidas_orientador'),
+            '',
+            '### Avaliação do pesquisador',
+            f'id: {pid}',
+            f'avaliacao: {avaliacao or "pendente"}',
+            f'comentario: {comentario}',
+            'fontes: ' + (', '.join(fontes) if fontes else ''),
+            '',
+            '</details>',
+        ]
+        return '\n'.join(linhas)
+
+    novo = re.sub(r'(?is)<details>\s*.*?</details>', repl, atual)
+    if novo != atual:
+        gravar(path, novo)
+
 def atualizar(p):
     from src.motor import gravar, agora
     root = p.root
@@ -505,6 +599,7 @@ def atualizar(p):
     todas_propostas = [(meta, ler(root / 'dados/propostas' / f"{meta['id']}.json", {}))
                        for meta in p.estado['propostas']]
     propostas = [(meta, obj) for meta, obj in todas_propostas if not proposta_descartada(meta, obj)]
+    atualizar_propostas_manuais_com_estado(p, propostas, artigos)
     leituras = [a.get('leitura_agente', {}) for a in p.artigos
                 if a.get('leitura_agente', {}).get('revisao') == p.revisao]
     feitos = sum(l.get('feitos', 0) for l in leituras)

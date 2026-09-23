@@ -14,6 +14,33 @@ import json
 import re
 import time
 
+
+def usar_json_puro_para_execucao_longa():
+    """Evita segfaults observados na extensão C `_json` do Python 3.12.
+
+    Em execuções longas, o agente lê e grava muitos JSONs grandes. Houve crash
+    real em `_json.cpython-312...so`; usar o scanner/encoder em Python puro é
+    mais lento, mas evita derrubar o processo inteiro por falha nativa.
+    """
+    try:
+        import json.decoder as decoder
+        import json.encoder as encoder
+        import json.scanner as scanner
+        decoder.scanstring = decoder.py_scanstring
+        scanner.make_scanner = scanner.py_make_scanner
+        encoder.c_make_encoder = None
+        json._default_decoder = json.JSONDecoder()
+        json._default_encoder = json.JSONEncoder(
+            skipkeys=False, ensure_ascii=True, check_circular=True,
+            allow_nan=True, indent=None, separators=None, default=None,
+        )
+    except Exception:
+        # Não impede execução; apenas deixa de aplicar a mitigação.
+        pass
+
+
+usar_json_puro_para_execucao_longa()
+
 import requests
 
 
@@ -324,24 +351,50 @@ def carregar_instrucoes(caminho=INSTRUCOES):
     }
 
 
-def texto_orientacao_pesquisador(caminho=INSTRUCOES):
-    """Retorna apenas a orientação humana a enviar aos modelos de IA.
+def _compactar_toggle_proposta_para_prompt(match):
+    bloco = match.group(0)
+    resumo = re.search(r"(?is)<summary>(.*?)</summary>", bloco)
+    pid = re.search(r"(?im)^id:\s*(\S+)\s*$", bloco)
+    avaliacao = re.search(r"(?im)^avaliacao:\s*([^\n]*)", bloco)
+    comentario = re.search(r"(?im)^comentario:\s*([^\n]*)", bloco)
+    fontes = re.search(r"(?im)^fontes:\s*([^\n]*)", bloco)
+    titulo = re.sub(r"<[^>]+>", "", resumo.group(1)).strip() if resumo else "Proposta sem título"
+    return "\n".join([
+        "<details>",
+        f"<summary>{titulo}</summary>",
+        "",
+        "Resumo compacto para a IA: proposta detalhada existe no ANOTACOES.md/dados; não reenviar todo o corpo em todo prompt.",
+        f"id: {pid.group(1).strip() if pid else ''}",
+        f"avaliacao: {avaliacao.group(1).strip() if avaliacao else 'pendente'}",
+        f"comentario: {comentario.group(1).strip() if comentario else ''}",
+        f"fontes: {fontes.group(1).strip() if fontes else ''}",
+        "",
+        "</details>",
+    ])
 
-    `ANOTACOES.md` também contém blocos automáticos com
-    propostas e campos de avaliação. Esses blocos são úteis no Obsidian, mas
-    não devem inflar todos os prompts nem alterar a revisão só porque o agente
-    atualizou uma seção gerada.
+
+def texto_orientacao_pesquisador(caminho=INSTRUCOES):
+    """Retorna a orientação humana em tamanho seguro para modelos de IA.
+
+    O arquivo completo continua sendo lido pelo programa e preservado no
+    Obsidian. Para chamadas comuns de IA, toggles longos de propostas são
+    compactados para título/id/avaliação/fontes; os detalhes ficam nos JSONs e
+    podem ser enviados seletivamente pela etapa que realmente precisa deles.
     """
     if not caminho.exists():
         return ""
     texto = caminho.read_text(encoding="utf-8-sig")
     texto = re.sub(r"(?s)<!-- agente:propostas:inicio -->.*?<!-- agente:propostas:fim -->", "", texto)
+    texto = re.sub(r"(?s)<!-- agente:dialogo:inicio -->.*?<!-- agente:dialogo:fim -->", "", texto)
+    texto = re.sub(r"(?is)<details>\s*.*?</details>", _compactar_toggle_proposta_para_prompt, texto)
     texto = re.sub(
         r"(?s)\n## Conteúdo migrado de `AVALIAR-PROPOSTAS\.md`.*?(?=\n## Conteúdo migrado de `PROPOSTAS-DE-TRABALHO\.md`|\Z)",
         "\n",
         texto,
     )
     texto = re.sub(r"(?s)\n## Conteúdo migrado de `PROPOSTAS-DE-TRABALHO\.md`.*?(?=\n## |\Z)", "\n", texto)
+    if len(texto) > 12000:
+        texto = texto[:4000] + "\n\n[... anotações intermediárias compactadas para caber no contexto ...]\n\n" + texto[-7000:]
     return texto.strip() + ("\n" if texto.strip() else "")
 
 

@@ -12,6 +12,7 @@ A coleta, downloads e estado geral ficam em motor.py. A escrita dos arquivos
 Markdown para o usuário fica em apresentacao.py.
 """
 import json
+from pathlib import Path
 import re
 import time
 import unicodedata
@@ -417,7 +418,7 @@ def exemplos_de_redacao(p):
             'arquivo': caminho.name,
             'paginas': len(PdfReader(caminho).pages),
             'estrutura_identificada': marcadores,
-            'trecho_apenas_para_estilo': normalizado[:3500],
+            'trecho_apenas_para_estilo': normalizado[:1200],
         })
     return exemplos
 
@@ -607,6 +608,129 @@ def propor(p):
         propor_por_artigo(p, linhas)
 
 
+
+
+def _extrair_propostas_manuais(anotacoes):
+    """Lê propostas escritas no caderno do pesquisador como itens acionáveis.
+
+    O pesquisador quer uma lista única em ANOTACOES.md. Quando uma proposta
+    estiver nesse formato, ela não pode ficar apenas como texto visual: precisa
+    entrar na memória operacional para o agente detalhar, validar e retomar.
+    """
+    if not anotacoes:
+        return []
+    itens = []
+    for bloco in re.findall(r'(?is)<details>\s*(.*?)\s*</details>', anotacoes):
+        resumo = re.search(r'(?is)<summary>(.*?)</summary>', bloco)
+        idm = re.search(r'(?im)^id:\s*(\S+)\s*$', bloco)
+        aval = re.search(r'(?im)^avaliacao:\s*([^\n]+)', bloco)
+        if not resumo or not idm:
+            continue
+        avaliacao = texto(aval.group(1)).lower() if aval else 'pendente'
+        if avaliacao == 'descartar':
+            continue
+        titulo = re.sub(r'<[^>]+>', '', resumo.group(1)).strip()
+        titulo = re.sub(r'^\d+\.\s*', '', titulo).strip()
+        pid = idm.group(1).strip()
+        def secao(nome):
+            m = re.search(r'(?is)###\s+' + re.escape(nome) + r'\s*(.*?)(?=\n###\s+|\Z)', bloco)
+            return texto(m.group(1)) if m else ''
+        detalhe = secao('Descrição detalhada da proposta')
+        fontes_txt = secao('Trabalhos-base e fontes usadas')
+        fontes = []
+        for fonte in re.findall(r'\[\[([^\]|]+)', fontes_txt):
+            nome = Path(fonte).stem
+            if nome and nome not in fontes:
+                fontes.append(nome)
+        for fonte in re.findall(r'`([^`]+)`', fontes_txt):
+            if fonte and fonte not in fontes and len(fonte) <= 80:
+                fontes.append(fonte)
+        incompleta = bool(re.search(r'(?i)ainda não detalhad|preencher|retomar|pendente', detalhe)) or len(detalhe) < 500
+        itens.append({
+            'id': pid,
+            'titulo': titulo,
+            'resumo': secao('Resumo'),
+            'fontes': fontes,
+            'detalhe': detalhe,
+            'avaliacao': avaliacao,
+            'incompleta': incompleta,
+        })
+    return itens
+
+
+def importar_propostas_manuais_pendentes(p):
+    """Transforma toggles de ANOTACOES.md em propostas reais da memória.
+
+    Sem isto, propostas antigas visíveis no Obsidian ficam fora do ciclo de
+    detalhamento, e o agente segue pesquisando outras coisas em vez de completar
+    o que o pesquisador está vendo.
+    """
+    from src.motor import json_gravar, log
+    path = p.b.ANOTACOES_PESQUISADOR
+    if not path.exists():
+        return 0
+    existentes = {m.get('id') for m in p.estado.get('propostas', [])}
+    importadas = 0
+    for item in _extrair_propostas_manuais(path.read_text(encoding='utf-8-sig')):
+        if not item['incompleta'] and item['id'] in existentes:
+            continue
+        obj_path = p.root / 'dados/propostas' / f"{item['id']}.json"
+        obj = ler_json_seguro(obj_path, {})
+        if not obj:
+            obj = {
+                'titulo': item['titulo'],
+                'meu_trabalho': item['resumo'] or item['titulo'],
+                'hipotese_lacuna': item['detalhe'] if not item['incompleta'] else '',
+                'fontes': item['fontes'],
+                'modo': 'brainstorm',
+                'origem': 'ANOTACOES.md',
+            }
+        obj.setdefault('titulo', item['titulo'])
+        obj.setdefault('meu_trabalho', item['resumo'] or item['titulo'])
+        if item['fontes']:
+            obj['fontes'] = list(dict.fromkeys((obj.get('fontes') or []) + item['fontes']))
+        if item['incompleta']:
+            obj['detalhada'] = False
+            obj['precisa_detalhar_anotacoes'] = True
+        json_gravar(obj_path, obj)
+        if item['id'] not in existentes:
+            p.estado.setdefault('propostas', []).append({
+                'id': item['id'],
+                'titulo': item['titulo'],
+                'fontes': obj.get('fontes', []),
+                'revisao': p.revisao,
+                'origem': 'ANOTACOES.md',
+            })
+            existentes.add(item['id'])
+            importadas += 1
+        elif item['incompleta']:
+            for meta in p.estado.get('propostas', []):
+                if meta.get('id') == item['id']:
+                    meta['revisao'] = p.revisao
+                    meta['origem'] = meta.get('origem') or 'ANOTACOES.md'
+                    break
+            importadas += 1
+    if importadas:
+        p.salvar()
+        log(f"Propostas pendentes de ANOTACOES.md incorporadas ao ciclo de detalhamento: {importadas}")
+    return importadas
+
+def fontes_para_detalhamento(p, meta, obj, path):
+    from src.motor import ler_json
+    snapshot = ler_json(path.with_name(meta['id'] + '-fontes.json'), {})
+    if snapshot:
+        return snapshot
+    ids = list(dict.fromkeys(obj.get('fontes') or meta.get('fontes') or []))
+    if not ids:
+        return {}
+    fichas = {linha.get('id'): linha for linha in matriz(p) if linha.get('id') in ids}
+    return {
+        'fontes': [fichas[i] for i in ids if i in fichas],
+        'metodo': 'fichamentos disponíveis em obsidian/referencias/fichamentos associados à proposta em ANOTACOES.md',
+        'observacao': 'Se algum trabalho-base não tiver fichamento suficiente, o agente deve buscar o texto completo antes de tratar a lacuna como forte.',
+    }
+
+
 def detalhar(p):
     from src.motor import ler_json, chave, json_gravar, log
     for meta in p.estado['propostas']:
@@ -619,10 +743,11 @@ def detalhar(p):
         ident = chave(['detalhar', meta['id']])
         def acao():
             log('Desenvolvendo a ideia: ' + obj['titulo'])
-            fontes = ler_json(path.with_name(meta['id'] + '-fontes.json'), {})
+            fontes = fontes_para_detalhamento(p, meta, obj, path)
             r = chamar(p, 'desenvolver-ideia',
-                'Desenvolva esta sugestão em nível de reunião com orientador, como brainstorm profundo e útil. '
-                'Não escreva só uma frase. JSON com strings: experimento, recursos, metricas, riscos e duvidas_orientador. '
+                'Desenvolva esta sugestão em nível de reunião com orientador, como brainstorm profundo e útil, usando os fichamentos/fontes associados. '
+                'Se as fontes forem insuficientes, diga claramente nos riscos e dúvidas o que precisa ser buscado antes de consolidar. '
+                'Não escreva só uma frase. JSON com strings: problema, hipotese_lacuna, fatos, interpretacao, alteracao_sobre_trabalhos_proximos, experimento, recursos, metricas, riscos e duvidas_orientador. '
                 'Em experimento, detalhe: problema específico, hipótese, arquitetura/artefato a implementar, etapas, baseline '
                 'ou trabalhos de comparação, e cenário de avaliação. Em recursos, liste ferramentas, dados/simuladores, padrões '
                 'e bibliotecas possíveis, sem inventar disponibilidade. Em métricas, inclua desempenho, segurança, privacidade, '
@@ -630,7 +755,7 @@ def detalhar(p):
                 'Em dúvidas, escreva perguntas concretas para levar à reunião. Use as fontes fornecidas e deixe claro quando for '
                 'inferência exploratória. Cada campo deve ter entre 120 e 250 palavras quando houver informação suficiente.',
                 {'ideia': obj['meu_trabalho'], 'fontes': fontes})
-            for campo in ('experimento', 'recursos', 'metricas', 'duvidas_orientador'):
+            for campo in ('problema', 'hipotese_lacuna', 'fatos', 'interpretacao', 'alteracao_sobre_trabalhos_proximos', 'experimento', 'recursos', 'metricas', 'riscos', 'duvidas_orientador'):
                 if texto(r.get(campo)):
                     obj[campo] = texto(r[campo])
             obj['detalhada'] = any(texto(r.get(c)) for c in ('experimento', 'recursos', 'metricas'))
@@ -639,6 +764,7 @@ def detalhar(p):
             json_gravar(path, obj)
             return True
         if p.tarefa(ident, acao):
+            p.painel()
             return
 
 
@@ -666,6 +792,68 @@ def extrair_decisoes_pesquisador(anotacoes):
     return decisoes
 
 
+
+def resumo_anotacoes_para_prompt(anotacoes):
+    """Compacta o caderno sem perder tarefas vivas.
+
+    O arquivo completo continua sendo a interface do pesquisador, mas chamadas de
+    IA não devem carregar todo bloco automático antigo a ponto de travar. Mantém
+    orientações livres, propostas com avaliação e trechos recentes de diálogo.
+    """
+    if not anotacoes:
+        return ''
+    texto_limpo = re.sub(r'(?s)<!-- agente:propostas:inicio -->.*?<!-- agente:propostas:fim -->', '', anotacoes)
+    texto_limpo = re.sub(r'(?s)<!-- agente:dialogo:inicio -->.*?<!-- agente:dialogo:fim -->', '', texto_limpo)
+    propostas = []
+    for item in _extrair_propostas_manuais(anotacoes):
+        propostas.append(
+            f"- id={item['id']}; avaliacao={item['avaliacao']}; incompleta={item['incompleta']}; "
+            f"titulo={item['titulo']}; fontes={', '.join(item['fontes']) or 'não informadas'}; "
+            f"resumo={item['resumo'][:500]}"
+        )
+    decisoes = extrair_decisoes_pesquisador(anotacoes)
+    partes = [
+        'ORIENTAÇÕES E ANOTAÇÕES LIVRES DO PESQUISADOR:',
+        texto_limpo[-9000:],
+        'PROPOSTAS VISÍVEIS EM ANOTACOES.md:',
+        '\n'.join(propostas[-20:]) or 'Nenhuma proposta estruturada encontrada.',
+        'DECISÕES HUMANAS EXTRAÍDAS:',
+        json.dumps(decisoes, ensure_ascii=False)[:4000],
+    ]
+    return '\n\n'.join(partes)
+
+
+def corpus_para_prompt(corpus, anotacoes):
+    """Seleciona fichamentos suficientes para redigir sem estourar contexto."""
+    ids_prioritarios = []
+    for item in _extrair_propostas_manuais(anotacoes):
+        for fonte in item.get('fontes', []):
+            if fonte not in ids_prioritarios:
+                ids_prioritarios.append(fonte)
+    por_id = {linha.get('id'): linha for linha in corpus}
+    selecionados = []
+    for fid in ids_prioritarios:
+        if fid in por_id:
+            selecionados.append(por_id[fid])
+    for linha in corpus:
+        if linha not in selecionados:
+            selecionados.append(linha)
+        if len(selecionados) >= 12:
+            break
+    compactos = []
+    for linha in selecionados:
+        item = {k: linha.get(k) for k in ('id', 'titulo', 'escopo', *COLUNAS)}
+        fichas = []
+        for ficha in linha.get('fichas_amostradas', [])[:2]:
+            fichas.append({
+                'pagina': ficha.get('pagina'),
+                'resumo': texto(ficha.get('resumo'))[:500],
+                'evidencias': ficha.get('evidencias', [])[:2],
+            })
+        item['fichas_amostradas'] = fichas
+        compactos.append(item)
+    return compactos
+
 def redigir_pesquisa_focada(p):
     """Gera uma redação provisória rastreável para o modo de pesquisa focada."""
     from src.motor import chave, agora, json_gravar, log
@@ -680,11 +868,11 @@ def redigir_pesquisa_focada(p):
     memoria_ia = memoria_path.read_text(encoding='utf-8-sig') if memoria_path.exists() else ''
     decisoes_humanas = extrair_decisoes_pesquisador(anotacoes)
     contexto = {
-        'anotacoes_do_pesquisador': anotacoes[-24000:],
+        'anotacoes_do_pesquisador': resumo_anotacoes_para_prompt(anotacoes),
         'decisoes_humanas_extraidas': decisoes_humanas,
-        'trabalho_atual': trabalho_atual[-24000:],
-        'memoria_operacional_da_ia': memoria_ia[-18000:],
-        'fichamentos_disponiveis': corpus,
+        'trabalho_atual': trabalho_atual[-9000:],
+        'memoria_operacional_da_ia': memoria_ia[-5000:],
+        'fichamentos_disponiveis': corpus_para_prompt(corpus, anotacoes),
     }
     assinatura = chave(contexto)
     anterior = p.estado.get('redacao_focada', {})
@@ -860,6 +1048,7 @@ def ciclo(p):
             p.painel()
             return
         propor(p)
+        importar_propostas_manuais_pendentes(p)
         detalhar(p)
         redigir_pesquisa_focada(p)
 
