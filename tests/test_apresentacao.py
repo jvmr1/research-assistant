@@ -1,12 +1,25 @@
 import test_motor
 import unittest
 from pathlib import Path
-from src import motor
+from src import motor, apresentacao
 
 
 class ApresentacaoTest(unittest.TestCase):
     setUp = test_motor.PesquisaTest.setUp
     artigo = test_motor.PesquisaTest.artigo
+    def test_matriz_anterioridade_em_objeto_e_renderizada(self):
+        obj = {
+            'schema_version': 2,
+            'matriz_anterioridade': {
+                'P1': {'descricao': 'Propriedade um', 'trabalhos_satisfeitos': []},
+                'P2': {'descricao': 'Propriedade dois', 'trabalhos_satisfeitos': ['A']},
+            },
+        }
+        linhas = apresentacao.linhas_contribuicao_cientifica(obj)
+        texto = '\n'.join(linhas)
+        self.assertIn('| propriedade | descricao | trabalhos_satisfeitos |', texto)
+        self.assertIn('| P1 | Propriedade um |', texto)
+
     def test_area_do_obsidian_nao_exibe_memoria_interna_da_ia(self):
         a = self.artigo('A')
         a['pdf_local'] = 'obsidian/referencias/pdfs/A.pdf'

@@ -517,6 +517,9 @@ def propor_por_artigo(p, linhas):
 
 def propor(p):
     from src.motor import chave, json_gravar, agora, log, ler_json
+    if any(m.get('revisao') == p.revisao and m.get('visivel_anotacoes')
+           and m.get('avaliacao_humana') != 'descartar' for m in p.estado.get('propostas', [])):
+        return
     linhas = matriz(p)
     if len(linhas) < 2:
         propor_por_artigo(p, linhas)
@@ -561,7 +564,7 @@ def propor(p):
             obj = chamar(p, 'panorama-brainstorm',
                 'Construa um panorama do conjunto: abordagens existentes, onde concordam, diferenças de avaliação '
                 'e até onde os trabalhos chegam. Depois sugira até 3 ideias de mestrado que cruzem pelo menos dois trabalhos. '
-                'É BRAINSTORM: aceite extensões pequenas, adaptações e comparações; não exija novidade comprovada nem '
+                'É BRAINSTORM PRELIMINAR: extensões, adaptações e comparações podem virar candidatas, mas não as trate como contribuição madura. Não exija novidade comprovada nesta fase nem '
                 'projeto fechado. Não descarte uma ideia só por haver incertezas. Aponte o que o pesquisador poderia '
                 'alterar sobre os trabalhos próximos. Cada ideia deve citar no campo fontes pelo menos dois IDs, explicando a lacuna pela comparação entre eles; se só houver ideia de artigo único, deixe ideias vazio para o fallback individual cuidar disso. Respeite o escopo parcial/resumo de cada leitura. '
                 'JSON no esquema fornecido. Panorama até 200 palavras; cada ideia até 120 palavras. '
@@ -611,26 +614,29 @@ def propor(p):
 
 
 def _extrair_propostas_manuais(anotacoes):
-    """Lê propostas escritas no caderno do pesquisador como itens acionáveis.
-
-    O pesquisador quer uma lista única em ANOTACOES.md. Quando uma proposta
-    estiver nesse formato, ela não pode ficar apenas como texto visual: precisa
-    entrar na memória operacional para o agente detalhar, validar e retomar.
-    """
+    """Lê propostas em ``<details>`` e em callouts dobráveis do Obsidian."""
     if not anotacoes:
         return []
+
+    blocos = []
+    for bruto in re.findall(r'(?is)<details>\s*(.*?)\s*</details>', anotacoes):
+        summary = re.search(r'(?is)<summary>(.*?)</summary>', bruto)
+        blocos.append((re.sub(r'<[^>]+>', '', summary.group(1)).strip() if summary else '', bruto, 'details'))
+    padrao_callout = re.compile(r'(?ms)^> \[!NOTE\]-\s*(.*?)\n(.*?)(?=^> \[!NOTE\]-|^##\s+|\Z)')
+    for titulo, corpo in padrao_callout.findall(anotacoes):
+        limpo = '\n'.join(re.sub(r'^>\s?', '', linha) for linha in corpo.splitlines())
+        blocos.append((titulo.strip(), limpo, 'callout'))
+
     itens = []
-    for bloco in re.findall(r'(?is)<details>\s*(.*?)\s*</details>', anotacoes):
-        resumo = re.search(r'(?is)<summary>(.*?)</summary>', bloco)
+    for titulo_bruto, bloco, formato in blocos:
         idm = re.search(r'(?im)^id:\s*(\S+)\s*$', bloco)
         aval = re.search(r'(?im)^avaliacao:\s*([^\n]+)', bloco)
-        if not resumo or not idm:
+        if not idm:
             continue
         avaliacao = texto(aval.group(1)).lower() if aval else 'pendente'
-        if avaliacao == 'descartar':
+        if avaliacao in {'descartar', 'informativo', 'arquivada', 'arquivado'}:
             continue
-        titulo = re.sub(r'<[^>]+>', '', resumo.group(1)).strip()
-        titulo = re.sub(r'^\d+\.\s*', '', titulo).strip()
+        titulo = re.sub(r'^\d+\.\s*', '', titulo_bruto).strip()
         pid = idm.group(1).strip()
         def secao(nome):
             m = re.search(r'(?is)###\s+' + re.escape(nome) + r'\s*(.*?)(?=\n###\s+|\Z)', bloco)
@@ -638,25 +644,19 @@ def _extrair_propostas_manuais(anotacoes):
         detalhe = secao('Descrição detalhada da proposta')
         fontes_txt = secao('Trabalhos-base e fontes usadas')
         fontes = []
-        for fonte in re.findall(r'\[\[([^\]|]+)', fontes_txt):
-            nome = Path(fonte).stem
-            if nome and nome not in fontes:
-                fontes.append(nome)
-        for fonte in re.findall(r'`([^`]+)`', fontes_txt):
-            if fonte and fonte not in fontes and len(fonte) <= 80:
-                fontes.append(fonte)
+        padroes = (r'\[\[(?:referencias/fichamentos/)?([^\]|]+)',
+                   r'\[[^\]]+\]\(referencias/fichamentos/([^\)]+?)\.md\)',
+                   r'`([^`]+)`')
+        for padrao in padroes:
+            for fonte in re.findall(padrao, fontes_txt):
+                nome = Path(fonte).stem
+                if nome and nome not in fontes and len(nome) <= 100:
+                    fontes.append(nome)
         incompleta = bool(re.search(r'(?i)ainda não detalhad|preencher|retomar|pendente', detalhe)) or len(detalhe) < 500
-        itens.append({
-            'id': pid,
-            'titulo': titulo,
-            'resumo': secao('Resumo'),
-            'fontes': fontes,
-            'detalhe': detalhe,
-            'avaliacao': avaliacao,
-            'incompleta': incompleta,
-        })
+        itens.append({'id': pid, 'titulo': titulo, 'resumo': secao('Resumo'), 'fontes': fontes,
+                      'detalhe': detalhe, 'avaliacao': avaliacao, 'incompleta': incompleta,
+                      'formato': formato, 'visivel_anotacoes': True})
     return itens
-
 
 def importar_propostas_manuais_pendentes(p):
     """Transforma toggles de ANOTACOES.md em propostas reais da memória.
@@ -672,8 +672,6 @@ def importar_propostas_manuais_pendentes(p):
     existentes = {m.get('id') for m in p.estado.get('propostas', [])}
     importadas = 0
     for item in _extrair_propostas_manuais(path.read_text(encoding='utf-8-sig')):
-        if not item['incompleta'] and item['id'] in existentes:
-            continue
         obj_path = p.root / 'dados/propostas' / f"{item['id']}.json"
         obj = ler_json_seguro(obj_path, {})
         if not obj:
@@ -700,15 +698,20 @@ def importar_propostas_manuais_pendentes(p):
                 'fontes': obj.get('fontes', []),
                 'revisao': p.revisao,
                 'origem': 'ANOTACOES.md',
+                'visivel_anotacoes': True,
             })
             existentes.add(item['id'])
             importadas += 1
-        elif item['incompleta']:
+        else:
             for meta in p.estado.get('propostas', []):
                 if meta.get('id') == item['id']:
                     meta['revisao'] = p.revisao
-                    meta['origem'] = meta.get('origem') or 'ANOTACOES.md'
+                    meta['origem'] = 'ANOTACOES.md'
+                    meta['visivel_anotacoes'] = True
                     break
+            obj['origem'] = 'ANOTACOES.md'
+            obj['visivel_anotacoes'] = True
+            json_gravar(obj_path, obj)
             importadas += 1
     if importadas:
         p.salvar()
@@ -729,6 +732,85 @@ def fontes_para_detalhamento(p, meta, obj, path):
         'metodo': 'fichamentos disponíveis em obsidian/referencias/fichamentos associados à proposta em ANOTACOES.md',
         'observacao': 'Se algum trabalho-base não tiver fichamento suficiente, o agente deve buscar o texto completo antes de tratar a lacuna como forte.',
     }
+
+
+def vincular_fichamentos_pendentes(p):
+    """Liga fichamentos existentes às propostas visíveis ou os arquiva.
+
+    Processa pequenos lotes para não estourar contexto. Um item só sai da fila
+    com decisão explícita e todos os descartes permanecem recuperáveis em dados/.
+    """
+    from src.motor import json_gravar, agora, log
+    fila = p.estado.get('fichamentos_pendentes_vinculacao') or []
+    visiveis = [m for m in p.estado.get('propostas', [])
+                if m.get('revisao') == p.revisao and m.get('visivel_anotacoes')
+                and m.get('avaliacao_humana') != 'descartar']
+    if not fila or not visiveis or not p.modelo_disponivel():
+        return False
+    lote = []
+    for nome in fila:
+        path = p.b.ARTIGOS / f'{nome}.md'
+        if path.exists():
+            lote.append({'id': nome, 'fichamento': path.read_text(encoding='utf-8-sig')[:1600]})
+        if len(lote) >= 5:
+            break
+    if not lote:
+        p.estado['fichamentos_pendentes_vinculacao'] = []
+        p.salvar(); return False
+    propostas = []
+    for meta in visiveis:
+        obj = ler_json_seguro(p.root / 'dados/propostas' / f"{meta['id']}.json", {})
+        propostas.append({'id': meta['id'], 'titulo': meta.get('titulo'),
+                          'resumo': texto(obj.get('meu_trabalho'))[:500]})
+    esquema = {'type': 'object', 'properties': {'decisoes': {'type': 'array', 'items': {'type': 'object'}}},
+               'required': ['decisoes']}
+    resposta = chamar(p, 'vincular-fichamentos',
+        'Para cada fichamento, decida se ele sustenta concretamente uma ou mais propostas fornecidas. '
+        'Retorne decisoes com id, relevante (boolean), propostas (lista de IDs válidos) e justificativa. '
+        'Marque irrelevante quando a relação for apenas palavra-chave genérica; não invente contribuição.',
+        {'propostas': propostas, 'fichamentos': lote}, esquema)
+    por_id = {x.get('id'): x for x in resposta.get('decisoes', []) if isinstance(x, dict)}
+    from src.apresentacao import referencias_citadas_no_obsidian
+    citadas = referencias_citadas_no_obsidian(p.root)
+    processados = []
+    for item in lote:
+        decisao = por_id.get(item['id'])
+        if not decisao or not isinstance(decisao.get('relevante'), bool):
+            continue
+        destinos = [x for x in decisao.get('propostas', []) if x in {m['id'] for m in visiveis}]
+        if decisao['relevante'] and destinos:
+            for pid in destinos:
+                meta = next(m for m in visiveis if m['id'] == pid)
+                obj_path = p.root / 'dados/propostas' / f'{pid}.json'
+                obj = ler_json_seguro(obj_path, {})
+                obj['fontes'] = list(dict.fromkeys((obj.get('fontes') or []) + [item['id']]))
+                obj.setdefault('justificativas_fontes', {})[item['id']] = texto(decisao.get('justificativa'))[:600]
+                meta['fontes'] = list(dict.fromkeys((meta.get('fontes') or []) + [item['id']]))
+                json_gravar(obj_path, obj)
+            log(f"Fichamento vinculado às propostas: {item['id']} -> {', '.join(destinos)}")
+        elif item['id'] in citadas:
+            p.estado.setdefault('referencias_mantidas_por_citacao', {})[item['id']] = {
+                'justificativa_triagem': texto(decisao.get('justificativa'))[:600],
+                'quando': agora()}
+            log(f"Referência mantida porque já é citada no Obsidian: {item['id']}")
+        else:
+            destino = p.root / 'dados/referencias-descartadas' / agora()[:10] / 'sem-vinculo-com-propostas'
+            destino.mkdir(parents=True, exist_ok=True)
+            ficha = p.b.ARTIGOS / f"{item['id']}.md"
+            if ficha.exists(): ficha.replace(destino / ficha.name)
+            for ext in ('.pdf', '.html'):
+                completo = p.b.PDFS / f"{item['id']}{ext}"
+                if completo.exists(): completo.replace(destino / completo.name)
+            p.estado.setdefault('referencias_rejeitadas', {})[item['id']] = {
+                'motivo': texto(decisao.get('justificativa')) or 'Sem vínculo concreto com as propostas visíveis',
+                'quando': agora(), 'origem': 'triagem de vinculação do acervo'}
+            log(f"Referência sem vínculo arquivada fora do Obsidian: {item['id']}")
+        processados.append(item['id'])
+    if not processados:
+        return False
+    p.estado['fichamentos_pendentes_vinculacao'] = [x for x in fila if x not in processados]
+    p.salvar()
+    return True
 
 
 def detalhar(p):
@@ -814,7 +896,7 @@ def resumo_anotacoes_para_prompt(anotacoes):
     decisoes = extrair_decisoes_pesquisador(anotacoes)
     partes = [
         'ORIENTAÇÕES E ANOTAÇÕES LIVRES DO PESQUISADOR:',
-        texto_limpo[-4500:],
+        texto_limpo[-2500:],
         'PROPOSTAS VISÍVEIS EM ANOTACOES.md:',
         '\n'.join(propostas[-20:]) or 'Nenhuma proposta estruturada encontrada.',
         'DECISÕES HUMANAS EXTRAÍDAS:',
@@ -838,11 +920,12 @@ def corpus_para_prompt(corpus, anotacoes):
     for linha in corpus:
         if linha not in selecionados:
             selecionados.append(linha)
-        if len(selecionados) >= 7:
+        if len(selecionados) >= 4:
             break
     compactos = []
     for linha in selecionados:
-        item = {k: linha.get(k) for k in ('id', 'titulo', 'escopo', *COLUNAS)}
+        item = {k: (texto(linha.get(k))[:280] if k in COLUNAS else linha.get(k))
+                for k in ('id', 'titulo', 'escopo', *COLUNAS)}
         fichas = []
         for ficha in linha.get('fichas_amostradas', [])[:2]:
             fichas.append({
@@ -870,8 +953,8 @@ def redigir_pesquisa_focada(p):
     contexto = {
         'anotacoes_do_pesquisador': resumo_anotacoes_para_prompt(anotacoes),
         'decisoes_humanas_extraidas': decisoes_humanas,
-        'trabalho_atual': trabalho_atual[-4500:],
-        'memoria_operacional_da_ia': memoria_ia[-1800:],
+        'trabalho_atual': trabalho_atual[-2200:],
+        'memoria_operacional_da_ia': memoria_ia[-700:],
         'fichamentos_disponiveis': corpus_para_prompt(corpus, anotacoes),
     }
     assinatura = chave(contexto)
@@ -999,6 +1082,15 @@ def ciclo(p):
     p.estado.pop('pausa_modelo_ate', None)
     p.mensagem = 'Preparando o próximo trabalho.'
     p.importar_pdfs()
+    importar_propostas_manuais_pendentes(p)
+    if vincular_fichamentos_pendentes(p):
+        p.painel()
+        return
+    if p.modelo_disponivel():
+        from src.maturacao import maturar_propostas
+        if maturar_propostas(p):
+            p.painel()
+            return
     p.painel()
     lote = p.preparar_lote()
     if not lote:
@@ -1048,7 +1140,6 @@ def ciclo(p):
             p.painel()
             return
         propor(p)
-        importar_propostas_manuais_pendentes(p)
         detalhar(p)
         redigir_pesquisa_focada(p)
 

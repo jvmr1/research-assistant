@@ -163,9 +163,10 @@ Priorize trabalhos que ajudem a encontrar lacunas próximas ao grupo de pesquisa
 IoT, cidades inteligentes, sistemas distribuídos, blockchain, identidade digital,
 SSI, controle de acesso, ABE, interoperabilidade, segurança e privacidade.
 
-Aceite ideias exploratórias. Uma proposta pode ser uma combinação, adaptação,
-avaliação ou extensão de trabalhos existentes, desde que fique claro quais
-trabalhos sustentam a hipótese e o que ainda precisaria ser verificado. A
+Ideias exploratórias podem começar como combinação, adaptação, avaliação ou extensão, mas
+isso é apenas brainstorm. Antes de apresentá-las como contribuição, exija problema técnico,
+mecanismo exato, propriedades falsificáveis e comparação de anterioridade com trabalhos
+próximos. Combinar tecnologias conhecidas não constitui diferencial científico por si só. A
 introdução e a fundamentação geradas são rascunhos de apoio: o pesquisador
 deve revisar a redação, conferir as referências e produzir a versão final.
 """
@@ -373,6 +374,34 @@ def _compactar_toggle_proposta_para_prompt(match):
     ])
 
 
+def _compactar_secao_propostas_para_prompt(texto):
+    """Mantém decisões humanas, mas exclui corpos automáticos da assinatura."""
+    linhas = texto.splitlines()
+    inicio = next((i for i, l in enumerate(linhas) if l.strip().lower() == '## propostas'), None)
+    if inicio is None:
+        return texto
+    fim = next((i for i in range(inicio + 1, len(linhas)) if linhas[i].startswith('## ')), len(linhas))
+    secao = linhas[inicio:fim]
+    compacta = ['## Propostas', '', 'Corpos detalhados ficam nos JSONs; abaixo seguem somente decisões e referências necessárias ao agente.']
+    i = 0
+    while i < len(secao):
+        m = re.match(r'^> \[!NOTE\]-\s*(.*)$', secao[i])
+        if not m:
+            i += 1
+            continue
+        titulo = m.group(1).strip(); bloco = []
+        i += 1
+        while i < len(secao) and not re.match(r'^> \[!NOTE\]-', secao[i]):
+            bloco.append(re.sub(r'^>\s?', '', secao[i])); i += 1
+        corpo = '\n'.join(bloco)
+        def valor(nome, padrao=''):
+            x = re.search(r'(?im)^' + re.escape(nome) + r':\s*([^\n]*)', corpo)
+            return x.group(1).strip() if x else padrao
+        compacta += ['', f'- título: {titulo}', f"  id: {valor('id')}",
+                     f"  avaliacao: {valor('avaliacao', 'pendente')}",
+                     f"  comentario: {valor('comentario')}", f"  fontes: {valor('fontes')}"]
+    return '\n'.join(linhas[:inicio] + compacta + linhas[fim:])
+
 def texto_orientacao_pesquisador(caminho=INSTRUCOES):
     """Retorna a orientação humana em tamanho seguro para modelos de IA.
 
@@ -386,6 +415,7 @@ def texto_orientacao_pesquisador(caminho=INSTRUCOES):
     texto = caminho.read_text(encoding="utf-8-sig")
     texto = re.sub(r"(?s)<!-- agente:propostas:inicio -->.*?<!-- agente:propostas:fim -->", "", texto)
     texto = re.sub(r"(?s)<!-- agente:dialogo:inicio -->.*?<!-- agente:dialogo:fim -->", "", texto)
+    texto = _compactar_secao_propostas_para_prompt(texto)
     texto = re.sub(r"(?is)<details>\s*.*?</details>", _compactar_toggle_proposta_para_prompt, texto)
     texto = re.sub(
         r"(?s)\n## Conteúdo migrado de `AVALIAR-PROPOSTAS\.md`.*?(?=\n## Conteúdo migrado de `PROPOSTAS-DE-TRABALHO\.md`|\Z)",

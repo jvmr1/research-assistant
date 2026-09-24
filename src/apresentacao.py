@@ -131,7 +131,9 @@ def deve_ter_nota_markdown(artigo, revisao, fontes_relevantes):
 
 def proposta_descartada(meta, obj):
     valor = (obj or {}).get('avaliacao_humana') or (meta or {}).get('avaliacao_humana') or ''
-    return str(valor).strip().lower() == 'descartar'
+    return (str(valor).strip().lower() == 'descartar'
+            or (obj or {}).get('maturity_status') == 'collision_exhausted'
+            or bool((obj or {}).get('retirada_automatica')))
 
 
 def referencias_citadas_no_obsidian(root):
@@ -183,6 +185,60 @@ def bloco_callout_dobravel(titulo, linhas, tipo='abstract'):
     return saida
 
 
+def linhas_contribuicao_cientifica(obj):
+    """Renderiza o contrato v2 sem esconder insuficiência de evidência."""
+    if int(obj.get('schema_version') or 1) < 2:
+        return ['**Maturação científica**', 'Formato legado: a proposta ainda será submetida ao novo pipeline.']
+    problema = obj.get('problema_tecnico') or {}
+    mecanismo = obj.get('mecanismo_proposto') or {}
+    linhas = [
+        '### Problema técnico exato',
+        f"- Estado técnico atual: {valor_markdown(problema.get('estado_atual') or 'não definido')}",
+        f"- Evento: {valor_markdown(problema.get('evento') or 'não definido')}",
+        f"- Problema e consequência: {valor_markdown(problema.get('problema') or 'não definido')} {valor_markdown(problema.get('consequencia_tecnica') or '')}",
+        f"- Componente responsável: {valor_markdown(problema.get('componente_responsavel') or 'não definido')}",
+        f"- Propriedade desejada: {valor_markdown(problema.get('propriedade_desejada') or 'não definida')}",
+        '### Mecanismo proposto', valor_markdown(mecanismo),
+        '### Diferencial técnico candidato', valor_markdown(obj.get('diferencial_tecnico_candidato') or 'não definido'),
+        '### Unidade de novidade', valor_markdown(obj.get('unidade_de_novidade') or 'não definida'),
+        '### Propriedades da contribuição']
+    props = obj.get('propriedades_contribuicao') or []
+    linhas += [f"- {x.get('id')}: {valor_markdown(x.get('descricao'))}" for x in props if isinstance(x, dict)] or ['- Ainda não definidas.']
+    linhas += ['### Trabalhos mais próximos']
+    for x in obj.get('closest_prior_art') or []:
+        linhas.append(f"- {valor_markdown(x.get('titulo') or x.get('identificador'))} ({x.get('ano') or 's.d.'}; {x.get('fonte') or 'fonte não registrada'}): mecanismo={valor_markdown(x.get('mecanismo') or 'não determinado')}; diferenças={valor_markdown(x.get('propriedades_ausentes') or 'não determinadas')}; leitura={x.get('escopo_leitura') or 'não registrada'}.")
+    if not obj.get('closest_prior_art'):
+        linhas.append('- Ainda não há três trabalhos próximos com leitura suficiente.')
+    linhas += ['### Matriz de anterioridade']
+    matriz = obj.get('matriz_anterioridade') or []
+    if isinstance(matriz, dict):
+        matriz = [dict({'propriedade': chave}, **(valor if isinstance(valor, dict) else {'resultado': valor}))
+                  for chave, valor in matriz.items()]
+    if isinstance(matriz, list) and matriz and all(isinstance(row, dict) for row in matriz):
+        colunas = list(dict.fromkeys(k for row in matriz for k in row))
+        linhas += ['| ' + ' | '.join(colunas) + ' |', '| ' + ' | '.join('---' for _ in colunas) + ' |']
+        linhas += ['| ' + ' | '.join(valor_markdown(row.get(c, 'desconhecido')) for c in colunas) + ' |' for row in matriz]
+    else:
+        linhas.append('- Ainda não construída.')
+    linhas += [
+        '### Colisões encontradas', valor_markdown(obj.get('colisoes_encontradas') or 'Nenhuma conclusão registrada.'),
+        '### Reformulações realizadas', valor_markdown(obj.get('reformulacoes') or 'Nenhuma reformulação registrada.'),
+        '### Hipótese de lacuna', valor_markdown(obj.get('hipotese_lacuna') or 'Evidência insuficiente.'),
+        '### Propriedade falsificável', valor_markdown(obj.get('propriedade_avaliada') or 'não definida'),
+        '### Artefato mínimo', valor_markdown(obj.get('artefato_minimo') or 'não definido'),
+        '### Experimento decisivo', valor_markdown(obj.get('experimento_decisivo') or 'não definido'),
+        '### Baselines', valor_markdown(obj.get('baselines') or 'não definidos'),
+        '### Métricas essenciais', valor_markdown(obj.get('metricas_essenciais') or 'não definidas'),
+        '### Escopo que NÃO será tratado', valor_markdown(obj.get('fora_de_escopo') or 'não definido'),
+        '### Risco de implementação', f"{obj.get('implementation_risk') or 'não avaliado'} — {valor_markdown(obj.get('implementation_risk_justification') or '')}",
+        '### Risco de novidade', valor_markdown(obj.get('novelty_risk') or 'não avaliado'),
+        '### Estado de maturação', obj.get('maturity_status') or 'immature',
+        '### Erros ou evidências ainda pendentes', valor_markdown(obj.get('validation_errors') or 'Nenhum erro estrutural registrado.'),
+        '### novelty_status', obj.get('novelty_status') or 'insufficient_evidence',
+        '### Pergunta principal para o orientador', valor_markdown(obj.get('pergunta_orientador') or 'não definida'),
+    ]
+    return linhas
+
 def atualizar_bloco_preservando_texto(path, inicio, fim, cabecalho, linhas_bloco):
     """Atualiza um bloco gerado sem apagar as anotações livres do pesquisador."""
     bloco = '\n'.join([inicio, *linhas_bloco, fim]).rstrip() + '\n'
@@ -228,6 +284,7 @@ def avaliacoes_existentes(path):
     dados = {}
     atual = None
     for linha in conteudo_nota.splitlines():
+        linha = re.sub(r'^>\s?', '', linha.strip())
         if linha.startswith('id:'):
             atual = linha.split(':', 1)[1].strip()
             dados.setdefault(atual, {})['id'] = atual
@@ -494,7 +551,7 @@ def atualizar_dialogo_pesquisa(p, agora_func):
 
 
 
-def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
+def atualizar_propostas_manuais_com_estado(p, todas_propostas, artigos):
     """Sincroniza a lista manual de propostas em ANOTACOES.md com dados detalhados.
 
     A lista visível no Obsidian é a fila viva do pesquisador. Se uma proposta
@@ -506,7 +563,7 @@ def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
     if not path.exists():
         return
     atual = path.read_text(encoding='utf-8-sig')
-    por_id = {meta.get('id'): (meta, obj or {}) for meta, obj in propostas if meta.get('id')}
+    por_id = {meta.get('id'): (meta, obj or {}) for meta, obj in todas_propostas if meta.get('id')}
 
     def campo(obj, nome, padrao='Ainda não detalhado.'):
         valor = valor_markdown(obj.get(nome) or '')
@@ -559,6 +616,8 @@ def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
             '**Perguntas para reunião com orientador**',
             campo(obj, 'duvidas_orientador'),
             '',
+            *linhas_contribuicao_cientifica(obj),
+            '',
             '### Avaliação do pesquisador',
             f'id: {pid}',
             f'avaliacao: {avaliacao or "pendente"}',
@@ -569,6 +628,13 @@ def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
         ]
         return '\n'.join(linhas)
 
+    def renderizar_callout(pid, summary, avaliacao, comentario, meta, obj):
+        html = renderizar(pid, summary, avaliacao, comentario, meta, obj)
+        corpo = re.sub(r'(?is)^<details>\s*<summary>.*?</summary>\s*', '', html)
+        corpo = re.sub(r'(?is)\s*</details>\s*$', '', corpo)
+        citadas = ['>' if not linha else '> ' + linha for linha in corpo.splitlines()]
+        return '> [!NOTE]- ' + summary + '\n' + '\n'.join(citadas)
+
     def repl(m):
         bloco = m.group(0)
         idm = re.search(r'(?im)^id:\s*(\S+)\s*$', bloco)
@@ -576,7 +642,9 @@ def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
             return bloco
         pid = idm.group(1).strip()
         meta, obj = por_id[pid]
-        if not obj.get('detalhada'):
+        if proposta_descartada(meta, obj):
+            return ''
+        if not obj.get('detalhada') and int(obj.get('schema_version') or 1) < 2:
             return bloco
         resumo_m = re.search(r'(?is)<summary>(.*?)</summary>', bloco)
         summary = resumo_m.group(1).strip() if resumo_m else meta.get('titulo', obj.get('titulo', 'Proposta sem título'))
@@ -588,9 +656,43 @@ def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
 
 
     novo = re.sub(r'(?is)<details>\s*.*?</details>', repl, atual)
-    ids_existentes = set(re.findall(r'(?im)^id:\s*(\S+)\s*$', novo))
+
+    def atualizar_callouts_delimitados(texto_atual):
+        linhas_atuais = texto_atual.splitlines()
+        saida, i = [], 0
+        while i < len(linhas_atuais):
+            cabecalho = re.match(r'^> \[!NOTE\]-\s*(.*)$', linhas_atuais[i])
+            if not cabecalho:
+                saida.append(linhas_atuais[i]); i += 1; continue
+            inicio = i; summary = cabecalho.group(1).strip(); i += 1
+            while i < len(linhas_atuais):
+                if re.match(r'^> \[!NOTE\]-', linhas_atuais[i]) or linhas_atuais[i].startswith('## '):
+                    break
+                i += 1
+            originais = linhas_atuais[inicio:i]
+            limpo = '\n'.join(re.sub(r'^>\s?', '', linha) for linha in originais[1:])
+            idm = re.search(r'(?im)^id:\s*(\S+)\s*$', limpo)
+            if not idm or idm.group(1).strip() not in por_id:
+                saida.extend(originais); continue
+            pid = idm.group(1).strip(); meta, obj = por_id[pid]
+            if proposta_descartada(meta, obj):
+                continue
+            if not obj.get('detalhada') and int(obj.get('schema_version') or 1) < 2:
+                saida.extend(originais); continue
+            avaliacao_m = re.search(r'(?im)^avaliacao:\s*([^\n]*)', limpo)
+            comentario_m = re.search(r'(?im)^comentario:\s*([^\n]*)', limpo)
+            avaliacao = avaliacao_m.group(1).strip() if avaliacao_m else obj.get('avaliacao_humana', 'pendente')
+            comentario = comentario_m.group(1).strip() if comentario_m else obj.get('comentario_humano', '')
+            saida.extend(renderizar_callout(pid, summary, avaliacao or 'pendente', comentario, meta, obj).splitlines())
+            if i < len(linhas_atuais) and linhas_atuais[i] != '':
+                saida.append('')
+        return '\n'.join(saida).rstrip() + '\n'
+
+    novo = atualizar_callouts_delimitados(novo)
+    ids_existentes = set(re.findall(r'(?im)^>?\s*id:\s*(\S+)\s*$', novo))
+    secao_curada = 'macro-arquivo-repetidas-baixo-alinhamento' in novo
     candidatos = []
-    for meta, obj in propostas:
+    for meta, obj in todas_propostas:
         pid = meta.get('id')
         if not pid or pid in ids_existentes:
             continue
@@ -604,7 +706,9 @@ def atualizar_propostas_manuais_com_estado(p, propostas, artigos):
         candidatos.append((str(obj.get('gerado_em') or ''), meta, obj))
     candidatos.sort(key=lambda item: item[0])
     novos_blocos = []
-    for _, meta, obj in candidatos[-40:]:
+    if secao_curada:
+        candidatos = []
+    for _, meta, obj in candidatos[-8:]:
         pid = meta.get('id')
         titulo = meta.get('titulo') or obj.get('titulo') or 'Proposta sem título'
         indice = len(ids_existentes) + len(novos_blocos) + 1
@@ -634,7 +738,7 @@ def atualizar(p):
     todas_propostas = [(meta, ler(root / 'dados/propostas' / f"{meta['id']}.json", {}))
                        for meta in p.estado['propostas']]
     propostas = [(meta, obj) for meta, obj in todas_propostas if not proposta_descartada(meta, obj)]
-    atualizar_propostas_manuais_com_estado(p, propostas, artigos)
+    atualizar_propostas_manuais_com_estado(p, todas_propostas, artigos)
     leituras = [a.get('leitura_agente', {}) for a in p.artigos
                 if a.get('leitura_agente', {}).get('revisao') == p.revisao]
     feitos = sum(l.get('feitos', 0) for l in leituras)
@@ -678,6 +782,7 @@ def atualizar(p):
         for campo, titulo in CAMPOS.items():
             padrao = 'Caminho experimental ainda em desenvolvimento.' if campo == 'experimento' and obj.get('modo') == 'brainstorm' else 'Ainda não registrado.'
             corpo += [f'**{titulo}**', str(obj.get(campo, padrao))]
+        corpo += linhas_contribuicao_cientifica(obj)
         corpo += ['**Evidências usadas nesta comparação**']
         selecionadas = set(obj.get('evidencias_usadas', []))
         for fonte in fontes:

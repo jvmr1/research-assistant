@@ -306,3 +306,8 @@ conclusões confirmadas. Trabalhos em `obsidian/referencias/pdfs/` orientam o co
 mas a redação final deve ser autoral, citada e validada pelo pesquisador.
 
 O agente não deve burlar restrições de acesso. Quando não consegue texto integral permitido, registra internamente e segue para outros trabalhos.
+## Rigor na maturação de propostas
+
+Uma ideia gerada pelo agente é inicialmente um brainstorm, não uma contribuição científica. Antes de ganhar um estado de novidade, ela precisa registrar problema técnico, mecanismo, unidade de novidade, propriedades P1...Pn, propriedade falsificável, artefato mínimo e experimento decisivo. O agente executa cinco rodadas de anterioridade (combinação explícita, sinônimos, mecanismo fora do domínio, combinações de propriedades e relações dos trabalhos próximos) em Semantic Scholar, OpenAlex e Crossref.
+
+O resultado usa `collision_found`, `likely_incremental`, `plausible_gap`, `strong_candidate` ou `insufficient_evidence`. O código impede `strong_candidate` sem rastreabilidade das buscas e ao menos três trabalhos próximos examinados além do título. Colisões devem provocar reformulação e nova busca. Metas numéricas sem literatura, requisito ou piloto são rejeitadas. O pesquisador continua responsável por conferir textos, referências e a alegação de novidade antes de usar o material academicamente.

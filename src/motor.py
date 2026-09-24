@@ -760,6 +760,7 @@ class Pesquisa:
         dados = {}
         atual = None
         for linha in path.read_text(encoding="utf-8-sig").splitlines():
+            linha = re.sub(r"^>\s?", "", linha.strip())
             if linha.startswith("id:"):
                 atual = linha.split(":", 1)[1].strip()
                 dados.setdefault(atual, {})["id"] = atual
@@ -1077,6 +1078,11 @@ class Pesquisa:
             return lote
         pendentes = [a for a in self.artigos if not self.trabalho_fechado_no_ciclo(a)]
         if not pendentes:
+            propostas_visiveis = [m for m in self.estado.get('propostas', [])
+                                  if m.get('revisao') == self.revisao and m.get('visivel_anotacoes')
+                                  and m.get('avaliacao_humana') != 'descartar']
+            if propostas_visiveis:
+                return None
             self.buscar()
             pendentes = [a for a in self.artigos if not self.trabalho_fechado_no_ciclo(a)]
         if not pendentes:
@@ -1679,6 +1685,71 @@ class Pesquisa:
         return ciclo(self)
 
 
+
+def snapshot_sessao(pesquisa):
+    return {
+        'quando': agora(),
+        'artigos': len(pesquisa.artigos) if pesquisa else 0,
+        'propostas': len(pesquisa.estado.get('propostas', [])) if pesquisa else 0,
+        'historico': len(pesquisa.estado.get('historico', [])) if pesquisa else 0,
+        'lotes': len(pesquisa.estado.get('lotes', [])) if pesquisa else 0,
+    }
+
+
+def gerar_relatorio_sessao(pesquisa, inicio_monotonic, inicio_snapshot, motivo):
+    if not pesquisa:
+        return None
+    fim = snapshot_sessao(pesquisa)
+    duracao = max(0, int(time.monotonic() - inicio_monotonic))
+    lotes = pesquisa.estado.get('lotes', [])
+    inicio_lotes = inicio_snapshot.get('lotes', 0)
+    concluidos = lotes[inicio_lotes:]
+    novos_historico = fim['historico'] - inicio_snapshot.get('historico', 0)
+    novas_propostas = fim['propostas'] - inicio_snapshot.get('propostas', 0)
+    novos_artigos = fim['artigos'] - inicio_snapshot.get('artigos', 0)
+    pendencias = [t.get('erro') for t in pesquisa.estado.get('tarefas', {}).values() if isinstance(t, dict) and t.get('erro')]
+    linhas = [
+        '# Relatório da sessão do agente',
+        f'Encerramento: {fim["quando"]}',
+        f'Motivo: {motivo}',
+        f'Duração: {duracao//3600}h {(duracao%3600)//60}min {duracao%60}s',
+        '',
+        '## Resumo',
+        f'- Trabalhos concluídos nesta sessão: {len(concluidos)}.',
+        f'- Novos registros de busca/histórico: {max(0, novos_historico)}.',
+        f'- Novas propostas registradas no estado: {max(0, novas_propostas)}.',
+        f'- Novos artigos no acervo: {max(0, novos_artigos)}.',
+        f'- Total atual de propostas no estado: {fim["propostas"]}.',
+        f'- Total atual de artigos no acervo: {fim["artigos"]}.',
+        '',
+        '## Trabalhos concluídos nesta sessão',
+    ]
+    if concluidos:
+        for lote in concluidos[-50:]:
+            ids = ', '.join(lote.get('ids', []))
+            linhas.append(f"- Trabalho {lote.get('numero')}: {ids}; iniciado em {lote.get('iniciado_em')}; concluído em {lote.get('concluido_em')}.")
+    else:
+        linhas.append('- Nenhum lote concluído registrado nesta sessão.')
+    lote_atual = pesquisa.estado.get('lote_atual')
+    linhas += ['', '## Trabalho em andamento ao encerrar']
+    if lote_atual:
+        linhas.append(f"- Trabalho {lote_atual.get('numero')}: {', '.join(lote_atual.get('ids', []))}; iniciado em {lote_atual.get('iniciado_em')}; status {lote_atual.get('status')}.")
+    else:
+        linhas.append('- Nenhum trabalho em andamento.')
+    linhas += ['', '## Pendências técnicas recentes']
+    for erro in list(dict.fromkeys(e for e in pendencias if e))[-10:]:
+        linhas.append('- ' + str(erro)[:300])
+    if not pendencias:
+        linhas.append('- Nenhuma pendência técnica registrada.')
+    pasta = pesquisa.root / 'dados/relatorios-sessao'
+    pasta.mkdir(parents=True, exist_ok=True)
+    nome = 'sessao-' + re.sub(r'[^0-9A-Za-z_-]+', '-', fim['quando']) + '.md'
+    caminho = pasta / nome
+    gravar(caminho, '\n'.join(linhas).rstrip() + '\n')
+    pesquisa.estado['ultimo_relatorio_sessao'] = str(caminho)
+    pesquisa.salvar()
+    return caminho
+
 def principal(base):
     parser = argparse.ArgumentParser(description="Pesquisa contínua com Ollama; Ctrl+C pausa.")
     parser.add_argument("--uma-vez", action="store_true", help="Executa somente um ciclo.")
@@ -1719,8 +1790,11 @@ def principal(base):
         lock.close()
         raise SystemExit("Já há um agente rodando nesta pasta. Use o terminal existente.")
     pesquisa = None
+    inicio_monotonic = time.monotonic()
+    inicio_snapshot = {}
     try:
         pesquisa = Pesquisa(base, limpar=args.limpar)
+        inicio_snapshot = snapshot_sessao(pesquisa)
         prazo = time.monotonic() + args.duracao_horas * 3600
         log(f"Agente iniciado. Execução prevista por {args.duracao_horas:g} hora(s). Acompanhe obsidian/ANOTACOES.md e obsidian/TRABALHO.md.")
         while True:
@@ -1738,14 +1812,20 @@ def principal(base):
             # Pequeno intervalo apenas evita um laço ocioso consumindo CPU.
             time.sleep(min(2, restante))
         if not args.uma_vez:
+            relatorio = gerar_relatorio_sessao(pesquisa, inicio_monotonic, inicio_snapshot, 'prazo encerrado')
             pesquisa.mensagem = "Execução encerrada pelo prazo. Resultado salvo em obsidian/ANOTACOES.md e obsidian/TRABALHO.md."
+            if relatorio:
+                pesquisa.mensagem += f" Relatório da sessão: {relatorio}."
             log(pesquisa.mensagem)
             pesquisa.salvar()
             pesquisa.painel()
     except KeyboardInterrupt:
         log("Pausado. Tarefas já concluídas estão salvas; a tarefa interrompida será refeita.")
         if pesquisa:
+            relatorio = gerar_relatorio_sessao(pesquisa, inicio_monotonic, inicio_snapshot, 'pausado por Ctrl+C')
             pesquisa.mensagem = "Pausado pelo pesquisador. Use python agente.py para retomar."
+            if relatorio:
+                pesquisa.mensagem += f" Relatório da sessão: {relatorio}."
             pesquisa.salvar()
             pesquisa.painel()
     finally:
