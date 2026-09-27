@@ -390,7 +390,7 @@ def gerar(modelo, orientacao, tarefa, dados, esquema=None):
     )
     if len(sistema) + len(tarefa) + len(json.dumps(dados, ensure_ascii=False)) > 26000:
         raise ValueError("Contexto grande demais. Encurte as instruções; nada foi truncado silenciosamente.")
-    limite_saida = 6000 if 'EXEMPLOS DE FORMA, NÃO FONTES' in tarefa else 3000
+    limite_saida = 6000 if ('EXEMPLOS DE FORMA, NÃO FONTES' in tarefa or '1.200 a 1.800 palavras' in tarefa) else 3000
     if eh_openrouter(modelo):
         api_key = os.environ.get("OPENROUTER_API_KEY")
         modelo_openrouter = modelo.replace("openrouter/", "", 1)
@@ -1078,10 +1078,15 @@ class Pesquisa:
             return lote
         pendentes = [a for a in self.artigos if not self.trabalho_fechado_no_ciclo(a)]
         if not pendentes:
-            propostas_visiveis = [m for m in self.estado.get('propostas', [])
-                                  if m.get('revisao') == self.revisao and m.get('visivel_anotacoes')
-                                  and m.get('avaliacao_humana') != 'descartar']
-            if propostas_visiveis:
+            propostas_sem_relatorio = []
+            for meta in self.estado.get("propostas", []):
+                if (meta.get("revisao") != self.revisao or not meta.get("visivel_anotacoes")
+                        or meta.get("avaliacao_humana") == "descartar"):
+                    continue
+                obj = ler_json(self.root / "dados/propostas" / f"{meta['id']}.json", {})
+                if not obj.get("relatorio_problema"):
+                    propostas_sem_relatorio.append(meta)
+            if propostas_sem_relatorio:
                 return None
             self.buscar()
             pendentes = [a for a in self.artigos if not self.trabalho_fechado_no_ciclo(a)]

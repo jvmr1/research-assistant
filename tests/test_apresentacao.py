@@ -216,3 +216,27 @@ class ApresentacaoTest(unittest.TestCase):
         self.assertTrue(texto.startswith('Minha observação pessoal.'))
         self.assertTrue(texto.endswith('Decisão do orientador.'))
         self.assertEqual(texto.count('<!-- agente:inicio -->'), 1)
+
+
+class RelatorioOrientadorTest(unittest.TestCase):
+    setUp = test_motor.PesquisaTest.setUp
+
+    def test_relatorio_publica_motivacao_e_blocos_de_problema(self):
+        self.p.estado["motivacao_relatorio"] = "Controle cidadão sobre dados nas esferas públicas."
+        self.p.estado["propostas"] = [{"id": "p", "titulo": "Revogação", "revisao": self.p.revisao, "fontes": ["A"], "visivel_anotacoes": True}]
+        motor.json_gravar(self.root / "dados/propostas/p.json", {
+            "fontes": ["A"], "relatorio_problema": {
+                "titulo_problema": "Revogação de autorizações",
+                "problema_identificado": "Autorizações persistem após mudança de finalidade.",
+                "trabalhos_relacionados": [{"fonte": "A", "contribuicao": "Propõe lista de status."}],
+                "lacunas_identificadas": ["Não avalia múltiplas esferas públicas."],
+                "perguntas_pesquisa": ["Como revogar a autorização entre esferas?"],
+                "relevancia": "Preserva o controle do cidadão sobre o uso posterior."}})
+        self.p.painel()
+        texto = (self.root / "obsidian/RELATORIO.md").read_text(encoding="utf-8")
+        self.assertIn("## Motivação", texto)
+        self.assertIn("## Problema 1: Revogação de autorizações", texto)
+        self.assertIn("### Trabalhos relacionados", texto)
+        self.assertIn("### Lacunas identificadas", texto)
+        self.assertIn("### Possíveis perguntas de pesquisa", texto)
+        self.assertIn("### Relevância para a motivação", texto)

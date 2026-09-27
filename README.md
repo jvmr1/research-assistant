@@ -20,7 +20,7 @@ O fluxo de uso é simples:
 2. Coloque trabalhos-base em `obsidian/referencias/pdfs/` quando quiser que o agente os leia e use como sementes da pesquisa.
 3. Configure a chave em `.env` e instale as dependências.
 4. Rode `python agente.py` e acompanhe o terminal.
-5. Leia `obsidian/TRABALHO.md`, as propostas no próprio arquivo de anotações e os fichamentos em `obsidian/referencias/fichamentos/`.
+5. Leia `obsidian/RELATORIO.md`, `obsidian/TRABALHO.md`, as propostas no próprio arquivo de anotações e os fichamentos em `obsidian/referencias/fichamentos/`.
 6. Rode novamente para ampliar o corpus e melhorar a redação.
 
 O repositório foi pensado para carregar o código genérico, testes e a estrutura
@@ -44,7 +44,7 @@ Segredos locais, bytecode e ambientes virtuais instalados não entram no Git.
 Estas pastas existem no projeto, mas o Git versiona apenas templates e arquivos
 `.gitkeep` para preservar a estrutura limpa:
 
-- `obsidian/`: pasta que você abre no Obsidian. Localmente contém `ANOTACOES.md`, `TRABALHO.md` e a biblioteca de referências. No Git entram apenas `ANOTACOES.example.md`, `TRABALHO.example.md` e a estrutura vazia.
+- `obsidian/`: pasta que você abre no Obsidian. Localmente contém `ANOTACOES.md`, `RELATORIO.md`, `TRABALHO.md` e a biblioteca de referências. No Git entram apenas `ANOTACOES.example.md`, `TRABALHO.example.md` e a estrutura vazia.
 - `obsidian/referencias/pdfs/`: repositório local dos textos completos usados como base da pesquisa, em PDF, HTML ou outro formato aberto. Conteúdo ignorado pelo Git.
 - `obsidian/referencias/fichamentos/`: fichamentos locais, um Markdown por trabalho de referência. Conteúdo ignorado pelo Git.
 - `dados/`: estado interno local para a IA retomar execuções: leituras, diagnósticos, propostas, histórico e `anotacoes-ia.md`. Conteúdo ignorado pelo Git.
@@ -267,12 +267,13 @@ Use `Ctrl+C` para pausar. Rodar o mesmo comando depois retoma o estado salvo.
 6. Tenta obter texto completo aberto por fontes permitidas, incluindo Unpaywall e Semantic Scholar.
 7. Faz pré-leitura e depois fichamento por trechos, validando citações literais contra o texto original.
 8. Consolida cada trabalho e compara as abordagens, limites, avaliações e possibilidades.
-9. No modo `focada`, produz o mapa de fases e atualiza `obsidian/TRABALHO.md`.
-10. No modo `geral`, organiza o estado da arte, hipóteses de lacunas e propostas de contribuição.
-11. Registra fontes, consultas, tarefas e falhas em `dados/` para permitir retomada em outra máquina.
-12. No início de cada rodada, a IA lê novamente `ANOTACOES.md`, `TRABALHO.md`, `dados/anotacoes-ia.md` e os fichamentos já produzidos; só relê PDFs quando o fluxo indicar que falta evidência.
-13. A IA gera consultas adicionais para esclarecer pontos das anotações. Os resultados aparecem como achados em análise nas anotações; somente trabalhos aprovados e fichados entram na biblioteca de referências.
-14. O pesquisador revisa o resultado, confere referências e pode ajustar as instruções antes da próxima rodada.
+9. Converte primeiro as ideias visíveis em `ANOTACOES.md` para `obsidian/RELATORIO.md`, com motivação geral e blocos de problema, trabalhos relacionados, lacunas, perguntas de pesquisa e relevância. Depois da conversão, retoma a busca de novos trabalhos e problemas.
+10. No modo `focada`, produz o mapa de fases e atualiza `obsidian/TRABALHO.md`.
+11. No modo `geral`, organiza o estado da arte, hipóteses de lacunas e propostas de contribuição.
+12. Registra fontes, consultas, tarefas e falhas em `dados/` para permitir retomada em outra máquina.
+13. No início de cada rodada, a IA lê novamente `ANOTACOES.md`, `TRABALHO.md`, `dados/anotacoes-ia.md` e os fichamentos já produzidos; só relê PDFs quando o fluxo indicar que falta evidência.
+14. A IA gera consultas adicionais para esclarecer pontos das anotações. Os resultados aparecem como achados em análise nas anotações; somente trabalhos aprovados e fichados entram na biblioteca de referências.
+15. O pesquisador revisa o resultado, confere referências e pode ajustar as instruções antes da próxima rodada.
 
 Em `ANOTACOES.md`, texto fora dos blocos automáticos é tratado como anotação do
 pesquisador. Achados da IA aparecem em `<!-- agente:dialogo:inicio -->`; responda
@@ -283,6 +284,7 @@ tratar uma sugestão própria como aprovação e não pode apagar texto existent
 ## Arquivos que você deve olhar durante o uso
 
 - `obsidian/ANOTACOES.md`: caderno local do pesquisador e principal arquivo de interação com a IA. Você escreve orientações livres, acompanha achados e responde com `aprovar`, `rejeitar` ou `revisar` para guiar próximas buscas.
+- `obsidian/RELATORIO.md`: síntese para reunião com uma motivação geral e blocos repetidos de problema, trabalhos relacionados, lacunas, possíveis perguntas de pesquisa e relevância. É atualizado incrementalmente a partir das propostas e das leituras.
 - `obsidian/TRABALHO.md`: texto acadêmico em construção, hoje com introdução, fundamentação e mapa conceitual citando as notas dos trabalhos.
 - `obsidian/referencias/fichamentos/`: uma nota por trabalho, contendo somente o resumo, o perfil factual e as evidências do próprio PDF. Conexões entre trabalhos, lacunas e propostas ficam em `obsidian/ANOTACOES.md`; afirmações já consolidadas entram em `obsidian/TRABALHO.md`.
 - `obsidian/referencias/pdfs/`: textos completos disponíveis, baixados de fontes abertas ou colocados manualmente.

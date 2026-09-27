@@ -152,3 +152,66 @@ resposta_pesquisador: revisar com mais fontes.
         self.assertEqual(decisoes['rejeitadas'][0]['titulo'], 'Identidade biométrica')
         self.assertEqual(decisoes['revisar'][0]['titulo'], 'Revogação')
 
+
+
+    def test_exploracao_continua_cria_buscas_e_aprofunda_problema_existente(self):
+        self.p.estado["propostas"] = [{
+            "id": "p", "titulo": "Revogação", "revisao": self.p.revisao,
+            "fontes": ["A"], "visivel_anotacoes": True}]
+        motor.json_gravar(self.root / "dados/propostas/p.json", {
+            "titulo": "Revogação", "fontes": ["A"],
+            "relatorio_problema": {
+                "assinatura": "anterior", "titulo_problema": "Revogação",
+                "problema_identificado": "Estados divergentes entre órgãos.",
+                "lacunas_identificadas": ["Propagação não avaliada."],
+                "perguntas_pesquisa": ["Como propagar a revogação?"]}})
+        linha = {
+            "id": "A", "titulo": "Fonte A",
+            "problema": "Revogação distribuída", "limites": "Não avalia federação.",
+            "possibilidades": "Comparar consistência.",
+            "escopo": {"tipo": "pdf", "feitos": 2, "total": 2, "concluida": True},
+            "fichas_amostradas": [{"id": "f", "resumo": "Resumo.", "evidencias": []}]}
+        resposta = {"problemas": [{
+            "titulo": "Consistência da revogação", "justificativa": "Limite de A.",
+            "problema_existente": "p", "fontes_indicadoras": ["A"],
+            "consultas": ["SSI credential revocation consistency government",
+                          "verifiable credentials federated revocation public services"]}]}
+        with patch.object(self.p, "modelo_disponivel", return_value=True), \
+             patch("src.revisao.matriz", return_value=[linha]), \
+             patch("src.revisao.chamar", return_value=resposta):
+            self.assertTrue(revisao.planejar_exploracao_estado_arte(self.p))
+        agenda = self.p.estado["exploracao_estado_arte"]["agenda"]
+        self.assertEqual(agenda[0]["problema_existente"], "p")
+        self.assertTrue(any(x.get("origem") == "aprofundamento do problema p"
+                            for x in self.p.estado["consultas"].values()))
+        obj = motor.ler_json(self.root / "dados/propostas/p.json", {})
+        self.assertEqual(len(obj["consultas_estado_arte"]), 2)
+        with patch.object(self.p, "modelo_disponivel", return_value=True), \
+             patch("src.revisao.matriz", return_value=[linha]), \
+             patch("src.revisao.chamar") as chamar:
+            self.assertFalse(revisao.planejar_exploracao_estado_arte(self.p))
+            chamar.assert_not_called()
+
+
+class RelatorioProblemasTest(unittest.TestCase):
+    setUp = test_motor.PesquisaTest.setUp
+
+    def test_converte_uma_proposta_visivel_para_relatorio(self):
+        self.p.estado["propostas"] = [{"id": "p", "titulo": "Revogação", "revisao": self.p.revisao, "fontes": ["A"], "visivel_anotacoes": True}]
+        motor.json_gravar(self.root / "dados/propostas/p.json", {"titulo": "Revogação", "fontes": ["A", "B"]})
+        self.base.ARTIGOS.mkdir(parents=True, exist_ok=True)
+        (self.base.ARTIGOS / "A.md").write_text("# A\n\nFichamento completo.", encoding="utf-8")
+        (self.base.ARTIGOS / "B.md").write_text("# B\n\nSegundo fichamento.", encoding="utf-8")
+        resposta = {
+            "motivacao": "Controle cidadão sobre dados públicos.",
+            "titulo_problema": "Revogação entre esferas",
+            "desenvolvimento_problema": "Autorizações podem permanecer válidas. " * 40,
+            "analise_trabalhos": {"A": "Analisa status lists.", "B": "Avalia revogação."},
+            "lacunas_identificadas": ["Não cobre federação.", "Não avalia interoperabilidade."],
+            "perguntas_pesquisa": ["Como propagar revogações?", "Como medir consistência?", "Como preservar privacidade?"],
+            "relevancia": "Mantém o cidadão no controle sobre autorizações entre órgãos públicos. " * 12}
+        with patch.object(self.p, "modelo_disponivel", return_value=True), patch("src.revisao.chamar", return_value=resposta):
+            self.assertTrue(revisao.atualizar_relatorio_de_problemas(self.p))
+        obj = motor.ler_json(self.root / "dados/propostas/p.json", {})
+        self.assertEqual(len(obj["relatorio_problema"]["perguntas_pesquisa"]), 3)
+        self.assertEqual(self.p.estado["motivacao_relatorio"], "Controle cidadão sobre dados públicos.")

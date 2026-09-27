@@ -102,13 +102,13 @@ def ficha_segura(obj, original):
                 interpretacao=texto(obj.get('interpretacao')), duvidas=texto(obj.get('duvidas')))
 
 
-def chamar(p, etapa, tarefa, dados, esquema=None):
+def chamar(p, etapa, tarefa, dados, esquema=None, orientacao=None):
     from src.motor import gerar_com_fallback, lento, json_gravar, chave, agora
     pasta = p.root / 'dados/diagnosticos'
     ident = chave([etapa, dados, time.time_ns()])
     registro = {'etapa': etapa, 'inicio': agora(), 'revisao': p.revisao, 'tarefa': tarefa, 'entrada': dados}
     try:
-        obj = lento(gerar_com_fallback, p.modelos_ia(), p.instrucoes, tarefa, dados, esquema=esquema,
+        obj = lento(gerar_com_fallback, p.modelos_ia(), orientacao if orientacao is not None else p.instrucoes, tarefa, dados, esquema=esquema,
                     descricao=f"IA/{etapa}", intervalo=10)
         meta = p.registrar_meta_ia(obj)
         registro.update(resposta=obj, ia=meta, fim=agora())
@@ -355,6 +355,9 @@ def ler(p):
                 log(p.mensagem)
                 p.painel()
                 a['sintese_artigo'] = consolidar_sintese_artigo(p, a, fichas, assinatura)
+                fila = p.estado.setdefault('fichamentos_pendentes_vinculacao', [])
+                if a['nome_local'] not in fila:
+                    fila.append(a['nome_local'])
                 p.salvar()
                 return True
             p.tarefa(ident, sintetizar)
@@ -517,8 +520,15 @@ def propor_por_artigo(p, linhas):
 
 def propor(p):
     from src.motor import chave, json_gravar, agora, log, ler_json
-    if any(m.get('revisao') == p.revisao and m.get('visivel_anotacoes')
-           and m.get('avaliacao_humana') != 'descartar' for m in p.estado.get('propostas', [])):
+    visiveis_sem_relatorio = []
+    for meta in p.estado.get("propostas", []):
+        if (meta.get("revisao") != p.revisao or not meta.get("visivel_anotacoes")
+                or meta.get("avaliacao_humana") == "descartar"):
+            continue
+        obj = ler_json(p.root / "dados/propostas" / f"{meta['id']}.json", {})
+        if not obj.get("relatorio_problema"):
+            visiveis_sem_relatorio.append(meta)
+    if visiveis_sem_relatorio:
         return
     linhas = matriz(p)
     if len(linhas) < 2:
@@ -710,9 +720,8 @@ def importar_propostas_manuais_pendentes(p):
                     meta['visivel_anotacoes'] = True
                     break
             obj['origem'] = 'ANOTACOES.md'
-            obj['visivel_anotacoes'] = True
+            obj["visivel_anotacoes"] = True
             json_gravar(obj_path, obj)
-            importadas += 1
     if importadas:
         p.salvar()
         log(f"Propostas pendentes de ANOTACOES.md incorporadas ao ciclo de detalhamento: {importadas}")
@@ -732,6 +741,25 @@ def fontes_para_detalhamento(p, meta, obj, path):
         'metodo': 'fichamentos disponíveis em obsidian/referencias/fichamentos associados à proposta em ANOTACOES.md',
         'observacao': 'Se algum trabalho-base não tiver fichamento suficiente, o agente deve buscar o texto completo antes de tratar a lacuna como forte.',
     }
+
+
+def enfileirar_fichamentos_nao_avaliados(p):
+    """Inclui fichamentos antigos e novos uma única vez na vinculação temática."""
+    avaliados = p.estado.setdefault("fichamentos_vinculados", {})
+    fila = p.estado.setdefault("fichamentos_pendentes_vinculacao", [])
+    adicionados = 0
+    for artigo in p.artigos:
+        nome = artigo.get("nome_local")
+        if (not nome or nome in avaliados or nome in fila
+                or artigo.get("sintese_artigo", {}).get("revisao") != p.revisao):
+            continue
+        if not (p.b.ARTIGOS / f"{nome}.md").exists():
+            continue
+        fila.append(nome)
+        adicionados += 1
+    if adicionados:
+        p.salvar()
+    return adicionados
 
 
 def vincular_fichamentos_pendentes(p):
@@ -806,6 +834,9 @@ def vincular_fichamentos_pendentes(p):
                 'quando': agora(), 'origem': 'triagem de vinculação do acervo'}
             log(f"Referência sem vínculo arquivada fora do Obsidian: {item['id']}")
         processados.append(item['id'])
+        p.estado.setdefault("fichamentos_vinculados", {})[item["id"]] = {
+            "quando": agora(), "relevante": bool(decisao["relevante"] and destinos),
+            "propostas": destinos, "justificativa": texto(decisao.get("justificativa"))[:600]}
     if not processados:
         return False
     p.estado['fichamentos_pendentes_vinculacao'] = [x for x in fila if x not in processados]
@@ -1037,7 +1068,8 @@ def redigir_pesquisa_focada(p):
             'redundantes, para esclarecer pontos ainda não sustentados. Não promova um candidato a referência apenas '
             'por aparecer na busca: ele só deve entrar em `referencias/fichamentos/` depois de triagem, texto disponível '
             'e leitura suficiente. JSON no esquema fornecido. EXEMPLOS DE FORMA, NÃO FONTES: ' +
-            json.dumps(exemplos_de_redacao(p), ensure_ascii=False), contexto, esquema)
+            json.dumps(exemplos_de_redacao(p), ensure_ascii=False), contexto, esquema,
+            orientacao=p.instrucoes[:3000])
         if '[ID_EXATO]' in json.dumps(r, ensure_ascii=False) or '[ID]' in json.dumps(r, ensure_ascii=False):
             raise ValueError('A redação contém marcador de citação genérico; a tarefa será refeita com IDs reais.')
         ids = {linha['id'] for linha in corpus}
@@ -1070,6 +1102,223 @@ def redigir_pesquisa_focada(p):
     return bool(p.tarefa(ident, acao))
 
 
+def planejar_exploracao_estado_arte(p):
+    """Planeja buscas novas quando as pendências explícitas já foram atendidas."""
+    from src.motor import chave, agora, json_gravar, log
+    if not p.modelo_disponivel() or p.lote_atual():
+        return False
+    if any(not p.trabalho_fechado_no_ciclo(a) for a in p.artigos):
+        return False
+
+    linhas = matriz(p)
+    if not linhas:
+        return False
+    problemas = []
+    for meta in p.estado.get("propostas", []):
+        if (meta.get("revisao") != p.revisao or not meta.get("visivel_anotacoes")
+                or meta.get("avaliacao_humana") == "descartar"):
+            continue
+        obj = ler_json_seguro(p.root / "dados/propostas" / f"{meta['id']}.json", {})
+        bloco = obj.get("relatorio_problema") or {}
+        if not bloco:
+            return False
+        problemas.append({
+            "id": meta["id"],
+            "titulo": bloco.get("titulo_problema") or meta.get("titulo"),
+            "problema": texto(bloco.get("problema_identificado"))[:700],
+            "lacunas": [texto(x)[:300] for x in bloco.get("lacunas_identificadas", [])[:3]],
+            "perguntas": [texto(x)[:300] for x in bloco.get("perguntas_pesquisa", [])[:3]],
+            "fontes": (obj.get("fontes") or meta.get("fontes") or [])[-8:],
+        })
+    corpus = [{
+        "id": linha["id"], "titulo": linha["titulo"],
+        "problema": texto(linha.get("problema"))[:350],
+        "limites": texto(linha.get("limites"))[:350],
+        "possibilidades": texto(linha.get("possibilidades"))[:350],
+    } for linha in linhas[-16:]]
+    assinatura = chave(["exploracao-estado-arte-v1", p.revisao, corpus, problemas])
+    if p.estado.get("exploracao_estado_arte", {}).get("assinatura") == assinatura:
+        return False
+
+    ids_fontes = {x["id"] for x in corpus}
+    ids_problemas = {x["id"] for x in problemas}
+    esquema = {"type": "object", "properties": {
+        "problemas": {"type": "array", "maxItems": 4, "items": {"type": "object", "properties": {
+            "titulo": {"type": "string"}, "justificativa": {"type": "string"},
+            "problema_existente": {"type": "string"},
+            "fontes_indicadoras": {"type": "array", "items": {"type": "string"}},
+            "consultas": {"type": "array", "minItems": 2, "maxItems": 4, "items": {"type": "string"}},
+        }, "required": ["titulo", "justificativa", "fontes_indicadoras", "consultas"]}}
+    }, "required": ["problemas"]}
+
+    def acao():
+        log("Pendências atendidas; planejando nova rodada de exploração do estado da arte.")
+        resposta = chamar(
+            p, "exploracao-estado-arte",
+            "Examine os problemas, limites e trabalhos já lidos e proponha até quatro problemas técnicos que mereçam investigação adicional na grande área da pesquisa. "
+            "Priorize problemas observados ou sugeridos pelas fontes, não combinações arbitrárias de tecnologias. Para cada problema, indique IDs de fontes que motivam a investigação e gere consultas acadêmicas específicas, preferencialmente em inglês, destinadas a encontrar trabalhos que tratem diretamente dele e trabalhos recentes que possam refutar a suposta lacuna. "
+            "Se o problema aprofundar um bloco atual, use exatamente seu ID em problema_existente; caso contrário use string vazia. Isto é uma agenda de busca: não afirme novidade nem formule ainda uma proposta final.",
+            {"problemas_atuais": problemas, "trabalhos_recentes": corpus}, esquema,
+            orientacao=p.instrucoes[:3000])
+        agenda = []
+        for item in resposta.get("problemas", []) if isinstance(resposta.get("problemas"), list) else []:
+            if not isinstance(item, dict):
+                continue
+            fontes = [x for x in item.get("fontes_indicadoras", []) if x in ids_fontes]
+            consultas = list(dict.fromkeys(texto(x)[:200] for x in item.get("consultas", []) if texto(x)))[:4]
+            existente = item.get("problema_existente") if item.get("problema_existente") in ids_problemas else ""
+            if not texto(item.get("titulo")) or not fontes or len(consultas) < 2:
+                continue
+            registro = {"titulo": texto(item["titulo"]), "justificativa": texto(item.get("justificativa")),
+                        "problema_existente": existente, "fontes_indicadoras": fontes, "consultas": consultas}
+            agenda.append(registro)
+            origem = ("aprofundamento do problema " + existente) if existente else "exploração contínua do estado da arte"
+            p.registrar_consultas(consultas, origem)
+            if existente:
+                path = p.root / "dados/propostas" / f"{existente}.json"
+                obj = ler_json_seguro(path, {})
+                obj["consultas_estado_arte"] = list(dict.fromkeys(
+                    (obj.get("consultas_estado_arte") or []) + consultas))
+                json_gravar(path, obj)
+        if not agenda:
+            raise ValueError("A exploração não produziu problemas sustentados e consultas utilizáveis.")
+        p.estado["exploracao_estado_arte"] = {
+            "assinatura": assinatura, "gerado_em": agora(),
+            "status": "buscas_registradas", "agenda": agenda}
+        p.salvar()
+        log(f"Exploração do estado da arte: {len(agenda)} problema(s) e "
+            f"{sum(len(x['consultas']) for x in agenda)} consulta(s) registrados.")
+        return True
+
+    return bool(p.tarefa(assinatura, acao))
+
+
+def atualizar_relatorio_de_problemas(p):
+    """Converte uma proposta visível por ciclo no formato solicitado pelo orientador."""
+    from src.motor import chave, json_gravar, log, agora
+    if not p.modelo_disponivel():
+        return False
+    metas = [m for m in p.estado.get("propostas", [])
+             if m.get("revisao") == p.revisao and m.get("visivel_anotacoes")
+             and m.get("avaliacao_humana") != "descartar"]
+    for meta in metas:
+        path = p.root / "dados/propostas" / f"{meta['id']}.json"
+        obj = ler_json_seguro(path, {})
+        if not obj or obj.get("retirada_automatica") or obj.get("maturity_status") == "collision_exhausted":
+            continue
+        assinatura = chave(["relatorio-problemas-v2", obj.get("proposal_version", 1),
+                            obj.get("titulo"), obj.get("fontes"), obj.get("problema_tecnico"),
+                            obj.get("hipotese_lacuna"), obj.get("closest_prior_art")])
+        existente = obj.get("relatorio_problema") or {}
+        if existente.get("assinatura") == assinatura:
+            continue
+        fontes = list(dict.fromkeys(obj.get("fontes") or meta.get("fontes") or []))
+        fontes = fontes if len(fontes) <= 8 else fontes[:3] + fontes[-5:]
+        trabalhos = []
+        for fonte in fontes:
+            ficha = p.b.ARTIGOS / f"{fonte}.md"
+            if ficha.exists():
+                trabalhos.append({"id": fonte, "fichamento": ficha.read_text(encoding="utf-8-sig")[:1200]})
+        proposta_compacta = {k: obj.get(k) for k in (
+            "titulo", "meu_trabalho", "problema", "problema_tecnico", "fatos", "interpretacao",
+            "hipotese_lacuna", "diferencial_tecnico_candidato", "propriedades_contribuicao",
+            "pergunta_orientador") if obj.get(k) not in (None, "", [])}
+        esquema = {"type": "object", "properties": {
+            "motivacao": {"type": "string"}, "titulo_problema": {"type": "string"},
+            "problema_identificado": {"type": "string"},
+            "trabalhos_relacionados": {"type": "array", "items": {"type": "object"}},
+            "lacunas_identificadas": {"type": "array", "items": {"type": "string"}},
+            "perguntas_pesquisa": {"type": "array", "items": {"type": "string"}},
+            "relevancia": {"type": "string"}},
+            "required": ["titulo_problema", "problema_identificado", "trabalhos_relacionados",
+                         "lacunas_identificadas", "perguntas_pesquisa", "relevancia"]}
+        resposta = chamar(
+            p, "relatorio-problema",
+            "Produza um texto acadêmico aprofundado para reunião de orientação, com aproximadamente 1.200 a 1.800 palavras neste bloco. Se houver sintese_anterior, revise-a à luz de todos os trabalhos disponíveis, preservando o que continua sustentado e corrigindo lacunas ou perguntas enfraquecidas pela nova evidência. "
+            "Desenvolva o problema em vários parágrafos, delimitando contexto, atores públicos, dados, ameaças, consequências e limites. "
+            "Discuta separadamente cada trabalho fornecido que trate do problema, dedicando um ou mais parágrafos a objetivo, mecanismo, avaliação, resultado e limite relevante; "
+            "diferencie explicitamente resultados dos autores da interpretação do pesquisador; "
+            "formule pelo menos duas lacunas argumentadas e pelo menos três perguntas de pesquisa específicas, respondíveis e avaliáveis; desenvolva em vários parágrafos a relevância de respondê-las para identidade autossoberana, "
+            "propriedade e autorização de uso dos dados do cidadão perante as esferas públicas. Em trabalhos_relacionados use objetos com fonte e contribuicao, "
+            "e fonte deve ser exatamente um id fornecido. Não alegue inexistência universal de trabalhos. Motivacao aparece uma vez no topo: escreva de 500 a 800 palavras sobre identidade autossoberana, propriedade e controle dos dados, consentimento e autorizações do cidadão perante diferentes esferas públicas; ela não deve antecipar uma proposta específica.",
+            {"proposta": proposta_compacta, "sintese_anterior": existente, "trabalhos_disponiveis": trabalhos}, esquema,
+            orientacao=p.instrucoes[:3500])
+        if isinstance(resposta.get("relatorio"), dict):
+            resposta = resposta["relatorio"]
+        texto_completo = texto(resposta.get("texto"))
+        texto_detalhado = ""
+        if texto_completo:
+            partes = re.split(r"(?m)^##\s+Problema[^\n]*\n", texto_completo, maxsplit=1)
+            if len(partes) == 2:
+                motivacao_texto = re.sub(r"(?s)^##\s+Motiva[^\n]*\n", "", partes[0]).strip(" -\n")
+                resposta["motivacao"] = motivacao_texto or resposta.get("motivacao")
+                texto_detalhado = "### Problema identificado\n\n" + partes[1].strip()
+            else:
+                texto_detalhado = texto_completo
+            texto_detalhado = re.sub(r"(?m)^###\s+", "#### ", texto_detalhado)
+            texto_detalhado = re.sub(r"(?m)^##\s+", "### ", texto_detalhado)
+        if not resposta.get("problema_identificado"):
+            resposta["problema_identificado"] = resposta.get("problema_observado") or resposta.get("problema") or resposta.get("desenvolvimento_problema")
+        discussoes = resposta.get("discussao_trabalhos") or resposta.get("analise_trabalhos") or []
+        if discussoes:
+            detalhados = []
+            if isinstance(discussoes, dict):
+                discussoes = [{"fonte": fonte, "contribuicao": conteudo} for fonte, conteudo in discussoes.items()]
+            elif isinstance(discussoes, str):
+                partes_texto = re.split(r"(?m)^###\s+([^\n]+)\n", discussoes)
+                discussoes = [{"fonte": partes_texto[i].strip(), "contribuicao": partes_texto[i + 1].strip()}
+                              for i in range(1, len(partes_texto) - 1, 2)]
+            for item in discussoes:
+                if not isinstance(item, dict):
+                    continue
+                fonte = item.get("fonte") or item.get("id")
+                partes = [texto(item.get("contribuicao"))] if texto(item.get("contribuicao")) else []
+                for campo, rotulo in (("objetivo", "Objetivo"), ("mecanismo", "Mecanismo"),
+                                      ("avaliacao", "Avaliação"), ("resultado", "Resultado"),
+                                      ("limite", "Limite"), ("interpretacao_pesquisador", "Interpretação do pesquisador")):
+                    if texto(item.get(campo)):
+                        partes.append(f"{rotulo}: {texto(item.get(campo))}")
+                detalhados.append({"fonte": fonte, "contribuicao": "\n\n".join(partes)})
+            resposta["trabalhos_relacionados"] = detalhados
+        elif not resposta.get("trabalhos_relacionados"):
+            resposta["trabalhos_relacionados"] = resposta.get("trabalhos_resumidos") or []
+        if not resposta.get("lacunas_identificadas"):
+            resposta["lacunas_identificadas"] = resposta.get("lacunas_cautelosas") or resposta.get("lacunas") or []
+        if not resposta.get("perguntas_pesquisa"):
+            resposta["perguntas_pesquisa"] = resposta.get("perguntas_de_pesquisa") or []
+        permitidas = {x["id"] for x in trabalhos}
+        relacionados = [x for x in resposta.get("trabalhos_relacionados", [])
+                        if isinstance(x, dict) and x.get("fonte") in permitidas and texto(x.get("contribuicao") or x.get("resumo"))]
+        bloco = {
+            "assinatura": assinatura, "versao": 2, "gerado_em": agora(),
+            "titulo_problema": texto(resposta.get("titulo_problema")) or texto(obj.get("titulo")),
+            "problema_identificado": texto(resposta.get("problema_identificado")),
+            "trabalhos_relacionados": relacionados,
+            "lacunas_identificadas": [texto(x.get("descricao") if isinstance(x, dict) else x) for x in resposta.get("lacunas_identificadas", []) if texto(x)],
+            "perguntas_pesquisa": [texto(x.get("texto") if isinstance(x, dict) else x) for x in resposta.get("perguntas_pesquisa", []) if texto(x)],
+            "relevancia": texto(resposta.get("relevancia")),
+            "texto_detalhado": texto_detalhado,
+        }
+        estruturado_valido = (len(bloco["problema_identificado"]) >= 500 and len(bloco["trabalhos_relacionados"]) >= 2
+                and len(bloco["lacunas_identificadas"]) >= 2 and len(bloco["perguntas_pesquisa"]) >= 3
+                and len(bloco["relevancia"]) >= 300)
+        texto_minusculo = texto_detalhado.lower()
+        texto_valido = (len(texto_detalhado.split()) >= 1000 and "lacunas" in texto_minusculo
+                        and "perguntas de pesquisa" in texto_minusculo and "trabalhos" in texto_minusculo)
+        if not estruturado_valido and not texto_valido:
+            raise ValueError("Relatório do problema veio incompleto; será tentado novamente.")
+        obj["relatorio_problema"] = bloco
+        json_gravar(path, obj)
+        motivacao = texto(resposta.get("motivacao"))
+        if motivacao and (not p.estado.get("motivacao_relatorio") or p.estado.get("motivacao_relatorio_versao", 0) < 2):
+            p.estado["motivacao_relatorio"] = motivacao
+            p.estado["motivacao_relatorio_versao"] = 2
+        p.salvar()
+        log(f"RELATORIO.md: problema estruturado a partir de {meta.get('titulo', meta['id'])}.")
+        return True
+    return False
+
+
 def ciclo(p):
     p.configurar()
     pausa_modelo_ate = p.estado.get('pausa_modelo_ate', 0)
@@ -1083,7 +1332,19 @@ def ciclo(p):
     p.mensagem = 'Preparando o próximo trabalho.'
     p.importar_pdfs()
     importar_propostas_manuais_pendentes(p)
+    enfileirar_fichamentos_nao_avaliados(p)
     if vincular_fichamentos_pendentes(p):
+        p.painel()
+        return
+    try:
+        relatorio_atualizado = atualizar_relatorio_de_problemas(p)
+    except Exception as erro:
+        p.estado["pausa_modelo_ate"] = time.time() + 60
+        p.mensagem = f"Relatório pendente: {str(erro)[:220]}. Nova tentativa em 60 s."
+        p.salvar()
+        p.painel()
+        return
+    if relatorio_atualizado:
         p.painel()
         return
     if p.modelo_disponivel():
@@ -1091,6 +1352,11 @@ def ciclo(p):
         if maturar_propostas(p):
             p.painel()
             return
+    if planejar_exploracao_estado_arte(p):
+        p.mensagem = "Nova rodada do estado da arte planejada; consultas acadêmicas prontas para execução."
+        p.salvar()
+        p.painel()
+        return
     p.painel()
     lote = p.preparar_lote()
     if not lote:

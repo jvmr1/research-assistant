@@ -23,6 +23,8 @@ BLOCO_IA_INICIO = '<!-- agente:memoria-ia:inicio -->'
 BLOCO_IA_FIM = '<!-- agente:memoria-ia:fim -->'
 BLOCO_TRABALHO_INICIO = '<!-- agente:trabalho:inicio -->'
 BLOCO_TRABALHO_FIM = '<!-- agente:trabalho:fim -->'
+BLOCO_RELATORIO_INICIO = '<!-- agente:relatorio-problemas:inicio -->'
+BLOCO_RELATORIO_FIM = '<!-- agente:relatorio-problemas:fim -->'
 BLOCO_DIALOGO_INICIO = '<!-- agente:dialogo:inicio -->'
 BLOCO_DIALOGO_FIM = '<!-- agente:dialogo:fim -->'
 ARQUIVOS_LEGADOS_OBSIDIAN = [
@@ -30,7 +32,6 @@ ARQUIVOS_LEGADOS_OBSIDIAN = [
     'AVALIAR-PROPOSTAS.md',
     'PROPOSTAS-DE-TRABALHO.md',
     'METODOLOGIA-REVISAO.md',
-    'RELATORIO.md',
     'INTRODUCAO-E-FUNDAMENTACAO.md',
 ]
 CAMPOS = {
@@ -727,6 +728,67 @@ def atualizar_propostas_manuais_com_estado(p, todas_propostas, artigos):
     if novo != atual:
         gravar(path, novo)
 
+def atualizar_relatorio_problemas(p, todas_propostas, agora_func):
+    """Publica os problemas sintetizados sem misturar o relatório com o diálogo."""
+    from src.motor import gravar
+    path = p.root / "obsidian/RELATORIO.md"
+    motivacao = p.estado.get("motivacao_relatorio") or (
+        "Investigar como a identidade autossoberana pode ampliar a propriedade e o controle do cidadão sobre seus dados, "
+        "inclusive sobre autorizações de uso e compartilhamento perante órgãos e serviços das diferentes esferas públicas."
+    )
+    linhas = ["# Problemas e perguntas de pesquisa", "", f"Atualizado: {agora_func()}", "",
+              "## Motivação", "", valor_markdown(motivacao)]
+    quantidade = 0
+    for meta, obj in todas_propostas:
+        if proposta_descartada(meta, obj):
+            continue
+        bloco = (obj or {}).get("relatorio_problema") or {}
+        if not bloco:
+            continue
+        quantidade += 1
+        titulo = valor_markdown(bloco.get("titulo_problema") or meta.get("titulo") or "Problema sem título")
+        if bloco.get("texto_detalhado"):
+            detalhado = bloco["texto_detalhado"]
+            for fonte in obj.get("fontes", meta.get("fontes", [])) or []:
+                alvo = link_ou_nome(fonte, p.root)
+                detalhado = re.sub(rf"(?m)^(####\s+){re.escape(fonte)}[ \t]*", rf"\1{alvo}", detalhado)
+            linhas += ["", f"## Problema {quantidade}: {titulo}", "", detalhado, "", f"_Origem no caderno: `{meta.get('id', '')}`._"]
+            continue
+        linhas += ["", f"## Problema {quantidade}: {titulo}", "", "### Problema identificado", "",
+                   valor_markdown(bloco.get("problema_identificado") or "Ainda não sintetizado."),
+                   "", "### Trabalhos relacionados", ""]
+        relacionados = bloco.get("trabalhos_relacionados") or []
+        if isinstance(relacionados, dict):
+            relacionados = [relacionados]
+        for trabalho in relacionados:
+            if not isinstance(trabalho, dict):
+                continue
+            fonte = valor_markdown(trabalho.get("fonte"))
+            rotulo = link_ou_nome(fonte, p.root) if fonte else "Fonte não identificada"
+            linhas.append(f"- {rotulo}: {valor_markdown(trabalho.get("contribuicao") or trabalho.get("resumo"))}")
+        if not relacionados:
+            linhas.append("- Ainda não há trabalhos relacionados suficientemente lidos para sustentar este problema.")
+        lacunas = bloco.get("lacunas_identificadas") or []
+        perguntas = bloco.get("perguntas_pesquisa") or []
+        if not isinstance(lacunas, list):
+            lacunas = [lacunas]
+        if not isinstance(perguntas, list):
+            perguntas = [perguntas]
+        linhas += ["", "### Lacunas identificadas", ""]
+        linhas += [f"- {valor_markdown(x)}" for x in lacunas if valor_markdown(x)] or ["- Ainda não consolidadas."]
+        linhas += ["", "### Possíveis perguntas de pesquisa", ""]
+        linhas += [f"- {valor_markdown(x)}" for x in perguntas if valor_markdown(x)] or ["- Ainda não formuladas."]
+        linhas += ["", "### Relevância para a motivação", "",
+                   valor_markdown(bloco.get("relevancia") or "Ainda não avaliada."),
+                   "", f"_Origem no caderno: `{meta.get("id", "")}`._"]
+    if not quantidade:
+        linhas += ["", "## Problemas", "", "A conversão das ideias de ANOTACOES.md ainda não foi iniciada."]
+    conteudo = atualizar_bloco_preservando_texto(
+        path, BLOCO_RELATORIO_INICIO, BLOCO_RELATORIO_FIM,
+        "# Problemas e perguntas de pesquisa", linhas)
+    gravar(path, conteudo)
+
+
 def atualizar(p):
     from src.motor import gravar, agora
     root = p.root
@@ -739,6 +801,7 @@ def atualizar(p):
                        for meta in p.estado['propostas']]
     propostas = [(meta, obj) for meta, obj in todas_propostas if not proposta_descartada(meta, obj)]
     atualizar_propostas_manuais_com_estado(p, todas_propostas, artigos)
+    atualizar_relatorio_problemas(p, todas_propostas, agora)
     leituras = [a.get('leitura_agente', {}) for a in p.artigos
                 if a.get('leitura_agente', {}).get('revisao') == p.revisao]
     feitos = sum(l.get('feitos', 0) for l in leituras)

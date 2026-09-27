@@ -56,6 +56,7 @@ EXEMPLOS = PDFS
 ANOTACOES_PESQUISADOR = VAULT / "ANOTACOES.md"
 ANOTACOES_IA = DATA / "anotacoes-ia.md"
 TRABALHO = VAULT / "TRABALHO.md"
+RELATORIO = VAULT / "RELATORIO.md"
 # Compatibilidade com módulos/testes antigos: "instruções" agora é o arquivo
 # único de conversa e direção que o pesquisador edita.
 INSTRUCOES = ANOTACOES_PESQUISADOR
